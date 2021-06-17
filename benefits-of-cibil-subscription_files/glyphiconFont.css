@@ -1,0 +1,95 @@
+// Nav Menu Icon
+.glyphicons-show-lines:before {
+  content: "\E159"; 
+} /* menu hambuger icon */
+
+.glyphicons-user:before {
+    content: "\E004"; /* user log in */
+}
+
+.glyphicons-life-preserver:before {
+    content: "\E308"; /* faq */
+}
+
+.glyphicons-dashboard:before {
+    content: "\E332"; /* cibil score */
+}
+
+.glyphicons-radar:before {
+    content: "\E401"; /* where you stand */
+}
+
+.glyphicons-sort:before {
+    content: "\E320"; /*credit summary*/
+}
+
+.glyphicons-history:before {
+    content: "\E058"; /* history*/
+}
+
+.glyphicons-print:before {
+    content: "\E016"; /*print*/
+}
+.glyphicons-life-preserver:before {
+    content: "\E308"; /* credit report */
+} 
+
+.glyphicons-circle-arrow-left:before{
+	content:"\E217";
+}
+
+.glyphicons-circle-arrow-right:before {
+    content: "\E218"; /* right arrow */
+}
+
+.glyphicons-cogwheel:before {
+    content: "\E137"; /* my account */
+}
+
+.glyphicons-lock:before {
+    content: "\E204"; /* log out */
+}
+
+.glyphicons-keys:before {
+    content: "\E045"; /*create your account */
+}
+
+.glyphicons-shield:before {
+    content: "\E271"; /*verify your identity */
+}
+
+.glyphicons-credit-card:before {
+    content: "\E268"; /*payment */
+}
+
+.glyphicons-chevron-down:before {
+    content: "\E602"; /* down arrow forms*/
+}
+
+.glyphicons-stats:before {
+    content: "\E041"; /*score history*/
+}
+
+.glyphicons-remove-2:before {
+    content: "\E208"; /* close icon "x" */
+}
+
+.glyphicons-circle-exclamation-mark:before {
+    content: "\E197"; /* exclamation on change password sucess page*/
+}
+.glyphicons-circle-exclamation-mark:before {
+    content: "\E197"; /* exclamation for error on login page */
+}
+
+.glyphicons-alert:before {
+    content: "\E505"; /* triangle exclamtion error */
+}
+.glyphicons-globe:before{
+	content:"\E341"; /* global icon for language */
+}
+.glyphicon-eye-open:before{
+  content:"\E052"; /* enrollment - show user input */
+}
+.glyphicon-eye-close:before{
+  content:"\E053"; /*  enrollment - hide user input */
+}

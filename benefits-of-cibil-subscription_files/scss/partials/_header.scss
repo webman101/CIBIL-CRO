@@ -1,0 +1,27 @@
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 5px solid #fcd833;
+    padding: 14px 0;
+    .flex-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .site-logo {
+        img {
+            width: 90px;
+            height: auto;
+            @media (max-width: 767px) {
+                width: 65px;
+            }
+        }
+    }
+    .login-wrap {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    @media (max-width: 767px) {
+        border-bottom: 3px solid #fcd833;
+    }
+}

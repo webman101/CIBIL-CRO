@@ -1,0 +1,473 @@
+/* Font */
+@font-face {
+  font-family: 'IntroBold';
+  src: url("https://assets.transunion.com/resources/font/2C3BD6_0_0.eot");
+  src:  url('https://assets.transunion.com/resources/font/2C3BD6_0_0.woff') format('woff'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_0_0.ttf') format('ttf'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_0_0.svg') format('svg');
+}
+@font-face {
+  font-family: 'IntroLight';
+  src: url("https://assets.transunion.com/resources/font/2C3BD6_2_0.eot");
+  src:  url('https://assets.transunion.com/resources/font/2C3BD6_2_0.woff') format('woff'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_2_0.ttf') format('ttf'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_2_0.svg') format('svg');
+}
+@font-face {
+  font-family: 'IntroRegular';
+  src: url("https://assets.transunion.com/resources/font/2C3BD6_4_0.eot");
+  src:  url('https://assets.transunion.com/resources/font/2C3BD6_4_0.woff') format('woff'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_4_0.ttf') format('ttf'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_4_0.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'IntroSemiBold';
+  src: url("https://assets.transunion.com/resources/font/2C3BD6_6_0.eot");
+  src:  url('https://assets.transunion.com/resources/font/2C3BD6_6_0.woff') format('woff'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_6_0.ttf') format('ttf'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_6_0.svg') format('svg');
+}
+@font-face {
+  font-family: 'IntroSemiBold';
+  src: url("https://assets.transunion.com/resources/font/2C3BD6_6_0.eot");
+  src:  url('https://assets.transunion.com/resources/font/2C3BD6_6_0.woff') format('woff'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_6_0.ttf') format('ttf'),
+        url('https://assets.transunion.com/resources/font/2C3BD6_6_0.svg') format('svg');
+}
+@font-face {
+  font-family: 'Glyphicons Regular';
+  src: url('https://assets.transunion.com/resources/font/glyphicons-regular.eot');
+  src: 
+      url('https://assets.transunion.com/resources/font/glyphicons-regular.woff2') format('woff2'), 
+      url('https://assets.transunion.com/resources/font/glyphicons-regular.woff') format('woff'), 
+      url('https://assets.transunion.com/resources/font/glyphicons-regular.svg') format('svg'); 
+}
+/* Page Layout  */
+body {
+    margin: 0;
+    padding: 0;
+    background: #00a6ca;
+}
+.layout {
+    font: 400 .8em IntroRegular,sans-serif;
+    max-width: 68em;
+    margin: 15px auto 0;
+}
+.flex {
+	display: flex;
+}
+.hide {
+	display: none;
+}
+.button, button {
+    background: #fff;
+    box-shadow: 4px 4px 0 rgba(0,0,0,.18);
+    margin: 0 0 30px;
+    display: inline-block;
+    border: none;
+    background: #ff7223;
+    color: #fff;
+    text-align: center;
+    padding: 10px 40px;
+    cursor: pointer;
+    font: 14px IntroRegular,Roboto,Arial,sans-serif;
+    white-space: nowrap;
+    min-width: 200px;
+    text-transform: uppercase;
+}
+.glyphicons:before {
+  display: inline-block;
+  font-family: 'Glyphicons Regular';
+  line-height: 1;
+  position: relative;
+  top: 2px;
+  margin-right: 8px;
+}
+a {
+	text-decoration: none;
+}
+a span{
+	text-decoration: underline;
+}
+/* Nav  */
+.tactical-links {
+	float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    text-align: right;
+    color: #fff;
+    box-sizing: border-box;
+}
+.tactical-links .init {
+    cursor: pointer;
+    position: relative;
+}
+.tactical-links .langDropdown {
+    position: absolute;
+    width: 130px;
+    background: #f2fafc;
+    top: 15px;
+    right: 0;
+    text-align: left;
+    display: none;
+}
+span.langDropdown a {
+    color: #000;
+    padding: 4px 10px;
+    display: block;
+}
+.langDropdown a:hover {
+    background: #fcd800;
+}
+.langDropdown.show{
+  display:block;
+}
+.list-unstyled {
+    list-style: none;
+    display: inline-block;
+}
+.tactical-links a{
+    color: #fff;
+    padding-left: 10px;
+}
+.nav-links {
+	clear: both;
+    background: #fff;
+    box-shadow: 12px 12px 0 rgba(0,0,0,.15);
+    margin: 0 0 30px;
+    height: 60px;
+}
+.nav-links .cibil-logo {
+    max-width: 106px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+
+/* FOOTER LINKS */
+footer {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: .9em;
+    color: #fff;
+    line-height: 1.6;
+}
+footer nav a {
+    text-decoration: underline;
+    margin: 0 10px;
+    color: #fff;
+    display: inline-block;
+}
+
+/* MAIN CONTENT   */
+#InterstitialUpsell {
+    padding: 35px;
+    background: #fff;
+    box-shadow: 12px 12px 0 rgba(0,0,0,.15);
+    margin: 0 0 30px;
+    font-size: 15px;
+}
+
+#InterstitialUpsell section.enroll h1 {
+	text-align: left;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+#InterstitialUpsell .upsellColumn {
+    position: relative;
+    width: 100%;
+}
+
+#InterstitialUpsell .upsellColumnWrapper .offersOption {
+    background: linear-gradient(#f3fbfd,#e2f5f9,#ceeef5);
+}
+#InterstitialUpsell .upsellColumnWrapper .topDes {
+    padding: 1px 20px;
+    text-align: center;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn .membershipType {
+    font-weight: 600;
+}
+
+#InterstitialUpsell .upsellColumn.offerDescribed {
+    margin-right: 35px;
+}
+#InterstitialUpsell .upsellColumnWrapper .offerDescribed .topDes {
+    background-color: #fcd800;
+}
+#InterstitialUpsell .upsellColumnWrapper .offerDescribed .topDes:after {
+    content: "";
+    display: block;
+    width: 50.5px;
+    height: 51px;
+    border-right: solid 1px #fcd800;
+    border-bottom: solid 1px #fcd800;
+    background: #fcd800;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 11px;
+    right: -25px;
+}
+#InterstitialUpsell .upsellColumnWrapper .offerDescribed .topDes .membershipType {
+    font-weight: 700;
+    margin-left: -20px;
+}
+#InterstitialUpsell .upsellColumnWrapper .offersOption .circle {
+    position: absolute;
+    right: -16px;
+    border: 1px solid #a9d161;
+    background: #a9d161;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    top: -2px;
+    line-height: 35px;
+}
+#InterstitialUpsell .upsellColumnWrapper .offersOption .circle .text {
+    font-size: 13px;
+    font-weight: 600;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList li:first-child {
+    border-top: 5px solid #00a6ca;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList li {
+    padding: 10px 15px;
+    position: relative;
+    border-top: 1px solid #00a6ca;
+}
+#InterstitialUpsell .upsellColumnWrapper .offerDescribed .featureList li {
+    margin-right: -35px;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList.rightIcon, 
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList.wrongIcon {
+    text-align: center;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList.rightIcon li:before, #InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList.wrongIcon li:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: url(./subscriptionIcons.svg) no-repeat;
+    background-position: -23px -110px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: 120px;
+    top: 13px;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList.wrongIcon li:before {
+    background-position: -22px -74px;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList.rightIcon li span, 
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList.wrongIcon li span {
+    visibility: hidden;
+    font-size: 14px;
+}
+#InterstitialUpsell .offerReplaceWrapper {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 40px;
+}
+#InterstitialUpsell .offerReplaceWrapper .upgradeCancel {
+    color: #000;
+    text-decoration: underline;
+    font-family: IntroRegular,Roboto,sans-serif;
+}
+#InterstitialUpsell .offerReplaceWrapper .form-fields.selectbox {
+    width: 60%;
+    margin: auto;
+}
+#InterstitialUpsell .offer-replacement-btn {
+	padding-top: 35px;
+}
+#InterstitialUpsell .upsellColumnMobile ul.featureList {
+    list-style: none;
+    padding: 0;
+}
+#InterstitialUpsell .upsellColumnMobile ul.featureList li {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+#InterstitialUpsell .upsellColumnMobile li:before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: url(./subscriptionIcons.svg) no-repeat;
+    background-position: -23px -110px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.longLang {
+    font-size: 16px;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn .topDes.tamilRightArrow:before {
+    top: 0;
+    background: -webkit-linear-gradient(left bottom,#fcd800 50%,rgba(0,0,0,0) 50%);
+    background: linear-gradient(to right top,#fcd800 50%,rgba(0,0,0,0) 50%);
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn .topDes.tamilRightArrow:after {
+    top: 50%;
+    background: -webkit-linear-gradient(left top,#fcd800 50%,rgba(0,0,0,0) 50%);
+    background: linear-gradient(to right bottom,#fcd800 50%,rgba(0,0,0,0) 50%);
+    border: none;
+    transform: none;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn .topDes.tamilRightArrow:after, 
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn .topDes.tamilRightArrow:before {
+    width: 36px;
+    height: 50%;
+    position: absolute;
+    left: 100%;
+    content: "";
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn .topDes.tamilTopDes {
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 18%;
+    padding: 1px 25px;
+    position: relative;
+}
+#InterstitialUpsell .upsellColumnWrapper .upsellColumn ul.featureList.longLangs li {
+    padding: 10px 27px 10px 15px;
+}
+#InterstitialUpsell .upsellColumnWrapper .offersOption .circle.tamilCircle {
+    width: 50px;
+    height: 50px;
+    line-height: 47px;
+    right: -25px;
+    top: 4px;
+}
+#InterstitialUpsell .upsellColumnWrapper .offersOption .circle.tamilCircle .text{
+    font-size: 11px;
+}
+ /* Dropdown */
+ .selectbox {
+    display: inline-block;
+    background: #fff;
+    height: 39px;
+    overflow: hidden;
+    border: solid 1px #999;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 20px;
+}
+.selectbox select {
+	position: relative;
+    background: 0 0;
+    border: none;
+    height: 40px;
+    width: 100%;
+    padding: 5px 45px 5px 15px;
+    color: #000;
+    -webkit-appearance: none;
+    -moz-appearance: window;
+    text-indent: .01px;
+    text-overflow: '';
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 600;
+}
+.selectbox span {
+    font-family: "Glyphicons Regular"!important;
+    color: #00a6ca;
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #00a6ca;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    content: "foo";
+}
+#InterstitialUpsell .styledSelect {
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    font-weight: 600;
+    font-size: 15px;
+}
+#InterstitialUpsell .offerReplaceWrapper .upselInterstitial .options {
+    width: 79%;
+}
+#InterstitialUpsell .options{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    width: 77%;
+}
+/* MEDIA QUERY */
+@media screen and (max-width: 680px) {
+	#InterstitialUpsell .textabbr .desktopDesc, 
+	#InterstitialUpsell .upsellColumnWrapper .upsellColumn {
+	    display: none;
+	}
+	#InterstitialUpsell .textabbr .mobileDesc,
+	#InterstitialUpsell .upsellColumnMobile.hide  {
+	    display: block;
+	}
+	#InterstitialUpsell .offerReplaceWrapper {
+	    width: 100%;
+	    text-align: left;
+	    padding-top: 0;
+	}
+	#InterstitialUpsell .offerReplaceWrapper .form-fields.selectbox, 
+	#InterstitialUpsell .offerReplaceWrapper .offer-replacement-btn #offer-Submit {
+	    width: 100%;
+	}
+	#InterstitialUpsell .offerReplaceWrapper .no-thanks-link {
+	    text-align: center;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	 #InterstitialUpsell section.enroll .flex .column {
+		 margin: 10px auto;
+	}
+	#InterstitialUpsell section.enroll .flex {
+		 display: block;
+	}
+	#InterstitialUpsell section.enroll h1 {
+		 font-size: 20px;
+	}
+	#InterstitialUpsell section.enroll {
+		 padding: 15px;
+	}
+}
+ 

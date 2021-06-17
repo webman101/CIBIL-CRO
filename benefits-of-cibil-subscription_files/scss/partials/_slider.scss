@@ -1,0 +1,98 @@
+.slick-custom-arrow {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.66);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -30px;
+    background-position: center;
+    background-size: 11px;
+    background-repeat: no-repeat;
+    &.slick-prev {
+        background-image: url("./images/slick-prev-arrow.png");
+        left: -30px;
+        @media (max-width: 480px) {
+            left: 0;
+        }
+    }
+    &.slick-next {
+        background-image: url("./images/slick-next-arrow.png");
+        right: -30px;
+        @media (max-width: 480px) {
+            right: 0;
+        }
+    }
+    @media (max-width: 480px) {
+        background: transparent;
+        border: 0;
+        width: 21px;
+        height: 21px;
+    }
+}
+
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    li {
+        margin-bottom: 0;
+        button {
+            padding: 0;
+            min-width: auto;
+            background: #ffffff;
+            border: 2px solid #535353;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            min-width: 15px;
+            font-size: 0;
+            margin: 0 10px;
+            box-shadow: none;
+        }
+        &.slick-active {
+            button {
+                background: #3ea3ce;
+                border: 2px solid #3ea3ce;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        margin-top: 20px;
+    }
+}
+
+.myths-slider {
+    .slick-slide {
+        @media (max-width: 767px) {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.score-slider {
+    .slick-dots {
+        margin-top: 7px;
+        li {
+            line-height: 1;
+            font-size: 7px;
+            button {
+                width: 7px;
+                height: 7px;
+                min-width: 7px;
+                border: 1px solid #aeaeae;
+                margin: 0 2px;
+            }
+            &.slick-active {
+                button {
+                    background: #aeaeae;
+                }
+            }
+        }
+    }
+}

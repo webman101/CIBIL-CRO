@@ -1,0 +1,113 @@
+.sticky-footer {
+    background: #fcfcfc;
+    box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.17);
+    padding: 20px 15px;
+    position: sticky;
+    bottom: 0;
+    &-inner {
+        max-width: 400px;
+        margin: 0 auto;
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            &::before {
+                display: none;
+            }
+        }
+        .col-6 {
+            width: 50%;
+            padding-left: 3px;
+            padding-right: 3px;
+            display: flex;
+            .buttonc {
+                width: 100%;
+            }
+            &-mobile {
+                @media (max-width: 991px) {
+                    margin-top: 6px;
+                    width: 100%;
+                }
+            }
+            @media (min-width: 992px) {
+                width: 33.33%;
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+        }
+        @media (min-width: 992px) {
+            max-width: 600px;
+        }
+    }
+    .w-100 {
+        width: 100%;
+    }
+    .mb-05 {
+        margin-bottom: 5px;
+    }
+}
+
+.footer {
+    &-section {
+        background: #ffffff;
+        border-top: 5px solid #fcd833;
+        padding: 18px 0 80px 0;
+        .row {
+            @media (min-width: 992px) {
+                display: flex;
+                align-items: center;
+            }
+        }
+        @media (max-width: 991px) {
+            padding: 45px 0 80px 0;
+        }
+    }
+    &-left {
+        @media (max-width: 991px) {
+            text-align: center;
+        }
+    }
+    &-right {
+        text-align: right;
+        @media (max-width: 991px) {
+            text-align: center;
+        }
+    }
+    &-logo {
+        margin-bottom: 30px;
+    }
+    &-text {
+        h3 {
+            margin: 0;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #000000;
+            @media (max-width: 991px) {
+                font-size: 16px;
+            }
+        }
+        p {
+            font-size: 20px;
+            margin: 0;
+            @media (max-width: 991px) {
+                font-size: 16px;
+            }
+            &.rights {
+                font-size: 12px;
+                color: #000000;
+                text-transform: uppercase;
+                margin-top: 20px;
+                @media (max-width: 991px) {
+                    margin-top: 30px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.sticky-modal-footer {
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+}

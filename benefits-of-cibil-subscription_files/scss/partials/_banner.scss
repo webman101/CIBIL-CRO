@@ -1,0 +1,135 @@
+// Banner styles
+
+.banner {
+    // background: linear-gradient(85.87deg, rgba(62, 163, 206, 0.9) 41.7%, rgba(255, 255, 255, 0) 76.11%);
+    background-image: url("./images/bannergradient.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0 30px 0;
+    position: relative;
+    &-text {
+        h1 {
+            font-size: 31px;
+            line-height: 39px;
+            margin: 0;
+            margin-bottom: 22px;
+            color: #ffffff;
+            .bg-yellow {
+                padding: 1px 4px;
+                font-family: inherit;
+                @media (max-width: 991px) {
+                    padding: 5px 4px 0;
+                }
+            }
+            @media (max-width: 991px) {
+                font-size: 28px;
+                line-height: 36px;
+                margin-bottom: 32px;
+            }
+        }
+        h3 {
+            font-size: 22px;
+            line-height: 26px;
+            color: #ffffff;
+            margin: 0;
+            margin-bottom: 60px;
+        }
+        &-coupon {
+            display: flex;
+            background: #ffffff;
+            width: max-content;
+            border-radius: 5px;
+            .left {
+                padding: 20px 10px 20px 15px;
+                font-size: 22px;
+                color: #ffffff;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background-color: #1d79a0;
+                position: relative;
+                .scircle {
+                    position: absolute;
+                    top: 50%;
+                    left: -1px;
+                    transform: translateY(-50%);
+                }
+                .circles {
+                    position: absolute;
+                    top: 4px;
+                    right: -5px;
+                }
+            }
+            .right {
+                padding: 18px 38px 18px 18px;
+                position: relative;
+                .scircle {
+                    position: absolute;
+                    top: 50%;
+                    right: -1px;
+                    transform: translateY(-50%) rotate(180deg);
+                }
+                .line {
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    transform: translateY(-50%);
+                    width: 65%;
+                    @media (min-width: 992px) and (max-width: 1199px) {
+                        width: 56%;
+                    }
+                }
+                .save-text {
+                    background: #fcf2db;
+                    padding: 4px 10px;
+                    display: inline-block;
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                    color: #000000;
+                }
+                .expire-text {
+                    color: rgba(0, 0, 0, 0.6);
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+    &-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+        }
+    }
+    &-mobile {
+        background: linear-gradient(180.65deg, #4da8cf 36.39%, rgba(255, 255, 255, 0) 112.51%);
+        padding: 30px;
+        padding-bottom: 80px;
+        position: relative;
+        &-text {
+            background: linear-gradient(180deg, rgba(240, 248, 251, 0.86) 0%, #f2f5f6 46.95%);
+            padding: 25px 15px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            color: #005365;
+            font-size: 18px;
+            line-height: 26px;
+        }
+        img{
+            max-width: 200px;
+        }
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
