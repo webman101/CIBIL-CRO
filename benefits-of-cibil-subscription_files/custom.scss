@@ -2166,6 +2166,16 @@ span.switcher {
         .slick-track {
             display: flex;
         }
+        .slick-prev{
+            @media (min-width: 1201px) and (max-width: 1300px) {
+                left: -10px;
+            }
+        }
+        .slick-next{
+            @media (min-width: 1201px) and (max-width: 1300px) {
+                right: -10px;
+            }
+        }
         @media (max-width: 768px) {
             .slick-arrow {
                 display: none !important;
@@ -2355,12 +2365,13 @@ span.switcher {
         position: relative;
         &-icon {
             position: absolute;
-            top: -5px;
+            top: -2px;
             left: -25px;
             background: #ffffff;
+            line-height: 20px;
             @media (max-width: 767px) {
                 left: -32px;
-                top: -1px;
+                top: -2px;
             }
         }
         &.myth {
@@ -2392,6 +2403,7 @@ span.switcher {
     .slick-slide {
         @media (max-width: 767px) {
             padding: 5px 10px;
+            height: auto;
         }
     }
 }
@@ -3092,6 +3104,7 @@ span.switcher {
     box-shadow: none;
     min-width: 160px;
     line-height: 1;
+    color: #fff;
     &-outline {
         background: #ffffff;
         color: #f16e33;
@@ -3623,6 +3636,7 @@ span.switcher {
     background: rgba(238, 238, 238, 0.3);
     border-left: 3px solid #aeaeae;
     padding: 11px;
+    height: auto;
     h3 {
         margin: 0;
         color: #000000;
