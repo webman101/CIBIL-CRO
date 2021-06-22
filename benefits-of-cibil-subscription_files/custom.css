@@ -413,7 +413,7 @@ span.switcher.switcher-1 input:not(:checked):before { color: #757575; -webkit-tr
 span.switcher.switcher-1 input:not(:checked):after { color: #000000; -webkit-transition: color 0.5s 0.2s; transition: color 0.5s 0.2s; }
 span.switcher.switcher-1 input:not(:checked) + label { left: 151px; right: 5px; background: #fcd833; -webkit-transition: left 0.4s 0.2s, right 0.5s, background 0.35s -0.1s; transition: left 0.4s 0.2s, right 0.5s, background 0.35s -0.1s; }
 
-.banner { background-image: url("https://www.cibil.com/resources/cibil/img/popup/bannergradient.png"); background-repeat: no-repeat; background-size: cover; background-position: center; padding: 70px 0 30px 0; position: relative; }
+.banner { background-image: url("https://www.cibil.com/resources/cibil/img/popup/bannergradient.png"); background-repeat: no-repeat; background-size: cover; background-position: center; padding: 70px 0 70px 0; position: relative; min-height: 460px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 .banner-text h1 { font-size: 31px; line-height: 39px; margin: 0; margin-bottom: 22px; color: #ffffff; }
 .banner-text h1 .bg-yellow { padding: 1px 4px; font-family: inherit; }
 @media (max-width: 991px) { .banner-text h1 .bg-yellow { padding: 5px 4px 0; } }
