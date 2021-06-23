@@ -18,10 +18,6 @@ h6 {
     margin: 0;
 }
 
-.header {
-    padding: 30px;
-}
-
 .bg {
     &-white {
 
@@ -179,6 +175,11 @@ h6 {
     }
 }
 
+.max-450{
+    max-width: 455px;
+    margin-left: auto;
+}
+
 .row-mobile-reverse{
     @media (max-width: 767px) {
         display: flex;
@@ -194,9 +195,17 @@ h6 {
 }
 
 .header{
+    padding: 30px;
     @media (max-width: 767px) {
         background: #ffffff;
         padding: 20px 0;
+    }
+}
+
+.content{
+    padding-bottom: 120px;
+    @media (max-width: 767px) {
+        padding-bottom: 0;
     }
 }
 
@@ -217,15 +226,27 @@ h6 {
     font-size: 22px;
     line-height: 32px;
     font-weight: 600;
-    color: #000000;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.section-subtitle{
+    font-size: 15px;
+    line-height: 20px;
+    @media (max-width: 767px) {
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 
 .signup-block {
     background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     padding: 25px;
+    padding-bottom: 48px;
     @media (max-width: 767px) {
         margin: 0 -16px;
         padding: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -244,9 +265,10 @@ h6 {
 
 .plans-block{
     background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     padding: 20px;
-    max-width: 450px;
     margin-left: auto;
+    margin-bottom: 20px;
     .card {
         border-top: 1px solid #DBDBDB;
         padding-top: 18px;
@@ -255,17 +277,28 @@ h6 {
         background: #F5F7FB;        
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
         margin: 0 -16px;
-        max-width: 100%;
+    }
+}
+
+.cards-block{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    hr{
+        border-top: 1px solid #DBDBDB; 
+    }
+    @media (max-width: 767px) {
+        display: none;
     }
 }
 
 .feature-list{
     border-bottom: 1px solid #DBDBDB;
-    padding-bottom: 17px;
-    margin-bottom: 17px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     &-item{
         position: relative;
-        margin-bottom: 12px;
+        margin-bottom: 20px;
         &-icon{
             position: absolute;
             left: 0;
@@ -281,6 +314,13 @@ h6 {
         &:last-child{
             margin-bottom: 0;
         }
+        @media (max-width: 767px) {
+            margin-bottom: 12px;
+        }
+    }
+    @media (max-width: 767px) {
+        padding-bottom: 17px;
+        margin-bottom: 17px;
     }
 }
 
@@ -293,7 +333,7 @@ h6 {
     flex-direction: row;
     align-items: center;
     &-text{
-        text-align: center;
+        text-align: left;
         padding-left: 20px;
         h5{
             font-weight: 700;
@@ -439,6 +479,30 @@ h6 {
         text-decoration: none;
         outline: 0;
         color: #3EA3CE;
+    }
+}
+
+.info-card{
+    display: flex;
+    &-icon{
+        min-width: 60px;
+        padding-left: 10px;
+    }
+    &-text{
+        padding-left: 12px;
+        h5{
+            font-size: 15px;
+            font-family: "Intro";
+            font-weight: 700;
+            line-height: 22px;
+            margin-bottom: 4px;
+        }
+        p{
+            font-size: 12px;
+            font-family: "Intro";
+            line-height: 16px;
+            margin-bottom: 0;
+        }
     }
 }
 
