@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/signup.css">
 </head>
 
@@ -22,17 +23,18 @@
     </div>
     <div class="content">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-8">
+            <div class="row row-mobile-reverse">
+                <div class="col-sm-8 order-1">
                     <div class="bg-white">
                         <div class="signup-block">
-                            <div class="signup-form mb-4">
+                            <div class="signup-form">
                                 <h4 class="section-title section-title-blue mb-1">SIGN UP</h4>
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="emailId" placeholder="Email ID*" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control" id="password" placeholder="Password*" required>
+                                    <img class="show-password" src="./img/eye-icon.svg">
                                 </div>
                             </div>
                             <div class="report-form">
@@ -52,16 +54,102 @@
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="pin-code" placeholder="PIN Code*" required>
                                 </div>
+                                <p class="section-subtitle font-weight-300 mt-3 font-15">I understand that by clicking on the "Accept & Continue" button, I agree to CIBIL's Terms and Conditions and I am providing "written instructions" authorizing CIBIL to obtain information from my personal credit profile from CIBIL in order to confirm my identity and display my credit data to me.</p>
                             </div>
-                            <p class="section-subtitle font-weight-300 mt-3 mb-3 font-15">I understand that by clicking on the "Accept & Continue" button, I agree to CIBIL's Terms and Conditions and I am providing "written instructions" authorizing CIBIL to obtain information from my personal credit profile from CIBIL in order to confirm my identity and display my credit data to me.</p>
+                            
                             <div class="text-right">
                                 <button class="button-yellow">ACCEPT & CONTINUE</button>
+                            </div>
+                            <div class="trust-card">
+                                <div class="">
+                                    <img class="show-password" src="./img/award-badge.svg" width="36">
+                                </div>
+                                <div class="trust-card-text">
+                                    <h5 class="font-16">CIBIL Trust & Safety Promise</h5>
+                                    <p class="font-weight-light font-12 text-color-black">Some text | comes here | Secure Payment</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-
+                <div class="col-sm-4 order-0">
+                    <div class="plans-block">
+                        <p class="mb-1">You are Signing up for</p>
+                        <div class="">
+                            <h3 class="section-title-lg mb-1">CIBIL Free Plan</h3>
+                        </div>
+                        <div class="justify-between">
+                            <p class="font-14 mb-0">One-time score. Does not update.</p>
+                            <a class="text-color-blue text-decoration-none" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Upgrade Now</a>
+                        </div>
+                        <div class="collapse mt-1" id="collapseExample">
+                            <div class="card card-body">
+                                <h3 class="font-18 font-weight-600 mb-2 text-color-black">Features you get on Upgrade</h3>
+                                <div class="feature-list">
+                                    <div class="feature-list-item">
+                                        <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
+                                        <div class="feature-list-item-text">
+                                            24x7 credit monitoring with CIBIL alerts (only for 6 months & 12 months plan)
+                                        </div>
+                                    </div>
+                                    <div class="feature-list-item">
+                                        <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
+                                        <div class="feature-list-item-text">
+                                            Unlimited access to your CIBIL dashboard
+                                        </div>
+                                    </div>
+                                    <div class="feature-list-item">
+                                        <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
+                                        <div class="feature-list-item-text">
+                                            Make the right credit decisions with Score Simulator
+                                        </div>
+                                    </div>
+                                    <div class="feature-list-item">
+                                        <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
+                                        <div class="feature-list-item-text">
+                                            Get personalized loan offers
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="font-18 font-weight-600 mb-2 text-color-black">Select a plan now to experience these features</h3>
+                                <div class="plans-radio-row mb-1">
+                                    <div class="plans-radio-col">
+                                        <input type="radio" id="1mon" value="1M550RM" name="radio-group">
+                                        <span class="checkmark"></span>
+                                        <label for="1mon">
+                                            <div class="plans-radio-price">₹550</div>
+                                            <div class="plans-radio-title">1 Month</div>
+                                            <div class="plans-radio-sub-title">@₹550/month</div>
+                                        </label>
+                                    </div>
+                                    <div class="plans-radio-col">
+                                        <input type="radio" id="6mon" value="6M800RM" name="radio-group">
+                                        <span class="checkmark"></span>
+                                        <label for="6mon">
+                                            <div class="plans-radio-price">₹880</div>
+                                            <div class="plans-radio-title">6 Months</div>
+                                            <div class="plans-radio-sub-title">@₹550/month</div>
+                                            <div class="plans-radio-offer-text orange mobile-visible margin-top-1">
+                                                Save 70%
+                                            </div>
+                                        </label>	
+                                    </div>
+                                    <div class="plans-radio-col">
+                                        <input type="radio" id="12mon" value="1Y1200RM" name="radio-group">
+                                        <span class="checkmark"></span>
+                                        <label for="12mon">
+                                            <div class="plans-radio-price">₹1200</div>
+                                            <div class="plans-radio-title">12 Months</div>
+                                            <div class="plans-radio-sub-title">@₹550/month</div>
+                                            <div class="plans-radio-offer-text orange mobile-visible margin-top-1">
+                                                Save 81%
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,6 +159,7 @@
             
         </div>
     </div>
+    <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
     <script src="./js/signup.js"></script>
 </body>

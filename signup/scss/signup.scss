@@ -31,7 +31,30 @@ h6 {
     }
 }
 
+.text-color{
+    &-black{
+        color: #000000;
+    }
+    &-blue{
+        color: #3EA3CE;
+    }
+}
+
+.text-decoration{
+    &-none{
+        text-decoration: none;
+        outline: 0;
+        &:hover{
+            text-decoration: none;
+            outline: 0;
+        }
+    }
+}
+
 .font{
+    &-12{
+        font-size: 12px;
+    }
     &-14{
         font-size: 14px;
     }
@@ -46,6 +69,7 @@ h6 {
     }
     &-18{
         font-size: 18px;
+        line-height: 22px;
     }
     &-19{
         font-size: 19px;
@@ -98,6 +122,9 @@ h6 {
     &-1{
         margin-bottom: 10px;
     }
+    &-15{
+        margin-bottom: 15px;
+    }
     &-2{
         margin-bottom: 20px;
     }
@@ -138,6 +165,32 @@ h6 {
     }
 }
 
+.justify-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-mobile-reverse{
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        .order-0{
+            order: 0;
+        }
+        .order-1{
+            order: 1;
+        }
+    }
+    
+}
+
+.header{
+    @media (max-width: 767px) {
+        background: #ffffff;
+        padding: 20px 0;
+    }
+}
+
 .section-title {
     font-size: 18px;
     line-height: 32px;
@@ -163,12 +216,207 @@ h6 {
     padding: 25px;
     @media (max-width: 767px) {
         margin: 0 -16px;
+        padding: 20px;
+    }
+}
+
+.signup-form{
+    margin-bottom: 40px;
+    @media (max-width: 767px) {
+        margin-bottom: 50px;
+    }
+}
+.report-form{
+    margin-bottom: 35px;
+    @media (max-width: 767px) {
+        margin-bottom: 50px;
+    }
+}
+
+.plans-block{
+    background: #ffffff;
+    padding: 20px;
+    .card {
+        border-top: 1px solid #DBDBDB;
+        padding-top: 18px;
+    }
+    @media (max-width: 767px) {
+        background: #F5F7FB;        
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        margin: 0 -16px;
+    }
+}
+
+.feature-list{
+    border-bottom: 1px solid #DBDBDB;
+    padding-bottom: 17px;
+    margin-bottom: 17px;
+    &-item{
+        position: relative;
+        margin-bottom: 12px;
+        &-icon{
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+        &-text{
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+            font-weight: 300;
+            padding-left: 25px;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.trust-card{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    background: #F5F7FB;
+    padding: 15px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &-text{
+        text-align: center;
+        padding-left: 20px;
+        h5{
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.75);
+            margin-bottom: 4px;
+            line-height: 22px;
+        }
+    }
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.plans-radio {
+    &-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-col {
+        width: 32%;
+        position: relative;
+        label {
+            background: #ffffff;
+            border: 2px solid #E5E5E5;
+            box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 10px 8px;
+            height: 100%;
+        }
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            margin: 0;
+            &:checked {
+                ~ {
+                    .checkmark {
+                        background-color: #2196f3;
+                        border: 1px solid #2196f3;
+                        &:after {
+                            display: block;
+                        }
+                    }
+                    label {
+                        background: #eaf1ff;
+                        border: 2px solid #3EA3CE;
+                        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+        .checkmark {
+            &:after {
+                left: 7px;
+                top: 3px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                @media (max-width: 480px) {
+                    left: 5px;
+                    top: 2px;
+                    width: 4px;
+                    height: 8px;
+                }
+            }
+        }
+        .checkmark {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            height: 16px;
+            width: 16px;
+            background-color: #ffffff;
+            border: 1px solid #969696;
+            border-radius: 50%;
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+        }
+    }
+    &-price {
+        // font-size: 18px;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(43, 43, 43, 0.7);        
+        margin-bottom: 10px;
+    }
+    &-title {
+        // font-size: 22px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #333333;
+        margin-bottom: 2px;
+    }
+    &-sub-title {
+        font-size: 12px;
+        font-weight: 400;
+        color: #333333;
+        margin-bottom: 2px;
+    }
+    &-offer-text {
+        background-image: url("https://www.cibil.com/resources/cibil/img/popup/offer-text-bg-mb.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        font-size: 12px;
+        color: #000000;
+        font-size: 12px;
+        line-height: 1.2;
+        padding-left: 0;
+        background-position: left;
+        padding: 2px 4px;
     }
 }
 
 .form-group{
     margin-bottom: 20px;
     position: relative;
+    .show-password{
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+       right: 15px; 
+       cursor: pointer;
+    }
     &-floating{
         label{
             position: absolute;
@@ -179,7 +427,7 @@ h6 {
             line-height: 21px;
             color: #999999;
             padding: 2px;
-        }
+        }        
     }
     .form-control{
         height: 46px;
