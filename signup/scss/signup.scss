@@ -35,6 +35,9 @@ h6 {
     &-black{
         color: #000000;
     }
+    &-black-75{
+        color: rgba(0, 0, 0, 0.75);
+    }
     &-blue{
         color: #3EA3CE;
     }
@@ -242,6 +245,8 @@ h6 {
 .plans-block{
     background: #ffffff;
     padding: 20px;
+    max-width: 450px;
+    margin-left: auto;
     .card {
         border-top: 1px solid #DBDBDB;
         padding-top: 18px;
@@ -250,6 +255,7 @@ h6 {
         background: #F5F7FB;        
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
         margin: 0 -16px;
+        max-width: 100%;
     }
 }
 
@@ -404,6 +410,35 @@ h6 {
         padding-left: 0;
         background-position: left;
         padding: 2px 4px;
+    }
+}
+
+.collapse-trigger{
+    color: #3EA3CE;
+    img{
+        margin-left: 5px;
+        position: relative;
+        top: -1px;
+        transition: all ease-in 0.2s;
+    }
+    .h-text{
+        display: none;
+    }
+    &[aria-expanded="true"]{
+        img{
+            transform: rotate(-180deg);
+        }
+        .u-text{
+            display: none;
+        }
+        .h-text{
+            display: inline-block;
+        }
+    }   
+    &:hover, &:focus{
+        text-decoration: none;
+        outline: 0;
+        color: #3EA3CE;
     }
 }
 
