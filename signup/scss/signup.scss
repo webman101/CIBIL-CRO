@@ -6,7 +6,7 @@
 
 body {
     font-family: "Intro";
-    background: #e5e5e5;
+    background: #f5f6fa;
 }
 
 h1,
@@ -36,6 +36,12 @@ h6 {
     }
     &-blue{
         color: #3EA3CE;
+    }
+    &-white{
+        color: #ffffff;
+    }
+    &-yellow{
+        color: #FCD833;
     }
 }
 
@@ -183,6 +189,18 @@ h6 {
     }
 }
 
+.m-visible{
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+.m-hidden{
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
+
 .row-mobile-reverse{
     @media (max-width: 991px) {
         display: flex;
@@ -204,16 +222,38 @@ h6 {
     }
 }
 
+.grey-sep{
+    height: 1px;
+    width: 100%;
+    background: #B9B9B9;
+    margin: 20px 0;
+}
+
+.w{
+    &-36{
+        @media (min-width: 992px) {
+            width: 36%;
+        }
+    }
+    &-64{
+        @media (min-width: 992px) {
+            width: 64%;
+            padding-right: 35px;
+        }
+    }
+}
+
 .header{
-    padding: 30px;
+    padding: 15px;
+    background: #ffffff;
+    border-bottom: 5px solid #FCD833;
     @media (max-width: 991px) {
-        background: #ffffff;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 }
 
 .content{
-    padding-bottom: 120px;
+    // padding-bottom: 120px;
     @media (max-width: 991px) {
         padding-bottom: 0;
     }
@@ -235,8 +275,8 @@ h6 {
 .section-title-lg {
     font-size: 22px;
     line-height: 32px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.75);
+    font-weight: 700;
+    // color: rgba(0, 0, 0, 0.75);
 }
 
 .section-subtitle{
@@ -253,6 +293,23 @@ h6 {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     padding: 25px;
     padding-bottom: 48px;
+    &-inner{
+        max-width: 476px;
+    }
+    @media (min-width: 992px) {
+        // height: calc(100vh - 75px);
+        position: relative;
+        padding-left: 0;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            right: 100%;
+            background: #ffffff;
+        }
+    }
     @media (max-width: 991px) {
         margin: 0 -16px;
         padding: 20px;
@@ -267,33 +324,39 @@ h6 {
     }
 }
 .report-form{
-    margin-bottom: 35px;
+    margin-bottom: 61px;
     @media (max-width: 991px) {
         margin-bottom: 50px;
     }
 }
 
 .plans-block{
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-    padding: 20px;
-    margin-left: auto;
+    margin-top: 30px;
     margin-bottom: 20px;
-    .card {
-        border-top: 1px solid #DBDBDB;
-        padding-top: 18px;
+    &-header{
+        padding: 20px;
+        background: linear-gradient(134.16deg, #000000 -6.01%, #797979 89.39%);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        &.premium{
+            #plans-title, #plans-subtitle{
+                color: #FCD833;
+            }
+        }
+    }
+    .card{
+        padding-top: 20px;
+        border-top: 1px solid #B9B9B9;
     }
     @media (max-width: 991px) {
-        background: #F5F7FB;        
-        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
         margin: 0 -16px;
+        margin-top: 01;
     }
 }
 
 .cards-block{
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-    padding: 20px;
+    padding: 25px 20px;
     hr{
         border-top: 1px solid #DBDBDB; 
     }
@@ -303,9 +366,9 @@ h6 {
 }
 
 .feature-list{
-    border-bottom: 1px solid #DBDBDB;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     &-item{
         position: relative;
         margin-bottom: 20px;
@@ -327,10 +390,6 @@ h6 {
         @media (max-width: 767px) {
             margin-bottom: 12px;
         }
-    }
-    @media (max-width: 767px) {
-        padding-bottom: 17px;
-        margin-bottom: 17px;
     }
 }
 
@@ -368,7 +427,7 @@ h6 {
         label {
             background: #ffffff;
             border: 2px solid #E5E5E5;
-            box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+            box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.06);
             border-radius: 4px;
             padding: 10px 8px;
             height: 100%;
@@ -391,9 +450,9 @@ h6 {
                         }
                     }
                     label {
-                        background: #eaf1ff;
-                        border: 2px solid #3EA3CE;
-                        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+                        background: #fef6ce;
+                        border: 2px solid #FCD833;
+                        box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.51);
                         border-radius: 4px;
                     }
                 }
@@ -429,24 +488,31 @@ h6 {
         }
     }
     &-price {
-        // font-size: 18px;
-        font-size: 16px;
+        font-size: 18px;        
         font-weight: 600;
         color: rgba(43, 43, 43, 0.7);        
         margin-bottom: 10px;
+        @media (max-width: 380px) {
+            font-size: 16px;
+        }
     }
     &-title {
-        // font-size: 22px;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 700;
         color: #333333;
         margin-bottom: 2px;
+        @media (max-width: 380px) {
+            font-size: 18px;
+        }
     }
     &-sub-title {
         font-size: 12px;
         font-weight: 400;
         color: #333333;
         margin-bottom: 2px;
+        @media (max-width: 380px) {
+            font-size: 12px;
+        }
     }
     &-offer-text {
         background-image: url("https://www.cibil.com/resources/cibil/img/popup/offer-text-bg-mb.svg");
@@ -464,8 +530,11 @@ h6 {
 }
 
 .collapse-trigger{
-    color: #3EA3CE;
+    color: #ffffff;
     font-weight: 600;
+    span{
+        text-decoration: underline;
+    }
     img{
         margin-left: 5px;
         position: relative;
@@ -489,7 +558,7 @@ h6 {
     &:hover, &:focus{
         text-decoration: none;
         outline: 0;
-        color: #3EA3CE;
+        color: #ffffff;
     }
 }
 
@@ -500,7 +569,7 @@ h6 {
         padding-left: 10px;
     }
     &-text{
-        padding-left: 12px;
+        padding-left: 10px;
         h5{
             font-size: 15px;
             font-family: "Intro";
@@ -527,7 +596,7 @@ h6 {
        right: 15px; 
        cursor: pointer;
     }
-    label{
+    .form-label{
         position: absolute;
         top: 10px;
         left: 10px;
@@ -535,6 +604,20 @@ h6 {
         color: #777777;
         transition: all 0.3s ease;
         pointer-events: none;
+    }
+    .input-error{
+        // opacity: 0;
+        // visibility: hidden;
+        display: none;
+        text-align: right;
+        font-weight: 400;
+        font-size: 9px;
+        letter-spacing: 0.34px;
+        line-height: 11px;
+        color: #d74025;
+        margin-top: 3px;
+        margin-bottom: 0;
+        transition: all 0.3s ease;
     }
     .form-control{
         height: 46px;
@@ -583,9 +666,6 @@ h6 {
     font-size: 18px;
     font-weight: 600;
     padding: 15px;
-    min-width: 100%;
+    width: 100%;
     text-align: center;
-    @media (min-width: 768px) {
-        min-width: 360px;
-    }
 }
