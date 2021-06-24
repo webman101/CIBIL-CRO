@@ -14,4 +14,21 @@ $(document).ready(function() {
             $(".u-text").text("Change Plan");
         }        
     }); 
+
+    $('.signup-block .form-group input[type="text"],.signup-block .form-group input[type="email"],.signup-block .form-group input[type="password"]').each(function () {
+        if (!$(this).val()) {
+            $(this).parent().removeClass("valid");
+        } else {
+            $(this).parent().addClass("valid");
+        }
+    });  
+    
+    $(document).on('blur change', '.signup-block .form-group input[type="text"],.signup-block .form-group input[type="email"],.signup-block .form-group input[type="password"]', function () {
+        if (!$(this).val()) {
+            $(this).parent().removeClass("valid");
+        } else {
+            $(this).parent().addClass("valid");
+        }
+    });
+
 })

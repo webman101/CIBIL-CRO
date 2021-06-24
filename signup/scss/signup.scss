@@ -178,10 +178,13 @@ h6 {
 .max-450{
     max-width: 455px;
     margin-left: auto;
+    @media (max-width: 991px) {
+        max-width: 100%
+    }
 }
 
 .row-mobile-reverse{
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         display: flex;
         flex-direction: column;
         .order-0{
@@ -194,9 +197,16 @@ h6 {
     
 }
 
+.custom-container{
+    @media (min-width: 768px) and (max-width: 991px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
 .header{
     padding: 30px;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         background: #ffffff;
         padding: 20px 0;
     }
@@ -204,7 +214,7 @@ h6 {
 
 .content{
     padding-bottom: 120px;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         padding-bottom: 0;
     }
 }
@@ -243,7 +253,7 @@ h6 {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     padding: 25px;
     padding-bottom: 48px;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         margin: 0 -16px;
         padding: 20px;
         padding-bottom: 20px;
@@ -252,13 +262,13 @@ h6 {
 
 .signup-form{
     margin-bottom: 40px;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         margin-bottom: 50px;
     }
 }
 .report-form{
     margin-bottom: 35px;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         margin-bottom: 50px;
     }
 }
@@ -273,7 +283,7 @@ h6 {
         border-top: 1px solid #DBDBDB;
         padding-top: 18px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         background: #F5F7FB;        
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
         margin: 0 -16px;
@@ -287,7 +297,7 @@ h6 {
     hr{
         border-top: 1px solid #DBDBDB; 
     }
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         display: none;
     }
 }
@@ -455,6 +465,7 @@ h6 {
 
 .collapse-trigger{
     color: #3EA3CE;
+    font-weight: 600;
     img{
         margin-left: 5px;
         position: relative;
@@ -516,17 +527,14 @@ h6 {
        right: 15px; 
        cursor: pointer;
     }
-    &-floating{
-        label{
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            background: #ffffff;
-            font-size: 11px;
-            line-height: 21px;
-            color: #999999;
-            padding: 2px;
-        }        
+    label{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 16px; 
+        color: #777777;
+        transition: all 0.3s ease;
+        pointer-events: none;
     }
     .form-control{
         height: 46px;
@@ -534,7 +542,7 @@ h6 {
         padding-left: 11px;
         padding-right: 11px;
         border: 1px solid #DBDBDB;
-        color: #000000;
+        color: #000000;         
         &::-webkit-input-placeholder { /* Edge */
             color: #777777;
         }        
@@ -544,11 +552,24 @@ h6 {
         &::placeholder {
             color: #777777;
         }
-        &:focus{
+        &:focus + .form-label {
+            top: -10px;
+            background: #ffffff;
+            font-size: 11px;
+            line-height: 21px;
+            color: #3EA3CE;
+        }
+        &:focus {
             border: 1px solid #3EA3CE;
-            +label{
-                color: #3EA3CE;
-            }
+        }
+    }
+    &.valid{
+        .form-label {
+            top: -10px;
+            background: #ffffff;
+            font-size: 11px;
+            line-height: 21px;
+            color: #3EA3CE;
         }
     }
 }
