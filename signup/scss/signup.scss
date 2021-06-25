@@ -345,6 +345,12 @@ h6 {
                 border-top: 1px solid #DBDBDB;
             }
         }
+        #plans-title{
+            span{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
         @media (max-width: 991px) {
             padding-bottom: 0;
         }
@@ -724,7 +730,7 @@ h6 {
         padding: 15px;
         border-radius: 3px;
         background: #ffffff;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
         border: 1px solid #DBDBDB;
         position: relative;
     }
