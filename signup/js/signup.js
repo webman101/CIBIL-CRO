@@ -33,4 +33,9 @@ $(document).ready(function() {
         }
     });
 
+    $("#flip").click(function(){
+        $(this).toggleClass("opened");
+        $("#collapseExample").toggleClass("d-block");
+    });
+
 })
