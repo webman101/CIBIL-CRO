@@ -244,6 +244,11 @@ h6 {
     padding: 15px;
     background: #ffffff;
     border-bottom: 5px solid #FCD833;
+    &-row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     @media (max-width: 991px) {
         padding: 12px 0;
         border-bottom: 0;
@@ -688,4 +693,91 @@ h6 {
     padding: 15px;
     width: 100%;
     text-align: center;
+}
+
+.language-switcher{
+    position: relative;
+    padding: 10px 0;
+    &-trigger{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 16px;
+            color: #000000;
+            display: inline-block;
+            margin-left: 8px;
+            margin-right: 7px;
+        }        
+    }
+    &-options{
+        display: none;        
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        width: 240px;
+    }
+    &-list{
+        padding: 15px;
+        border-radius: 3px;
+        background: #ffffff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+        border: 1px solid #DBDBDB;
+        position: relative;
+    }
+    &-item{
+        display: block;
+        padding-bottom: 7px;
+        font-size: 13px;
+        color: #000000;
+        outline: 0;
+        text-decoration: none !important;
+        position: relative;
+        padding-left: 27px;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+            background: #ffffff;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 5px;
+            width: 8px;
+            height: 8px;
+            background: #3ea3ce;
+            border-radius: 50%;
+            opacity: 0;
+            transition: all ease-in 0.3s;
+        }
+        &:hover, &:focus{
+            color: #3ea3ce;
+            text-decoration: underline;
+            outline: 0;
+            &::before{
+                border-color: #3ea3ce;
+            }
+            &::after{
+                opacity: 1;
+            }            
+        }
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+    &:hover{
+        .language-switcher-options{
+            display: block;
+        }
+    }
 }
