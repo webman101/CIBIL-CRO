@@ -245,7 +245,7 @@ h6 {
     background: #ffffff;
     border-bottom: 5px solid #FCD833;
     @media (max-width: 991px) {
-        padding: 15px 0;
+        padding: 12px 0;
         border-bottom: 0;
     }
 }
@@ -659,6 +659,7 @@ h6 {
             font-size: 11px;
             line-height: 21px;
             color: #3EA3CE;
+            padding: 0 3px;
         }
         &:focus {
             border: 1px solid #3EA3CE;
@@ -670,7 +671,8 @@ h6 {
             background: #ffffff;
             font-size: 11px;
             line-height: 21px;
-            color: #3EA3CE;
+            color: #999999;
+            padding: 0 3px;
         }
     }
 }
