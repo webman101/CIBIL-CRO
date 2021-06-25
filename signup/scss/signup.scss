@@ -246,6 +246,7 @@ h6 {
     border-bottom: 5px solid #FCD833;
     @media (max-width: 991px) {
         padding: 15px 0;
+        border-bottom: 0;
     }
 }
 
@@ -405,6 +406,8 @@ h6 {
         margin-right: -20px;
         background: #F5F7FB;
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        padding-bottom: 40px;
+        padding-top: 25px;
     }
 }
 
