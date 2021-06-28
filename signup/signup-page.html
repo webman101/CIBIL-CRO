@@ -46,35 +46,40 @@
                         <div class="signup-block-inner">
                         <div class="signup-form">
                             <h4 class="section-title section-title-blue mb-1">SIGN UP</h4>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="emailId" placeholder="" required>
+                            <div class="form-group req-field">
+                                <input type="email" class="form-control" id="emailId" placeholder="">
                                 <label class="form-label" for="first-name">Email ID*</label>
                                 <label class="input-error">Please Enter Email ID*</label>
                             </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="password" placeholder="" required>
+                            <div class="form-group req-field">
+                                <input type="password" class="form-control" id="password" placeholder="">
                                 <label class="form-label" for="first-name">Password*</label>
                                 <img class="show-password" src="./img/eye-icon.svg">
+                                <label class="input-error">Please Enter Password*</label>
                             </div>
                         </div>
                         <div class="report-form">
                             <h4 class="section-title section-title-blue mb-05">FETCH CIBIL REPORT</h4>
                             <p class="section-subtitle font-weight-300 mb-2">Please accurately fill the below fields. We need this information to correctly identify your Credit Score & Profile with CIBIL.</p>
-                            <div class="form-group">                                    
-                                <input type="text" class="form-control" id="first-name" placeholder="" required>
+                            <div class="form-group req-field">                                    
+                                <input type="text" class="form-control" id="first-name" placeholder="">
                                 <label class="form-label" for="first-name">First Name*</label>
+                                <label class="input-error">Please Enter First Name*</label>
                             </div>
-                            <div class="form-group">                                    
+                            <div class="form-group req-field">                                    
                                 <input type="text" class="form-control" id="last-name" placeholder="">
                                 <label class="form-label" for="last-name">Last Name</label>
+                                <label class="input-error">Please Enter Last Name*</label>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="mobile-number" placeholder="" maxlength="10" required>
+                            <div class="form-group req-field">
+                                <input type="text" class="form-control" id="mobile-number" placeholder="" maxlength="10" >
                                 <label class="form-label" for="last-name">Mobile Number*</label>
+                                <label class="input-error">Please Enter Mobile Number*</label>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="pin-code" placeholder="" maxlength="6" required>
+                            <div class="form-group req-field">
+                                <input type="text" class="form-control" id="pin-code" placeholder="" maxlength="6" >
                                 <label class="form-label" for="last-name">PIN Code*</label>
+                                <label class="input-error">Please Enter PIN Code*</label>
                             </div>
                             <p class="section-subtitle font-weight-300 mt-3">I understand that by clicking on the "Accept & Continue" button, I agree to CIBIL's Terms and Conditions and I am providing "written instructions" authorizing CIBIL to obtain information from my personal credit profile from CIBIL in order to confirm my identity and display my credit data to me.</p>
                         </div>
@@ -115,7 +120,7 @@
                                         <div class="card card-body">                                      
                                             <div class="plans-radio-row mb-0">
                                                 <div class="plans-radio-col">
-                                                    <input class="plans-list" type="checkbox" id="1mon" value="550" name="radio-group" data-title="Basic" data-subtitle="1-Month Subscription">
+                                                    <input class="plans-list" type="checkbox" id="1mon" value="550" name="radio-group" data-title="Basic" data-subtitle="1 Month Subscription">
                                                     <span class="checkmark"></span>
                                                     <label for="1mon">
                                                         <div class="plans-radio-price">₹550</div>
@@ -124,7 +129,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="plans-radio-col">
-                                                    <input class="plans-list" type="checkbox" id="6mon" value="880" name="radio-group" data-title="Standard" data-subtitle="6-Months Subscription">
+                                                    <input class="plans-list" type="checkbox" id="6mon" value="880" name="radio-group" data-title="Standard" data-subtitle="6 Months Subscription">
                                                     <span class="checkmark"></span>
                                                     <label for="6mon">
                                                         <div class="plans-radio-price">₹880</div>
@@ -136,7 +141,7 @@
                                                     </label>	
                                                 </div>
                                                 <div class="plans-radio-col">
-                                                    <input class="plans-list" type="checkbox" id="12mon" value="1200" name="radio-group" data-title="Premium" data-subtitle="12-Months Subscription">
+                                                    <input class="plans-list" type="checkbox" id="12mon" value="1200" name="radio-group" data-title="Premium" data-subtitle="12 Months Subscription">
                                                     <span class="checkmark"></span>
                                                     <label for="12mon">
                                                         <div class="plans-radio-price">₹1200</div>

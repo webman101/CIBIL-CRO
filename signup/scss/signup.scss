@@ -350,6 +350,7 @@ h6 {
             }
         }
         #plans-title{
+            min-height: 34px;
             span{
                 font-size: 16px;
                 font-weight: 400;
@@ -624,8 +625,8 @@ h6 {
     position: relative;
     .show-password{
        position: absolute;
-       top: 50%;
-       transform: translateY(-50%);
+       top: 11px;
+       //transform: translateY(-50%);
        right: 15px; 
        cursor: pointer;
     }
@@ -639,10 +640,8 @@ h6 {
         pointer-events: none;
     }
     .input-error{
-        // opacity: 0;
-        // visibility: hidden;
         display: none;
-        text-align: right;
+        text-align: left;
         font-weight: 400;
         font-size: 9px;
         letter-spacing: 0.34px;
@@ -651,6 +650,12 @@ h6 {
         margin-top: 3px;
         margin-bottom: 0;
         transition: all 0.3s ease;
+        text-transform: capitalize;
+    }
+    &.error{
+        .input-error{
+            display: block;
+        }
     }
     .form-control{
         height: 46px;
@@ -661,12 +666,15 @@ h6 {
         color: #000000;         
         &::-webkit-input-placeholder { /* Edge */
             color: #777777;
+            font-weight: 400;
         }        
         &:-ms-input-placeholder { /* Internet Explorer 10-11 */
             color: #777777;
+            font-weight: 400;
         }        
         &::placeholder {
             color: #777777;
+            font-weight: 400;
         }
         &:focus + .form-label {
             top: -10px;
@@ -783,6 +791,17 @@ h6 {
         }
         &:last-child{
             padding-bottom: 0;
+        }
+        &.active{
+            color: #3ea3ce;
+            text-decoration: underline;
+            outline: 0;
+            &::before{
+                border-color: #3ea3ce;
+            }
+            &::after{
+                opacity: 1;
+            } 
         }
     }
     &:hover{
