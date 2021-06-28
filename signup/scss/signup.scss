@@ -626,9 +626,9 @@ h6 {
     .show-password{
        position: absolute;
        top: 11px;
-       //transform: translateY(-50%);
        right: 15px; 
        cursor: pointer;
+       display: inline-block;
     }
     .form-label{
         position: absolute;
