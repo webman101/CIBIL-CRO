@@ -135,6 +135,15 @@ $(document).ready(function() {
         $('.language-switcher-trigger span').html(activetext);
     });
 
+    $('.show-password').on('click', function ( e ) {
+        var password = $("#password");
+        if (password.attr('type') == 'password') {
+            password.attr("type", "text");
+        } else {
+            password.attr("type", "password");
+        }        
+    });    
+
 });
 
 
