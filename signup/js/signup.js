@@ -111,7 +111,7 @@ $(document).ready(function() {
             }
         } else {
             $('#pin-code').parent().addClass("error");
-            $('#pin-code').parent().find('.input-error').text('PIN Code is required');
+            $('#pin-code').parent().find('.input-error').text('PIN code is required');
             validate = false;
         }
 
@@ -122,7 +122,7 @@ $(document).ready(function() {
         }
         else{
             $('#password').parent().addClass("error");
-            $('#password').parent().find('.input-error').text('The password should contain at least 8 characters and include an Uppercase, a Lowercase, a Number & a Special character.');
+            $('#password').parent().find('.input-error').text('The password should contain at least 8 characters and include an uppercase, a lowercase, a number & a special character.');
             validate = false;
         }
 
