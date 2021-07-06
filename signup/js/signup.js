@@ -161,6 +161,29 @@ $(document).ready(function() {
             }
         }
 
+        var number = $('#mobile-number').val();
+        if (number) {
+            if (isNaN(number)) {
+                $('#mobile-number').parent().addClass("error");
+                $('#mobile-number').parent().find('.input-error').text('Only numeric values supported');
+                validate = false;
+            } else if (number.length != 10) {
+                $('#mobile-number').parent().addClass("error");
+                $('#mobile-number').parent().find('.input-error').text('Enter a 10 digit mobile number');
+                validate = false;
+            } else if (number == '9999999999') {
+                $('#mobile-number').parent().addClass("error");
+                $('#mobile-number').parent().find('.input-error').text('Account with this mobile no. already exists');
+                validate = false;
+            } else {
+                $('#mobile-number').parent().removeClass("error");
+            }
+        } else {
+            $(this).parent().addClass("error");
+            $(this).parent().find('.input-error').text('Mobile number cannot be blank');
+            validate = false;
+        }
+
         var otp_number = $('#otp_field').val();
         if (otp_number) {
             if (isNaN(otp_number)) {
