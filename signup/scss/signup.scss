@@ -855,6 +855,20 @@ h6 {
     }
 }
 
+.round-button{
+    background: #FFFFFF;
+    border: 2px solid #F16E33;
+    box-sizing: border-box;
+    border-radius: 23px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #F16E33;
+    padding: 14px 28px;
+}
+
 .language-switcher{
     position: relative;
     padding: 10px 0;
@@ -1156,6 +1170,17 @@ h6 {
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
     padding: 18px 20px;
+    .form-group{
+        &-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        &-field{
+            width: 100%;
+            margin-right: 10px;
+        }
+    }
     &--name{
         display: flex;
         margin-bottom: 20px;
