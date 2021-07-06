@@ -815,6 +815,11 @@ h6 {
     padding: 15px;
     width: 100%;
     text-align: center;
+    &.disabled{
+        background: #ededed;
+        border: 1px solid #ededed;
+        color: #bfbfbf;
+    }
 }
 
 .language-switcher{
