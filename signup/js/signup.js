@@ -225,9 +225,9 @@ $(document).ready(function() {
         } else {
             password.attr("type", "password");
         }        
-    }); 
+    });
     
-    $('.edit-text').on('click', function ( e ) {   
+    $('.edit-email').on('click', function ( e ) {   
         var num = $('.otp-form #emailId').val();      
         $(this).addClass('hide');
         $(this).parent().removeClass('prefilled');
@@ -235,6 +235,13 @@ $(document).ready(function() {
         $('.otp-form #emailId').focus().val('').val(num); 
     }); 
 
+    $('.edit-mobile').on('click', function ( e ) {   
+        var num = $('.otp-form #mobile-number').val();      
+        $(this).addClass('hide');
+        $(this).parent().removeClass('prefilled');
+        $('.otp-form #mobile-number').attr("readonly", false);
+        $('.otp-form #mobile-number').focus().val('').val(num); 
+    }); 
 });
 
 
