@@ -914,6 +914,32 @@ h6 {
         }
     }
 }
+.otp-form{
+    margin-bottom: 40px;
+}
+.otp-img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
+.content{
+    min-height: calc(100% - 74px);
+    display: flex;
+    .min-container{
+        min-height: 100%;
+        .min-row{
+            min-height: 100%;
+            display: flex;
+            .signup-block{
+                min-height: 100%;
+            }
+        }
+    }
+}
 .spacer{
     margin-bottom: 42px;
     @media (max-width: 991px) {
