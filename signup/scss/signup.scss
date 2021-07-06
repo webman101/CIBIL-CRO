@@ -828,6 +828,9 @@ h6 {
         border: 1px solid #ededed;
         color: #bfbfbf;
     }
+    &:focus{
+        outline: 0;
+    }
 }
 
 .language-switcher{
