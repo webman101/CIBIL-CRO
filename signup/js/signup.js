@@ -39,6 +39,8 @@ $(document).ready(function() {
     });
 
 
+    // Sign up js
+
     $('.signup-block').on('click', '#accept-btn', function (e) {
         e.preventDefault();
         var validate = true;
@@ -63,7 +65,6 @@ $(document).ready(function() {
                 $('#emailId').parent().removeClass("error");
             }
         }
-
 
         if(!$('#first-name').val()){
             $('#first-name').parent().addClass('error');
@@ -131,7 +132,60 @@ $(document).ready(function() {
         if (validate) {
             window.location.href = url;
         }
+    });
 
+    // OTP verification js
+
+    $('.signup-block').on('click', '#verify-btn', function (e) {
+        e.preventDefault();
+        var validate = true;
+        $('.signup-block .req-field input').each(function () {
+            if (!$(this).val()) {
+                validate = false;
+                $(this).parent().addClass('error');
+            }
+        });
+
+        var emailid = $('#emailId').val();
+        if (emailid) {
+            if (!IsEmail(emailid)) {
+                $('#emailId').parent().addClass("error");
+                $('#emailId').parent().find('.input-error').text('Please enter a valid email id.');
+                validate = false;
+            } else if (emailid == 'test@test.com') {
+                $('#emailId').parent().addClass("error");
+                $('#emailId').parent().find('.input-error').text('Account with this email id already exists');
+                validate = false;
+            } else {
+                $('#emailId').parent().removeClass("error");
+            }
+        }
+
+        var otp_number = $('#otp_field').val();
+        if (otp_number) {
+            if (isNaN(otp_number)) {
+                $('#otp_field').parent().addClass("error");
+                $('#otp_field').parent().find('.input-error').text('Only numeric values supported');
+                validate = false;
+            } else if (otp_number.length != 6) {
+                $('#otp_field').parent().addClass("error");
+                $('#otp_field').parent().find('.input-error').text('Enter a 6 digit OTP sent to mobile');
+                validate = false;
+            } else {
+                $('#otp_field').parent().removeClass("error");
+                $('.otp-field-wrap .verify-otp').removeClass("d-none");
+            }
+        } else {
+            $('#otp_field').parent().addClass("error");
+            $('#otp_field').parent().find('.input-error').text('OTP cannot be blank');
+            validate = false;
+        }
+
+        var url = '/CIBIL-CRO/signup/otp-email';
+
+        if (validate) {
+            window.location.href = url;
+        }
     });
 
     $('.language-switcher-list .language-switcher-item').on('click', function ( e ) {
@@ -148,7 +202,15 @@ $(document).ready(function() {
         } else {
             password.attr("type", "password");
         }        
-    });    
+    }); 
+    
+    $('.edit-text').on('click', function ( e ) {   
+        var num = $('.otp-form #emailId').val();      
+        $(this).addClass('hide');
+        $(this).parent().removeClass('prefilled');
+        $('.otp-form #emailId').attr("readonly", false);
+        $('.otp-form #emailId').focus().val('').val(num); 
+    }); 
 
 });
 

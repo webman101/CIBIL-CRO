@@ -48,169 +48,44 @@
                         </div>
                         <div class="signup-block-inner">
                             <div class="otp-form">
+                                <h3 class="section-title-25 text-color-black mb-2">Your 1 step away from seeing your Credit Profile.</h3>
                                 <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4>
                                 <p class="section-subtitle font-weight-300 mb-2">We’ve sent an OTP to your Email ID</p>
-                                <div class="form-group req-field">
-                                    <input type="email" class="form-control" id="emailId" placeholder="" value="abc@transunion.com">
-                                    <!-- <label class="form-label" for="first-name">Email ID*</label> -->
+                                <div class="form-group req-field prefilled">
+                                    <img class="img-responsive email-icon" src="./img/email-icon.svg" />
+                                    <input type="email" class="form-control" id="emailId" placeholder="" value="abc@transunion.com" readonly>
+                                    <label class="form-label" for="first-name">Email ID*</label>
                                     <label class="input-error">Please enter email ID*</label>
+                                    <span class="edit-text">Edit</span>
                                 </div>
                                 <div class="form-group req-field">                                    
-                                    <input type="text" class="form-control" id="last-name" placeholder="">
-                                    <label class="form-label" for="last-name">Enter the OTP here</label>
+                                    <input type="text" class="form-control" id="otp_field" placeholder="" maxlength="6">
+                                    <label class="form-label" for="otp_field">Enter the OTP here</label>
                                     <label class="input-error">Please enter the OTP here*</label>
                                 </div>
-                                <p class="section-subtitle font-weight-300 mt-15 text-color-black-75">Did’nt recieve OTP yet? <a href="#" class="text-color-blue text-uppercase">RESEND OTP</a></p>
+                                <p class="section-subtitle font-weight-300 mt-15 text-color-black-75">Did’nt recieve OTP yet? <a href="#" class="text-color-blue text-uppercase font-weight-600">RESEND OTP</a></p>
                             </div>                        
                             <div class="text-right">
                                 <button id="verify-btn" class="button-yellow text-uppercase">verify</button>
                             </div>
-                            <div class="trust-card">
-                                <div class="">
-                                    <img class="show-password" src="./img/award-badge.svg" width="36">
-                                </div>
-                                <div class="trust-card-text">
-                                    <h5 class="font-16">Safe & Secure</h5>
-                                    <p class="font-weight-light font-12 text-color-black">Any transaction you make on the CIBIL site is Safe and Secured.</p>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5 w-36 order-0">
                     <div class="max-450">
                         <div class="plans-block">
-                            <div class="plans-block-header">
-                                <div class="justify-between align-items-center mb-1">
-                                    <h3 id="plans-title" class="section-title-lg text-color-white">CIBIL Free Plan</h3>
-                                    <h4 id="plans-price" class="font-18 text-color-white font-weight-600"></h4>
+                            <div class="plans-block-header otp">
+                                <div class="mb-15">
+                                    <p class="text-color-white mb-0">Thank you for signing up for</p>
                                 </div>
-                                <div class="justify-between pb-m-2">
-                                    <p id="plans-subtitle" class="text-color-white font-14 mb-0">One-time score. Does not update.</p>
-                                    <a id="flip" class="font-14 text-color-blue text-decoration-none collapse-trigger" role="button" aria-expanded="false" >
-                                        <span class="u-text">Upgrade Now</span>
-                                        <span class="h-text">Hide</span>
-                                        <img src="./img/accordian-white-icon.svg">
-                                    </a>
+                                <div class="justify-between align-items-center mb-0">
+                                    <h3 class="section-title-lg text-color-yellow">CIBIL Premium (Upgrade)</h3>
                                 </div>
-                                <div class="plans-block-content">    
-                                    <div class="collapse" id="collapseExample">
-                                        <div class="card card-body">                                      
-                                            <div class="plans-radio-row mb-0">
-                                                <div class="plans-radio-col">
-                                                    <input class="plans-list" type="checkbox" id="1mon" value="550" name="radio-group" data-title="Basic" data-subtitle="1 Month Subscription">
-                                                    <span class="checkmark"></span>
-                                                    <label for="1mon">
-                                                        <div class="plans-radio-price">₹550</div>
-                                                        <div class="plans-radio-title">1 Month</div>
-                                                        <div class="plans-radio-sub-title">@₹550/month</div>
-                                                    </label>
-                                                </div>
-                                                <div class="plans-radio-col">
-                                                    <input class="plans-list" type="checkbox" id="6mon" value="880" name="radio-group" data-title="Standard" data-subtitle="6 Months Subscription">
-                                                    <span class="checkmark"></span>
-                                                    <label for="6mon">
-                                                        <div class="plans-radio-price">₹880</div>
-                                                        <div class="plans-radio-title">6 Months</div>
-                                                        <div class="plans-radio-sub-title">@₹133/month</div>
-                                                        <div class="plans-radio-offer-text orange mobile-visible margin-top-1">
-                                                            Save 70%
-                                                        </div>
-                                                    </label>	
-                                                </div>
-                                                <div class="plans-radio-col">
-                                                    <input class="plans-list" type="checkbox" id="12mon" value="1200" name="radio-group" data-title="Premium" data-subtitle="12 Months Subscription">
-                                                    <span class="checkmark"></span>
-                                                    <label for="12mon">
-                                                        <div class="plans-radio-price">₹1200</div>
-                                                        <div class="plans-radio-title">12 Months</div>
-                                                        <div class="plans-radio-sub-title">@₹100/month</div>
-                                                        <div class="plans-radio-offer-text orange mobile-visible margin-top-1">
-                                                            Save 81%
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="feature-list mt-2 m-visible">
-                                                <h3 class="font-18 font-weight-600 mb-2 text-color-black">Upgrade your plan to get these features </h3>
-                                                <div class="feature-list-item">
-                                                    <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                                    <div class="feature-list-item-text">
-                                                        24x7 credit monitoring with CIBIL Alerts (only for 6 months & 12 months subscription).
-                                                    </div>
-                                                </div>
-                                                <div class="feature-list-item">
-                                                    <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                                    <div class="feature-list-item-text">
-                                                        Stay up to date with the latest CIBIL Score & Report with daily refreshes.
-                                                    </div>
-                                                </div>
-                                                <div class="feature-list-item">
-                                                    <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                                    <div class="feature-list-item-text">
-                                                        Make the right credit decisions with Score Simulator.
-                                                    </div>
-                                                </div>
-                                                <div class="feature-list-item">
-                                                    <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                                    <div class="feature-list-item-text">
-                                                        Get tailored loan offers based on your latest CIBIL Score.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="justify-between">
+                                    <p class="text-color-yellow font-14 mb-0">12 Months Subscription</p>
                                 </div>
-                            </div>                        
-                                                       
-                            <div class="feature-list m-hidden">
-                                <h3 class="font-18 font-weight-600 mb-2 text-color-black">Upgrade your plan to get these features </h3>
-                                <div class="feature-list-item">
-                                    <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                    <div class="feature-list-item-text">
-                                        24x7 credit monitoring with CIBIL Alerts (only for 6 months & 12 months subscription).
-                                    </div>
-                                </div>
-                                <div class="feature-list-item">
-                                    <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                    <div class="feature-list-item-text">
-                                        Stay up to date with the latest CIBIL Score & Report with daily refreshes.
-                                    </div>
-                                </div>
-                                <div class="feature-list-item">
-                                    <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                    <div class="feature-list-item-text">
-                                        Make the right credit decisions with Score Simulator.
-                                    </div>
-                                </div>
-                                <div class="feature-list-item">
-                                    <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                    <div class="feature-list-item-text">
-                                        Get tailored loan offers based on your latest CIBIL Score.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cards-block">
-                            <div class="info-card">
-                                <div class="info-card-icon">
-                                    <img src="./img/info-1.png" width="41">
-                                </div>   
-                                <div class="info-card-text">
-                                    <h5 class="text-color-black-75">Over 30 lakh+ members</h5>
-                                    <p>You will be joining our ever growing family of members who trust CIBIL and the services we provide.</p>
-                                </div>   
-                            </div>
-                            <hr>
-                            <div class="info-card">
-                                <div class="info-card-icon">
-                                    <img src="./img/info-2.png" width="48">
-                                </div>   
-                                <div class="info-card-text">
-                                    <h5 class="text-color-black-75">Safe & Secure</h5>
-                                    <p>Any transaction you make on CIBIL site are Safe and Secured with the industry best 256 bit SSL Encryption.</p>
-                                </div>   
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>

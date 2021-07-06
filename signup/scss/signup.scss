@@ -27,6 +27,9 @@ h6 {
     }
     &-blue{
         color: #3EA3CE;
+        &:hover{
+            color: #3EA3CE; 
+        }
     }
     &-white{
         color: #ffffff;
@@ -42,6 +45,14 @@ h6 {
         outline: 0;
         &:hover{
             text-decoration: none;
+            outline: 0;
+        }
+    }
+    &-underline{
+        text-decoration: underline;
+        outline: 0;
+        &:hover{
+            text-decoration: underline;
             outline: 0;
         }
     }
@@ -295,6 +306,16 @@ h6 {
     font-weight: 700;
 }
 
+.section-title-25 {
+    font-size: 25px;
+    line-height: 37px;
+    font-weight: 700;
+    @media (max-width: 767px) {
+        font-size: 22px;
+        line-height: 33px;
+    }
+}
+
 .section-subtitle{
     font-size: 15px;
     line-height: 20px;
@@ -394,6 +415,10 @@ h6 {
                 font-size: 16px;
                 font-weight: 400;
             }
+        }
+        &.otp{
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
         @media (max-width: 991px) {
             padding-bottom: 0;
@@ -727,6 +752,37 @@ h6 {
             border: 1px solid #3EA3CE;
         }
     }
+    .edit-text{
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        color: #F16E33;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .email-icon{
+        display: none;
+    }
+    &.prefilled{
+        .form-label{
+            display: none;
+        }
+        .email-icon{
+            display: block;
+            position: absolute;
+            left: 13px;
+            top: 14px;
+        }
+        input{
+            background-color: #F0F4F7;
+            padding-left: 45px;
+            color: #000000;
+            font-weight: 400;
+        }
+    }
     &.valid{
         .form-label {
             top: -10px;
@@ -858,7 +914,10 @@ h6 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    @media (max-width: 991px) {
+        display: none;
+    }
 }
 
 .content{
