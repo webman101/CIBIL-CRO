@@ -332,6 +332,9 @@ h6 {
     padding-bottom: 48px;
     &-inner{
         max-width: 476px;
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
     }
     @media (min-width: 992px) {
         position: relative;
@@ -931,6 +934,42 @@ h6 {
             .signup-block{
                 min-height: 100%;
             }
+        }
+    }
+}
+
+.verify-card{
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 2px;
+    padding: 8px;
+    &-inner{
+        border: 1px solid #DDDDDD;
+        border-radius: 2px;padding: 25px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    &-icon{
+        padding: 20px;
+        padding-top: 0;
+        border-bottom: 4px solid #FCD800;
+        margin-bottom: 21px;
+    }
+    &-text{
+        h3{
+            font-size: 20px;
+            line-height: 20px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 22px;
+            color: #000000;
+            text-align: center;
+            margin: 0;
         }
     }
 }
