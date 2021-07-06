@@ -144,6 +144,9 @@ h6 {
     &-1{
         margin-top: 10px;
     }
+    &-15{
+        margin-top: 15px;
+    }
     &-2{
         margin-top: 20px;
     }
@@ -172,11 +175,19 @@ h6 {
     }
 }
 
-.max-450{
-    max-width: 455px;
-    margin-left: auto;
-    @media (max-width: 991px) {
-        max-width: 100%
+.max{
+    &-450{
+        max-width: 455px;
+        margin-left: auto;
+        @media (max-width: 991px) {
+            max-width: 100%
+        }
+    }
+    &-480{
+        max-width: 480px;
+        @media (max-width: 991px) {
+            max-width: 100%
+        }
     }
 }
 
@@ -294,6 +305,34 @@ h6 {
 }
 
 .signup-block {
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    padding-bottom: 48px;
+    &-inner{
+        max-width: 476px;
+    }
+    @media (min-width: 992px) {
+        position: relative;
+        padding-left: 0;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            right: 100%;
+            background: #ffffff;
+        }
+    }
+    @media (max-width: 991px) {
+        margin: 0 -16px;
+        padding: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.white-block {
     background: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
     padding: 30px;
@@ -807,6 +846,32 @@ h6 {
     &:hover{
         .language-switcher-options{
             display: block;
+        }
+    }
+}
+
+.otp-form{
+    margin-bottom: 40px;
+}
+
+.otp-img{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.content{
+    min-height: calc(100% - 74px);
+    display: flex;
+    .min-container{
+        min-height: 100%;
+        .min-row{
+            min-height: 100%;
+            display: flex;
+            .signup-block{
+                min-height: 100%;
+            }
         }
     }
 }

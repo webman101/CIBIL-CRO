@@ -126,6 +126,12 @@ $(document).ready(function() {
             validate = false;
         }
 
+        var url = '/signup/signup-page';
+
+        if (validate) {
+            window.location.href = url;
+        }
+
     });
 
     $('.language-switcher-list .language-switcher-item').on('click', function ( e ) {
