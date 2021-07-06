@@ -386,6 +386,12 @@ h6 {
 
 .signup-form{
     margin-bottom: 40px;
+    &-wrapper{
+        margin-bottom: 32px;
+        @media (max-width: 991px) {
+            margin-bottom: 25px;
+        }
+    }
     @media (max-width: 991px) {
         margin-bottom: 50px;
     }
@@ -908,31 +914,97 @@ h6 {
         }
     }
 }
-
-.otp-form{
-    margin-bottom: 40px;
-}
-
-.otp-img{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 35px;
+.spacer{
+    margin-bottom: 42px;
     @media (max-width: 991px) {
-        display: none;
+        margin-bottom: 30px;
     }
 }
-
-.content{
-    min-height: calc(100% - 74px);
-    display: flex;
-    .min-container{
-        min-height: 100%;
-        .min-row{
-            min-height: 100%;
-            display: flex;
-            .signup-block{
-                min-height: 100%;
+.info-block{
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 37px;
+    color: #000000;
+    @media(max-width: 991px){
+        font-size: 22px;
+        line-height: 33px;
+    }
+}
+.account-info{
+    .question{
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+        opacity: 0.8;
+        font-weight: 700;
+        margin-bottom: 14px;
+        &-answer-list{
+            li{
+                .custom-radio{
+                    &.cibil-radio-tick{
+                        margin-top: 12px;
+                        [type="radio"]:checked, [type="radio"]:not(:checked) {
+                            position: absolute;
+                            left: -9999px;
+                        }
+                        [type="radio"]:checked + label,
+                        [type="radio"]:not(:checked) + label {
+                            position: relative;
+                            padding-left: 28px;
+                            cursor: pointer;
+                            font-size: 16px;
+                            line-height: 22px;
+                            display: inline-block;
+                            color: #000000;
+                        }
+                        [type="radio"]:checked + label:before,
+                        [type="radio"]:not(:checked) + label:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 18px;
+                            height: 18px;
+                            border: 0.8px solid #B6B6B6;
+                            border-radius: 100%;
+                            background: #fff;
+                        }
+                        [type="radio"]:checked + label:before{
+                            border: 0.8px solid #3EA3CE;
+                        }
+                        [type="radio"]:checked + label:after,
+                        [type="radio"]:not(:checked) + label:after {
+                            content: '';
+                            width: 12px;
+                            height: 12px;
+                            background: #3ea3ce;
+                            position: absolute;
+                            top: 3px;
+                            left: 3px;
+                            border-radius: 100%;
+                            -webkit-transition: all 0.2s ease;
+                            transition: all 0.2s ease;
+                        }
+                        [type="radio"]:not(:checked) {
+                            & + label {
+                                &:after {
+                                    opacity: 0;
+                                    -webkit-transform: scale(0);
+                                    transform: scale(0);
+                                }
+                            }
+                        }
+                        [type="radio"]:checked {
+                            & + label {
+                                &:after {
+                                    opacity: 1;
+                                    -webkit-transform: scale(1);
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
