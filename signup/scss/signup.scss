@@ -867,6 +867,9 @@ h6 {
     text-transform: capitalize;
     color: #F16E33;
     padding: 14px 28px;
+    &:focus {
+        outline: 0;
+    }
 }
 
 .language-switcher{
@@ -1175,10 +1178,12 @@ h6 {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+            margin-bottom: 0;
         }
         &-field{
             width: 100%;
             margin-right: 10px;
+            margin-bottom: 15px;
         }
     }
     &--name{

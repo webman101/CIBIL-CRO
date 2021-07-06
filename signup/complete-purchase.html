@@ -127,20 +127,20 @@
                         </div>
                         <button id="" class="button-yellow">PROCEED TO PAYMENT</button>
                     </div>
-                   <div class="promocode-wrapper mt-2">
+                   <div class="promocode-wrapper mt-2 mb-2">
                         <div class="promocode-wrapper--name align-items-center">
                             <img src="./img/promo-code.svg" width="15" class="promocode-icon">
                             <h4 class="ml-1">PROMOCODE</h4>
                         </div>
-                        <div class="form-group form-group-container">
+                        <div class="form-group form-group-container mb-0">
                             <div class="form-group req-field form-group-field">                                    
-                                <input type="text" class="form-control" id="otp_field" placeholder="" maxlength="6">
-                                <label class="form-label" for="otp_field">Enter Promo Code here</label>
+                                <input type="text" class="form-control" id="coupon_code" placeholder="" required>
+                                <label class="form-label" for="coupon_code">Enter Promo Code here</label>
                                 <label class="input-error">Enter Promo Code here</label>
                             </div>
-                            <button class="round-button">Apply</button>
+                            <button id="applyCouponCode" class="round-button">Apply</button>
                         </div>
-                        <div class="promocode-wrapper--inner">
+                        <div class="promocode-wrapper--inner hide">
                             <div class="promocode-wrapper--discount">
                                 <span>
                                     <img src="./img/discount.svg" width="20">SAVE10
