@@ -253,3 +253,10 @@ function IsEmail(email) {
         return true;
     }
 }
+
+var $radio = $("input:radio");
+$radio.change(function () {
+    if ($radio.filter(':checked').length > 4) {
+        $("#acceptQBtn").removeClass("disabled");
+    } 
+});
