@@ -1111,4 +1111,10 @@ h6 {
             line-height: 16px;
         }
     }
+    &-block{
+        display: block;
+        @media(min-width: 992px){
+            display: none;
+        }
+    }
 }
