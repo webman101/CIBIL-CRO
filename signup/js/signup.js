@@ -317,3 +317,12 @@ function validate_verify_yourself() {
         $('.button-yellow').removeClass('disabled');
     }
 }
+$('#applyCouponCode').click(function(){
+    if($('#coupon_code').val() != ''){
+        $('.promocode-wrapper--inner').removeClass('hide');
+        $('.form-group-container').hide();
+    }
+   else{
+        $('#coupon_code').parent().addClass("error");
+   }
+});
