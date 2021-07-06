@@ -917,6 +917,16 @@ h6 {
         margin-bottom: 30px;
     }
 }
+.info-block{
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 37px;
+    color: #000000;
+    @media(max-width: 991px){
+        font-size: 22px;
+        line-height: 33px;
+    }
+}
 .account-info{
     .question{
         font-size: 16px;
@@ -929,6 +939,7 @@ h6 {
             li{
                 .custom-radio{
                     &.cibil-radio-tick{
+                        margin-top: 12px;
                         [type="radio"]:checked, [type="radio"]:not(:checked) {
                             position: absolute;
                             left: -9999px;
@@ -938,9 +949,10 @@ h6 {
                             position: relative;
                             padding-left: 28px;
                             cursor: pointer;
-                            line-height: 20px;
+                            font-size: 16px;
+                            line-height: 22px;
                             display: inline-block;
-                            color: #666;
+                            color: #000000;
                         }
                         [type="radio"]:checked + label:before,
                         [type="radio"]:not(:checked) + label:before {
@@ -950,19 +962,22 @@ h6 {
                             top: 0;
                             width: 18px;
                             height: 18px;
-                            border: 1px solid #ddd;
+                            border: 0.8px solid #B6B6B6;
                             border-radius: 100%;
                             background: #fff;
+                        }
+                        [type="radio"]:checked + label:before{
+                            border: 0.8px solid #3EA3CE;
                         }
                         [type="radio"]:checked + label:after,
                         [type="radio"]:not(:checked) + label:after {
                             content: '';
                             width: 12px;
                             height: 12px;
-                            background: #F87DA9;
+                            background: #3ea3ce;
                             position: absolute;
-                            top: 4px;
-                            left: 4px;
+                            top: 3px;
+                            left: 3px;
                             border-radius: 100%;
                             -webkit-transition: all 0.2s ease;
                             transition: all 0.2s ease;
