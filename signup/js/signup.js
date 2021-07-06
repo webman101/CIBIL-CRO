@@ -293,10 +293,27 @@ function IsEmail(email) {
         return true;
     }
 }
+var verify_validate = true;
+    $('input[name=radio_step1],input[name=radio_step2],input[name=radio_step3],input[name=radio_step4],input[name=radio_step5]').on('change', function () {
+        validate_verify_yourself();
+    });
 
-var $radio = $("input:radio");
-$radio.change(function () {
-    if ($radio.filter(':checked').length > 4) {
-        $("#acceptQBtn").removeClass("disabled");
-    } 
-});
+function validate_verify_yourself() {
+    var names = [];
+    var verify_validate = true;
+
+    $('.account-info input:radio').each(function () {
+        var rname = $(this).attr('name');
+        if ($.inArray(rname, names) == -1) names.push(rname);
+    });
+
+    $.each(names, function (i, name) {
+        if ($('input[name="' + name + '"]:checked').length == 0) {
+            verify_validate = false;
+        }
+    });
+
+    if (verify_validate) {
+        $('.button-yellow').removeClass('disabled');
+    }
+}
