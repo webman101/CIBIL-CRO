@@ -204,13 +204,13 @@ h6 {
 
 .m-visible{
     @media (min-width: 992px) {
-        display: none;
+        display: none !important;
     }
 }
 
 .m-hidden{
     @media (max-width: 991px) {
-        display: none;
+        display: none !important;
     }
 }
 
