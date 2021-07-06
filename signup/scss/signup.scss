@@ -1143,3 +1143,48 @@ h6 {
         }
     }
 }
+.promocode-wrapper{
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    padding: 18px 20px;
+    h4{
+        font-size: 18px;
+        line-height: 22px;
+        color: #000000;
+        opacity: 0.75;
+    }
+    &--inner{
+        background: #F3F6FF;
+        border: 0.5px solid #DBDBDB;
+    }
+    &--discount{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 15px 18px 10px 11px;
+        border-bottom: 0.8px solid #DDDDDD;
+        span{
+            &:first-child{
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+                font-weight: 600;
+            }
+            &:last-child{
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 16px;
+                text-align: center;
+                text-transform: capitalize;
+                color: #18A160;
+            }
+        }
+    }
+    &--message{
+        padding: 10px 18px 15px 11px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000000;
+    }
+}
