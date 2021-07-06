@@ -389,7 +389,12 @@ h6 {
     &-wrapper{
         margin-bottom: 32px;
         @media (max-width: 991px) {
-            margin-bottom: 25px;
+            margin-bottom: 25px !important;
+        }
+    }
+    &-spacing{
+        @media (max-width: 991px) {
+            margin-bottom: 19.08px !important;
         }
     }
     @media (max-width: 991px) {
@@ -772,21 +777,18 @@ h6 {
         display: inline-block;
         cursor: pointer;
     }
-    .placeholder-icon{
+    .email-icon{
         display: none;
     }
     &.prefilled{
         .form-label{
             display: none;
         }
-        .placeholder-icon{
+        .email-icon{
             display: block;
             position: absolute;
             left: 11px;
             top: 14px;
-            &.mobile{
-                top: 10px;
-            }
         }
         input{
             background-color: #F0F4F7;
@@ -1115,7 +1117,8 @@ h6 {
         }
     }
     &-block{
-        display: block;
+        display: flex;
+        align-items: start;
         @media(min-width: 992px){
             display: none;
         }
