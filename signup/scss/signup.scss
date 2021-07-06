@@ -1253,3 +1253,34 @@ h6 {
         }
     }    
 }
+
+.price-block{
+    padding: 18px 20px;
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    .section-title{
+        color: rgba(0, 0, 0, 0.75);
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #DDDDDD;
+    }
+    hr{
+        border-top: 1px solid #DDDDDD;
+    }
+    &-terms{
+        margin-bottom: 32px;
+        p{
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 18px;
+            color: #777777;
+            margin: 0;
+            margin-bottom: 15px;
+            a{
+                color: #00A6CA;
+                font-weight: 400;
+                text-decoration: none !important;
+            }
+        }
+    }
+}
