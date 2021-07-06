@@ -397,6 +397,12 @@ h6 {
             margin-bottom: 19.08px !important;
         }
     }
+    .section-title-25{
+        margin-bottom: 40px;
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+    }
     @media (max-width: 991px) {
         margin-bottom: 50px;
     }
