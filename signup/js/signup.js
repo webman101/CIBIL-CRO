@@ -134,7 +134,7 @@ $(document).ready(function() {
         }
     });
 
-    // OTP verification js
+    // OTP verification email js 
 
     $('.signup-block').on('click', '#verify-btn', function (e) {
         e.preventDefault();
@@ -160,6 +160,46 @@ $(document).ready(function() {
                 $('#emailId').parent().removeClass("error");
             }
         }
+
+        var otp_number = $('#otp_field').val();
+        if (otp_number) {
+            if (isNaN(otp_number)) {
+                $('#otp_field').parent().addClass("error");
+                $('#otp_field').parent().find('.input-error').text('Only numeric values supported');
+                validate = false;
+            } else if (otp_number.length != 6) {
+                $('#otp_field').parent().addClass("error");
+                $('#otp_field').parent().find('.input-error').text('Enter a 6 digit OTP sent to mobile');
+                validate = false;
+            } else {
+                $('#otp_field').parent().removeClass("error");
+                $('.otp-field-wrap .verify-otp').removeClass("d-none");
+            }
+        } else {
+            $('#otp_field').parent().addClass("error");
+            $('#otp_field').parent().find('.input-error').text('OTP cannot be blank');
+            validate = false;
+        }
+
+        var url = '/CIBIL-CRO/signup/signup-additional-info';
+
+        if (validate) {
+            window.location.href = url;
+        }
+    });
+
+
+    // OTP verification mobile js 
+
+    $('.signup-block').on('click', '#verify-mobile-btn', function (e) {
+        e.preventDefault();
+        var validate = true;
+        $('.signup-block .req-field input').each(function () {
+            if (!$(this).val()) {
+                validate = false;
+                $(this).parent().addClass('error');
+            }
+        });
 
         var number = $('#mobile-number').val();
         if (number) {
@@ -204,7 +244,7 @@ $(document).ready(function() {
             validate = false;
         }
 
-        var url = '/CIBIL-CRO/signup/otp-email';
+        var url = '/CIBIL-CRO/signup/signup-additional-info';
 
         if (validate) {
             window.location.href = url;
