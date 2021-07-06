@@ -126,7 +126,7 @@ $(document).ready(function() {
             validate = false;
         }
 
-        var url = '/signup/signup-page';
+        var url = '/CIBIL-CRO/signup/otp-email';
 
         if (validate) {
             window.location.href = url;
