@@ -37,6 +37,15 @@ h6 {
     &-yellow{
         color: #FCD833;
     }
+    &-brown{
+        color: #232323;
+    }
+}
+
+.bg{
+    &-light-blue{
+        background: #EFF7FE;
+    }
 }
 
 .text-decoration{
@@ -1187,4 +1196,16 @@ h6 {
         line-height: 22px;
         color: #000000;
     }
+}
+
+.table--colored{
+    td{
+        font-size: 14px;
+        padding: 12px !important;
+        line-height: 15px !important;
+        border: 1px solid #DEE2E6;
+        &:first-child{
+            width: 143px;
+        }
+    }    
 }
