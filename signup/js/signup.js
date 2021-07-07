@@ -335,6 +335,12 @@ $(document).ready(function() {
         $('.otp-form #emailId').attr("readonly", true);
     });
 
+    $("#to-top").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".plans-block").offset().top - 70
+        }, 500);
+    });
+
 });
 
 
