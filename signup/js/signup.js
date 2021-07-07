@@ -48,7 +48,7 @@ $(document).ready(function() {
         }        
     }); 
 
-    $('.signup-block .form-group input[type="text"],.signup-block .form-group input[type="email"],.signup-block .form-group input[type="password"]').each(function () {
+    $('.signup-block .form-group input[type="text"],.signup-block .form-group input[type="email"],.signup-block .form-group input[type="password"], .form-group input[type="number"]').each(function () {
         if (!$(this).val()) {
             $(this).parent().removeClass("valid");
         } else {
@@ -56,7 +56,7 @@ $(document).ready(function() {
         }
     });  
     
-    $(document).on('blur change', '.signup-block .form-group input[type="text"],.signup-block .form-group input[type="email"],.signup-block .form-group input[type="password"]', function () {
+    $(document).on('blur change', '.signup-block .form-group input[type="text"],.signup-block .form-group input[type="email"],.signup-block .form-group input[type="password"], .form-group input[type="number"]', function () {
         if (!$(this).val()) {
             $(this).parent().removeClass("valid");
         } else {
@@ -202,6 +202,10 @@ $(document).ready(function() {
                 $('#otp_field').parent().addClass("error");
                 $('#otp_field').parent().find('.input-error').text('Enter a 6 digit OTP sent to mobile');
                 validate = false;
+            } else if (otp_number != '111111') {
+                $('#otp_field').parent().addClass("error");
+                $('#otp_field').parent().find('.input-error').text('OTP is invalid');
+                validate = false;
             } else {
                 $('#otp_field').parent().removeClass("error");
                 $('.otp-field-wrap .verify-otp').removeClass("d-none");
@@ -265,6 +269,10 @@ $(document).ready(function() {
                 $('#otp_field').parent().addClass("error");
                 $('#otp_field').parent().find('.input-error').text('Enter a 6 digit OTP sent to mobile');
                 validate = false;
+            } else if (otp_number != '111111') {
+                $('#otp_field').parent().addClass("error");
+                $('#otp_field').parent().find('.input-error').text('OTP is invalid');
+                validate = false;
             } else {
                 $('#otp_field').parent().removeClass("error");
                 $('.otp-field-wrap .verify-otp').removeClass("d-none");
@@ -298,24 +306,27 @@ $(document).ready(function() {
         }        
     });
     
-    $('.edit-email').on('click', function ( e ) {   
-        var num = $('.otp-form #emailId').val();      
-        $(this).addClass('hide');
-        $(this).parent().removeClass('prefilled');
-        $('.otp-form #emailId').attr("readonly", false);
-        $('.otp-form #emailId').focus().val('').val(num); 
+    $('.edit-email').on('click', function ( e ) {  
+        var url = '/CIBIL-CRO/signup/signup-page'; 
+        window.location.href = url;
+        // var num = $('.otp-form #emailId').val();      
+        // $(this).addClass('hide');
+        // $(this).parent().removeClass('prefilled');
+        // $('.otp-form #emailId').attr("readonly", false);
+        // $('.otp-form #emailId').focus().val('').val(num); 
     }); 
 
     $('.edit-mobile').on('click', function ( e ) {   
-        var num = $('.otp-form #mobile-number').val();      
-        $(this).addClass('hide');
-        $(this).parent().removeClass('prefilled');
-        $('.otp-form #mobile-number').attr("readonly", false);
-        $('.otp-form #mobile-number').focus().val('').val(num); 
+        var url = '/CIBIL-CRO/signup/signup-page';
+        window.location.href = url;
+        // var num = $('.otp-form #mobile-number').val();      
+        // $(this).addClass('hide');
+        // $(this).parent().removeClass('prefilled');
+        // $('.otp-form #mobile-number').attr("readonly", false);
+        // $('.otp-form #mobile-number').focus().val('').val(num); 
     }); 
 
     $('#acceptQBtn').on('click', function (e) {
-        console.log("test 1111");
         var validate = true;
         var url = '/CIBIL-CRO/signup/complete-purchase';
         if (validate) {
