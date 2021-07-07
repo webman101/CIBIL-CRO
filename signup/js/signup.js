@@ -282,6 +282,15 @@ $(document).ready(function() {
         $('.otp-form #mobile-number').attr("readonly", false);
         $('.otp-form #mobile-number').focus().val('').val(num); 
     }); 
+
+    $('#acceptQBtn').on('click', function (e) {
+        console.log("test 1111");
+        var validate = true;
+        var url = '/CIBIL-CRO/signup/complete-purchase';
+        if (validate) {
+            window.location.href = url;
+        }
+    })
 });
 
 
@@ -315,6 +324,7 @@ function validate_verify_yourself() {
 
     if (verify_validate) {
         $('.button-yellow').removeClass('disabled');
+        $('.button-yellow').attr("disabled", false);
     }
 }
 $('#applyCouponCode').click(function(){
