@@ -405,6 +405,9 @@ h6 {
             margin-right: 15px;
         }
     }
+    &.otp-block{
+        box-shadow: none;
+    }
 }
 
 .white-block {
@@ -858,6 +861,9 @@ h6 {
         &-otp{
             font-size: 28px;
             letter-spacing: 15px;
+            &:focus + .form-label {
+                display: none;
+            }
         }
     }
     .edit-text{
@@ -915,6 +921,13 @@ h6 {
     }
     &-10{
         margin-bottom: 10px;
+    }
+    &-otp{
+        &.valid{
+            .form-label {
+                display: none;
+            }
+        }
     }
 }
 
