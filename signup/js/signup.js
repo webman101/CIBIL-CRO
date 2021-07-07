@@ -167,9 +167,9 @@ $(document).ready(function() {
                 $('#otp_field').parent().addClass("error");
                 $('#otp_field').parent().find('.input-error').text('Only numeric values supported');
                 validate = false;
-            } else if (otp_number.length != 4) {
+            } else if (otp_number.length != 6) {
                 $('#otp_field').parent().addClass("error");
-                $('#otp_field').parent().find('.input-error').text('Enter a 4 digit OTP sent to mobile');
+                $('#otp_field').parent().find('.input-error').text('Enter a 6 digit OTP sent to mobile');
                 validate = false;
             } else {
                 $('#otp_field').parent().removeClass("error");
@@ -230,9 +230,9 @@ $(document).ready(function() {
                 $('#otp_field').parent().addClass("error");
                 $('#otp_field').parent().find('.input-error').text('Only numeric values supported');
                 validate = false;
-            } else if (otp_number.length != 4) {
+            } else if (otp_number.length != 6) {
                 $('#otp_field').parent().addClass("error");
-                $('#otp_field').parent().find('.input-error').text('Enter a 4 digit OTP sent to mobile');
+                $('#otp_field').parent().find('.input-error').text('Enter a 6 digit OTP sent to mobile');
                 validate = false;
             } else {
                 $('#otp_field').parent().removeClass("error");

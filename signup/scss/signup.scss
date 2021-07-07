@@ -78,7 +78,7 @@ h6 {
         font-size: 15px;
     }
     &-16{
-        font-size: 16px;
+        font-size: 16px !important;
     }
     &-17{
         font-size: 17px;
@@ -92,6 +92,9 @@ h6 {
     }
     &-20{
         font-size: 20px;
+    }
+    &-22{
+        font-size: 22px;
     }
 }
 
@@ -507,6 +510,13 @@ h6 {
     &.purchase{
         margin-top: 10px;
         margin-bottom: 10px;
+        .plans-block-header{
+            .font-14{
+                @media (max-width: 400px) {
+                    font-size: 13px;
+                }
+            }            
+        }
     }
     @media (max-width: 991px) {
         margin: 0 -16px;
