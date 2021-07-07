@@ -916,6 +916,9 @@ h6 {
     text-transform: capitalize;
     color: #F16E33;
     padding: 13px 28px;
+    @media(max-width: 375px){
+        padding: 13px 15px;
+    }
     &:focus {
         outline: 0;
     }
@@ -1275,6 +1278,11 @@ h6 {
             width: 100%;
             margin-right: 10px;
             margin-bottom: 15px;
+        }
+        .form-label{
+            @media(max-width: 375px){
+                font-size: 12px;
+            }
         }
     }
     &--name{
