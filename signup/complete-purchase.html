@@ -160,7 +160,7 @@
                             </div>                           
 
                             <h4 class="section-title section-title-blue mb-1 text-uppercase">Account Details</h4>
-                            <table class="table table-bordered table--colored text-grey">
+                            <table class="table table-bordered table--colored text-grey ">
                                 <tbody>
                                     <tr>
                                         <td class="bg-light-blue font-weight-300 text-color-brown">Full Name</td>
@@ -189,16 +189,20 @@
                         <div class="mb-2">
                             <h3 id="p-subtitle" class="font-16 text-color-black font-weight-300">(12 Months Subscription)</h3>
                         </div>
+                        <div class="justify-between align-items-center price-block-descount hide">
+                            <h3 class="font-16 text-color-black font-weight-300">Promocode Discount </h3>
+                            <h4 id="p-discount" class="font-18 text-color-black font-weight-400 text-color-green">₹ 120</h4>
+                        </div>
                         <hr class="mt-15 mb-15"/>
                         <div class="price-block-total justify-between align-items-center">
                             <h3 class="font-22 text-color-black font-weight-600">Total Amount</h3>
-                            <h4 id="t-price" class="font-22 text-color-black font-weight-600">₹ 1200</h4>
+                            <h4 id="t-price" class="font-22 text-color-black font-weight-600">₹ <span>1200</span></h4>
                         </div>
                         <hr class="mt-15 mb-15"/>
-                        <div class="price-block-terms">
+                        <div class="price-block-terms m-hidden">
                             <p>By clicking the "Proceed to Payment" button, you will be redirected to a third-party payment vendor that will handle your payment.</p>
                         </div>
-                        <button id="" class="button-yellow">PROCEED TO PAYMENT</button>
+                        <button id="" class="button-yellow m-hidden">PROCEED TO PAYMENT</button>
                     </div>
                    <div class="promocode-wrapper mt-2 mb-2">
                         <div class="promocode-wrapper--name align-items-center">
@@ -226,9 +230,18 @@
                             </div>
                             <p class="promocode-wrapper--message mb-0">Congratulations! Your promocode has been applied. You have just saved ₹120.</p>
                         </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
+        </div>
+        <div class="price-sticky-footer">
+            <div class="price">
+                <h3 id="t-price-m" class="font-24 mb-0 text-color-black">₹ <span>1200</span></h3>
+                <p class="font-14 text-color-blue mb-0">View details</p>
+            </div>            
+            <div class="pay-btn">
+                <button class="button-yellow text-uppercase">Pay Now</button>
+            </div>            
         </div>
     </div>
     <div class="footer">

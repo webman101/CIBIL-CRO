@@ -1,3 +1,4 @@
+var discount = 0;
 $(document).ready(function() {
     $('.plans-radio-row .plans-list').on('change', function() {
         $('.plans-list').not(this).prop('checked', false);
@@ -29,7 +30,9 @@ $(document).ready(function() {
             $("#plans-price").text("");
             $("#p-price").text("");
             $("#t-price").text("");
+            $("#t-price-m").text("");
             $(".u-text").text("Upgrade Now");
+            $(".price-block-descount").hide();
         } else {
             $("#plans-title").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
             $("#p-name").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
@@ -38,8 +41,10 @@ $(document).ready(function() {
             $("#p-subtitle").text($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('subtitle'));
             $("#plans-price").text("₹"+value);
             $("#p-price").text("₹"+value);
-            $("#t-price").text("₹"+value);
+            $("#t-price").text("₹"+(value-discount));
+            $("#t-price-m").text("₹"+(value-discount));
             $(".u-text").text("Change Plan");
+            $(".price-block-descount").show();
         }        
     }); 
 
@@ -366,12 +371,18 @@ function validate_verify_yourself() {
         $('.button-yellow').attr("disabled", false);
     }
 }
+
 $('#applyCouponCode').click(function(){
+    discount = 120;
     if($('#coupon_code').val() != ''){
+        $('#t-price span').text(Number($('#t-price span').text()) - discount);
+        $('#t-price-m span').text(Number($('#t-price-m span').text()) - discount);
         $('.promocode-wrapper--inner').removeClass('hide');
         $('.form-group-container').hide();
+        $('.price-block-descount').removeClass('hide');
     }
    else{
         $('#coupon_code').parent().addClass("error");
+        $('.price-block-descount').addClass('hide');
    }
 });
