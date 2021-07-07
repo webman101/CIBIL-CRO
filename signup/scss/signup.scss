@@ -506,10 +506,11 @@ h6 {
     }
     &.purchase{
         margin-top: 10px;
+        margin-bottom: 10px;
     }
     @media (max-width: 991px) {
         margin: 0 -16px;
-        margin-top: 01;
+        margin-top: 0;
     }
 }
 
@@ -828,6 +829,10 @@ h6 {
         &:focus {
             border: 1px solid #3EA3CE;
         }
+        &-otp{
+            font-size: 28px;
+            letter-spacing: 15px;
+        }
     }
     .edit-text{
         position: absolute;
@@ -1015,6 +1020,12 @@ h6 {
 }
 .otp-form{
     margin-bottom: 40px;
+    .section-subtitle{
+        margin-bottom: 45px;
+        @media (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+    }
 }
 .otp-img{
     margin-left: auto;
@@ -1037,6 +1048,14 @@ h6 {
                 min-height: 100%;
             }
         }
+    }
+    &-otp{
+        @media (max-width: 991px) {
+            background: #ffffff;
+        }
+    }
+    @media (max-width: 991px) {
+        min-height: calc(100% - 64px);
     }
 }
 .spacer{
