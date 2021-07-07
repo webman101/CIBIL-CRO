@@ -28,6 +28,7 @@ $(document).ready(function() {
             $("#p-subtitle").text('One-time score. Does not update.');  
             $("#plans-price").text("");
             $("#p-price").text("");
+            $("#t-price").text("");
             $(".u-text").text("Upgrade Now");
         } else {
             $("#plans-title").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
@@ -37,6 +38,7 @@ $(document).ready(function() {
             $("#p-subtitle").text($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('subtitle'));
             $("#plans-price").text("₹"+value);
             $("#p-price").text("₹"+value);
+            $("#t-price").text("₹"+value);
             $(".u-text").text("Change Plan");
         }        
     }); 
