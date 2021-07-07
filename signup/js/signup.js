@@ -17,6 +17,30 @@ $(document).ready(function() {
         }        
     }); 
 
+    $('#purchase-plans-radio .plans-list').on('change', function() {
+        $('.plans-list').not(this).prop('checked', false);
+        let value = $('#purchase-plans-radio input:checkbox[name=radio-group]:checked').val();
+        if(value == null) {
+            $("#plans-title").html('CIBIL Free Plan');
+            $("#p-name").html('CIBIL Free Plan');
+            $(".plans-block-header").removeClass('premium');
+            $("#plans-subtitle").text('One-time score. Does not update.');  
+            $("#p-subtitle").text('One-time score. Does not update.');  
+            $("#plans-price").text("");
+            $("#p-price").text("");
+            $(".u-text").text("Upgrade Now");
+        } else {
+            $("#plans-title").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
+            $("#p-name").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
+            $(".plans-block-header").addClass('premium');
+            $("#plans-subtitle").text($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('subtitle'));
+            $("#p-subtitle").text($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('subtitle'));
+            $("#plans-price").text("₹"+value);
+            $("#p-price").text("₹"+value);
+            $(".u-text").text("Change Plan");
+        }        
+    }); 
+
     $('.signup-block .form-group input[type="text"],.signup-block .form-group input[type="email"],.signup-block .form-group input[type="password"]').each(function () {
         if (!$(this).val()) {
             $(this).parent().removeClass("valid");

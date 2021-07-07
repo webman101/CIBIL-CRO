@@ -1299,7 +1299,7 @@ h6 {
         &-container{
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-start;
             margin-bottom: 0;
         }
         &-field{
