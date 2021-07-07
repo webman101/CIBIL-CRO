@@ -762,12 +762,20 @@ h6 {
 .form-group{
     margin-bottom: 20px;
     position: relative;
+    .country-placeholder{
+        position: absolute;
+        top: 11px;
+        left: 36px;
+        color: #959799;
+        display: none;
+    }
     .show-password{
        position: absolute;
        top: 11px;
-       right: 15px; 
+       right: 15px;
        cursor: pointer;
        display: inline-block;
+       display: none;
     }
     .form-label{
         position: absolute;
@@ -802,7 +810,8 @@ h6 {
         padding-left: 11px;
         padding-right: 11px;
         border: 1px solid #DBDBDB;
-        color: #000000;         
+        color: #000000;
+        background-color: #ffffff;       
         &::-webkit-input-placeholder { /* Edge */
             color: #777777;
             font-weight: 400;
@@ -861,11 +870,20 @@ h6 {
                 top: 10px;
             }
         }
+        .country-placeholder{
+            display: block;
+        }
         input{
             background-color: #F0F4F7;
             padding-left: 43px;
             color: #959799;
             font-weight: 400;
+        }
+        .show-password{
+            display: block;
+        }
+        .mobile-input{
+            padding-left: 65px;
         }
     }
     &.valid{

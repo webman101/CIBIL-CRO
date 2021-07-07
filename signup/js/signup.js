@@ -290,7 +290,20 @@ $(document).ready(function() {
         if (validate) {
             window.location.href = url;
         }
-    })
+    });
+
+    $(".otp-form #mobile-number").blur(function(){
+        $('.edit-mobile').removeClass('hide').addClass('show');
+        $(this).parent().addClass('prefilled');
+        $('.otp-form #mobile-number').attr("readonly", true);
+    });
+
+    $(".otp-form #emailId").blur(function(){
+        $('.edit-email').removeClass('hide').addClass('show');
+        $(this).parent().addClass('prefilled');
+        $('.otp-form #emailId').attr("readonly", true);
+    });
+
 });
 
 
