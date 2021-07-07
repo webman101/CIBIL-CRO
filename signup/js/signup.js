@@ -9,7 +9,7 @@ $(document).ready(function() {
             $("#plans-price").text("");
             $(".u-text").text("Upgrade Now");
         } else {
-            $("#plans-title").html('CIBIL '+$('.plans-radio-row input:checkbox[name=radio-group]:checked').data('title')+' <span>(Upgrade)</span');
+            $("#plans-title").html('CIBIL '+$('.plans-radio-row input:checkbox[name=radio-group]:checked').data('title'));
             $(".plans-block-header").addClass('premium');
             $("#plans-subtitle").text($('.plans-radio-row input:checkbox[name=radio-group]:checked').data('subtitle'));
             $("#plans-price").text("₹"+value);
