@@ -414,7 +414,6 @@ h6 {
     }
     &.otp-block {
         box-shadow: none;
-        padding: 20px 16px;
     }
 }
 
@@ -1551,6 +1550,18 @@ input[type="number"] {
     text-align: center;
     color: #777777;
     margin-top: 19px;
+    text-decoration: none;
+    display: block;
+    transition: all .5s ease-in-out;
+    outline:0;
+    &:hover{
+        color: #242424;
+    }
+    &:focus {
+        outline: 0 !important;
+        color: #242424;
+
+    }
 }
 .blue-title {
     font-size: 16px;
@@ -1582,8 +1593,8 @@ input[type="number"] {
 }
 .pair-device {
     .custom-control-label {
-        font-weight: 400;
-        font-size: 16px !important;
+        font-weight: 600;
+        font-size: 20px !important;
         margin-bottom: 5px;
 
         @media screen and (min-width: 992px) {
