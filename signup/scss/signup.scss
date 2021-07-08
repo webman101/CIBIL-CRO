@@ -1588,8 +1588,7 @@ input[type="number"] {
 
         @media screen and (min-width: 992px) {
             font-size: 20px !important;
-        margin-bottom: 10px;
-
+            margin-bottom: 10px;
         }
 
         line-height: 22px;
@@ -1604,4 +1603,78 @@ input[type="number"] {
 }
 .signup-block-inner#pair-device {
     max-width: 480px;
+}
+select {
+    height: 46px;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #dbdbdb;
+    color: #000000;
+    background-color: #ffffff;
+    width: 100%;
+    color: #777777;
+}
+.select-field {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 10px;
+        width: 30px;
+        background-image: url(../img/down-arrow.png);
+        right: 2px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+}
+.text-grey {
+    color: #777;
+}
+
+.table--small {
+    font-size: 14px;
+}
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px !important;
+    @media screen and (min-width: 992px) {
+        margin-bottom: 40px !important;
+    }
+}
+.table--colored td:first-child {
+    background-color: #eff7fe;
+    width: 35%;
+}
+.extra{
+    margin-bottom: 20px !important;
+    @media screen and (min-width: 992px) {
+        margin-bottom: 40px !important;
+    }
+}
+.table--colored td {
+    letter-spacing: 0.5px;
+    word-break: break-word;
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
 }
