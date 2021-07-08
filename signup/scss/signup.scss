@@ -1703,29 +1703,51 @@ table {
 .fw--600 {
     font-weight: 600;
 }
-.password-eye {
+// .password-eye {
+//     position: relative;
+//     &::after {
+//         content: "";
+//         position: absolute;
+//         height: 22px;
+//         width: 22px;
+//         background-image: url(../img/eye-icon.svg);
+//         right: 12px;
+//         top: 0;
+//         bottom: 0;
+//         margin: auto;
+//         background-size: contain;
+//         background-repeat: no-repeat;
+//         background-color: white;
+//     }
+// }
+.password-relative {
     position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        height: 22px;
-        width: 22px;
-        background-image: url(../img/eye-icon.svg);
-        right: 12px;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: white;
+
+}
+td.text-black.fw--600.password-relative {
+    padding: 0 !important;
+    input{
+        border: 0 !important;
+        outline: 0 !important;
+        padding-left: 12px;
     }
+}
+.password-eye {
+    position: absolute;
+cursor: pointer;
+    right: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 .extra-form {
     .plans-block-header {
         background: linear-gradient(134.16deg, #148db0, #00b2e6);
     }
 }
-.plans-block-header{
+.plans-block-header {
     background: linear-gradient(134.16deg, #148db0, #00b2e6);
-
+}
+.mt-20{
+    margin-top: 20px;
 }

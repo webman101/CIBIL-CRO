@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="./css/signup.css">
 </head>
@@ -48,7 +49,7 @@
                                 <h3 class="section-title-25 text-color-black">We need some additional information identify your Credit Score & Profile.</h3>
                                 <h4 class="section-title section-title-blue mb-1">ADDITIONAL INFORMATION</h4>
                                 <p>Please accurately provide your details for the below fields so that we can identify and fetch your CIBIL Score & Report.</p>
-                                <div class="form-group req-field">
+                                <div class="form-group req-field mt-20">
                                     <input type="email" class="form-control" id="emailId" placeholder="">
                                     <label class="form-label" for="first-name">Address line 1*</label>
                                     <label class="input-error">Please enter Address</label>
@@ -81,10 +82,9 @@
                                 <div class="form-group req-field select-field">
                                     <select>
                                     <option>Gender*</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
-                                    <option>Option 5</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
                                   </select>
                                 </div>
                                 <h4 class="section-title section-title-blue mb-1">ACCOUNT DETAILS</h4>
@@ -102,7 +102,8 @@
                                             </tr>
                                             <tr>
                                                 <td class="text-grey-7 font-light">Password</td>
-                                                <td class="text-black fw--600 password-eye">******</td>
+                                                <td class="text-black fw--600 password-relative"><input id="password-field" type="password" class="form-control" name="password" value="secret"> <img src="./img/eye-icon.svg" toggle="#password-field" class="password-eye" alt=""></td>
+
                                             </tr>
                                             <tr>
                                                 <td class="text-grey-7 font-light">Mobile Number</td>
