@@ -347,9 +347,10 @@ $(document).ready(function() {
     });
 
     $("#to-top").click(function() {
-        $('html, body').animate({
-            scrollTop: $(".plans-block").offset().top - 70
-        }, 500);
+        // $('html, body').animate({
+        //     scrollTop: $(".plans-block").offset().top - 70
+        // }, 500);
+        $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
 });
