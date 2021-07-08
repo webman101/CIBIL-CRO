@@ -44,7 +44,7 @@ h6 {
         color: #18a160;
     }
 }
-.h-100{
+.h-100 {
     height: 100%;
 }
 .bg {
@@ -1562,19 +1562,20 @@ input[type="number"] {
     color: #00a6ca;
     font-weight: 600;
 }
-.loan-form{
+.loan-form {
     margin-bottom: 30px;
 
-   @media screen and (min-width: 992px) {
-    margin-bottom: 50px;
-
-   }
-   
-   
+    @media screen and (min-width: 992px) {
+        margin-bottom: 50px;
+    }
 }
 .option {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
+    @media screen and (min-width: 992px) {
+        font-size: 16px;
+    }
+
     line-height: 22px;
     font-family: inherit;
     padding-left: 28px;
@@ -1582,13 +1583,23 @@ input[type="number"] {
 .pair-device {
     .custom-control-label {
         font-weight: 400;
-        font-size: 20px !important;
-        line-height: 22px;
+        font-size: 16px !important;
+        margin-bottom: 5px;
+
+        @media screen and (min-width: 992px) {
+            font-size: 20px !important;
         margin-bottom: 10px;
+
+        }
+
+        line-height: 22px;
     }
-    .custom-radio{
-        margin-bottom: 50px;
-        
+    .custom-radio {
+        margin-bottom: 25px;
+
+        @media screen and (min-width: 992px) {
+            margin-bottom: 50px;
+        }
     }
 }
 .signup-block-inner#pair-device {
