@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Signup page | CIBIL</title>
+    <meta name="description" content="Do you want to correct information on your CIBIL Report, and don’t know where to start? You can now initiate a dispute online with CIBIL for inaccuracies, account ownership and duplication of information that reflect in your Credit Report. CIBIL does not charge its consumers for this service.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
+    <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container custom-container">
+            <div class="header-row">
+                <a href="https://www.cibil.com/">
+                    <img src="./img/cibil-logo.svg" alt="Cibil" width="91">
+                </a>
+                <div class="language-switcher">
+                    <div class="language-switcher-trigger">
+                        <img src="./img/language-icon.svg" alt="Cibil" width="19">
+                        <span>English</span>
+                        <img src="./img/black-drop-arrow.png" alt="Cibil" width="6">
+                    </div>
+                    <div class="language-switcher-options">
+                        <div class="language-switcher-list">
+                            <a class="language-switcher-item active" href="#">English - EN</a>
+                            <a class="language-switcher-item" href="#">हिंदी - HI</a>
+                            <a class="language-switcher-item" href="#">தமிழ் - TA</a>
+                            <a class="language-switcher-item" href="#">తెలుగు - TE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container custom-container">
+            <div class="row row-mobile-reverse">
+                <div class="col-md-7 w-64 order-1">
+                    <div class="signup-block">
+                        <div class="signup-block-inner">
+                            <div class="signup-form signup-form-spacing">
+                                <h3 class="info-block">We need some additional information from you to complete the identity verification process.</h3>
+                            </div>
+                            <div class="signup-form signup-form-wrapper">
+                                <!--  <h4 class="section-title section-title-blue mb-0">ADDITIONAL INFORMATION</h4> -->
+                                <p class="font-weight-300 mb-0">Please enter at least 2 Credit card / loan account numbers to proceed.</p>
+                            </div>
+                            <div class="report-form">
+
+                                <div class="form-group req-field">
+
+                                    <input type="text" class="form-control" id="cardNumber" name="cardNumber" required maxlength="16">
+                                    <label class="form-label" for="mobile-number">credit card/loan account no. 1</label>
+                                    <label class="input-error">Please enter credit card/loan account no.</label>
+                                </div>
+                                <div class="form-group req-field">
+
+                                    <input type="text" class="form-control" id="cardNumber2" name="cardNumber2" required maxlength="16">
+                                    <label class="form-label" for="mobile-number">credit card/loan account no. 2</label>
+                                    <label class="input-error">Please enter credit card/loan account no.</label>
+                                </div>
+                                <div class="form-group req-field">
+
+                                    <input type="text" class="form-control" id="cardNumber3" name="cardNumber3" required maxlength="16">
+                                    <label class="form-label" for="mobile-number">credit card/loan account no. 3</label>
+                                    <label class="input-error">Please enter credit card/loan account no.</label>
+                                </div>
+                            </div>
+
+                            <div class="text-right">
+                                <button id="accept-btn" class="button-yellow" name="submitsendattach">CONTINUE</button>
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 w-36 order-0">
+                    <div class="max-450">
+                        <!--  <div class="plans-block">
+                            <div class="plans-block-header otp">
+                                <div class="mb-1">
+                                    <p class="text-color-white mb-0">Thank you for signing up for</p>
+                                </div>
+                                <div class="justify-between align-items-center mb-0">
+                                    <h3 class="section-title-lg text-color-yellow">CIBIL Premium (Upgrade)</h3>
+                                </div>
+                                <div class="justify-between">
+                                    <p class="text-color-yellow font-14 mb-0">12-Months Subscription</p>
+                                </div>
+                            </div> 
+                        </div> -->
+                        <div class="verify-card mt-4 m-hidden">
+                            <div class="verify-card-inner">
+                                <div class="verify-card-icon">
+                                    <img src="./img/question-mark.svg" />
+                                </div>
+                                <div class="verify-card-text">
+                                    <h3>Why I am being asked these questions?</h3>
+                                    <p>We weren't able to verify your identity with the information provided at Sign up. These questions help to verify and ensure your correct CIBIL Score & Report is fetched.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container custom-container">
+
+        </div>
+    </div>
+    <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
+    <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>
