@@ -435,3 +435,10 @@ $('#cardNumber3').on('keyup', function(e) {
     $(this).val(newval);
 
 });
+$('#acceptQBtn1').on('click', function (e) {
+    var validate = true;
+    var url = '/CIBIL-CRO/signup/pair-device.html';
+    if (validate) {
+        window.location.href = url;
+    }
+});
