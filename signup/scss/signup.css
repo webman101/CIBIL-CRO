@@ -1600,22 +1600,131 @@ input[type=number] {
 
 .option {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
   font-family: inherit;
   padding-left: 28px;
 }
+@media screen and (min-width: 992px) {
+  .option {
+    font-size: 16px;
+  }
+}
 
 .pair-device .custom-control-label {
   font-weight: 400;
-  font-size: 20px !important;
+  font-size: 16px !important;
+  margin-bottom: 5px;
   line-height: 22px;
-  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .pair-device .custom-control-label {
+    font-size: 20px !important;
+    margin-bottom: 10px;
+  }
 }
 .pair-device .custom-radio {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 992px) {
+  .pair-device .custom-radio {
+    margin-bottom: 50px;
+  }
 }
 
 .signup-block-inner#pair-device {
   max-width: 480px;
+}
+
+select {
+  height: 46px;
+  font-size: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #dbdbdb;
+  color: #000000;
+  background-color: #ffffff;
+  width: 100%;
+  color: #777777;
+}
+
+.select-field {
+  position: relative;
+}
+.select-field::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 30px;
+  background-image: url(../img/down-arrow.png);
+  right: 2px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.text-grey {
+  color: #777;
+}
+
+.table--small {
+  font-size: 14px;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px !important;
+}
+@media screen and (min-width: 992px) {
+  table {
+    margin-bottom: 40px !important;
+  }
+}
+
+.table--colored td:first-child {
+  background-color: #eff7fe;
+  width: 35%;
+}
+
+.extra {
+  margin-bottom: 20px !important;
+}
+@media screen and (min-width: 992px) {
+  .extra {
+    margin-bottom: 40px !important;
+  }
+}
+
+.table--colored td {
+  letter-spacing: 0.5px;
+  word-break: break-word;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.fw--600 {
+  font-weight: 600;
 }/*# sourceMappingURL=signup.css.map */
