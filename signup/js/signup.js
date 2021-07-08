@@ -442,3 +442,16 @@ $('#acceptQBtn1').on('click', function (e) {
         window.location.href = url;
     }
 });
+
+// $(document).ready(function() {
+
+//     checked = $("input[type=text]") > length == 0;
+//     $('#accept-btn').addClass('disabled');
+//     console.log('hey');
+
+// });
+
+
+    if( !$('input').val() ) {
+          $('#accept-btn').addClass('disabled');
+    };

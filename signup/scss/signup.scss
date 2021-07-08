@@ -9,7 +9,6 @@ body {
     font-family: "Intro";
     background: #f5f6fa;
     scroll-behavior: smooth;
-
 }
 
 h1,
@@ -1555,15 +1554,14 @@ input[type="number"] {
     margin-top: 19px;
     text-decoration: none;
     display: block;
-    transition: all .5s ease-in-out;
-    outline:0;
-    &:hover{
+    transition: all 0.5s ease-in-out;
+    outline: 0;
+    &:hover {
         color: #242424;
     }
     &:focus {
         outline: 0 !important;
         color: #242424;
-
     }
 }
 .blue-title {
@@ -1631,20 +1629,30 @@ select {
 }
 .select-field {
     position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        height: 10px;
-        width: 30px;
-        background-image: url(../img/down-arrow.png);
-        right: 2px;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-color: white;
-    }
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     height: 10px;
+    //     width: 30px;
+    //     background-image: url(../img/down-arrow.png);
+    //     right: 2px;
+    //     top: 0;
+    //     bottom: 0;
+    //     margin: auto;
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     background-color: white;
+    // }
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url(../img/down-arrow.png);
+    background-repeat: no-repeat;
+    background-position-x: 96%;
+    background-position-y: 15px;
+    background-size: 20px;
 }
 .text-grey {
     color: #777;
@@ -1672,7 +1680,7 @@ table {
     background-color: #eff7fe;
     width: 35%;
 }
-.extra{
+.extra {
     margin-bottom: 20px !important;
     @media screen and (min-width: 992px) {
         margin-bottom: 40px !important;
@@ -1692,6 +1700,32 @@ table {
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
-.fw--600{
+.fw--600 {
     font-weight: 600;
+}
+.password-eye {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 22px;
+        width: 22px;
+        background-image: url(../img/eye-icon.svg);
+        right: 12px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+}
+.extra-form {
+    .plans-block-header {
+        background: linear-gradient(134.16deg, #148db0, #00b2e6);
+    }
+}
+.plans-block-header.premium{
+    background: linear-gradient(134.16deg, #148db0, #00b2e6);
+
 }

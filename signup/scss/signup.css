@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   font-family: "Intro";
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Intro";
   background: #f5f6fa;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -414,7 +416,6 @@ h6 {
 }
 .signup-block.otp-block {
   box-shadow: none;
-  padding: 20px 16px;
 }
 
 .white-block {
@@ -1576,6 +1577,17 @@ input[type=number] {
   text-align: center;
   color: #777777;
   margin-top: 19px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.5s ease-in-out;
+  outline: 0;
+}
+.skip:hover {
+  color: #242424;
+}
+.skip:focus {
+  outline: 0 !important;
+  color: #242424;
 }
 
 .blue-title {
@@ -1612,8 +1624,8 @@ input[type=number] {
 }
 
 .pair-device .custom-control-label {
-  font-weight: 400;
-  font-size: 16px !important;
+  font-weight: 600;
+  font-size: 20px !important;
   margin-bottom: 5px;
   line-height: 22px;
 }
@@ -1651,19 +1663,16 @@ select {
 .select-field {
   position: relative;
 }
-.select-field::after {
-  content: "";
-  position: absolute;
-  height: 10px;
-  width: 30px;
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
   background-image: url(../img/down-arrow.png);
-  right: 2px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background-size: contain;
   background-repeat: no-repeat;
-  background-color: white;
+  background-position-x: 96%;
+  background-position-y: 15px;
+  background-size: 20px;
 }
 
 .text-grey {
@@ -1727,4 +1736,30 @@ table {
 
 .fw--600 {
   font-weight: 600;
+}
+
+.password-eye {
+  position: relative;
+}
+.password-eye::after {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-image: url(../img/eye-icon.svg);
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.extra-form .plans-block-header {
+  background: linear-gradient(134.16deg, #148db0, #00b2e6);
+}
+
+.plans-block-header.premium {
+  background: linear-gradient(134.16deg, #148db0, #00b2e6);
 }/*# sourceMappingURL=signup.css.map */
