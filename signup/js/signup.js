@@ -464,7 +464,7 @@ $('#acceptQBtn1').on('click', function (e) {
 
     $('.credit-card-button').addClass('disabled');
 
-    $('.card-input-1, .card-input-2,.card-input-3').blur(function()          //whenever you click off an input element
+    $('.card-input-2,.card-input-3').blur(function()          //whenever you click off an input element
     {                   
         if( $(this).val() ) {                      //if it is blank. 
             $('.credit-card-button').removeClass('disabled');
@@ -484,3 +484,8 @@ $('#acceptQBtn1').on('click', function (e) {
           input.attr("type", "password");
         }
       });
+
+
+      if( !$('#fruit_name').val() == 'state' ) { 
+          console.log("empty")
+       }
