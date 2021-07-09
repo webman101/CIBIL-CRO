@@ -484,8 +484,22 @@ $('#acceptQBtn1').on('click', function (e) {
           input.attr("type", "password");
         }
       });
+      
+      $('#verify-btn').addClass('disabled');
 
-
-      if( !$('#fruit_name').val() == 'state' ) { 
-          console.log("empty")
-       }
+      $('.form-control-otp').blur(function()          //whenever you click off an input element
+      {                   
+          if( $(this).val() ) {                      //if it is blank. 
+            $('#verify-btn').removeClass('disabled');
+          }
+          else if("#input:empty") {
+            $('#verify-btn').addClass('disabled');
+  
+          }
+      });
+    //   if( !$('.form-control-otp').val()) { 
+    //     $('#verify-btn').addClass('disabled');
+    //    }
+    //    else {
+    //     $('#verify-btn').removeClass('disabled');
+    //    }
