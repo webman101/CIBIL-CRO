@@ -432,6 +432,8 @@ $('.close-icon').on('click', function(e){
 
     //     }
     // });
+    $('.credit-card-button').addClass('disabled');
+
     $(document).ready(function(){
         $(".card-input-1").on("input",function() {
             if($(this).val().length == 1) {
