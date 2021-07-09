@@ -1957,6 +1957,7 @@ td.text-black.fw--600.password-relative input {
 .payment-error .signing-out {
   color: #3ea3ce;
   text-decoration: none;
+  font-weight: 600;
 }
 .payment-error .error-image {
   width: 100%;
