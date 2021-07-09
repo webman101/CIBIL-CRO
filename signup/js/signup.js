@@ -447,5 +447,9 @@ $('#acceptQBtn1').on('click', function (e) {
             if(maxLength == $(this).val().length) {
               $('#verify-btn').removeClass('disabled');
             }
+            else {
+                $('#verify-btn').addClass('disabled');
+
+            }
           })
       });
