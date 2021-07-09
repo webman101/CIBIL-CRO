@@ -1953,6 +1953,14 @@ td.text-black.fw--600.password-relative input {
   color: #3ea3ce;
   text-decoration: none;
 }
+.payment-error .error-image {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .payment-error .error-image {
+    width: 370px;
+  }
+}
 
 #password-field.form-control[disabled] {
   cursor: text;
