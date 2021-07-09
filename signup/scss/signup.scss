@@ -1823,7 +1823,9 @@ cursor: pointer;
             opacity: 0.75;
         }
         .seperator{
+            position: relative;
             border-bottom: 1px dashed #E1E1E1;
+            width: 100%;
         }
         @media(max-width: 991px){
             max-width: 100%;
