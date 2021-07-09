@@ -474,7 +474,7 @@ $('#acceptQBtn1').on('click', function (e) {
 
         }
     });
-    $(".toggle-password").click(function() {
+    $(".password-eye").click(function() {
 
         $(this).toggleClass("fa-eye fa-eye-slash");
         var input = $($(this).attr("toggle"));
