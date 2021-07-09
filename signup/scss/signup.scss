@@ -1918,3 +1918,6 @@ td.text-black.fw--600.password-relative {
         text-decoration: none;
     }
 }
+#password-field.form-control[disabled]{
+    cursor: text;
+}
