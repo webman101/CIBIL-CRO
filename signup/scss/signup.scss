@@ -1855,3 +1855,15 @@ td.text-black.fw--600.password-relative {
     );
     }
 }
+.payment-error{
+    &--content{
+        h3{
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 37px;
+            text-align: center;
+            color: #FF0000;
+            opacity: 0.8;
+        }
+    }
+}
