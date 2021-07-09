@@ -892,14 +892,9 @@ h6 {
   border: 1px solid #3ea3ce;
 }
 .form-group .form-control-otp {
-  font-size: 28px;
   letter-spacing: 15px;
-}
-@media screen and (min-width: 992px) {
-  .form-group .form-control-otp {
-    height: 70px;
-    font-size: 30px;
-  }
+  height: 60px;
+  font-size: 30px;
 }
 .form-group .form-control-otp:focus + .form-label {
   display: none;
@@ -960,12 +955,7 @@ h6 {
   display: none;
 }
 .form-group-otp .form-label {
-  top: 10px;
-}
-@media screen and (min-width: 992px) {
-  .form-group-otp .form-label {
-    top: 22px;
-  }
+  top: 20px;
 }
 
 .button-yellow {
@@ -1688,8 +1678,7 @@ select {
   background-position-x: 96%;
   background-position-y: 15px;
   background-size: 20px;
-  cursor: -webkit-grab;
-  cursor: grab;
+  cursor: pointer;
 }
 
 .text-grey {

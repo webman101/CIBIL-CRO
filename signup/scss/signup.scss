@@ -879,12 +879,9 @@ h6 {
             border: 1px solid #3ea3ce;
         }
         &-otp {
-            font-size: 28px;
             letter-spacing: 15px;
-            @media screen and (min-width: 992px) {
-                height: 70px;
+                height: 60px;
                 font-size: 30px;
-            }
 
             &:focus + .form-label {
                 display: none;
@@ -954,10 +951,8 @@ h6 {
             }
         }
         .form-label {
-            top: 10px;
-            @media screen and (min-width: 992px) {
-                top: 22px;
-            }
+         
+                top: 20px;
         }
     }
 }
@@ -1667,7 +1662,7 @@ select {
     background-position-x: 96%;
     background-position-y: 15px;
     background-size: 20px;
-    cursor: grab;
+    cursor: pointer;
 }
 .text-grey {
     color: #777;

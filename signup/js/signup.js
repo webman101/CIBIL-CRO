@@ -473,3 +473,4 @@ $('#acceptQBtn1').on('click', function (e) {
     //    else {
     //     $('#verify-btn').removeClass('disabled');
     //    }
+
