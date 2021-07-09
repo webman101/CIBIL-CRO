@@ -40,10 +40,41 @@
     </div>
     <div class="content">
         <div class="container custom-container">
-            <div class="row">
-                <div class="col-md-7 w-64">
-                    <div class="payment-successful text-center">
-                        <img src="./img/payment-successful-icon.svg" alt="Cibil" width="93">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div class="payment-successful ">
+                        <div class="w-64 mh-auto">
+                            <img src="./img/payment-successful-icon.svg" alt="Cibil" width="93">
+
+                            <div class="payment-successful--content">
+                                <h3>Payment successful</h3>
+                                <p>Your payment was successfully processed by the vendor.</p>
+                            </div>
+                            <div class="payment-successful--invoice_table">
+                                <h6 class="mb-2">Invoice details</h6>
+                                <div class="justify-between">
+                                    <p class="name">Invoice Number:</p>
+                                    <span class="seperator"></span>
+                                    <p class="value">#98765</p>
+                                </div>
+                                <div class="justify-between">
+                                    <p class="name">Subscription Name:</p>
+                                    <p class="value">Premium</p>
+                                </div>
+                                <div class="justify-between">
+                                    <p class="name">Subscription Duration:</p>
+                                    <p class="value">12 Months</p>
+                                </div>
+                                <div class="justify-between">
+                                    <p class="name">Amount Paid:</p>
+                                    <p class="value">₹1200</p>
+                                </div>
+                            </div>
+                            <div class="payment-successful--content">
+                                <p class="mb-2">You may now continue to your CIBIL Dashboard.</p>
+                                <button id="gotodashboard" class="button-yellow">Go to Dashboard</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
