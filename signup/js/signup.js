@@ -420,31 +420,38 @@ $('.close-icon').on('click', function(e){
 
 
 
-    $('.credit-card-button').addClass('disabled');
+    // $('.credit-card-button').addClass('disabled');
 
-    $('.card-input-3').blur(function()          //whenever you click off an input element
-    {                   
-        if( $(this).val() ) {                      //if it is blank. 
-            $('.credit-card-button').removeClass('disabled');
-        }
-        else if("#input:empty") {
-            $('.credit-card-button').addClass('disabled');
+    // $('.card-input-3').blur(function()          //whenever you click off an input element
+    // {                   
+    //     if( $(this).val() ) {                      //if it is blank. 
+    //         $('.credit-card-button').removeClass('disabled');
+    //     }
+    //     else if("#input:empty") {
+    //         $('.credit-card-button').addClass('disabled');
 
-        }
-    });
+    //     }
+    // });
     $(document).ready(function(){
-        $(".card-input-1").on("keyup",function() {
+        $(".card-input-1").on("input",function() {
             if($(this).val().length == 1) {
-              $('.form-group').removeClass('disabled-input');
+              $('.form-group-1').removeClass('disabled-input');
+            }
+            else if($(this).val().length == 0){
+              $('.form-group-1').addClass('disabled-input');
             }
           })
       });
     $(document).ready(function(){
-        $(".card-input-2").on("keyup",function() {
+        $(".card-input-2").on("input",function() {
             if($(this).val().length == 1) {
               $('.credit-card-button').removeClass('disabled');
-              $('.form-group').removeClass('disabled-input-1');
+              $('.form-group-2').removeClass('disabled-input-1');
             }
+            else if($(this).val().length == 0){
+              $('.credit-card-button').addClass('disabled');
+                $('.form-group-2').addClass('disabled-input-1');
+              }
           })
       });
 
