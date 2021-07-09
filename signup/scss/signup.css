@@ -1105,7 +1105,13 @@ h6 {
 }
 @media (max-width: 991px) {
   .otp-form .section-subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 991px) {
+  .otp-form .section-subtitle {
+    font-size: 16px;
   }
 }
 
@@ -1653,7 +1659,7 @@ input[type=number] {
   max-width: 480px;
 }
 
-select {
+.extra select {
   height: 46px;
   font-size: 16px;
   padding-left: 5px;
@@ -1663,13 +1669,21 @@ select {
   background-color: #ffffff;
   width: 100%;
   color: #777777;
+  font-weight: 400;
+  padding-left: 10px;
 }
-
-.select-field {
+.extra select {
+  -webkit-appearance: menulist-button;
+  color: black;
+  font-weight: 400;
+}
+.extra select:invalid {
+  color: #777777;
+}
+.extra .select-field {
   position: relative;
 }
-
-select {
+.extra select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
@@ -1888,19 +1902,21 @@ td.text-black.fw--600.password-relative input {
 }
 .payment-error--content {
   margin-top: 28px;
+  margin-bottom: 50px;
 }
 .payment-error--content h3 {
   font-weight: bold;
   font-size: 32px;
   line-height: 37px;
   text-align: center;
-  color: #FF0000;
+  color: #ff0000;
   opacity: 0.8;
   margin-bottom: 10px;
 }
 @media (max-width: 991px) {
   .payment-error--content h3 {
     font-size: 22px;
+    margin-bottom: 13px;
   }
 }
 .payment-error--content p {
@@ -1909,8 +1925,7 @@ td.text-black.fw--600.password-relative input {
   line-height: 32px;
   text-align: center;
   letter-spacing: 0.34px;
-  color: #000000;
-  opacity: 0.5;
+  color: #808080;
 }
 @media (max-width: 991px) {
   .payment-error--content p {
@@ -1926,43 +1941,19 @@ td.text-black.fw--600.password-relative input {
     max-width: 300px;
   }
 }
-.payment-error--invoice_table {
-  background: #f4f5f7;
-  border-radius: 3px;
-  padding: 20px 28px 10px;
-  max-width: 382px;
-  margin: 48px auto 38px;
-}
-.payment-error--invoice_table .title {
-  font-size: 17px;
-  line-height: 19px;
-  text-align: center;
-  letter-spacing: 0.34px;
-  color: #000000;
-  opacity: 0.75;
-  font-weight: 600;
-}
-.payment-error--invoice_table .name,
-.payment-error--invoice_table .value {
-  font-size: 13px;
-  line-height: 19px;
-  letter-spacing: 0.34px;
-  color: #000000;
-  opacity: 0.75;
-}
-.payment-error--invoice_table .seperator {
-  position: relative;
-  border-bottom: 1px dashed #e1e1e1;
-  flex: 0.95;
-  bottom: 16px;
-}
-@media (max-width: 991px) {
-  .payment-error--invoice_table {
-    max-width: 100%;
-  }
-}
 @media (max-width: 991px) {
   .payment-error {
     padding: 50px 30px;
   }
+}
+.payment-error .text-color-black {
+  color: #000 !important;
+}
+.payment-error .signing-out {
+  color: #3ea3ce;
+  text-decoration: none;
+}
+
+#password-field.form-control[disabled] {
+  cursor: text;
 }/*# sourceMappingURL=signup.css.map */
