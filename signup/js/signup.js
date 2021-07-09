@@ -446,7 +446,7 @@ $('#acceptQBtn1').on('click', function (e) {
     });
     $(".password-eye").click(function() {
 
-        $(this).toggleClass("fa-eye fa-eye-slash");
+        $('.slash-eye').toggleClass("fa-eye-slashed");
         var input = $($(this).attr("toggle"));
         if (input.attr("type") == "password") {
           input.attr("type", "text");

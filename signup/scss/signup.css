@@ -1864,4 +1864,17 @@ td.text-black.fw--600.password-relative input {
   .payment-successful {
     padding: 50px 30px;
   }
+}
+
+.fa-eye-slashed::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 2px;
+  background-color: #999999;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 22px;
+  transform: rotateZ(45deg);
 }/*# sourceMappingURL=signup.css.map */
