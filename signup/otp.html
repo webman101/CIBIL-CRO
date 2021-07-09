@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>OTP page | CIBIL</title>
+    <meta name="description" content="Do you want to correct information on your CIBIL Report, and don’t know where to start? You can now initiate a dispute online with CIBIL for inaccuracies, account ownership and duplication of information that reflect in your Credit Report. CIBIL does not charge its consumers for this service.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
+    <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/signup.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container custom-container">
+            <div class="header-row">
+                <a href="https://www.cibil.com/">
+                    <img src="./img/cibil-logo.svg" alt="Cibil" width="91">
+                </a>
+                <div class="language-switcher">
+                    <div class="language-switcher-trigger">
+                        <img src="./img/language-icon.svg" alt="Cibil" width="19"> 
+                        <span>English</span>
+                        <img src="./img/black-drop-arrow.png" alt="Cibil" width="6">
+                    </div>
+                    <div class="language-switcher-options">
+                        <div class="language-switcher-list">                            
+                            <a class="language-switcher-item active" href="#">English - EN</a>                            
+                            <a class="language-switcher-item" href="#">हिंदी - HI</a>                            
+                            <a class="language-switcher-item" href="#">தமிழ் - TA</a>                            
+                            <a class="language-switcher-item" href="#">తెలుగు - TE</a>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content content-otp">
+        <div class="container custom-container min-container">
+            <div class="row row-mobile-reverse min-row">
+                <div class="col-md-7 w-64 order-1">
+                    <div class="signup-block otp-block">
+                        <div class="text-center max-480">
+                            <img class="img-responsive otp-img otp-img-email w-70" src="img/otp.png" />
+                        </div>
+                        <div class="signup-block-inner">
+                            <div class="otp-form">
+                                <h3 class="section-title-25 text-color-black mb-1">Signup successful. Please enter OTP to verify your identity.</h3>
+                                <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
+                                <p class="section-subtitle font-weight-400 mb-2">We’ve sent a 6 digit OTP to your Email ID (ab***@trans.com) and mobile (98********4).</p>
+                               
+                                <div class="form-group req-field form-group-10 form-group-otp">                                    
+                                    <input type="text" class="form-control form-control-otp" id="otp_field" placeholder="" maxlength="6" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                    <label class="form-label" for="otp_field">Enter OTP here</label>
+                                    <label class="input-error">Please enter OTP here*</label>
+                                </div>
+                                <p class="section-subtitle font-weight-400 mt-2 text-color-black-75 mb-0">Didn’t recieve OTP yet? <a href="#" class="text-color-blue text-uppercase font-weight-600">RESEND OTP</a></p>
+                            </div>                        
+                            <div class="text-right">
+                                <button id="verify-btn" class="button-yellow text-uppercase">verify</button>
+                            </div>
+                            <div class="v-card m-visible mt-4 mb-4">
+                                <div class="v-card-img">
+                                    <img src="./img/question-mark.svg" width="45"/>
+                                </div>
+                                <div class="v-card-text">
+                                    <h4>Why your verification is needed?</h4>
+                                    <p>This is done to ensure that we provide the report to it’s rightful owner.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 w-36 order-0">
+                    <div class="max-450">
+                        <!-- <div class="plans-block">
+                            <div class="plans-block-header otp">
+                                <div class="mb-1">
+                                    <p class="text-color-white mb-0">Thank you for signing up for</p>
+                                </div>
+                                <div class="justify-between align-items-center mb-0">
+                                    <h3 id="plans-title" class="section-title-lg text-color-yellow">CIBIL Premium <span>(Upgrade)</span></h3>
+                                </div>
+                                <div class="justify-between">
+                                    <p class="text-color-yellow font-14 mb-0">12 Months Subscription</p>
+                                </div>
+                            </div> 
+                        </div> -->
+                        <div class="verify-card mt-3 m-hidden">
+                            <div class="verify-card-inner">
+                                <div class="verify-card-icon">
+                                    <img src="./img/question-mark.svg" />
+                                </div>
+                                <div class="verify-card-text">
+                                    <h3>Why your verification is needed?</h3>
+                                    <p>This is done to ensure that we provide the report to it’s rightful owner.</p>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container custom-container">
+            
+        </div>
+    </div>
+    <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
+    <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>

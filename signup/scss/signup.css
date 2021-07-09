@@ -49,6 +49,10 @@ h6 {
   height: 100%;
 }
 
+.w-70 {
+  width: 70%;
+}
+
 .bg-light-blue {
   background: #eff7fe;
 }
@@ -1096,7 +1100,7 @@ h6 {
   margin-bottom: 40px;
 }
 .otp-form .section-subtitle {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 @media (max-width: 991px) {
   .otp-form .section-subtitle {
@@ -1673,6 +1677,8 @@ select {
   background-position-x: 96%;
   background-position-y: 15px;
   background-size: 20px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .text-grey {
@@ -1738,28 +1744,40 @@ table {
   font-weight: 600;
 }
 
-.password-eye {
+.password-relative {
   position: relative;
 }
-.password-eye::after {
-  content: "";
+
+td.text-black.fw--600.password-relative {
+  padding: 0 !important;
+}
+td.text-black.fw--600.password-relative input {
+  border: 0 !important;
+  outline: 0 !important;
+  padding-left: 12px;
+}
+
+.password-eye {
   position: absolute;
-  height: 22px;
-  width: 22px;
-  background-image: url(../img/eye-icon.svg);
+  cursor: pointer;
   right: 12px;
   top: 0;
   bottom: 0;
   margin: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: white;
 }
 
 .extra-form .plans-block-header {
   background: linear-gradient(134.16deg, #148db0, #00b2e6);
 }
 
-.plans-block-header.premium {
+.plans-block-header {
   background: linear-gradient(134.16deg, #148db0, #00b2e6);
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.text-underine-none {
+  text-decoration: none;
 }/*# sourceMappingURL=signup.css.map */
