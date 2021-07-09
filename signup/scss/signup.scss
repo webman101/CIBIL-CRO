@@ -1815,6 +1815,7 @@ td.text-black.fw--600.password-relative {
             letter-spacing: 0.34px;
             color: #000000;
             opacity: 0.75;
+            font-weight: 600;
         }
         .name,
         .value {
@@ -1827,7 +1828,8 @@ td.text-black.fw--600.password-relative {
         .seperator {
             position: relative;
             border-bottom: 1px dashed #e1e1e1;
-            width: 100%;
+            flex: 0.95;
+            bottom: 16px;
         }
         @media (max-width: 991px) {
             max-width: 100%;
