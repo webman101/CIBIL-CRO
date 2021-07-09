@@ -413,22 +413,6 @@ $('#acceptQBtn1').on('click', function (e) {
     }
 });
 
-// $(document).ready(function() {
-
-//     checked = $("input[type=text]") > length == 0;
-//     $('#accept-btn').addClass('disabled');
-//     console.log('hey');
-
-// });
-
-
-    // if( !$('input').val() ) {
-    //       $('#accept-btn').addClass('disabled');
-    // };
-
-
-
-
 
 
 
@@ -457,20 +441,11 @@ $('#acceptQBtn1').on('click', function (e) {
       
       $('#verify-btn').addClass('disabled');
 
-      $('.form-control-otp').blur(function()          //whenever you click off an input element
-      {                   
-          if( $(this).val() ) {                      //if it is blank. 
-            $('#verify-btn').removeClass('disabled');
-          }
-          else if("#input:empty") {
-            $('#verify-btn').addClass('disabled');
-  
-          }
+    $(document).ready(function(){
+        $("input").on("keyup",function() {
+            var maxLength = $(this).attr("maxlength");
+            if(maxLength == $(this).val().length) {
+              $('#verify-btn').removeClass('disabled');
+            }
+          })
       });
-    //   if( !$('.form-control-otp').val()) { 
-    //     $('#verify-btn').addClass('disabled');
-    //    }
-    //    else {
-    //     $('#verify-btn').removeClass('disabled');
-    //    }
-
