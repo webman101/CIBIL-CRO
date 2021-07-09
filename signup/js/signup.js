@@ -428,11 +428,18 @@ $('#acceptQBtn1').on('click', function (e) {
 
         }
     });
-
+    $(document).ready(function(){
+        $(".card-input-1").on("keyup",function() {
+            if($(this).val().length == 1) {
+              $('.form-group').removeClass('disabled-input');
+            }
+          })
+      });
     $(document).ready(function(){
         $(".card-input-2").on("keyup",function() {
             if($(this).val().length == 1) {
               $('.credit-card-button').removeClass('disabled');
+              $('.form-group').removeClass('disabled-input-1');
             }
           })
       });

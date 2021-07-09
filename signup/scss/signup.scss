@@ -1933,3 +1933,7 @@ td.text-black.fw--600.password-relative {
 #password-field.form-control[disabled] {
     cursor: text;
 }
+.disabled-input,.disabled-input-1{
+    opacity: .5;
+    pointer-events: none;
+}
