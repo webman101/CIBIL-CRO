@@ -1090,7 +1090,7 @@ h6 {
 .otp-form {
     margin-bottom: 40px;
     .section-subtitle {
-        margin-bottom: 45px;
+        margin-bottom: 40px;
         @media (max-width: 991px) {
             margin-bottom: 20px;
         }
@@ -1653,6 +1653,7 @@ select {
     background-position-x: 96%;
     background-position-y: 15px;
     background-size: 20px;
+    cursor: grab;
 }
 .text-grey {
     color: #777;
