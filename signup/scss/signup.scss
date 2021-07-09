@@ -1855,15 +1855,91 @@ td.text-black.fw--600.password-relative {
     );
     }
 }
-.payment-error{
-    &--content{
-        h3{
+// .payment-error{
+//     &--content{
+//         h3{
+//             font-weight: bold;
+//             font-size: 32px;
+//             line-height: 37px;
+//             text-align: center;
+//             color: #FF0000;
+//             opacity: 0.8;
+//         }
+//     }
+// }
+
+.payment-error {
+    margin: 66px auto;
+    background-color: white;
+    padding: 50px 78.34px;
+    &--content {
+        margin-top: 28px;
+        h3 {
             font-weight: bold;
             font-size: 32px;
             line-height: 37px;
             text-align: center;
             color: #FF0000;
             opacity: 0.8;
+            margin-bottom: 10px;
+            @media (max-width: 991px) {
+                font-size: 22px; 
+            }
         }
+        p {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 32px;
+            text-align: center;
+            letter-spacing: 0.34px;
+            color: #000000;
+            opacity: 0.5;
+            @media (max-width: 991px) {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+        button {
+            max-width: 410px;
+            @media (max-width: 991px) {
+                max-width: 300px;
+            }
+        }
+    }
+    &--invoice_table {
+        background: #f4f5f7;
+        border-radius: 3px;
+        padding: 20px 28px 10px;
+        max-width: 382px;
+        margin: 48px auto 38px;
+        .title {
+            font-size: 17px;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: 0.34px;
+            color: #000000;
+            opacity: 0.75;
+            font-weight: 600;
+        }
+        .name,
+        .value {
+            font-size: 13px;
+            line-height: 19px;
+            letter-spacing: 0.34px;
+            color: #000000;
+            opacity: 0.75;
+        }
+        .seperator {
+            position: relative;
+            border-bottom: 1px dashed #e1e1e1;
+            flex: 0.95;
+            bottom: 16px;
+        }
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 991px) {
+        padding: 50px 30px;
     }
 }
