@@ -1711,7 +1711,7 @@ input[type="number"] {
 .table {
     width: 100%;
     margin-bottom: 1rem;
-    color: #212529;
+    color: #000;
 }
 
 table {
@@ -1774,6 +1774,9 @@ table {
 // }
 .password-relative {
     position: relative;
+    input{
+        font-weight: 600 !important;
+    }
 }
 
 td.text-black.fw--600.password-relative {
