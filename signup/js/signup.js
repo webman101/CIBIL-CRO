@@ -412,7 +412,11 @@ $('#acceptQBtn1').on('click', function (e) {
         window.location.href = url;
     }
 });
-
+$('.close-icon').on('click', function(e){
+  $('.promocode-wrapper--inner').addClass('hide');
+  $('.form-group-container').show();
+  $('#coupon_code').val("")
+});
 
 
 
