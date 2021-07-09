@@ -1879,7 +1879,6 @@ td.text-black.fw--600.password-relative {
         h3 {
             font-weight: bold;
             font-size: 32px;
-            line-height: 37px;
             text-align: center;
             color: #ff0000;
             opacity: 0.8;
@@ -1887,6 +1886,10 @@ td.text-black.fw--600.password-relative {
             @media (max-width: 991px) {
                 font-size: 22px;
                 margin-bottom: 13px;
+            }
+            @media (min-width: 991px) {
+                margin-bottom: 13px;
+                line-height: 37px;
             }
         }
         p {
