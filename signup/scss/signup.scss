@@ -880,8 +880,8 @@ h6 {
         }
         &-otp {
             letter-spacing: 15px;
-                height: 60px;
-                font-size: 30px;
+            height: 60px;
+            font-size: 30px;
 
             &:focus + .form-label {
                 display: none;
@@ -951,8 +951,7 @@ h6 {
             }
         }
         .form-label {
-         
-                top: 18px;
+            top: 18px;
         }
     }
 }
@@ -1625,44 +1624,43 @@ input[type="number"] {
 .signup-block-inner#pair-device {
     max-width: 480px;
 }
-select {
-    height: 46px;
-    font-size: 16px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1px solid #dbdbdb;
-    color: #000000;
-    background-color: #ffffff;
-    width: 100%;
-    color: #777777;
-}
-.select-field {
-    position: relative;
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     height: 10px;
-    //     width: 30px;
-    //     background-image: url(../img/down-arrow.png);
-    //     right: 2px;
-    //     top: 0;
-    //     bottom: 0;
-    //     margin: auto;
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     background-color: white;
-    // }
-}
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    background-image: url(../img/down-arrow.png);
-    background-repeat: no-repeat;
-    background-position-x: 96%;
-    background-position-y: 15px;
-    background-size: 20px;
-    cursor: pointer;
+.extra{
+    select {
+        height: 46px;
+        font-size: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: 1px solid #dbdbdb;
+        color: #000000;
+        background-color: #ffffff;
+        width: 100%;
+        color: #777777;
+        font-weight: 400;
+        padding-left: 10px;
+    }
+    select {
+        -webkit-appearance: menulist-button;
+        color: black;
+        font-weight: 400;
+    }
+    
+    select:invalid {
+        color: #777777;
+    }
+    .select-field {
+        position: relative;
+    }
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: transparent;
+        background-image: url(../img/down-arrow.png);
+        background-repeat: no-repeat;
+        background-position-x: 96%;
+        background-position-y: 15px;
+        background-size: 20px;
+        cursor: pointer;
+    }
 }
 .text-grey {
     color: #777;
@@ -1779,7 +1777,7 @@ td.text-black.fw--600.password-relative {
             opacity: 0.8;
             margin-bottom: 10px;
             @media (max-width: 991px) {
-                font-size: 22px; 
+                font-size: 22px;
             }
         }
         p {
@@ -1839,9 +1837,9 @@ td.text-black.fw--600.password-relative {
         padding: 50px 30px;
     }
 }
-.fa-eye-slashed{
-    &::after{
-        content: '';
+.fa-eye-slashed {
+    &::after {
+        content: "";
         position: absolute;
         height: 15px;
         width: 2px;
@@ -1850,9 +1848,7 @@ td.text-black.fw--600.password-relative {
         bottom: 0;
         margin: auto;
         right: 22px;
-        transform: rotateZ(
-    45deg
-    );
+        transform: rotateZ(45deg);
     }
 }
 // .payment-error{
@@ -1879,12 +1875,12 @@ td.text-black.fw--600.password-relative {
             font-size: 32px;
             line-height: 37px;
             text-align: center;
-            color: #FF0000;
+            color: #ff0000;
             opacity: 0.8;
             margin-bottom: 10px;
             @media (max-width: 991px) {
-                font-size: 22px; 
-            margin-bottom: 13px;
+                font-size: 22px;
+                margin-bottom: 13px;
             }
         }
         p {
@@ -1906,18 +1902,18 @@ td.text-black.fw--600.password-relative {
             }
         }
     }
-   
+
     @media (max-width: 991px) {
         padding: 50px 30px;
     }
-    .text-color-black{
+    .text-color-black {
         color: #000 !important;
     }
-    .signing-out{
-        color: #3EA3CE;
+    .signing-out {
+        color: #3ea3ce;
         text-decoration: none;
     }
 }
-#password-field.form-control[disabled]{
+#password-field.form-control[disabled] {
     cursor: text;
 }
