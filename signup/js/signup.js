@@ -501,8 +501,10 @@ $('.close-icon').on('click', function(e){
           })
       });
       
-      $('#plans-title').addClass('premium-star');
 
+      if(typeof $(this).data('nobet') !== 'undefined'){
+        $('#plans-title').addClass('premium-star');
+    }
 $('.plans-list').click(function(){
     if(typeof $(this).data('nobet') !== 'undefined'){
         $('#plans-title').addClass('premium-star');
