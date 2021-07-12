@@ -1,3 +1,5 @@
+
+
 var discount = 0;
 $(document).ready(function() {
     $('.plans-radio-row .plans-list').on('change', function() {
@@ -498,3 +500,14 @@ $('.close-icon').on('click', function(e){
             }
           })
       });
+      
+      $('#plans-title').addClass('premium-star');
+
+$('.plans-list').click(function(){
+    if(typeof $(this).data('nobet') !== 'undefined'){
+        $('#plans-title').addClass('premium-star');
+    }
+    else{
+        $('#plans-title').removeClass('premium-star');
+    }
+  });
