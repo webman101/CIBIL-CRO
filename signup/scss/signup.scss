@@ -506,11 +506,28 @@ h6 {
         &.premium {
             #plans-title,
             #plans-subtitle {
-                color: #fcd833;
+                // color: #fcd833;
+                color: #fff;
             }
             .card {
                 border-top: 1px solid #dbdbdb;
             }
+        }
+        .premium-star{
+           position: relative;
+           &::after{
+            content: '';
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -40px;
+            margin: auto;
+            background-image: url(../img/star.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+           }
         }
         #plans-title {
             min-height: 34px;
@@ -1679,6 +1696,7 @@ input[type="number"] {
     }
     select:invalid {
         color: #777777;
+
     }
     .select-field {
         position: relative;
@@ -1779,7 +1797,7 @@ table {
     }
 }
 
-td.text-black.fw--600.password-relative {
+td.text-black.password-relative {
     padding: 0 !important;
     input {
         border: 0 !important;
