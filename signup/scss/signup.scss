@@ -1997,3 +1997,18 @@ td.text-black.fw--600.password-relative {
     color: #999999;
     padding: 0 3px;
 }
+.d-block{
+    display: block !important;
+}
+.email-exists{
+    display: none;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.34px;
+    line-height: 11px;
+    color: #d74025;
+    margin-top: 8px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}

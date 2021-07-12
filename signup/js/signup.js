@@ -485,3 +485,16 @@ $('.close-icon').on('click', function(e){
             }
           })
       });
+      $(document).ready(function(){
+        $("input").on("input",function() {
+            var mailId ="demo@ajency.in";
+            if(mailId == $(this).val()) {
+              $('.email-exists').addClass('d-block');
+
+            }
+            else {
+                $('.email-exists').removeClass('d-block');
+
+            }
+          })
+      });
