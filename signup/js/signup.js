@@ -536,7 +536,6 @@ $('.plans-list').click(function(){
 });
 $(document).ready(function(){
    
-    $('#continue-accept-btn').addClass('disabled');
     $(".plan-list-radio").change(function(){
        
         if ( this.checked ){
@@ -544,6 +543,8 @@ $(document).ready(function(){
 
         }
         else{
+            
+    $('#continue-accept-btn').addClass('disabled');
         }
     });
    
