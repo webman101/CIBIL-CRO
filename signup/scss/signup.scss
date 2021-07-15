@@ -2242,7 +2242,7 @@ td.text-black.password-relative {
     .para {
         font-weight: 400;
     }
-    #accept-btn {
+    #continue-accept-btn {
         display: none;
         @media screen and (min-width: 992px) {
             display: block;
@@ -2256,7 +2256,12 @@ td.text-black.password-relative {
     margin-left: auto;
 }
 .lock-sub {
+    margin-top: 30px;
+   @media screen and (min-width: 992px) {
     margin-top: 50px;
+   }
+   
+   
 
     display: flex;
     align-items: center;
@@ -2272,7 +2277,12 @@ td.text-black.password-relative {
     }
     .text {
         text-transform: uppercase;
+        font-size: 11px;
+       @media screen and (min-width: 992px) {
         font-size: 14px;
+       }
+       
+       
         color: #005365;
         padding-left: 10px;
     }

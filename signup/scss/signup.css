@@ -2245,11 +2245,11 @@ td.text-black.password-relative input {
 .interstitial-page .para {
   font-weight: 400;
 }
-.interstitial-page #accept-btn {
+.interstitial-page #continue-accept-btn {
   display: none;
 }
 @media screen and (min-width: 992px) {
-  .interstitial-page #accept-btn {
+  .interstitial-page #continue-accept-btn {
     display: block;
   }
 }
@@ -2262,7 +2262,7 @@ td.text-black.password-relative input {
 }
 
 .lock-sub {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   padding: 8px 15px;
@@ -2272,15 +2272,25 @@ td.text-black.password-relative input {
   padding-right: 0;
   font-weight: 600;
 }
+@media screen and (min-width: 992px) {
+  .lock-sub {
+    margin-top: 50px;
+  }
+}
 .lock-sub img {
   width: 14px;
   height: 18px;
 }
 .lock-sub .text {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
   color: #005365;
   padding-left: 10px;
+}
+@media screen and (min-width: 992px) {
+  .lock-sub .text {
+    font-size: 14px;
+  }
 }
 
 .mt-0 {
