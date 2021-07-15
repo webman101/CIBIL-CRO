@@ -1875,6 +1875,9 @@ td.text-black.password-relative {
     &--invoice_table {
         background: #f4f5f7;
         border-radius: 3px;
+        @media (max-width: 991px) {
+            padding: 20px 20px 10px;
+        }
         padding: 20px 28px 10px;
         max-width: 382px;
         margin: 48px auto 38px;
@@ -1906,7 +1909,7 @@ td.text-black.password-relative {
         }
     }
     @media (max-width: 991px) {
-        padding: 50px 30px;
+        padding: 50px 15px;
     }
 }
 
