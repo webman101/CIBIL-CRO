@@ -513,10 +513,26 @@ h6 {
 }
 .plans-block-header.premium #plans-title,
 .plans-block-header.premium #plans-subtitle {
-  color: #fcd833;
+  color: #fff;
 }
 .plans-block-header.premium .card {
   border-top: 1px solid #dbdbdb;
+}
+.plans-block-header .premium-star {
+  position: relative;
+}
+.plans-block-header .premium-star::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -40px;
+  margin: auto;
+  background-image: url(../img/star.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .plans-block-header #plans-title {
   min-height: 34px;
@@ -1128,8 +1144,17 @@ h6 {
 }
 
 .content {
-  min-height: calc(100% - 74px);
   display: flex;
+}
+@media screen and (max-width: 992px) {
+  .content {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .content {
+    min-height: calc(100% - 74px);
+  }
 }
 .content .min-container {
   min-height: 100%;
@@ -1151,6 +1176,9 @@ h6 {
     min-height: calc(100% - 64px);
     flex-direction: column;
   }
+}
+.content .section-subtitle {
+  line-height: 23px;
 }
 
 .spacer {
@@ -1574,7 +1602,7 @@ input[type=number] {
   /* Internet Explorer/Edge */
   user-select: none;
   /* Non-prefixed version, currently
-               supported by Chrome, Edge, Opera and Firefox */
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .pl-0 {
@@ -1710,7 +1738,7 @@ input[type=number] {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529;
+  color: #000;
 }
 
 table {
@@ -1761,11 +1789,14 @@ table {
 .password-relative {
   position: relative;
 }
+.password-relative input {
+  font-weight: 400 !important;
+}
 
-td.text-black.fw--600.password-relative {
+td.text-black.password-relative {
   padding: 0 !important;
 }
-td.text-black.fw--600.password-relative input {
+td.text-black.password-relative input {
   border: 0 !important;
   outline: 0 !important;
   padding-left: 12px;
@@ -1970,4 +2001,40 @@ td.text-black.fw--600.password-relative input {
 
 #password-field.form-control[disabled] {
   cursor: text;
+}
+
+.disabled-input,
+.disabled-input-1 {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form-label.active {
+  top: -10px;
+  background: #ffffff;
+  font-size: 11px;
+  line-height: 21px;
+  color: #999999;
+  padding: 0 3px;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.email-exists {
+  display: none;
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.34px;
+  line-height: 11px;
+  color: #d74025;
+  margin-top: 8px;
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+}
+.email-exists a {
+  color: #00a6ca;
+  font-weight: 600;
 }/*# sourceMappingURL=signup.css.map */
