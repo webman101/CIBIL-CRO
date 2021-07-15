@@ -2354,6 +2354,10 @@ td.text-black.password-relative {
                 margin: 0 15px;
                 white-space: nowrap;
             }
+            @media (max-width: 425px) {
+                margin: 0 9px;
+                white-space: nowrap;
+            }
         }
     }
 }
