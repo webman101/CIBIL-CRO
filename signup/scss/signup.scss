@@ -2268,6 +2268,28 @@ td.text-black.password-relative {
             display: block;
         }
     }
+    .pay-btn {
+     
+       padding: 0;
+        width: 221px;
+        text-align: center;
+        height: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #000;
+
+        span{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #000;
+        }
+        #t-price-m{
+            font-size: 14px;
+        }
+    }
 }
 .border-btm {
     height: 1px;
@@ -2388,4 +2410,13 @@ td.text-black.password-relative {
         text-align: center;
         text-decoration: none;
     }
+}
+.align-items-center{
+    align-items: center;
+}
+.text-black{
+}
+.no-thanks{
+    text-decoration: none;
+    color: #000;
 }
