@@ -2265,8 +2265,11 @@ td.text-black.password-relative input {
 .interstitial-page .para {
   font-weight: 400;
 }
+.interstitial-page .continue-accept-btn-2 {
+  display: none;
+}
 @media screen and (min-width: 992px) {
-  .interstitial-page #continue-accept-btn {
+  .interstitial-page .continue-accept-btn-2 {
     display: block;
   }
 }
@@ -2333,7 +2336,7 @@ td.text-black.password-relative input {
 }
 
 .footer {
-  background: #EFF7FE;
+  background: #eff7fe;
   padding: 15px 0;
 }
 .footer .copyright {
@@ -2388,8 +2391,13 @@ td.text-black.password-relative input {
 }
 
 .no-upgrade {
-  display: block;
-  margin-top: 23px;
-  text-align: center;
-  text-decoration: none;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .no-upgrade {
+    display: block;
+    margin-top: 23px;
+    text-align: center;
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=signup.css.map */
