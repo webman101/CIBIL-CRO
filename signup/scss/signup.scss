@@ -2058,9 +2058,14 @@ td.text-black.password-relative {
 }
 ////////////////////
 .interstitial-page {
-    padding-bottom: 50px;
-    .signup-block{
+    @media screen and (max-width: 992px) {
+        height: auto;
+    }
+    .signup-block {
         padding-bottom: 65px;
+      
+        
+        
     }
     .max-450 {
         margin-right: auto;
@@ -2069,7 +2074,6 @@ td.text-black.password-relative {
     .plans-block {
         background: #fff;
         margin-top: 20px;
-        margin-bottom: 0;
         .card {
             padding: 0;
             margin: 0;
@@ -2103,10 +2107,18 @@ td.text-black.password-relative {
                 border-radius: 50%;
             }
             .plans-radio-title {
+                span {
+                    font-size: 14px;
+                }
+              @media screen and (min-width: 992px) {
                 font-size: 22px;
                 span {
                     font-size: 16px;
                 }
+              }
+              
+              
+              
             }
             .plans-radio-offer-text {
                 font-weight: 400;
@@ -2210,6 +2222,9 @@ td.text-black.password-relative {
         height: 53px;
         width: 42px;
     }
+    .para {
+        font-weight: 400;
+    }
 }
 .border-btm {
     height: 1px;
@@ -2223,10 +2238,11 @@ td.text-black.password-relative {
     display: flex;
     align-items: center;
     padding: 8px 15px;
-    background: linear-gradient(#ffe87e 99.14%, #fff4bf 39.92%);
+    background: linear-gradient(45deg, #ffe87e, #fff4bf);
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px 4px 0px 0px;
     padding-right: 0;
+    font-weight: 600;
     img {
         width: 14px;
         height: 18px;
@@ -2234,27 +2250,24 @@ td.text-black.password-relative {
     .text {
         text-transform: uppercase;
         font-size: 14px;
-color: #005365;
-padding-left: 10px;
-font-weight: 400;
+        color: #005365;
+        padding-left: 10px;
     }
-  
 }
-.mt-0{
+.mt-0 {
     margin-top: 0 !important;
 }
-.block-2{
-  
+.block-2 {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
     @media screen and (max-width: 992px) {
-        background-color: #F5F6FA !important;
+     
+        background-color: #f5f6fa !important;
         .feature-list {
-    background-color: #fff;
-    padding-bottom: 10px;
-    width: 92%;
-    margin: auto;
-
+            background-color: #fff;
+            padding-bottom: 10px;
+            width: 92%;
+            margin: auto;
         }
     }
-    
-    
 }
