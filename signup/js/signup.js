@@ -545,14 +545,14 @@ $(document).ready(function(){
 
 $('.plans-list.plan-list-radio').on('change', function() {
     $('.plans-list').not(this).prop('checked', false);
-    let value = $('input:checkbox[name=radio-group]:checked').val();
+    let value = $('input:radio[name=radio-group]:checked').val();
     console.log(value);
     if(value == null) {
         $("#t-price-m").text("");
         $("#t-perMon").html('100');
     } else {
         $("#t-price-m").text("₹"+value);
-         $("#t-perMon").html("@"+$('input:checkbox[name=radio-group]:checked').data('pm')+"/month");
+         $("#t-perMon").html("@"+$('input:radio[name=radio-group]:checked').data('pm')+"/month");
     }        
 }); 
 
