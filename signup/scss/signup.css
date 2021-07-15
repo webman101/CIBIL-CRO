@@ -1492,7 +1492,7 @@ h6 {
 }
 @media (max-width: 991px) {
   .promocode-wrapper {
-    margin: 0 -16px 60px;
+    margin: 0 -16px 0px;
     border: 0;
     padding: 34px 20px;
   }
@@ -1569,6 +1569,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  z-index: 1;
 }
 .price-sticky-footer .pay-btn button {
   min-width: 200px;
@@ -2326,7 +2327,7 @@ td.text-black.password-relative input {
 @media screen and (max-width: 992px) {
   .block-2 {
     background-color: #f5f6fa !important;
-    margin-bottom: 100px !important;
+    margin-bottom: 30px !important;
   }
   .block-2 .feature-list {
     background-color: #fff;
@@ -2387,6 +2388,11 @@ td.text-black.password-relative input {
   .footer .footerLinks a {
     margin: 0 9px;
     white-space: nowrap;
+  }
+}
+@media (max-width: 991px) {
+  .footer-mobile {
+    padding-bottom: 94px;
   }
 }
 
