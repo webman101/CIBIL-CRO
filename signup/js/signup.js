@@ -505,7 +505,7 @@ $('.close-icon').on('click', function(e){
       if(typeof $(this).data('nobet') !== 'undefined'){
         $('#plans-title').addClass('premium-star');
     }
-$('.plans-list').click(function(){
+    $('.plans-list').click(function(){
     if(typeof $(this).data('nobet') !== 'undefined'){
         $('#plans-title').addClass('premium-star');
     }
@@ -529,23 +529,31 @@ $('.plans-list').click(function(){
             from.attr('disabled', 'disabled');
 
         }
-      })
-  });
-  $('#continue-mobile-btn').on('click', function (e) {
-          window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
+        })
+    });
+    $('#continue-mobile-btn').on('click', function (e) {
+    window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
 });
 $(document).ready(function(){
-   
     $(".plan-list-radio").change(function(){
-       
         if ( this.checked ){
-    $('#continue-accept-btn').removeClass('disabled');
-
+            $('#continue-accept-btn').removeClass('disabled');
         }
         else{
-            
-    $('#continue-accept-btn').addClass('disabled');
+            $('#continue-accept-btn').addClass('disabled');
         }
     });
-   
   });
+
+$('.plans-list.plan-list-radio').on('change', function() {
+    $('.plans-list').not(this).prop('checked', false);
+    let value = $('input:checkbox[name=radio-group]:checked').val();
+    console.log(value);
+    if(value == null) {
+        $("#t-price-m").text("");
+        $("#t-perMon").html('100');
+    } else {
+        $("#t-price-m").text("₹"+value);
+         $("#t-perMon").html("@"+$('input:checkbox[name=radio-group]:checked').data('pm')+"/month");
+    }        
+}); 
