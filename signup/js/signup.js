@@ -534,3 +534,18 @@ $('.plans-list').click(function(){
   $('#continue-mobile-btn').on('click', function (e) {
           window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
 });
+$(document).ready(function(){
+   
+    $('#continue-accept-btn').addClass('disabled');
+    $(".plan-list-radio").change(function(){
+       
+        if ( this.checked ){
+    $('#continue-accept-btn').removeClass('disabled');
+
+        }
+        else{
+            alert();
+        }
+    });
+   
+  });
