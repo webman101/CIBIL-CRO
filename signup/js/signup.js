@@ -544,7 +544,6 @@ $(document).ready(function(){
 
         }
         else{
-            alert();
         }
     });
    
