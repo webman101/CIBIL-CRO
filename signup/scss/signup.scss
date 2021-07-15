@@ -2037,6 +2037,16 @@ td.text-black.password-relative {
     }
 }
 ///////////////@at-root
+.content-dup{
+    @media screen and (max-width: 992px) {
+        background-color: #fff;
+        .signup-block{
+            box-shadow: 0px -6px 6px -3px #0000000d;
+        }
+    }
+    
+    
+}
 .dup-img {
     margin-left: auto;
     margin-right: auto;
