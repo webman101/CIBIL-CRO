@@ -2038,3 +2038,22 @@ td.text-black.password-relative {
         font-weight: 600;
     }
 }
+///////////////@at-root
+.dup-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
+.dup-block{
+    padding-bottom: 60px;
+    .form-group,.section-subtitle{
+        margin-bottom: 40px;
+    }
+    .section-subtitle{
+        font-size: 16px;
+    }
+}

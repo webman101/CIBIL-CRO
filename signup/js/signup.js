@@ -513,3 +513,23 @@ $('.plans-list').click(function(){
         $('#plans-title').removeClass('premium-star');
     }
   });
+  $(document).ready(function(){
+    var from = jQuery('#continue-mobile-btn');
+    from.attr('disabled', 'disabled');
+    $('#continue-mobile-btn').addClass('disabled');
+
+    $("#user-name").on("input",function() {
+        if($(this).val()) {
+          $('#continue-mobile-btn').removeClass('disabled').addClass('continue-mobile-btn');
+          
+    from.removeAttr("disabled");
+        }
+        else {
+            $('#continue-mobile-btn').addClass('disabled').removeClass('continue-mobile-btn');
+
+        }
+      })
+  });
+  $('#continue-mobile-btn').on('click', function (e) {
+          window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
+});
