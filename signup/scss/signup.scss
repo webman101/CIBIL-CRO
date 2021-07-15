@@ -2061,17 +2061,22 @@ td.text-black.password-relative {
     @media screen and (max-width: 992px) {
         height: auto;
     }
+  @media screen and (min-width: 992px) {
     .signup-block {
         padding-bottom: 65px;
-      
-        
-        
     }
+ 
+  }
+  
+  .interstitial{
+    margin-bottom: 0;
+}
     .max-450 {
         margin-right: auto;
         margin-left: unset;
     }
     .plans-block {
+        margin: 0;
         background: #fff;
         margin-top: 20px;
         .card {
@@ -2107,18 +2112,17 @@ td.text-black.password-relative {
                 border-radius: 50%;
             }
             .plans-radio-title {
+                font-size: 16px;
+
                 span {
                     font-size: 14px;
                 }
-              @media screen and (min-width: 992px) {
-                font-size: 22px;
-                span {
-                    font-size: 16px;
+                @media screen and (min-width: 992px) {
+                    font-size: 22px;
+                    span {
+                        font-size: 16px;
+                    }
                 }
-              }
-              
-              
-              
             }
             .plans-radio-offer-text {
                 font-weight: 400;
@@ -2136,7 +2140,11 @@ td.text-black.password-relative {
         display: flex !important;
         justify-content: space-between;
         align-items: center;
-        padding-left: 55px;
+        padding-left: 45px;
+        @media screen and (min-width: 992px) {
+            padding-left: 55px;
+        }
+
         padding-top: 22px;
         padding-bottom: 22px;
 
@@ -2225,6 +2233,14 @@ td.text-black.password-relative {
     .para {
         font-weight: 400;
     }
+    #accept-btn{
+        display: none;
+        @media screen and (min-width: 992px) {
+            display:block;
+        }
+        
+        
+    }
 }
 .border-btm {
     height: 1px;
@@ -2261,12 +2277,10 @@ td.text-black.password-relative {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
     margin-bottom: 50px;
     @media screen and (max-width: 992px) {
-     
         background-color: #f5f6fa !important;
         .feature-list {
             background-color: #fff;
             padding-bottom: 10px;
-            width: 92%;
             margin: auto;
         }
     }

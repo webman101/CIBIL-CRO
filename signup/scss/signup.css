@@ -2073,14 +2073,20 @@ td.text-black.password-relative input {
     height: auto;
   }
 }
-.interstitial-page .signup-block {
-  padding-bottom: 65px;
+@media screen and (min-width: 992px) {
+  .interstitial-page .signup-block {
+    padding-bottom: 65px;
+  }
+}
+.interstitial-page .interstitial {
+  margin-bottom: 0;
 }
 .interstitial-page .max-450 {
   margin-right: auto;
   margin-left: unset;
 }
 .interstitial-page .plans-block {
+  margin: 0;
   background: #fff;
   margin-top: 20px;
 }
@@ -2117,6 +2123,9 @@ td.text-black.password-relative input {
   border: 1px solid #969696;
   border-radius: 50%;
 }
+.interstitial-page .plans-radio-row .plans-radio-col .plans-radio-title {
+  font-size: 16px;
+}
 .interstitial-page .plans-radio-row .plans-radio-col .plans-radio-title span {
   font-size: 14px;
 }
@@ -2141,9 +2150,14 @@ td.text-black.password-relative input {
   display: flex !important;
   justify-content: space-between;
   align-items: center;
-  padding-left: 55px;
+  padding-left: 45px;
   padding-top: 22px;
   padding-bottom: 22px;
+}
+@media screen and (min-width: 992px) {
+  .interstitial-page .plans-radio-col label {
+    padding-left: 55px;
+  }
 }
 .interstitial-page .plans-radio-col label .plans-radio-price {
   margin-bottom: 0;
@@ -2220,6 +2234,14 @@ td.text-black.password-relative input {
 .interstitial-page .para {
   font-weight: 400;
 }
+.interstitial-page #accept-btn {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .interstitial-page #accept-btn {
+    display: block;
+  }
+}
 
 .border-btm {
   height: 1px;
@@ -2265,7 +2287,6 @@ td.text-black.password-relative input {
   .block-2 .feature-list {
     background-color: #fff;
     padding-bottom: 10px;
-    width: 92%;
     margin: auto;
   }
 }/*# sourceMappingURL=signup.css.map */
