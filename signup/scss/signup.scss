@@ -2101,10 +2101,10 @@ td.text-black.password-relative {
 
         .plans-radio-col {
             width: 100%;
-            height: 65px;
-            &.plan-premium{
+            height: 75px;
+            /*&.plan-premium{
                 height: 80px;
-            }
+            }*/
           @media screen and (min-width: 992px) {
             height: 100px;
           }
@@ -2139,6 +2139,14 @@ td.text-black.password-relative {
             }
             .plans-radio-offer-text {
                 font-weight: 400;
+            }
+            &:last-child{
+                .plans-radio-title{
+                    margin-bottom: -6px;
+                     @media screen and (max-width: 991px) {
+                        margin-bottom: -4px;
+                     }
+                }
             }
             margin-bottom: 15px;
         }
