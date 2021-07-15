@@ -556,6 +556,6 @@ $('.plans-list.plan-list-radio').on('change', function() {
     }        
 }); 
 
-$('#continue-accept-btn').on('click', function (e) {
+$('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
     window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
 });
