@@ -520,12 +520,13 @@ $('.plans-list').click(function(){
 
     $("#user-name").on("input",function() {
         if($(this).val()) {
-          $('#continue-mobile-btn').removeClass('disabled').addClass('continue-mobile-btn');
+          $('#continue-mobile-btn').removeClass('disabled');
           
     from.removeAttr("disabled");
         }
         else {
-            $('#continue-mobile-btn').addClass('disabled').removeClass('continue-mobile-btn');
+            $('#continue-mobile-btn').addClass('disabled');
+            from.attr('disabled', 'disabled');
 
         }
       })
