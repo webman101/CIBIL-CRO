@@ -531,9 +531,7 @@ $('.close-icon').on('click', function(e){
         }
         })
     });
-    $('#continue-mobile-btn').on('click', function (e) {
-    window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
-});
+
 $(document).ready(function(){
     $(".plan-list-radio").change(function(){
         if ( this.checked ){
@@ -557,3 +555,7 @@ $('.plans-list.plan-list-radio').on('change', function() {
          $("#t-perMon").html("@"+$('input:checkbox[name=radio-group]:checked').data('pm')+"/month");
     }        
 }); 
+
+$('#continue-accept-btn').on('click', function (e) {
+    window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
+});
