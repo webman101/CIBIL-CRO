@@ -2349,7 +2349,7 @@ td.text-black.password-relative {
             &:focus{
                 outline: 0;
             }
-            @media (max-width: 475px) {
+            @media (max-width: 767px) {
                 margin: 0 15px;
                 white-space: nowrap;
             }
