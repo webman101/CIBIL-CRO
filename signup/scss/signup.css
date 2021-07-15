@@ -2116,6 +2116,9 @@ td.text-black.password-relative input {
   height: 65px;
   margin-bottom: 15px;
 }
+.interstitial-page .plans-radio-row .plans-radio-col.plan-premium {
+  height: 80px;
+}
 @media screen and (min-width: 992px) {
   .interstitial-page .plans-radio-row .plans-radio-col {
     height: 100px;

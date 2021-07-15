@@ -2098,13 +2098,17 @@ td.text-black.password-relative {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+
         .plans-radio-col {
             width: 100%;
             height: 65px;
+            &.plan-premium{
+                height: 80px;
+            }
           @media screen and (min-width: 992px) {
             height: 100px;
           }
-          
+       
           
             .checkmark {
                 position: absolute;
@@ -2138,6 +2142,7 @@ td.text-black.password-relative {
             }
             margin-bottom: 15px;
         }
+      
     }
     .plans-radio-col label {
         background: #ffffff;
