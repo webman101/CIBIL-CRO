@@ -1483,7 +1483,7 @@ h6 {
         color: #000000;
     }
     @media (max-width: 991px) {
-        margin: 0 -16px 60px;
+        margin: 0 -16px 0px;
         border: 0;
         padding: 34px 20px;
     }
@@ -1560,6 +1560,7 @@ h6 {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    z-index: 1;
     .pay-btn {
         button {
             min-width: 200px;
@@ -2378,6 +2379,11 @@ td.text-black.password-relative {
                 margin: 0 9px;
                 white-space: nowrap;
             }
+        }
+    }
+    &-mobile{
+        @media(max-width: 991px){
+            padding-bottom: 94px;
         }
     }
 }
