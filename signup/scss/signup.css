@@ -2090,6 +2090,11 @@ td.text-black.password-relative input {
   background: #fff;
   margin-top: 20px;
 }
+@media screen and (min-width: 992px) {
+  .interstitial-page .plans-block {
+    margin-bottom: 50px;
+  }
+}
 .interstitial-page .plans-block .card {
   padding: 0;
   margin: 0;
@@ -2283,6 +2288,7 @@ td.text-black.password-relative input {
 @media screen and (max-width: 992px) {
   .block-2 {
     background-color: #f5f6fa !important;
+    margin-bottom: 100px !important;
   }
   .block-2 .feature-list {
     background-color: #fff;
