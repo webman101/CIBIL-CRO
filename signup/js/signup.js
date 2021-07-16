@@ -392,6 +392,26 @@ function validate_verify_yourself() {
     }
 }
 
+
+
+var verify_validate2 = true;
+    $('input.custom1[type=radio]').on('change', function () {
+        $('input.custom1[type=radio]').not(this).prop('checked', false);
+        validate_verify_yourself();
+    });
+
+function validate_verify_yourself() {
+    var names = [];
+    var verify_validate2 = true;
+
+    if (verify_validate2) {
+        $('.button-yellow').removeClass('disabled');
+        $('.button-yellow').attr("disabled", false);
+    }
+}
+
+
+
 $('#applyCouponCode').click(function(){
     discount = 120;
     if($('#coupon_code').val() != ''){
