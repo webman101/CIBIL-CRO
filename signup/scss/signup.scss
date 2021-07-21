@@ -2410,17 +2410,19 @@ td.text-black.password-relative {
         }
     }
     &-mobile{
-        &.verify-payemnt{
-            .footerLinks {
-                a{
-                    &:first-child{
-                        margin: 0 auto 10px;
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: fit-content;
-                    }    
+        @media(max-width: 991px){
+            &.verify-payemnt{
+                .footerLinks {
+                    a{
+                        &:first-child{
+                            margin: 0 auto 10px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: fit-content;
+                        }    
+                    }
                 }
             }
         }
