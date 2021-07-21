@@ -2599,6 +2599,7 @@ td.text-black.password-relative {
 }
 .verify-payment{
     .price-block {
+        padding: 20px;
         .section-title{
             font-size: 18px;
             line-height: 22px;
@@ -2627,7 +2628,7 @@ td.text-black.password-relative {
                 font-size: 16px;
                 line-height: 22px;
                 color: #000000;
-                padding-bottom: 0;
+                margin-bottom: 0;
                 a{
                     color: #F16E33;
                     font-weight: 600;
@@ -2685,8 +2686,14 @@ td.text-black.password-relative {
             font-size: 21px;
         }
     }
+    .price-block-terms{
+        margin-bottom: 16px;
+        p{
+            margin-bottom: 0;
+        }
+    }
 }
-.table-company-info{
+.table-company-info, .page-link {
     a{
         &:focus{
             outline: 0;
