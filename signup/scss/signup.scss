@@ -2420,7 +2420,10 @@ td.text-black.password-relative {
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            width: -webkit-fit-content;
+                            width: -moz-fit-content;
                             width: fit-content;
+                            line-height: 13px;
                         }    
                     }
                 }
