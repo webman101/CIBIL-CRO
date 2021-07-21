@@ -6,13 +6,13 @@ $(document).ready(function() {
         $('.plans-list').not(this).prop('checked', false);
         let value = $('.plans-radio-row input:checkbox[name=radio-group]:checked').val();
         if(value == null) {
-            $("#plans-title").html('CIBIL Free Plan');
+            $("#plans-title").html('Free Annual CIBIL Score & Report');
             $(".plans-block-header").removeClass('premium');
-            $("#plans-subtitle").text('One-time score. Does not update.');  
+            $("#plans-subtitle").text('One-time access to your CIBIL Score & Report');  
             $("#plans-price").text("");
             $(".u-text").text("Upgrade Now");
         } else {
-            $("#plans-title").html('CIBIL '+$('.plans-radio-row input:checkbox[name=radio-group]:checked').data('title'));
+            $("#plans-title").html($('.plans-radio-row input:checkbox[name=radio-group]:checked').data('title'));
             $(".plans-block-header").addClass('premium');
             $("#plans-subtitle").text($('.plans-radio-row input:checkbox[name=radio-group]:checked').data('subtitle'));
             $("#plans-price").text("₹"+value);
@@ -24,11 +24,11 @@ $(document).ready(function() {
         $('.plans-list').not(this).prop('checked', false);
         let value = $('#purchase-plans-radio input:checkbox[name=radio-group]:checked').val();
         if(value == null) {
-            $("#plans-title").html('CIBIL Free Plan');
-            $("#p-name").html('CIBIL Free Plan');
+            $("#plans-title").html('Free Annual CIBIL Score & Report');
+            $("#p-name").html('Free Annual CIBIL Score & Report');
             $(".plans-block-header").removeClass('premium');
-            $("#plans-subtitle").text('One-time score. Does not update.');  
-            $("#p-subtitle").text('One-time score. Does not update.');  
+            $("#plans-subtitle").text('One-time access to your CIBIL Score & Report');  
+            $("#p-subtitle").text('One-time access to your CIBIL Score & Report');  
             $("#plans-price").text("");
             $("#p-price").text("");
             $("#t-price").text("");
@@ -36,8 +36,8 @@ $(document).ready(function() {
             $(".u-text").text("Upgrade Now");
             $(".price-block-descount").hide();
         } else {
-            $("#plans-title").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
-            $("#p-name").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
+            $("#plans-title").html($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
+            $("#p-name").html($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
             $(".plans-block-header").addClass('premium');
             $("#plans-subtitle").text($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('subtitle'));
             $("#p-subtitle").text($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('subtitle'));
@@ -392,18 +392,48 @@ function validate_verify_yourself() {
     }
 }
 
+
+
+var verify_validate2 = true;
+    $('input.custom1[type=radio]').on('change', function () {
+        $('input.custom1[type=radio]').not(this).prop('checked', false);
+        validate_verify_yourself();
+    });
+
+function validate_verify_yourself() {
+    var names = [];
+    var verify_validate2 = true;
+
+    if (verify_validate2) {
+        $('.button-yellow').removeClass('disabled');
+        $('.button-yellow').attr("disabled", false);
+    }
+}
+
+
+
 $('#applyCouponCode').click(function(){
+    if($('#applyCouponCode').hasClass('inactive')){
+       $('#coupon_code').parent().removeClass("error"); 
+    }
     discount = 120;
+    let value = $('#purchase-plans input:radio[name=radio-group]:checked').val();
     if($('#coupon_code').val() != ''){
-        $('#t-price span').text(Number($('#t-price span').text()) - discount);
-        $('#t-price-m span').text(Number($('#t-price-m span').text()) - discount);
+        $('#t-price').text(Number($('#t-price').text()) - discount);
+        $('#t-price-m').text(Number($('#t-price-m').text()) - discount);
         $('.promocode-wrapper--inner').removeClass('hide');
         $('.form-group-container').hide();
         $('.price-block-descount').removeClass('hide');
+        $("#applyCouponCode").attr("disabled", false);
     }
    else{
         $('#coupon_code').parent().addClass("error");
         $('.price-block-descount').addClass('hide');
+        $('#applyCouponCode').addClass('inactive');
+        if($('#applyCouponCode').hasClass('inactive')){
+           $('#coupon_code').parent().removeClass("error"); 
+           $("#applyCouponCode"). attr("disabled", true);
+        }
    }
 });
 
@@ -416,8 +446,10 @@ $('#acceptQBtn1').on('click', function (e) {
 });
 $('.close-icon').on('click', function(e){
   $('.promocode-wrapper--inner').addClass('hide');
+  $('#applyCouponCode').addClass('inactive');
   $('.form-group-container').show();
-  $('#coupon_code').val("")
+  $('#coupon_code').val("");
+  $("#applyCouponCode"). attr("disabled", true);
 });
 
 
@@ -543,19 +575,91 @@ $(document).ready(function(){
     });
   });
 
+// $('.plans-list.plan-list-radio').on('change', function() {
+//     $('.plans-list').not(this).prop('checked', false);
+//     let value = $('input:radio[name=radio-group]:checked').val();
+//     console.log(value);
+//     if(value == null) {
+//         $("#t-price-m").text("");
+//         $("#t-perMon").html('100');
+//     } else {
+//         $("#t-price-m").text("₹"+value);
+//          $("#t-perMon").html("@"+$('input:radio[name=radio-group]:checked').data('pm')+"/month");
+//     }        
+// }); 
 $('.plans-list.plan-list-radio').on('change', function() {
     $('.plans-list').not(this).prop('checked', false);
-    let value = $('input:checkbox[name=radio-group]:checked').val();
+    let value = $('input:radio[name=radio-group]:checked').attr("data-title");
     console.log(value);
     if(value == null) {
         $("#t-price-m").text("");
         $("#t-perMon").html('100');
     } else {
-        $("#t-price-m").text("₹"+value);
-         $("#t-perMon").html("@"+$('input:checkbox[name=radio-group]:checked').data('pm')+"/month");
+        $("#t-price-m").text(value);
+         $("#t-perMon").html("@"+$('input:radio[name=radio-group]:checked').data('pm')+"/month");
     }        
 }); 
 
 $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
     window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
 });
+
+//verify payment
+
+    $('.verify-payemnt #purchase-plans .plans-list').on('change', function() {
+        $('.plans-list').not(this).prop('checked', false);
+        let value = $('#purchase-plans input:radio[name=radio-group]:checked').val();
+        console.log(value);
+        if(value == null) {
+            $("#p-name").html('Basic Plan');
+            $("#p-subtitle").text('(1-month subscription)');  
+            $("#plans-price").text("");
+            $("#p-price").text("");
+            $("#t-price").text("");
+            $("#t-price-m").text("");
+            $(".price-block-descount").css({display:'none'});
+        } else {
+            $("#p-name").html($('#purchase-plans input:radio[name=radio-group]:checked').data('title'));
+            $("#p-subtitle").text($('#purchase-plans input:radio[name=radio-group]:checked').data('subtitle'));
+            $("#plans-price").text("₹"+value);
+            $("#p-price").text("₹"+value);
+            $("#t-price").text(value-discount);
+            $("#t-price-m").text(value-discount);
+            $(".price-block-descount").css({display:'flex'});
+        }        
+    }); 
+
+    $('input#coupon_code').on('blur', function(){
+       $("#applyCouponCode").removeClass('inactive');
+       $("#applyCouponCode").attr("disabled", false);
+       if($('.form-group-container').hasClass('valid')){
+           $('#coupon_code').parent().removeClass("error"); 
+        }
+    }).on('focus', function(){
+      $('#applyCouponCode').removeClass('inactive');
+      $("#applyCouponCode").attr("disabled", false);
+    });
+
+    $(document).on('blur change', '#coupon_code', function () {
+        if (!$(this).val() > 0) {
+            $(this).parent().removeClass("valid");
+        } else {
+            $(this).parent().addClass("valid");
+        }
+    });
+
+    $(document).ready(function(){
+        $("input#coupon_code").on("keyup blur",function() {
+          if($(this).val().length == 0){
+                $("#applyCouponCode").addClass('inactive');
+                $("#applyCouponCode").attr("disabled", true);
+              }
+          })
+      });
+
+
+    $('#applyNow').on('click', function(){
+        $('#purchase-plans input:radio[id=12mon]').prop('checked', true);
+        $('#purchase-plans input:radio[id=1mon]').prop('checked', false);
+    });
+

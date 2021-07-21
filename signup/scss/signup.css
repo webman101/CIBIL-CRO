@@ -423,6 +423,10 @@ h6 {
 .signup-block--success .success-icon {
   margin-right: 15px;
 }
+.signup-block.otp-block {
+  box-shadow: 0px -6px 6px -3px #0000000d;
+}
+
 .white-block {
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
@@ -1492,7 +1496,7 @@ h6 {
 }
 @media (max-width: 991px) {
   .promocode-wrapper {
-    margin: 0 -16px 60px;
+    margin: 0 -16px 0px;
     border: 0;
     padding: 34px 20px;
   }
@@ -1569,6 +1573,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  z-index: 1;
 }
 .price-sticky-footer .pay-btn button {
   min-width: 200px;
@@ -2265,10 +2270,33 @@ td.text-black.password-relative input {
 .interstitial-page .para {
   font-weight: 400;
 }
+.interstitial-page .continue-accept-btn-2 {
+  display: none;
+}
 @media screen and (min-width: 992px) {
-  .interstitial-page #continue-accept-btn {
+  .interstitial-page .continue-accept-btn-2 {
     display: block;
   }
+}
+.interstitial-page .pay-btn {
+  padding: 0;
+  width: 221px;
+  text-align: center;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+}
+.interstitial-page .pay-btn span {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+.interstitial-page .pay-btn #t-price-m {
+  font-size: 14px;
 }
 
 .border-btm {
@@ -2282,7 +2310,8 @@ td.text-black.password-relative input {
   margin-top: 30px;
   display: flex;
   align-items: center;
-  padding: 8px 15px;
+  justify-content: center;
+  padding: 8px 0;
   background: linear-gradient(45deg, #ffe87e, #fff4bf);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px 4px 0px 0px;
@@ -2323,7 +2352,7 @@ td.text-black.password-relative input {
 @media screen and (max-width: 992px) {
   .block-2 {
     background-color: #f5f6fa !important;
-    margin-bottom: 100px !important;
+    margin-bottom: 30px !important;
   }
   .block-2 .feature-list {
     background-color: #fff;
@@ -2333,7 +2362,7 @@ td.text-black.password-relative input {
 }
 
 .footer {
-  background: #EFF7FE;
+  background: #eff7fe;
   padding: 15px 0;
 }
 .footer .copyright {
@@ -2386,10 +2415,29 @@ td.text-black.password-relative input {
     white-space: nowrap;
   }
 }
+@media (max-width: 991px) {
+  .footer-mobile {
+    padding-bottom: 94px;
+  }
+}
 
 .no-upgrade {
-  display: block;
-  margin-top: 23px;
-  text-align: center;
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .no-upgrade {
+    display: block;
+    margin-top: 23px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.no-thanks {
   text-decoration: none;
+  color: #000;
 }/*# sourceMappingURL=signup.css.map */

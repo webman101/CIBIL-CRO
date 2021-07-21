@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="content verify-payment">
         <div class="container custom-container min-container">
             <div class="row row-mobile-reverse min-row">
                 <div class="col-md-7 w-64">
@@ -46,102 +46,82 @@
                         <div class="signup-block-inner">
                             <h3 class="section-title-25 text-color-black mb-1">Complete your purchase.</h3>
                             <p class="section-subtitle light-grey font-weight-300 mb-3 font-16">Please review your order and make the payment to gain access to your CIBIL Score & Report.</p>
-                            <h4 class="section-title section-title-blue mb-1 m-hidden">SELECTED SUBSCRIPTION</h4>
-                            <div class="plans-block purchase">
-                                <div class="plans-block-header premium">
-                                    <div class="justify-between align-items-center mb-1">
-                                        <h3 id="plans-title" class="section-title-lg text-color-white">CIBIL Premium Plan</h3>
-                                        <h4 id="plans-price" class="font-18 text-color-white font-weight-600">₹1200</h4>
-                                    </div>
-                                    <div class="justify-between pb-m-2">
-                                        <p id="plans-subtitle" class="text-color-white font-14 mb-0">12-months subscription</p>
-                                        <a id="flip" class="font-14 text-color-blue text-decoration-none collapse-trigger" role="button" aria-expanded="false" >
-                                            <span class="u-text">Upgrade Now</span>
-                                            <span class="h-text">Hide Plans</span>
-                                            <img src="./img/accordian-white-icon.svg">
-                                        </a>
-                                    </div>
-                                    <div class="plans-block-content">    
-                                        <div class="collapse" id="collapseExample">
-                                            <div class="card card-body pt-2">                                      
-                                                <div class="plans-radio-row mb-0" id="purchase-plans-radio">
-                                                    <div class="plans-radio-col">
-                                                        <input class="plans-list" type="checkbox" id="1mon" value="550" name="radio-group" data-title="Basic Plan" data-subtitle="1 Month Subscription">
-                                                        <span class="checkmark"></span>
-                                                        <label for="1mon">
-                                                            <div class="plans-radio-price">₹550</div>
-                                                            <div class="plans-radio-title">1 Month</div>
-                                                            <div class="plans-radio-sub-title">@₹550/month</div>
-                                                        </label>
-                                                    </div>
-                                                    <div class="plans-radio-col">
-                                                        <input class="plans-list" type="checkbox" id="6mon" value="880" name="radio-group" data-title="Standard Plan" data-subtitle="6 Months Subscription">
-                                                        <span class="checkmark"></span>
-                                                        <label for="6mon">
-                                                            <div class="plans-radio-price">₹880</div>
-                                                            <div class="plans-radio-title">6 Months</div>
-                                                            <div class="plans-radio-sub-title">@₹133/month</div>
-                                                            <div class="plans-radio-offer-text orange mobile-visible margin-top-1">
-                                                                Save 70%
-                                                            </div>
-                                                        </label>	
-                                                    </div>
-                                                    <div class="plans-radio-col">
-                                                        <input class="plans-list" type="checkbox" id="12mon" data-nobet="" value="1200" name="radio-group" data-title="Premium Plan" data-subtitle="12 Months Subscription" checked>
-                                                        <span class="checkmark"></span>
-                                                        <label for="12mon">
-                                                            <div class="plans-radio-price">₹1200</div>
-                                                            <div class="plans-radio-title">12 Months</div>
-                                                            <div class="plans-radio-sub-title">@₹100/month</div>
-                                                            <div class="plans-radio-offer-text orange mobile-visible margin-top-1">
-                                                                Save 81%
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="feature-list mt-2 m-visible">
-                                                    <h3 class="font-18 font-weight-600 mb-2 text-color-black">Upgrade your plan to get these features</h3>
-                                                    <div class="feature-list-item">
-                                                        <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                                        <div class="feature-list-item-text">
-                                                            24x7 credit monitoring with CIBIL alerts (only for 6 months & 12 months plan).
+                            <h4 class="section-title section-title-blue mb-1 text-uppercase section-heading">Your Selected Subscription</h4>
+                            <div class="plans-block purchase verify-payemnt mt-0">
+                               <div class="plans-block mb-0">
+                                    <div class="plans-select-header">
+                                        <div class="plans-block-content">
+                                            <div class="collapse d-block" id="collapseExample">
+                                                <div class="card card-body mt-0">
+                                                    <div class="plans-radio-row mb-0" id="purchase-plans">
+                                                        <div class="plans-radio-col">
+                                                            <input class="plans-list plan-list-radio" type="radio" id="1mon" value="550" name="radio-group" data-nobet="" data-title="Basic plan" data-subtitle="1-month subscription" data-pm="₹550" checked>
+                                                            <span class="checkmark"></span>
+                                                            <label for="12mon">
+                                                                <div class="plans-radio-title first-option">Basic plan <span>(1 Month)</span></div>
+                                                                <div class="right-price-block">
+                                                                    <div class="plans-radio-price">₹550</div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="header-block">
+                                                            <h4 class="title">Want a better deal?</h4>
+                                                            <div class="plans-radio-offer-text orange mobile-visible margin-top-1">save up to 81%</div>
+                                                        </div>
+                                                        <div class="plans-radio-col plan-premium">
+                                                            <input class="plans-list plan-list-radio active" type="radio" id="12mon" value="1200" name="radio-group" data-title="Premium plan" data-subtitle="12-month subscription" data-pm="₹100">
+                                                            <span class="checkmark"></span>
+                                                            <label for="1mon">
+                                                              <div>
+                                                                <div class="plans-radio-title">Premium plan <span>(12 Months)</span></div>
+                                                                <div class="plans-radio-offer-text orange mobile-visible margin-top-1">
+                                                                    Save 81%
+                                                                </div>
+                                                              </div>
+                                                                <div class="right-price-block">
+                                                                    <div class="plans-radio-price">₹1200</div>
+                                                                
+                                                                <div class="plans-radio-sub-title">@₹100/month</div>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div class="plans-radio-col plan-standard">
+                                                            <input class="plans-list plan-list-radio" type="radio" id="6mon" value="880" name="radio-group" data-title="Standard plan" data-subtitle="6-month subscription" data-pm="₹133">
+                                                            <span class="checkmark"></span>
+                                                            <label for="6mon">
+                                                             <div>
+                                                                <div class="plans-radio-title">Standard plan <span>(6 Months)</span></div>
+                                                                <div class="plans-radio-offer-text orange mobile-visible margin-top-1">
+                                                                    Save 75%
+                                                                </div>
+                                                             </div>
+                                                               <div class="right-price-block">
+                                                                <div class="plans-radio-price">₹880</div>
+                                                                
+                                                                <div class="plans-radio-sub-title">@₹133/month</div>
+                                                               
+                                                               </div>
+                                                            </label>
                                                         </div>
                                                     </div>
-                                                    <div class="feature-list-item">
-                                                        <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                                        <div class="feature-list-item-text">
-                                                            Unlimited access to your CIBIL dashboard.
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-list-item">
-                                                        <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                                        <div class="feature-list-item-text">
-                                                            Make the right credit decisions with Score Simulator.
-                                                        </div>
-                                                    </div>
-                                                    <div class="feature-list-item">
-                                                        <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
-                                                        <div class="feature-list-item-text">
-                                                            Get personalized loan offers.
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="feature-list grey mb-4 m-hidden">
-                                    <h3 class="font-18 font-weight-600 mb-2 text-color-black">FEATURES YOU GET WITH THIS PLAN</h3>
+                                <div class="feature-list mb-2">
+                                    <h3 class="font-18 font-weight-600 mb-2 text-color-black">You get these features with a paid subscription</h3>
                                     <div class="feature-list-item">
                                         <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
                                         <div class="feature-list-item-text">
-                                            24x7 credit monitoring with CIBIL Alerts (only for 6 months & 12 months subscription).
+                                            24x7 credit monitoring with CIBIL Alerts (only with 6 months & 12 months subscription).
                                         </div>
                                     </div>
                                     <div class="feature-list-item">
                                         <img src="./img/approved-icon.svg" width="16" class="feature-list-item-icon">
                                         <div class="feature-list-item-text">
-                                            Stay up to date with your latest CIBIL Score & Report with regular updates.
+                                            Stay updated with your latest CIBIL Score & Report with unlimited access.
                                         </div>
                                     </div>
                                     <div class="feature-list-item">
@@ -158,36 +138,18 @@
                                     </div>
                                 </div>
                             </div>                           
-
-                            <h4 class="section-title section-title-blue mb-1 text-uppercase">Account Details</h4>
-                            <table class="table table-bordered table--colored text-grey ">
-                                <tbody>
-                                    <tr>
-                                        <td class="bg-light-blue font-weight-300 text-color-brown">Full Name</td>
-                                        <td class="text-color-black font-weight-400">Arnab Tarcar</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bg-light-blue font-weight-300 text-color-brown">Email ID</td>
-                                        <td class="text-color-black font-weight-400">a.Arnab@gmail.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="bg-light-blue font-weight-300 text-color-brown">Mobile Number</td>
-                                        <td class="text-color-black font-weight-400">+91 9812345678</td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-5 w-36">
-                    <div class="price-block">
+                    <div class="price-block" id="scroll">
                         <h4 class="section-title text-color-black-75">PRICE DETAILS</h4>
                         <div class="justify-between align-items-center">
-                            <h3 id="p-name" class="font-16 text-color-black font-weight-300">CIBIL Premium Plan</h3>
-                            <h4 id="p-price" class="font-18 text-color-black font-weight-400">₹ 1200</h4>
+                            <h3 id="p-name" class="font-16 text-color-black font-weight-300">Basic plan</h3>
+                            <h4 id="p-price" class="font-18 text-color-black font-weight-400">₹ 550</h4>
                         </div>
                         <div class="mb-2">
-                            <h3 id="p-subtitle" class="font-16 text-color-black font-weight-300">(12-months subscription)</h3>
+                            <h3 id="p-subtitle" class="font-16 text-color-black font-weight-300">(1-month subscription)</h3>
                         </div>
                         <div class="justify-between align-items-center price-block-descount hide">
                             <h3 class="font-16 text-color-black font-weight-300">Promocode Discount </h3>
@@ -196,55 +158,61 @@
                         <hr class="mt-15 mb-15"/>
                         <div class="price-block-total justify-between align-items-center">
                             <h3 class="font-22 text-color-black font-weight-600">Total Amount</h3>
-                            <h4 id="t-price" class="font-22 text-color-black font-weight-600">₹ <span>1200</span></h4>
+                            <h4 id="t-price" class="t-price-d font-22 text-color-black font-weight-600">550</h4>
                         </div>
-                        <hr class="mt-15 mb-15 m-hidden"/>
+                        <hr class="mt-15 mb-15"/>
+                        <div class="deal-block">
+                            <div class="deal-block-head">Deal just for you</div>
+                            <p class="deal-block-body">Subscribe to Premium plan and save up to 81%. <a id="applyNow" href="javascript:void(0)">Apply now</a></p>
+                        </div>
+                       <div class="promocode-wrapper mt-2 mb-2">
+                            <div class="promocode-wrapper--name align-items-center">
+                                <img src="./img/promo-code.svg" width="18" class="promocode-icon">
+                                <h4 class="ml-1">Have a Promo Code?</h4>
+                            </div>
+                            <div class="form-group form-group-container mb-0">
+                                <div class="form-group req-field form-group-field">                                    
+                                    <input type="text" class="form-control" id="coupon_code" placeholder="" value="" required>
+                                    <label class="form-label" for="coupon_code">Enter Promo Code here</label>
+                                    <label class="input-error">Enter a valid promocode</label>
+                                </div>
+                                <button id="applyCouponCode" class="round-button inactive" disabled>Apply</button>
+                            </div>
+                            <div class="promocode-wrapper--inner hide">
+                                <div class="promocode-wrapper--discount">
+                                    <span>
+                                        <img src="./img/discount.png" width="20">SAVE10
+                                    </span>
+                                    <span>
+                                        <p class="mb-0">APPLIED
+                                            <a class="close-icon" href="javascript:void(0)"><img src="./img/close.svg" width="13"></a>
+                                        </p>
+                                    </span>
+                                </div>
+                                <p class="promocode-wrapper--message mb-0">Congratulations! Your promocode has been applied. You have just saved ₹120.</p>
+                            </div>
+                        </div>  
                         <div class="price-block-terms m-hidden">
-                            <p>By clicking the "Proceed to Payment" button, you will be redirected to a third-party payment vendor that will handle your payment.</p>
+                            <p class="mb-0">By clicking the "Proceed to Payment" button, you will be redirected to a third-party payment vendor that will handle your payment.</p>
                         </div>
-                        <button id="" class="button-yellow m-hidden">PROCEED TO PAYMENT</button>
-                    </div>
-                   <div class="promocode-wrapper mt-2 mb-2" id="scroll">
-                        <div class="promocode-wrapper--name align-items-center">
-                            <img src="./img/promo-code.svg" width="18" class="promocode-icon">
-                            <h4 class="ml-1">Have a Promo Code?</h4>
-                        </div>
-                        <div class="form-group form-group-container mb-0">
-                            <div class="form-group req-field form-group-field">                                    
-                                <input type="text" class="form-control" id="coupon_code" placeholder="" value="" required>
-                                <label class="form-label" for="coupon_code">Enter Promo Code here</label>
-                                <label class="input-error">Enter a valid promocode</label>
-                            </div>
-                            <button id="applyCouponCode" class="round-button">Apply</button>
-                        </div>
-                        <div class="promocode-wrapper--inner hide">
-                            <div class="promocode-wrapper--discount">
-                                <span>
-                                    <img src="./img/discount.png" width="20">SAVE10
-                                </span>
-                                <span>
-                                    <p class="mb-0">APPLIED
-                                        <a class="close-icon" href="javascript:void(0)"><img src="./img/close.svg" width="13"></a>
-                                    </p>
-                                </span>
-                            </div>
-                            <p class="promocode-wrapper--message mb-0">Congratulations! Your promocode has been applied. You have just saved ₹120.</p>
-                        </div>
-                    </div>                    
+                        <a href="thank-you.html">
+                            <button id="" class="button-yellow m-hidden">PROCEED TO PAYMENT</button>
+                        </a>
+                    </div>                  
                 </div>
             </div>
         </div>
         <div class="price-sticky-footer">
             <div class="price">
-                <h3 id="t-price-m" class="font-24 mb-0 text-color-black">₹ <span>1200</span></h3>
+                <h3 id="t-price-m" class="t-price-m font-24 mb-0 text-color-black">550</h3>
                 <a href="#scroll" class="font-14 text-color-blue mb-0 noselect text-underine-none">View details</a>
             </div>            
-            <a href="#" class="pay-btn">
+            <a href="thank-you.html" class="pay-btn">
                 <button class="button-yellow text-uppercase">Pay Now</button>
             </a>            
         </div>
     </div>
-    <div class="footer m-hidden">
+    <div class="footer footer-mobile verify-payemnt">
         <div class="container custom-container">
             <p class="copyright">© Copyright 2021 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
             <div class="footerLinks">
