@@ -2604,6 +2604,7 @@ td.text-black.password-relative {
             background: rgba(241, 110, 51, 0.05);
             border-radius: 3px;
             padding: 15px;
+            margin-bottom: 37px;
             &-head{
                 font-size: 16px;
                 line-height: 18px;
@@ -2629,7 +2630,7 @@ td.text-black.password-relative {
                 }
             }
             @media(max-width: 991px){
-                margin-bottom: 30px;
+                margin-bottom: 34px;
             }
         }
         .promocode-wrapper{
