@@ -415,12 +415,16 @@ function validate_verify_yourself() {
 $('#applyCouponCode').click(function(){
     $(this).removeClass('inactive');
     discount = 120;
+    let value = $('#purchase-plans input:radio[name=radio-group]:checked').val();
     if($('#coupon_code').val() != ''){
         $('#t-price span').text(Number($('#t-price span').text()) - discount);
         $('#t-price-m span').text(Number($('#t-price-m span').text()) - discount);
+        $('#t-price').text(Number($('#t-price').text(value)) - discount);
+        $('#t-price-m').text(Number($('#t-price-m').text()) - discount);
         $('.promocode-wrapper--inner').removeClass('hide');
         $('.form-group-container').hide();
         $('.price-block-descount').removeClass('hide');
+        console.log($("#p-price").innerHTML("₹"+value));
     }
    else{
         $('#coupon_code').parent().addClass("error");
@@ -624,3 +628,4 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
     }).on('focus', function(){
       $('#applyCouponCode').removeClass('inactive');
     });
+
