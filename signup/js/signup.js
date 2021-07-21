@@ -594,15 +594,33 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
     window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
 });
 
-$('.verify-payment .plans-list.plan-list-radio').on('change', function() {
-    $('.plans-list').not(this).prop('checked', false);
-    let value = $('input:radio[name=radio-group]:checked').attr("data-title");
-    console.log(value);
-    if(value == null) {
-        $("#t-price-m").text("");
-        $("#t-perMon").html('100');
-    } else {
-        $("#t-price-m").text(value);
-         $("#t-perMon").html("@"+$('input:radio[name=radio-group]:checked').data('pm')+"/month");
-    }        
-}); 
+//verify payment
+
+    $('.verify-payemnt #purchase-plans .plans-list').on('change', function() {
+        $('.plans-list').not(this).prop('checked', false);
+        let value = $('#purchase-plans input:radio[name=radio-group]:checked').val();
+        console.log(value);
+        if(value == null) {
+            $("#p-name").html('CIBIL Basic Plan');
+            $("#p-subtitle").text('(1-month subscription)');  
+            $("#plans-price").text("");
+            $("#p-price").text("");
+            $("#t-price").text("");
+            $("#t-price-m").text("");
+            $(".price-block-descount").css({display:'none'});
+        } else {
+            $("#p-name").html('CIBIL '+$('#purchase-plans input:radio[name=radio-group]:checked').data('title'));
+            $("#p-subtitle").text($('#purchase-plans input:radio[name=radio-group]:checked').data('subtitle'));
+            $("#plans-price").text("₹"+value);
+            $("#p-price").text("₹"+value);
+            $("#t-price").text("₹"+(value-discount));
+            $("#t-price-m").text("₹"+(value-discount));
+            $(".price-block-descount").css({display:'flex'});
+        }        
+    }); 
+
+    $('input#coupon_code').on('blur', function(){
+       $("#applyCouponCode").removeClass('inactive');
+    }).on('focus', function(){
+      $('#applyCouponCode').removeClass('inactive');
+    });
