@@ -2620,9 +2620,11 @@ td.text-black.password-relative {
                 a{
                     color: #F16E33;
                     font-weight: 600;
-                    text-decoration: none;
                     &:focus{
                         outline: 0;
+                    }
+                    @media(max-width: 991px){
+                        text-decoration: none;
                     }
                 }
             }
