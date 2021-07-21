@@ -6,13 +6,13 @@ $(document).ready(function() {
         $('.plans-list').not(this).prop('checked', false);
         let value = $('.plans-radio-row input:checkbox[name=radio-group]:checked').val();
         if(value == null) {
-            $("#plans-title").html('CIBIL Free Plan');
+            $("#plans-title").html('Free Annual CIBIL Score & Report');
             $(".plans-block-header").removeClass('premium');
-            $("#plans-subtitle").text('One-time score. Does not update.');  
+            $("#plans-subtitle").text('One-time access to your CIBIL Score & Report');  
             $("#plans-price").text("");
             $(".u-text").text("Upgrade Now");
         } else {
-            $("#plans-title").html('CIBIL '+$('.plans-radio-row input:checkbox[name=radio-group]:checked').data('title'));
+            $("#plans-title").html($('.plans-radio-row input:checkbox[name=radio-group]:checked').data('title'));
             $(".plans-block-header").addClass('premium');
             $("#plans-subtitle").text($('.plans-radio-row input:checkbox[name=radio-group]:checked').data('subtitle'));
             $("#plans-price").text("₹"+value);
@@ -24,11 +24,11 @@ $(document).ready(function() {
         $('.plans-list').not(this).prop('checked', false);
         let value = $('#purchase-plans-radio input:checkbox[name=radio-group]:checked').val();
         if(value == null) {
-            $("#plans-title").html('CIBIL Free Plan');
-            $("#p-name").html('CIBIL Free Plan');
+            $("#plans-title").html('Free Annual CIBIL Score & Report');
+            $("#p-name").html('Free Annual CIBIL Score & Report');
             $(".plans-block-header").removeClass('premium');
-            $("#plans-subtitle").text('One-time score. Does not update.');  
-            $("#p-subtitle").text('One-time score. Does not update.');  
+            $("#plans-subtitle").text('One-time access to your CIBIL Score & Report');  
+            $("#p-subtitle").text('One-time access to your CIBIL Score & Report');  
             $("#plans-price").text("");
             $("#p-price").text("");
             $("#t-price").text("");
@@ -36,8 +36,8 @@ $(document).ready(function() {
             $(".u-text").text("Upgrade Now");
             $(".price-block-descount").hide();
         } else {
-            $("#plans-title").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
-            $("#p-name").html('CIBIL '+$('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
+            $("#plans-title").html($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
+            $("#p-name").html($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('title'));
             $(".plans-block-header").addClass('premium');
             $("#plans-subtitle").text($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('subtitle'));
             $("#p-subtitle").text($('#purchase-plans-radio input:checkbox[name=radio-group]:checked').data('subtitle'));
@@ -611,7 +611,7 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
         let value = $('#purchase-plans input:radio[name=radio-group]:checked').val();
         console.log(value);
         if(value == null) {
-            $("#p-name").html('CIBIL Basic Plan');
+            $("#p-name").html('Basic Plan');
             $("#p-subtitle").text('(1-month subscription)');  
             $("#plans-price").text("");
             $("#p-price").text("");
@@ -619,7 +619,7 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
             $("#t-price-m").text("");
             $(".price-block-descount").css({display:'none'});
         } else {
-            $("#p-name").html('CIBIL '+$('#purchase-plans input:radio[name=radio-group]:checked').data('title'));
+            $("#p-name").html($('#purchase-plans input:radio[name=radio-group]:checked').data('title'));
             $("#p-subtitle").text($('#purchase-plans input:radio[name=radio-group]:checked').data('subtitle'));
             $("#plans-price").text("₹"+value);
             $("#p-price").text("₹"+value);
