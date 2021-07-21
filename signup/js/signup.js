@@ -632,6 +632,9 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
     $('input#coupon_code').on('blur', function(){
        $("#applyCouponCode").removeClass('inactive');
        $("#applyCouponCode").attr("disabled", false);
+       if($('.form-group-container').hasClass('valid')){
+           $('#coupon_code').parent().removeClass("error"); 
+        }
     }).on('focus', function(){
       $('#applyCouponCode').removeClass('inactive');
       $("#applyCouponCode").attr("disabled", false);
@@ -644,6 +647,15 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
             $(this).parent().addClass("valid");
         }
     });
+
+    $(document).ready(function(){
+        $("input#coupon_code").on("keyup blur",function() {
+          if($(this).val().length == 0){
+                $("#applyCouponCode").addClass('inactive');
+                $("#applyCouponCode").attr("disabled", true);
+              }
+          })
+      });
 
 
     $('#applyNow').on('click', function(){
