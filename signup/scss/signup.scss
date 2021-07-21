@@ -2682,4 +2682,10 @@ td.text-black.password-relative {
         }
     }
 }
-
+.table-company-info{
+    a{
+        &:focus{
+            outline: 0;
+        }
+    }
+}
