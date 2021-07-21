@@ -413,6 +413,7 @@ function validate_verify_yourself() {
 
 
 $('#applyCouponCode').click(function(){
+    $(this).removeClass('inactive');
     discount = 120;
     if($('#coupon_code').val() != ''){
         $('#t-price span').text(Number($('#t-price span').text()) - discount);
@@ -436,6 +437,7 @@ $('#acceptQBtn1').on('click', function (e) {
 });
 $('.close-icon').on('click', function(e){
   $('.promocode-wrapper--inner').addClass('hide');
+  $('#applyCouponCode').addClass('inactive');
   $('.form-group-container').show();
   $('#coupon_code').val("")
 });
@@ -591,3 +593,16 @@ $('.plans-list.plan-list-radio').on('change', function() {
 $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
     window.location.href = 'https://ajency.github.io/CIBIL-CRO/signup/otp.html';
 });
+
+$('.verify-payment .plans-list.plan-list-radio').on('change', function() {
+    $('.plans-list').not(this).prop('checked', false);
+    let value = $('input:radio[name=radio-group]:checked').attr("data-title");
+    console.log(value);
+    if(value == null) {
+        $("#t-price-m").text("");
+        $("#t-perMon").html('100');
+    } else {
+        $("#t-price-m").text(value);
+         $("#t-perMon").html("@"+$('input:radio[name=radio-group]:checked').data('pm')+"/month");
+    }        
+}); 
