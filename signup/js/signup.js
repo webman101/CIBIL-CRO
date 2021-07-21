@@ -626,3 +626,8 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
       $('#applyCouponCode').removeClass('inactive');
     });
 
+    $('#applyNow').on('click', function(){
+        $('#purchase-plans input:radio[id=12mon]').prop('checked', true);
+        $('#purchase-plans input:radio[id=1mon]').prop('checked', false);
+    });
+
