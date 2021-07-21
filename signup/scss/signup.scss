@@ -2597,10 +2597,12 @@ td.text-black.password-relative {
         .section-title{
             font-size: 18px;
             line-height: 22px;
-            color: #3EA3CE;
             border-bottom: 0;
+            color: rgba(0,0,0,0.75);
             @media(max-width: 991px){
                 border-bottom: 0.8px solid #DDDDDD;
+                font-size: 16px;
+                color: #3EA3CE;
             }
         }
         .deal-block{
