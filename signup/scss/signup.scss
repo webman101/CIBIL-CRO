@@ -2519,6 +2519,7 @@ td.text-black.password-relative {
                             @media(max-width: 991px){
                                 font-size: 22px;
                             }
+
                         }
                         .right-price-block{
                             padding-top: 8px;
@@ -2657,4 +2658,28 @@ td.text-black.password-relative {
             margin-right: -10px;
         }       
     }
+    .t-price-d {
+        position: relative;
+        &:before{
+            content: '₹';
+            position: absolute;
+            top: 1px;
+            left: -15px;
+            right: 0;
+            font-size: 19px;
+        }
+    }
+    .t-price-m {
+        position: relative;
+        padding-left: 15px;
+        &:before{
+            content: '₹';
+            position: absolute;
+            top: 1px;
+            left: 0px;
+            right: 0;
+            font-size: 21px;
+        }
+    }
 }
+
