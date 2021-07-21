@@ -413,7 +413,9 @@ function validate_verify_yourself() {
 
 
 $('#applyCouponCode').click(function(){
-    $(this).removeClass('inactive');
+    if($('#applyCouponCode').hasClass('inactive')){
+       $('#coupon_code').parent().removeClass("error"); 
+    }
     discount = 120;
     let value = $('#purchase-plans input:radio[name=radio-group]:checked').val();
     if($('#coupon_code').val() != ''){
@@ -422,6 +424,7 @@ $('#applyCouponCode').click(function(){
         $('.promocode-wrapper--inner').removeClass('hide');
         $('.form-group-container').hide();
         $('.price-block-descount').removeClass('hide');
+        $("#applyCouponCode").attr("disabled", false);
     }
    else{
         $('#coupon_code').parent().addClass("error");
@@ -429,6 +432,7 @@ $('#applyCouponCode').click(function(){
         $('#applyCouponCode').addClass('inactive');
         if($('#applyCouponCode').hasClass('inactive')){
            $('#coupon_code').parent().removeClass("error"); 
+           $("#applyCouponCode"). attr("disabled", true);
         }
    }
 });
@@ -444,7 +448,8 @@ $('.close-icon').on('click', function(e){
   $('.promocode-wrapper--inner').addClass('hide');
   $('#applyCouponCode').addClass('inactive');
   $('.form-group-container').show();
-  $('#coupon_code').val("")
+  $('#coupon_code').val("");
+  $("#applyCouponCode"). attr("disabled", true);
 });
 
 
@@ -626,8 +631,10 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
 
     $('input#coupon_code').on('blur', function(){
        $("#applyCouponCode").removeClass('inactive');
+       $("#applyCouponCode").attr("disabled", false);
     }).on('focus', function(){
       $('#applyCouponCode').removeClass('inactive');
+      $("#applyCouponCode").attr("disabled", false);
     });
 
     $('#applyNow').on('click', function(){
