@@ -426,6 +426,10 @@ $('#applyCouponCode').click(function(){
    else{
         $('#coupon_code').parent().addClass("error");
         $('.price-block-descount').addClass('hide');
+        $('#applyCouponCode').addClass('inactive');
+        if($('#applyCouponCode').hasClass('inactive')){
+           $('#coupon_code').parent().removeClass("error"); 
+        }
    }
 });
 
