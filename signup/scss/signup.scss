@@ -2553,6 +2553,11 @@ td.text-black.password-relative {
                         margin-bottom: 0;
                         margin-top: 4px;
                     }
+                    .plans-radio-title{
+                        @media(max-width: 991px){
+                            font-size: 18px;
+                        }
+                    }
                     &:last-child {
                         .plans-radio-title{
                             margin-bottom: 0;
