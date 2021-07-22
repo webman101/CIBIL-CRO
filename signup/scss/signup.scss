@@ -2592,8 +2592,9 @@ td.text-black.password-relative {
             }
         }
         @media(max-width: 991px){
-            margin-left: -23px;
-            margin-right: -19px;
+                margin: 0 -19px;
+                border-left: 0;
+                border-right: 0;
         }
     }
 }
