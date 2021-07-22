@@ -350,7 +350,6 @@ h6 {
     font-size: 22px;
     line-height: 32px;
     font-weight: 700;
-    padding-right: 20px;
     width: auto;
 }
 
@@ -522,22 +521,23 @@ h6 {
             .card {
                 border-top: 1px solid #dbdbdb;
             }
-        }
-        .premium-star {
-            position: relative;
-            &::after {
-                content: "";
-                width: 30px;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: -30px;
-                margin: auto;
-                background-image: url(../img/star.png);
-                background-size: contain;
-                background-repeat: no-repeat;
+            .premium-star {
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 30px;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: -40px;
+                    margin: auto;
+                    background-image: url(../img/star.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
             }
         }
+
         #plans-title {
             min-height: 34px;
             span {
