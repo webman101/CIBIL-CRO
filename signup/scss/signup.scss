@@ -1432,6 +1432,7 @@ h6 {
             line-height: 22px;
             color: #000000;
             opacity: 0.75;
+            text-transform: uppercase;
             @media (max-width: 991px) {
                 color: #3ea3ce;
                 opacity: 1;
@@ -2642,7 +2643,7 @@ td.text-black.password-relative {
                 }
             }
             @media(max-width: 991px){
-                margin-bottom: 25px;
+                margin-bottom: 40px;
             }
         }
         .promocode-wrapper{
@@ -2651,6 +2652,12 @@ td.text-black.password-relative {
             .form-group-field{
                 @media(max-width: 991px){
                     padding-bottom: 32px;
+                }
+            }
+            &--premium{
+                margin-top: 25px;
+                @media(max-width: 991px){
+                    margin-top: 45px;
                 }
             }
             @media(max-width: 991px){
@@ -2669,9 +2676,12 @@ td.text-black.password-relative {
             content: '₹';
             position: absolute;
             top: 1px;
-            left: -15px;
+            left: -12px;
             right: 0;
             font-size: 19px;
+            @media(max-width: 991px){
+                font-size: 18px;
+            }
         }
     }
     .t-price-m {
@@ -2690,6 +2700,11 @@ td.text-black.password-relative {
         margin-bottom: 16px;
         p{
             margin-bottom: 0;
+        }
+    }
+    .premium-page{
+        .plans-radio-col{
+            margin-bottom: 8px !important;
         }
     }
 }
