@@ -658,12 +658,12 @@ $('#continue-accept-btn, #continue-accept-btn-sm').on('click', function (e) {
       });
 
 
-    $('#applyNow').on('click', function(){
-        let value = $('#purchase-plans input:radio[id=12mon]').val();
-        $('#purchase-plans input:radio[id=12mon]').prop('checked', true);
-        $("#p-price").text("₹"+value);
-        $("#t-price").text((value-discount));
-        $('#purchase-plans input:radio[id=1mon]').prop('checked', false);
-    });
+    // $('#applyNow').on('click', function(){
+    //     let value = $('#purchase-plans input:radio[id=12mon]').val();
+    //     $('#purchase-plans input:radio[id=12mon]').prop('checked', true);
+    //     $("#p-price").text("₹"+value);
+    //     $("#t-price").text((value-discount));
+    //     $('#purchase-plans input:radio[id=1mon]').prop('checked', false);
+    // });
 
   
