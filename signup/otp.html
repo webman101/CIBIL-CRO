@@ -46,7 +46,7 @@
       });
 
     </script>
-    
+
     <script type='text/javascript'>
       googletag.cmd.push(function() {
       // Defines the size mapping, there are multiple examples here.
@@ -157,6 +157,11 @@
                                 <button id="verify-btn" class="button-yellow text-uppercase">verify</button>
                             </div>
                             <div id="v-card" class="v-card m-visible mt-4 mb-4">
+                                <script>
+                                    googletag.cmd.push(function() {
+                                    googletag.display('v-card');
+                                    });
+                                </script>
                                 <div class="v-card-img">
                                     <img src="./img/question-mark.svg" width="45"/>
                                 </div>
@@ -172,6 +177,11 @@
                     <div class="max-450">
                        
                         <div id="verify-card" class="verify-card mt-3 m-hidden">
+                            <script>
+                                googletag.cmd.push(function() {
+                                googletag.display('verify-card');
+                                });
+                            </script>
                             <div class="verify-card-inner">
                                 <div class="verify-card-icon">
                                     <img src="./img/question-mark.svg" />
