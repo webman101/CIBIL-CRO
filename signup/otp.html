@@ -35,7 +35,7 @@
 
         // Here the slot is defined, the smallest advert should be defined as the slot value
         // as this gets overwritten by the defineSizeMapping call.
-        googletag.defineSlot('/6355419/Travel/Europe/France/Paris', [320, 50], 'otp-form')
+        googletag.defineSlot('/6355419/Travel/Europe/France/Paris', [320, 50], 'otp-form-title')
           .defineSizeMapping(mapping)
           .addService(googletag.pubads())
           .setTargeting('test', 'responsive'); // Targeting is only required for this example.
@@ -135,10 +135,10 @@
                         </div>
                         <div class="signup-block-inner">
                             <div class="otp-form">
-                                <div id="otp-form">
+                                <div id="otp-form-title">
                                     <script>
                                      googletag.cmd.push(function() {
-                                       googletag.display('otp-form');
+                                       googletag.display('otp-form-title');
                                      });
                                     </script>
                                     <h3 class="section-title-25 text-color-black mb-1">Signup successful. Please enter OTP to verify your identity.</h3>
