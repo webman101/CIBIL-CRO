@@ -11,6 +11,93 @@
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/signup.css">
+    <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <!-- Kindly replace ad-unit-path 
+    ad-unit-path - /6355419/Travel/Europe/France/Paris (to be replaced from ad manager) -->
+    <script type='text/javascript'>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+
+    </script>
+
+    <script type='text/javascript'>
+      googletag.cmd.push(function() {
+      // Defines the size mapping, there are multiple examples here.
+      var mapping = googletag.sizeMapping().
+        addSize([100, 100], [[88, 31]]).
+        addSize([320, 400], [[320, 50], [300, 50]]).
+        addSize([320, 700], [[300, 250]]).
+        addSize([750, 200], [[728, 90]]).build();
+
+        // Enables async rendering and single request.
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().enableAsyncRendering();
+
+        // Here the slot is defined, the smallest advert should be defined as the slot value
+        // as this gets overwritten by the defineSizeMapping call.
+        googletag.defineSlot('/6355419/Travel/Europe/France/Paris', [320, 50], 'dup-form-title')
+          .defineSizeMapping(mapping)
+          .addService(googletag.pubads())
+          .setTargeting('test', 'responsive'); // Targeting is only required for this example.
+
+        // Tells the advert to display.
+        googletag.enableServices();
+
+      });
+
+    </script>
+
+    <script type='text/javascript'>
+      googletag.cmd.push(function() {
+      // Defines the size mapping, there are multiple examples here.
+      var mapping = googletag.sizeMapping().
+        addSize([100, 100], [[88, 31]]).
+        addSize([320, 400], [[320, 50], [300, 50]]).
+        addSize([320, 700], [[300, 250]]).build();
+
+        // Enables async rendering and single request.
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().enableAsyncRendering();
+
+        // Here the slot is defined, the smallest advert should be defined as the slot value
+        // as this gets overwritten by the defineSizeMapping call.
+        googletag.defineSlot('/6355419/Travel/Europe/France/Paris', [320, 50], 'v-card')
+          .defineSizeMapping(mapping)
+          .addService(googletag.pubads())
+          .setTargeting('test', 'responsive'); // Targeting is only required for this example.
+
+        // Tells the advert to display.
+        googletag.enableServices();
+
+      });
+
+    </script>
+
+    <script type='text/javascript'>
+      googletag.cmd.push(function() {
+      // Defines the size mapping, there are multiple examples here.
+      var mapping = googletag.sizeMapping().
+        addSize([100, 100], [[88, 31]]).
+        addSize([320, 400], [[320, 50], [300, 50]]).
+        addSize([320, 700], [[300, 250]]).build();
+
+        // Enables async rendering and single request.
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().enableAsyncRendering();
+
+        // Here the slot is defined, the smallest advert should be defined as the slot value
+        // as this gets overwritten by the defineSizeMapping call.
+        googletag.defineSlot('/6355419/Travel/Europe/France/Paris', [320, 50], 'verify-card')
+          .defineSizeMapping(mapping)
+          .addService(googletag.pubads())
+          .setTargeting('test', 'responsive'); // Targeting is only required for this example.
+
+        // Tells the advert to display.
+        googletag.enableServices();
+
+      });
+
+    </script>
 </head>
 
 <body>
@@ -48,7 +135,14 @@
                         </div>
                         <div class="signup-block-inner">
                             <div class="dup-form">
-                                <h3 class="section-title-25 text-color-black mb-2">Enter a username for your CIBIL Account.</h3>
+                                <div id="dup-form-title">
+                                    <script>
+                                     googletag.cmd.push(function() {
+                                       googletag.display('dup-form-title');
+                                     });
+                                    </script>
+                                    <h3 class="section-title-25 text-color-black mb-2">Enter a username for your CIBIL Account.</h3>
+                                </div>
                                 <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
                                 <!-- <p class="section-subtitle font-weight-400 mb-2">Please choose a username that you can use to access your CIBIL Account.</p> -->
                                 <div class="form-group req-field">                                    
@@ -60,7 +154,7 @@
                             <div class="text-right">
                                 <button id="continue-mobile-btn" class="button-yellow text-uppercase" disabled>continue</button>
                             </div>
-                            <div class="v-card m-visible mt-4 mb-4">
+                            <div id="v-card" class="v-card m-visible mt-4 mb-4">
                                 <div class="v-card-img">
                                     <img src="./img/question-mark.svg" width="45"/>
                                 </div>
@@ -74,7 +168,7 @@
                 </div>
                 <div class="col-md-5 w-36 order-0">
                     <div class="max-450">
-                        <div class="verify-card mt-3 m-hidden">
+                        <div id="verify-card" class="verify-card mt-3 m-hidden">
                             <div class="verify-card-inner">
                                 <div class="verify-card-icon">
                                     <img src="./img/question-mark.svg" />
