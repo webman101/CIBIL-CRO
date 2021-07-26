@@ -11,6 +11,47 @@
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/signup.css">
+    <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+
+    <!--- Kindly replace ad-unit-path 
+    ////
+    ad-unit-path - /6355419/Travel/Europe/France/Paris (to be replaced from ad manager) 
+    ///
+    -->
+    
+
+    <script type='text/javascript'>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+
+    </script>
+
+    <script type='text/javascript'>
+      googletag.cmd.push(function() {
+      // Defines the size mapping, there are multiple examples here.
+      var mapping = googletag.sizeMapping().
+        addSize([100, 100], [[88, 31]]).
+        addSize([320, 400], [[320, 50], [300, 50]]).
+        addSize([320, 700], [[300, 250]]).
+        addSize([750, 200], [[728, 90]]).build();
+
+        // Enables async rendering and single request.
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().enableAsyncRendering();
+
+        // Here the slot is defined, the smallest advert should be defined as the slot value
+        // as this gets overwritten by the defineSizeMapping call.
+        googletag.defineSlot('/6355419/Travel/Europe/France/Paris', [320, 50], 'complete-purchase-title')
+          .defineSizeMapping(mapping)
+          .addService(googletag.pubads())
+          .setTargeting('test', 'responsive'); // Targeting is only required for this example.
+
+        // Tells the advert to display.
+        googletag.enableServices();
+
+      });
+
+    </script>
 </head>
 
 <body>
@@ -44,6 +85,13 @@
                 <div class="col-md-7 w-64">
                     <div class="signup-block otp-block">
                         <div class="signup-block-inner">
+                            <div id="complete-purchase-title">
+                                <script>
+                                 googletag.cmd.push(function() {
+                                   googletag.display('complete-purchase-title');
+                                 });
+                                </script>
+                            </div>
                             <h3 class="section-title-25 text-color-black mb-1">Complete your purchase.</h3>
                             <p class="section-subtitle light-grey font-weight-300 mb-3 font-16">Please review your order and make the payment to gain access to your CIBIL Score & Report.</p>
                             <h4 class="section-title section-title-blue mb-1 text-uppercase section-heading">Your Selected Subscription</h4>
