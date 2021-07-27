@@ -927,3 +927,77 @@ h6 {
         }
     }
 }
+.dashboard-cta{
+    position: relative;
+    &-bg{
+        background-image: url(../img/report_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 454px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        .call-to-action{
+            background: rgba(255,255,255,0.79);
+            width: 600px;
+            height: 250px;
+            padding: 42px 52px;
+            display: table-cell;
+            z-index: 2;
+            position: relative;
+            .title{
+                font-weight: bold;
+                font-size: 44px;
+                line-height: 52px;
+                color: #000000;
+                opacity: 0.8;
+                margin-bottom: 30px;
+                @media(max-width: 991px){
+                    font-size: 30px;
+                    line-height: 37px;
+                    margin-bottom: 50px;
+                }
+            }
+            .button-yellow{
+                max-width: 350px;
+                @media(max-width: 991px){
+                    font-size: 16px;
+                    line-height: 16px;
+                    font-weight: 700;
+                }
+            }
+            @media(max-width: 991px){
+                text-align: center;
+                padding: 22px;
+                width: 96%;
+                margin: auto;
+                height: auto;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                right: 0;
+            }
+        }
+        @media(max-width: 991px){
+            background-image: url(../img/report_bg_mob.jpg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 82vh;
+        }
+        &:after{
+            content:"";
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    }
+}
