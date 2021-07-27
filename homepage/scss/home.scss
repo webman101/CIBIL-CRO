@@ -507,10 +507,10 @@ h6 {
                     background-image: url('../img/tick.svg');
                     background-repeat: no-repeat;
                     background-size: contain;
-                    width: 34px;
-                    height: 34px;
+                    width: 28px;
+                    height: 28px;
                     position: absolute;
-                    top: 0;
+                    top: -1;
                     left: -50px;
                     object-fit: contain;
                     @media(max-width: 991px){
