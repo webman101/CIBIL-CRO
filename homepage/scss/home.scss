@@ -492,7 +492,7 @@ h6 {
         &-item{
             background: rgba(238, 238, 238, 1);
             border-radius: 4px;
-            padding: 47px 32px 47px 80px;
+            padding: 47px 32px 47px 72px;
             margin: 10px 16px;
             h4{
                 font-weight: bold;
@@ -510,8 +510,8 @@ h6 {
                     width: 28px;
                     height: 28px;
                     position: absolute;
-                    top: -1;
-                    left: -50px;
+                    top: 0;
+                    left: -42px;
                     object-fit: contain;
                     @media(max-width: 991px){
                         width: 18px;
