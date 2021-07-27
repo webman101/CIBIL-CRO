@@ -13,8 +13,12 @@
     <link rel="stylesheet" href="./css/signup.css">
    <script async src="https://www.googletagservices.com/tag/js/gpt.js"></script>
 
-    <!-- Kindly replace ad-unit-path 
-    ad-unit-path - /6355419/Travel/Europe/France/Paris (to be replaced from ad manager) -->
+    <!--- Kindly replace ad-unit-path 
+    ////
+    ad-unit-path - /6355419/Travel/Europe/France/Paris (to be replaced from ad manager) 
+    ///
+    -->
+    
     <script type='text/javascript'>
       var googletag = googletag || {};
       googletag.cmd = googletag.cmd || [];
@@ -36,7 +40,7 @@
 
         // Here the slot is defined, the smallest advert should be defined as the slot value
         // as this gets overwritten by the defineSizeMapping call.
-        googletag.defineSlot('/6355419/Travel/Europe/France/Paris', [320, 50], 'signup-title')
+        googletag.defineSlot('ad-unit-path', [320, 50], 'signup-title')
           .defineSizeMapping(mapping)
           .addService(googletag.pubads())
           .setTargeting('test', 'responsive'); // Targeting is only required for this example.
@@ -64,7 +68,7 @@
 
         // Here the slot is defined, the smallest advert should be defined as the slot value
         // as this gets overwritten by the defineSizeMapping call.
-        googletag.defineSlot('/6355419/Travel/Europe/France/Paris', [320, 50], 'trust-card')
+        googletag.defineSlot('ad-unit-path', [320, 50], 'trust-card')
           .defineSizeMapping(mapping)
           .addService(googletag.pubads())
           .setTargeting('test', 'responsive'); // Targeting is only required for this example.
@@ -81,7 +85,7 @@
        window.googletag = window.googletag || {cmd: []};
        googletag.cmd.push(function() {
          googletag
-     .defineSlot('/6355419/Travel/Europe',
+     .defineSlot('ad-unit-path',
                  [300, 250], 'cards-block')
      .addService(googletag.pubads());
          googletag.enableServices();
