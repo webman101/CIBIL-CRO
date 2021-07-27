@@ -513,6 +513,11 @@ h6 {
                     top: 0;
                     left: -50px;
                     object-fit: contain;
+                    @media(max-width: 991px){
+                        width: 24px;
+                        height: 24px;
+                        left: -36px;
+                    }
                 }
                 @media(max-width: 991px){
                     font-size: 18px;
@@ -561,7 +566,7 @@ h6 {
             }
             @media(max-width: 991px){
                 background-color: transparent;
-                padding: 0 14px 0 40px;
+                padding: 0 14px 0 28px;
                 margin: 16px;
             }
         }
