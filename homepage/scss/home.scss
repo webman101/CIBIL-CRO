@@ -276,6 +276,15 @@ h6 {
     }
 }
 
+.min-container{
+    @media (min-width: 1400px) {
+        width: 1375px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin: auto;
+    }
+}
+
 .grey-sep {
     height: 1px;
     width: 100%;
@@ -943,7 +952,7 @@ h6 {
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 454px;
+        height: 580px;
         display: flex;
         align-items: center;
         position: relative;
