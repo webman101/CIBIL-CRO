@@ -773,7 +773,7 @@ h6 {
                                     height: auto;
                                     object-fit: contain;
                                     position: relative;
-                                    top: -12px;
+                                    top: -2px;
                                 }
                             }
                         }
@@ -981,7 +981,7 @@ h6 {
                 line-height: 28px;
                 color: #000000;
                 opacity: 0.4;
-                margin-bottom: 30px;
+                margin-bottom: 28px;
                 @media(max-width: 991px){
                     font-size: 16px;
                     line-height: 22px;
@@ -1021,8 +1021,8 @@ h6 {
             color: #3EA3CE;
         }
         @media(max-width: 991px){
-            font-size: 20px;
-            line-height: 29px;
+            font-size: 16px;
+            line-height: 24px;
             color: #000000;
             opacity: 0.85;
         }
@@ -1044,7 +1044,7 @@ h6 {
         position: relative;
         background-position: center;
         .call-to-action{
-            background: rgba(255,255,255,0.79);
+            background: rgba(255,255,255,0.86);
             width: 600px;
             height: 250px;
             padding: 42px 52px;
@@ -1057,19 +1057,21 @@ h6 {
                 line-height: 52px;
                 color: #000000;
                 opacity: 0.8;
-                margin-bottom: 30px;
+                margin-bottom: 28px;
                 @media(max-width: 991px){
                     font-size: 30px;
                     line-height: 37px;
-                    margin-bottom: 50px;
+                    margin-bottom: 28px;
                 }
             }
             .button-yellow{
                 max-width: 350px;
+                font-size: 20px;
+                line-height: 20px;
+                font-weight: 700;
                 @media(max-width: 991px){
                     font-size: 16px;
                     line-height: 16px;
-                    font-weight: 700;
                     max-width: 224px;
                     padding: 18px 28px;
                 }
