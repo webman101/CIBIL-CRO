@@ -1090,11 +1090,7 @@ h6 {
         }
         @media(max-width: 991px){
             background-image: url(../img/report_bg_mob.jpg);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+
             height: 682px;
         }
         @media(min-width: 1800px){
@@ -1113,3 +1109,14 @@ h6 {
         }
     }
 }
+
+@media (max-width: 991px){
+#footerRight ul{
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+#footerRight a img {
+    width: 32px;
+    height: 32px;
+}}
