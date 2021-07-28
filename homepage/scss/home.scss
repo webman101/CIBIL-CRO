@@ -934,6 +934,11 @@ h6 {
                     margin-top: 30px;
                 }
             }
+            .button-wrapper{
+                @media(max-width: 991px){
+                    text-align: center;
+                }
+            }
             .button-blue{
                 max-width: 265px;
             }
@@ -945,6 +950,9 @@ h6 {
     @media(max-width: 991px){
         margin: 0 -15px 70px;
         border-radius: 0;
+    }
+    @media( min-width: 1299px){
+        margin: 0 -40px 125px -40px
     }
 }
 .other-queries{
