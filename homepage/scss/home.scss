@@ -826,6 +826,12 @@ h6 {
                         text-decoration: none;
                         padding-right: 6px;
                         margin-right: 6px;
+                        &.report{
+                            @media(max-width: 991px){
+                                display: inline-flex;
+                                width: 132px;
+                            }
+                        }
                         &:before{
                             content: '';
                             background-color: #000;
