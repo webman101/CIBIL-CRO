@@ -734,8 +734,12 @@ h6 {
                     height: 100%;
                     &-container{
                         height: 90%;
+                        padding-bottom: 32px;
                         .icon{
                             margin-bottom: 24px;
+                            @media(min-width: 992px){
+                                height: 75px;
+                            }
                             &.m-visible{
                                 margin-bottom: 50px;
                             }
@@ -778,6 +782,7 @@ h6 {
                         }
                         @media(max-width: 991px){
                             display: flex;
+                            padding-bottom: 0;
                         }
                     }
                     a{
