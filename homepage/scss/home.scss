@@ -511,6 +511,13 @@ h6 {
         color: #005365;
         opacity: 0.9;
         position: relative;
+        .sub-text{
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 32px;
+            color: #005365;
+            opacity: 0.9;
+        }
         &:after{
             content: '';
             background-image: url('../img/line-break.svg');
