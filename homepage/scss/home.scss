@@ -511,6 +511,11 @@ h6 {
         color: #005365;
         opacity: 0.9;
         position: relative;
+        span:first-child{
+            @media(max-width: 991px){
+                display: block;
+            }
+        }
         .sub-text{
             font-weight: 600;
             font-size: 32px;
@@ -684,6 +689,9 @@ h6 {
             }
             @media(max-width: 991px){
                 text-align: center;
+            }
+            @media(min-width: 992px){
+                margin-bottom: 10rem;
             }
         }
         .column-section-w{
