@@ -529,12 +529,12 @@ h6 {
         margin-top: 48px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         &-item{
             background: rgba(238, 238, 238, 0.4);
             border-radius: 4px;
             padding: 47px 32px 47px 72px;
-            margin: 10px 16px;
+            margin: 10px 0;
             h4{
                 font-weight: bold;
                 font-size: 24px;
@@ -579,28 +579,28 @@ h6 {
             }
             &:nth-child(1){
                 order: 1;
-                width: 44%;
+                width: 48%;
                 @media(max-width: 991px){
                     width: 100%;
                 }
             }
             &:nth-child(2){
                 order: 2;
-                width: 44%;
+                width: 48%;
                 @media(max-width: 991px){
                     width: 100%;
                 }
             }
             &:nth-child(3){
                 order: 3;
-                width: 44%;
+                width: 48%;
                 @media(max-width: 991px){
                     width: 100%;
                 }
             }
             &:nth-child(4){
                 order: 4;
-                width: 44%;
+                width: 48%;
                 @media(max-width: 991px){
                     width: 100%;
                 }
