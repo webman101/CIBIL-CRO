@@ -829,8 +829,12 @@ h6 {
                         &.report{
                             @media(max-width: 991px){
                                 display: inline-flex;
-                                width: 132px;
+                                width: 134px;
+                                line-height: 26px;
                             }
+                             &:before{
+                                top: 5px;
+                             }
                         }
                         &:before{
                             content: '';
@@ -848,6 +852,8 @@ h6 {
                         }
                         @media(max-width: 991px){
                             white-space: normal;
+                            padding-right: 8px;
+                            margin-right: 5px;
                         }
                     }
                     &:after{
