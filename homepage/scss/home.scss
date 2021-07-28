@@ -437,10 +437,7 @@ h6 {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        @media(min-width: 1360px){
-            padding-left: 0;
-            padding-right: 0;
-        }
+
         @media(max-width: 991px){
             flex-direction: column;
         }
@@ -531,8 +528,8 @@ h6 {
 
 /* features */
 .features{
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 80px;
+    margin-bottom: 75px;
     .section-title{
         font-weight: bold;
         font-size: 32px;
@@ -576,7 +573,7 @@ h6 {
         }
     }
     .feature-list{
-        margin-top: 48px;
+        margin-top: 68px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -765,13 +762,19 @@ h6 {
                     &-container{
                         height: 90%;
                         padding-bottom: 32px;
-                        .icon{
-                            @media(max-width: 991px){
-                                width: 50px;
-                                height: auto;
-                                object-fit: contain;
-                                position: relative;
-                                top: -12px;
+                        .image-block{
+                            @media(min-width: 992px){
+                                margin-bottom: 24px;
+                                height: 64px;
+                            }
+                            .icon{
+                                @media(max-width: 991px){
+                                    width: 50px;
+                                    height: auto;
+                                    object-fit: contain;
+                                    position: relative;
+                                    top: -12px;
+                                }
                             }
                         }
                         .content{
@@ -827,7 +830,7 @@ h6 {
                             width: 15px;
                             height: 15px;
                             position: absolute;
-                            top: -3px;
+                            top: -2px;
                             right: -22px;
                             object-fit: contain;
                         }
@@ -863,8 +866,8 @@ h6 {
                         color: #3EA3CE;
                         position: relative;
                         text-decoration: none;
-                        padding-right: 6px;
-                        margin-right: 6px;
+                        padding-right: 8px;
+                        margin-right: 5px;
                         &.report{
                             @media(max-width: 991px){
                                 display: inline-flex;
@@ -881,7 +884,7 @@ h6 {
                             width: 1px;
                             height: 14px;
                             position: absolute;
-                            top: 0px;
+                            top: 1px;
                             right: 0;
                         }
                         &:last-child{
@@ -1010,7 +1013,7 @@ h6 {
 .other-queries{
     margin-bottom: 125px;
     p{
-        font-size: 22px;
+        font-size: 20px;
         line-height: 29px;
         color: #000000;
         margin-top: 20px;
