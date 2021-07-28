@@ -736,17 +736,12 @@ h6 {
                         height: 90%;
                         padding-bottom: 32px;
                         .icon{
-                            margin-bottom: 24px;
-                            @media(min-width: 992px){
-                                height: 75px;
-                            }
-                            &.m-visible{
-                                margin-bottom: 50px;
-                            }
                             @media(max-width: 991px){
                                 width: 50px;
                                 height: auto;
                                 object-fit: contain;
+                                position: relative;
+                                top: -12px;
                             }
                         }
                         .content{
