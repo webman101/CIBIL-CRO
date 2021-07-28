@@ -738,9 +738,12 @@ h6 {
                         height: 90%;
                         .icon{
                             margin-bottom: 24px;
+                            &.m-visible{
+                                margin-bottom: 50px;
+                            }
                             @media(max-width: 991px){
                                 width: 50px;
-                                height: 70px;
+                                height: auto;
                                 object-fit: contain;
                             }
                         }
