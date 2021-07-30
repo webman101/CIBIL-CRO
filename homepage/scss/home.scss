@@ -670,11 +670,11 @@ a{
         text-align: center;
         font-size: 26px;
         line-height: 32px;
-        color: #000000;
+        color: #005365;
         opacity: 0.9;
         font-weight: 600;
         @media(max-width: 991px){
-            font-size: 18px;
+            font-size: 20px;
             line-height: 24px;
             max-width: 285px;
             margin-left: auto;
@@ -696,9 +696,11 @@ a{
     &-wrapper{
         display: flex;
         align-items: center;
+        flex-direction: column;
         .content-block{
+            text-align: center;
             .section-title{
-                margin-bottom: 32px;
+                margin-bottom: 5px;
                 @media(max-width: 991px){
                     font-size: 24px;
                     line-height: 26px;
@@ -722,7 +724,7 @@ a{
                 text-align: center;
             }
             @media(min-width: 992px){
-                margin-bottom: 10rem;
+                margin-bottom: 32px;
             }
         }
         .column-section-w{
@@ -765,9 +767,10 @@ a{
                     padding: 22px 20px;
                     position: relative;
                     height: 100%;
+                    text-align: center;
                     &-container{
                         height: 90%;
-                        padding-bottom: 32px;
+                        padding-bottom: 15px;
                         .image-block{
                             @media(min-width: 992px){
                                 margin-bottom: 24px;
@@ -785,7 +788,7 @@ a{
                         }
                         .content{
                             .title{
-                                font-weight: 600;
+                                font-weight: 700;
                                 font-size: 18px;
                                 line-height: 22px;
                                 color: #000000;
@@ -797,21 +800,10 @@ a{
                                 line-height: 18px;
                                 color: #000000;
                                 position: relative;
-                                &:after{
-                                    content: '';
-                                    position: absolute;
-                                    left: 0;
-                                    bottom: -10px;
-                                    background-color: #3EA3CE;
-                                    width: 55.24px;
-                                    height: 2px;
-                                    @media(max-width: 991px){
-                                        display: none;
-                                    }
-                                }
                             }
                             @media(max-width: 991px){
                                 padding-left: 15px;
+                                text-align: left;
                             }
                         }
                         @media(max-width: 991px){
@@ -822,13 +814,14 @@ a{
                     .link{
                         display: flex;
                         align-items: center;
+                        justify-content: center;
                         a{
                             font-weight: bold;
                             font-size: 14px;
                             line-height: 14px;
                             letter-spacing: 0.12em;
                             text-transform: uppercase;
-                            color: #005365;
+                            color: #3EA3CE;
                             text-decoration: none;
                             position: relative;
                             top: 1.5px;
@@ -842,19 +835,23 @@ a{
                             object-fit: contain;
                             margin-left: 5px;
                         }
+                        @media(max-width: 991px){
+                            justify-content: flex-start;
+                        }
                     }
                     @media(max-width: 991px){
                         margin-right: 0;
+                        text-align: left;
                     }
                 }
                 &-bar{
                     background: #FFFFFF;
-                    border: 1px solid #BCBCBC;
                     box-sizing: border-box;
-                    padding: 17px 20px;
+                    padding: 28px 20px 0;
                     position: relative;
+                    text-align: center;
                     .links-text{
-                        font-weight: 600;
+                        font-weight: 700;
                         font-size: 18px;
                         line-height: 22px;
                         color: #000000;
@@ -863,6 +860,10 @@ a{
                             margin-right: 0;
                             display: flex;
                             margin-bottom: 15px;
+                            color: #005365;
+                            opacity: 0.9;
+                            align-items: center;
+                            justify-content: center;
                         }
                     }
                     a{
@@ -873,11 +874,16 @@ a{
                         text-decoration: none;
                         padding-right: 8px;
                         margin-right: 5px;
+                        font-weight: 600;
                         &.report{
                             @media(max-width: 991px){
                                 display: inline-flex;
-                                width: 134px;
+                                width: auto;
                                 line-height: 26px;
+                                text-align: center;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 0 10px;
                             }
                              &:before{
                                 top: 5px;
@@ -889,7 +895,7 @@ a{
                             width: 1px;
                             height: 14px;
                             position: absolute;
-                            top: 1px;
+                            top: 0;
                             right: 0;
                         }
                         &:last-child{
@@ -899,21 +905,8 @@ a{
                         }
                         @media(max-width: 991px){
                             white-space: normal;
-                            padding-right: 8px;
-                            margin-right: 5px;
-                        }
-                    }
-                    &:after{
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        background-color: #3EA3CE;
-                        width: 7px;
-                        height: 58px;
-                        @media (max-width: 991px){
-                            display: none;
+                            padding-right: 0px;
+                            margin-right: 0px;
                         }
                     }
                     @media(max-width: 1199px){
@@ -943,7 +936,7 @@ a{
 .monitor-credit-health{
     background: rgba(222, 235, 240, 0.3);
     border-radius: 8px;
-    padding: 60px 50px;
+    padding: 60px 30px;
     margin-bottom: 125px;
     &--wrapper{
         display: flex;
@@ -957,7 +950,7 @@ a{
             }
         }
         .content-block{
-            margin-left: 40px;
+            
             .title{
                 font-size: 32px;
                 line-height: 42px;
@@ -971,9 +964,10 @@ a{
             .subtitle{
                 font-size: 20px;
                 line-height: 28px;
-                color: #005365;
+                color: #000000;
+                opacity: 0.4;
                 margin-bottom: 16px;
-                font-weight: 600;
+                font-weight: 500;
                 @media(max-width: 991px){
                     font-size: 16px;
                     line-height: 22px;
@@ -1000,6 +994,10 @@ a{
             }
             .button-blue{
                 max-width: 265px;
+                margin-top: 26px;
+                @media(max-width: 991px){
+                    margin-top: 32px;
+                }
             }
             @media(max-width: 991px){
                 margin-left: 0;
@@ -1009,10 +1007,10 @@ a{
     @media(max-width: 991px){
         margin: 0 -15px 70px;
         border-radius: 0;
-        padding: 34px 50px 50px;
+        padding: 34px 25px 50px;
     }
     @media( min-width: 1299px){
-        margin: 0 -40px 125px -40px
+        margin: 0 0px 125px;
     }
 }
 .other-queries{
@@ -1049,7 +1047,7 @@ a{
         position: relative;
         background-position: center;
         .call-to-action{
-            background: rgba(255,255,255,0.86);
+            background: rgba(255,255,255,0.95);
             width: 600px;
             height: 250px;
             padding: 42px 52px;
@@ -1088,15 +1086,14 @@ a{
                 margin: auto;
                 height: auto;
                 position: absolute;
-                top: 27px;
+                top: 18%;
                 left: 0;
                 right: 0;
             }
         }
         @media(max-width: 991px){
             background-image: url(../img/report_bg_mob.jpg);
-
-            height: 682px;
+            height: 320px;
         }
         @media(min-width: 1800px){
             height: 500px;
