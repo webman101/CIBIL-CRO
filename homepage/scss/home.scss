@@ -793,6 +793,9 @@ a{
                                 line-height: 22px;
                                 color: #000000;
                                 margin-bottom: 10px;
+                                @media(max-width: 991px){
+                                    font-size: 18px;
+                                }
                             }
                             .subtitle{
                                 font-weight: 400;
@@ -800,6 +803,9 @@ a{
                                 line-height: 18px;
                                 color: #000000;
                                 position: relative;
+                                @media(max-width: 991px){
+                                    font-size: 14px;
+                                }
                             }
                             @media(max-width: 991px){
                                 padding-left: 15px;
