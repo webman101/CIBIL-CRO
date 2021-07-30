@@ -420,6 +420,7 @@ a{
 .seperator{
     img{
         width: 100%;
+        height: 3px;
     }
     @media(max-width: 991px){
         display: flex;
@@ -534,7 +535,7 @@ a{
 /* features */
 .features{
     margin-top: 80px;
-    margin-bottom: 75px;
+    margin-bottom: 40px;
     .section-title{
         font-weight: bold;
         font-size: 32px;
@@ -569,12 +570,13 @@ a{
             position: absolute;
             left: 0;
             right: 0;
-            bottom: -25px;
+            bottom: -11px;
             margin: auto;
         }
         @media(max-width: 991px){
             font-size: 24px;
             line-height: 32px;
+            padding-bottom: 10px;
         }
     }
     .feature-list{
@@ -663,6 +665,9 @@ a{
                 margin: 16px;
             }
         }
+        @media(max-width: 991px){
+            margin-top: 40px;
+        }
     }
     .sub-text{
         margin-top: 50px;
@@ -679,6 +684,7 @@ a{
             max-width: 285px;
             margin-left: auto;
             margin-right: auto;
+            margin-top: 34px;
         }
     }
     .button-yellow{
@@ -691,8 +697,8 @@ a{
     }
 }
 .help-center{
-    margin-top: 125px;
-    margin-bottom: 125px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     &-wrapper{
         display: flex;
         align-items: center;
@@ -877,8 +883,8 @@ a{
                         }
                     }
                     a{
-                        font-size: 16px;
-                        line-height: 18px;
+                        font-size: 18px;
+                        line-height: 20px;
                         color: #3EA3CE;
                         position: relative;
                         text-decoration: none;
@@ -924,6 +930,7 @@ a{
                             white-space: normal;
                             padding-right: 0px;
                             margin-right: 0px;
+                            font-size: 16px;
                         }
                     }
                     @media(max-width: 1199px){
@@ -954,7 +961,7 @@ a{
     background: rgba(222, 235, 240, 0.3);
     border-radius: 8px;
     padding: 60px 30px;
-    margin-bottom: 125px;
+    margin-bottom: 80px;
     &--wrapper{
         display: flex;
         flex-direction: row;
@@ -1028,11 +1035,11 @@ a{
         padding: 34px 25px 50px;
     }
     @media( min-width: 1299px){
-        margin: 0 0px 125px;
+        margin: 0 0px 80px;
     }
 }
 .other-queries{
-    margin-bottom: 125px;
+    margin-bottom: 80px;
     p{
         font-size: 20px;
         line-height: 29px;
