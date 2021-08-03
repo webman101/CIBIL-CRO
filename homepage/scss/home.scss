@@ -342,20 +342,26 @@ a{
 }
 
 .button-yellow {
-    background: #fcd833;
-    border: 1px solid #fcd833;
+    background: #F16E33;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 999px;
+    border: 1px solid #F16E33;
     color: #000000;
     font-size: 18px;
     font-weight: 600;
     padding: 18px 44px;
     width: 100%;
     text-align: center;
+    white-space: nowrap;
     &.disabled {
         background: #ededed;
         border: 1px solid #ededed;
         color: #bfbfbf;
+    }
+    img{
+        position: relative;
+        top: -2px;
+        left: 10px;
+        object-fit: contain;
     }
     &:focus {
         outline: 0;
@@ -363,19 +369,27 @@ a{
 }
 .button-blue {
     background: #3EA3CE;
-    border: 1px solid #3EA3CE;
+    border: 2px solid #3EA3CE;
+    box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 999px;
     font-weight: bold;
     font-size: 16px;
     line-height: 16px;
     letter-spacing: 0.08em;
     text-transform: capitalize;
-    font-weight: 600;
     padding: 18px 44px;
     width: 100%;
     color: white;
     text-align: center;
+    white-space: nowrap;
+    img{
+        width: 16px !important;
+        height: 16px;
+        position: relative;
+        top: -1px;
+        left: 10px;
+        object-fit: contain;
+    }
     &.disabled {
         background: #ededed;
         border: 1px solid #ededed;
@@ -433,7 +447,7 @@ a{
     }
 }
 .login-link{
-    font-size: 14px;
+    font-size: 16px;
     line-height: 28px;
     color: #000000;
     margin-bottom: 0;
@@ -490,7 +504,7 @@ a{
             font-size: 36px;
             line-height: 48px;
             color: #000000;
-            margin-bottom: 27px;
+            margin-bottom: 20px;
             @media(max-width: 991px){
                 font-size: 24px;
                 line-height: 30px;
@@ -503,7 +517,7 @@ a{
             font-size: 22px;
             line-height: 34px;
             color: #000000;
-            margin-bottom: 44px;
+            margin-bottom: 34px;
             padding-right: 34px;
             @media(max-width: 991px){
                 padding-right: 0px;
@@ -533,6 +547,12 @@ a{
             }
             @media(max-width: 375px){
                 padding: 18px 22px;
+            }
+        }
+        .login-link{
+            @media(min-width: 992px){
+                max-width: 342px;
+                text-align: center;
             }
         }
         @media(max-width: 991px){
@@ -643,7 +663,7 @@ a{
                     width: 28px;
                     height: 28px;
                     position: absolute;
-                    top: 0;
+                    top: 2px;
                     left: -42px;
                     object-fit: contain;
                     @media(max-width: 991px){
@@ -886,8 +906,8 @@ a{
                             }
                         }
                         img{
-                            height: 15px;
-                            width: 15px;
+                            height: 18px;
+                            width: 18px;
                             object-fit: contain;
                             margin-left: 5px;
                         }
@@ -1043,7 +1063,7 @@ a{
             }
             .description{
                 font-weight: 600;
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 28px;
                 color: #000000;
                 opacity: 0.4;
@@ -1061,9 +1081,15 @@ a{
             }
             .button-blue{
                 max-width: 265px;
-                margin-top: 26px;
                 @media(max-width: 991px){
                     margin-top: 32px;
+                }
+            }
+            .login-link{
+                text-align: center;
+                @media(min-width: 992px){
+                    margin-top: 15px;
+                    text-align: left;
                 }
             }
             @media(max-width: 991px){
@@ -1096,6 +1122,7 @@ a{
         margin-top: 20px;
         a{
             color: #3EA3CE;
+            font-weight: 600;
         }
         @media(max-width: 991px){
             font-size: 16px;
@@ -1129,7 +1156,7 @@ a{
             z-index: 2;
             position: relative;
             .title{
-                font-weight: 600;
+                font-weight: 700;
                 font-size: 32px;
                 line-height: 46px;
                 color: #000000;
@@ -1155,6 +1182,12 @@ a{
                     padding: 18px 28px;
                 }
             }
+            .login-link{
+                @media(min-width: 992px){
+                    max-width: 342px;
+                    text-align: center;
+                }
+            }
             @media(max-width: 991px){
                 text-align: center;
                 padding: 22px;
@@ -1162,7 +1195,7 @@ a{
                 margin: auto;
                 height: auto;
                 position: absolute;
-                top: 14%;
+                top: 17%;
                 left: 0;
                 right: 0;
             }
