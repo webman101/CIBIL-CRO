@@ -713,9 +713,9 @@ a{
         text-align: center;
         font-size: 22px;
         line-height: 32px;
-        color: #005365;
+        color: #000;
         opacity: 0.9;
-        font-weight: 600;
+        font-weight: 500;
         @media(max-width: 991px){
             font-size: 20px;
             line-height: 24px;
@@ -731,7 +731,6 @@ a{
     }
     @media(max-width: 991px){
         margin-top: 42px;
-        margin-bottom: 42px;
         max-width: 100%;
     }
 }
@@ -1165,7 +1164,7 @@ a{
                 margin: auto;
                 height: auto;
                 position: absolute;
-                top: 18%;
+                top: 14%;
                 left: 0;
                 right: 0;
             }
