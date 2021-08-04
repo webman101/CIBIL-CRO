@@ -549,12 +549,6 @@ a{
                 padding: 18px 22px;
             }
         }
-        .login-link{
-            @media(min-width: 992px){
-                max-width: 342px;
-                text-align: center;
-            }
-        }
         @media(max-width: 991px){
             padding: 24px 15px;
         }
@@ -1119,7 +1113,7 @@ a{
         font-size: 18px;
         line-height: 29px;
         color: #000000;
-        border-top: 1px solid #CACACA;
+        border-bottom: 1px solid #CACACA;
         padding: 20px 0px;
         margin-bottom: 0;
         a{
