@@ -1119,7 +1119,9 @@ a{
         font-size: 18px;
         line-height: 29px;
         color: #000000;
-        margin-top: 20px;
+        border-top: 1px solid #CACACA;
+        padding: 20px 0px;
+        margin-bottom: 0;
         a{
             color: #3EA3CE;
             font-weight: 600;
@@ -1129,6 +1131,9 @@ a{
             line-height: 24px;
             color: #000000;
             opacity: 0.85;
+        }
+        &:last-child{
+           border-bottom: 1px solid #CACACA; 
         }
     }
     @media(max-width: 991px){
