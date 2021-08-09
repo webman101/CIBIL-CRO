@@ -1388,11 +1388,12 @@ a:focus {
   }
 }
 .mobile p {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 0;
+  font-weight: bold;
 }
 .mobile .open-app {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   background: #3EA3CE;
   border: 2px solid #3EA3CE;
@@ -1404,7 +1405,7 @@ a:focus {
   align-items: center;
   justify-content: center;
   margin: 0;
-  width: 92px;
+  padding: 0 10px;
   height: 32px;
   line-height: 32px;
 }/*# sourceMappingURL=home.css.map */
