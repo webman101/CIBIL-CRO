@@ -1,89 +1,6 @@
-(function($){
-	function customTemplate(data) {
-		this.cfg = data;
-		this.helpers = null;
-		this.extension = null;
-	}
-	
-	/**
-	 * purpose: Function to render bot message for a given custom template
-	 * input  : Bot Message
-	 * output : Custom template HTML
-	 */
-	customTemplate.prototype.renderMessage = function (msgData) {
-		var messageHtml = '';
-		if (msgData.message[0] && msgData.message[0].component && msgData.message[0].component.payload && msgData.message[0].component.payload.template_type == "dropdown_template") {
-			messageHtml = $(this.getChatTemplate("dropdown_template")).tmpl({
-				'msgData': msgData,
-				'helpers': this.helpers,
-				'extension': this.extension
-			});
-			this.bindEvents(messageHtml);
-		} else if (msgData.message[0] && msgData.message[0].component && msgData.message[0].component.payload && msgData.message[0].component.payload.template_type == "multi_select") {
-			messageHtml = $(this.getChatTemplate("checkBoxesTemplate")).tmpl({
-				'msgData': msgData,
-				'helpers': this.helpers,
-				'extension': this.extension
-			});
-		} else if (msgData.message[0] && msgData.message[0].component && msgData.message[0].component.payload && msgData.message[0].component.payload.template_type == "like_dislike") {
-			messageHtml = $(this.getChatTemplate("likeDislikeTemplate")).tmpl({
-				'msgData': msgData,
-				'helpers': this.helpers,
-				'extension': this.extension
-			});
-		}
-		return messageHtml;
-	
-		return "";
-	}; // end of renderMessage method
-	
-	
-	/**
-	* purpose: Function to get custom template HTML
-	* input  : Template type
-	* output : Custom template HTML
-	*
-	*/
-	
-	customTemplate.prototype.getChatTemplate = function (tempType) {
-		/* Sample template structure for dropdown
-		var message =  {
-			"type": "template",
-			"payload": {
-				"template_type": "dropdown_template",
-				"heading":"please select : ",
-				"elements": [
-					{
-						"title": "United Arab Emirates Dirham",
-						"value":"AED"
-					},
-					{
-						"title": "Australian Dollar",
-						"value":"AUD"
-					},
-					{
-						"title": "Canadian Dollar",
-						"value":"CAD"
-					},
-					{
-						"title": "Swiss Franc",
-						"value":"CHF"
-					},
-					{
-						"title": "Chinese Yuanr",
-						"value":"CNY"
-					},
-					{
-						"title": "Czech Koruna",
-						"value":"CZK"
-					}
-			   
-				], 
-			}
-		};
-		print(JSON.stringify(message)); 
-		*/
-		var dropdownTemplate = '<script id="chat_message_tmpl" type="text/x-jqury-tmpl"> \
+(function($){function customTemplate(data){this.cfg=data;this.helpers=null;this.extension=null}
+customTemplate.prototype.renderMessage=function(msgData){var messageHtml='';if(msgData.message[0]&&msgData.message[0].component&&msgData.message[0].component.payload&&msgData.message[0].component.payload.template_type=="dropdown_template"){messageHtml=$(this.getChatTemplate("dropdown_template")).tmpl({'msgData':msgData,'helpers':this.helpers,'extension':this.extension});this.bindEvents(messageHtml)}else if(msgData.message[0]&&msgData.message[0].component&&msgData.message[0].component.payload&&msgData.message[0].component.payload.template_type=="multi_select"){messageHtml=$(this.getChatTemplate("checkBoxesTemplate")).tmpl({'msgData':msgData,'helpers':this.helpers,'extension':this.extension})}else if(msgData.message[0]&&msgData.message[0].component&&msgData.message[0].component.payload&&msgData.message[0].component.payload.template_type=="like_dislike"){messageHtml=$(this.getChatTemplate("likeDislikeTemplate")).tmpl({'msgData':msgData,'helpers':this.helpers,'extension':this.extension})}
+return messageHtml;return""};customTemplate.prototype.getChatTemplate=function(tempType){var dropdownTemplate='<script id="chat_message_tmpl" type="text/x-jqury-tmpl"> \
 			{{if msgData.message}} \
 				<li {{if msgData.type !== "bot_response"}} id="msg_${msgItem.clientMessageId}"{{/if}} class="{{if msgData.type === "bot_response"}}fromOtherUsers{{else}}fromCurrentUser{{/if}} with-icon"> \
 					<div class="buttonTmplContent"> \
@@ -103,38 +20,7 @@
 					</div>\
 				</li> \
 			{{/if}} \
-		</script>';
-	
-		/* Sample template structure for multi-select checkboxes
-			var message = {
-			"type": "template",
-			"payload": {
-			"template_type": "multi_select",
-			"elements": [
-			{
-			"title": "Classic T-Shirt Collection",
-			"value":"tShirt"
-			},{
-			"title": "Classic Shirt Collection",
-			"value":"shirts"
-			},
-			{
-			"title": "Classic shorts Collection",
-			"value":"shorts"
-			}
-			],
-			"buttons": [
-			{
-			"title": "Done",
-			"type": "postback",
-			"payload": "payload" 
-			}
-			] 
-			}
-			};
-			print(JSON.stringify(message)); 
-		*/
-		var checkBoxesTemplate = '<script id="chat_message_tmpl" type="text/x-jqury-tmpl"> \
+		</script>';var checkBoxesTemplate='<script id="chat_message_tmpl" type="text/x-jqury-tmpl"> \
 			{{if msgData.message}} \
 			<li {{if msgData.type !== "bot_response"}}id="msg_${msgItem.clientMessageId}"{{/if}} class="{{if msgData.type === "bot_response"}}fromOtherUsers{{else}}fromCurrentUser{{/if}} with-icon"> \
 					<div class = "listTmplContent"> \
@@ -170,18 +56,7 @@
 					</div> \
 				</li> \
 			{{/if}} \
-		</script>';
-	
-		/* Sample template structure for Like_dislike template
-			var message = {
-			"type": "template",
-			"payload": {
-			"template_type": "like_dislike"
-			}
-			};
-			print(JSON.stringify(message));
-		*/
-		var likeDislikeTemplate = '<script id="chat_message_tmpl" type="text/x-jqury-tmpl"> \
+		</script>';var likeDislikeTemplate='<script id="chat_message_tmpl" type="text/x-jqury-tmpl"> \
 			{{if msgData.message}} \
 				<li {{if msgData.type !== "bot_response"}}id="msg_${msgItem.clientMessageId}"{{/if}} class="{{if msgData.type === "bot_response"}}fromOtherUsers{{else}}fromCurrentUser{{/if}} with-icon quickReplies"> \
 					<div class="buttonTmplContent"> \
@@ -202,29 +77,7 @@
 					</div>\
 				</li> \
 			{{/if}} \
-		</script>';
-		if (tempType === "dropdown_template") {
-			return dropdownTemplate;
-		} else if (tempType === "checkBoxesTemplate") {
-			return checkBoxesTemplate;
-		} else if (tempType === "likeDislikeTemplate") {
-			return likeDislikeTemplate;
-		} else {
-			return "";
-		}
-		return "";
-	}; // end of getChatTemplate method
-	
-	customTemplate.prototype.bindEvents = function (messageHtml) {
-		$(messageHtml).find('.selectTemplateDropdowm').on('change', function (e) {
-			e.preventDefault();
-			e.stopPropagation();
-			$(".chatInputBox").text(this.value)
-			var k = jQuery.Event('keydown', { which: 13 });
-			k.keyCode = 13
-			$('.chatInputBox').trigger(k);
-	
-		});
-	}; 
-	window.customTemplate=customTemplate;	
-})($);
+		</script>';if(tempType==="dropdown_template"){return dropdownTemplate}else if(tempType==="checkBoxesTemplate"){return checkBoxesTemplate}else if(tempType==="likeDislikeTemplate"){return likeDislikeTemplate}else{return""}
+return""};customTemplate.prototype.bindEvents=function(messageHtml){$(messageHtml).find('.selectTemplateDropdowm').on('change',function(e){e.preventDefault();e.stopPropagation();$(".chatInputBox").text(this.value)
+var k=jQuery.Event('keydown',{which:13});k.keyCode=13
+$('.chatInputBox').trigger(k)})};window.customTemplate=customTemplate})($)
