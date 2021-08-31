@@ -1006,6 +1006,16 @@ h3.section-title-40 {
   }
 }
 
+.pair-device {
+  min-height: unset;
+}
+
+@media screen and (min-width: 992px) {
+  .pair-device-cont {
+    margin-bottom: 246px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .content-otp #otp-btn {
     margin-bottom: 60px;

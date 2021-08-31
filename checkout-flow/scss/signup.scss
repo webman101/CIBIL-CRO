@@ -1027,8 +1027,14 @@ h3.section-title-40 {
     @media screen and (min-width: 992px) {
         margin-bottom:107px;
     }
-    
-    
+}
+.pair-device{
+    min-height: unset;
+}
+.pair-device-cont{
+    @media screen and (min-width: 992px) {
+        margin-bottom:246px;
+    }
 }
 .content-otp {
     #otp-btn {
