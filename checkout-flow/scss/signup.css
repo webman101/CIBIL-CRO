@@ -1000,6 +1000,12 @@ h3.section-title-40 {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .loan-cont-margin {
+    margin-bottom: 107px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .content-otp #otp-btn {
     margin-bottom: 60px;

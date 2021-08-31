@@ -1023,6 +1023,13 @@ h3.section-title-40 {
         display: inline-block;
     }
 }
+.loan-cont-margin{
+    @media screen and (min-width: 992px) {
+        margin-bottom:107px;
+    }
+    
+    
+}
 .content-otp {
     #otp-btn {
         @media screen and (max-width: 992px) {

@@ -29,6 +29,15 @@ $('.dp-user').keyup(function(e) {
 $('.loan-input-1').keyup(function(e) {
     if ($(this).val() != '') {
         $('.loan-input-2').removeClass('disabled-input');
-        $('.loan-input-2').removeClass('disabled-input');
+        $('.flex-otp-label .span-quest-1').removeClass('disabled-input');
+    }
+});
+$('.loan-input-2').keyup(function(e) {
+    if ($(this).val() != '') {
+        $('.loan-input-3').removeClass('disabled-input');
+        $('.flex-otp-label .span-quest-2').removeClass('disabled-input');
+
+        $('#loan-button').removeClass('disabled');
+
     }
 });
