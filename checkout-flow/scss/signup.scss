@@ -1023,6 +1023,12 @@ h3.section-title-40 {
     }
     .container-2 {
         padding: 30px 0;
+        @media screen and (max-width: 992px) {
+        padding: 30px 0 0;
+            
+        }
+        
+        
     }
     .flex-otp-label {
         display: flex;
