@@ -9,7 +9,7 @@ body {
     font-family: "Intro";
     scroll-behavior: smooth;
 }
-a{
+a {
     outline: none !important;
 }
 h1,
@@ -1123,10 +1123,25 @@ form.otp-form {
     height: 36px;
 }
 ////////////////////// duplicate user
-input{
-
+.text-bold {
+    font-family: 'Intro', Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2c2c2c;
 }
-.loan-input,.dp-user {
+.text-light {
+    font-family: 'Intro', Book;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+     color: #707070;
+}
+.loan-input,
+.dp-user {
     width: 100%;
     max-width: 580px;
     height: 50px;
@@ -1332,4 +1347,3 @@ input {
         margin-bottom: 0;
     }
 }
-
