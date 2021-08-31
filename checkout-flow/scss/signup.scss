@@ -673,6 +673,11 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 992px) {
+        margin-bottom: 60px;
+    }
+    
+    
     &.disabled {
         background: #ededed;
         border: 1px solid #ededed;

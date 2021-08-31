@@ -640,6 +640,11 @@ h6 {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 992px) {
+  .button-orange {
+    margin-bottom: 60px;
+  }
+}
 .button-orange.disabled {
   background: #ededed;
   border: 1px solid #ededed;
