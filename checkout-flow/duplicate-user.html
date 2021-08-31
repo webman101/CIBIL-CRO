@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OTP page | CIBIL</title>
+    <title>Enter loan number | CIBIL</title>
     <meta name="description" content="Do you want to correct information on your CIBIL Report, and don’t know where to start? You can now initiate a dispute online with CIBIL for inaccuracies, account ownership and duplication of information that reflect in your Credit Report. CIBIL does not charge its consumers for this service.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
@@ -38,23 +38,23 @@
                         </div>
                     </div>
                     <div class="m-visible">
-                        <img src="/img/mobile-menu-toggle.png" alt="" class="menu-toggle m-visible">
+                        <img src="./img/mobile-menu-toggle.png" alt="" class="menu-toggle m-visible">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="content content-otp">
-      <div class="bg-f9">
-        <div class="container">
-            <div class="container-top">
-                <h3 class="section-title-40 text-color-black">Enter a username for your CIBIL Account. </h3>
-                <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
-                <p class="section-subtitle-1 font-weight-400 mb-2">Please choose a username that you can use to access CIBIL Account</p>
-            </div>
+        <div class="bg-f9">
+            <div class="container">
+                <div class="container-top">
+                    <h3 class="section-title-40 text-color-black">We need additional information to <br> complete verifying your identity.</h3>
+                    <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
+                    <p class="section-subtitle-1 font-weight-400 mb-2">Please enter at least two credit card or loan account numbers to proceed</p>
+                </div>
 
+            </div>
         </div>
-      </div>
         <div class="bg-white container-2">
             <div class="container custom-container min-container">
                 <div class="row">
@@ -63,15 +63,26 @@
                             <div class="signup-block-inner">
                                 <div class="">
                                     <div class="d-block">
-                                        <p class="flex-otp-label"><span class="span-quest">Username</span></p>
+
                                         <form action="">
-                                            <input class="dp-user" type="text" width="100%">
+                                            <div class="form-group">
+                                                <p class="flex-otp-label"><span class="span-quest">Credit Card / Loan Account No. 1</span></p>
+                                                <input class="loan-input loan-input-1" type="text" width="100%">
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="flex-otp-label"><span class="span-quest disabled-input">Credit Card / Loan Account No. 2</span></p>
+                                                <input class="loan-input loan-input-2 disabled-input" type="text" width="100%">
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="flex-otp-label"><span class="span-quest disabled-input">Credit Card / Loan Account No. 3</span></p>
+                                                <input class="loan-input loan-input-3 disabled-input" type="text" width="100%">
+                                            </div>
                                         </form>
-                                        
+
                                     </div>
 
                                     <div class="">
-                                        <button id="user-btn" class="button-orange disabled">Continue</button>
+                                        <button id="loan-button" class="button-orange disabled">Continue</button>
                                     </div>
                                 </div>
                                 <div class="verify-card mt-3 m-visible">
@@ -80,8 +91,9 @@
                                             <img src="./img/questionmark.png" />
                                         </div>
                                         <div class="verify-card-text">
-                                            <h3>Why can't I use my email ID as my username?</h3>
-                                            <p>The email ID you provided while registering is already associated with another CIBIL credit profile. A username allows you to use multiple profiles associated with the same email ID.</p>
+                                            <h3>Why I am being asked these questions?
+                                            </h3>
+                                            <p>We weren't able to verify your identity using the information you provided at sign-up. These questions help us ensure that you get your correct CIBIL Score & Report.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -96,8 +108,9 @@
                                     <img src="./img/questionmark.png" />
                                 </div>
                                 <div class="verify-card-text">
-                                    <h3>Why can't I use my email ID as my username?</h3>
-                                    <p>The email ID you provided while registering is already associated with another CIBIL credit profile. A username allows you to use multiple profiles associated with the same email ID.</p>
+                                    <h3>Why I am being asked these questions?
+                                    </h3>
+                                    <p>We weren't able to verify your identity using the information you provided at sign-up. These questions help us ensure that you get your correct CIBIL Score & Report.</p>
                                 </div>
                             </div>
                         </div>
