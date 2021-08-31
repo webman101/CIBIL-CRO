@@ -664,8 +664,9 @@ h6 {
     color: #2c2c2c;
     font-size: 14px;
     font-weight: 600;
-    padding: 15px 30px;
+    padding: 13px 30px;
     text-align: center;
+    min-width: 206px;
     &.disabled {
         background: #ededed;
         border: 1px solid #ededed;
@@ -1119,4 +1120,10 @@ form.otp-form {
 }
 .menu-toggle {
     height: 36px;
+}
+////////////////////// duplicate user
+.dp-user{
+    width: 100%;
+    max-width: 580px;
+    height: 50px;
 }

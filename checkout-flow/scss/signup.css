@@ -636,8 +636,9 @@ h6 {
   color: #2c2c2c;
   font-size: 14px;
   font-weight: 600;
-  padding: 15px 30px;
+  padding: 13px 30px;
   text-align: center;
+  min-width: 206px;
 }
 .button-orange.disabled {
   background: #ededed;
@@ -1102,4 +1103,10 @@ input[type=number] {
 
 .menu-toggle {
   height: 36px;
+}
+
+.dp-user {
+  width: 100%;
+  max-width: 580px;
+  height: 50px;
 }/*# sourceMappingURL=signup.css.map */
