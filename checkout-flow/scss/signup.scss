@@ -343,24 +343,22 @@ h6 {
 .section-title-40 {
     font-weight: 600;
     font-size: 24px;
-    font-family: 'Intro', Regular;
+    font-family: "Intro", Regular;
     @media screen and (min-width: 992px) {
         font-size: 40px;
     }
     letter-spacing: -0.01em;
     color: #2c2c2c;
 }
-p{
-    font-family: 'Intro', Regular;
-
+p {
+    font-family: "Intro", Regular;
 }
 .section-subtitle {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.02em;
     color: #2c2c2c;
-    font-family: 'Intro', Regular;
-
+    font-family: "Intro", Regular;
 }
 .section-subtitle-1 {
     font-weight: 600;
@@ -681,8 +679,7 @@ p{
     @media screen and (max-width: 992px) {
         margin-bottom: 60px;
     }
-    
-    
+
     &.disabled {
         background: #ededed;
         border: 1px solid #ededed;
@@ -936,8 +933,7 @@ input[type="number"] {
     letter-spacing: 0.02em;
     color: #00a6ca;
     margin-bottom: 12px;
-    font-family: 'Intro', bold;
-
+    font-family: "Intro", bold;
 }
 h3.section-title-40 {
     line-height: 30px;
@@ -979,7 +975,7 @@ h3.section-title-40 {
             h3 {
                 font-weight: bold;
                 font-size: 16px;
-                font-family: 'Intro', Bold;
+                font-family: "Intro", Bold;
                 text-transform: uppercase;
                 color: #00a6ca;
                 margin-bottom: 5px;
@@ -988,7 +984,7 @@ h3.section-title-40 {
                 }
             }
             p {
-                font-family: 'Intro', Book;
+                font-family: "Intro", Book;
                 font-size: 16px;
                 letter-spacing: 0.02em;
                 color: #2c2c2c;
@@ -1023,17 +1019,17 @@ h3.section-title-40 {
         display: inline-block;
     }
 }
-.loan-cont-margin{
+.loan-cont-margin {
     @media screen and (min-width: 992px) {
-        margin-bottom:107px;
+        margin-bottom: 107px;
     }
 }
-.pair-device{
+.pair-device {
     min-height: unset;
 }
-.pair-device-cont{
+.pair-device-cont {
     @media screen and (min-width: 992px) {
-        margin-bottom:246px;
+        margin-bottom: 246px;
     }
 }
 .content-otp {
@@ -1045,11 +1041,8 @@ h3.section-title-40 {
     .container-2 {
         padding: 30px 0;
         @media screen and (max-width: 992px) {
-        padding: 30px 0 0;
-            
+            padding: 30px 0 0;
         }
-        
-        
     }
     .flex-otp-label {
         display: flex;
@@ -1308,6 +1301,13 @@ input {
     line-height: 22px;
     font-family: inherit;
     padding-left: 28px;
+    font-family: 'Intro', Book;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #2c2c2c;
 }
 
 .custom-radio {
