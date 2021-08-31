@@ -877,6 +877,13 @@ input[type="number"] {
     font-weight: 600;
     margin-bottom: 5px;
     line-height: 22px;
+    font-family: 'Intro', Book;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #2c2c2c;
 }
 .custom-radio {
     margin-bottom: 25px;
@@ -1302,7 +1309,7 @@ input {
     line-height: 22px;
     font-family: inherit;
     padding-left: 28px;
-    font-family: 'Intro', Book;
+    font-family: "Intro", Book;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
