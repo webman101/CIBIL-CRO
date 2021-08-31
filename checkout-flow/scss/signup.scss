@@ -343,19 +343,24 @@ h6 {
 .section-title-40 {
     font-weight: 600;
     font-size: 24px;
-
+    font-family: 'Intro', Regular;
     @media screen and (min-width: 992px) {
         font-size: 40px;
     }
     letter-spacing: -0.01em;
     color: #2c2c2c;
 }
+p{
+    font-family: 'Intro', Regular;
 
+}
 .section-subtitle {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.02em;
     color: #2c2c2c;
+    font-family: 'Intro', Regular;
+
 }
 .section-subtitle-1 {
     font-weight: 600;
@@ -931,6 +936,8 @@ input[type="number"] {
     letter-spacing: 0.02em;
     color: #00a6ca;
     margin-bottom: 12px;
+    font-family: 'Intro', bold;
+
 }
 h3.section-title-40 {
     line-height: 30px;
@@ -972,7 +979,7 @@ h3.section-title-40 {
             h3 {
                 font-weight: bold;
                 font-size: 16px;
-
+                font-family: 'Intro', Bold;
                 text-transform: uppercase;
                 color: #00a6ca;
                 margin-bottom: 5px;
@@ -981,6 +988,7 @@ h3.section-title-40 {
                 }
             }
             p {
+                font-family: 'Intro', Book;
                 font-size: 16px;
                 letter-spacing: 0.02em;
                 color: #2c2c2c;
