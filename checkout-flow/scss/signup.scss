@@ -706,12 +706,10 @@ h6 {
     text-transform: capitalize;
     margin-right: 40px;
 }
-.header-container{
+.header-container {
     @media screen and (min-width: 992px) {
-        padding-left:5px;
+        padding-left: 5px;
     }
-    
-    
 }
 .language-switcher {
     position: relative;
@@ -933,6 +931,11 @@ h3.section-title-40 {
     line-height: 30px;
     @media screen and (min-width: 992px) {
         line-height: 50px;
+    }
+}
+.content-duplicate {
+    @media screen and (min-width: 992px) {
+        margin-bottom: 298px;
     }
 }
 .verify-card {
