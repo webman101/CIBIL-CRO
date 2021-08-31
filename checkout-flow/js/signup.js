@@ -17,3 +17,11 @@ $('.otp-6').keyup(function(e) {
         $('#otp-btn').removeClass('disabled');
     }
 });
+
+
+// duplicate user
+$('.dp-user').keyup(function(e) {
+    if ($(this).val() != '') {
+        $('#user-btn').removeClass('disabled');
+    }
+});

@@ -1100,6 +1100,10 @@ h3.section-title-40 {
   height: 36px;
 }
 
+input {
+  padding-left: 14px;
+}
+
 .dp-user {
   width: 100%;
   max-width: 580px;
