@@ -25,3 +25,10 @@ $('.dp-user').keyup(function(e) {
         $('#user-btn').removeClass('disabled');
     }
 });
+
+$('.loan-input-1').keyup(function(e) {
+    if ($(this).val() != '') {
+        $('.loan-input-2').removeClass('disabled-input');
+        $('.loan-input-2').removeClass('disabled-input');
+    }
+});

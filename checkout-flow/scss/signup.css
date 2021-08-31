@@ -1104,7 +1104,7 @@ input {
   padding-left: 14px;
 }
 
-.dp-user {
+.loan-input, .dp-user {
   width: 100%;
   max-width: 580px;
   height: 50px;
