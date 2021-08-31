@@ -1,17 +1,19 @@
-
 //////////////
-let digitValidate = function(ele){
-    console.log(ele.value);
-    ele.value = ele.value.replace(/[^0-9]/g,'');
-  }
-  
-  let tabChange = function(val){
-      let ele = document.querySelectorAll('input');
-      if(ele[val-1].value != ''){
+let digitValidate = function(ele) {
+    ele.value = ele.value.replace(/[^0-9]/g, '');
+}
+var elems = document.querySelectorAll(".widget.hover");
+let tabChange = function(val) {
+    let ele = document.querySelectorAll('input');
+    if (ele[val - 1].value != '') {
         ele[val].focus()
-      }else if(ele[val-1].value == ''){
-        ele[val-2].focus()
-      }   
-   }
-  
-  
+    } else if (ele[val - 1].value == '') {
+        ele[val - 2].focus()
+    }
+}
+
+$('.otp-6').keyup(function(e) {
+    if ($(this).val() != '') {
+        $('#otp-btn').removeClass('disabled');
+    }
+});

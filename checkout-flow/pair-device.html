@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OTP page | CIBIL</title>
+    <title>Pair device | CIBIL</title>
     <meta name="description" content="Do you want to correct information on your CIBIL Report, and don’t know where to start? You can now initiate a dispute online with CIBIL for inaccuracies, account ownership and duplication of information that reflect in your Credit Report. CIBIL does not charge its consumers for this service.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
@@ -44,52 +44,63 @@
             </div>
         </div>
     </div>
-    <div class="content content-otp">
-      <div class="bg-f9">
-        <div class="container">
-            <div class="container-top">
-                <h3 class="section-title-40 text-color-black">You’re all signed up! </h3>
-                <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
-                <p class="section-subtitle-1 font-weight-400 mb-2">Enter the OTP to verify your identity.</p>
-            </div>
+    <div class="content content-otp pair-device">
+        <div class="bg-f9">
+            <div class="container">
+                <div class="container-top">
+                    <h3 class="section-title-40 text-color-black">Is this a trusted device?</h3>
+                    <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
+                    <p class="section-subtitle-1 font-weight-400 mb-2">Select the option below for saving this as a trusted device to your account.</p>
+                </div>
 
+            </div>
         </div>
-      </div>
         <div class="bg-white container-2">
             <div class="container custom-container min-container">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="signup-block otp-block">
                             <div class="signup-block-inner">
-                                <div class="otp-form">
-                                    <div class="form-group req-field prefilled">
-                                        <p class="section-subtitle font-weight-400 mb-2">We’ve sent a 6 digit OTP to your <br> Email ID <span class="fw--600">(ab***@gmail.com)</span> and Mobile <span class="fw--600">(98********4)</span>.</p>
-                                    </div>
-                                    <div class="d-block d-md-inline-block">
-                                        <p class="flex-otp-label"><strong>Enter OTP</strong> <span>Required</span></p>
-                                        <form action="" class="otp-form">
-                                            <input class="otp otp-1" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-2" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-3" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-4" type="text" oninput='digitValidate(this)' onkeyup='tabChange(4)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-5" type="text" oninput='digitValidate(this)' onkeyup='tabChange(5)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-6" type="text" oninput='digitValidate(this)' onkeyup='tabChange(6)' maxlength=1 placeholder="-">
-                                        </form>
-                                        <p class="flex-otp-label mb-0"><span class="span-quest d-inline-block">Didn't receive OTP yet?</span> <span><a href="#" class="span-link d-inline-block">Resend OTP</a></span></p>
+                                <div class="">
+                                    <div class="d-block">
+            
+                                        <div class="text-left">
+                                            <form action="POST" class="account-info">
+                                                <ul class="question-answer-list pair-device">
+                                                    <li>
+                                                        <div class="custom-radio cibil-radio cibil-radio-tick">
+                                                            <input type="radio" id="radio1" name="radio_step1" class="custom-control-input">
+                                                            <label class="custom-control-label" for="radio1">Yes</label>
+                                                            <p class="font-weight-300 mb-0 option">Choose this option only if this is your own personal device.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="custom-radio cibil-radio cibil-radio-tick">
+                                                            <input type="radio" id="radio2" name="radio_step1" class="custom-control-input">
+                                                            <label class="custom-control-label " for="radio2">No</label>
+                                                            <p class="font-weight-300 mb-0 option">Choose this option if this is a public/shared device (e.g. library, internet cafe, etc.)</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+            
+                                            </form>
+                                        </div>
+
                                     </div>
 
                                     <div class="">
-                                        <button id="otp-btn" class="button-orange disabled">Verify and Proceed</button>
+                                        <button id="verify-mobile-btn" class="button-orange disabled">Continue</button>
                                     </div>
                                 </div>
                                 <div class="verify-card mt-3 m-visible">
                                     <div class="verify-card-inner">
                                         <div class="verify-card-icon">
-                                            <img src="./img/exclam.png" />
+                                            <img src="./img/questionmark.png" />
                                         </div>
                                         <div class="verify-card-text">
-                                            <h3>Why verification is needed?</h3>
-                                            <p>We want to ensure that we provide the report to its rightful owner.</p>
+                                            <h3>Why should I save this device?
+                                            </h3>
+                                            <p>Saving this device with your CIBIL account will ensure a seamless login experience. Do not save it to your CIBIL account if you do not trust this device.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -101,11 +112,12 @@
                         <div class="verify-card m-hidden">
                             <div class="verify-card-inner">
                                 <div class="verify-card-icon">
-                                    <img src="./img/exclam.png" />
+                                    <img src="./img/questionmark.png" />
                                 </div>
                                 <div class="verify-card-text">
-                                    <h3>Why verification is needed?</h3>
-                                    <p>We want to ensure that we provide the report to its rightful owner.</p>
+                                    <h3>Why should I save this device?
+                                    </h3>
+                                    <p>Saving this device with your CIBIL account will ensure a seamless login experience. Do not save it to your CIBIL account if you do not trust this device.</p>
                                 </div>
                             </div>
                         </div>

@@ -45,51 +45,55 @@
         </div>
     </div>
     <div class="content content-otp">
-      <div class="bg-f9">
-        <div class="container">
-            <div class="container-top">
-                <h3 class="section-title-40 text-color-black">You’re all signed up! </h3>
-                <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
-                <p class="section-subtitle-1 font-weight-400 mb-2">Enter the OTP to verify your identity.</p>
-            </div>
+        <div class="bg-f9">
+            <div class="container">
+                <div class="container-top">
+                    <h3 class="section-title-40 text-color-black">We need additional information to <br> complete verifying your identity.</h3>
+                    <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
+                    <p class="section-subtitle-1 font-weight-400 mb-2">Please enter at least two credit card or loan account numbers to proceed</p>
+                </div>
 
+            </div>
         </div>
-      </div>
         <div class="bg-white container-2">
             <div class="container custom-container min-container">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="signup-block otp-block">
                             <div class="signup-block-inner">
-                                <div class="otp-form">
-                                    <div class="form-group req-field prefilled">
-                                        <p class="section-subtitle font-weight-400 mb-2">We’ve sent a 6 digit OTP to your <br> Email ID <span class="fw--600">(ab***@gmail.com)</span> and Mobile <span class="fw--600">(98********4)</span>.</p>
-                                    </div>
-                                    <div class="d-block d-md-inline-block">
-                                        <p class="flex-otp-label"><strong>Enter OTP</strong> <span>Required</span></p>
-                                        <form action="" class="otp-form">
-                                            <input class="otp otp-1" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-2" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-3" type="text" oninput='digitValidate(this)' onkeyup='tabChange(3)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-4" type="text" oninput='digitValidate(this)' onkeyup='tabChange(4)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-5" type="text" oninput='digitValidate(this)' onkeyup='tabChange(5)' maxlength=1 placeholder="-">
-                                            <input class="otp otp-6" type="text" oninput='digitValidate(this)' onkeyup='tabChange(6)' maxlength=1 placeholder="-">
+                                <div class="">
+                                    <div class="d-block">
+
+                                        <form action="">
+                                            <div class="form-group">
+                                                <p class="flex-otp-label"><span class="span-quest">Credit Card / Loan Account No. 1</span></p>
+                                                <input class="dp-user" type="text" width="100%">
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="flex-otp-label"><span class="span-quest">Credit Card / Loan Account No. 2</span></p>
+                                                <input class="dp-user" type="text" width="100%">
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="flex-otp-label"><span class="span-quest">Credit Card / Loan Account No. 3</span></p>
+                                                <input class="dp-user" type="text" width="100%">
+                                            </div>
                                         </form>
-                                        <p class="flex-otp-label mb-0"><span class="span-quest d-inline-block">Didn't receive OTP yet?</span> <span><a href="#" class="span-link d-inline-block">Resend OTP</a></span></p>
+
                                     </div>
 
                                     <div class="">
-                                        <button id="otp-btn" class="button-orange disabled">Verify and Proceed</button>
+                                        <button id="verify-mobile-btn" class="button-orange">Continue</button>
                                     </div>
                                 </div>
                                 <div class="verify-card mt-3 m-visible">
                                     <div class="verify-card-inner">
                                         <div class="verify-card-icon">
-                                            <img src="./img/exclam.png" />
+                                            <img src="./img/questionmark.png" />
                                         </div>
                                         <div class="verify-card-text">
-                                            <h3>Why verification is needed?</h3>
-                                            <p>We want to ensure that we provide the report to its rightful owner.</p>
+                                            <h3>Why I am being asked these questions?
+</h3>
+                                            <p>We weren't able to verify your identity using the information you provided at sign-up. These questions help us ensure that you get your correct CIBIL Score & Report.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -101,11 +105,12 @@
                         <div class="verify-card m-hidden">
                             <div class="verify-card-inner">
                                 <div class="verify-card-icon">
-                                    <img src="./img/exclam.png" />
+                                    <img src="./img/questionmark.png" />
                                 </div>
                                 <div class="verify-card-text">
-                                    <h3>Why verification is needed?</h3>
-                                    <p>We want to ensure that we provide the report to its rightful owner.</p>
+                                    <h3>Why I am being asked these questions?
+</h3>
+                                    <p>We weren't able to verify your identity using the information you provided at sign-up. These questions help us ensure that you get your correct CIBIL Score & Report.</p>
                                 </div>
                             </div>
                         </div>
