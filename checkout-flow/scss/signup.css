@@ -1266,10 +1266,6 @@ input::-webkit-inner-spin-button {
   }
 }
 @media screen and (min-width: 992px) {
-  .content {
-    min-height: calc(100% - 74px);
-  }
-
   .option {
     font-size: 16px;
   }
