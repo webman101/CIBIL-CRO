@@ -256,7 +256,12 @@ h6 {
         padding-right: 16px;
     }
 }
-
+.mx-410{
+max-width: 410px;;
+}
+.mx-580{
+    max-width: 580px;;
+    }
 .w {
     &-36 {
         @media (min-width: 992px) {

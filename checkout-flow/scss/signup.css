@@ -241,6 +241,14 @@ h6 {
   }
 }
 
+.mx-410 {
+  max-width: 410px;
+}
+
+.mx-580 {
+  max-width: 580px;
+}
+
 @media (min-width: 992px) {
   .w-36 {
     width: 36%;
