@@ -1476,4 +1476,123 @@ input {
 
 .sign-out {
   color: #00a6ca;
+}
+
+.success-page .success-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media screen and (min-width: 992px) {
+  .success-page .success-img {
+    margin-left: -75px;
+  }
+  .success-page .success-img h3 {
+    padding-left: 12px;
+  }
+}
+.success-page .success-img .section-subtitle-1 {
+  margin-top: 24px;
+}
+@media screen and (min-width: 992px) {
+  .success-page .success-img .section-subtitle-1 {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .success-page .success-img {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.success-page .success-img img {
+  height: 63px;
+  width: 62px;
+}
+@media screen and (max-width: 992px) {
+  .success-page .success-img img {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .success-page .success-img img {
+    margin-right: 16px;
+  }
+}
+.success-page .success-img h3 {
+  margin-bottom: 0 !important;
+}
+
+.invoice-outer {
+  width: 92%;
+}
+
+.invoice-details {
+  padding: 15px;
+  height: 132px;
+  background: #f9f9f9;
+  border-radius: 3px;
+}
+@media screen and (min-width: 992px) {
+  .invoice-details {
+    width: 380px;
+    padding: 20px 28px;
+    margin: auto;
+  }
+}
+.invoice-details .invoice-title {
+  font-family: "Intro", Regular;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  text-align: left;
+}
+.invoice-details .column-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  position: relative;
+}
+.invoice-details .column-flex::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  bottom: 0;
+  margin: auto;
+  border-top: 2px dashed #e1e1e1;
+  height: 1px;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
+.invoice-details .column-flex p {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0;
+}
+.invoice-details .column-flex .column-left {
+  text-align: left;
+}
+.invoice-details .column-flex .column-left p {
+  padding-right: 8px;
+}
+.invoice-details .column-flex .column-right {
+  text-align: right;
+}
+.invoice-details .column-flex .column-right p {
+  padding-left: 8px;
 }/*# sourceMappingURL=signup.css.map */
