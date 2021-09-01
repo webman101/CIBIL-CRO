@@ -7,7 +7,15 @@ h6,
 div {
   font-family: "Intro";
 }
-
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1200px;
+  }
+}
 .light-grey-bg {
   background: #eee;
 }
@@ -4054,7 +4062,7 @@ span.switcher.switcher-1 input:not(:checked) + label {
   display: flex;
 }
 .features-mobile-section .nav li {
- flex: 1;
+  flex: 1;
   padding: 20px 10px;
   background: #fafafa;
   border: 1px solid #d6d6d6;
@@ -4412,18 +4420,18 @@ span.switcher.switcher-1 input:not(:checked) + label {
 .plan-active .btnarrow {
   opacity: 1;
 }
-.plan-active .active-plan-btn{
+.plan-active .active-plan-btn {
   display: none;
 }
-.btn-inactive{
+.btn-inactive {
   display: none;
 }
-.plan-active .btn-inactive{
+.plan-active .btn-inactive {
   display: flex;
 }
-.bg-yellow.tab-badge{
+.bg-yellow.tab-badge {
   display: none;
 }
-.active .bg-yellow.tab-badge{
+.active .bg-yellow.tab-badge {
   display: block;
 }
