@@ -1346,6 +1346,9 @@ div {
 .card-row .cross {
   display: none;
 }
+.crossed{
+  display: none !important;
+}
 .card-row.crossed .tick {
   display: none;
 }
@@ -4432,6 +4435,6 @@ span.switcher.switcher-1 input:not(:checked) + label {
 .bg-yellow.tab-badge {
   display: none;
 }
-.active .bg-yellow.tab-badge {
+.yellow-tag-active .bg-yellow.tab-badge {
   display: block;
 }

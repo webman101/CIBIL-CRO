@@ -189,17 +189,21 @@ $(document).ready(function() {
         $('.custom-column-2').addClass('plan-active');
         $('.custom-column-3,.custom-column-4').removeClass('plan-active');
         $('.base-plan').click();
+        $('.base-plan').addClass('yellow-tag-active');
+
 
     } else if (url.includes('?6M800RM')) {
         $('.custom-column-3').addClass('plan-active');
         $('.custom-column-2,.custom-column-4').removeClass('plan-active');
         $('.base-standard').click();
+        $('.base-standard').addClass('yellow-tag-active');
 
 
     } else if (url.includes('?1Y1200RM')) {
         $('.custom-column-4').addClass('plan-active');
         $('.custom-column-2,.custom-column-3').removeClass('plan-active');
         $('.base-premium').click();
+        $('.base-premium').addClass('yellow-tag-active');
 
 
     }
@@ -214,12 +218,14 @@ $(document).ready(function() {
     } else if (url.includes('?6M800RM')) {
         $('.plans-card.standard').addClass('plan-active');
         $('.plans-card.basic,.plans-card.premium').removeClass('plan-active');
-        $('.plans-row').slick('slickGoTo', 1)
+        $('.plans-row').slick('slickGoTo', 1);
+        $('.base-standard').addClass('yellow-tag-active');
 
     } else if (url.includes('?1Y1200RM')) {
         $('.plans-card.premium').addClass('plan-active');
         $('.plans-card.basic,.plans-card.standard').removeClass('plan-active');
-        $('.plans-row').slick('slickGoTo', 2)
+        $('.plans-row').slick('slickGoTo', 2);
+        $('.base-premium').addClass('yellow-tag-active');
 
     }
 });
