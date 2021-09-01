@@ -1419,4 +1419,61 @@ input {
 
 .add-container {
   margin-bottom: 8px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.error-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .error-img {
+    flex-direction: column;
+  }
+}
+.error-img img {
+  height: 63px;
+  width: 62px;
+  margin-right: 16px;
+}
+@media screen and (max-width: 992px) {
+  .error-img img {
+    margin-bottom: 20px;
+  }
+}
+.error-img h3 {
+  margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 992px) {
+  .mob-top {
+    margin-top: 20px;
+  }
+}
+
+.error-page .login-button {
+  margin: auto;
+  margin-top: 40px;
+  display: inline-block;
+  padding: 15px 48px;
+}
+
+.try-again {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  margin-top: 40px;
+}
+
+.sign-out {
+  color: #00a6ca;
 }/*# sourceMappingURL=signup.css.map */
