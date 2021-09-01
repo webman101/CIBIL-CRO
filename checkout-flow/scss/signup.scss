@@ -298,12 +298,6 @@ max-width: 410px;;
 }
 
 .header {
-    padding: 15px;
-    @media screen and (min-width: 992px) {
-        padding: 15px 0;
-    }
-    
-    
     background: #ffffff;
     border-bottom: 5px solid #fcd833;
     &-row {
@@ -315,6 +309,10 @@ max-width: 410px;;
         padding: 12px 0;
         border-bottom: 0;
     }
+    @media screen and (min-width: 992px) {
+        padding: 15px 0;
+    }
+    
 }
 
 .content {

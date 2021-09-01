@@ -281,14 +281,8 @@ h6 {
 }
 
 .header {
-  padding: 15px;
   background: #ffffff;
   border-bottom: 5px solid #fcd833;
-}
-@media screen and (min-width: 992px) {
-  .header {
-    padding: 15px 0;
-  }
 }
 .header-row {
   display: flex;
@@ -299,6 +293,11 @@ h6 {
   .header {
     padding: 12px 0;
     border-bottom: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header {
+    padding: 15px 0;
   }
 }
 
