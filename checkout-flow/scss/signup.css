@@ -285,6 +285,11 @@ h6 {
   background: #ffffff;
   border-bottom: 5px solid #fcd833;
 }
+@media screen and (min-width: 992px) {
+  .header {
+    padding: 15px 0;
+  }
+}
 .header-row {
   display: flex;
   align-items: center;
