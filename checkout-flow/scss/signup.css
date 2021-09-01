@@ -1034,6 +1034,7 @@ h3.section-title-40 {
 
 .pair-device {
   min-height: unset;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 992px) {
