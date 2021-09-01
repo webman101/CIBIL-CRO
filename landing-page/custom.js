@@ -185,21 +185,21 @@ if ($('.plans-radio-row input:radio[id=1monthc]:checked')) {
 
 $(document).ready(function() {
     let url = window.location.href;
-    if (url.includes('?1M550RM')) {
+    if (url.includes('?v1')) {
         $('.custom-column-2').addClass('plan-active');
         $('.custom-column-3,.custom-column-4').removeClass('plan-active');
         $('.base-plan').click();
         $('.base-plan').addClass('yellow-tag-active');
 
 
-    } else if (url.includes('?6M800RM')) {
+    } else if (url.includes('?v2')) {
         $('.custom-column-3').addClass('plan-active');
         $('.custom-column-2,.custom-column-4').removeClass('plan-active');
         $('.base-standard').click();
         $('.base-standard').addClass('yellow-tag-active');
 
 
-    } else if (url.includes('?1Y1200RM')) {
+    } else if (url.includes('?v3')) {
         $('.custom-column-4').addClass('plan-active');
         $('.custom-column-2,.custom-column-3').removeClass('plan-active');
         $('.base-premium').click();
@@ -208,18 +208,18 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
     let url = window.location.href;
-    if (url.includes('?1M550RM')) {
+    if (url.includes('?v1')) {
         $('.plans-card.basic').addClass('plan-active');
         $('.plans-card.premium,.plans-card.standard').removeClass('plan-active');
         $('.plans-row').slick('slickGoTo', 0)
 
-    } else if (url.includes('?6M800RM')) {
+    } else if (url.includes('?v2')) {
         $('.plans-card.standard').addClass('plan-active');
         $('.plans-card.basic,.plans-card.premium').removeClass('plan-active');
         $('.plans-row').slick('slickGoTo', 1);
         $('.base-standard').addClass('yellow-tag-active');
 
-    } else if (url.includes('?1Y1200RM')) {
+    } else if (url.includes('?v3')) {
         $('.plans-card.premium').addClass('plan-active');
         $('.plans-card.basic,.plans-card.standard').removeClass('plan-active');
         $('.plans-row').slick('slickGoTo', 2);
