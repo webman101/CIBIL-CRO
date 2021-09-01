@@ -204,8 +204,6 @@ $(document).ready(function() {
         $('.custom-column-2,.custom-column-3').removeClass('plan-active');
         $('.base-premium').click();
         $('.base-premium').addClass('yellow-tag-active');
-
-
     }
 });
 $(document).ready(function() {
@@ -229,3 +227,10 @@ $(document).ready(function() {
 
     }
 });
+
+// if (window.location.href === "http://127.0.0.1:5502/landing-page/new-landingpage.html") {
+//     $('.base-plan').addClass('yellow-tag-active');
+// }
+if (window.location.href === "https://ajency.github.io/CIBIL-CRO/landing-page/new-landingpage.html") {
+    $('.base-plan').addClass('yellow-tag-active');
+}
