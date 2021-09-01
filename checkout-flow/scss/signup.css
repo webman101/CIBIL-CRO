@@ -634,6 +634,7 @@ p {
 .button-orange {
   background: #eb7500;
   border: 1px solid #eb7500;
+  font-family: "Intro", Regular;
   border-radius: 50px;
   color: #2c2c2c;
   font-size: 14px;
@@ -661,6 +662,7 @@ p {
 }
 
 .button-orange-outline {
+  font-family: "Intro", Regular;
   background: #fff;
   border: 1px solid #f16e00;
   border-radius: 50px;
@@ -968,7 +970,18 @@ h3.section-title-40 {
   margin-bottom: 0;
 }
 
+.question-answer-list.pair-device .custom-control-label {
+  font-family: "Intro", regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+}
+
 .span-quest {
+  font-family: "Intro", regular;
   font-weight: 600;
   font-size: 14px;
   color: #2c2c2c;
@@ -1364,6 +1377,18 @@ input::-webkit-inner-spin-button {
     margin-bottom: 50px;
   }
 }
+.verification-questions-form .section-subtitle-1 {
+  max-width: 410px;
+}
+
 .verification-questions .custom-radio {
   margin-bottom: 0;
+}
+
+.dash {
+  background-image: url(../img/plcaehoder-dash.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 8px;
+  background-position: center !important;
 }/*# sourceMappingURL=signup.css.map */
