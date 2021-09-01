@@ -4054,7 +4054,7 @@ span.switcher.switcher-1 input:not(:checked) + label {
   display: flex;
 }
 .features-mobile-section .nav li {
-  width: 33.33%;
+ flex: 1;
   padding: 20px 10px;
   background: #fafafa;
   border: 1px solid #d6d6d6;
