@@ -43,3 +43,19 @@ $('.loan-input-2').keyup(function(e) {
 
     }
 });
+
+if ($('#radio5').prop('checked')) {
+    alert('YES');
+
+}
+
+
+$('#radio1,#radio2,#radio3,#radio4,#radio5,#radio6,#radio7,#radio8').change(function() {
+    if ($(this).prop('checked')) {
+        $('#verify-mobile-btn').removeClass('disabled');
+    } else {
+        
+        $('#verify-mobile-btn').addClass('disabled');
+
+    }
+});
