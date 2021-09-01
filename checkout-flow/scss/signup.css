@@ -1404,4 +1404,8 @@ input::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   background-size: 8px;
   background-position: center !important;
+}
+
+input {
+  border-radius: 0 !important;
 }/*# sourceMappingURL=signup.css.map */
