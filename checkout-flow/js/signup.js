@@ -54,8 +54,18 @@ $('#radio1,#radio2,#radio3,#radio4,#radio5,#radio6,#radio7,#radio8').change(func
     if ($(this).prop('checked')) {
         $('#verify-mobile-btn').removeClass('disabled');
     } else {
-        
+
         $('#verify-mobile-btn').addClass('disabled');
 
     }
 });
+// if ($('#radio-1').prop('checked', true))
+//     $('.verification-questions input[type=radio]').each(function() {
+//         $(this).prop('checked', true)
+//     });
+// if ($('div:not(:has(:radio:checked))').length) {
+//     $('#verify-mobile-btn').addClass('disabled');
+// } else {
+//     $('#verify-mobile-btn').removeClass('disabled');
+
+// }

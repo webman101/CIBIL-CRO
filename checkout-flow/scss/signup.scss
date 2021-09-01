@@ -256,12 +256,12 @@ h6 {
         padding-right: 16px;
     }
 }
-.mx-410{
-max-width: 410px;;
+.mx-410 {
+    max-width: 410px;
 }
-.mx-580{
-    max-width: 580px;;
-    }
+.mx-580 {
+    max-width: 580px;
+}
 .w {
     &-36 {
         @media (min-width: 992px) {
@@ -312,7 +312,6 @@ max-width: 410px;;
     @media screen and (min-width: 992px) {
         padding: 15px 0;
     }
-    
 }
 
 .content {
@@ -673,7 +672,7 @@ p {
 .button-orange {
     background: #eb7500;
     border: 1px solid #eb7500;
-    font-family: 'Intro', Regular;
+    font-family: "Intro", Regular;
 
     border-radius: 50px;
     color: #2c2c2c;
@@ -700,7 +699,7 @@ p {
     }
 }
 .button-orange-outline {
-    font-family: 'Intro', Regular;
+    font-family: "Intro", Regular;
     background: #fff;
     border: 1px solid #f16e00;
     border-radius: 50px;
@@ -1012,8 +1011,8 @@ h3.section-title-40 {
         }
     }
 }
-.question-answer-list.pair-device{
-    .custom-control-label{
+.question-answer-list.pair-device {
+    .custom-control-label {
         font-family: "Intro", regular;
 
         font-style: normal;
@@ -1021,8 +1020,7 @@ h3.section-title-40 {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.02em;
-         color: #2C2C2C;
-
+        color: #2c2c2c;
     }
 }
 .span-quest {
@@ -1431,8 +1429,8 @@ input {
     }
 }
 ////////////////////////////// verification-questions
-.verification-questions-form{
-    .section-subtitle-1{
+.verification-questions-form {
+    .section-subtitle-1 {
         max-width: 410px;
     }
 }
@@ -1448,6 +1446,9 @@ input {
     background-size: 8px;
     background-position: center !important;
 }
-input{
+input {
     border-radius: 0 !important;
+}
+.mx-580 {
+    max-width: 580px !important;
 }
