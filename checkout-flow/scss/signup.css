@@ -1594,4 +1594,89 @@ input {
 }
 .invoice-details .column-flex .column-right p {
   padding-left: 8px;
+}
+
+.select-field {
+  position: relative;
+}
+
+.extra select {
+  height: 46px;
+  font-size: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #dbdbdb;
+  color: #000000;
+  background-color: #ffffff;
+  width: 100%;
+  color: #777777;
+  font-weight: 400;
+  padding-left: 10px;
+}
+.extra select {
+  -webkit-appearance: menulist-button;
+  color: black;
+  font-weight: 400;
+}
+.extra select:invalid {
+  color: #777777;
+}
+.extra .select-field {
+  position: relative;
+}
+.extra select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url(../img/arrow-down.png);
+  background-repeat: no-repeat;
+  background-position-x: 96%;
+  background-position-y: 18px;
+  background-size: 15px;
+  cursor: pointer;
+}
+
+option:disabled {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .mt-60 {
+    margin-top: 60px;
+  }
+}
+.braces {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  margin: 10px 0 30px;
+}
+
+.password-eye {
+  height: 16px;
+}
+
+.password-relative {
+  position: relative;
+}
+
+.terms-and-condition {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+.terms-and-condition .tnc-link {
+  color: #00a6ca;
+}
+
+.mx-646 {
+  max-width: 646px;
 }/*# sourceMappingURL=signup.css.map */

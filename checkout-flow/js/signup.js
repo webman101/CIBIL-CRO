@@ -69,3 +69,11 @@ $('#radio1,#radio2,#radio3,#radio4,#radio5,#radio6,#radio7,#radio8').change(func
 //     $('#verify-mobile-btn').removeClass('disabled');
 
 // }
+
+var variable = "x"
+$("select option:contains('State" + variable + "')").attr("disabled", "disabled");
+$("select#xul").prop("selectedIndex", -1)
+$(".password-eye").on('click', function (e) {
+    $('.slash-eye').toggleClass('hide-eye');
+    });
+    
