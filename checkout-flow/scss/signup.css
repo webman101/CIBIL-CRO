@@ -1675,8 +1675,190 @@ option:disabled {
 }
 .terms-and-condition .tnc-link {
   color: #00a6ca;
+  font-weight: 600;
 }
 
 .mx-646 {
   max-width: 646px;
+}
+
+.flex-box-container {
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  .flex-box-container {
+    display: flex;
+  }
+}
+.flex-box-container .flex-inner {
+  flex: 1;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 24px 15px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 992px) {
+  .flex-box-container .flex-inner {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+.flex-box-container .flex-inner:last-child {
+  margin-right: 0;
+}
+.flex-box-container .flex-inner h6 {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #707070;
+  margin-bottom: 8px;
+}
+.flex-box-container .flex-inner p {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #707070;
+  margin-bottom: 0;
+}
+
+.plan-outer-blue {
+  background: #00a6ca;
+  padding: 3px;
+  border-radius: 5px;
+}
+.plan-outer-blue .plan-type {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.plan-outer-blue .plan-type p {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.plan-outer-blue .plan-type span,
+.plan-outer-blue .plan-type a {
+  font-family: "Intro", Regular;
+  font-style: 400;
+  font-weight: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
+.plan-outer-blue .plan-type a {
+  font-weight: 700;
+}
+.plan-outer-blue .plan-includes .yellow-header {
+  padding: 16px;
+  background: #fcd800;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.plan-outer-blue .plan-includes .yellow-header h6 {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #2c2c2c;
+}
+.plan-outer-blue .features-grid {
+  background-color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.plan-outer-blue .features-grid .feature {
+  width: 50%;
+  padding-right: 20px;
+}
+.plan-outer-blue .features-grid .feature img {
+  width: 40px;
+  margin-bottom: 20px;
+}
+.plan-outer-blue .features-grid .feature p {
+  font-family: "Intro", Book;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+
+.customer-testimonial {
+  margin-top: 30px;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+}
+.customer-testimonial .label-blue {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  background: #dddddd;
+  border-radius: 50px;
+  margin: 0 5px;
+}
+.slick-dots li.slick-active {
+  background: #707070;
+}
+.slick-dots li button {
+  display: none;
+}
+
+.testimonial-1 {
+  display: flex;
+}
+.testimonial-1 img {
+  width: 60px;
+  margin-right: 20px;
+}
+@media screen and (min-width: 992px) {
+  .testimonial-1 img {
+    width: 80px;
+  }
+}
+.testimonial-1 .testimonial-title {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  margin-bottom: 0;
+}
+.testimonial-1 .stars {
+  margin: 10px 0 14px;
+}
+.testimonial-1 p {
+  font-family: "Intro", Book;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+
+.play-store img {
+  width: 24px;
 }/*# sourceMappingURL=signup.css.map */

@@ -1699,8 +1699,197 @@ option:disabled {
     color: #2c2c2c;
     .tnc-link {
         color: #00a6ca;
+        font-weight: 600;
     }
 }
 .mx-646 {
     max-width: 646px;
+}
+.flex-box-container {
+   @media screen and (min-width: 992px) {
+    display: flex;
+   }
+   
+   
+    margin-bottom: 40px;
+    .flex-inner {
+        flex: 1;
+        background: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        padding: 24px 15px;
+        margin-right: 20px;
+        @media screen and (max-width: 992px) {
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+        
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        h6 {
+            font-family: "Intro", Bold;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #707070;
+            margin-bottom: 8px;
+        }
+        p {
+            font-family: "Intro", Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #707070;
+            margin-bottom: 0;
+        }
+    }
+}
+//////////////////////
+.plan-outer-blue {
+    background: #00a6ca;
+    padding: 3px;
+    border-radius: 5px;
+    .plan-type {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        p {
+            font-family: "Intro", Bold;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+        }
+        span,
+        a {
+            font-family: "Intro", Regular;
+            font-style: 400;
+            font-weight: normal;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        a {
+            font-weight: 700;
+        }
+        .plan-name {
+        }
+        .plan-value {
+        }
+    }
+    .plan-includes {
+        .yellow-header {
+            padding: 16px;
+            background: #fcd800;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            h6 {
+                font-family: "Intro", Bold;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                color: #2c2c2c;
+            }
+        }
+    }
+    .features-grid {
+        background-color: #fff;
+        padding: 30px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        .feature {
+            width: 50%;
+            padding-right: 20px;
+            img {
+                width: 40px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-family: "Intro", Book;
+
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                color: #2c2c2c;
+            }
+        }
+    }
+}
+///////////////////////////////@at-root
+.customer-testimonial {
+    margin-top: 30px;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    .label-blue {
+        margin-bottom: 30px;
+    }
+}
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    li {
+        width: 10px;
+        height: 10px;
+        background: #dddddd;
+        border-radius: 50px;
+        margin: 0 5px;
+        &.slick-active {
+            background: #707070;
+        }
+
+        button {
+            display: none;
+        }
+    }
+}
+.testimonial-1 {
+    display: flex;
+    img {
+        width: 60px;
+        @media screen and (min-width: 992px) {
+            width: 80px;
+        }
+        
+        
+        margin-right: 20px;
+    }
+    .testimonial-title {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        margin-bottom: 0;
+    }
+    .stars {
+        margin: 10px 0 14px;
+    }
+    p {
+        font-family: "Intro", Book;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+    }
+}
+.play-store{
+    img{
+        width: 24px;
+    }
 }
