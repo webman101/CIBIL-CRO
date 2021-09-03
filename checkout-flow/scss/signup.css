@@ -1703,6 +1703,7 @@ option:disabled {
 .bg-yellow {
   background: #FCD800;
   padding: 0 7px;
+  margin-right: -5px;
 }
 
 .flex-box-container {
