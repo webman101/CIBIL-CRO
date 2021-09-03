@@ -1135,7 +1135,18 @@ h3.section-title-40 {
         margin-top: 34px;
     }
 }
-
+.mobile-pre{
+    &::after{
+        content: '+91';
+        position: absolute;
+        left: 10px;
+        bottom: 13px;
+        margin: auto;
+    }
+}
+.mobile-input{
+    padding-left: 40px !important;
+}
 form.otp-form {
     @media screen and (max-width: 992px) {
         display: flex;
