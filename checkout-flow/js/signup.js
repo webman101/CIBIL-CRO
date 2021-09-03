@@ -83,8 +83,8 @@ $(".password-eye").click(function() {
     $('.slash-eye').toggleClass("fa-eye-slashed");
     var input = $($(this).attr("toggle"));
     if (input.attr("type") == "password") {
-      input.attr("type", "text");
+        input.attr("type", "text");
     } else {
-      input.attr("type", "password");
+        input.attr("type", "password");
     }
-  });
+});
