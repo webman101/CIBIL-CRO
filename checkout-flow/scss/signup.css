@@ -659,6 +659,11 @@ p {
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 992px) {
+  .button-orange {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 992px) {
   .button-orange {
     margin-bottom: 60px;
@@ -683,6 +688,11 @@ p {
   font-weight: 600;
   padding: 13px 30px;
   text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .button-orange-outline {
+    font-size: 16px;
+  }
 }
 
 .login-button {
@@ -1682,16 +1692,43 @@ option:disabled {
   max-width: 646px;
 }
 
+.flex {
+  flex: 1;
+}
+
+.enrollment .slick-list {
+  padding: 0 20% 0 0;
+}
+
+.bg-yellow {
+  background: #FCD800;
+  padding: 0 7px;
+}
+
 .flex-box-container {
   margin-bottom: 40px;
+  flex: 1;
 }
 @media screen and (min-width: 992px) {
   .flex-box-container {
     display: flex;
   }
 }
+@media screen and (max-width: 992px) {
+  .flex-box-container .flex {
+    margin-right: 30px;
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .flex-box-container .flex {
+    margin-right: 20px;
+  }
+}
+.flex-box-container .flex:last-child {
+  margin-right: 0;
+}
 .flex-box-container .flex-inner {
-  flex: 1;
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
@@ -1759,11 +1796,14 @@ option:disabled {
 .plan-outer-blue .plan-type a {
   font-weight: 700;
 }
+.plan-outer-blue .plan-type .plan-value {
+  text-align: right;
+}
 .plan-outer-blue .plan-includes .yellow-header {
   padding: 16px;
   background: #fcd800;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .plan-outer-blue .plan-includes .yellow-header h6 {
   font-family: "Intro", Bold;
@@ -1788,6 +1828,9 @@ option:disabled {
 .plan-outer-blue .features-grid .feature img {
   width: 40px;
   margin-bottom: 20px;
+  height: 42px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .plan-outer-blue .features-grid .feature p {
   font-family: "Intro", Book;
