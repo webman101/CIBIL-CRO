@@ -88,3 +88,6 @@ $(".password-eye").click(function() {
         input.attr("type", "password");
     }
 });
+
+
+document.getElementById("yes").checked = true;

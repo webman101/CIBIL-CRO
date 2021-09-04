@@ -599,7 +599,7 @@ p {
   font-family: "Intro", Regular;
   border-radius: 50px;
   color: #2c2c2c;
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 600;
   padding: 13px 30px;
   text-align: center;
@@ -611,7 +611,7 @@ p {
 }
 @media screen and (min-width: 992px) {
   .button-orange {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 }
 @media screen and (max-width: 992px) {
@@ -627,6 +627,10 @@ p {
 .button-orange:focus {
   outline: 0;
 }
+.button-orange:hover {
+  color: #000000;
+  text-decoration: none;
+}
 
 .button-orange-outline {
   font-family: "Intro", Regular;
@@ -634,15 +638,20 @@ p {
   border: 1px solid #f16e00;
   border-radius: 50px;
   color: #2c2c2c;
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 600;
   padding: 13px 30px;
   text-align: center;
+  transition: all 0.1s ease-in-out;
 }
 @media screen and (min-width: 992px) {
   .button-orange-outline {
-    font-size: 16px;
+    font-size: 16px !important;
   }
+}
+.button-orange-outline:hover {
+  color: #f16e00;
+  text-decoration: none;
 }
 
 .login-button {
@@ -1431,6 +1440,11 @@ input {
   }
 }
 
+.error-page-outer {
+  min-height: 0;
+  margin-bottom: 30px;
+}
+
 .error-page .login-button {
   margin: auto;
   margin-top: 40px;
@@ -1454,6 +1468,16 @@ input {
   color: #00a6ca;
 }
 
+@media screen and (max-width: 992px) {
+  .success-page .button-orange {
+    margin-bottom: 30px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .success-page {
+    min-height: 0;
+  }
+}
 .success-page .success-img {
   display: flex;
   justify-content: center;
@@ -1465,10 +1489,17 @@ input {
   }
   .success-page .success-img h3 {
     padding-left: 12px;
+    margin-bottom: 0 !important;
+    transform: translateY(5px);
   }
 }
 .success-page .success-img .section-subtitle-1 {
   margin-top: 24px;
+}
+@media screen and (max-width: 992px) {
+  .success-page .success-img .section-subtitle-1 {
+    margin-bottom: 40px;
+  }
 }
 @media screen and (min-width: 992px) {
   .success-page .success-img .section-subtitle-1 {
@@ -1662,8 +1693,8 @@ option:disabled {
   flex: 1;
 }
 
-.enrollment .slick-list {
-  padding: 0 20% 0 0 !important;
+.enrollment .flex-box-container .slick-list {
+  padding: 0 20% 0 0;
 }
 
 .enrollment-button button {
@@ -1737,6 +1768,12 @@ option:disabled {
   letter-spacing: 0.02em;
   color: #707070;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .additional-verification {
+    margin-bottom: 126px;
+  }
 }
 
 .plan-outer-blue {

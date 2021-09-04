@@ -623,9 +623,9 @@ p {
     font-family: "Intro", Regular;
     border-radius: 50px;
     color: #2c2c2c;
-    font-size: 14px;
+    font-size: 14px !important;
     @media screen and (min-width: 992px) {
-        font-size: 16px;
+        font-size: 16px !important;
     }
     font-weight: 600;
     padding: 13px 30px;
@@ -646,6 +646,10 @@ p {
     &:focus {
         outline: 0;
     }
+    &:hover {
+        color: #000000;
+        text-decoration: none;
+    }
 }
 
 .button-orange-outline {
@@ -654,13 +658,14 @@ p {
     border: 1px solid #f16e00;
     border-radius: 50px;
     color: #2c2c2c;
-    font-size: 14px;
+    font-size: 14px !important;
     @media screen and (min-width: 992px) {
-        font-size: 16px;
+        font-size: 16px !important;
     }
     font-weight: 600;
     padding: 13px 30px;
     text-align: center;
+    transition: all 0.1s ease-in-out;
     // &.disabled {
     //     background: #ededed;
     //     border: 1px solid #ededed;
@@ -669,6 +674,10 @@ p {
     // &:focus {
     //     outline: 0;
     // }
+    &:hover {
+        color: #f16e00;
+        text-decoration: none;
+    }
 }
 
 .login-button {
@@ -1482,7 +1491,10 @@ input {
         margin-top: 20px;
     }
 }
-
+.error-page-outer {
+    min-height: 0;
+    margin-bottom: 30px;
+}
 .error-page {
     .login-button {
         margin: auto;
@@ -1509,16 +1521,32 @@ input {
 }
 
 .success-page {
+    @media screen and (max-width: 992px) {
+        .button-orange {
+            margin-bottom: 30px !important;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        min-height: 0;
+    }
+
     .success-img {
         display: flex;
         @media screen and (min-width: 992px) {
             margin-left: -75px;
             h3 {
                 padding-left: 12px;
+                margin-bottom: 0 !important;
+                transform: translateY(5px);
             }
         }
         .section-subtitle-1 {
             margin-top: 24px;
+            @media screen and (max-width: 992px) {
+                margin-bottom: 40px;
+            }
+
             @media screen and (min-width: 992px) {
                 margin-top: 30px;
             }
@@ -1718,8 +1746,10 @@ option:disabled {
         .container.paright {
         }
     }
-    .slick-list {
-        padding: 0 20% 0 0 !important;
+    .flex-box-container {
+        .slick-list {
+            padding: 0 20% 0 0;
+        }
     }
 }
 .enrollment-button {
@@ -1796,7 +1826,12 @@ option:disabled {
         }
     }
 }
-
+/////////////////@at-root
+.additional-verification {
+    @media screen and (min-width: 992px) {
+        margin-bottom: 126px;
+    }
+}
 //////////////////////
 .plan-outer-blue {
     background: #00a6ca;
@@ -2212,7 +2247,7 @@ option:disabled {
     }
 }
 .plan-title {
-    font-family: 'Intro', Regular;
+    font-family: "Intro", Regular;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
