@@ -48,11 +48,25 @@
     </div>
     <div class="content content-otp enrollment">
         <div class="bg-f9">
+            <div class="plan-outer-blue m-visible">
+                <div class="plan-type">
+                    <div class="plan-name">
+                        <p>Standard Plan</p>
+                        <span>6 months subscription</span>
+                    </div>
+                    <div class="plan-value">
+                        <p>₹800</p>
+                        <span><a href="#">Upgrade Plan</a></span>
+                    </div>
+                </div>
+
+            </div>
             <div class="container ">
                 <div class="container-top">
-                    <h3 class="section-title-40 text-color-black text-center"><span class="bg-yellow">Join CIBIL</span> to take strides towards your financial dreams</h3>
+
+                    <h3 class="section-title-40 text-color-black text-left text-center"><span class="bg-yellow">Join CIBIL</span> to take strides towards your financial dreams</h3>
                     <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
-                    <p class="section-subtitle-1 font-weight-400 mb-2 text-center">With our expert tools, you can cultivate sustainable growth by staying up-to-date on your credit journey.</p>
+                    <p class="section-subtitle-1 font-weight-400 mb-2 text-left text-center">With our expert tools, you can cultivate sustainable growth by staying up-to-date on your credit journey.</p>
                 </div>
             </div>
             <div class="container paright">
@@ -113,14 +127,14 @@
                                     <form action="">
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Email Address</strong> <span class="text-light"></span></p>
-                                            <input class="dp-user" type="text" width="100%">
+                                            <input class="dp-user" type="email" width="100%">
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Password</strong> <span class="text-light"></span></p>
 
                                             <div class="text-black password-relative slash-eye">
                                                 <input id="password-field" type="password" class="form-control" name="password" value="">
-                                                <img src="./img/eye.png" toggle="#password-field" class="password-eye"  alt="">
+                                                <img src="./img/eye.png" toggle="#password-field" class="password-eye" alt="">
                                             </div>
                                         </div>
 
@@ -148,13 +162,12 @@
                                             <input class="dp-user" type="text" width="100%">
                                         </div>
                                         <p class="terms-and-condition">
-                                            I understand that by clicking on the "Accept & Continue" button, I agree to <a href="https://www.transunioncibil.com/legal/terms-and-conditions?_ga=2.49300198.1185177705.1630671658-1659703442.1628151246" class="tnc-link">CIBIL's Terms and Conditions</a> and I am providing "written instructions" authorizing CIBIL to obtain
-                                            information from my personal credit profile from CIBIL in order to confirm my identity and display my credit data to me.
+                                            I understand that by clicking on the "Accept & Continue" button, I agree to <a href="https://www.transunioncibil.com/legal/terms-and-conditions?_ga=2.49300198.1185177705.1630671658-1659703442.1628151246" class="tnc-link">CIBIL's Terms and Conditions</a>                                            and I am providing "written instructions" authorizing CIBIL to obtain information from my personal credit profile from CIBIL in order to confirm my identity and display my credit data to me.
                                         </p>
 
                                     </form>
                                     <div class="enrollment-button">
-                                        <a href="https://ajency.github.io/CIBIL-CRO/checkout-flow/otp" id="loan-button" class="button-orange font-16" style="text-decoration: none;display: inline-block;">Accept and Continue</a>
+                                        <a href="javascript:void(0)" id="loan-button" class="button-orange font-16 disabled" style="text-decoration: none;display: inline-block;">Accept and Continue</a>
                                     </div>
                                 </div>
 
@@ -303,7 +316,7 @@
                 arrows: false,
                 dots: true,
                 center: true
-                
+
             });
         }
     </script>

@@ -44,10 +44,7 @@ $('.loan-input-2').keyup(function(e) {
     }
 });
 
-if ($('#radio5').prop('checked')) {
-    alert('YES');
 
-}
 
 
 $('#radio1,#radio2,#radio3,#radio4,#radio5,#radio6,#radio7,#radio8').change(function() {
@@ -90,4 +87,77 @@ $(".password-eye").click(function() {
 });
 
 
-document.getElementById("yes").checked = true;
+
+
+var discount = 0;
+$(document).ready(function() {
+    $('.plans-radio-row .plans-list').on('change', function() {
+        $('.plans-list').not(this).prop('checked', false);
+        let value = $('.plans-radio-row input:checkbox[name=radio-group]:checked').val();
+        if (value == null) {
+            $("#plans-title").html('Free Annual CIBIL Score & Report');
+            $(".plans-block-header").removeClass('premium');
+            $("#plans-subtitle").text('One-time access to your CIBIL Score & Report');
+            $("#plans-price").text("");
+            $(".u-text").text("Upgrade Now");
+        } else {
+            $("#plans-title").html($('.plans-radio-row input:checkbox[name=radio-group]:checked').data('title'));
+            $(".plans-block-header").addClass('premium');
+            $("#plans-subtitle").text($('.plans-radio-row input:checkbox[name=radio-group]:checked').data('subtitle'));
+            $("#plans-price").text("₹" + value);
+            $(".u-text").text("Change Plan");
+        }
+    });
+
+
+});
+
+
+$('.toggle-code-input').slideUp();
+
+$('.toggle-code-input-2').slideDown();
+
+
+$('.arrow-img-1').click(function(e) {
+    e.preventDefault();
+    $('.toggle-code-input-1').slideToggle(350);
+    $(this).toggleClass('rotate', 1000);
+});
+$('.arrow-img-2').click(function(e) {
+    e.preventDefault();
+    $('.toggle-code-input-2').slideToggle(350);
+    $(this).toggleClass('rotate', 1000);
+});
+
+
+$('#1mon').prop('checked', true);
+
+
+$('.radio-set-1').change(function() {
+    if ($(this).prop('checked')) {
+        alert()
+    } else {
+
+        $('#verify-mobile-btn').addClass('disabled');
+
+    }
+});
+
+$(function() {
+    $(".radio-set-5").change(function() {
+        var check = true;
+        $(".radio-set-5 input").each(function() {
+            var name = $(this).attr("name");
+            if ($(".radio-set-5 input:checked").length == 0) {
+                check = false;
+            }
+        });
+
+        if (check) {
+            $('#verify-mobile-btn').removeClass('disabled');
+            $("a").attr("href", "http://www.google.com/")
+        } else {
+            $('#verify-mobile-btn').addClass('disabled');
+        }
+    });
+});
