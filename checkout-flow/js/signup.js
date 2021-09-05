@@ -155,7 +155,7 @@ $(function() {
 
         if (check) {
             $('#verify-mobile-btn').removeClass('disabled');
-            $("a").attr("href", "http://www.google.com/")
+            $("a").attr("href", "https://ajency.github.io/CIBIL-CRO/checkout-flow/checkout")
         } else {
             $('#verify-mobile-btn').addClass('disabled');
         }
