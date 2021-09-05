@@ -87,7 +87,10 @@ h6 {
   background-color: #ffffff !important;
 }
 .bg-f9 {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9 !important;
+}
+.bg-ed {
+  background-color: #ededed;
 }
 
 .h-100 {
@@ -1834,11 +1837,11 @@ option:disabled {
 
 .plan-outer-blue {
   background: #00a6ca;
-  padding: 3px;
 }
 @media screen and (min-width: 992px) {
   .plan-outer-blue {
     border-radius: 5px;
+    padding: 3px;
   }
 }
 .plan-outer-blue .plan-type {
@@ -1939,7 +1942,7 @@ option:disabled {
 .slick-dots {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .slick-dots li {
   width: 10px;
@@ -2562,16 +2565,24 @@ option:disabled {
   margin-bottom: 60px;
 }
 
+@media screen and (max-width: 992px) {
+  .checkout .label-blue {
+    padding: 20px;
+  }
+}
 .checkout .plans-block-content {
-  padding: 55px 8px;
+  padding: 55px 12px;
+  background: #00a6ca;
 }
 @media screen and (min-width: 992px) {
   .checkout .plans-block-content {
     padding: 55px 20px;
   }
 }
-.checkout .plans-block-header {
-  background: #00a6ca;
+@media screen and (min-width: 992px) {
+  .checkout .plans-block-header {
+    background: #00a6ca;
+  }
 }
 .checkout .plans-radio-col {
   position: relative;
@@ -2668,6 +2679,11 @@ option:disabled {
     padding-right: 30px;
   }
 }
+@media screen and (max-width: 992px) {
+  .checkout .col-md-5 {
+    padding: 0 20px;
+  }
+}
 
 .plans-radio-price {
   font-size: 16px;
@@ -2701,7 +2717,18 @@ option:disabled {
 }
 
 .account-details {
-  margin-bottom: 144px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 992px) {
+  .account-details {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .account-details {
+    margin-bottom: 144px;
+  }
 }
 .account-details .title {
   font-family: "Intro", Book;
@@ -2794,6 +2821,12 @@ option:disabled {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .coupon-toggle {
+    margin-bottom: 40px;
+  }
+}
+
 .coupon-tab {
   background: #f9f9f9;
   display: flex;
@@ -2810,6 +2843,9 @@ option:disabled {
      object-fit: contain;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+}
+.coupon-tab .label-blue {
+  padding: 0;
 }
 
 .promo-input {
@@ -2828,4 +2864,20 @@ option:disabled {
 .rotate-reset {
   transform: rotate(0deg);
   transition: 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+  .container.pt-3 {
+    padding: 0;
+    overflow: hidden;
+  }
+}
+.mobile-title {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #2c2c2c;
 }/*# sourceMappingURL=signup.css.map */

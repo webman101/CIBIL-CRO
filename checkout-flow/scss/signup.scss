@@ -90,7 +90,10 @@ h6 {
         background-color: #ffffff !important;
     }
     &-f9 {
-        background-color: #f9f9f9;
+        background-color: #f9f9f9 !important;
+    }
+    &-ed {
+        background-color: #ededed;
     }
 }
 
@@ -684,9 +687,9 @@ p {
         background: #ededed;
         border: 1px solid #ededed;
         color: #bfbfbf;
-        &:hover{
+        &:hover {
             color: #bfbfbf;
-cursor: unset;
+            cursor: unset;
         }
     }
     &:focus {
@@ -713,14 +716,7 @@ cursor: unset;
     padding: 13px 30px;
     text-align: center;
     transition: all 0.1s ease-in-out;
-    // &.disabled {
-    //     background: #ededed;
-    //     border: 1px solid #ededed;
-    //     color: #bfbfbf;
-    // }
-    // &:focus {
-    //     outline: 0;
-    // }
+
     &:hover {
         color: #f16e00;
         text-decoration: none;
@@ -1883,12 +1879,12 @@ option:disabled {
 //////////////////////
 .plan-outer-blue {
     background: #00a6ca;
-    padding: 3px;
-   @media screen and (min-width: 992px) {
-    border-radius: 5px;
-   }
-   
-   
+
+    @media screen and (min-width: 992px) {
+        border-radius: 5px;
+        padding: 3px;
+    }
+
     .plan-type {
         display: flex;
         justify-content: space-between;
@@ -1989,7 +1985,7 @@ option:disabled {
 .slick-dots {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     li {
         width: 10px;
         height: 10px;
@@ -2637,14 +2633,28 @@ option:disabled {
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 .checkout {
+    .label-blue {
+     @media screen and (max-width: 992px) {
+         padding:20px;
+     }
+     
+     
+    }
+    
     .plans-block-content {
-        padding: 55px 8px;
+        padding: 55px 12px;
+        background: #00a6ca;
+
         @media screen and (min-width: 992px) {
             padding: 55px 20px;
         }
     }
     .plans-block-header {
+       @media screen and (min-width: 992px) {
         background: #00a6ca;
+       }
+       
+       
     }
 
     .plans-radio-col {
@@ -2750,6 +2760,13 @@ option:disabled {
             padding-right: 30px;
         }
     }
+    .col-md-5{
+        @media screen and (max-width: 992px) {
+            padding:0 20px;
+        }
+        
+        
+    }
 }
 
 .plans-radio-price {
@@ -2782,7 +2799,19 @@ option:disabled {
 }
 
 .account-details {
+    margin-bottom: 40px;
+    @media screen and (max-width: 992px) {
+        margin-right:15px;
+        margin-left:15px;
+
+    }
+    
+    
+@media screen and (min-width: 992px) {
     margin-bottom: 144px;
+}
+
+
     .title {
         font-family: "Intro", Book;
         font-weight: normal;
@@ -2872,6 +2901,14 @@ option:disabled {
     }
 }
 /////////////////////////////////@at-root
+.coupon-toggle{
+    @media screen and (max-width: 992px) {
+        margin-bottom: 40px;
+
+    }
+    
+    
+}
 .coupon-tab {
     background: #f9f9f9;
     display: flex;
@@ -2886,6 +2923,9 @@ option:disabled {
         object-fit: contain;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
+    }
+    .label-blue{
+        padding: 0;
     }
 }
 .promo-input {
@@ -2902,4 +2942,20 @@ option:disabled {
 .rotate-reset {
     transform: rotate(0deg);
     transition: 0.3s;
+}
+@media screen and (max-width: 992px) {
+    .container.pt-3 {
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+.mobile-title {
+    font-family: 'Intro', Bold;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #2c2c2c;
 }
