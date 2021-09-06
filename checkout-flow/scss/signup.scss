@@ -1839,12 +1839,10 @@ option:disabled {
         }
     }
 }
-.evrollment-container-top{
+.evrollment-container-top {
     @media screen and (max-width: 992px) {
-        padding-bottom:0;
+        padding-bottom: 0;
     }
-    
-    
 }
 .enrollment-button {
     button {
@@ -1890,7 +1888,6 @@ option:disabled {
         border-radius: 6px;
         padding: 24px 1px;
         @media screen and (max-width: 992px) {
-          
         }
         margin-right: 20px;
         &:last-child {
@@ -2742,6 +2739,9 @@ option:disabled {
 
                 width: 100%;
             }
+            & .plans-radio-offer-text {
+                background-color: #fcd800;
+            }
         }
         @media screen and (min-width: 992px) {
             margin-right: 20px;
@@ -2808,7 +2808,12 @@ option:disabled {
     }
     .plans-radio-offer-text {
         background-image: none;
-        background-color: #fcd800;
+        background-color: #dddddd;
+        @media screen and (min-width: 992px) {
+            background-color: #fcd800;
+        }
+        
+        
         max-width: 80px;
         height: 24px;
         display: flex;

@@ -2662,6 +2662,9 @@ option:disabled {
   border-radius: 6px 6px 0px 0px;
   width: 100%;
 }
+.checkout .plans-radio-col.active .plans-radio-offer-text {
+  background-color: #fcd800;
+}
 @media screen and (min-width: 992px) {
   .checkout .plans-radio-col {
     margin-right: 20px;
@@ -2721,7 +2724,7 @@ option:disabled {
 }
 .checkout .plans-radio-offer-text {
   background-image: none;
-  background-color: #fcd800;
+  background-color: #dddddd;
   max-width: 80px;
   height: 24px;
   display: flex;
@@ -2734,6 +2737,11 @@ option:disabled {
   color: #333333;
   position: relative;
   left: -8px;
+}
+@media screen and (min-width: 992px) {
+  .checkout .plans-radio-offer-text {
+    background-color: #fcd800;
+  }
 }
 @media screen and (min-width: 992px) {
   .checkout .col-md-7 {
