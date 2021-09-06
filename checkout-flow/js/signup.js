@@ -32,8 +32,7 @@ $('.otp-6').keyup(function(e) {
         $(this).addClass('disabled');
 
         $('#otp-btn').removeClass('disabled');
-    }
-    else{
+    } else {
         $('#otp-btn').addClass('disabled');
 
     }
@@ -191,11 +190,11 @@ $('.radio-set-1').change(function() {
 });
 
 $(function() {
-    $(".radio-set-5").change(function() {
+    $(".custom-radio").change(function() {
         var check = true;
-        $(".radio-set-5 input").each(function() {
+        $(".custom-radio input").each(function() {
             var name = $(this).attr("name");
-            if ($(".radio-set-5 input:checked").length == 0) {
+            if ($(".custom-radio input:radio[name="+name+"]:checked").length == 0) {
                 check = false;
             }
         });
