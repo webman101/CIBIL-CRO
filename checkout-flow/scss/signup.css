@@ -239,21 +239,22 @@ h6 {
   padding-top: 20px;
 }
 
-.yellow-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media screen and (min-width: 992px) {
+  .yellow-title {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .yellow-title span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+  .yellow-title .bg-yellow {
+    margin-right: 5px;
+  }
 }
-.yellow-title span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-}
-.yellow-title .bg-yellow {
-  margin-right: 5px;
-}
-
 .justify-between {
   display: flex;
   justify-content: space-between;
