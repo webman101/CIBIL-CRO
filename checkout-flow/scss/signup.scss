@@ -2785,7 +2785,7 @@ h3.mb-2 {
                 width: 100%;
             }
             & .plans-radio-offer-text {
-                background-color: #fcd800;
+               
             }
         }
         @media screen and (min-width: 992px) {
@@ -2853,11 +2853,7 @@ h3.mb-2 {
     }
     .plans-radio-offer-text {
         background-image: none;
-        background-color: #dddddd;
-        @media screen and (min-width: 992px) {
-            background-color: #fcd800;
-        }
-
+        background-color: #fcd800;
         max-width: 80px;
         height: 24px;
         display: flex;
