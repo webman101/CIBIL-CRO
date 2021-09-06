@@ -13,6 +13,13 @@
 //         ele[val - 2].focus()
 //     }
 // }
+
+$('.span-link').click(function () { 
+    $('.otp-form').find('input').val(''); 
+    $('#otp-btn').addClass('disabled');
+
+});
+
 $('.otp').click(function(e) {
     $('.otp.input-focus').removeClass('input-focus');
     $(this).addClass('input-focus');
@@ -27,7 +34,7 @@ $(".otp").keyup(function() {
     }
 });
 
-$('.otp-6').keyup(function(e) {
+$('.otp').keyup(function(e) {
     if ($(this).val() != '') {
         $(this).addClass('disabled');
 
@@ -37,6 +44,9 @@ $('.otp-6').keyup(function(e) {
 
     }
 });
+
+
+
 $('#pincode').keyup(function(e) {
     if ($(this).val() != '') {
         $("#loan-button").attr("href", "https://ajency.github.io/CIBIL-CRO/checkout-flow/checkout")
