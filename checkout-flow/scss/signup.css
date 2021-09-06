@@ -2618,6 +2618,8 @@ option:disabled {
 @media screen and (max-width: 992px) {
   .checkout .label-blue {
     padding: 20px;
+    padding-bottom: 0;
+    margin-bottom: 5px;
   }
 }
 .checkout .plans-block-content {
@@ -2732,6 +2734,13 @@ option:disabled {
 @media screen and (max-width: 992px) {
   .checkout .col-md-5 {
     padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .martop-mobile {
+    margin-top: 40px;
+    padding-top: 0 !important;
   }
 }
 
@@ -2871,9 +2880,14 @@ option:disabled {
   }
 }
 
+.features-carousel .slick-dots {
+  margin-top: -4px;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 992px) {
   .coupon-toggle {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -2882,6 +2896,11 @@ option:disabled {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+}
+@media screen and (max-width: 992px) {
+  .coupon-tab {
+    margin-top: 20px !important;
+  }
 }
 .coupon-tab .toggle-text {
   margin-bottom: 0;

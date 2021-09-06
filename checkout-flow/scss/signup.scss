@@ -2682,6 +2682,8 @@ option:disabled {
     .label-blue {
         @media screen and (max-width: 992px) {
             padding: 20px;
+            padding-bottom: 0;
+            margin-bottom: 5px;
         }
     }
 
@@ -2807,8 +2809,16 @@ option:disabled {
             padding: 0 20px;
         }
     }
+ 
 }
-
+.martop-mobile{
+    @media screen and (max-width: 992px) {
+        margin-top:40px;
+        padding-top: 0 !important;
+    }
+    
+    
+}
 .plans-radio-price {
     font-size: 16px;
     @media screen and (min-width: 992px) {
@@ -2938,9 +2948,15 @@ option:disabled {
     }
 }
 /////////////////////////////////@at-root
+.features-carousel{
+    .slick-dots{
+        margin-top: -4px;
+        margin-bottom: 10px;
+    }
+}
 .coupon-toggle {
     @media screen and (max-width: 992px) {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 }
 .coupon-tab {
@@ -2948,6 +2964,11 @@ option:disabled {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    @media screen and (max-width: 992px) {
+        margin-top:20px !important;
+    }
+    
+    
     .toggle-text {
         margin-bottom: 0;
     }
