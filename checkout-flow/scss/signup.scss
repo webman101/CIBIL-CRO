@@ -247,12 +247,32 @@ h6 {
 .pt-2 {
     padding-top: 20px;
 }
-
+.yellow-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+    .bg-yellow{
+        margin-right: 5px;
+    }
+}
 .justify-between {
     display: flex;
     justify-content: space-between;
 }
-
+.justify-center{
+    justify-content: center;
+}
+.display-vertical-center{
+    display: flex;
+    align-items: center;
+}
 .align-items {
     &-center {
         align-items: center;
