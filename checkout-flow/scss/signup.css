@@ -2932,6 +2932,7 @@ option:disabled {
   box-sizing: border-box;
   width: 100%;
   height: 50px;
+  padding-left: 20px;
 }
 
 .rotate {
