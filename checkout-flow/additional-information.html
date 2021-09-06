@@ -134,15 +134,18 @@
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label mobile-pre"><strong class="text-bold">Mobile</strong> <span class="text-light"></span></p>
-                                            <input class="dp-user mobile-input" type="text" width="100%">
+
+                                            <input class="dp-user mobile-input" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="10" />
+
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Pincode</strong> <span class="text-light"></span></p>
-                                            <input class="dp-user " type="number" id="pincode" width="100%">
+                                          
+                                            <input class="dp-user " id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="6" />
+
                                         </div>
                                         <p class="terms-and-condition">
-                                            I understand that by clicking on the "Accept & Continue" button, I agree to <a href="https://www.transunioncibil.com/legal/terms-and-conditions?_ga=2.36384480.1185177705.1630671658-1659703442.1628151246" class="tnc-link">CIBIL's Terms and Conditions</a> and I am providing "written instructions" authorizing CIBIL to obtain
-                                            information from my personal credit profile from CIBIL in order to confirm my identity and display my credit data to me.
+                                            I understand that by clicking on the "Accept & Continue" button, I agree to <a href="https://www.transunioncibil.com/legal/terms-and-conditions?_ga=2.36384480.1185177705.1630671658-1659703442.1628151246" class="tnc-link">CIBIL's Terms and Conditions</a>                                            and I am providing "written instructions" authorizing CIBIL to obtain information from my personal credit profile from CIBIL in order to confirm my identity and display my credit data to me.
                                         </p>
 
                                     </form>
