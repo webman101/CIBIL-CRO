@@ -145,8 +145,8 @@ $('#12mon.plans-list').click(function(e) {
 $('.plans-list').click(function(e) {
     var month = $(this).attr("data-nobet");
     $('.month-change').text(month)
-   $('.base-none').show();
-   $('.base-none').removeClass('hide');
+    $('.base-none').show();
+    $('.base-none').removeClass('hide');
 
 
 });
@@ -157,8 +157,8 @@ $('.plans-list').click(function(e) {
 
 
 $('.1mon').click(function() {
-   $('.base-none').hide();
-   $('.base-none').addClass('hide');
+    $('.base-none').hide();
+    $('.base-none').addClass('hide');
 
 });
 // var emailid = $('#emailId').val();
@@ -183,8 +183,8 @@ $('#address').keyup(function(e) {
     }
 });
 
-$('.standard-plan-check input').prop('checked', true);
-$('.standard-plan-check-2 input').prop('checked', true);
+// $('.standard-plan-check input').prop('checked', true);
+// $('.standard-plan-check-2 input').prop('checked', true);
 
 
 var discount = 0;
@@ -299,3 +299,10 @@ $(".upgrade-link").click(function(e) {
         $(this).text("Hide Plans");
 
 });
+if (window.matchMedia("(max-width: 768px)").matches) {
+    $('.standard-plan-check input').prop('checked', true);
+}
+if (window.matchMedia("(min-width: 769px)").matches) {
+  $('.standard-plan-check-2 input').prop('checked', true);
+
+}
