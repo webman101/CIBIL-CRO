@@ -14,6 +14,8 @@
 //     }
 // }
 $('.otp').click(function(e) {
+    $('.otp.input-focus').removeClass('input-focus');
+    
     $(this).addClass('input-focus');
 });
 
