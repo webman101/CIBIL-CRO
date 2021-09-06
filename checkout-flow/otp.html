@@ -68,12 +68,12 @@
                                     <div class="d-block d-md-inline-block">
                                         <p class="flex-otp-label"><strong class="text-bold">Enter OTP</strong> <span class="text-light">Required</span></p>
                                         <form action="" class="otp-form">
-                                            <input class="otp otp-1" type="number" maxlength="1" class="otp otp-1" placeholder="-" />
-                                            <input class="otp otp-2" type="number" maxlength="1" class="otp otp-1" placeholder="-" />
-                                            <input class="otp otp-3" type="number" maxlength="1" class="otp otp-1" placeholder="-" />
-                                            <input class="otp otp-4" type="number" maxlength="1" class="otp otp-1" placeholder="-" />
-                                            <input class="otp otp-5" type="number" maxlength="1" class="otp otp-1" placeholder="-" />
-                                            <input class="otp otp-6" type="number" maxlength="1" class="otp otp-1" placeholder="-" />
+                                            <input class="otp otp-1" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="1" class="otp otp-1" placeholder="-" />
+                                            <input class="otp otp-2" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="1" class="otp otp-1" placeholder="-" />
+                                            <input class="otp otp-3" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="1" class="otp otp-1" placeholder="-" />
+                                            <input class="otp otp-4" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="1" class="otp otp-1" placeholder="-" />
+                                            <input class="otp otp-5" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="1" class="otp otp-1" placeholder="-" />
+                                            <input class="otp otp-6" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="1" class="otp otp-1" placeholder="-" />
                                         </form>
                                         <p class="flex-otp-label mb-0"><span class="span-quest d-inline-block">Didn't receive OTP yet?</span> <span><a href="#" class="span-link d-inline-block">Resend OTP</a></span></p>
                                     </div>
