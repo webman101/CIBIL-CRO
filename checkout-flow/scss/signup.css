@@ -2698,8 +2698,8 @@ option:disabled {
 }
 .checkout .plans-radio-col .checkmark {
   position: absolute;
-  top: 20px;
-  left: 12px;
+  top: 16px;
+  left: 8px;
   height: 16px;
   width: 16px;
   background: #f9f9f9;
