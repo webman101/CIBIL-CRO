@@ -2195,8 +2195,8 @@ option:disabled {
   border-top: 1px solid #dddddd;
 }
 .interstial-container .coulumn-image .marks {
-  width: 15px;
-  height: 15px;
+  width: 21px;
+  height: 14px;
 }
 .interstial-container .wrong-marks {
   width: 15px;
@@ -2205,8 +2205,8 @@ option:disabled {
      object-fit: contain;
 }
 .interstial-container .right-marks {
-  width: 20px !important;
-  height: 20px !important;
+  width: 21px !important;
+  height: 14px !important;
   -o-object-fit: contain;
      object-fit: contain;
 }
