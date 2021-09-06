@@ -306,3 +306,4 @@ if (window.matchMedia("(min-width: 769px)").matches) {
   $('.standard-plan-check-2 input').prop('checked', true);
 
 }
+$('.slick-dots li').hide();
