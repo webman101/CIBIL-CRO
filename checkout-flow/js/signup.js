@@ -14,8 +14,8 @@
 //     }
 // }
 
-$('.span-link').click(function () { 
-    $('.otp-form').find('input').val(''); 
+$('.span-link').click(function() {
+    $('.otp-form').find('input').val('');
     $('#otp-btn').addClass('disabled');
 
 });
@@ -132,6 +132,9 @@ $('.plans-radio-col').click(function(e) {
 $('.plans-list').click(function(e) {
     var onemon = $(this).attr("value");
     $('.price').text(onemon)
+    $('.plan-value p').text('₹'+ onemon)
+
+    
 });
 
 $('.plans-list').click(function(e) {
@@ -204,7 +207,7 @@ $(function() {
         var check = true;
         $(".custom-radio input").each(function() {
             var name = $(this).attr("name");
-            if ($(".custom-radio input:radio[name="+name+"]:checked").length == 0) {
+            if ($(".custom-radio input:radio[name=" + name + "]:checked").length == 0) {
                 check = false;
             }
         });
@@ -216,4 +219,38 @@ $(function() {
             $('#verify-mobile-btn').addClass('disabled');
         }
     });
+});
+// $('#plans-block-content').slideUp();
+
+// $('.upgrade-link').click(function(e) {
+//     e.preventDefault();
+//     $(this).toggleClass('Hide');
+//     if ($('.upgrade-link.hide')) {
+//         $(this).text('Hide Plans');
+//     }
+//     else{
+//         $(this).text('Upgrade Plans');
+
+//     }
+//     $('#plans-block-content').slideToggle(300);
+
+
+// });
+$('.plans-block-content').slideUp();
+$('.plans-block-mobile').slideUp();
+
+
+$(".upgrade-link").click(function(e) {
+    e.preventDefault();
+
+    $(".plans-block-content").slideToggle("slow");
+        $('.plans-block-mobile').slideToggle();
+
+    $(this).toggleClass("active");
+
+    if ($(this).text() == "Hide Plans")
+        $(this).text("Upgrade Plans")
+    else
+        $(this).text("Hide Plans");
+
 });

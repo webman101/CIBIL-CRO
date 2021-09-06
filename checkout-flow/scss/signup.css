@@ -1803,6 +1803,10 @@ option:disabled {
   margin-bottom: 30px;
 }
 
+#plans-block-content {
+  padding: 35px 20px 40px;
+}
+
 @media screen and (max-width: 992px) {
   .paright {
     padding-right: 0;
@@ -1911,8 +1915,24 @@ option:disabled {
   letter-spacing: 0.02em;
   color: #ffffff;
 }
+.plan-outer-blue .plan-type p span {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
 .plan-outer-blue .plan-type span,
 .plan-outer-blue .plan-type a {
+  font-family: "Intro", Regular;
+  font-style: 400;
+  font-weight: normal;
+  font-size: 14px;
+  color: #ffffff;
+}
+.plan-outer-blue .plan-type span span,
+.plan-outer-blue .plan-type a span {
   font-family: "Intro", Regular;
   font-style: 400;
   font-weight: normal;
