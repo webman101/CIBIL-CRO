@@ -1831,8 +1831,9 @@ option:disabled {
 }
 @media screen and (max-width: 992px) {
   .flex-box-container .flex {
-    margin-right: 15px;
+    margin-right: 9px;
     padding: 10px 0px;
+    padding-left: 5px;
   }
 }
 @media screen and (min-width: 992px) {
