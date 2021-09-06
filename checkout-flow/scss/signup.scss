@@ -985,7 +985,7 @@ input[type="number"] {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #3EA3CE;
+    color: #3ea3ce;
     margin-bottom: 12px;
     font-family: "Intro", bold;
 }
@@ -1033,7 +1033,7 @@ h3.section-title-40 {
                 font-size: 16px;
                 font-family: "Intro", Bold;
                 text-transform: uppercase;
-                color: #3EA3CE;
+                color: #3ea3ce;
                 margin-bottom: 5px;
                 @media screen and (min-width: 992px) {
                     margin-bottom: 35px;
@@ -1074,7 +1074,7 @@ h3.section-title-40 {
     font-size: 14px;
     text-align: right;
     text-decoration-line: underline;
-    color: #3EA3CE;
+    color: #3ea3ce;
 }
 
 .container-top {
@@ -1179,15 +1179,13 @@ form.otp-form {
         justify-content: space-between;
     }
 }
-.error-footer{
-  @media screen and (min-width: 992px) {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-  }
-  
-  
+.error-footer {
+    @media screen and (min-width: 992px) {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
 }
 
 .footer {
@@ -1597,7 +1595,7 @@ input {
 }
 
 .sign-out {
-    color: #3EA3CE;
+    color: #3ea3ce;
 }
 
 .success-page {
@@ -1808,7 +1806,7 @@ option:disabled {
     letter-spacing: 0.02em;
     color: #2c2c2c;
     .tnc-link {
-        color: #3EA3CE;
+        color: #3ea3ce;
         font-weight: 600;
     }
 }
@@ -1823,14 +1821,30 @@ option:disabled {
 
 .enrollment {
     @media screen and (max-width: 992px) {
-        .container.paright {
+        .flex-box-container {
+            &::after {
+                // content: "";
+                // position: absolute;
+                // width: 20px;
+                // height: 110px;
+                // right: 0;
+                // top: 10px;
+                // background: #3ea3ce;
+            }
         }
     }
     .flex-box-container {
         .slick-list {
-            padding: 0 20% 0 0;
+            padding: 0 5% 0 0;
         }
     }
+}
+.evrollment-container-top{
+    @media screen and (max-width: 992px) {
+        padding-bottom:0;
+    }
+    
+    
 }
 .enrollment-button {
     button {
@@ -1857,8 +1871,7 @@ option:disabled {
     }
     .flex {
         @media screen and (max-width: 992px) {
-            margin-right: 28px;
-            margin-left: 20px;
+            margin-right: 15px;
             padding: 10px 0px;
             // padding-left: 7px;
         }
@@ -1877,7 +1890,7 @@ option:disabled {
         border-radius: 6px;
         padding: 24px 1px;
         @media screen and (max-width: 992px) {
-            transform: translateX(20px);
+          
         }
         margin-right: 20px;
         &:last-child {
@@ -1915,7 +1928,7 @@ option:disabled {
 }
 //////////////////////
 .plan-outer-blue {
-    background: #3EA3CE;
+    background: #3ea3ce;
 
     @media screen and (min-width: 992px) {
         border-radius: 5px;
@@ -1977,8 +1990,7 @@ option:disabled {
         @media screen and (min-width: 992px) {
             border-radius: 0 0 6px 6px;
         }
-        
-        
+
         .feature {
             width: 50%;
             padding-right: 20px;
@@ -2184,7 +2196,7 @@ option:disabled {
         flex: 1;
         &.active {
             margin-top: -1;
-            border: 3px solid #3EA3CE;
+            border: 3px solid #3ea3ce;
             margin-top: -34px;
         }
         border-radius: 6px;
@@ -2205,7 +2217,7 @@ option:disabled {
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
         &.active {
-            border: 0px solid #3EA3CE;
+            border: 0px solid #3ea3ce;
         }
         // border-radius: 6px;
         .coumn-head {
@@ -2273,7 +2285,7 @@ option:disabled {
         object-fit: contain;
     }
     .most-popular {
-        background: #3EA3CE;
+        background: #3ea3ce;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
         height: 30px;
@@ -2297,7 +2309,7 @@ option:disabled {
             height: 101%;
             left: -2px;
             top: -2%;
-            background: #3EA3CE;
+            background: #3ea3ce;
         }
     }
     .save {
@@ -2478,7 +2490,7 @@ option:disabled {
             &.active {
                 background: #fff;
                 /* border: 1px solid #fff; */
-                border: 2px solid #3EA3CE;
+                border: 2px solid #3ea3ce;
                 border-bottom: 2px solid #fff !important;
                 border-bottom: 0;
                 z-index: 1;
@@ -2498,7 +2510,7 @@ option:disabled {
 
     margin-bottom: 20px;
     &.active {
-        border: 2px solid #3EA3CE;
+        border: 2px solid #3ea3ce;
     }
     &.tab-pane-2 {
         border: 1px solid #dddddd;
@@ -2698,7 +2710,7 @@ option:disabled {
 
     .plans-block-content {
         padding: 55px 12px;
-        background: #3EA3CE;
+        background: #3ea3ce;
 
         @media screen and (min-width: 992px) {
             border-radius: 6px;
@@ -2707,7 +2719,7 @@ option:disabled {
     }
     .plans-block-header {
         @media screen and (min-width: 992px) {
-            background: #3EA3CE;
+            background: #3ea3ce;
             border-radius: 6px;
         }
     }
@@ -2820,24 +2832,21 @@ option:disabled {
             padding: 0 20px;
         }
     }
- 
 }
-.coupon-toggle{
-    .coupon-tab{
+.coupon-toggle {
+    .coupon-tab {
         padding-top: 30px;
     }
-    .toggle-code-input{
+    .toggle-code-input {
         padding-bottom: 30px;
     }
 }
 
-.martop-mobile{
+.martop-mobile {
     @media screen and (max-width: 992px) {
-        margin-top:40px;
+        margin-top: 40px;
         padding-top: 0 !important;
     }
-    
-    
 }
 .plans-radio-price {
     font-size: 16px;
@@ -2969,8 +2978,8 @@ option:disabled {
     }
 }
 /////////////////////////////////@at-root
-.features-carousel{
-    .slick-dots{
+.features-carousel {
+    .slick-dots {
         margin-top: -4px;
         margin-bottom: 10px;
     }
@@ -2986,10 +2995,9 @@ option:disabled {
     justify-content: space-between;
     padding: 20px;
     @media screen and (max-width: 992px) {
-        margin-top:20px !important;
+        margin-top: 20px !important;
     }
-    
-    
+
     .toggle-text {
         margin-bottom: 0;
     }
@@ -3037,7 +3045,7 @@ option:disabled {
     color: #2c2c2c;
 }
 .input-focus {
-    border: 2px solid #3EA3CE !important;
+    border: 2px solid #3ea3ce !important;
 }
 
 .digit-group {
