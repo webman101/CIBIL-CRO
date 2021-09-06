@@ -1974,6 +1974,11 @@ option:disabled {
         padding: 30px 20px;
         display: flex;
         flex-wrap: wrap;
+        @media screen and (min-width: 992px) {
+            border-radius: 0 0 6px 6px;
+        }
+        
+        
         .feature {
             width: 50%;
             padding-right: 20px;
@@ -2696,12 +2701,14 @@ option:disabled {
         background: #00a6ca;
 
         @media screen and (min-width: 992px) {
+            border-radius: 6px;
             padding: 55px 20px;
         }
     }
     .plans-block-header {
         @media screen and (min-width: 992px) {
             background: #00a6ca;
+            border-radius: 6px;
         }
     }
 
