@@ -129,8 +129,10 @@ $('.arrow-img-2').click(function(e) {
     $(this).toggleClass('rotate', 1000);
 });
 
-
+yes
 $('#1mon').prop('checked', true);
+$('#yes').prop('checked', true);
+
 
 
 $('.radio-set-1').change(function() {
