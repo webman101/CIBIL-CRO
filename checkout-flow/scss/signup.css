@@ -1809,6 +1809,14 @@ option:disabled {
   padding: 0 7px;
   margin-right: -5px;
 }
+@media screen and (max-width: 992px) {
+  .bg-yellow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+  }
+}
 
 .flex-box-container {
   margin-bottom: 40px;

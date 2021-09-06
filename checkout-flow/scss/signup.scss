@@ -1859,6 +1859,14 @@ option:disabled {
     background: #fcd800;
     padding: 0 7px;
     margin-right: -5px;
+@media screen and (max-width: 992px) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+}
+
+
 }
 
 .flex-box-container {
