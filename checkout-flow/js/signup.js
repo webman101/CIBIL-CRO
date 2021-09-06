@@ -183,6 +183,10 @@ $('#address').keyup(function(e) {
     }
 });
 
+$('.standard-plan-check input').prop('checked', true);
+$('.standard-plan-check-2 input').prop('checked', true);
+
+
 var discount = 0;
 $(document).ready(function() {
     $('.plans-radio-row .plans-list').on('change', function() {
