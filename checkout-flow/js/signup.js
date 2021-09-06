@@ -14,6 +14,10 @@
 //         ele[val - 2].focus()
 //     }
 // }
+$('.otp').click(function(e) {
+    $(this).addClass('input-focus');
+});
+
 $(".otp").keyup(function () {
     if (this.value.length == this.maxLength) {
       $(this).removeClass('input-focus').next('.otp').focus().addClass('input-focus');
@@ -32,9 +36,6 @@ $('#pincode').keyup(function(e) {
         $("#loan-button").attr("href", "https://ajency.github.io/CIBIL-CRO/checkout-flow/checkout")
         $('#loan-button').removeClass('disabled');
     }
-});
-$('.otp').click(function(e) {
-        $(this).addClass('input-focus');
 });
 
 
@@ -133,6 +134,7 @@ $(document).ready(function() {
 $('.toggle-code-input').slideUp();
 
 $('.toggle-code-input-2').slideDown();
+$('.arrow-img-2').addClass('rotate', 1000);
 
 
 $('.arrow-img-1').click(function(e) {
