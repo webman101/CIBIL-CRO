@@ -2636,7 +2636,7 @@ option:disabled {
 @media screen and (min-width: 992px) {
   .checkout .plans-block-content {
     border-radius: 6px;
-    padding: 55px 20px;
+    padding: 55px 20px 40px;
   }
 }
 @media screen and (min-width: 992px) {
