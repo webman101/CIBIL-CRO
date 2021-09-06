@@ -224,7 +224,14 @@ h6 {
         margin-top: 60px;
     }
 }
+.d-none {
+    display: none;
 
+    @media screen and (min-width: 992px) {
+        display: inline-block;
+
+    }
+}
 .mr {
     &-3 {
         margin-right: 30px;
@@ -1839,12 +1846,10 @@ option:disabled {
         }
     }
 }
-h3.mb-2{
+h3.mb-2 {
     @media screen and (max-width: 992px) {
-        margin-bottom:5px !important;
+        margin-bottom: 5px !important;
     }
-    
-    
 }
 .evrollment-container-top {
     @media screen and (max-width: 992px) {
@@ -1856,8 +1861,8 @@ h3.mb-2{
         margin-bottom: 30px;
     }
 }
-#plans-block-content{
-        padding: 35px 20px 40px;
+#plans-block-content {
+    padding: 35px 20px 40px;
 }
 .paright {
     @media screen and (max-width: 992px) {
@@ -1888,8 +1893,8 @@ h3.mb-2{
     .flex {
         @media screen and (max-width: 992px) {
             margin-right: 9px;
-    padding: 10px 0px;
-    padding-left: 5px;
+            padding: 10px 0px;
+            padding-left: 5px;
         }
         @media screen and (min-width: 992px) {
             margin-right: 20px;
@@ -1961,7 +1966,7 @@ h3.mb-2{
             font-size: 24px;
             letter-spacing: 0.02em;
             color: #ffffff;
-            span{
+            span {
                 font-family: "Intro", Bold;
                 font-style: normal;
                 font-weight: bold;
@@ -1977,7 +1982,7 @@ h3.mb-2{
             font-weight: normal;
             font-size: 14px;
             color: #ffffff;
-            span{
+            span {
                 font-family: "Intro", Regular;
                 font-style: 400;
                 font-weight: normal;
