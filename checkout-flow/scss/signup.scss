@@ -1839,6 +1839,13 @@ option:disabled {
         }
     }
 }
+h3.mb-2{
+    @media screen and (max-width: 992px) {
+        margin-bottom:5px !important;
+    }
+    
+    
+}
 .evrollment-container-top {
     @media screen and (max-width: 992px) {
         padding-bottom: 0;

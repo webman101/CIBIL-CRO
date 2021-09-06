@@ -1788,6 +1788,12 @@ option:disabled {
 }
 
 @media screen and (max-width: 992px) {
+  h3.mb-2 {
+    margin-bottom: 5px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .evrollment-container-top {
     padding-bottom: 0;
   }
