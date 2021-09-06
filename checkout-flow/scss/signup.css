@@ -1815,6 +1815,8 @@ option:disabled {
     align-items: center;
     justify-content: center;
     line-height: 30px;
+    transform: translateY(0px);
+    padding-top: 3px;
   }
 }
 
