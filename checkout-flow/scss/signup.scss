@@ -1010,7 +1010,13 @@ h3.section-title-40 {
         margin-bottom: 298px;
     }
 }
-
+.verification-container{
+    @media screen and (min-width: 992px) {
+        margin-bottom: 50px;
+    }
+    
+    
+}
 .verify-card {
     background: #f9f9f9;
     border-top: 4px solid#DDDDDD;
