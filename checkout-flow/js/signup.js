@@ -133,7 +133,7 @@ $('.plans-list').click(function(e) {
     $('.upgrade-link').show();
 
     var onemon = $(this).attr("value");
-    $('.price').text(onemon)
+    $('.price').text('₹' + onemon)
     $('.plan-value p').text('₹' + onemon)
 
 
@@ -146,6 +146,8 @@ $('.plans-list').click(function(e) {
     var month = $(this).attr("data-nobet");
     $('.month-change').text(month)
    $('.base-none').show();
+   $('.base-none').removeClass('hide');
+
 
 });
 $('.plans-list').click(function(e) {
@@ -156,6 +158,8 @@ $('.plans-list').click(function(e) {
 
 $('.1mon').click(function() {
    $('.base-none').hide();
+   $('.base-none').addClass('hide');
+
 });
 // var emailid = $('#emailId').val();
 // if (emailid) {
