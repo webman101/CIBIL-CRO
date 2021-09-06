@@ -14,10 +14,22 @@ let tabChange = function(val) {
     }
 }
 
+
 $('.otp-6').keyup(function(e) {
     if ($(this).val() != '') {
+        $(this).addClass('disabled');
+
         $('#otp-btn').removeClass('disabled');
     }
+});
+$('#pincode').keyup(function(e) {
+    if ($(this).val() != '') {
+        $("#loan-button").attr("href", "https://ajency.github.io/CIBIL-CRO/checkout-flow/checkout")
+        $('#loan-button').removeClass('disabled');
+    }
+});
+$('.otp').click(function(e) {
+        $(this).addClass('input-focus');
 });
 
 
