@@ -107,12 +107,23 @@ $(".password-eye").click(function() {
 $('.plans-radio-col').click(function(e) {
     $('.plans-radio-col').removeClass('active');
     $(this).addClass('active');
-
 });
 
 
 
+$('.plans-list').click(function(e) {
+    var onemon = $(this).attr("value");
+    $('.price').text(onemon)
+});
 
+$('.plans-list').click(function(e) {
+    var month = $(this).attr("data-nobet");
+    $('.month-change').text(month)
+});
+$('.plans-list').click(function(e) {
+    var month = $(this).attr("data-name");
+    $('.plan-nam').text(month)
+});
 var discount = 0;
 $(document).ready(function() {
     $('.plans-radio-row .plans-list').on('change', function() {
