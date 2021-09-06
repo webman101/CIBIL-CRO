@@ -111,6 +111,7 @@ $('.plans-radio-col').click(function(e) {
 
 
 
+
 $('.plans-list').click(function(e) {
     var onemon = $(this).attr("value");
     $('.price').text(onemon)
