@@ -151,7 +151,27 @@ $('.plans-list').click(function(e) {
     $('.plan-nam').text(month)
 });
 
+// var emailid = $('#emailId').val();
+// if (emailid) {
+//     if (!IsEmail(emailid)) {
+//         $('#emailId').parent().addClass("error");
+//         $('#emailId').parent().find('.input-error').text('Please enter a valid email id.');
+//         validate = false;
+//     } else if (emailid == 'test@test.com') {
+//         $('#emailId').parent().addClass("error");
+//         $('#emailId').parent().find('.input-error').text('Account with this email id already exists');
+//         validate = false;
+//     } else {
+//         $('#emailId').parent().removeClass("error");
+//     }
+// }
 
+$('#address').keyup(function (e) { 
+    e.preventDefault();
+    if ($('#address').val().length !== 0) {
+       
+      }
+});
 
 var discount = 0;
 $(document).ready(function() {
@@ -172,8 +192,15 @@ $(document).ready(function() {
             $(".u-text").text("Change Plan");
         }
     });
-
-
+});
+$('#xul option').each(function() {
+ $(this).click(function (e) { 
+     e.preventDefault();
+     if (this.selected){
+        alert('this option is selected');
+     }
+     
+ });
 });
 
 
@@ -244,14 +271,14 @@ $(function() {
 
 
 // });
-$('.plans-block-content').slideUp();
+$('.plans-block-content-22').slideUp();
 $('.plans-block-mobile').slideUp();
 
 
 $(".upgrade-link").click(function(e) {
     e.preventDefault();
 
-    $(".plans-block-content").slideToggle("slow");
+    $(".plans-block-content-22").slideToggle("slow");
     $('.plans-block-mobile').slideToggle();
 
     $(this).toggleClass("active");
