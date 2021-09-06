@@ -130,11 +130,16 @@ $('.plans-radio-col').click(function(e) {
 
 
 $('.plans-list').click(function(e) {
+    $('.upgrade-link').show();
+
     var onemon = $(this).attr("value");
     $('.price').text(onemon)
-    $('.plan-value p').text('₹'+ onemon)
+    $('.plan-value p').text('₹' + onemon)
 
-    
+
+});
+$('#12mon.plans-list').click(function(e) {
+    $('.upgrade-link').hide();
 });
 
 $('.plans-list').click(function(e) {
@@ -145,6 +150,9 @@ $('.plans-list').click(function(e) {
     var month = $(this).attr("data-name");
     $('.plan-nam').text(month)
 });
+
+
+
 var discount = 0;
 $(document).ready(function() {
     $('.plans-radio-row .plans-list').on('change', function() {
@@ -244,7 +252,7 @@ $(".upgrade-link").click(function(e) {
     e.preventDefault();
 
     $(".plans-block-content").slideToggle("slow");
-        $('.plans-block-mobile').slideToggle();
+    $('.plans-block-mobile').slideToggle();
 
     $(this).toggleClass("active");
 
