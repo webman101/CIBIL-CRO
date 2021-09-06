@@ -249,34 +249,33 @@ h6 {
 }
 
 @media screen and (min-width: 992px) {
-    .yellow-title{
+    .yellow-title {
         display: inline-flex;
         justify-content: center;
         align-items: center;
         line-height: 0;
-        
-        span{
+
+        span {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 50px;
         }
-        .bg-yellow{
+        .bg-yellow {
             margin-right: 5px;
             padding-top: 3px;
         }
     }
 }
 
-
 .justify-between {
     display: flex;
     justify-content: space-between;
 }
-.justify-center{
+.justify-center {
     justify-content: center;
 }
-.display-vertical-center{
+.display-vertical-center {
     display: flex;
     align-items: center;
 }
@@ -2061,18 +2060,15 @@ option:disabled {
         color: #2c2c2c;
     }
 }
-.testimonial-slider{
-    
-.slick-dots {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 76px;
-    @media screen and (min-width: 992px) {
-        padding-left: 96px;
+.testimonial-slider {
+    .slick-dots {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 76px;
+        @media screen and (min-width: 992px) {
+            padding-left: 96px;
+        }
     }
-    
-    
-}
 }
 .play-store {
     img {
@@ -2325,12 +2321,16 @@ option:disabled {
         border-top: 0;
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
+        line-height: 30px;
         span {
             position: relative;
             z-index: 2;
             width: 100%;
-            height: 100%;
-            bottom: -4px;
+            height: 30px;
+            bottom: -1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 }
@@ -2674,13 +2674,11 @@ option:disabled {
 /////////////////////////////////////////////////////////
 .checkout {
     .label-blue {
-     @media screen and (max-width: 992px) {
-         padding:20px;
-     }
-     
-     
+        @media screen and (max-width: 992px) {
+            padding: 20px;
+        }
     }
-    
+
     .plans-block-content {
         padding: 55px 12px;
         background: #00a6ca;
@@ -2690,11 +2688,9 @@ option:disabled {
         }
     }
     .plans-block-header {
-       @media screen and (min-width: 992px) {
-        background: #00a6ca;
-       }
-       
-       
+        @media screen and (min-width: 992px) {
+            background: #00a6ca;
+        }
     }
 
     .plans-radio-col {
@@ -2800,12 +2796,10 @@ option:disabled {
             padding-right: 30px;
         }
     }
-    .col-md-5{
+    .col-md-5 {
         @media screen and (max-width: 992px) {
-            padding:0 20px;
+            padding: 0 20px;
         }
-        
-        
     }
 }
 
@@ -2841,16 +2835,13 @@ option:disabled {
 .account-details {
     margin-bottom: 40px;
     @media screen and (max-width: 992px) {
-        margin-right:15px;
-        margin-left:15px;
-
+        margin-right: 15px;
+        margin-left: 15px;
     }
-    
-    
-@media screen and (min-width: 992px) {
-    margin-bottom: 144px;
-}
 
+    @media screen and (min-width: 992px) {
+        margin-bottom: 144px;
+    }
 
     .title {
         font-family: "Intro", Book;
@@ -2941,13 +2932,10 @@ option:disabled {
     }
 }
 /////////////////////////////////@at-root
-.coupon-toggle{
+.coupon-toggle {
     @media screen and (max-width: 992px) {
         margin-bottom: 40px;
-
     }
-    
-    
 }
 .coupon-tab {
     background: #f9f9f9;
@@ -2964,7 +2952,7 @@ option:disabled {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
     }
-    .label-blue{
+    .label-blue {
         padding: 0;
     }
 }
@@ -2991,7 +2979,7 @@ option:disabled {
 }
 
 .mobile-title {
-    font-family: 'Intro', Bold;
+    font-family: "Intro", Bold;
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
@@ -2999,32 +2987,32 @@ option:disabled {
     text-transform: uppercase;
     color: #2c2c2c;
 }
-.input-focus{
-    border: 2px solid #00A6CA !important; 
+.input-focus {
+    border: 2px solid #00a6ca !important;
 }
 
 .digit-group {
-	input {
-		width: 30px;
-		height: 50px;
-		border: none;
-		line-height: 50px;
-		text-align: center;
-		font-size: 24px;
-		font-family: 'Raleway', sans-serif;
-		font-weight: 200;
-		margin: 0 2px;
-	}
+    input {
+        width: 30px;
+        height: 50px;
+        border: none;
+        line-height: 50px;
+        text-align: center;
+        font-size: 24px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 200;
+        margin: 0 2px;
+    }
 
-	.splitter {
-		padding: 0 5px;
-		color: white;
-		font-size: 24px;
-	}
+    .splitter {
+        padding: 0 5px;
+        color: white;
+        font-size: 24px;
+    }
 }
 
 .prompt {
-	margin-bottom: 20px;
-	font-size: 20px;
-	color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: white;
 }
