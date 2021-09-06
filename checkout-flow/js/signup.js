@@ -1,4 +1,3 @@
-
 //////////////
 // let digitValidate = function(ele) {
 //     ele.value = ele.value.replace(/[^0-9]/g, '');
@@ -18,9 +17,9 @@ $('.otp').click(function(e) {
     $(this).addClass('input-focus');
 });
 
-$(".otp").keyup(function () {
+$(".otp").keyup(function() {
     if (this.value.length == this.maxLength) {
-      $(this).removeClass('input-focus').next('.otp').focus().addClass('input-focus');
+        $(this).removeClass('input-focus').next('.otp').focus().addClass('input-focus');
     }
 });
 
@@ -102,6 +101,13 @@ $(".password-eye").click(function() {
     } else {
         input.attr("type", "password");
     }
+});
+
+
+$('.plans-radio-col').click(function(e) {
+    $('.plans-radio-col').removeClass('active');
+    $(this).addClass('active');
+
 });
 
 
