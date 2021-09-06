@@ -1587,7 +1587,7 @@ input {
         .section-subtitle-1 {
             margin-top: 24px;
             @media screen and (max-width: 992px) {
-                margin-bottom: 40px;
+                margin-bottom: 0;
             }
 
             @media screen and (min-width: 992px) {
@@ -2961,4 +2961,30 @@ option:disabled {
 }
 .input-focus{
     border: 2px solid #00A6CA !important; 
+}
+
+.digit-group {
+	input {
+		width: 30px;
+		height: 50px;
+		border: none;
+		line-height: 50px;
+		text-align: center;
+		font-size: 24px;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 200;
+		margin: 0 2px;
+	}
+
+	.splitter {
+		padding: 0 5px;
+		color: white;
+		font-size: 24px;
+	}
+}
+
+.prompt {
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: white;
 }
