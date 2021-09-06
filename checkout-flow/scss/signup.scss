@@ -2822,6 +2822,15 @@ option:disabled {
     }
  
 }
+.coupon-toggle{
+    .coupon-tab{
+        padding-top: 30px;
+    }
+    .toggle-code-input{
+        padding-bottom: 30px;
+    }
+}
+
 .martop-mobile{
     @media screen and (max-width: 992px) {
         margin-top:40px;
@@ -2949,6 +2958,7 @@ option:disabled {
     color: #333333;
     padding: 1px 10px;
     border-radius: 0px 0px 6px 6px;
+    margin-top: -10px;
     @media screen and (max-width: 992px) {
         margin-top: -10px;
     }
