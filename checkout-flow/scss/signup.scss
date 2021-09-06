@@ -2060,7 +2060,19 @@ option:disabled {
         color: #2c2c2c;
     }
 }
-
+.testimonial-slider{
+    
+.slick-dots {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 76px;
+    @media screen and (min-width: 992px) {
+        padding-left: 96px;
+    }
+    
+    
+}
+}
 .play-store {
     img {
         width: 24px;
