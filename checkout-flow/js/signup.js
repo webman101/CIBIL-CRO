@@ -1,8 +1,22 @@
+
+//////////////
+// let digitValidate = function(ele) {
+//     ele.value = ele.value.replace(/[^0-9]/g, '');
+// }
+// var elems = document.querySelectorAll(".widget.hover");
+// let tabChange = function(val) {
+//     let ele = document.querySelectorAll('input');
+//     if (ele[val - 1].value != '') {
+//         ele[val].focus();
+//         ele.classList.add("mystyle");
+
+//     } else if (ele[val - 1].value == '') {
+//         ele[val - 2].focus()
+//     }
+// }
 $(".otp").keyup(function () {
     if (this.value.length == this.maxLength) {
-      $(this).next('.otp').focus();
-      $(this).removeClass("input-focus").next('.otp').addClass('input-focus');
-
+      $(this).removeClass('input-focus').next('.otp').focus().addClass('input-focus');
     }
 });
 
@@ -132,7 +146,7 @@ $('.arrow-img-2').click(function(e) {
     $(this).toggleClass('rotate', 1000);
 });
 
-yes
+
 $('#1mon').prop('checked', true);
 $('#yes').prop('checked', true);
 
