@@ -15,13 +15,15 @@
 // }
 $('.otp').click(function(e) {
     $('.otp.input-focus').removeClass('input-focus');
-    
     $(this).addClass('input-focus');
 });
 
 $(".otp").keyup(function() {
     if (this.value.length == this.maxLength) {
         $(this).removeClass('input-focus').next('.otp').focus().addClass('input-focus');
+    } else {
+        $(this).removeClass('input-focus').prev('.otp').focus().addClass('input-focus');
+
     }
 });
 
@@ -30,6 +32,10 @@ $('.otp-6').keyup(function(e) {
         $(this).addClass('disabled');
 
         $('#otp-btn').removeClass('disabled');
+    }
+    else{
+        $('#otp-btn').addClass('disabled');
+
     }
 });
 $('#pincode').keyup(function(e) {
