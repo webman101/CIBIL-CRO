@@ -1034,7 +1034,7 @@ h3.section-title-40 {
 }
 
 .container-top {
-  padding: 40px 0 0;
+  padding: 40px 0 30px;
 }
 @media screen and (min-width: 992px) {
   .container-top {
@@ -1052,7 +1052,7 @@ h3.section-title-40 {
 
 @media screen and (min-width: 992px) {
   .d-md-inline-block {
-    display: inline-block;
+    display: inline-block !important;
   }
 }
 
@@ -2880,4 +2880,8 @@ option:disabled {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #2c2c2c;
+}
+
+.input-focus {
+  border: 2px solid #00A6CA !important;
 }/*# sourceMappingURL=signup.css.map */

@@ -1052,7 +1052,7 @@ h3.section-title-40 {
 }
 
 .container-top {
-    padding: 40px 0 0;
+    padding: 40px 0 30px;
     @media screen and (min-width: 992px) {
         padding: 40px 0;
     }
@@ -1067,7 +1067,7 @@ h3.section-title-40 {
 
 .d-md-inline-block {
     @media screen and (min-width: 992px) {
-        display: inline-block;
+        display: inline-block !important;
     }
 }
 
@@ -2958,4 +2958,7 @@ option:disabled {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #2c2c2c;
+}
+.input-focus{
+    border: 2px solid #00A6CA !important; 
 }
