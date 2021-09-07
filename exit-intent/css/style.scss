@@ -35,6 +35,18 @@ $color: #3ea3ce;
 .outer {
     height: 300vh;
 }
+@media screen and (max-width: 992px) {
+    .m-hidden {
+        display: none;
+    }
+}
+.m-vissible {
+    display: inline-block;
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
+
 .exit-intent-popup {
     height: 100%;
     background: #e5e5e5;
@@ -42,8 +54,6 @@ $color: #3ea3ce;
         .container,
         .row {
             height: 100%;
-        }
-        .row {
         }
         .logo {
             width: 130px;
@@ -73,11 +83,10 @@ $color: #3ea3ce;
     }
 }
 @media screen and (max-width: 992px) {
-    .text-right-block{
+    .text-right-block {
         padding: 25px;
     }
 }
-
 
 .text-block {
     @media screen and (min-width: 992px) {
@@ -223,12 +232,12 @@ input::placeholder {
     outline: 0;
     text-transform: uppercase;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
+    margin: 0;
 }
 ////////////////////// popup css
 .close {

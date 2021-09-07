@@ -33,6 +33,20 @@ body {
   height: 300vh;
 }
 
+@media screen and (max-width: 992px) {
+  .m-hidden {
+    display: none;
+  }
+}
+.m-vissible {
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .m-vissible {
+    display: none;
+  }
+}
+
 .exit-intent-popup {
   height: 100%;
   background: #e5e5e5;
