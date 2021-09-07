@@ -193,7 +193,7 @@ input::placeholder {
     margin-bottom: 12px;
     & > div {
         margin-top: -5px;
-        margin-right: 8px;
+        margin-right: 6px;
     }
     p {
         @include font-intro-book;
@@ -221,6 +221,7 @@ input::placeholder {
     border-radius: 0;
     border: 0;
     outline: 0;
+    text-transform: uppercase;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 

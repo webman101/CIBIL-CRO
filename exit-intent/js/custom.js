@@ -54,3 +54,6 @@ const exit = e => {
 };
 
 document.querySelector('.exit-intent-popup').addEventListener('click', exit);
+$(window).on('popstate', function(event) {
+    alert("pop");
+   });

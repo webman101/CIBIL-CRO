@@ -223,7 +223,7 @@ input::placeholder {
 }
 .check-box-input > div {
   margin-top: -5px;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 .check-box-input p {
   font-family: "Intro", Book;
@@ -252,6 +252,7 @@ input::placeholder {
   border-radius: 0;
   border: 0;
   outline: 0;
+  text-transform: uppercase;
 }
 
 input[type=number]::-webkit-inner-spin-button,
