@@ -5,7 +5,7 @@ $(document).ready(function($) {
             name: "required",
             password: {
                 required: true,
-                minlength: 6
+                minlength: 10
             },
             city: "required",
             gender: "required"
@@ -14,8 +14,8 @@ $(document).ready(function($) {
         messages: {
             name: "Please enter your Name",
             password: {
-                required: "Please provide a password",
-                minlength: "Your password must be at least 6 characters long"
+                required: "Please enter your Number",
+                minlength: "Your Number must be at 10 characters long"
             },
             city: "Please enter your city",
             gender: "This field is required"
@@ -33,6 +33,9 @@ $(document).ready(function($) {
 
     });
 });
+
+
+
 const mouseEvent = e => {
     if (!e.toElement && !e.relatedTarget && e.clientY < 10) {
         document.removeEventListener('mouseout', mouseEvent);
