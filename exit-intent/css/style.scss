@@ -16,9 +16,9 @@ $color: #3ea3ce;
     @include font-intro-regular;
     @media screen and (min-width: 992px) {
         font-size: 1.8em;
+        line-height: 42px;
     }
 
-    line-height: 42px;
     color: #302e46;
 }
 .subtitle {
@@ -26,9 +26,9 @@ $color: #3ea3ce;
 
     @media screen and (min-width: 992px) {
         font-size: 1.5em;
+        line-height: 24px;
     }
 
-    line-height: 24px;
     color: #302e46;
     opacity: 0.95;
 }
@@ -68,13 +68,26 @@ $color: #3ea3ce;
 }
 .text-right-block {
     background-color: #fff;
-
-    display: flex;
-    align-items: center;
+    @media screen and (min-width: 992px) {
+        width: max-content;
+    }
 }
+@media screen and (max-width: 992px) {
+    .text-right-block{
+        padding: 25px;
+    }
+}
+
+
 .text-block {
     @media screen and (min-width: 992px) {
-        padding: 30px 90px 30px 80px;
+        max-width: 558px;
+        padding: 0 47px;
+        padding-right: 0;
+        position: relative;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
     }
 
     .title {
@@ -193,7 +206,8 @@ input::placeholder {
     }
 }
 #submit {
-    width: 435px;
+    max-width: 435px;
+    width: 100%;
     height: 44px;
     background: #f16e33;
     font-family: "Intro", Regular;
