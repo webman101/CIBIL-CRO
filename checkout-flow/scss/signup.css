@@ -2799,7 +2799,8 @@ option:disabled {
 }
 
 .coupon-toggle .coupon-tab {
-  padding-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 .coupon-toggle .toggle-code-input {
   padding-bottom: 30px;
