@@ -48,7 +48,7 @@ document.addEventListener('mouseout', mouseEvent);
 
 
 const exit = e => {
-    if (e.target.className === 'close') {
+    if (e.target.className === 'close-tab') {
         document.querySelector('.exit-intent-popup').classList.remove('visible');
     }
 };
