@@ -158,7 +158,7 @@ input::-moz-placeholder {
   font-style: normal;
   font-weight: normal;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 24px;
   color: #777777;
 }
@@ -168,7 +168,7 @@ input:-ms-input-placeholder {
   font-style: normal;
   font-weight: normal;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 24px;
   color: #777777;
 }
@@ -178,7 +178,7 @@ input::placeholder {
   font-style: normal;
   font-weight: normal;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 24px;
   color: #777777;
 }
