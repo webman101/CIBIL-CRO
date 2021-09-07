@@ -1,3 +1,6 @@
+body {
+    font-size: 16px;
+}
 $color: #3ea3ce;
 @mixin font-intro-regular {
     font-family: "Intro", Regular;
@@ -11,19 +14,25 @@ $color: #3ea3ce;
 }
 .title {
     @include font-intro-regular;
-    font-size: 30px;
+    @media screen and (min-width: 992px) {
+        font-size: 1.8em;
+    }
+
     line-height: 42px;
     color: #302e46;
 }
 .subtitle {
     @include font-intro-book;
 
-    font-size: 24px;
+    @media screen and (min-width: 992px) {
+        font-size: 1.5em;
+    }
+
     line-height: 24px;
     color: #302e46;
     opacity: 0.95;
 }
-.outer{
+.outer {
     height: 300vh;
 }
 .exit-intent-popup {
@@ -64,7 +73,10 @@ $color: #3ea3ce;
     align-items: center;
 }
 .text-block {
-    padding: 30px 90px 30px 45px;
+    @media screen and (min-width: 992px) {
+        padding: 30px 90px 30px 80px;
+    }
+
     .title {
         margin-bottom: 20px;
         font-weight: 600;
@@ -98,6 +110,9 @@ label {
 }
 label.error:before {
     display: none;
+}
+input {
+    max-width: 435px;
 }
 input:focus {
     color: #212529;
@@ -169,6 +184,7 @@ input::placeholder {
     }
     p {
         @include font-intro-book;
+        max-width: 400px;
 
         font-size: 11px;
         line-height: 15px;
@@ -180,7 +196,7 @@ input::placeholder {
     width: 435px;
     height: 44px;
     background: #f16e33;
-    font-family: 'Intro', Regular;
+    font-family: "Intro", Regular;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

@@ -1,20 +1,32 @@
+body {
+  font-size: 16px;
+}
+
 .title {
   font-family: "Intro", Regular;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
   line-height: 42px;
   color: #302e46;
+}
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: 1.8em;
+  }
 }
 
 .subtitle {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
   line-height: 24px;
   color: #302e46;
   opacity: 0.95;
+}
+@media screen and (min-width: 992px) {
+  .subtitle {
+    font-size: 1.5em;
+  }
 }
 
 .outer {
@@ -55,8 +67,10 @@
   align-items: center;
 }
 
-.text-block {
-  padding: 30px 90px 30px 45px;
+@media screen and (min-width: 992px) {
+  .text-block {
+    padding: 30px 90px 30px 80px;
+  }
 }
 .text-block .title {
   margin-bottom: 20px;
@@ -95,6 +109,10 @@ label {
 
 label.error:before {
   display: none;
+}
+
+input {
+  max-width: 435px;
 }
 
 input:focus {
@@ -195,6 +213,7 @@ input::placeholder {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
+  max-width: 400px;
   font-size: 11px;
   line-height: 15px;
   color: #000000;
