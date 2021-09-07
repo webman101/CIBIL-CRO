@@ -3,7 +3,7 @@ $(document).ready(function($) {
     $("#register-form").validate({
         rules: {
             name: "required",
-            password: {
+            number: {
                 required: true,
                 minlength: 10
             },
@@ -13,7 +13,7 @@ $(document).ready(function($) {
         },
         messages: {
             name: "Please enter your Name",
-            password: {
+            number: {
                 required: "Please enter your Number",
                 minlength: "Your Number must be at 10 characters long"
             },
@@ -54,6 +54,3 @@ const exit = e => {
 };
 
 document.querySelector('.exit-intent-popup').addEventListener('click', exit);
-$(window).on('popstate', function(event) {
-    alert("pop");
-   });
