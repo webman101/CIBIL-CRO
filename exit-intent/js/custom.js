@@ -54,3 +54,8 @@ const exit = e => {
 };
 
 document.querySelector('.exit-intent-popup').addEventListener('click', exit);
+
+
+window.addEventListener("beforeunload", function(event) {
+    alert();
+});
