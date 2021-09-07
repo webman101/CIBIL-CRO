@@ -206,7 +206,6 @@ input::placeholder {
   content: "";
   -webkit-appearance: none;
   background-color: transparent;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
   width: 15px;
   height: 15px;
   display: inline-block;
@@ -214,20 +213,19 @@ input::placeholder {
   vertical-align: middle;
   cursor: pointer;
   margin-right: 5px;
-  background: #3ea3ce;
+  border: 1.5px solid #3ea3ce;
 }
 
 .form-group input[type=checkbox]:checked + .check:after {
   content: "";
   display: block;
   position: absolute;
-  top: 8px;
-  left: 5px;
-  width: 5px;
-  height: 8px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  top: 6px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/tick.png);
+  background-position: center;
 }
 
 .check-box-input {
