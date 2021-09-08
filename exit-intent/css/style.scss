@@ -138,17 +138,36 @@ label.error {
     font-size: 11px;
 }
 label {
-    @include font-intro-regular;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    color: $color;
-    margin-bottom: 5px;
-    letter-spacing: 0.02em;
+}
+.label-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .label {
+        @include font-intro-regular;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $color;
+        margin-bottom: 2px;
+        letter-spacing: 0.02em;
+        padding-bottom: 0;
+        color: #000000;
 
-    color: #000000;
-
-    opacity: 0.75;
+        opacity: 0.75;
+        padding-left: 0;
+    }
+    .required {
+        font-family: "Intro", Book;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: right;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        opacity: 0.75;
+    }
 }
 label.error:before {
     display: none;
@@ -161,7 +180,6 @@ input {
 }
 .form-control {
     height: 50px;
-    padding-bottom: 30px;
 }
 input:focus {
     color: #212529;
@@ -180,7 +198,9 @@ input::placeholder {
 #checkbox {
     background: #3ea3ce;
 }
-
+.form-group{
+    margin-bottom: 30px;
+}
 .form-group input[type="checkbox"] {
     padding: 0;
     height: initial;
@@ -206,7 +226,7 @@ input::placeholder {
     vertical-align: middle;
     cursor: pointer;
     margin-right: 5px;
-    border: 1px solid #2C2C2C;
+    border: 1px solid #2c2c2c;
     box-sizing: border-box;
     border-radius: 4px;
 }
@@ -266,7 +286,7 @@ input::placeholder {
     border-radius: 50px !important;
     border: 0 !important;
     outline: 0 !important;
-    
+
     display: inline-flex;
     align-items: center;
     justify-content: center;

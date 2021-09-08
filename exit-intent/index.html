@@ -39,13 +39,19 @@
     
     
                                     <div class="form-group">
-                                        <label for="name">Full Name</label>
+                                        <div class="label-flex">
+                                            <span class="label">Full Name</span>
+                                            <span class="required">Required</span>
+                                        </div>
                                         <input class="form-control" type="text" name="name" >
                                     </div>
     
     
                                     <div class="form-group">
-                                        <label for="number">Contact number</label>
+                                        <div class="label-flex">
+                                            <span class="label">Contact number</span>
+                                            <span class="required">Required</span>
+                                        </div>
                                         <input class="form-control" type="number" name="number"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10">
                                     </div>
     
@@ -57,7 +63,7 @@
                                         <p>I/We understand that by providing mobile number, I/ we agree to receive communication from TransUnion CIBIL with reference to the services sought by me/us.</p>
                                     </div>
                                     <div class="form-group">
-                                        <input class="btn btn-primary" id="submit" type="submit" name="Submit Query">
+                                        <input class="btn btn-primary" id="submit" type="submit" name="Submit Query" value="Submit Query">
                                     </div>
                                 </div>
     
