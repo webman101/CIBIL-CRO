@@ -59,7 +59,7 @@ $(document).ready(function() {
         $('#12monthsc').prop('checked', true);
     });
     $('#interstitial-modal2').on('show.bs.modal', function() {
-        $('#12months').prop('checked', true);
+        $('#1month').prop('checked', true);
     });
     $('.review-slider').slick({
         dots: true,
@@ -163,12 +163,9 @@ $(document).on('keyup', function(evt) {
 });
 
 
-$('.1monthtrikeout').addClass('crossed');
-
-$('.1monthstrikeout').addClass('crossed');
-
-$('#12months').prop('checked', false);
-$('#1month').prop('checked', true);
+if ($('#1month').prop('checked', true)) {
+    $('.1monthtrikeout').addClass('crossed');
+};
 if ($('.plans-radio-row input:radio[name=radio-group]:checked')) {
     $('#upgrade-link').attr("href", "https://myscore.cibil.com/CreditView/enrollShort.page?enterprise=CIBIL&offer=1M550RM");
 };
@@ -231,6 +228,53 @@ $(document).ready(function() {
 // if (window.location.href === "http://127.0.0.1:5502/landing-page/new-landingpage.html") {
 //     $('.base-plan').addClass('yellow-tag-active');
 // }
-if (window.location.href === "https://ajency.github.io/CIBIL-CRO/landing-page/new-landingpage.html") {
+if (window.location.href === "https://www.cibil.com/select-plan") {
     $('.base-plan').addClass('yellow-tag-active');
 }
+if (window.location.href === "https://cibil-pvw.transunion.com/select-plan") {
+    $('.base-plan').addClass('yellow-tag-active');
+}
+
+
+$(document).ready(function() {
+if ($('.plan-select-handle').text() === 'Basic' ) {
+    $('.custom-column-2').addClass('plan-active');
+    $('.custom-column-3,.custom-column-4').removeClass('plan-active');
+    $('.base-plan').click();
+    $('.base-plan').addClass('yellow-tag-active');
+
+
+} else if ($('.plan-select-handle').text() === 'standard' ) {
+    $('.custom-column-3').addClass('plan-active');
+    $('.custom-column-2,.custom-column-4').removeClass('plan-active');
+    $('.base-standard').click();
+    $('.base-standard').addClass('yellow-tag-active');
+
+
+} else if ($('.plan-select-handle').text() === 'premium' ) {
+    $('.custom-column-4').addClass('plan-active');
+    $('.custom-column-2,.custom-column-3').removeClass('plan-active');
+    $('.base-premium').click();
+    $('.base-premium').addClass('yellow-tag-active');
+}
+});
+$(document).ready(function() {
+    if ($('.plan-select-handle').text() === 'Basic' ) {
+        $('.plans-card.basic').addClass('plan-active');
+        $('.plans-card.premium,.plans-card.standard').removeClass('plan-active');
+        $('.plans-row').slick('slickGoTo', 0)
+
+    } else if ($('.plan-select-handle').text() === 'standard') {
+        $('.plans-card.standard').addClass('plan-active');
+        $('.plans-card.basic,.plans-card.premium').removeClass('plan-active');
+        $('.plans-row').slick('slickGoTo', 1);
+        $('.base-standard').addClass('yellow-tag-active');
+
+    } else if ($('.plan-select-handle').text() === 'premium') {
+        $('.plans-card.premium').addClass('plan-active');
+        $('.plans-card.basic,.plans-card.standard').removeClass('plan-active');
+        $('.plans-row').slick('slickGoTo', 2);
+        $('.base-premium').addClass('yellow-tag-active');
+
+    }
+});
