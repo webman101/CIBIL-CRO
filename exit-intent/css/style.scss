@@ -74,6 +74,7 @@ $color: #3ea3ce;
         }
         .image-block {
             background: linear-gradient(102.78deg, #3ea3ce 1.31%, rgba(62, 163, 206, 0) 744.79%);
+            max-width: 515px;
             .image-container {
                 margin-top: 0 !important;
                 position: absolute;
@@ -82,7 +83,7 @@ $color: #3ea3ce;
                 margin-top: 33px;
                 padding: 0;
                 bottom: 0;
-                padding-left: 109px;
+                padding-left: 65px;
                 padding-right: 15px;
                 img {
                     width: 100%;
