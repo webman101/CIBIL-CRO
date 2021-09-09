@@ -54,3 +54,19 @@ const exit = e => {
 };
 
 document.querySelector('.exit-intent-popup').addEventListener('click', exit);
+
+
+// $('#popup-name').on('change', function() {
+//     if ($(this).val() !== "") {
+      
+//     }
+// });
+// if($("#html").prop('checked') == true){
+//     $('#submit').removeClass('disabled');
+// }
+
+ $('#html').on('change', function() {
+    if ($("#html").is(":checked")) {
+        $('#submit').removeClass('disabled');
+    }
+ });

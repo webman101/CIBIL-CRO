@@ -12,7 +12,8 @@
 
     <link rel="stylesheet" href="css/style.css">
 </head>
-<div class="outer"> <!-- for scroll test dont include this-->
+<div class="outer">
+    <!-- for scroll test dont include this-->
     <div class="exit-intent-popup">
         <div class="popup">
             <div class="container">
@@ -24,7 +25,7 @@
                         </div>
                     </div>
                     <div class="col-md-7 text-right-block">
-    
+
                         <img src="./img/close.png" alt="" class="close-tab">
                         <div class="text-block">
                             <div class="title">
@@ -34,27 +35,27 @@
                                 Let our experts get in touch with you.
                             </div>
                             <form action="" method="post" id="register-form" novalidate="novalidate">
-    
+
                                 <div id="form-content">
-    
-    
+
+
                                     <div class="form-group">
                                         <div class="label-flex">
                                             <span class="label">Full Name</span>
                                             <span class="required">Required</span>
                                         </div>
-                                        <input class="form-control" type="text" name="name" >
+                                        <input class="form-control" type="text" name="name" id="popup-name">
                                     </div>
-    
-    
+
+
                                     <div class="form-group">
                                         <div class="label-flex">
                                             <span class="label">Contact number</span>
                                             <span class="required">Required</span>
                                         </div>
-                                        <input class="form-control" type="number" name="number"  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10">
+                                        <input class="form-control" id="popup-number" type="number" name="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10">
                                     </div>
-    
+
                                     <div class="form-group check-box-input">
                                         <div>
                                             <input type="checkbox" id="html">
@@ -63,14 +64,14 @@
                                         <p>I/We understand that by providing mobile number, I/ we agree to receive communication from TransUnion CIBIL with reference to the services sought by me/us.</p>
                                     </div>
                                     <div class="form-group">
-                                        <input class="btn btn-primary" id="submit" type="submit" name="Submit Query" value="Submit Query">
+                                        <input class="btn btn-primary disabled" id="submit" type="submit" name="Submit Query" value="Submit Query" >
                                     </div>
                                 </div>
-    
+
                             </form>
                         </div>
                         <div class="">
-    
+
                         </div>
                     </div>
                 </div>
