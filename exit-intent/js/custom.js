@@ -69,4 +69,8 @@ document.querySelector('.exit-intent-popup').addEventListener('click', exit);
     if ($("#html").is(":checked")) {
         $('#submit').removeClass('disabled');
     }
+    else{
+        $('#submit').addClass('disabled');
+
+    }
  });
