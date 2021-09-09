@@ -248,11 +248,15 @@ h6 {
   font-size: 16px;
   width: 100%;
   text-align: left;
-  padding-left: 85px;
+  padding-left: 42px;
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
   color: #fff;
   cursor: pointer;
+  display: flex;
+}
+.tabs li img {
+  margin-right: 20px;
 }
 .tabs li.active-tab {
   background: #006685;

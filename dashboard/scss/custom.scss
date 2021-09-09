@@ -224,7 +224,7 @@ $brand-blue: #3ea3ce;
         width: 74%;
         height: 80%;
         z-index: 0;
-        
+
         background: #005365;
     }
     .left-column {
@@ -275,11 +275,15 @@ $brand-blue: #3ea3ce;
         font-size: 16px;
         width: 100%;
         text-align: left;
-        padding-left: 85px;
+        padding-left: 42px;
         border-bottom-left-radius: 50px;
         border-top-left-radius: 50px;
         color: #fff;
         cursor: pointer;
+        display: flex;
+        img{
+            margin-right: 20px;
+        }
         &.active-tab {
             background: #006685;
             color: #fcd833;
