@@ -198,7 +198,7 @@ input::placeholder {
 #checkbox {
     background: #3ea3ce;
 }
-.form-group{
+.form-group {
     margin-bottom: 30px;
 }
 .form-group input[type="checkbox"] {
@@ -245,14 +245,18 @@ input::placeholder {
     content: "";
     display: block;
     position: absolute;
-    top: 4px;
-    left: 0px;
-    width: 18px;
-    height: 18px;
-    background-image: url(../img/tick.png);
+    top: 5px;
+    left: 1px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/mark.png);
     background-position: center;
     opacity: 1;
     border-radius: 4px;
+    background-size: contain;
+}
+.form-group input[type="checkbox"]:checked + .check:before {
+    border: 1px solid #ffffff;
 }
 .check-box-input {
     display: flex;
