@@ -93,23 +93,38 @@ h6 {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .mt-30 {
+    margin-top: 30px;
+  }
+}
+
 .section-title {
   font-family: "Intro", Bold;
   font-weight: bold;
-  font-size: 32px;
-  line-height: 50px;
+  font-size: 24px;
   text-align: center;
   letter-spacing: -0.01em;
   color: #2c2c2c;
+}
+@media screen and (min-width: 992px) {
+  .section-title {
+    font-size: 32px;
+    line-height: 50px;
+  }
 }
 
 .subtitle {
   font-family: "Intro", Bold;
   font-weight: bold;
-  font-size: 24px;
   line-height: 30px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+@media screen and (min-width: 992px) {
+  .subtitle {
+    font-size: 24px;
+  }
 }
 
 .text-blue {
@@ -119,10 +134,15 @@ h6 {
 h2 {
   font-family: "Intro", Bold;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 44px;
   letter-spacing: -0.01em;
   color: #2c2c2c;
+}
+@media screen and (min-width: 992px) {
+  h2 {
+    font-size: 40px;
+  }
 }
 
 p {
@@ -190,7 +210,17 @@ p {
 
 .banner {
   background: radial-gradient(76.99% 76.99% at 50% 50%, #ffffff 0%, #f4f4f4 93.54%);
-  padding: 84px 0 116px;
+  padding: 60px 20px;
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 84px 0 116px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .banner .carousel {
+    margin-top: 40px;
+  }
 }
 .banner .carousel .carousel-indicators {
   transform: translateY(55px);
@@ -210,7 +240,12 @@ p {
 }
 
 section.cibil-subscription {
-  padding: 60px 0;
+  padding: 40px 0;
+}
+@media screen and (min-width: 992px) {
+  section.cibil-subscription {
+    padding: 60px 0;
+  }
 }
 
 .cibil-subscription-plan {
@@ -425,7 +460,7 @@ section.cibil-subscription {
 }
 
 .cibil-creditcard {
-  background: #F9F9F9;
+  background: #f9f9f9;
   padding: 40px 0 60px;
 }
 .cibil-creditcard .card-container {
@@ -443,4 +478,34 @@ section.cibil-subscription {
 .cibil-creditcard .credit-card img {
   width: 100%;
   max-width: 233px;
+}
+
+.steps {
+  margin-top: 47px;
+}
+
+.cibil-steps {
+  padding: 40px 0 60px;
+}
+.cibil-steps .col-md-4 {
+  max-width: 162px;
+  margin-right: 120px;
+  padding: 0;
+}
+.cibil-steps .col-md-4:last-child {
+  margin-right: 0;
+}
+
+.buutons-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 65px;
+}
+.buutons-group a {
+  padding: 0 20px;
+  margin-right: 20px;
+}
+.buutons-group a:last-child {
+  margin-right: 0;
 }/*# sourceMappingURL=custom.css.map */
