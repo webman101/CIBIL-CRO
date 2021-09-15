@@ -152,9 +152,33 @@ p {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #2c2c2c;
-    padding: 13px 53px;
     text-decoration: none;
+    display: block;
+    height: 50px;
+    line-height: 51px;
+    text-align: center;
+    text-transform: capitalize;
 }
+.button-orange-outline {
+    background: #ffffff;
+    border: 1px solid #f16e00;
+    box-sizing: border-box;
+    border-radius: 999px;
+    border-radius: 25px;
+    font-family: "Intro", Regular;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #2c2c2c;
+    text-decoration: none;
+    display: block;
+    height: 50px;
+    line-height: 51px;
+    text-align: center;
+    text-transform: capitalize;
+}
+//////////////////////////////////
 .banner {
     background: radial-gradient(76.99% 76.99% at 50% 50%, #ffffff 0%, #f4f4f4 93.54%);
     padding: 84px 0 116px;
@@ -172,6 +196,9 @@ p {
             border-radius: 5px;
         }
     }
+    .button-orange {
+        padding: 0 53px;
+    }
 }
 //////////////////////////////cibil-subscription
 section.cibil-subscription {
@@ -180,6 +207,13 @@ section.cibil-subscription {
 ////////////////////////////////
 .plans {
     padding: 20px;
+    .plan-outer-column {
+        @media screen and (min-width: 992px) {
+            max-width: 240px;
+            margin-right: 22px;
+            padding: 0;
+        }
+    }
     .plan {
         border: 2px solid #dddddd;
         box-sizing: border-box;
@@ -188,12 +222,12 @@ section.cibil-subscription {
         @media screen and (max-width: 992px) {
             margin-top: 50px;
         }
-
         @media screen and (min-width: 992px) {
-            max-width: 240px;
             height: 499px;
-            margin-right: 22px;
+            margin-bottom: 20px;
         }
+
+        width: 100%;
 
         &:last-child {
             margin-right: 0;
@@ -206,8 +240,7 @@ section.cibil-subscription {
             @media screen and (max-width: 992px) {
                 padding-top: 57px;
             }
-            
-            
+
             &::before {
                 content: "Most Popular";
                 position: absolute;
@@ -227,8 +260,7 @@ section.cibil-subscription {
                 @media screen and (min-width: 992px) {
                     top: -35px;
                 }
-                
-                
+
                 border-radius: 6px 6px 0 0;
                 font-family: "Intro", Regular;
                 font-style: normal;

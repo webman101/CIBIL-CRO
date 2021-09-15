@@ -155,8 +155,32 @@ p {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
-  padding: 13px 53px;
   text-decoration: none;
+  display: block;
+  height: 50px;
+  line-height: 51px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.button-orange-outline {
+  background: #ffffff;
+  border: 1px solid #f16e00;
+  box-sizing: border-box;
+  border-radius: 999px;
+  border-radius: 25px;
+  font-family: "Intro", Regular;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  text-decoration: none;
+  display: block;
+  height: 50px;
+  line-height: 51px;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .banner {
@@ -176,6 +200,9 @@ p {
   background-color: #00a6ca;
   border-radius: 5px;
 }
+.banner .button-orange {
+  padding: 0 53px;
+}
 
 section.cibil-subscription {
   padding: 60px 0;
@@ -184,11 +211,19 @@ section.cibil-subscription {
 .plans {
   padding: 20px;
 }
+@media screen and (min-width: 992px) {
+  .plans .plan-outer-column {
+    max-width: 240px;
+    margin-right: 22px;
+    padding: 0;
+  }
+}
 .plans .plan {
   border: 2px solid #dddddd;
   box-sizing: border-box;
   border-radius: 6px;
   padding: 25px 20px;
+  width: 100%;
 }
 @media screen and (max-width: 992px) {
   .plans .plan {
@@ -197,9 +232,8 @@ section.cibil-subscription {
 }
 @media screen and (min-width: 992px) {
   .plans .plan {
-    max-width: 240px;
     height: 499px;
-    margin-right: 22px;
+    margin-bottom: 20px;
   }
 }
 .plans .plan:last-child {
