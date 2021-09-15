@@ -359,4 +359,52 @@ section.cibil-subscription {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+
+.cibil-testimonial .col-md-4 {
+  max-width: 328px;
+}
+
+.testimonial {
+  height: 100%;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 30px 20px;
+}
+.testimonial .row-1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.testimonial .row-1 .image {
+  margin-right: 20px;
+}
+.testimonial .row-1 .play-store {
+  margin-left: auto;
+}
+.testimonial .row-1 .play-store img {
+  width: 24.48px;
+  height: 27.33px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.testimonial .testimonial-title {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  margin-bottom: 5px;
+}
+.testimonial p {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  letter-spacing: 0.02em;
+  /* Accent Black */
+  color: #2c2c2c;
 }/*# sourceMappingURL=custom.css.map */
