@@ -99,6 +99,9 @@ h6 {
         margin-top: 30px;
     }
 }
+.bg-yellow {
+    background-color: #fcd800;
+}
 .section-title {
     font-family: "Intro", Bold;
     font-weight: bold;
@@ -471,7 +474,14 @@ section.cibil-subscription {
 .cibil-steps {
     padding: 40px 0 60px;
     .col-md-4 {
+        img{
+            width: 100%;
+        }
+       @media screen and (min-width: 992px) {
         max-width: 162px;
+       }
+       
+       
         margin-right: 120px;
         padding: 0;
         &:last-child {
@@ -482,12 +492,25 @@ section.cibil-subscription {
 /////////////////////ssss
 .buutons-group {
     display: flex;
+
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+    }
+
     align-items: center;
     justify-content: center;
     margin-top: 65px;
     a {
+        @media screen and (max-width: 992px) {
+            margin-bottom: 20px;
+            width: 210px;
+        }
+
         padding: 0 20px;
-        margin-right: 20px;
+        @media screen and (min-width: 992px) {
+            margin-right: 20px;
+        }
+
         &:last-child {
             margin-right: 0;
         }

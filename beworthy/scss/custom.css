@@ -99,6 +99,10 @@ h6 {
   }
 }
 
+.bg-yellow {
+  background-color: #fcd800;
+}
+
 .section-title {
   font-family: "Intro", Bold;
   font-weight: bold;
@@ -488,9 +492,16 @@ section.cibil-subscription {
   padding: 40px 0 60px;
 }
 .cibil-steps .col-md-4 {
-  max-width: 162px;
   margin-right: 120px;
   padding: 0;
+}
+.cibil-steps .col-md-4 img {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .cibil-steps .col-md-4 {
+    max-width: 162px;
+  }
 }
 .cibil-steps .col-md-4:last-child {
   margin-right: 0;
@@ -502,9 +513,24 @@ section.cibil-subscription {
   justify-content: center;
   margin-top: 65px;
 }
+@media screen and (max-width: 992px) {
+  .buutons-group {
+    flex-direction: column;
+  }
+}
 .buutons-group a {
   padding: 0 20px;
-  margin-right: 20px;
+}
+@media screen and (max-width: 992px) {
+  .buutons-group a {
+    margin-bottom: 20px;
+    width: 210px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .buutons-group a {
+    margin-right: 20px;
+  }
 }
 .buutons-group a:last-child {
   margin-right: 0;
