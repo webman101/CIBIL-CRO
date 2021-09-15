@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Intro";
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Intro";
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+a {
+  outline: none !important;
+  display: inline-block;
+}
+a:hover {
+  color: #2c2c2c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.f-12 {
+  font-size: 12px !important;
+}
+.f-14 {
+  font-size: 14px !important;
+}
+.f-15 {
+  font-size: 15px !important;
+}
+.f-16 {
+  font-size: 16px !important;
+}
+.f-17 {
+  font-size: 17px !important;
+}
+.f-18 {
+  font-size: 18px !important;
+}
+.f-19 {
+  font-size: 19px !important;
+}
+.f-20 {
+  font-size: 20px !important;
+}
+.f-22 {
+  font-size: 22px !important;
+}
+.f-24 {
+  font-size: 24px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .mb-md-60 {
+    margin-bottom: 60px;
+  }
+}
+
+.section-title {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #2c2c2c;
+}
+
+.subtitle {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+
+.text-blue {
+  color: #00a6ca;
+}
+
+h2 {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: -0.01em;
+  color: #2c2c2c;
+}
+
+p {
+  font-family: "Intro", Regular;
+  font-weight: normal;
+  line-height: 24px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+
+.text-400 {
+  font-family: "Intro", Book;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+
+.text-grey {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 140%;
+  color: #707070;
+}
+
+.button-orange {
+  background: #f16e00;
+  border-radius: 25px;
+  font-family: "Intro", Regular;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  padding: 13px 53px;
+  text-decoration: none;
+}
+
+.banner {
+  background: radial-gradient(76.99% 76.99% at 50% 50%, #ffffff 0%, #f4f4f4 93.54%);
+  padding: 84px 0 116px;
+}
+.banner .carousel .carousel-indicators {
+  transform: translateY(55px);
+}
+@media screen and (min-width: 992px) {
+  .banner .carousel .carousel-indicators {
+    transform: translateY(85px);
+  }
+}
+.banner .carousel .carousel-indicators [data-bs-target] {
+  height: 8px;
+  background-color: #00a6ca;
+  border-radius: 5px;
+}
+
+section.cibil-subscription {
+  padding: 60px 0;
+}/*# sourceMappingURL=custom.css.map */
