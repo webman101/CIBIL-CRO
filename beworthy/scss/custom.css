@@ -69,9 +69,22 @@ h6 {
 .mb-30 {
   margin-bottom: 30px;
 }
+.mb-40 {
+  margin-bottom: 40px;
+}
 @media screen and (min-width: 992px) {
   .mb-md-60 {
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .mb-md-73 {
+    margin-bottom: 77px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .mb-md-80 {
+    margin-bottom: 80px;
   }
 }
 
@@ -265,6 +278,10 @@ section.cibil-subscription {
 
 .key-value {
   display: flex;
+  margin-bottom: 10px;
+}
+.key-value:last-child {
+  margin-bottom: 0;
 }
 .key-value .key {
   margin-right: 12px;
