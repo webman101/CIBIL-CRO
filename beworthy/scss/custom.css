@@ -181,14 +181,26 @@ section.cibil-subscription {
   padding: 60px 0;
 }
 
+.plans {
+  padding: 20px;
+}
 .plans .plan {
   border: 2px solid #dddddd;
   box-sizing: border-box;
   border-radius: 6px;
   padding: 25px 20px;
-  max-width: 240px;
-  height: 499px;
-  margin-right: 22px;
+}
+@media screen and (max-width: 992px) {
+  .plans .plan {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .plans .plan {
+    max-width: 240px;
+    height: 499px;
+    margin-right: 22px;
+  }
 }
 .plans .plan:last-child {
   margin-right: 0;
@@ -198,6 +210,11 @@ section.cibil-subscription {
   border: 2px solid #00a6ca;
   box-sizing: border-box;
   border-radius: 6px;
+}
+@media screen and (max-width: 992px) {
+  .plans .plan.active {
+    padding-top: 57px;
+  }
 }
 .plans .plan.active::before {
   content: "Most Popular";
@@ -209,14 +226,24 @@ section.cibil-subscription {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 240px;
-  top: -35px;
+  width: 101.1%;
+  top: -1px;
   border-radius: 6px 6px 0 0;
   font-family: "Intro", Regular;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   padding-top: 1px;
+}
+@media screen and (min-width: 992px) {
+  .plans .plan.active::before {
+    width: 240px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .plans .plan.active::before {
+    top: -35px;
+  }
 }
 .plans .plan .plan-header {
   height: 152px;
@@ -258,7 +285,7 @@ section.cibil-subscription {
   margin-top: 47px;
 }
 .plans .plan hr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 2px solid #dddddd;
 }
 
 .save {

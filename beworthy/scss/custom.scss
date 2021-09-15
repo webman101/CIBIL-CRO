@@ -179,14 +179,22 @@ section.cibil-subscription {
 }
 ////////////////////////////////
 .plans {
+    padding: 20px;
     .plan {
         border: 2px solid #dddddd;
         box-sizing: border-box;
         border-radius: 6px;
         padding: 25px 20px;
-        max-width: 240px;
-        height: 499px;
-        margin-right: 22px;
+        @media screen and (max-width: 992px) {
+            margin-top: 50px;
+        }
+
+        @media screen and (min-width: 992px) {
+            max-width: 240px;
+            height: 499px;
+            margin-right: 22px;
+        }
+
         &:last-child {
             margin-right: 0;
         }
@@ -195,6 +203,11 @@ section.cibil-subscription {
             border: 2px solid #00a6ca;
             box-sizing: border-box;
             border-radius: 6px;
+            @media screen and (max-width: 992px) {
+                padding-top: 57px;
+            }
+            
+            
             &::before {
                 content: "Most Popular";
                 position: absolute;
@@ -205,8 +218,17 @@ section.cibil-subscription {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 240px;
-                top: -35px;
+                width: 101.1%;
+                @media screen and (min-width: 992px) {
+                    width: 240px;
+                }
+
+                top: -1px;
+                @media screen and (min-width: 992px) {
+                    top: -35px;
+                }
+                
+                
                 border-radius: 6px 6px 0 0;
                 font-family: "Intro", Regular;
                 font-style: normal;
@@ -255,7 +277,7 @@ section.cibil-subscription {
             }
         }
         hr {
-            border-bottom: 1px solid #dddddd;
+            border-bottom: 2px solid #dddddd;
         }
     }
 }
@@ -272,12 +294,11 @@ section.cibil-subscription {
     line-height: 25px;
     color: #2c2c2c;
     padding-left: 20px;
-    
 }
 .key-value {
     display: flex;
     margin-bottom: 10px;
-    &:last-child{
+    &:last-child {
         margin-bottom: 0;
     }
     .key {
