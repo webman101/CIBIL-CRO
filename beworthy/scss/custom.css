@@ -35,6 +35,12 @@ h6 {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .dhide {
+    display: none;
+  }
+}
+
 .f-12 {
   font-size: 12px !important;
 }

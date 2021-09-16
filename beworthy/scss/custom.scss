@@ -33,6 +33,11 @@ h6 {
         display: none;
     }
 }
+.dhide{
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
 .f {
     &-12 {
         font-size: 12px !important;
