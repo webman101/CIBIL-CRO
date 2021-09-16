@@ -259,11 +259,13 @@ section.cibil-subscription {
         box-sizing: border-box;
         border-radius: 6px;
         padding: 25px 20px;
+        background-color: #fff;
+        position: relative;
         @media screen and (max-width: 992px) {
             margin-top: 50px;
         }
         @media screen and (min-width: 992px) {
-            height: 499px;
+            min-height: 589px;
             margin-bottom: 20px;
         }
 
@@ -309,6 +311,16 @@ section.cibil-subscription {
                 padding-top: 1px;
             }
         }
+        .button-orange-outline,
+        .button-orange {
+            // position: absolute;
+            // bottom: 30px;
+            // width: 100%;
+            // max-width: 174px;
+            // margin: auto;
+            // left: 0;
+            // right: 0;
+        }
         .plan-header {
             height: 152px;
             position: relative;
@@ -336,7 +348,8 @@ section.cibil-subscription {
                 font-size: 14px;
                 line-height: 140%;
                 color: #707070;
-                margin-top: 11px;
+                
+                margin-top: 47px;
             }
             .plan-price {
                 font-family: "Intro", Bold;
@@ -345,13 +358,18 @@ section.cibil-subscription {
                 line-height: 24px;
                 letter-spacing: 0.02em;
                 color: #2c2c2c;
-                margin-top: 47px;
+                
+                margin-top: 11px;
             }
         }
         hr {
             border-bottom: 2px solid #dddddd;
+            opacity: 1;
         }
     }
+}
+.min-ht-350{
+    min-height: 350px;
 }
 .save {
     position: absolute;
@@ -438,11 +456,8 @@ section.cibil-subscription {
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        /* or 150% */
 
         letter-spacing: 0.02em;
-
-        /* Accent Black */
 
         color: #2c2c2c;
     }
@@ -474,14 +489,13 @@ section.cibil-subscription {
 .cibil-steps {
     padding: 40px 0 60px;
     .col-md-4 {
-        img{
+        img {
             width: 100%;
         }
-       @media screen and (min-width: 992px) {
-        max-width: 162px;
-       }
-       
-       
+        @media screen and (min-width: 992px) {
+            max-width: 162px;
+        }
+
         margin-right: 120px;
         padding: 0;
         &:last-child {
@@ -515,4 +529,86 @@ section.cibil-subscription {
             margin-right: 0;
         }
     }
+}
+////////////////////////////@at-root
+.monitor {
+    background: #f0fafc;
+    h2 {
+        margin-bottom: 38px;
+    }
+    .score-flex {
+        display: flex;
+
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .score-text {
+        font-family: "Intro", Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+
+        letter-spacing: 0.02em;
+
+        color: #2c2c2c;
+        margin-left: 15px;
+    }
+    .googleplay {
+        margin-top: 40px;
+        img {
+        }
+    }
+}
+.acordion {
+    padding: 60px 0 40px;
+    max-width: 1024px;
+    margin: auto;
+    button.accordion {
+        width: 100%;
+        background-color: white;
+        border: none;
+        outline: none;
+        text-align: left;
+        padding: 20px 0;
+        cursor: pointer;
+        font-family: "Intro", Bold;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        opacity: 0.85;
+        border-top: 2px solid #ececec;
+    }
+
+    button.accordion:after {
+        content: url(../img/plus.png);
+
+        float: right;
+    }
+
+    button.accordion.is-open:after {
+        content: url(../img/minus.png);
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+        p {
+            font-family: "Intro", Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #2c2c2c;
+        }
+    }
+}
+/////////////////////////////@at-root
+.beworthy {
+    padding: 40px 0 60px;
+    background: #f9f9f9;
 }
