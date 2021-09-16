@@ -37,3 +37,6 @@ accordionBtns.forEach((accordion) => {
         }
     };
 });
+
+
+
