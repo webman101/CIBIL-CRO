@@ -228,49 +228,46 @@ $(document).ready(function() {
 // if (window.location.href === "http://127.0.0.1:5502/landing-page/new-landingpage.html") {
 //     $('.base-plan').addClass('yellow-tag-active');
 // }
-if (window.location.href === "https://www.cibil.com/select-plan") {
-    $('.base-plan').addClass('yellow-tag-active');
-}
-if (window.location.href === "https://cibil-pvw.transunion.com/select-plan") {
-    $('.base-plan').addClass('yellow-tag-active');
-}
+// if (window.location.href === "https://www.cibil.com/select-plan") {
+//     $('.base-plan').addClass('yellow-tag-active');
+// }
+// if (window.location.href === "http://127.0.0.1:5502/landing-page/new-landingpage.html") {
+//     $('.base-plan').addClass('yellow-tag-active');
+// }
 
 
 $(document).ready(function() {
-if ($('.plan-select-handle').text() === 'Basic' ) {
-    $('.custom-column-2').addClass('plan-active');
-    $('.custom-column-3,.custom-column-4').removeClass('plan-active');
-    $('.base-plan').click();
-    $('.base-plan').addClass('yellow-tag-active');
-
-
-} else if ($('.plan-select-handle').text() === 'standard' ) {
-    $('.custom-column-3').addClass('plan-active');
-    $('.custom-column-2,.custom-column-4').removeClass('plan-active');
-    $('.base-standard').click();
-    $('.base-standard').addClass('yellow-tag-active');
-
-
-} else if ($('.plan-select-handle').text() === 'premium' ) {
-    $('.custom-column-4').addClass('plan-active');
-    $('.custom-column-2,.custom-column-3').removeClass('plan-active');
-    $('.base-premium').click();
-    $('.base-premium').addClass('yellow-tag-active');
-}
+    if ($('.plan-select-handle').text() === 'Basic' || $('.plan-select-handle').text() === 'basic') {
+        $('.custom-column-2').addClass('plan-active');
+        $('.custom-column-3,.custom-column-4').removeClass('plan-active');
+        $('.base-plan').click();
+        $('.base-plan').addClass('yellow-tag-active');
+    } else if ($('.plan-select-handle').text() === 'standard' || $('.plan-select-handle').text() === 'Standard') {
+        $('.custom-column-3').addClass('plan-active');
+        $('.custom-column-2,.custom-column-4').removeClass('plan-active');
+        $('.base-standard').click();
+        $('.base-standard').addClass('yellow-tag-active');
+    } else if ($('.plan-select-handle').text() === 'premium' || $('.plan-select-handle').text() === 'Premium') {
+        $('.custom-column-4').addClass('plan-active');
+        $('.custom-column-2,.custom-column-3').removeClass('plan-active');
+        $('.base-premium').click();
+        $('.base-premium').addClass('yellow-tag-active');
+    }
 });
 $(document).ready(function() {
-    if ($('.plan-select-handle').text() === 'Basic' ) {
+    if ($('.plan-select-handle').text() === 'Basic' || $('.plan-select-handle').text() === 'basic') {
         $('.plans-card.basic').addClass('plan-active');
         $('.plans-card.premium,.plans-card.standard').removeClass('plan-active');
         $('.plans-row').slick('slickGoTo', 0)
-
-    } else if ($('.plan-select-handle').text() === 'standard') {
+    } else if ($('.plan-select-handle').text() === 'standard' || $('.plan-select-handle').text() === 'Standard') {
+        $('.base-plan').removeClass('yellow-tag-active');
         $('.plans-card.standard').addClass('plan-active');
         $('.plans-card.basic,.plans-card.premium').removeClass('plan-active');
         $('.plans-row').slick('slickGoTo', 1);
         $('.base-standard').addClass('yellow-tag-active');
+    } else if ($('.plan-select-handle').text() === 'premium' || $('.plan-select-handle').text() === 'Premium') {
+    $('.base-plan').removeClass('yellow-tag-active');
 
-    } else if ($('.plan-select-handle').text() === 'premium') {
         $('.plans-card.premium').addClass('plan-active');
         $('.plans-card.basic,.plans-card.standard').removeClass('plan-active');
         $('.plans-row').slick('slickGoTo', 2);
