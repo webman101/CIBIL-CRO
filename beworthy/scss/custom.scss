@@ -386,9 +386,10 @@ section.cibil-subscription {
                 margin-top: 11px;
             }
         }
-        hr {
-            border-bottom: 2px solid #dddddd;
+        .hr-bdr {
+            border-bottom: 1px solid #dddddd;
             opacity: 1;
+            margin: 16px 0 23px;
         }
     }
 }

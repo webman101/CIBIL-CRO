@@ -390,9 +390,10 @@ section.cibil-subscription .text-p p {
   color: #2c2c2c;
   margin-top: 11px;
 }
-.plans .plan hr {
-  border-bottom: 2px solid #dddddd;
+.plans .plan .hr-bdr {
+  border-bottom: 1px solid #dddddd;
   opacity: 1;
+  margin: 16px 0 23px;
 }
 
 .min-ht-350 {
