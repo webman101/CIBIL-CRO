@@ -246,7 +246,7 @@ p {
 
         padding: 0 53px;
     }
-    .slick-dots{
+    .slick-dots {
         margin-bottom: 0 !important;
     }
 }
@@ -561,6 +561,24 @@ section.cibil-subscription {
 }
 .steps {
     margin-top: 47px;
+    .numb {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #3ea3ce;
+border-radius: 50px;
+        font-family: 'Intro', Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
 }
 .cibil-steps {
     padding: 40px 0;
@@ -572,7 +590,7 @@ section.cibil-subscription {
         text-align: center;
         img {
             width: 100%;
-            max-width: 162px;
+            max-width: 205px;
         }
         @media screen and (min-width: 992px) {
             max-width: 225px;
@@ -699,8 +717,6 @@ section.cibil-subscription {
             @media screen and (max-width: 992px) {
                 margin-bottom: 30px;
             }
-            
-            
         }
     }
     .score-img {
@@ -736,7 +752,7 @@ section.cibil-subscription {
         opacity: 0.85;
         border-top: 2px solid #ececec;
         position: relative;
-        span{
+        span {
             @media screen and (max-width: 992px) {
                 font-family: "Intro", Bold;
                 font-weight: bold;
@@ -748,8 +764,7 @@ section.cibil-subscription {
                 width: 100%;
                 max-width: 290px;
             }
-            
-            
+
             font-family: "Intro", Bold;
             font-weight: bold;
             font-size: 16px;
@@ -772,7 +787,6 @@ section.cibil-subscription {
     button.accordion.is-open:after {
         content: url(../img/minus.png);
         top: 15px;
-
     }
 
     .accordion-content {
@@ -790,7 +804,7 @@ section.cibil-subscription {
         }
     }
 }
-.accordion-content.last-border{
+.accordion-content.last-border {
     border-bottom: 2px solid #ececec !important;
 }
 /////////////////////////////@at-root
@@ -932,15 +946,14 @@ section.cibil-subscription {
             padding-right: 3px;
             padding-bottom: 0;
             h6 {
-                font-family: 'Intro', Regular;
+                font-family: "Intro", Regular;
                 font-style: normal;
                 font-weight: 600;
                 font-size: 12px;
-               @media screen and (min-width: 376) {
-                font-size: 16px;
-               }
-               
-               
+                @media screen and (min-width: 376) {
+                    font-size: 16px;
+                }
+
                 line-height: 24px;
                 text-align: left;
                 letter-spacing: 0.02em;
@@ -950,7 +963,7 @@ section.cibil-subscription {
                 font-size: 16px;
             }
             h3 {
-                font-family: 'Intro', bold;
+                font-family: "Intro", bold;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 24px;
@@ -960,7 +973,7 @@ section.cibil-subscription {
                 color: #333;
             }
             h4 {
-                font-family: 'Intro', Regular;
+                font-family: "Intro", Regular;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;

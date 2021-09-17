@@ -570,6 +570,24 @@ section.cibil-subscription .text-p p {
 .steps {
   margin-top: 47px;
 }
+.steps .numb {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3ea3ce;
+  border-radius: 50px;
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 
 .cibil-steps {
   padding: 40px 0;
@@ -585,7 +603,7 @@ section.cibil-subscription .text-p p {
 }
 .cibil-steps .col-md-4 img {
   width: 100%;
-  max-width: 162px;
+  max-width: 205px;
 }
 @media screen and (min-width: 992px) {
   .cibil-steps .col-md-4 {
