@@ -229,33 +229,18 @@ p {
 //////////////////////////////////
 .banner {
     background: radial-gradient(76.99% 76.99% at 50% 50%, #ffffff 0%, #f4f4f4 93.54%);
-    padding: 60px 8px;
-    @media screen and (min-width: 992px) {
-        padding: 84px 0 116px;
+    padding: 57px 8px;
+    @media screen and (max-width: 992px) {
+        .banner-slider{
+            margin-top: 43px;
+        }
     }
     p.mb-20 {
         @media screen and (max-width: 992px) {
             margin-bottom: 30px;
         }
     }
-    .carousel {
-        @media screen and (max-width: 992px) {
-            margin-top: 30px;
-        }
-
-        .carousel-indicators {
-            transform: translateY(55px);
-            @media screen and (min-width: 992px) {
-                transform: translateY(85px);
-            }
-        }
-        .carousel-indicators [data-bs-target] {
-            height: 8px;
-            background-color: #00a6ca;
-
-            border-radius: 5px;
-        }
-    }
+   
     .button-orange {
         @media screen and (max-width: 992px) {
             padding: 0 40px;

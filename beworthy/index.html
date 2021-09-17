@@ -19,13 +19,13 @@
         <div class="container">
             <div class="row ">
                 <div class="col-md-5">
-                    <h6 class="subtitle mb-md-20">#<span class="text-blue">BeWorthy</span></h6>
-                    <h2 class="mb-md-20">Life is Easier <br> When You’re Worthy</h2>
-                    <p class="mb-md-20">A good CIBIL Score opens doors. It tells others that you are worthy. Worthy of that new job you have applied for, for the loan you need, or even as a life partner.</p>
+                    <h6 class="subtitle mb-20  mb-md-20">#<span class="text-blue">BeWorthy</span></h6>
+                    <h2 class=" mb-20 mb-md-20">Life is Easier <br> When You’re Worthy</h2>
+                    <p class=" mb-30 mb-md-20">A good CIBIL Score opens doors. It tells others that you are worthy. Worthy of that new job you have applied for, for the loan you need, or even as a life partner.</p>
                     <a href="#" class="button-orange d-inline-block">Get your Free CIBIL Score</a>
                 </div>
-                <div class="col-md-7  mb-5 mb-d-0">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-md-7">
+                    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <div type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></div>
                             <div type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></div>
@@ -42,6 +42,17 @@
                                 <img src="./img/banner-img.png" class="img-fluid" alt="">
                             </div>
                         </div>
+                    </div> -->
+                    <div class="banner-slider">
+
+                        <img src="./img/banner-img.png" class="img-fluid" alt="">
+
+
+                        <img src="./img/banner-img.png" class="img-fluid" alt="">
+
+
+                        <img src="./img/banner-img.png" class="img-fluid" alt="">
+
                     </div>
                 </div>
             </div>
@@ -708,9 +719,15 @@
 
             <img src="./img/steps.png" class="img-fluid" alt="">
             <ul class="steps-list">
-                <li><img src="./img/step1.png" alt=""><p>Create your CIBIL account.</p></li>
-                <li><img src="./img/step2.png" alt=""><p>Verify your identity.</p></li>
-                <li><img src="./img/step3.png" alt=""><p>View your CIBIL Score and Report instantly.</p></li>
+                <li><img src="./img/step1.png" alt="">
+                    <p>Create your CIBIL account.</p>
+                </li>
+                <li><img src="./img/step2.png" alt="">
+                    <p>Verify your identity.</p>
+                </li>
+                <li><img src="./img/step3.png" alt="">
+                    <p>View your CIBIL Score and Report instantly.</p>
+                </li>
 
             </ul>
             <div class="buutons-group">
@@ -772,7 +789,7 @@
                     You have questions, we have answers.
                 </div>
                 <button class="accordion">Why is CIBIL Score important?</button>
-                <div class="accordion-content">
+                <div class="accordion-content" style="    max-height: 208px;">
                     <p>
                         CIBIL Score is required when it comes to loan and credit card applications. Having a high CIBIL score (closer to 900) implies that you have good financial history and lenders express high confidence in extending credit to such individuals. Your borrowing
                         limit and interest can all depend on your CIBIL Score.
@@ -822,10 +839,10 @@
             <a href="#" class="button-orange text-center d-inline-flex px-4 mhide">Get your Free CIBIL Score</a>
             <a href="#" class="button-orange text-center d-flex justify-content-center align-items-center px-4 dhide mx-auto" style="max-width:210px ;margin: 40px auto 20px;">Subscribe Now</a>
 
-            
+
             <a href="#" class="button-orange-outline text-center justify-content-center align-items-center d-flex px-4 dhide mx-auto" style="max-width:210px ;">Continue with Free</a>
 
-            
+
         </div>
     </section>
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
@@ -846,17 +863,25 @@
             });
         }
     </script>
-        <script>
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                /* the viewport is less than 768 pixels wide */
-                $('.mobile-slider-2').slick({
-                    arrows: false,
-                    dots: true,
-                    center: true
-    
-                });
-            }
-        </script>
+    <script>
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            /* the viewport is less than 768 pixels wide */
+            $('.mobile-slider-2').slick({
+                arrows: false,
+                dots: true,
+                center: true
+
+            });
+        }
+    </script>
+    <script>
+        $('.banner-slider').slick({
+            arrows: false,
+            dots: true,
+            center: true
+
+        });
+    </script>
 </body>
 
 </html>

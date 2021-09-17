@@ -235,35 +235,17 @@ p {
 
 .banner {
   background: radial-gradient(76.99% 76.99% at 50% 50%, #ffffff 0%, #f4f4f4 93.54%);
-  padding: 60px 8px;
+  padding: 57px 8px;
 }
-@media screen and (min-width: 992px) {
-  .banner {
-    padding: 84px 0 116px;
+@media screen and (max-width: 992px) {
+  .banner .banner-slider {
+    margin-top: 43px;
   }
 }
 @media screen and (max-width: 992px) {
   .banner p.mb-20 {
     margin-bottom: 30px;
   }
-}
-@media screen and (max-width: 992px) {
-  .banner .carousel {
-    margin-top: 30px;
-  }
-}
-.banner .carousel .carousel-indicators {
-  transform: translateY(55px);
-}
-@media screen and (min-width: 992px) {
-  .banner .carousel .carousel-indicators {
-    transform: translateY(85px);
-  }
-}
-.banner .carousel .carousel-indicators [data-bs-target] {
-  height: 8px;
-  background-color: #00a6ca;
-  border-radius: 5px;
 }
 .banner .button-orange {
   padding: 0 53px;
