@@ -927,10 +927,15 @@ section.cibil-subscription {
             padding-right: 3px;
             padding-bottom: 0;
             h6 {
-                font-family: Intro, Regular;
+                font-family: 'Intro', Regular;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 12px;
+               @media screen and (min-width: 376) {
+                font-size: 16px;
+               }
+               
+               
                 line-height: 24px;
                 text-align: left;
                 letter-spacing: 0.02em;
@@ -940,7 +945,7 @@ section.cibil-subscription {
                 font-size: 16px;
             }
             h3 {
-                font-family: Intro, bold;
+                font-family: 'Intro', bold;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 24px;
@@ -950,7 +955,7 @@ section.cibil-subscription {
                 color: #333;
             }
             h4 {
-                font-family: Intro, Regular;
+                font-family: 'Intro', Regular;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -1025,10 +1030,12 @@ section.cibil-subscription {
 .tab-content {
     .tab-pane {
         padding: 30px 20px;
+        margin-bottom: 60px;
     }
 }
 .full-width-button {
-    width: 90%;
+    width: 100%;
+    max-width: 334px;
     margin: auto;
     margin-bottom: 30px;
     font-size: 16px;
