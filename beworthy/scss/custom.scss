@@ -455,6 +455,7 @@ section.cibil-subscription {
         }
     }
 }
+
 .testimonial {
     height: 100%;
     background: #f9f9f9;
@@ -524,6 +525,17 @@ section.cibil-subscription {
         img {
             width: 100%;
             max-width: 233px;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .section-title {
+            padding: 0 30px;
+            margin-bottom: 20px;
+        }
+        .section-subtitle {
+            padding: 0 13px;
+            margin-bottom: 40px;
+            color: #707070;
         }
     }
 }

@@ -536,6 +536,17 @@ section.cibil-subscription .text-p p {
   width: 100%;
   max-width: 233px;
 }
+@media screen and (max-width: 992px) {
+  .cibil-creditcard .section-title {
+    padding: 0 30px;
+    margin-bottom: 20px;
+  }
+  .cibil-creditcard .section-subtitle {
+    padding: 0 13px;
+    margin-bottom: 40px;
+    color: #707070;
+  }
+}
 
 .steps {
   margin-top: 47px;
