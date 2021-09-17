@@ -461,7 +461,12 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .cibil-testimonial .col-md-4 {
     max-width: 328px;
+    padding: 0;
+    margin-right: 20px;
   }
+}
+.cibil-testimonial .col-md-4:last-child {
+  margin-right: 0;
 }
 
 .testimonial {
@@ -702,7 +707,7 @@ section.cibil-subscription .text-p p {
   margin-top: 40px;
 }
 .pl-m {
-  padding-left: 30PX;
+  padding-left: 30px;
 }
 
 .acordion {
