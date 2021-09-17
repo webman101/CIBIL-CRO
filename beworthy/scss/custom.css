@@ -671,8 +671,13 @@ section.cibil-subscription .text-p p {
 }
 .monitor .score-flex {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  .monitor .score-flex {
+    align-items: center;
+  }
 }
 .monitor .score-text {
   font-family: "Intro", Bold;
@@ -684,6 +689,9 @@ section.cibil-subscription .text-p p {
   color: #2c2c2c;
   margin-left: 15px;
 }
+.monitor .score-text.last {
+  margin-bottom: 30px;
+}
 .monitor .score-img img {
   width: 35px;
   height: 35px;
@@ -693,6 +701,10 @@ section.cibil-subscription .text-p p {
 .monitor .googleplay {
   margin-top: 40px;
 }
+.pl-m {
+  padding-left: 30PX;
+}
+
 .acordion {
   padding: 60px 0 40px;
   max-width: 1024px;

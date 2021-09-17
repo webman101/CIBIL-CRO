@@ -657,9 +657,14 @@ section.cibil-subscription {
     }
     .score-flex {
         display: flex;
+        align-items: baseline;
 
-        align-items: center;
+        @media screen and (min-width: 992px) {
+            align-items: center;
+        }
+
         margin-bottom: 20px;
+   
     }
     .score-text {
         font-family: "Intro", Bold;
@@ -672,6 +677,9 @@ section.cibil-subscription {
 
         color: #2c2c2c;
         margin-left: 15px;
+        &.last {
+            margin-bottom: 30px;
+        }
     }
     .score-img {
         img {
@@ -685,6 +693,11 @@ section.cibil-subscription {
         img {
         }
     }
+}
+.pl-m{
+    padding-left: 30PX;
+    
+    
 }
 .acordion {
     padding: 60px 0 40px;
