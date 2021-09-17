@@ -447,6 +447,16 @@ section.cibil-subscription .text-p p {
     padding: 40px 0 60px;
   }
 }
+@media screen and (max-width: 992px) {
+  .cibil-testimonial .section-title {
+    padding: 0 30px;
+    margin-bottom: 20px;
+  }
+  .cibil-testimonial .section-subtitle {
+    padding: 0 15px;
+    margin-bottom: 40px;
+  }
+}
 @media screen and (min-width: 992px) {
   .cibil-testimonial .col-md-4 {
     max-width: 328px;
