@@ -619,6 +619,11 @@ border-radius: 50px;
     padding: 40px 0 40px;
     .steps-list {
         padding-left: 20px;
+        img{
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+        }
         li {
             display: flex;
             align-items: center;

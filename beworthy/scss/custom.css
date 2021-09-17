@@ -631,6 +631,12 @@ section.cibil-subscription .text-p p {
 .cibil-steps-mobile .steps-list {
   padding-left: 20px;
 }
+.cibil-steps-mobile .steps-list img {
+  height: 40px;
+  width: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .cibil-steps-mobile .steps-list li {
   display: flex;
   align-items: center;
