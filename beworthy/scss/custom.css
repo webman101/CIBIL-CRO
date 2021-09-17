@@ -105,7 +105,7 @@ h6 {
     margin-bottom: 60px !important;
   }
   .mb-md-73 {
-    margin-bottom: 77px !important;
+    margin-bottom: 51px !important;
   }
   .mb-md-80 {
     margin-bottom: 80px !important;
@@ -235,7 +235,7 @@ p {
 
 .banner {
   background: radial-gradient(76.99% 76.99% at 50% 50%, #ffffff 0%, #f4f4f4 93.54%);
-  padding: 57px 8px;
+  padding: 47px 8px;
 }
 @media screen and (max-width: 992px) {
   .banner .banner-slider {
@@ -254,6 +254,9 @@ p {
   .banner .button-orange {
     padding: 0 40px;
   }
+}
+.banner .slick-dots {
+  margin-bottom: 0 !important;
 }
 
 section.cibil-subscription {
@@ -275,11 +278,12 @@ section.cibil-subscription .text-p p {
 
 .cibil-subscription-plan {
   background: #f9f9f9;
-  padding: 60px 0;
+  padding: 60px 0 40px;
 }
 
 .plans {
   padding: 20px;
+  padding-bottom: 0;
 }
 @media screen and (min-width: 992px) {
   .plans .plan-outer-column {
@@ -305,7 +309,6 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .plans .plan {
     min-height: 589px;
-    margin-bottom: 20px;
   }
 }
 .plans .plan:last-child {
@@ -523,7 +526,7 @@ section.cibil-subscription .text-p p {
 
 .cibil-creditcard {
   background: #f9f9f9;
-  padding: 40px 0 60px;
+  padding: 40px 0;
 }
 .cibil-creditcard .all-cards {
   width: 100%;
@@ -569,7 +572,7 @@ section.cibil-subscription .text-p p {
 }
 
 .cibil-steps {
-  padding: 40px 0 60px;
+  padding: 40px 0;
 }
 .cibil-steps .col-md-4 {
   display: flex;
