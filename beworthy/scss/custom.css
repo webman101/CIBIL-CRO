@@ -756,7 +756,7 @@ section.cibil-subscription .text-p p {
   content: url(../img/plus.png);
   position: absolute;
   right: 0;
-  top: 20px;
+  top: 22px;
 }
 .acordion button.accordion.is-open:after {
   content: url(../img/minus.png);
