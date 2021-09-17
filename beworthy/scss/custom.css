@@ -474,6 +474,8 @@ section.cibil-subscription .text-p p {
 }
 .testimonial .row-1 .play-store {
   margin-left: auto;
+  position: relative;
+  top: -18px;
 }
 .testimonial .row-1 .play-store img {
   width: 24.48px;
