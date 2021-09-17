@@ -257,6 +257,7 @@ p {
 }
 .banner .slick-dots {
   margin-bottom: 0 !important;
+  padding-left: 0;
 }
 
 section.cibil-subscription {
