@@ -531,19 +531,30 @@ section.cibil-subscription .text-p p {
   padding: 40px 0 60px;
 }
 .cibil-steps .col-md-4 {
-  margin-right: 120px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-right: 50px;
   padding: 0;
 }
 .cibil-steps .col-md-4 img {
   width: 100%;
+  max-width: 162px;
 }
 @media screen and (min-width: 992px) {
   .cibil-steps .col-md-4 {
-    max-width: 162px;
+    max-width: 225px;
   }
 }
 .cibil-steps .col-md-4:last-child {
   margin-right: 0;
+}
+.cibil-steps .col-md-4 .steps-text {
+  min-height: 50px;
+  margin-top: 32px;
+  margin-bottom: 0;
 }
 
 .cibil-steps-mobile {
@@ -601,7 +612,7 @@ section.cibil-subscription .text-p p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 65px;
+  margin-top: 40px;
 }
 @media screen and (max-width: 992px) {
   .buutons-group {

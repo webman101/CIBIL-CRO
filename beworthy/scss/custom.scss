@@ -525,17 +525,28 @@ section.cibil-subscription {
 .cibil-steps {
     padding: 40px 0 60px;
     .col-md-4 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
         img {
             width: 100%;
-        }
-        @media screen and (min-width: 992px) {
             max-width: 162px;
         }
+        @media screen and (min-width: 992px) {
+            max-width: 225px;
+        }
 
-        margin-right: 120px;
+        margin-right: 50px;
         padding: 0;
         &:last-child {
             margin-right: 0;
+        }
+        .steps-text{
+            min-height: 50px;
+            margin-top: 32px;
+            margin-bottom: 0;
         }
     }
 }
@@ -599,7 +610,7 @@ section.cibil-subscription {
 
     align-items: center;
     justify-content: center;
-    margin-top: 65px;
+    margin-top: 40px;
     a {
         @media screen and (max-width: 992px) {
             margin-bottom: 20px;
