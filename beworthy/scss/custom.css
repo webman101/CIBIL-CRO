@@ -708,8 +708,10 @@ section.cibil-subscription .text-p p {
   color: #2c2c2c;
   margin-left: 15px;
 }
-.monitor .score-text.last {
-  margin-bottom: 30px;
+@media screen and (max-width: 992px) {
+  .monitor .score-text.last {
+    margin-bottom: 30px;
+  }
 }
 .monitor .score-img img {
   width: 35px;
@@ -719,6 +721,7 @@ section.cibil-subscription .text-p p {
 }
 .monitor .googleplay {
   margin-top: 40px;
+  margin-bottom: 60px;
 }
 .pl-m {
   padding-left: 30px;

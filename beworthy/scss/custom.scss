@@ -696,7 +696,11 @@ section.cibil-subscription {
         color: #2c2c2c;
         margin-left: 15px;
         &.last {
-            margin-bottom: 30px;
+            @media screen and (max-width: 992px) {
+                margin-bottom: 30px;
+            }
+            
+            
         }
     }
     .score-img {
@@ -708,6 +712,7 @@ section.cibil-subscription {
     }
     .googleplay {
         margin-top: 40px;
+        margin-bottom: 60px;
         img {
         }
     }
