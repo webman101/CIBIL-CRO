@@ -113,6 +113,12 @@ h6 {
 }
 
 @media screen and (max-width: 992px) {
+  .pt-4 {
+    padding-top: 40px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
   .mt-30 {
     margin-top: 30px;
   }
