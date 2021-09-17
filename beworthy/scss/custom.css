@@ -31,13 +31,13 @@ h6 {
 
 @media screen and (max-width: 992px) {
   .mhide {
-    display: none;
+    display: none !important;
   }
 }
 
 @media screen and (min-width: 992px) {
   .dhide {
-    display: none;
+    display: none !important;
   }
 }
 

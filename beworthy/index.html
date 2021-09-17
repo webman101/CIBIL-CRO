@@ -609,7 +609,7 @@
                 Get personalized loan and credit card offers
             </div>
             <p class="text-center mb-md-50">We have partnerships with top banks and financial institutions in India who offer a wide choice of products on our platform.</p>
-            <div class="card-container justify-content-md-center">
+            <div class="card-container justify-content-md-center mhide">
                 <div class="col-6 col-md-3 credit-card">
                     <img src="./img/1.png" alt="">
                 </div>
@@ -623,7 +623,7 @@
                     <img src="./img/4.png" alt="">
                 </div>
             </div>
-            <div class="card-container justify-content-md-center">
+            <div class="card-container justify-content-md-center mhide">
                 <div class="col-6 col-md-3 credit-card">
                     <img src="./img/5.png" alt="">
                 </div>
@@ -637,7 +637,7 @@
                     <img src="./img/8.png" alt="">
                 </div>
             </div>
-            <div class="card-container justify-content-md-center">
+            <div class="card-container justify-content-md-center mhide">
                 <div class="col-6 col-md-3 credit-card">
                     <img src="./img/9.png" alt="">
                 </div>
@@ -651,7 +651,7 @@
                     <img src="./img/12.png" alt="">
                 </div>
             </div>
-            <div class="card-container justify-content-md-center">
+            <div class="card-container justify-content-md-center mhide">
                 <div class="col-6 col-md-3 credit-card">
                     <img src="./img/13.png" alt="">
                 </div>
@@ -664,6 +664,13 @@
                 <div class="col-6 col-md-3 credit-card">
                     <img src="./img/16.png" alt="">
                 </div>
+            </div>
+            <div class="mobile-slider-2 d-hide">
+                <img src="./img/cards-group.png" alt="" class="img-fluid">
+                <img src="./img/cards-group.png" alt="" class="img-fluid">
+                <img src="./img/cards-group.png" alt="" class="img-fluid">
+
+
             </div>
         </div>
     </section>
@@ -828,6 +835,17 @@
             });
         }
     </script>
+        <script>
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                /* the viewport is less than 768 pixels wide */
+                $('.mobile-slider-2').slick({
+                    arrows: false,
+                    dots: true,
+                    center: true
+    
+                });
+            }
+        </script>
 </body>
 
 </html>

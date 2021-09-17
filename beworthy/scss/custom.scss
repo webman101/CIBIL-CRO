@@ -30,12 +30,12 @@ h6 {
 }
 .mhide {
     @media screen and (max-width: 992px) {
-        display: none;
+        display: none !important;
     }
 }
 .dhide{
     @media screen and (min-width: 992px) {
-        display: none;
+        display: none !important;
     }
 }
 .f {
