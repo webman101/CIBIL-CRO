@@ -455,6 +455,7 @@ section.cibil-subscription .text-p p {
   .cibil-testimonial .section-subtitle {
     padding: 0 15px;
     margin-bottom: 40px;
+    color: #707070;
   }
 }
 @media screen and (min-width: 992px) {
@@ -473,6 +474,9 @@ section.cibil-subscription .text-p p {
   .testimonial {
     min-height: 325px;
   }
+}
+.testimonial .stars {
+  max-width: 104px;
 }
 .testimonial .row-1 {
   display: flex;
