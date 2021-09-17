@@ -620,6 +620,7 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .buutons-group a {
     margin-right: 20px;
+    padding: 0 40px;
   }
 }
 .buutons-group a:last-child {
