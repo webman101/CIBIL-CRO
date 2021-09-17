@@ -429,10 +429,16 @@ section.cibil-subscription .text-p p {
   margin-right: 12px;
 }
 .key-value .key img {
-  width: 13px;
-  height: 8px;
+  width: 18px;
+  height: 12px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media screen and (min-width: 992px) {
+  .key-value .key img {
+    width: 13px;
+    height: 8px;
+  }
 }
 .key-value .value {
   font-family: "Intro", Book;
