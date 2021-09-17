@@ -525,6 +525,11 @@ section.cibil-subscription .text-p p {
   background: #f9f9f9;
   padding: 40px 0 60px;
 }
+.cibil-creditcard .all-cards {
+  width: 100%;
+  max-width: 1048px;
+  margin: auto;
+}
 .cibil-creditcard .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -550,6 +555,12 @@ section.cibil-subscription .text-p p {
     padding: 0 13px;
     margin-bottom: 40px;
     color: #707070;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pl-44 {
+    padding-left: 44px;
   }
 }
 
@@ -712,7 +723,7 @@ section.cibil-subscription .text-p p {
 
 .acordion {
   padding: 60px 0 40px;
-  max-width: 1024px;
+  max-width: 1055px;
   margin: auto;
 }
 .acordion button.accordion {

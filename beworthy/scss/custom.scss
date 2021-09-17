@@ -455,7 +455,7 @@ section.cibil-subscription {
             padding: 0;
             margin-right: 20px;
         }
-        &:last-child{
+        &:last-child {
             margin-right: 0;
         }
     }
@@ -514,9 +514,15 @@ section.cibil-subscription {
     }
 }
 /////////////////////////sssss
+
 .cibil-creditcard {
     background: #f9f9f9;
     padding: 40px 0 60px;
+    .all-cards {
+        width: 100%;
+        max-width: 1048px;
+        margin: auto;
+    }
     .card-container {
         display: flex;
         flex-wrap: wrap;
@@ -545,6 +551,11 @@ section.cibil-subscription {
     }
 }
 //////////////////////////////////////ss
+.pl-44 {
+    @media screen and (min-width: 992px) {
+        padding-left: 44px;
+    }
+}
 .steps {
     margin-top: 47px;
 }
@@ -703,7 +714,7 @@ section.cibil-subscription {
 }
 .acordion {
     padding: 60px 0 40px;
-    max-width: 1024px;
+    max-width: 1055px;
     margin: auto;
     button.accordion {
         width: 100%;
