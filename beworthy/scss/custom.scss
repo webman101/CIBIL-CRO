@@ -716,6 +716,7 @@ section.cibil-subscription {
     padding: 60px 0 40px;
     max-width: 1055px;
     margin: auto;
+
     button.accordion {
         width: 100%;
         background-color: white;
@@ -733,7 +734,8 @@ section.cibil-subscription {
         opacity: 0.85;
         border-top: 2px solid #ececec;
     }
-
+    &.last-border {
+    }
     button.accordion:after {
         content: url(../img/plus.png);
 
@@ -758,6 +760,9 @@ section.cibil-subscription {
             color: #2c2c2c;
         }
     }
+}
+.accordion-content.last-border{
+    border-bottom: 2px solid #ececec !important;
 }
 /////////////////////////////@at-root
 .beworthy {

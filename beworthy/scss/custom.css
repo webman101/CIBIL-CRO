@@ -765,6 +765,10 @@ section.cibil-subscription .text-p p {
   color: #2c2c2c;
 }
 
+.accordion-content.last-border {
+  border-bottom: 2px solid #ececec !important;
+}
+
 .beworthy {
   padding: 40px 0 60px;
   background: #f9f9f9;
