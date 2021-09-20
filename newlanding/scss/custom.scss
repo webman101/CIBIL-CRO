@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Intro";
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: "Intro";
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+.banner {
+    padding: 35px 50px 25px;
+    background-color: #f5f5f5;
+    .banner-title {
+        font-family: "Intro", Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 36px;
+        /* or 112% */
+
+        text-align: center;
+
+        color: #000000;
+
+        opacity: 0.85;
+        max-width: 408px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 22px;
+    }
+    .banner-description {
+        font-family: "Intro", Book;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        /* or 122% */
+
+        text-align: center;
+
+        color: #000000;
+
+        opacity: 0.6;
+        max-width: 460px;
+        margin: auto;
+        margin-bottom: 28px;
+    }
+    .banner-img {
+        max-width: 400px;
+        margin: auto;
+        display: block;
+    }
+}
+.login {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: capitalize;
+    color: #000000;
+    background: #fcd800;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 999px;
+    height: 42px;
+    width: 290px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    margin: auto;
+    margin-top: -35px;
+    &:hover {
+        color: #000;
+    }
+}
+.plan-details {
+    margin-top: 11px;
+    font-family: "Intro", Book;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+    opacity: 0.6;
+    margin-bottom: 6px;
+}
+.note {
+    font-family: "Intro", Book;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+    opacity: 0.6;
+}
+
+//////////////////////////////
+footer {
+    text-align: center;
+
+    padding: 22px;
+    .footer-title {
+        font-family: "Intro", Light;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 12px;
+        text-align: center;
+        color: #000000;
+        opacity: 0.5;
+        margin-bottom: 15px;
+    }
+    .footer-desc-bold {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        /* or 129% */
+
+        text-align: center;
+
+        /* Black */
+        text-align: center;
+        color: #000000;
+
+        opacity: 0.5;
+        margin-top: 23px;
+        margin-bottom: 12px;
+    }
+    .tandc {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 12px;
+        /* identical to box height, or 86% */
+
+        /* Black */
+
+        color: #000000;
+
+        opacity: 0.5;
+        margin: 25px 0 15px;
+    }
+}
+.info-logo {
+    max-width: 120px;
+    margin-bottom: 12px;
+}
+.copyright {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 12px;
+    padding: 0;
+}
+.last {
+    padding: 0;
+    margin: 0;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 12px;
+    padding: 0;
+    margin-top: 10px;
+}
