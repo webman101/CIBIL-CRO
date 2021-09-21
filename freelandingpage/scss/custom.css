@@ -217,34 +217,6 @@ header nav .logo {
   line-height: 51px;
 }
 
-.banner {
-  color: #2c2c2c;
-  text-align: center;
-  max-height: 100vh;
-  background-color: #f9f9f9;
-  background-position: center;
-  background-size: 100%;
-  padding-top: 60px;
-}
-@media screen and (max-width: 992px) {
-  .banner {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 30px;
-  }
-}
-.banner .ipad {
-  display: block;
-  width: 100%;
-  max-width: 898px;
-  margin: auto;
-}
-@media screen and (max-width: 992px) {
-  .banner .btn-orange {
-    margin-bottom: 15px;
-  }
-}
-
 .mobile-text {
   padding: 30px 25px;
 }
@@ -318,8 +290,53 @@ header nav .logo {
   }
 }
 
+.banner {
+  color: #2c2c2c;
+  text-align: center;
+  max-height: 100vh;
+  background-color: #f9f9f9;
+  background-position: center;
+  background-size: 100%;
+  padding-top: 60px;
+}
+@media screen and (max-width: 992px) {
+  .banner {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner .description {
+    margin-bottom: 47px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner .title {
+    margin-bottom: 32px;
+  }
+}
+.banner .ipad {
+  display: block;
+  width: 100%;
+  max-width: 898px;
+  margin: auto;
+}
+.banner .ipad.dhide {
+  transform: translateX(15px);
+}
+.banner .btn-orange {
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 992px) {
+  .banner .btn-orange {
+    margin-bottom: 30px;
+  }
+}
+
 .goals {
   background-color: #ffffff;
+  padding-top: 40px;
   box-sizing: border-box;
   text-align: center;
   padding-bottom: 34px;
@@ -332,12 +349,27 @@ header nav .logo {
     margin-top: 40px;
   }
 }
+@media screen and (min-width: 992px) {
+  .goals .plan-details {
+    margin-bottom: 17px;
+  }
+}
 .goals .goal {
-  margin-top: 33px;
+  margin-top: 20px;
   padding: 30px;
   background: #f9f9f9;
-  min-height: 315px;
   padding-bottom: 0;
+}
+@media screen and (max-width: 992px) {
+  .goals .goal {
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .goals .goal {
+    margin-top: 33px;
+    min-height: 315px;
+  }
 }
 .goals .goal img {
   width: 59px;

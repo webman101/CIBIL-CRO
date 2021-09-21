@@ -215,35 +215,7 @@ header {
     margin-bottom: 40px;
     line-height: 51px;
 }
-.banner {
-    color: #2c2c2c;
-    text-align: center;
-    max-height: 100vh;
-    background-color: #f9f9f9;
-    @media screen and (max-width: 992px) {
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 30px;
-    }
 
-    background-position: center;
-    background-size: 100%;
-    padding-top: 60px;
-
-    .ipad {
-        display: block;
-        width: 100%;
-        max-width: 898px;
-        margin: auto;
-    }
-    .btn-orange{
-        @media screen and (max-width: 992px) {
-            margin-bottom: 15px;
-        }
-        
-        
-    }
-}
 .mobile-text {
     padding: 30px 25px;
 }
@@ -273,7 +245,8 @@ header {
     font-weight: normal;
     @media screen and (max-width: 992px) {
         max-width: 304px;
-        margin: auto;line-height: 24px;
+        margin: auto;
+        line-height: 24px;
     }
     font-size: 14px;
     @media screen and (min-width: 992px) {
@@ -293,42 +266,92 @@ header {
     @media screen and (max-width: 992px) {
         margin: auto;
         line-height: 30px;
-
         margin-bottom: 20px;
     }
 
     @media screen and (min-width: 992px) {
         font-size: 40px;
-
         line-height: 44px;
-
         margin-bottom: 30px;
     }
-
     text-align: center;
     letter-spacing: -0.01em;
     margin-bottom: 30px;
+}
+.banner {
+    color: #2c2c2c;
+    text-align: center;
+    max-height: 100vh;
+    background-color: #f9f9f9;
+    @media screen and (max-width: 992px) {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 30px;
+    }
+    .description {
+        @media screen and (min-width: 992px) {
+            margin-bottom: 47px;
+        }
+    }
+    .title {
+        @media screen and (min-width: 992px) {
+            margin-bottom: 32px;
+        }
+    }
+
+    background-position: center;
+    background-size: 100%;
+    padding-top: 60px;
+
+    .ipad {
+        display: block;
+        width: 100%;
+        max-width: 898px;
+        margin: auto;
+    }
+    .ipad.dhide {
+        transform: translateX(15px);
+    }
+    .btn-orange {
+        margin-bottom: 35px;
+        @media screen and (min-width: 992px) {
+            margin-bottom: 30px;
+        }
+    }
 }
 ///////////////////////////////////////@at-root
 .goals {
     background-color: #ffffff;
     @media screen and (max-width: 992px) {
-        
         padding: 46px 8px 40px;
         .btn-orange {
             margin-top: 40px;
         }
     }
+    padding-top: 40px;
 
     box-sizing: border-box;
     text-align: center;
     padding-bottom: 34px;
+    .plan-details {
+        @media screen and (min-width: 992px) {
+            margin-bottom: 17px;
+        }
+    }
     .goal {
-        margin-top: 33px;
+        margin-top: 20px;
+        @media screen and (max-width: 992px) {
+            padding-bottom: 30px;
+        }
+
+        @media screen and (min-width: 992px) {
+            margin-top: 33px;
+            min-height: 315px;
+        }
+
         padding: 30px;
         background: #f9f9f9;
 
-        min-height: 315px;
         padding-bottom: 0;
         img {
             width: 59px;
