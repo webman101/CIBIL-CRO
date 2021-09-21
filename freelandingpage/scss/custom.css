@@ -420,7 +420,12 @@ header nav .logo {
   line-height: 30px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
-  margin: 35px 0 14px;
+  margin: 26px 0 14px;
+}
+@media screen and (min-width: 992px) {
+  .goals .goal h6 {
+    margin: 35px 0 14px;
+  }
 }
 .goals .goal p {
   font-family: "Intro", Book;
