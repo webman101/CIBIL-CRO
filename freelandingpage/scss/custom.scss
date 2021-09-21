@@ -262,7 +262,7 @@ header {
     font-family: "Intro", Bold;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 32px;
     @media screen and (max-width: 992px) {
         margin: auto;
         line-height: 30px;
@@ -282,7 +282,8 @@ header {
     color: #2c2c2c;
     text-align: center;
     max-height: 100vh;
-    background-color: #f9f9f9;
+    background: url(../img/bannerbg.png);
+
     @media screen and (max-width: 992px) {
         padding-left: 25px;
         padding-right: 25px;
@@ -329,11 +330,29 @@ header {
         }
     }
     padding-top: 40px;
-
     box-sizing: border-box;
     text-align: center;
     padding-bottom: 34px;
+    .title {
+        font-size: 24px;
+        @media screen and (max-width: 992px) {
+            max-width: 315px;
+        }
+        
+        
+        @media screen and (min-width: 992px) {
+            font-size: 32px;
+        }
+    }
     .plan-details {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
         @media screen and (min-width: 992px) {
             margin-bottom: 17px;
         }
@@ -355,8 +374,7 @@ header {
         padding-bottom: 0;
         img {
             width: 59px;
-            height: 59px;
-            object-fit: cover;
+            object-fit: contain;
         }
         h6 {
             font-family: "Intro", Bold;
