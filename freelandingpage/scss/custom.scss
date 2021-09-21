@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Intro";
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: "Intro";
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+a {
+    outline: none !important;
+    display: inline-block;
+    &:hover {
+        color: #2c2c2c;
+    }
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+.mhide {
+    @media screen and (max-width: 992px) {
+        display: none !important;
+    }
+}
+.dhide {
+    @media screen and (min-width: 992px) {
+        display: none !important;
+    }
+}
+.f {
+    &-12 {
+        font-size: 12px !important;
+    }
+    &-14 {
+        font-size: 14px !important;
+    }
+    &-15 {
+        font-size: 15px !important;
+    }
+    &-16 {
+        font-size: 16px !important;
+    }
+    &-17 {
+        font-size: 17px !important;
+    }
+    &-18 {
+        font-size: 18px !important;
+    }
+    &-19 {
+        font-size: 19px !important;
+    }
+    &-20 {
+        font-size: 20px !important;
+    }
+    &-22 {
+        font-size: 22px !important;
+    }
+    &-24 {
+        font-size: 24px !important;
+    }
+}
+.mb {
+    &-10 {
+        margin-bottom: 10px !important;
+    }
+    &-20 {
+        margin-bottom: 20px !important;
+    }
+    &-30 {
+        margin-bottom: 30px !important;
+    }
+    &-40 {
+        margin-bottom: 40px !important;
+    }
+}
+.mb {
+    @media screen and (min-width: 992px) {
+        &-md-10 {
+            margin-bottom: 10px !important;
+        }
+        &-md-20 {
+            margin-bottom: 20px !important;
+        }
+        &-md-30 {
+            margin-bottom: 30px !important;
+        }
+        &-md-40 {
+            margin-bottom: 40px !important;
+        }
+        &-md-50 {
+            margin-bottom: 50px !important;
+        }
+        &-md-60 {
+            margin-bottom: 60px !important;
+        }
+        &-md-73 {
+            margin-bottom: 51px !important;
+        }
+        &-md-80 {
+            margin-bottom: 80px !important;
+        }
+    }
+}
+.mt {
+    @media screen and (min-width: 992px) {
+        &-md-10 {
+            margin-top: 10px !important;
+        }
+        &-md-20 {
+            margin-top: 22px !important;
+        }
+        &-md-30 {
+            margin-top: 30px !important;
+        }
+        &-md-40 {
+            margin-top: 40px !important;
+        }
+        &-md-50 {
+            margin-top: 50px !important;
+        }
+        &-md-60 {
+            margin-top: 60px !important;
+        }
+        &-md-73 {
+            margin-top: 51px !important;
+        }
+        &-md-80 {
+            margin-top: 80px !important;
+        }
+    }
+}
+
+.text-blue {
+    color: #00a6ca;
+}
+
+p {
+    font-family: "Intro", Regular;
+    font-weight: 600;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #2c2c2c;
+}
+.btn-outline {
+    background: #fafdff;
+
+    border: 2px solid #3ea3ce;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: "Intro", Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #3ea3ce;
+    min-width: 125px;
+    min-height: 35px;
+}
+////////////////////////@at-root
+header {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        .logo {
+            width: 91px;
+        }
+    }
+}
+.text-white {
+    color: #ffffff;
+}
+.text-black {
+    color: #2c2c2c;
+}
+.banner {
+    color: #fff;
+    text-align: center;
+    max-height: 100vh;
+    background-image: url(../img/banner1.png);
+    background-position: center;
+    background-size: 100%;
+    padding-top: 60px;
+
+    .description {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 30px;
+
+        text-align: center;
+
+        color: #ffffff;
+        margin-bottom: 40px;
+    }
+    .btn-orange {
+        background: #f16e00;
+        border-radius: 999px;
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 0.02em;
+        width: 240px;
+        height: 50px;
+        margin: auto;
+        color: #2c2c2c;
+        margin-bottom: 40px;
+        line-height: 51px;
+    }
+
+    .ipad {
+        display: block;
+        width: 100%;
+        max-width: 898px;
+        margin: auto;
+    }
+}
+.plan-details {
+    font-family: "Intro", Book;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 21px;
+}
+.title {
+    font-family: "Intro", Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 44px;
+
+    text-align: center;
+    letter-spacing: -0.01em;
+    margin-bottom: 30px;
+}
+///////////////////////////////////////@at-root
+.goals {
+    background: #f9f9f9;
+    border: 1px solid #00a6ca;
+    box-sizing: border-box;
+    text-align: left;
+    .goal {
+        margin-top: 33px;
+        padding: 30px;
+        background-color: #ffffff;
+        img {
+            width: 59px;
+            height: 59px;
+            object-fit: cover;
+        }
+        h6 {
+            font-family: "Intro", Bold;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: #2c2c2c;
+            text-align: left;
+            margin: 35px 0 14px;
+        }
+        p {
+            font-family: "Intro", Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #000000;
+        }
+    }
+}
