@@ -112,6 +112,9 @@ h6 {
         }
     }
 }
+.mt-30 {
+    margin-top: 30px;
+}
 .mt {
     @media screen and (min-width: 992px) {
         &-md-10 {
@@ -203,6 +206,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-weight: 600;
     letter-spacing: 0.02em;
     width: 240px;
     height: 50px;
@@ -212,26 +216,19 @@ header {
     line-height: 51px;
 }
 .banner {
-    color: #fff;
+    color: #2c2c2c;
     text-align: center;
     max-height: 100vh;
-    background-image: url(../img/banner1.png);
+    background-color: #f9f9f9;
+    @media screen and (max-width: 992px) {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 30px;
+    }
+
     background-position: center;
     background-size: 100%;
     padding-top: 60px;
-
-    .description {
-        font-family: "Intro", Regular;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 30px;
-
-        text-align: center;
-
-        color: #ffffff;
-        margin-bottom: 40px;
-    }
 
     .ipad {
         display: block;
@@ -239,12 +236,49 @@ header {
         max-width: 898px;
         margin: auto;
     }
+    .btn-orange{
+        @media screen and (max-width: 992px) {
+            margin-bottom: 15px;
+        }
+        
+        
+    }
 }
+.mobile-text {
+    padding: 30px 25px;
+}
+.description {
+    font-family: "Intro", Regular;
+    font-style: normal;
+    @media screen and (max-width: 992px) {
+        font-weight: 600;
+        margin-bottom: 28px;
+        line-height: 24px;
+    }
+
+    font-weight: normal;
+    font-size: 16px;
+    @media screen and (min-width: 992px) {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    line-height: 30px;
+
+    text-align: center;
+}
+
 .plan-details {
     font-family: "Intro", Book;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    @media screen and (max-width: 992px) {
+        max-width: 304px;
+        margin: auto;line-height: 24px;
+    }
+    font-size: 14px;
+    @media screen and (min-width: 992px) {
+        font-size: 16px;
+    }
     line-height: 24px;
 
     text-align: center;
@@ -255,8 +289,21 @@ header {
     font-family: "Intro", Bold;
     font-style: normal;
     font-weight: bold;
-    font-size: 40px;
-    line-height: 44px;
+    font-size: 24px;
+    @media screen and (max-width: 992px) {
+        margin: auto;
+        line-height: 30px;
+
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 992px) {
+        font-size: 40px;
+
+        line-height: 44px;
+
+        margin-bottom: 30px;
+    }
 
     text-align: center;
     letter-spacing: -0.01em;
@@ -264,16 +311,23 @@ header {
 }
 ///////////////////////////////////////@at-root
 .goals {
-    background: #f9f9f9;
-    border-top: 1px solid #00a6ca;
-    box-sizing: border-box;
-    text-align: left;
+    background-color: #ffffff;
+    @media screen and (max-width: 992px) {
+        
+        padding: 46px 8px 40px;
+        .btn-orange {
+            margin-top: 40px;
+        }
+    }
 
+    box-sizing: border-box;
+    text-align: center;
     padding-bottom: 34px;
     .goal {
         margin-top: 33px;
         padding: 30px;
-        background-color: #ffffff;
+        background: #f9f9f9;
+
         min-height: 315px;
         padding-bottom: 0;
         img {
@@ -289,7 +343,6 @@ header {
             line-height: 30px;
             letter-spacing: 0.02em;
             color: #2c2c2c;
-            text-align: left;
             margin: 35px 0 14px;
         }
         p {
@@ -299,8 +352,7 @@ header {
             font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.02em;
-            text-align: left;
-            color: #000000;
+            color: #2c2c2c;
         }
     }
 }
