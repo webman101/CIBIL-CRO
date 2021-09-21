@@ -186,6 +186,18 @@ header nav .logo {
   line-height: 51px;
 }
 
+.btn-orange:hover {
+  background-color: #d66202;
+}
+
+.btn-orange:focus,
+.btn-orange[disabled]:hover,
+.btn-orange[disabled]:focus {
+  background-color: #f16e00;
+  border-color: #f16e00;
+  color: #000000;
+}
+
 .mobile-text {
   padding: 30px 25px;
 }
