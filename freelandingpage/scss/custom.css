@@ -286,7 +286,7 @@ header nav .logo {
 @media screen and (max-width: 992px) {
   .title {
     margin: auto;
-    line-height: 44px;
+    line-height: 30px;
     margin-bottom: 20px;
   }
 }
@@ -317,6 +317,11 @@ header nav .logo {
 @media screen and (min-width: 992px) {
   .banner .description {
     margin-bottom: 47px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .banner .title {
+    line-height: 44px;
   }
 }
 @media screen and (min-width: 992px) {

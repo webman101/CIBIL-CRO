@@ -143,12 +143,11 @@ h6 {
         }
     }
 }
-.font-weight-bold{
+.font-weight-bold {
     font-weight: 700;
 }
-.font-weight-bold-600{
+.font-weight-bold-600 {
     font-weight: 700;
-
 }
 .text-blue {
     color: #00a6ca;
@@ -271,7 +270,7 @@ header {
     font-size: 32px;
     @media screen and (max-width: 992px) {
         margin: auto;
-        line-height: 44px;
+        line-height: 30px;
         margin-bottom: 20px;
     }
 
@@ -301,6 +300,10 @@ header {
         }
     }
     .title {
+        @media screen and (max-width: 992px) {
+            line-height: 44px;
+        }
+
         @media screen and (min-width: 992px) {
             margin-bottom: 32px;
         }
@@ -344,8 +347,7 @@ header {
         @media screen and (max-width: 992px) {
             max-width: 315px;
         }
-        
-        
+
         @media screen and (min-width: 992px) {
             font-size: 32px;
         }
