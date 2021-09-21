@@ -263,7 +263,6 @@ header nav .logo {
 .banner {
   color: #2c2c2c;
   text-align: center;
-  max-height: 100vh;
   background: url(../img/bannerbg.png);
   background-position: center;
   background-size: 100%;
@@ -354,6 +353,7 @@ header nav .logo {
 }
 .goals .goal {
   margin-top: 20px;
+  border-radius: 6px;
   padding: 30px;
   background: #f9f9f9;
   padding-bottom: 0;
