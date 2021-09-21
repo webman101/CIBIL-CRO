@@ -38,38 +38,6 @@ h6 {
         display: none !important;
     }
 }
-.f {
-    &-12 {
-        font-size: 12px !important;
-    }
-    &-14 {
-        font-size: 14px !important;
-    }
-    &-15 {
-        font-size: 15px !important;
-    }
-    &-16 {
-        font-size: 16px !important;
-    }
-    &-17 {
-        font-size: 17px !important;
-    }
-    &-18 {
-        font-size: 18px !important;
-    }
-    &-19 {
-        font-size: 19px !important;
-    }
-    &-20 {
-        font-size: 20px !important;
-    }
-    &-22 {
-        font-size: 22px !important;
-    }
-    &-24 {
-        font-size: 24px !important;
-    }
-}
 .mb {
     &-10 {
         margin-bottom: 10px !important;
@@ -104,12 +72,6 @@ h6 {
         &-md-60 {
             margin-bottom: 60px !important;
         }
-        &-md-73 {
-            margin-bottom: 51px !important;
-        }
-        &-md-80 {
-            margin-bottom: 80px !important;
-        }
     }
 }
 .mt-30 {
@@ -134,12 +96,6 @@ h6 {
         }
         &-md-60 {
             margin-top: 60px !important;
-        }
-        &-md-73 {
-            margin-top: 51px !important;
-        }
-        &-md-80 {
-            margin-top: 80px !important;
         }
     }
 }
@@ -232,7 +188,6 @@ header {
         margin-bottom: 28px;
         line-height: 24px;
     }
-
     font-weight: normal;
     font-size: 16px;
     @media screen and (min-width: 992px) {
@@ -240,7 +195,6 @@ header {
         margin-bottom: 40px;
     }
     line-height: 30px;
-
     text-align: center;
 }
 
@@ -258,7 +212,6 @@ header {
         font-size: 16px;
     }
     line-height: 24px;
-
     text-align: center;
     letter-spacing: 0.02em;
     margin-bottom: 21px;
@@ -268,12 +221,12 @@ header {
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
+    color: #2c2c2c;
     @media screen and (max-width: 992px) {
         margin: auto;
         line-height: 30px;
         margin-bottom: 20px;
     }
-
     @media screen and (min-width: 992px) {
         font-size: 40px;
         line-height: 44px;
@@ -288,7 +241,6 @@ header {
     text-align: center;
     max-height: 100vh;
     background: url(../img/bannerbg.png);
-
     @media screen and (max-width: 992px) {
         padding-left: 25px;
         padding-right: 25px;
@@ -303,7 +255,6 @@ header {
         @media screen and (max-width: 992px) {
             line-height: 44px;
         }
-
         @media screen and (min-width: 992px) {
             margin-bottom: 32px;
         }
@@ -312,7 +263,6 @@ header {
     background-position: center;
     background-size: 100%;
     padding-top: 60px;
-
     .ipad {
         display: block;
         width: 100%;
@@ -370,15 +320,12 @@ header {
         @media screen and (max-width: 992px) {
             padding-bottom: 30px;
         }
-
         @media screen and (min-width: 992px) {
             margin-top: 33px;
             min-height: 315px;
         }
-
         padding: 30px;
         background: #f9f9f9;
-
         padding-bottom: 0;
         img {
             width: 59px;
@@ -396,8 +343,6 @@ header {
             @media screen and (min-width: 992px) {
                 margin: 35px 0 14px;
             }
-            
-            
         }
         p {
             font-family: "Intro", Book;
