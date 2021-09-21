@@ -487,6 +487,7 @@ header nav .logo {
 .footer-text p {
   font-size: 20px;
   margin: 0;
+  font-weight: 300;
 }
 
 @media (max-width: 991px) {
