@@ -2455,9 +2455,9 @@ span.switcher.switcher-1 input:not(:checked) + label {
     text-align: left;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .review-card {
-height: 320px;
+    height: 320px;
   }
 }
 .review-title {
