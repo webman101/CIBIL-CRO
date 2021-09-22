@@ -2301,6 +2301,12 @@ span.switcher.switcher-1 input:not(:checked) + label {
   }
 }
 
+.store-section .inner-row .image-text .img-left-img {
+  width: 35px;
+  height: 35px;
+  margin-right: 16px;
+}
+
 .note-text {
   font-family: "Intro", Regular;
   font-style: normal;
@@ -2309,8 +2315,6 @@ span.switcher.switcher-1 input:not(:checked) + label {
   line-height: 32px;
   color: #ffffff;
   text-align: left;
-
-  margin-left: 56px;
 }
 @media (min-width: 768px) {
   .note-text {
