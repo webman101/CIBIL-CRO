@@ -2386,9 +2386,16 @@ span.switcher.switcher-1 input:not(:checked) + label {
     font-size: 23px;
   }
 }
+
 @media (max-width: 768px) {
   .store-section .section-title {
     margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .store-section .section-title {
+    font-size: 40px;
+    margin-bottom: 65px;
   }
 }
 @media (max-width: 768px) {
@@ -2446,6 +2453,11 @@ span.switcher.switcher-1 input:not(:checked) + label {
   .review-card {
     padding: 20px;
     text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .review-card {
+height: 320px;
   }
 }
 .review-title {
