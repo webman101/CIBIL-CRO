@@ -63,8 +63,9 @@ $(document).ready(function() {
     });
     $('.review-slider').slick({
         dots: true,
+        center:true,
         infinite: true,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<div class="slick-custom-arrow slick-prev"></div>',
         nextArrow: '<div class="slick-custom-arrow slick-next"></div>',
