@@ -2333,10 +2333,13 @@ span.switcher.switcher-1 input:not(:checked) + label {
   display: flex;
   margin-right: 16px;
 }
+
+.left-slide-column {
+  padding: 0 6px;
+}
 @media (min-width: 768px) {
   .left-slide-column {
     width: 48%;
-
     padding-left: 0;
   }
   .store-section .inner-row .slider-column {
@@ -2434,17 +2437,24 @@ span.switcher.switcher-1 input:not(:checked) + label {
     font-size: 16px;
   }
 }
-
 .review {
-  padding: 0 35px;
+  padding: 0;
 }
+@media (min-width: 768px) {
+  .review {
+    padding: 0 35px;
+  }
+}
+
 .review-card {
+  border-left: 10px solid #fff;
+
   background: #ffffff;
-  border-left: 10px solid #3ea3ce;
   padding: 35px 20px;
   padding-bottom: 18px;
-  margin: 0 10px;
+  margin: 0 9px;
   height: auto;
+  border-left: 10px solid #fcd833 !important;
 }
 .review-card:nth-child(even) {
   border-left: 10px solid #fcd833;
@@ -2457,7 +2467,6 @@ span.switcher.switcher-1 input:not(:checked) + label {
 }
 @media (min-width: 768px) {
   .review-card {
-    height: 320px;
   }
 }
 .review-title {
@@ -2470,6 +2479,17 @@ span.switcher.switcher-1 input:not(:checked) + label {
     font-size: 18px;
   }
 }
+@media (min-width: 768px) {
+  .review-title {
+    font-family: "Intro", Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+}
 .review-text {
   font-size: 18px;
   color: #000000;
@@ -2478,6 +2498,17 @@ span.switcher.switcher-1 input:not(:checked) + label {
 @media (max-width: 480px) {
   .review-text {
     font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .review-text {
+    font-family: "Intro", Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 16px;
   }
 }
 .review-ratings {
@@ -2551,7 +2582,7 @@ span.switcher.switcher-1 input:not(:checked) + label {
   background-repeat: no-repeat;
 }
 .slick-custom-arrow.slick-prev {
-  background-image: url("./img/arrow-slide-left.png");
+  background-image: url("./img/arrow-slide-left.svg");
   left: -30px;
 }
 @media (max-width: 480px) {
@@ -2560,7 +2591,7 @@ span.switcher.switcher-1 input:not(:checked) + label {
   }
 }
 .slick-custom-arrow.slick-next {
-  background-image: url("./img/arrow-slide-right.png");
+  background-image: url("./img/arrow-slide-right.svg");
   right: -30px;
 }
 @media (max-width: 480px) {
