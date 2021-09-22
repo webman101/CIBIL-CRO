@@ -2335,13 +2335,13 @@ span.switcher.switcher-1 input:not(:checked) + label {
 }
 @media (min-width: 768px) {
   .left-slide-column {
-    max-width: 45%;
+    width: 48%;
 
     padding-left: 0;
   }
   .store-section .inner-row .slider-column {
     margin-left: 70px;
-    max-width: 45%;
+    width: 45%;
   }
 }
 
@@ -2383,8 +2383,7 @@ span.switcher.switcher-1 input:not(:checked) + label {
 }
 @media (min-width: 376px) {
   .store-section .section-title {
-  font-size: 23px;
-
+    font-size: 23px;
   }
 }
 @media (max-width: 768px) {
