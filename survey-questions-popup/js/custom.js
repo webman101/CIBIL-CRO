@@ -76,23 +76,23 @@
 //  });
 $(document).ready(function() {
 
-    $('.screen1').addClass('vissible');
+    $('.screen1').addClass('d-block');
     $('.screen1 .next').click(function() {
-        $('.screen1').removeClass('vissible');
+        $('.screen1').removeClass('d-block');
 
-        $('.screen2').addClass('vissible');
+        $('.screen2').addClass('d-block');
     });
     $('.screen2 .next').click(function() {
-        $('.screen2').removeClass('vissible');
+        $('.screen2').removeClass('d-block');
 
-        $('.screen3').addClass('vissible');
+        $('.screen3').addClass('d-block');
     });
     $('.back-2-screen-1').click(function() {
-        $('.screen2,.screen3').removeClass('vissible');
-        $('.screen1').addClass('vissible');
+        $('.screen2,.screen3').removeClass('d-block');
+        $('.screen1').addClass('d-block');
     });
     $('.back-2-screen-2').click(function() {
-        $('.screen1,.screen3').removeClass('vissible');
-        $('.screen2').addClass('vissible');
+        $('.screen1,.screen3').removeClass('d-block');
+        $('.screen2').addClass('d-block');
     });
 });
