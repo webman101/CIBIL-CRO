@@ -1001,7 +1001,7 @@ section.cibil-subscription {
             padding: 20px 10px;
             background: #fafafa;
             border: 1px solid #d6d6d6;
-            border-radius: 3px;
+            // border-radius: 3px;
             text-align: center;
             display: flex;
             align-items: flex-start;
@@ -1009,6 +1009,9 @@ section.cibil-subscription {
             flex-direction: column;
             position: relative;
             transition: all 0.2s linear;
+            &:last-child {
+                border-top-right-radius: 3px;
+            }
         }
         li.active {
             background: #fff;
@@ -1024,6 +1027,9 @@ section.cibil-subscription {
     }
     .nav-tabs {
         li {
+            @media screen and (max-width: 375px) {
+                padding-left: 5px;
+            }
             padding-left: 10px;
             padding-right: 3px;
             padding-bottom: 0;
@@ -1031,6 +1037,9 @@ section.cibil-subscription {
                 font-family: "Intro", Regular;
                 font-style: normal;
                 font-weight: 600;
+                @media screen and (max-width: 375px) {
+                    font-size: 10px;
+                }
                 font-size: 12px;
                 @media screen and (min-width: 376) {
                     font-size: 16px;
