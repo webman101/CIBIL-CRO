@@ -148,6 +148,11 @@ a {
 
             font-style: normal;
             font-weight: 500;
+            @media screen and (max-width: 375px) {
+                font-size: 10px;
+            }
+            
+            
             font-size: 14px;
 
             display: flex;
