@@ -233,6 +233,34 @@ p {
   text-transform: capitalize;
 }
 
+.btn-outline {
+  background: #fafdff;
+  border: 2px solid #3ea3ce;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #3ea3ce;
+  min-width: 125px;
+  min-height: 35px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+header nav .logo {
+  width: 91px;
+}
+
 .banner {
   background: radial-gradient(76.99% 76.99% at 50% 50%, #ffffff 0%, #f4f4f4 93.54%);
   padding: 47px 8px;
