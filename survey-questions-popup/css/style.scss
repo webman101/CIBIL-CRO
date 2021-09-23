@@ -90,6 +90,12 @@ a {
     }
 }
 .exit-intent-popup {
+    @media screen and (max-width: 992px) {
+        height: 130%;
+
+    }
+    
+    
     height: 100%;
     background: #e5e5e5;
     position: absolute;
