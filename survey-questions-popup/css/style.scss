@@ -89,6 +89,10 @@ a {
         margin-bottom: 20px;
     }
 }
+.disabled{
+    pointer-events: none;
+    opacity: 0.5;
+}
 .exit-intent-popup {
     @media screen and (max-width: 992px) {
         height: 150%;

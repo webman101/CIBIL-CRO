@@ -96,6 +96,11 @@ a:hover {
   }
 }
 
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 .exit-intent-popup {
   height: 100%;
   background: #e5e5e5;
