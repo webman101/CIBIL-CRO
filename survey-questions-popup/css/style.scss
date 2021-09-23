@@ -139,7 +139,7 @@ p {
             vertical-align: middle;
             cursor: pointer;
             margin-right: 5px;
-            border: 1px solid #00A6CA;
+            border: 1px solid #00a6ca;
             box-sizing: border-box;
         }
     }
@@ -178,13 +178,14 @@ p {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-
+    text-decoration: none;
     display: flex;
     align-items: center;
     letter-spacing: 0.02em;
     color: #ffffff;
     margin-top: 30px;
     margin-left: auto;
+    text-transform: capitalize;
 }
 input[type="number"] {
     &::-webkit-inner-spin-button {
