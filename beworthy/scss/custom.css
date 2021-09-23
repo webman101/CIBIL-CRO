@@ -314,7 +314,17 @@ section.cibil-subscription .text-p p {
   padding: 20px;
   padding-bottom: 0;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 450px) {
+  .plans {
+    padding: 20px 0 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .plans {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
   .plans .plan-outer-column {
     max-width: 240px;
     margin-right: 22px;
@@ -375,11 +385,30 @@ section.cibil-subscription .text-p p {
 }
 @media screen and (min-width: 992px) {
   .plans .plan.active::before {
-    width: 240px;
+    top: -35px;
   }
 }
+.plans .plan.active::after {
+  content: "Most Popular";
+  position: absolute;
+  right: -2px;
+  height: 37px;
+  background: #00a6ca;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101.1%;
+  top: -1px;
+  border-radius: 6px 6px 0 0;
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  padding-top: 1px;
+}
 @media screen and (min-width: 992px) {
-  .plans .plan.active::before {
+  .plans .plan.active::after {
     top: -35px;
   }
 }
@@ -428,8 +457,15 @@ section.cibil-subscription .text-p p {
   margin: 16px 0 23px;
 }
 
-.min-ht-350 {
-  min-height: 350px;
+@media screen and (min-width: 992px) {
+  .min-ht-350 {
+    min-height: 405px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .min-ht-350 {
+    min-height: 350px;
+  }
 }
 
 .save {
@@ -496,7 +532,7 @@ section.cibil-subscription .text-p p {
     color: #707070;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1025px) {
   .cibil-testimonial .col-md-4 {
     max-width: 328px;
     padding: 0;

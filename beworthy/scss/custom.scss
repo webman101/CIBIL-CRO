@@ -303,9 +303,15 @@ section.cibil-subscription {
 }
 .plans {
     padding: 20px;
+    @media screen and (min-width: 450px) {
+        padding: 20px 0 0;
+    }
+    @media screen and (min-width: 1025px) {
+        padding: 20px;
+    }
     padding-bottom: 0;
     .plan-outer-column {
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 1025px) {
             max-width: 240px;
             margin-right: 22px;
             padding: 0;
@@ -351,7 +357,33 @@ section.cibil-subscription {
                 justify-content: center;
                 width: 101.1%;
                 @media screen and (min-width: 992px) {
-                    width: 240px;
+                    // width: 240px;
+                }
+
+                top: -1px;
+                @media screen and (min-width: 992px) {
+                    top: -35px;
+                }
+
+                border-radius: 6px 6px 0 0;
+                font-family: "Intro", Regular;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                padding-top: 1px;
+            }
+            &::after {
+                content: "Most Popular";
+                position: absolute;
+                right: -2px;
+                height: 37px;
+                background: #00a6ca;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 101.1%;
+                @media screen and (min-width: 992px) {
                 }
 
                 top: -1px;
@@ -426,7 +458,12 @@ section.cibil-subscription {
     }
 }
 .min-ht-350 {
-    min-height: 350px;
+    @media screen and (min-width: 992px) {
+        min-height: 405px;
+    }
+    @media screen and (min-width: 1025px) {
+        min-height: 350px;
+    }
 }
 .save {
     position: absolute;
@@ -490,7 +527,7 @@ section.cibil-subscription {
     }
 
     .col-md-4 {
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 1025px) {
             max-width: 328px;
             padding: 0;
             margin-right: 20px;
@@ -736,8 +773,6 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             padding-top: 66px !important;
         }
-        
-        
     }
     .score-flex {
         display: flex;
