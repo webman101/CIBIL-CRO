@@ -111,7 +111,7 @@ a:hover {
 }
 @media screen and (max-width: 992px) {
   .exit-intent-popup {
-    height: 130%;
+    height: 150%;
   }
 }
 .exit-intent-popup .popup .container {
