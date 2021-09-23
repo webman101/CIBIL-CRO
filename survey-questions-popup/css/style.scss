@@ -12,12 +12,12 @@ p {
     margin-bottom: 0;
     padding: 0;
 }
-.open-popup{
+.open-popup {
     top: 50%;
     position: absolute;
     display: block;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 a {
     cursor: pointer;
@@ -65,14 +65,16 @@ a {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    @media screen and (max-width: 992px) {
-        margin-right: 103px;
-    }
 
     display: flex;
     align-items: center;
     letter-spacing: 0.02em;
     color: #707070 !important;
+}
+.margin-right {
+    @media screen and (max-width: 992px) {
+        margin-right: 103px;
+    }
 }
 .title {
     font-style: normal;
@@ -138,11 +140,6 @@ a {
         }
 
         span {
-            @media screen and (max-width: 992px) {
-                width: 112px;
-            }
-
-            width: 33%;
             height: 30px;
             left: 625px;
             top: 235px;
@@ -160,6 +157,14 @@ a {
             color: #2c2c2c;
         }
     }
+}
+.q1 {
+    width: 33%;
+}
+.q2 {
+    width: 60%;
+  justify-content: flex-end !important;
+  padding-right: 20px !important;
 }
 #register-form {
     margin-top: 10px;
