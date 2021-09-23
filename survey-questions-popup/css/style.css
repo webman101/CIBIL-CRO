@@ -77,7 +77,12 @@ p {
 
 .text-right-block {
   background-color: #fff;
-  padding: 20px;
+  padding: 15px;
+}
+@media screen and (min-width: 385px) {
+  .text-right-block {
+    padding: 20px;
+  }
 }
 @media screen and (min-width: 992px) {
   .text-right-block {
@@ -261,11 +266,11 @@ input[type=number]::-webkit-outer-spin-button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 95%;
 }
 @media screen and (max-width: 992px) {
   .popup {
     height: 98%;
+    width: 95%;
   }
 }
 @media screen and (min-width: 992px) {
