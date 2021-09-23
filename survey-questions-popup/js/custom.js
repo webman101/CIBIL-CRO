@@ -58,7 +58,7 @@
 
 // // $('#popup-name').on('change', function() {
 // //     if ($(this).val() !== "") {
-      
+
 // //     }
 // // });
 // // if($("#html").prop('checked') == true){
@@ -74,3 +74,25 @@
 
 //     }
 //  });
+$(document).ready(function() {
+
+    $('.screen1').addClass('vissible');
+    $('.screen1 .next').click(function() {
+        $('.screen1').removeClass('vissible');
+
+        $('.screen2').addClass('vissible');
+    });
+    $('.screen2 .next').click(function() {
+        $('.screen2').removeClass('vissible');
+
+        $('.screen3').addClass('vissible');
+    });
+    $('.back-2-screen-1').click(function() {
+        $('.screen2,.screen3').removeClass('vissible');
+        $('.screen1').addClass('vissible');
+    });
+    $('.back-2-screen-2').click(function() {
+        $('.screen1,.screen3').removeClass('vissible');
+        $('.screen2').addClass('vissible');
+    });
+});

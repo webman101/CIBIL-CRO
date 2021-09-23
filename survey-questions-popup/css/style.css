@@ -13,6 +13,9 @@ p {
   padding: 0;
 }
 
+a {
+  cursor: pointer;
+}
 a:focus {
   outline: 0;
 }
@@ -31,6 +34,7 @@ a:hover {
   letter-spacing: 0.02em;
   color: #00a6ca;
   text-decoration: none;
+  cursor: pointer;
   position: relative;
   left: 12px;
 }
@@ -297,7 +301,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
-.exit-intent-popup.visible {
+.exit-intent-popup.vissible {
   transform: translateY(0) scale(1);
 }
 
