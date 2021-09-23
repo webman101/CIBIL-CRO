@@ -733,6 +733,11 @@ section.cibil-subscription {
     background: #f0fafc;
     h2 {
         margin-bottom: 38px;
+        @media screen and (min-width: 992px) {
+            padding-top: 66px !important;
+        }
+        
+        
     }
     .score-flex {
         display: flex;

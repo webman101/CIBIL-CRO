@@ -747,6 +747,11 @@ section.cibil-subscription .text-p p {
 .monitor h2 {
   margin-bottom: 38px;
 }
+@media screen and (min-width: 992px) {
+  .monitor h2 {
+    padding-top: 66px !important;
+  }
+}
 .monitor .score-flex {
   display: flex;
   align-items: baseline;
