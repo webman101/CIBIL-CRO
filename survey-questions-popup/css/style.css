@@ -99,7 +99,7 @@ a:hover {
 .exit-intent-popup {
   height: 100%;
   background: #e5e5e5;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;

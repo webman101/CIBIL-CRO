@@ -100,3 +100,7 @@ $(document).ready(function() {
 $('.open-popup').click(function() {
     $('.exit-intent-popup').addClass('vissible');
 });
+
+$('.close-tab').click(function() {
+    $('.exit-intent-popup').removeClass('vissible');
+});
