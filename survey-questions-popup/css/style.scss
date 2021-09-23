@@ -17,6 +17,9 @@ p {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+    @media screen and (max-width: 992px) {
+        margin-right: 103px;
+    }
 
     display: flex;
     align-items: center;
@@ -31,7 +34,10 @@ p {
     display: flex;
     align-items: center;
     color: #2c2c2c;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 992px) {
+        margin-bottom: 20px;
+    }
 }
 .exit-intent-popup {
     height: 100%;
@@ -68,15 +74,27 @@ p {
 }
 .text-right-block {
     background-color: #fff;
-    padding: 40px 60px 30px;
+    padding: 20px;
+    @media screen and (min-width: 992px) {
+        padding: 40px 60px 30px;
+    }
+
     .question-number {
-        margin: 30px 0;
+        margin: 20px 0;
+        @media screen and (min-width: 992px) {
+            margin: 30px 0;
+        }
+
         span {
+            @media screen and (max-width: 992px) {
+                width: 112px;
+            }
+
             width: 33%;
             height: 30px;
             left: 625px;
             top: 235px;
-
+            padding: 3px 5px;
             background: #fcd800;
 
             font-style: normal;
@@ -92,7 +110,10 @@ p {
     }
 }
 #register-form {
-    margin-top: 20px;
+    margin-top: 10px;
+    @media screen and (min-width: 992px) {
+        margin-top: 20px;
+    }
 }
 #checkbox {
     background: #3ea3ce;
@@ -173,7 +194,11 @@ p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 275px;
+    width: 100%;
+    @media screen and (min-width: 992px) {
+        width: 275px;
+    }
+
     height: 58px;
     font-style: normal;
     font-weight: normal;
@@ -204,7 +229,11 @@ input[type="number"] {
 .close-tab {
     all: initial;
     position: absolute;
-    top: 40px;
+    top: 31px;
+    @media screen and (min-width: 992px) {
+        top: 40px;
+    }
+
     right: 12px;
     opacity: 1;
     height: 26px;
@@ -221,7 +250,14 @@ input[type="number"] {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 95%;
+    @media screen and (max-width: 992px) {
+        height: 98%;
+    }
+
+    @media screen and (min-width: 992px) {
+        width: 100%;
+    }
 }
 @media screen and (min-width: 992px) {
     .text-right-block {

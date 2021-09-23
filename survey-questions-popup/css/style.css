@@ -22,6 +22,11 @@ p {
   letter-spacing: 0.02em;
   color: #707070 !important;
 }
+@media screen and (max-width: 992px) {
+  .text-light {
+    margin-right: 103px;
+  }
+}
 
 .title {
   font-style: normal;
@@ -30,7 +35,12 @@ p {
   display: flex;
   align-items: center;
   color: #2c2c2c;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .title {
+    margin-bottom: 20px;
+  }
 }
 
 .exit-intent-popup {
@@ -67,16 +77,27 @@ p {
 
 .text-right-block {
   background-color: #fff;
-  padding: 40px 60px 30px;
+  padding: 20px;
+}
+@media screen and (min-width: 992px) {
+  .text-right-block {
+    padding: 40px 60px 30px;
+  }
 }
 .text-right-block .question-number {
-  margin: 30px 0;
+  margin: 20px 0;
+}
+@media screen and (min-width: 992px) {
+  .text-right-block .question-number {
+    margin: 30px 0;
+  }
 }
 .text-right-block .question-number span {
   width: 33%;
   height: 30px;
   left: 625px;
   top: 235px;
+  padding: 3px 5px;
   background: #fcd800;
   font-style: normal;
   font-weight: 500;
@@ -87,9 +108,19 @@ p {
   letter-spacing: 0.02em;
   color: #2c2c2c;
 }
+@media screen and (max-width: 992px) {
+  .text-right-block .question-number span {
+    width: 112px;
+  }
+}
 
 #register-form {
-  margin-top: 20px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 992px) {
+  #register-form {
+    margin-top: 20px;
+  }
 }
 
 #checkbox {
@@ -170,7 +201,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 275px;
+  width: 100%;
   height: 58px;
   font-style: normal;
   font-weight: normal;
@@ -183,6 +214,11 @@ p {
   margin-top: 30px;
   margin-left: auto;
   text-transform: capitalize;
+}
+@media screen and (min-width: 992px) {
+  #submit {
+    width: 275px;
+  }
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -201,7 +237,7 @@ input[type=number]::-webkit-outer-spin-button {
 .close-tab {
   all: initial;
   position: absolute;
-  top: 40px;
+  top: 31px;
   right: 12px;
   opacity: 1;
   height: 26px;
@@ -209,6 +245,11 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
   cursor: pointer;
   z-index: 9;
+}
+@media screen and (min-width: 992px) {
+  .close-tab {
+    top: 40px;
+  }
 }
 
 .exit-intent-popup.visible {
@@ -220,7 +261,17 @@ input[type=number]::-webkit-outer-spin-button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 95%;
+}
+@media screen and (max-width: 992px) {
+  .popup {
+    height: 98%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .popup {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 992px) {
