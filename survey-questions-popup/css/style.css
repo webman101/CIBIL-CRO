@@ -42,7 +42,7 @@ p {
   bottom: 0;
   right: 0;
   z-index: 1;
-  background: rgba(33, 33, 33, 0.8);
+  background: rgba(0, 166, 202, 0.9);
   transform: translateY(60%) scale(0);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
