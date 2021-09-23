@@ -96,3 +96,7 @@ $(document).ready(function() {
         $('.screen2').addClass('d-block');
     });
 });
+
+$('.open-popup').click(function() {
+    $('.exit-intent-popup').addClass('vissible');
+});
