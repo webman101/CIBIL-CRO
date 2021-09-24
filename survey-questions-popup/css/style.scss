@@ -257,6 +257,7 @@ a {
         color: #2c2c2c;
     }
 }
+
 #submit {
     background: #f16e00;
     text-align: center;
@@ -280,9 +281,12 @@ a {
     align-items: center;
     letter-spacing: 0.02em;
     color: #ffffff;
-    margin-top: 30px;
+    margin-top: 98px;
     margin-left: auto;
     text-transform: capitalize;
+}
+.submit{
+    margin-top: 30px !important;
 }
 input[type="number"] {
     &::-webkit-inner-spin-button {

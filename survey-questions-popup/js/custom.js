@@ -79,13 +79,11 @@ $(document).ready(function() {
     $('.screen1').addClass('d-block');
     $('.screen1 .next').click(function() {
         $('.screen1').removeClass('d-block');
-        $('.next').addClass('disabled');
 
         $('.screen2').addClass('d-block');
     });
     $('.screen2 .next').click(function() {
         $('.screen2').removeClass('d-block');
-        $('.next').addClass('disabled');
 
         $('.screen3').addClass('d-block');
     });
@@ -115,6 +113,16 @@ $('.close-tab').click(function() {
 
  $(".abc").change(function(){
     if ($('.abc:checked').length > 0) {
-        $('.next').removeClass('disabled');
+        $('.screen1 .next').removeClass('disabled');
+    }
+ });
+ $(".abc2").change(function(){
+    if ($('.screen2 .abc2:checked').length > 0) {
+        $('.screen2 .next').removeClass('disabled');
+    }
+ });
+ $(".screen3 .abc").change(function(){
+    if ($('.screen3 .abc:checked').length > 0) {
+        $('.screen3 .next').removeClass('disabled');
     }
  });
