@@ -95,12 +95,15 @@ a {
 }
 .exit-intent-popup {
     @media screen and (max-width: 992px) {
-        height: 115%;
+        // height: 115%;
     }
 
     height: 100%;
     background: #e5e5e5;
-    position: absolute;
+    @media screen and (min-width: 992px) {
+        position: absolute;
+    }
+
     top: 0;
     left: 0;
     bottom: 0;
@@ -283,21 +286,17 @@ a {
     @media screen and (min-width: 992px) {
         margin-top: 98px;
     }
-    
-    
+
     margin-left: auto;
     text-transform: capitalize;
-
 }
 .submit {
- @media screen and (min-width: 992px) {
-    margin-top: 30px !important;
-    position: absolute;
-    bottom: 30px;
-    right: 60px;
- }
- 
- 
+    @media screen and (min-width: 992px) {
+        margin-top: 30px !important;
+        position: absolute;
+        bottom: 30px;
+        right: 60px;
+    }
 }
 input[type="number"] {
     &::-webkit-inner-spin-button {
@@ -329,19 +328,24 @@ input[type="number"] {
     cursor: pointer;
     z-index: 9;
 }
+.exit-intent-popup{
+    padding: 15px;
+}
 .exit-intent-popup.vissible {
     transform: translateY(0) scale(1);
 }
 .popup {
     display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @media screen and (min-width: 992px) {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     @media screen and (max-width: 992px) {
         height: 98%;
-        width: 95%;
+        width: 100%;
     }
 
     @media screen and (min-width: 992px) {
