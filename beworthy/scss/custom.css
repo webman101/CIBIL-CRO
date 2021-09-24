@@ -1199,4 +1199,9 @@ section.cibil-subscription .text-p p {
   .features-mobile-section .nav-tabs li h6 {
     font-size: 14px;
   }
+}
+@media screen and (max-width: 992px) {
+  .col-md-5.ps-md-4.text-p {
+    padding: 0 22px;
+  }
 }/*# sourceMappingURL=custom.css.map */
