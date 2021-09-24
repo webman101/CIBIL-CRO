@@ -289,7 +289,7 @@ header nav .logo {
 }
 
 section.cibil-subscription {
-  padding: 40px 0;
+  padding: 40px 20;
 }
 @media screen and (min-width: 992px) {
   section.cibil-subscription {
@@ -564,6 +564,15 @@ section.cibil-subscription .text-p p {
 }
 .testimonial .row-1 .image {
   margin-right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonial .row-1 .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 .testimonial .row-1 .play-store {
   margin-left: auto;
@@ -712,7 +721,7 @@ section.cibil-subscription .text-p p {
   margin-bottom: 0;
   font-family: "Intro", Regular;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -820,9 +829,20 @@ section.cibil-subscription .text-p p {
      object-fit: contain;
 }
 .monitor .googleplay {
-  margin-top: 40px;
-  margin-bottom: 60px;
+  text-decoration: none;
 }
+@media screen and (min-width: 992px) {
+  .monitor .googleplay {
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .last-list {
+    margin-bottom: 0 !important;
+  }
+}
+
 .pl-m {
   padding-left: 30px;
 }
@@ -972,6 +992,10 @@ section.cibil-subscription .text-p p {
   right: 0;
   top: -1px;
   height: 30px;
+}
+
+.mobile-slider-2 .slick-dots {
+  padding: 0;
 }
 
 .plan-title {

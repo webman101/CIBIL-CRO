@@ -283,7 +283,7 @@ header {
 }
 //////////////////////////////cibil-subscription
 section.cibil-subscription {
-    padding: 40px 0;
+    padding: 40px 20;
     @media screen and (min-width: 992px) {
         padding: 60px 0;
     }
@@ -555,6 +555,14 @@ section.cibil-subscription {
         margin-bottom: 15px;
         .image {
             margin-right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                width: 100%;
+            }
         }
         .text-star {
         }
@@ -702,7 +710,7 @@ section.cibil-subscription {
                 margin-bottom: 0;
                 font-family: "Intro", Regular;
                 font-style: normal;
-                font-weight: normal;
+                font-weight: 600;
                 font-size: 16px;
                 line-height: 24px;
                 letter-spacing: 0.02em;
@@ -809,10 +817,19 @@ section.cibil-subscription {
         }
     }
     .googleplay {
-        margin-top: 40px;
-        margin-bottom: 60px;
+        text-decoration: none;
+        @media screen and (min-width: 992px) {
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+
         img {
         }
+    }
+}
+.last-list {
+    @media screen and (max-width: 992px) {
+        margin-bottom: 0 !important;
     }
 }
 .pl-m {
@@ -970,6 +987,11 @@ section.cibil-subscription {
         right: 0;
         top: -1px;
         height: 30px;
+    }
+}
+.mobile-slider-2{
+    .slick-dots{
+        padding: 0;
     }
 }
 .plan-title {
