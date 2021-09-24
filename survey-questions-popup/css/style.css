@@ -300,6 +300,9 @@ a:hover {
 
 .submit {
   margin-top: 30px !important;
+  position: absolute;
+  bottom: 30px;
+  right: 60px;
 }
 
 input[type=number]::-webkit-inner-spin-button {
@@ -359,5 +362,6 @@ input[type=number]::-webkit-outer-spin-button {
 @media screen and (min-width: 992px) {
   .text-right-block {
     max-width: 682px;
+    min-height: 710px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -89,17 +89,15 @@ a {
         margin-bottom: 20px;
     }
 }
-.disabled{
+.disabled {
     pointer-events: none;
     opacity: 0.5;
 }
 .exit-intent-popup {
     @media screen and (max-width: 992px) {
         height: 150%;
-
     }
-    
-    
+
     height: 100%;
     background: #e5e5e5;
     position: absolute;
@@ -161,8 +159,7 @@ a {
             @media screen and (max-width: 375px) {
                 font-size: 10px;
             }
-            
-            
+
             font-size: 14px;
 
             display: flex;
@@ -178,8 +175,8 @@ a {
 }
 .q2 {
     width: 60%;
-  justify-content: flex-end !important;
-  padding-right: 20px !important;
+    justify-content: flex-end !important;
+    padding-right: 20px !important;
 }
 #register-form {
     margin-top: 10px;
@@ -285,8 +282,11 @@ a {
     margin-left: auto;
     text-transform: capitalize;
 }
-.submit{
+.submit {
     margin-top: 30px !important;
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
 }
 input[type="number"] {
     &::-webkit-inner-spin-button {
@@ -340,5 +340,7 @@ input[type="number"] {
 @media screen and (min-width: 992px) {
     .text-right-block {
         max-width: 682px;
+
+        min-height: 710px;
     }
 }
