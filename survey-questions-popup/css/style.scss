@@ -95,7 +95,7 @@ a {
 }
 .exit-intent-popup {
     @media screen and (max-width: 992px) {
-        height: 150%;
+        height: 115%;
     }
 
     height: 100%;
@@ -278,16 +278,26 @@ a {
     align-items: center;
     letter-spacing: 0.02em;
     color: #ffffff;
-    margin-top: 98px;
+    margin-top: 20px;
+
+    @media screen and (min-width: 992px) {
+        margin-top: 98px;
+    }
+    
+    
     margin-left: auto;
     text-transform: capitalize;
-    
+
 }
 .submit {
+ @media screen and (min-width: 992px) {
     margin-top: 30px !important;
     position: absolute;
     bottom: 30px;
     right: 60px;
+ }
+ 
+ 
 }
 input[type="number"] {
     &::-webkit-inner-spin-button {

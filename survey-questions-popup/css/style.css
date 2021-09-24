@@ -116,7 +116,7 @@ a:hover {
 }
 @media screen and (max-width: 992px) {
   .exit-intent-popup {
-    height: 150%;
+    height: 115%;
   }
 }
 .exit-intent-popup .popup .container {
@@ -288,7 +288,7 @@ a:hover {
   align-items: center;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-top: 98px;
+  margin-top: 20px;
   margin-left: auto;
   text-transform: capitalize;
 }
@@ -297,12 +297,19 @@ a:hover {
     width: 275px;
   }
 }
+@media screen and (min-width: 992px) {
+  #submit {
+    margin-top: 98px;
+  }
+}
 
-.submit {
-  margin-top: 30px !important;
-  position: absolute;
-  bottom: 30px;
-  right: 60px;
+@media screen and (min-width: 992px) {
+  .submit {
+    margin-top: 30px !important;
+    position: absolute;
+    bottom: 30px;
+    right: 60px;
+  }
 }
 
 input[type=number]::-webkit-inner-spin-button {
