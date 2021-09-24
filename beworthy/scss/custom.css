@@ -289,7 +289,7 @@ header nav .logo {
 }
 
 section.cibil-subscription {
-  padding: 40px 20;
+  padding: 40px 10px;
 }
 @media screen and (min-width: 992px) {
   section.cibil-subscription {
@@ -298,11 +298,29 @@ section.cibil-subscription {
 }
 @media screen and (max-width: 992px) {
   section.cibil-subscription .subtitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 992px) {
+  section.cibil-subscription .f-sm-16 {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 992px) {
+  section.cibil-subscription .text-grey {
+    font-size: 14px;
   }
 }
 section.cibil-subscription .text-p p {
   max-width: 374px;
+}
+@media screen and (max-width: 992px) {
+  section.cibil-subscription .w-sm-90 {
+    margin: auto;
+    width: 75%;
+    display: flex;
+  }
 }
 
 .cibil-subscription-plan {
@@ -703,7 +721,7 @@ section.cibil-subscription .text-p p {
   padding: 40px 0 40px;
 }
 .cibil-steps-mobile .steps-list {
-  padding-left: 20px;
+  padding: 0 15px;
 }
 .cibil-steps-mobile .steps-list img {
   height: 40px;
@@ -801,6 +819,12 @@ section.cibil-subscription .text-p p {
   display: flex;
   align-items: baseline;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .monitor .score-flex {
+    padding-left: 15px;
+    padding-right: 10px;
+  }
 }
 @media screen and (min-width: 992px) {
   .monitor .score-flex {
