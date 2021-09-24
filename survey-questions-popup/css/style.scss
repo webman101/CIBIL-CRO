@@ -100,7 +100,7 @@ a {
 
     background: #e5e5e5;
     @media screen and (min-width: 992px) {
-        position: absolute;
+        // position: absolute;
     }
 
     top: 0;
@@ -136,10 +136,9 @@ a {
     background-color: #fff;
     padding: 15px;
     @media screen and (max-width: 992px) {
-        min-height: 100vh;    
+        min-height: 100vh;
     }
-    
-    
+
     @media screen and (min-width: 385px) {
         padding: 20px;
     }
@@ -277,8 +276,8 @@ a {
     @media screen and (min-width: 992px) {
         width: 275px;
         position: absolute;
-    bottom: 30px;
-    right: 60px;
+        bottom: 30px;
+        right: 60px;
     }
 
     height: 58px;
@@ -345,11 +344,13 @@ input[type="number"] {
 }
 .popup {
     display: none;
+    
     @media screen and (min-width: 992px) {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: 141px 0;
+        // position: relative;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
     }
 
     @media screen and (max-width: 992px) {
