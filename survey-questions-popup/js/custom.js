@@ -115,14 +115,23 @@ $('.close-tab').click(function() {
     if ($('.abc:checked').length > 0) {
         $('.screen1 .next').removeClass('disabled');
     }
+    else{
+                $('.screen1 .next').addClass('disabled');
+    }
  });
  $(".abc2").change(function(){
     if ($('.screen2 .abc2:checked').length > 0) {
         $('.screen2 .next').removeClass('disabled');
     }
+    else{
+                $('.screen2 .next').addClass('disabled');
+    }
  });
  $(".screen3 .abc").change(function(){
     if ($('.screen3 .abc:checked').length > 0) {
         $('.screen3 .next').removeClass('disabled');
+    }
+    else{
+                $('.screen3 .next').addClass('disabled');
     }
  });
