@@ -559,7 +559,7 @@ section.cibil-subscription {
             height: 80px;
             border-radius: 50%;
             overflow: hidden;
-            img{
+            img {
                 object-fit: cover;
                 width: 100%;
             }
@@ -989,8 +989,8 @@ section.cibil-subscription {
         height: 30px;
     }
 }
-.mobile-slider-2{
-    .slick-dots{
+.mobile-slider-2 {
+    .slick-dots {
         padding: 0;
     }
 }
@@ -1193,10 +1193,8 @@ section.cibil-subscription {
         }
     }
 }
-.col-md-5.ps-md-4.text-p{
+.col-md-5.ps-md-4.text-p {
     @media screen and (max-width: 992px) {
-padding: 0 22px;
+        padding: 0 22px;
     }
-    
-    
 }
