@@ -43,7 +43,7 @@ $('.banner-slider').slick({
       dots: true,
       center: true,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 4000,
 
   });
 
