@@ -286,6 +286,7 @@ header nav .logo {
 .banner .slick-dots {
   margin-bottom: 0 !important;
   padding-left: 0;
+  cursor: pointer;
 }
 
 section.cibil-subscription {
@@ -758,6 +759,7 @@ section.cibil-subscription .text-p p {
   margin-top: 20px;
   display: flex !important;
   justify-content: center;
+  cursor: pointer;
 }
 .slick-dots li {
   width: 26.57px;

@@ -38,5 +38,12 @@ accordionBtns.forEach((accordion) => {
     };
 });
 
+$('.banner-slider').slick({
+      arrows: false,
+      dots: true,
+      center: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
 
+  });
 

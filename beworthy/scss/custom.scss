@@ -279,6 +279,7 @@ header {
     .slick-dots {
         margin-bottom: 0 !important;
         padding-left: 0;
+        cursor: pointer;
     }
 }
 //////////////////////////////cibil-subscription
@@ -748,6 +749,7 @@ section.cibil-subscription {
     margin-top: 20px;
     display: flex !important;
     justify-content: center;
+    cursor: pointer;
     li {
         width: 26.57px;
         height: 8.86px;
