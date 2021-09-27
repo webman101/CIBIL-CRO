@@ -1185,8 +1185,13 @@ section.cibil-subscription {
 .tab-content {
     .tab-pane {
         padding: 30px 20px;
-        margin-bottom: 60px;
+      
     }
+ 
+}
+.tab-pane.messages  {
+
+    margin-bottom: 60px;
 }
 .full-width-button {
     width: 100%;

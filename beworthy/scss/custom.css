@@ -1198,6 +1198,9 @@ section.cibil-subscription .text-p p {
 
 .tab-content .tab-pane {
   padding: 30px 20px;
+}
+
+.tab-pane.messages {
   margin-bottom: 60px;
 }
 
