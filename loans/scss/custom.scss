@@ -256,7 +256,15 @@ header {
     }
 }
 .banner {
-    background-image: url(../img/bannerbg.png);
+    @media screen and (max-width: 992px) {
+        background-image: url(../img/bannebg-mobile.png);
+        padding-bottom: 70px;
+    }
+
+    @media screen and (min-width: 992px) {
+        background-image: url(../img/bannerbg.png);
+    }
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -264,36 +272,89 @@ header {
         display: flex;
         align-items: center;
     }
+    .image-block {
+        margin-left: auto;
+    }
+    .image-block-mobile {
+        margin: -30px 0;
+    }
 
     .banner-text-block {
-        margin-left: 207px;
+        @media screen and (max-width: 992px) {
+            padding: 30px 0 30px 20px;
+        }
+
+        @media screen and (min-width: 992px) {
+            margin-left: 207px;
+        }
+
         h2 {
             font-family: "Intro", Bold;
             font-style: normal;
             font-weight: bold;
-            font-size: 40px;
-            line-height: 44px;
-            letter-spacing: -0.01em;
             color: #ffffff;
+            font-size: 32px;
+            line-height: 44px;
+            /* or 137% */
+
+            letter-spacing: -0.01em;
+
+            color: #ffffff;
+            @media screen and (min-width: 992px) {
+                font-size: 40px;
+                line-height: 44px;
+                letter-spacing: -0.01em;
+            }
         }
         h4 {
             font-family: "Intro", Regular;
             font-style: normal;
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 30px;
             color: #ffffff;
-            margin-top: 20px;
-            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 24px;
+
+            @media screen and (max-width: 992px) {
+                max-width: 267px;
+            }
+
+            @media screen and (min-width: 992px) {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
         }
         .banner-link {
+            @media screen and (max-width: 992px) {
+                position: relative;
+                display: inline-block;
+                font-weight: 600;
+                padding: 0 7px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                width: 100%;
+                max-width: 320px;
+                margin: 0;
+                left: 49%;
+                transform: translateX(-52%);
+            }
+
             position: relative;
             display: inline-block;
             font-weight: 600;
             padding: 0 7px;
-            span,img{
+            font-size: 24px;
+            span,
+            img {
                 position: relative;
                 z-index: 2;
+            }
+            img {
+                margin: 0 4px;
             }
             &::after {
                 content: "";
@@ -375,7 +436,7 @@ section.cibil-subscription {
             margin-top: 50px;
         }
         @media screen and (min-width: 992px) {
-            min-height: 589px;
+            min-height: 545px;
         }
 
         width: 100%;
@@ -506,10 +567,9 @@ section.cibil-subscription {
 }
 .min-ht-350 {
     @media screen and (min-width: 992px) {
-        min-height: 405px;
+        min-height: 290px;
     }
     @media screen and (min-width: 1025px) {
-        min-height: 350px;
     }
 }
 .save {
@@ -672,7 +732,6 @@ section.cibil-subscription {
     }
     @media screen and (max-width: 992px) {
         .section-title {
-            padding: 0 30px;
             margin-bottom: 20px;
         }
         .section-subtitle {
@@ -704,7 +763,11 @@ section.cibil-subscription {
         font-family: "Intro", Bold;
         font-style: normal;
         font-weight: bold;
-        font-size: 24px;
+        @media screen and (min-width: 992px) {
+            font-size: 24px;
+        }
+        
+        
         line-height: 30px;
         text-align: center;
         letter-spacing: 0.02em;
@@ -718,6 +781,27 @@ section.cibil-subscription {
         max-width: 295px;
         margin-top: 28px;
     }
+    .mobile-score-plan-desc {
+        font-family: 'Intro', Book;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 26px;
+        /* identical to box height, or 186% */
+
+        text-align: center;
+
+        color: #000000;
+
+        opacity: 0.6;
+        margin-top: 20px;
+    }
+    
+    @media screen and (max-width: 992px) {
+        padding-bottom: 0;    
+    }
+    
+    
 }
 //////////////////////////////////////ss
 .pl-44 {
@@ -995,6 +1079,21 @@ section.cibil-subscription {
 .interstial-container {
     padding-top: 40px;
     background: #f9f9f9;
+    .description {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        /* Accent Black */
+
+        color: #2c2c2c;
+    }
     .col-md-5.equal-column {
         max-width: 457px;
         background: #f9f9f9;
