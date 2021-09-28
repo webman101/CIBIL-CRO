@@ -1386,6 +1386,17 @@ section.cibil-subscription {
     }
 }
 ///////////////////////////////////@at-root
+
+.get-all {
+    display: none;
+}
+.desc-v3 {
+    display: none;
+}
+
+.type-2 {
+    display: none;
+}
 .v1 {
     .cibil-score {
         padding-bottom: 100px;
@@ -1393,9 +1404,6 @@ section.cibil-subscription {
     .mobile-score-plan-desc {
         display: none;
     }
-}
-.type-2 {
-    display: none;
 }
 .v2 {
     .plan-column-1 {
@@ -1424,12 +1432,6 @@ section.cibil-subscription {
     .last-column {
         display: none;
     }
-}
-.get-all {
-    display: none;
-}
-.desc-v3 {
-    display: none;
 }
 .v3 {
     .get-all {
@@ -1487,5 +1489,116 @@ section.cibil-subscription {
     }
     .last-column {
         display: none;
+    }
+}
+.v4 {
+    .p-bold-show {
+        display: block !important;
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        color: #2c2c2c;
+    }
+    section {
+        display: none;
+    }
+    .banner {
+        display: flex;
+    }
+    .cibil-score,
+    .goals {
+        display: flex;
+        .mobile-score-plan-desc,
+        .button-orange,
+        .p-bold {
+            display: none;
+        }
+    }
+}
+.goals {
+    background-color: #f9f9f9;
+    @media screen and (max-width: 992px) {
+        padding: 46px 8px 40px;
+        .btn-orange {
+            margin-top: 40px;
+        }
+    }
+    .btn-orange-2 {
+        @media screen and (max-width: 992px) {
+            margin-top: 30px;
+        }
+    }
+    padding-top: 40px;
+    box-sizing: border-box;
+    padding-bottom: 34px;
+    .title {
+        font-size: 24px;
+        @media screen and (max-width: 992px) {
+            max-width: 315px;
+        }
+
+        @media screen and (min-width: 992px) {
+            font-size: 32px;
+        }
+    }
+    .plan-details {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        @media screen and (min-width: 992px) {
+            margin-bottom: 17px;
+        }
+    }
+    .goal {
+        margin-top: 20px;
+        border-radius: 6px;
+        @media screen and (max-width: 992px) {
+            padding-bottom: 30px;
+        }
+        @media screen and (min-width: 992px) {
+            margin-top: 33px;
+            min-height: 315px;
+        }
+        padding: 30px;
+        background: #fff;
+        padding-bottom: 0;
+        img {
+            width: 59px;
+            object-fit: contain;
+        }
+        h6 {
+            font-family: "Intro", Bold;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0.02em;
+            color: #2c2c2c;
+            margin: 26px 0 14px;
+            @media screen and (min-width: 992px) {
+                margin: 35px 0 14px;
+            }
+        }
+        p {
+            font-family: "Intro", Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #000000;
+        }
     }
 }
