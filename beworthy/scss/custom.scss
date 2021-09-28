@@ -583,8 +583,6 @@ section.cibil-subscription {
                 width: 100%;
             }
         }
-        .text-star {
-        }
         .play-store {
             margin-left: auto;
             position: relative;
@@ -722,8 +720,7 @@ section.cibil-subscription {
             display: flex;
             align-items: center;
             margin-bottom: 30px;
-            &:last-child {
-            }
+
             p {
                 padding-top: 5px;
                 margin-bottom: 0;
@@ -846,9 +843,6 @@ section.cibil-subscription {
             margin-top: 20px;
             margin-bottom: 60px;
         }
-
-        img {
-        }
     }
 }
 .last-list {
@@ -898,8 +892,7 @@ section.cibil-subscription {
             width: 100%;
         }
     }
-    &.last-border {
-    }
+
     button.accordion:after {
         content: url(../img/plus.png);
         position: absolute;
