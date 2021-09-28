@@ -410,13 +410,11 @@ section.cibil-subscription {
     background: #f9f9f9;
     padding: 60px 0 40px;
     @media screen and (min-width: 992px) {
-        .button-orange-outline,.button-orange{
+        .button-orange-outline,
+        .button-orange {
             margin-top: 20px;
         }
     }
-    
-    
-    
 }
 .plans {
     padding: 20px;
@@ -753,7 +751,7 @@ section.cibil-subscription {
 /////////////////////////sssss
 
 .cibil-score {
-    padding-bottom: 103px;
+    // padding-bottom: 103px;
     p {
         font-family: "Intro", Book;
         font-style: normal;
@@ -775,13 +773,12 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             font-size: 24px;
         }
-        
-        
+
         line-height: 30px;
         text-align: center;
         letter-spacing: 0.02em;
         color: #2c2c2c;
-        max-width: 717px;
+        max-width: 730px;
         margin: auto;
     }
     .button-orange {
@@ -790,27 +787,25 @@ section.cibil-subscription {
         max-width: 295px;
         margin-top: 28px;
     }
-    .mobile-score-plan-desc {
-        font-family: 'Intro', Book;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 26px;
-        /* identical to box height, or 186% */
 
-        text-align: center;
-
-        color: #000000;
-
-        opacity: 0.6;
-        margin-top: 20px;
-    }
-    
     @media screen and (max-width: 992px) {
-        padding-bottom: 0;    
+        padding-bottom: 0;
     }
-    
-    
+}
+.mobile-score-plan-desc {
+    font-family: "Intro", Book;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    /* identical to box height, or 186% */
+
+    text-align: center;
+
+    color: #000000;
+
+    opacity: 0.6;
+    margin-top: 20px;
 }
 //////////////////////////////////////ss
 .pl-44 {
@@ -1079,7 +1074,7 @@ section.cibil-subscription {
 .beworthy {
     padding: 40px 0 60px;
     background: #f9f9f9;
-    .button-orange{
+    .button-orange {
         max-width: 252px;
         width: 100%;
         text-align: center;
@@ -1388,5 +1383,109 @@ section.cibil-subscription {
 .col-md-5.ps-md-4.text-p {
     @media screen and (max-width: 992px) {
         padding: 0 22px;
+    }
+}
+///////////////////////////////////@at-root
+.v1 {
+    .cibil-score {
+        padding-bottom: 100px;
+    }
+    .mobile-score-plan-desc {
+        display: none;
+    }
+}
+.type-2 {
+    display: none;
+}
+.v2 {
+    .plan-column-1 {
+        display: none;
+    }
+    .p-bold-show {
+        display: block !important;
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        color: #2c2c2c;
+    }
+    .type-2 {
+        display: block;
+    }
+    .type-1 {
+        display: none;
+    }
+    .last-column {
+        display: none;
+    }
+}
+.get-all {
+    display: none;
+}
+.desc-v3 {
+    display: none;
+}
+.v3 {
+    .get-all {
+        position: relative;
+        display: block !important;
+        .text-block {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .section-title {
+                margin-bottom: 42px;
+                font-family: "Intro", Bold;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 44px;
+                /* or 137% */
+
+                text-align: center;
+                letter-spacing: -0.01em;
+
+                color: #2c2c2c;
+            }
+            a {
+                max-width: 240px;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+    .mobile-score-plan-desc {
+        display: none;
+    }
+    .cibil-subscription-plan {
+        display: none !important;
+    }
+    .desc-v3 {
+        display: block;
+    }
+    .type-2 {
+        display: block;
+    }
+    .type-1 {
+        display: none;
+    }
+    .last-column {
+        display: none;
     }
 }

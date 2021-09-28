@@ -425,7 +425,8 @@ section.cibil-subscription .text-p p {
   padding: 60px 0 40px;
 }
 @media screen and (min-width: 992px) {
-  .cibil-subscription-plan .button-orange-outline, .cibil-subscription-plan .button-orange {
+  .cibil-subscription-plan .button-orange-outline,
+.cibil-subscription-plan .button-orange {
     margin-top: 20px;
   }
 }
@@ -755,9 +756,6 @@ section.cibil-subscription .text-p p {
   }
 }
 
-.cibil-score {
-  padding-bottom: 103px;
-}
 .cibil-score p {
   font-family: "Intro", Book;
   font-style: normal;
@@ -780,7 +778,7 @@ section.cibil-subscription .text-p p {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2c2c2c;
-  max-width: 717px;
+  max-width: 730px;
   margin: auto;
 }
 @media screen and (min-width: 992px) {
@@ -794,7 +792,13 @@ section.cibil-subscription .text-p p {
   max-width: 295px;
   margin-top: 28px;
 }
-.cibil-score .mobile-score-plan-desc {
+@media screen and (max-width: 992px) {
+  .cibil-score {
+    padding-bottom: 0;
+  }
+}
+
+.mobile-score-plan-desc {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
@@ -805,11 +809,6 @@ section.cibil-subscription .text-p p {
   color: #000000;
   opacity: 0.6;
   margin-top: 20px;
-}
-@media screen and (max-width: 992px) {
-  .cibil-score {
-    padding-bottom: 0;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1390,4 +1389,103 @@ section.cibil-subscription .text-p p {
   .col-md-5.ps-md-4.text-p {
     padding: 0 22px;
   }
+}
+
+.v1 .cibil-score {
+  padding-bottom: 100px;
+}
+.v1 .mobile-score-plan-desc {
+  display: none;
+}
+
+.type-2 {
+  display: none;
+}
+
+.v2 .plan-column-1 {
+  display: none;
+}
+.v2 .p-bold-show {
+  display: block !important;
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+.v2 .type-2 {
+  display: block;
+}
+.v2 .type-1 {
+  display: none;
+}
+.v2 .last-column {
+  display: none;
+}
+
+.get-all {
+  display: none;
+}
+
+.desc-v3 {
+  display: none;
+}
+
+.v3 .get-all {
+  position: relative;
+  display: block !important;
+}
+.v3 .get-all .text-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.v3 .get-all .text-block .section-title {
+  margin-bottom: 42px;
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  /* or 137% */
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #2c2c2c;
+}
+.v3 .get-all .text-block a {
+  max-width: 240px;
+  display: block;
+  margin: auto;
+}
+.v3 .mobile-score-plan-desc {
+  display: none;
+}
+.v3 .cibil-subscription-plan {
+  display: none !important;
+}
+.v3 .desc-v3 {
+  display: block;
+}
+.v3 .type-2 {
+  display: block;
+}
+.v3 .type-1 {
+  display: none;
+}
+.v3 .last-column {
+  display: none;
 }/*# sourceMappingURL=custom.css.map */
