@@ -1401,7 +1401,7 @@ section.cibil-subscription {
     display: none;
 }
 .get-all {
-    display: none;
+    display: none !important;
 }
 .desc-v3 {
     display: none;
@@ -1467,13 +1467,42 @@ section.cibil-subscription {
         margin-bottom: 20px;
     }
 }
+.btn-v3-orange {
+    display: none !important;
+}
 .v3 {
+    .btn-v1-orange {
+        display: none !important;
+    }
+    .btn-v3-orange {
+        display: block !important;
+    }
+    .v1-image {
+        display: none !important;
+    }
+    .v4-image {
+        display: block !important;
+    }
+    .p-bold-show {
+        display: block !important;
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+    }
     .v1-text {
         display: block;
     }
     .get-all {
         position: relative;
-        display: block !important;
+        @media screen and (min-width: 992px) {
+            display: block !important;
+        }
+
         .text-block {
             position: absolute;
             top: 0;
@@ -1517,6 +1546,8 @@ section.cibil-subscription {
     }
     .desc-v3 {
         display: block;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
     .type-2 {
         display: block;
@@ -1528,13 +1559,18 @@ section.cibil-subscription {
         display: none;
     }
 }
-
+.v4-image {
+    display: none !important;
+}
 .v4 {
     .v4-button {
         margin: auto;
         display: block !important;
         max-width: 250px;
         margin-top: 40px;
+    }
+    .v2-text {
+        display: block;
     }
     .v1-image {
         display: none !important;

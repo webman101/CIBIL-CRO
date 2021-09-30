@@ -1415,7 +1415,7 @@ section.cibil-subscription .text-p p {
 }
 
 .get-all {
-  display: none;
+  display: none !important;
 }
 
 .desc-v3 {
@@ -1477,12 +1477,43 @@ section.cibil-subscription .text-p p {
   margin-bottom: 20px;
 }
 
+.btn-v3-orange {
+  display: none !important;
+}
+
+.v3 .btn-v1-orange {
+  display: none !important;
+}
+.v3 .btn-v3-orange {
+  display: block !important;
+}
+.v3 .v1-image {
+  display: none !important;
+}
+.v3 .v4-image {
+  display: block !important;
+}
+.v3 .p-bold-show {
+  display: block !important;
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
 .v3 .v1-text {
   display: block;
 }
 .v3 .get-all {
   position: relative;
-  display: block !important;
+}
+@media screen and (min-width: 992px) {
+  .v3 .get-all {
+    display: block !important;
+  }
 }
 .v3 .get-all .text-block {
   position: absolute;
@@ -1524,6 +1555,8 @@ section.cibil-subscription .text-p p {
 }
 .v3 .desc-v3 {
   display: block;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .v3 .type-2 {
   display: block;
@@ -1535,11 +1568,18 @@ section.cibil-subscription .text-p p {
   display: none;
 }
 
+.v4-image {
+  display: none !important;
+}
+
 .v4 .v4-button {
   margin: auto;
   display: block !important;
   max-width: 250px;
   margin-top: 40px;
+}
+.v4 .v2-text {
+  display: block;
 }
 .v4 .v1-image {
   display: none !important;
