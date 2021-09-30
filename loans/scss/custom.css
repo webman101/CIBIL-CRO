@@ -1418,6 +1418,10 @@ section.cibil-subscription .text-p p {
   display: none;
 }
 
+.goals {
+  display: none;
+}
+
 .v1 .cibil-score {
   padding-bottom: 100px;
 }
