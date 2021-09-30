@@ -283,8 +283,10 @@ header {
         @media screen and (max-width: 992px) {
             padding: 30px 0 30px 20px;
         }
-
         @media screen and (min-width: 992px) {
+            margin-left: 50px;
+        }
+        @media screen and (min-width: 1200px) {
             margin-left: 207px;
         }
 
@@ -319,7 +321,7 @@ header {
             }
 
             @media screen and (min-width: 992px) {
-                font-weight: 600;
+                font-weight: 400;
                 font-size: 24px;
                 line-height: 30px;
                 margin-top: 20px;
@@ -353,6 +355,7 @@ header {
             img {
                 position: relative;
                 z-index: 2;
+                color: #2c2c2c;
             }
             img {
                 margin: 0 4px;
@@ -1403,6 +1406,15 @@ section.cibil-subscription {
     }
     .mobile-score-plan-desc {
         display: none;
+    }
+
+    .subtext {
+        display: none;
+    }
+    .cibil-subscription-plan{
+        .section-title{
+            margin-bottom: 35px !important;
+        }
     }
 }
 .v2 {

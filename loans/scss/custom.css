@@ -296,6 +296,11 @@ header nav .logo {
 }
 @media screen and (min-width: 992px) {
   .banner .banner-text-block {
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .banner .banner-text-block {
     margin-left: 207px;
   }
 }
@@ -332,7 +337,7 @@ header nav .logo {
 }
 @media screen and (min-width: 992px) {
   .banner .banner-text-block h4 {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 24px;
     line-height: 30px;
     margin-top: 20px;
@@ -368,6 +373,7 @@ header nav .logo {
 .banner .banner-text-block .banner-link img {
   position: relative;
   z-index: 2;
+  color: #2c2c2c;
 }
 .banner .banner-text-block .banner-link img {
   margin: 0 4px;
@@ -1408,6 +1414,12 @@ section.cibil-subscription .text-p p {
 }
 .v1 .mobile-score-plan-desc {
   display: none;
+}
+.v1 .subtext {
+  display: none;
+}
+.v1 .cibil-subscription-plan .section-title {
+  margin-bottom: 35px !important;
 }
 
 .v2 .plan-column-1 {
