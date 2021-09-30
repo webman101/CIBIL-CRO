@@ -1397,7 +1397,12 @@ section.cibil-subscription {
     }
 }
 ///////////////////////////////////@at-root
-
+.v2-text{
+    display: none;
+}
+.v1-text{
+    display: none;
+}
 .get-all {
     display: none;
 }
@@ -1445,6 +1450,9 @@ section.cibil-subscription {
         letter-spacing: 0.02em;
 
         color: #2c2c2c;
+    }
+    .v2-text{
+        display: block;
     }
     .type-2 {
         display: block;
@@ -1519,6 +1527,12 @@ section.cibil-subscription {
 }
 
 .v4 {
+    .v1-image{
+        display: none !important;
+    }
+    .v2-image{
+        display: block;
+    }
     .p-bold-show {
         display: block !important;
         font-family: "Intro", Regular;

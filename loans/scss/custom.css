@@ -1406,6 +1406,14 @@ section.cibil-subscription .text-p p {
   }
 }
 
+.v2-text {
+  display: none;
+}
+
+.v1-text {
+  display: none;
+}
+
 .get-all {
   display: none;
 }
@@ -1449,6 +1457,9 @@ section.cibil-subscription .text-p p {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+.v2 .v2-text {
+  display: block;
 }
 .v2 .type-2 {
   display: block;
@@ -1518,6 +1529,12 @@ section.cibil-subscription .text-p p {
   display: none;
 }
 
+.v4 .v1-image {
+  display: none !important;
+}
+.v4 .v2-image {
+  display: block;
+}
 .v4 .p-bold-show {
   display: block !important;
   font-family: "Intro", Regular;
