@@ -982,9 +982,6 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             padding: 0;
         }
-        
-        
-        
     }
     .monitor-image {
         max-width: 193px;
@@ -1397,10 +1394,10 @@ section.cibil-subscription {
     }
 }
 ///////////////////////////////////@at-root
-.v2-text{
+.v2-text {
     display: none;
 }
-.v1-text{
+.v1-text {
     display: none;
 }
 .get-all {
@@ -1417,6 +1414,9 @@ section.cibil-subscription {
     display: none;
 }
 .v1 {
+    .v1-text {
+        display: block;
+    }
     .cibil-score {
         padding-bottom: 100px;
     }
@@ -1427,8 +1427,8 @@ section.cibil-subscription {
     .subtext {
         display: none;
     }
-    .cibil-subscription-plan{
-        .section-title{
+    .cibil-subscription-plan {
+        .section-title {
             margin-bottom: 35px !important;
         }
     }
@@ -1451,7 +1451,7 @@ section.cibil-subscription {
 
         color: #2c2c2c;
     }
-    .v2-text{
+    .v2-text {
         display: block;
     }
     .type-2 {
@@ -1463,11 +1463,14 @@ section.cibil-subscription {
     .last-column {
         display: none;
     }
-    .mobile-score-plan-desc{
-        margin-bottom: 20px ;
+    .mobile-score-plan-desc {
+        margin-bottom: 20px;
     }
 }
 .v3 {
+    .v1-text {
+        display: block;
+    }
     .get-all {
         position: relative;
         display: block !important;
@@ -1527,10 +1530,16 @@ section.cibil-subscription {
 }
 
 .v4 {
-    .v1-image{
+    .v4-button {
+        margin: auto;
+        display: block !important;
+        max-width: 250px;
+        margin-top: 40px;
+    }
+    .v1-image {
         display: none !important;
     }
-    .v2-image{
+    .v2-image {
         display: block;
     }
     .p-bold-show {

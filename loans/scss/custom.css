@@ -1430,6 +1430,9 @@ section.cibil-subscription .text-p p {
   display: none;
 }
 
+.v1 .v1-text {
+  display: block;
+}
 .v1 .cibil-score {
   padding-bottom: 100px;
 }
@@ -1474,6 +1477,9 @@ section.cibil-subscription .text-p p {
   margin-bottom: 20px;
 }
 
+.v3 .v1-text {
+  display: block;
+}
 .v3 .get-all {
   position: relative;
   display: block !important;
@@ -1529,6 +1535,12 @@ section.cibil-subscription .text-p p {
   display: none;
 }
 
+.v4 .v4-button {
+  margin: auto;
+  display: block !important;
+  max-width: 250px;
+  margin-top: 40px;
+}
 .v4 .v1-image {
   display: none !important;
 }
