@@ -991,7 +991,16 @@ section.cibil-subscription .text-p p {
 }
 .monitor .monitor-text {
   max-width: 615px;
-  padding: 0;
+}
+@media screen and (max-width: 992px) {
+  .monitor .monitor-text {
+    padding: 0 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .monitor .monitor-text {
+    padding: 0;
+  }
 }
 .monitor .monitor-image {
   max-width: 193px;
