@@ -1459,6 +1459,9 @@ section.cibil-subscription .text-p p {
 .v2 .last-column {
   display: none;
 }
+.v2 .mobile-score-plan-desc {
+  margin-bottom: 20px;
+}
 
 .v3 .get-all {
   position: relative;
