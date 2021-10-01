@@ -1612,8 +1612,8 @@ section.cibil-subscription .text-p p {
 .v4 .v1-image {
   display: none !important;
 }
-.v4 .v2-image {
-  display: block;
+.v4 .v4-image {
+  display: block !important;
 }
 .v4 .p-bold-show {
   display: block !important;
