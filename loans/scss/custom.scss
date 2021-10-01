@@ -1212,7 +1212,7 @@ section.cibil-subscription {
         background-color: transparent;
         display: flex;
         li {
-            width: 33.33%;
+            width: 33.33% !important;
             padding: 20px 10px;
             background: #fafafa;
             border: 1px solid #d6d6d6;
@@ -1234,7 +1234,7 @@ section.cibil-subscription {
             border-bottom: 2px solid #fff !important;
             border-bottom: 0;
             z-index: 1;
-            width: 33%;
+            width: 33% !important;
             border-bottom-left-radius: 0 !important;
             border-bottom-right-radius: 0 !important;
             margin-bottom: -3px;
@@ -1247,7 +1247,7 @@ section.cibil-subscription {
             }
             padding-left: 10px;
             padding-right: 3px;
-            padding-bottom: 0;
+            padding-bottom: 35px;
             h6 {
                 font-family: "Intro", Regular;
                 font-style: normal;
@@ -1297,12 +1297,15 @@ section.cibil-subscription {
                 letter-spacing: 0.02em;
                 color: #2c2c2c;
                 padding: 0 10px;
-                margin-left: -10px;
+                // margin-left: -10px;
                 margin-top: 15px;
                 height: 24px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: absolute;
+                bottom: 0;
+                left: 0;
             }
         }
     }
@@ -1352,6 +1355,20 @@ section.cibil-subscription {
     }
 }
 .tab-content {
+    position: relative;
+    margin-right: 2px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        height: 5px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 9;
+        border-right: 2px solid #3ea3ce;
+        border-left: 2px solid #3ea3ce;
+    }
     .tab-pane {
         padding: 30px 20px;
     }

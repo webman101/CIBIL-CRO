@@ -1223,7 +1223,7 @@ section.cibil-subscription .text-p p {
   display: flex;
 }
 .features-mobile-section .nav li {
-  width: 33.33%;
+  width: 33.33% !important;
   padding: 20px 10px;
   background: #fafafa;
   border: 1px solid #d6d6d6;
@@ -1244,7 +1244,7 @@ section.cibil-subscription .text-p p {
   border-bottom: 2px solid #fff !important;
   border-bottom: 0;
   z-index: 1;
-  width: 33%;
+  width: 33% !important;
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
   margin-bottom: -3px;
@@ -1252,7 +1252,7 @@ section.cibil-subscription .text-p p {
 .features-mobile-section .nav-tabs li {
   padding-left: 10px;
   padding-right: 3px;
-  padding-bottom: 0;
+  padding-bottom: 35px;
 }
 @media screen and (max-width: 375px) {
   .features-mobile-section .nav-tabs li {
@@ -1311,12 +1311,14 @@ section.cibil-subscription .text-p p {
   letter-spacing: 0.02em;
   color: #2c2c2c;
   padding: 0 10px;
-  margin-left: -10px;
   margin-top: 15px;
   height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .features-mobile-section .tag-intabs {
   position: absolute;
@@ -1367,6 +1369,22 @@ section.cibil-subscription .text-p p {
   object-fit: contain;
 }
 
+.tab-content {
+  position: relative;
+  margin-right: 2px;
+}
+.tab-content::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  height: 5px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9;
+  border-right: 2px solid #3ea3ce;
+  border-left: 2px solid #3ea3ce;
+}
 .tab-content .tab-pane {
   padding: 30px 20px;
 }
