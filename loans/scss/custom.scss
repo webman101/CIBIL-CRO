@@ -1688,3 +1688,95 @@ section.cibil-subscription {
         }
     }
 }
+////////////////////////////@at-root
+
+.footer-section {
+    background: #ffffff;
+    border-top: 5px solid #fcd833;
+    padding: 20px 0 50px 0;
+}
+@media (min-width: 992px) {
+    .footer-section .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+@media (max-width: 991px) {
+    .footer-section {
+        padding: 45px 20px 80px;
+    }
+}
+@media (max-width: 991px) {
+    .footer-left {
+        text-align: center;
+    }
+}
+.footer-right {
+    text-align: right;
+}
+@media (max-width: 991px) {
+    .footer-right {
+        text-align: center;
+    }
+}
+.footer-logo {
+    margin-bottom: 30px;
+}
+.footer-text h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000000;
+}
+@media (max-width: 991px) {
+    .footer-text h3 {
+        font-size: 16px;
+    }
+}
+.footer-text p {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+@media (max-width: 991px) {
+    .footer-text p {
+        font-size: 16px;
+    }
+}
+.footer-text p.rights {
+    font-size: 12px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+@media (max-width: 991px) {
+    .footer-text p.rights {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+}
+
+.social-media-icons a {
+    display: inline-block;
+    margin-right: 8px;
+}
+@media (max-width: 991px) {
+    .social-media-icons a img {
+        width: 32px;
+        height: 32px;
+    }
+}
+.social-media-icons a:last-child {
+    margin-right: 0;
+}
+@media (max-width: 991px) {
+    .social-media-icons {
+        padding-bottom: 30px;
+        margin-bottom: 38px;
+        border-bottom: 1px solid #c4c4c4;
+    }
+}
