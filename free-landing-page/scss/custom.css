@@ -629,7 +629,7 @@ section.cibil-subscription .text-p p {
   background: #f0fafc;
 }
 .monitor h2 {
-  margin-bottom: 38px;
+  margin-bottom: 16px;
 }
 .monitor .score-flex {
   display: flex;
@@ -1184,6 +1184,10 @@ section.cibil-subscription .text-p p {
     padding-left: 44px;
   }
 
+  .pb-44 {
+    padding-bottom: 44px;
+  }
+
   .cibil-steps .col-md-4 {
     max-width: 225px;
   }
@@ -1200,7 +1204,7 @@ section.cibil-subscription .text-p p {
   }
   .monitor .googleplay {
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 450px) {
