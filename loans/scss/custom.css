@@ -477,6 +477,16 @@ section.cibil-subscription .text-p p {
     min-height: 545px;
   }
 }
+@media screen and (min-width: 1020px) {
+  .plans .plan {
+    min-height: 620px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .plans .plan {
+    min-height: 545px;
+  }
+}
 .plans .plan:last-child {
   margin-right: 0;
 }

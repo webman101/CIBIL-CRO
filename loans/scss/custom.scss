@@ -448,7 +448,13 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             min-height: 545px;
         }
+        @media screen and (min-width: 1020px) {
+            min-height: 620px;
+        }
+        @media screen and (min-width: 1020px) {
+            min-height: 545px;
 
+        }
         width: 100%;
 
         &:last-child {
