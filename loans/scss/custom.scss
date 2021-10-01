@@ -1454,6 +1454,15 @@ section.cibil-subscription {
     .plan-column-1 {
         display: none;
     }
+    .v1-image {
+        display: none !important;
+    }
+    @media screen and (min-width: 992px) {
+        .v4-image {
+            display: block !important;
+        }
+    }
+
     .p-bold-show {
         display: block !important;
         font-family: "Intro", Regular;
@@ -1497,9 +1506,12 @@ section.cibil-subscription {
     .v1-image {
         display: none !important;
     }
-    .v4-image {
-        display: block !important;
+    @media screen and (min-width: 992px) {
+        .v4-image {
+            display: block !important;
+        }
     }
+
     .p-bold-show {
         display: block !important;
         font-family: "Intro", Regular;
