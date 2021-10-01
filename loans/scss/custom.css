@@ -1371,7 +1371,7 @@ section.cibil-subscription .text-p p {
 
 .tab-content {
   position: relative;
-  margin-right: 2px;
+  margin-right: 1px;
 }
 .tab-content::before {
   content: "";
