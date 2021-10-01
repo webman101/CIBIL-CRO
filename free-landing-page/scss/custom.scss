@@ -196,13 +196,24 @@ header {
     padding: 47px 0 0;
     .button-orange {
         padding: 0 53px;
+        
+        @media screen and (max-width: 992px) {
+            margin-bottom: 30px;    
+        }
+        
+        
     }
     p {
         font-family: "Intro", Regular;
         font-style: normal;
         font-weight: 400;
-        font-size: 24px;
+        @media screen and (min-width: 992px) {
+            font-size: 24px;
         line-height: 30px;
+
+        }
+        
+        
         color: #2c2c2c;
         max-width: 500px;
     }
@@ -217,7 +228,7 @@ section.cibil-subscription {
 }
 .cibil-subscription-plan {
     background: #f9f9f9;
-    padding: 60px 0 40px;
+    padding: 40px 0 40px;
 }
 .plans {
     padding: 20px;
@@ -946,7 +957,7 @@ section.cibil-subscription {
 }
 .tab-content {
     position: relative;
-    margin-right: 2px;
+    margin-right: 1px;
     &::before {
         content: "";
         position: absolute;

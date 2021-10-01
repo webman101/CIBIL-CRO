@@ -210,14 +210,23 @@ header nav .logo {
 .banner .button-orange {
   padding: 0 53px;
 }
+@media screen and (max-width: 992px) {
+  .banner .button-orange {
+    margin-bottom: 30px;
+  }
+}
 .banner p {
   font-family: "Intro", Regular;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 30px;
   color: #2c2c2c;
   max-width: 500px;
+}
+@media screen and (min-width: 992px) {
+  .banner p {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 section.cibil-subscription {
@@ -229,7 +238,7 @@ section.cibil-subscription .text-p p {
 
 .cibil-subscription-plan {
   background: #f9f9f9;
-  padding: 60px 0 40px;
+  padding: 40px 0 40px;
 }
 
 .plans {
@@ -966,7 +975,7 @@ section.cibil-subscription .text-p p {
 
 .tab-content {
   position: relative;
-  margin-right: 2px;
+  margin-right: 1px;
 }
 .tab-content::before {
   content: "";
