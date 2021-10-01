@@ -329,16 +329,7 @@ section.cibil-subscription {
                 padding-top: 1px;
             }
         }
-        .button-orange-outline,
-        .button-orange {
-            // position: absolute;
-            // bottom: 30px;
-            // width: 100%;
-            // max-width: 174px;
-            // margin: auto;
-            // left: 0;
-            // right: 0;
-        }
+    
         .plan-header {
             height: 152px;
             position: relative;
@@ -1135,9 +1126,6 @@ section.cibil-subscription {
         padding: 60px 0;
     }
     .plans {
-        .plan {
-            // min-height: 589px;
-        }
         .plan.active {
             &::before {
                 top: -35px;
