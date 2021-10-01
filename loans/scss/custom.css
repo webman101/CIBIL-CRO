@@ -1424,14 +1424,6 @@ section.cibil-subscription .text-p p {
   }
 }
 
-.v2-text {
-  display: none;
-}
-
-.v1-text {
-  display: none;
-}
-
 .get-all {
   display: none !important;
 }
@@ -1448,9 +1440,6 @@ section.cibil-subscription .text-p p {
   display: none;
 }
 
-.v1 .v1-text {
-  display: block;
-}
 .v1 .cibil-score {
   padding-bottom: 100px;
 }
@@ -1486,9 +1475,6 @@ section.cibil-subscription .text-p p {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2c2c2c;
-}
-.v2 .v2-text {
-  display: block;
 }
 .v2 .type-2 {
   display: block;
@@ -1531,9 +1517,6 @@ section.cibil-subscription .text-p p {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2c2c2c;
-}
-.v3 .v1-text {
-  display: block;
 }
 .v3 .get-all {
   position: relative;
