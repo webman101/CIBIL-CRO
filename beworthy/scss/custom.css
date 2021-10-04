@@ -1318,7 +1318,7 @@ section.cibil-subscription .text-p p {
     display: none;
   }
 }
-@media screen and (min-width: 385px) {
+@media screen and (min-width: 395px) {
   .features-mobile-section .nav-tabs li h6 {
     font-size: 14px;
   }
