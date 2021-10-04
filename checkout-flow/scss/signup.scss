@@ -3124,3 +3124,31 @@ h3.mb-2 {
 .hide{
     display: none !important;
 }
+//////////////////////////////
+/////////////////////////////
+.free-basic{
+    display: none;
+}
+.free-plan{
+    .free-basic{
+        display: block;
+    }
+    .non-basic{
+        display: none;
+    }
+}
+.label-down{
+    font-family: 'Intro', Book;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+/* identical to box height, or 171% */
+
+letter-spacing: 0.02em;
+
+/* Accent Black */
+
+color: #2C2C2C;
+margin-top: 6px;
+}

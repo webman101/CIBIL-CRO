@@ -3051,4 +3051,28 @@ option:disabled {
 
 .hide {
   display: none !important;
+}
+
+.free-basic {
+  display: none;
+}
+
+.free-plan .free-basic {
+  display: block;
+}
+.free-plan .non-basic {
+  display: none;
+}
+
+.label-down {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.02em;
+  /* Accent Black */
+  color: #2C2C2C;
+  margin-top: 6px;
 }/*# sourceMappingURL=signup.css.map */
