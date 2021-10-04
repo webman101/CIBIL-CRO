@@ -9,7 +9,7 @@
 body {
     font-family: "Intro";
     scroll-behavior: smooth;
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 a {
@@ -37,6 +37,16 @@ h6 {
     @media screen and (min-width: 992px) {
         display: none !important;
     }
+}
+.d-inline-block {
+    display: inline-block !important;
+}
+.d-inline-flex {
+    display: inline-flex !important;
+}
+.px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
 }
 .f {
     &-12 {
@@ -117,6 +127,11 @@ h6 {
         padding-top: 40px !important;
     }
 }
+.d-md-none {
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
 .mt-30 {
     @media screen and (max-width: 992px) {
         margin-top: 30px;
@@ -151,18 +166,7 @@ h6 {
 .text-blue {
     color: #00a6ca;
 }
-h2 {
-    font-family: "Intro", Bold;
-    font-weight: bold;
-    font-size: 32px;
-    @media screen and (min-width: 992px) {
-        font-size: 40px;
-    }
 
-    line-height: 44px;
-    letter-spacing: -0.01em;
-    color: #2c2c2c;
-}
 p {
     font-family: "Intro", Regular;
     font-weight: 600;
@@ -281,6 +285,18 @@ header {
         padding-left: 0;
         cursor: pointer;
     }
+    h2 {
+        font-family: "Intro", Bold;
+        font-weight: bold;
+        font-size: 32px;
+        @media screen and (min-width: 992px) {
+            font-size: 40px;
+        }
+
+        line-height: 44px;
+        letter-spacing: -0.01em;
+        color: #2c2c2c;
+    }
 }
 //////////////////////////////cibil-subscription
 section.cibil-subscription {
@@ -307,14 +323,54 @@ section.cibil-subscription {
     .text-p p {
         max-width: 374px;
     }
-    .w-sm-90 {
-        @media screen and (max-width: 992px) {
-            margin: auto;
-            width: 75%;
-            display: flex;
-        }
+}
+.w-sm-90 {
+    @media screen and (max-width: 992px) {
+        margin: auto;
+        width: 75%;
+        display: flex;
+    }
+    @media screen and (min-width: 992px) {
+        width: 90%;
     }
 }
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.d-md-flex {
+    @media screen and (min-width: 992px) {
+        display: flex;
+    }
+}
+.align-items-end {
+    align-items: flex-end;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+    .flex-md-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .text-md-start {
+        text-align: left !important;
+    }
+    .justify-content-md-center {
+        justify-content: center;
+    }
+}
+.flex-column {
+    flex-direction: column;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+
 ////////////////////////////////
 .cibil-subscription-plan {
     background: #f9f9f9;
@@ -857,7 +913,7 @@ section.cibil-subscription {
     padding: 60px 0 40px;
     max-width: 1055px;
     margin: auto;
-
+    display: flex;
     button.accordion {
         width: 100%;
         background-color: white;
@@ -1159,8 +1215,14 @@ section.cibil-subscription {
 .pane-2-flex {
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @media screen and (min-width: 992px) {
+        flex-direction: row;
+        align-items: center;
+    }
+
     h6 {
         font-family: Intro, bold;
         font-style: normal;
