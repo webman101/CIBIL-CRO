@@ -39,11 +39,39 @@ accordionBtns.forEach((accordion) => {
 });
 
 $('.banner-slider').slick({
-      arrows: false,
-      dots: true,
-      center: true,
-      autoplay: true,
-      autoplaySpeed: 4000,
+    arrows: false,
+    dots: true,
+    center: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
 
-  });
+});
 
+if (window.matchMedia("(max-width: 768px)").matches) {
+    /* the viewport is less than 768 pixels wide */
+    $('.mobile-slider').slick({
+        arrows: false,
+        dots: true,
+        center: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+
+    });
+}
+if (window.matchMedia("(max-width: 768px)").matches) {
+    /* the viewport is less than 768 pixels wide */
+    $('.mobile-slider-2').slick({
+        arrows: false,
+        dots: true,
+        center: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+
+    });
+}
+$('.info').mouseenter(function() {
+    $('.tool-tip').addClass('opacity-1');
+});
+$('.info').mouseleave(function() {
+    $('.tool-tip').removeClass('opacity-1');
+});

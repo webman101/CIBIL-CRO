@@ -28,16 +28,97 @@ h5,
 h6 {
     margin: 0;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -0.5);
+    margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-inline-flex {
+    display: inline-flex !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-md-flex {
+    display: flex !important;
+}
+
+.w-sm-90 {
+    @media screen and (max-width: 992px) {
+        margin: auto;
+        width: 75%;
+        display: flex;
+    }
+    @media screen and (min-width: 992px) {
+        width: 90%;
+    }
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.d-md-flex {
+    @media screen and (min-width: 992px) {
+        display: flex;
+    }
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+    .flex-md-row-reverse {
+        flex-direction: row-reverse;
+    }
+    .text-md-start {
+        text-align: left !important;
+    }
+    .justify-content-md-center {
+        justify-content: center;
+    }
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
 .mhide {
     @media screen and (max-width: 992px) {
         display: none !important;
     }
 }
+
 .dhide {
     @media screen and (min-width: 992px) {
         display: none !important;
     }
 }
+
 .f {
     &-12 {
         font-size: 12px !important;
@@ -70,6 +151,7 @@ h6 {
         font-size: 24px !important;
     }
 }
+
 .mb {
     &-10 {
         margin-bottom: 10px !important;
@@ -84,6 +166,7 @@ h6 {
         margin-bottom: 40px !important;
     }
 }
+
 .mb {
     @media screen and (min-width: 992px) {
         &-md-10 {
@@ -112,45 +195,57 @@ h6 {
         }
     }
 }
+
 .pt-4 {
     @media screen and (max-width: 992px) {
         padding-top: 40px !important;
     }
 }
+
 .mt-30 {
     @media screen and (max-width: 992px) {
         margin-top: 30px;
     }
 }
+.d-md-block {
+    @media screen and (min-width: 992px) {
+        display: block !important;
+    }
+}
+.text-black {
+    color: #000000 !important;
+}
+
 .bg-yellow {
     background-color: #fcd800;
 }
+
 .section-title {
     font-family: "Intro", Bold;
     font-weight: bold;
     font-size: 24px;
     @media screen and (min-width: 992px) {
         font-size: 32px;
-
         line-height: 50px;
     }
-
     text-align: center;
     letter-spacing: -0.01em;
     color: #2c2c2c;
 }
+
 .subtitle {
     font-family: "Intro", Bold;
     font-weight: bold;
     font-size: 24px;
-
     line-height: 30px;
     letter-spacing: 0.02em;
     color: #2c2c2c;
 }
+
 .text-blue {
     color: #00a6ca;
 }
+
 h2 {
     font-family: "Intro", Bold;
     font-weight: bold;
@@ -158,11 +253,11 @@ h2 {
     @media screen and (min-width: 992px) {
         font-size: 40px;
     }
-
     line-height: 44px;
     letter-spacing: -0.01em;
     color: #2c2c2c;
 }
+
 p {
     font-family: "Intro", Regular;
     font-weight: 600;
@@ -171,6 +266,7 @@ p {
     letter-spacing: 0.02em;
     color: #2c2c2c;
 }
+
 .text-400 {
     font-family: "Intro", Book;
     font-weight: 400;
@@ -178,6 +274,7 @@ p {
     letter-spacing: 0.02em;
     color: #2c2c2c;
 }
+
 .text-grey {
     font-family: "Intro", Regular;
     font-style: normal;
@@ -188,7 +285,6 @@ p {
 }
 
 ///////////////////////////////////// Buttons
-
 .button-orange {
     background: #f16e00;
     border-radius: 25px;
@@ -205,6 +301,7 @@ p {
     text-align: center;
     text-transform: capitalize;
 }
+
 .button-orange-outline {
     background: #ffffff;
     border: 1px solid #f16e00;
@@ -224,10 +321,10 @@ p {
     text-align: center;
     text-transform: capitalize;
 }
+
 //////////////////////////////////
 .btn-outline {
     background: #fafdff;
-
     border: 2px solid #3ea3ce;
     box-sizing: border-box;
     border-radius: 4px;
@@ -243,6 +340,7 @@ p {
     min-width: 125px;
     min-height: 35px;
 }
+
 ////////////////////////@at-root
 header {
     nav {
@@ -255,22 +353,34 @@ header {
         }
     }
 }
+@media screen and (max-width: 992px) {
+    .justify-content-sm-center {
+        justify-content: center;
+    }
+}
+
 .banner {
     @media screen and (max-width: 992px) {
-        background-image: url(../img/bannebg-mobile.png);
-        padding-bottom: 70px;
+        background: radial-gradient(136.5% 50% at 50% 50%, #1a95b9 0%, #39a1cb 100%);
+        text-align: center;
+
+        .button-orange {
+            margin: auto;
+
+            margin-top: 30px;
+        }
+    }
+    @media screen and (max-width: 376px) {
+        padding-top: 100px;
     }
 
-    @media screen and (min-width: 992px) {
-        background-image: url(../img/bannerbg.png);
+    @media screen and (max-width: 992px) {
     }
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     @media screen and (min-width: 992px) {
-        display: flex;
-        align-items: center;
+        // background-image: url(../img/bannerbg.png);
+    }
+    position: relative;
+    @media screen and (min-width: 992px) {
     }
     .image-block {
         margin-left: auto;
@@ -278,18 +388,28 @@ header {
     .image-block-mobile {
         margin: -30px 0;
     }
-
     .banner-text-block {
         @media screen and (max-width: 992px) {
-            padding: 30px 0 30px 20px;
+            padding: 30px 20px 30px 20px;
+            position: absolute;
+            top: 0;
         }
         @media screen and (min-width: 992px) {
-            margin-left: 50px;
+            left: 50px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 99999;
         }
         @media screen and (min-width: 1200px) {
-            margin-left: 207px;
+            left: 207px;
+            position: absolute;
+            top: 100px;
+            bottom: 0;
+            margin: auto;
+            z-index: 99999;
         }
-
         h2 {
             font-family: "Intro", Bold;
             font-style: normal;
@@ -298,9 +418,7 @@ header {
             font-size: 32px;
             line-height: 44px;
             /* or 137% */
-
             letter-spacing: -0.01em;
-
             color: #ffffff;
             @media screen and (min-width: 992px) {
                 font-size: 40px;
@@ -314,12 +432,11 @@ header {
             color: #ffffff;
             font-size: 16px;
             line-height: 24px;
-
             @media screen and (max-width: 992px) {
                 max-width: 267px;
+                margin: auto;
                 margin-top: 20px;
             }
-
             @media screen and (min-width: 992px) {
                 font-weight: 400;
                 font-size: 24px;
@@ -345,7 +462,6 @@ header {
                 left: 49%;
                 transform: translateX(-52%);
             }
-
             position: relative;
             display: inline-block;
             font-weight: 600;
@@ -375,6 +491,7 @@ header {
         }
     }
 }
+
 //////////////////////////////cibil-subscription
 section.cibil-subscription {
     padding: 40px 10px;
@@ -403,11 +520,12 @@ section.cibil-subscription {
     .w-sm-90 {
         @media screen and (max-width: 992px) {
             margin: auto;
-            width: 75%;
+            width: 95%;
             display: flex;
         }
     }
 }
+
 ////////////////////////////////
 .cibil-subscription-plan {
     background: #f9f9f9;
@@ -418,7 +536,11 @@ section.cibil-subscription {
             margin-top: 20px;
         }
     }
+    .v1-text {
+        margin-bottom: 40px;
+    }
 }
+
 .plans {
     padding: 20px;
     @media screen and (min-width: 450px) {
@@ -453,10 +575,8 @@ section.cibil-subscription {
         }
         @media screen and (min-width: 1200px) {
             min-height: 545px;
-
         }
         width: 100%;
-
         &:last-child {
             margin-right: 0;
         }
@@ -468,7 +588,6 @@ section.cibil-subscription {
             @media screen and (max-width: 992px) {
                 padding-top: 57px;
             }
-
             &::before {
                 content: "Most Popular";
                 position: absolute;
@@ -483,12 +602,10 @@ section.cibil-subscription {
                 @media screen and (min-width: 992px) {
                     // width: 240px;
                 }
-
                 top: -1px;
                 @media screen and (min-width: 992px) {
                     top: -35px;
                 }
-
                 border-radius: 6px 6px 0 0;
                 font-family: "Intro", Regular;
                 font-style: normal;
@@ -509,12 +626,10 @@ section.cibil-subscription {
                 width: 101.1%;
                 @media screen and (min-width: 992px) {
                 }
-
                 top: -1px;
                 @media screen and (min-width: 992px) {
                     top: -35px;
                 }
-
                 border-radius: 6px 6px 0 0;
                 font-family: "Intro", Regular;
                 font-style: normal;
@@ -570,7 +685,6 @@ section.cibil-subscription {
                 line-height: 24px;
                 letter-spacing: 0.02em;
                 color: #2c2c2c;
-
                 margin-top: 11px;
             }
         }
@@ -581,6 +695,7 @@ section.cibil-subscription {
         }
     }
 }
+
 .min-ht-350 {
     @media screen and (min-width: 992px) {
         min-height: 290px;
@@ -588,6 +703,7 @@ section.cibil-subscription {
     @media screen and (min-width: 1025px) {
     }
 }
+
 .save {
     position: absolute;
     width: 100px;
@@ -602,6 +718,7 @@ section.cibil-subscription {
     color: #2c2c2c;
     padding-left: 20px;
 }
+
 .key-value {
     display: flex;
     margin-bottom: 10px;
@@ -610,16 +727,13 @@ section.cibil-subscription {
     }
     .key {
         margin-right: 12px;
-
         img {
             width: 18px;
-
             height: 12px;
             @media screen and (min-width: 992px) {
                 width: 13px;
                 height: 8px;
             }
-
             object-fit: contain;
         }
     }
@@ -631,6 +745,7 @@ section.cibil-subscription {
         color: #2c2c2c;
     }
 }
+
 ///////////ssssssssssssssssssssss
 .cibil-testimonial {
     padding: 40px 0;
@@ -648,7 +763,6 @@ section.cibil-subscription {
             color: #707070;
         }
     }
-
     .col-md-4 {
         @media screen and (min-width: 1025px) {
             max-width: 328px;
@@ -715,14 +829,14 @@ section.cibil-subscription {
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-
         letter-spacing: 0.02em;
-
         color: #2c2c2c;
     }
 }
+.bg-transparent {
+    background-color: transparent !important;
+}
 /////////////////////////sssss
-
 .cibil-creditcard {
     background: #f9f9f9;
     padding: 40px 0 20px;
@@ -740,7 +854,6 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             width: 233px;
         }
-
         img {
             width: 100%;
             max-width: 233px;
@@ -757,8 +870,8 @@ section.cibil-subscription {
         }
     }
 }
-/////////////////////////sssss
 
+/////////////////////////sssss
 .cibil-score {
     // padding-bottom: 103px;
     p {
@@ -782,7 +895,6 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             font-size: 24px;
         }
-
         line-height: 30px;
         text-align: center;
         letter-spacing: 0.02em;
@@ -793,14 +905,14 @@ section.cibil-subscription {
     .button-orange {
         display: block;
         margin: auto;
-        max-width: 295px;
+        max-width: 174px;
         margin-top: 28px;
     }
-
     @media screen and (max-width: 992px) {
         padding-bottom: 0;
     }
 }
+
 .mobile-score-plan-desc {
     font-family: "Intro", Book;
     font-style: normal;
@@ -808,20 +920,19 @@ section.cibil-subscription {
     font-size: 14px;
     line-height: 26px;
     /* identical to box height, or 186% */
-
     text-align: center;
-
     color: #000000;
-
     opacity: 0.6;
     margin-top: 20px;
 }
+
 //////////////////////////////////////ss
 .pl-44 {
     @media screen and (min-width: 992px) {
         padding-left: 44px;
     }
 }
+
 .steps {
     margin-top: 47px;
     .numb {
@@ -843,6 +954,7 @@ section.cibil-subscription {
         color: #ffffff;
     }
 }
+
 .cibil-steps {
     padding: 40px 0;
     .col-md-4 {
@@ -858,7 +970,6 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             max-width: 225px;
         }
-
         margin-right: 50px;
         padding: 0;
         &:last-child {
@@ -871,6 +982,7 @@ section.cibil-subscription {
         }
     }
 }
+
 .cibil-steps-mobile {
     padding: 40px 0 40px;
     .steps-list {
@@ -904,14 +1016,23 @@ section.cibil-subscription {
         margin-top: 0;
     }
 }
+
 .mobile-slider {
-    padding: 0 14px;
+    .col-md-4 {
+     @media screen and (max-width: 992px) {
+        padding: 0;
+     }
+     
+     
+    }
 }
+
 .slick-dots {
     margin-top: 20px;
     display: flex !important;
     justify-content: center;
     cursor: pointer;
+    width: 100%;
     li {
         width: 26.57px;
         height: 8.86px;
@@ -927,14 +1048,13 @@ section.cibil-subscription {
         }
     }
 }
+
 /////////////////////ssss
 .buutons-group {
     display: flex;
-
     @media screen and (max-width: 992px) {
         flex-direction: column;
     }
-
     align-items: center;
     justify-content: center;
     margin-top: 40px;
@@ -943,22 +1063,28 @@ section.cibil-subscription {
             margin-bottom: 20px;
             width: 210px;
         }
-
         padding: 0 20px;
         @media screen and (min-width: 992px) {
             margin-right: 20px;
             padding: 0 40px;
         }
-
         &:last-child {
             margin-right: 0;
         }
     }
 }
+
 ////////////////////////////@at-root
 .monitor {
+    padding-top: 30px;
     background: #f0fafc;
     h2 {
+        
+        @media screen and (max-width: 992px) {
+            padding-top: 0 !important;    
+        }
+        
+        
         margin-bottom: 23px;
         @media screen and (min-width: 992px) {
             margin-top: 17px !important;
@@ -979,11 +1105,11 @@ section.cibil-subscription {
             margin-bottom: 37px !important;
         }
     }
-
     .monitor-text {
         max-width: 615px;
         @media screen and (max-width: 992px) {
             padding: 0 25px;
+            text-align: center;
         }
         @media screen and (min-width: 992px) {
             padding: 0;
@@ -1000,24 +1126,26 @@ section.cibil-subscription {
             margin-top: 20px;
             margin-bottom: 60px;
         }
-
         img {
         }
     }
 }
+
 .last-list {
     @media screen and (max-width: 992px) {
         margin-bottom: 0 !important;
     }
 }
+
 .pl-m {
     padding-left: 30px;
 }
-.acordion {
-    padding: 60px 0 40px;
-    max-width: 1055px;
-    margin: auto;
 
+.acordion {
+    padding: 60px 0 70px;
+    width: 100%;
+    display: flex;
+    margin: auto;
     button.accordion {
         width: 100%;
         background-color: white;
@@ -1041,7 +1169,6 @@ section.cibil-subscription {
                 width: 100%;
                 max-width: 290px;
             }
-
             font-family: "Intro", Bold;
             font-weight: bold;
             font-size: 16px;
@@ -1060,12 +1187,10 @@ section.cibil-subscription {
         right: 0;
         top: 22px;
     }
-
     button.accordion.is-open:after {
         content: url(../img/minus.png);
         top: 15px;
     }
-
     .accordion-content {
         max-height: 0;
         overflow: hidden;
@@ -1081,9 +1206,11 @@ section.cibil-subscription {
         }
     }
 }
+
 .accordion-content.last-border {
     border-bottom: 2px solid #ececec !important;
 }
+
 /////////////////////////////@at-root
 .beworthy {
     padding: 40px 0 60px;
@@ -1100,7 +1227,6 @@ section.cibil-subscription {
 ///////////////////////////////////////////////////////////@at-root
 ///////////////////////////////////@at-root
 ///////////////////////////////////////
-
 .interstial-container {
     padding-top: 40px;
     background: #f9f9f9;
@@ -1111,17 +1237,19 @@ section.cibil-subscription {
         font-size: 16px;
         line-height: 24px;
         /* or 150% */
-
         text-align: center;
         letter-spacing: 0.02em;
-
         /* Accent Black */
-
         color: #2c2c2c;
     }
     .col-md-5.equal-column {
         max-width: 457px;
         background: #f9f9f9;
+        @media screen and (max-width: 992px) {
+            padding:0;
+        }
+        
+        
     }
     .column {
         position: relative;
@@ -1188,11 +1316,13 @@ section.cibil-subscription {
         height: 30px;
     }
 }
+
 .mobile-slider-2 {
     .slick-dots {
         padding: 0;
     }
 }
+
 .plan-title {
     font-family: Intro, Regular;
     font-style: normal;
@@ -1203,6 +1333,7 @@ section.cibil-subscription {
     color: #2c2c2c;
     margin-bottom: 20px;
 }
+
 .features-mobile-section {
     padding: 30px 0;
     padding-bottom: 10px;
@@ -1265,7 +1396,6 @@ section.cibil-subscription {
                 @media screen and (min-width: 376) {
                     font-size: 16px;
                 }
-
                 line-height: 24px;
                 text-align: left;
                 letter-spacing: 0.02em;
@@ -1325,19 +1455,23 @@ section.cibil-subscription {
         overflow: hidden;
     }
 }
+
 .tab-pane {
     background-color: #fff;
     padding: 10px 15px;
     margin-bottom: 20px;
 }
+
 .tab-pane.active {
     border: 2px solid #3ea3ce;
 }
+
 .tab-pane.tab-pane-2 {
     border: 1px solid #ddd;
     border-radius: 6px;
     background: #f9f9f9;
 }
+
 .pane-2-flex {
     margin-bottom: 20px;
     display: flex;
@@ -1360,6 +1494,7 @@ section.cibil-subscription {
         object-fit: contain;
     }
 }
+
 .tab-content {
     position: relative;
     margin-right: 1px;
@@ -1379,9 +1514,11 @@ section.cibil-subscription {
         padding: 30px 20px;
     }
 }
+
 .tab-pane.messages {
     margin-bottom: 60px;
 }
+
 .full-width-button {
     width: 100%;
     max-width: 334px;
@@ -1392,14 +1529,17 @@ section.cibil-subscription {
     justify-content: center;
     align-items: center;
 }
+
 .non-bg {
     background: 0 0 !important;
 }
+
 @media (min-width: 992px) {
     .features-mobile-section {
         display: none;
     }
 }
+
 @media screen and (min-width: 385px) {
     .features-mobile-section {
         .nav-tabs {
@@ -1411,17 +1551,18 @@ section.cibil-subscription {
         }
     }
 }
+
 .col-md-5.ps-md-4.text-p {
     @media screen and (max-width: 992px) {
         padding: 0 22px;
     }
 }
+
 ///////////////////////////////////@at-root
-
-
 .get-all {
     display: none !important;
 }
+
 .desc-v3 {
     display: none;
 }
@@ -1429,18 +1570,18 @@ section.cibil-subscription {
 .type-2 {
     display: none;
 }
+
 .goals {
     display: none;
 }
+
 .v1 {
- 
     .cibil-score {
         padding-bottom: 100px;
     }
     .mobile-score-plan-desc {
         display: none;
     }
-
     .subtext {
         display: none;
     }
@@ -1450,6 +1591,7 @@ section.cibil-subscription {
         }
     }
 }
+
 .v2 {
     .plan-column-1 {
         display: none;
@@ -1462,7 +1604,6 @@ section.cibil-subscription {
             display: block !important;
         }
     }
-
     .p-bold-show {
         display: block !important;
         font-family: "Intro", Regular;
@@ -1471,13 +1612,10 @@ section.cibil-subscription {
         font-size: 16px;
         line-height: 24px;
         /* or 150% */
-
         text-align: center;
         letter-spacing: 0.02em;
-
         color: #2c2c2c;
     }
-   
     .type-2 {
         display: block;
     }
@@ -1491,10 +1629,15 @@ section.cibil-subscription {
         margin-bottom: 20px;
     }
 }
+
 .btn-v3-orange {
     display: none !important;
 }
+
 .v3 {
+    .v3-hide {
+        display: none !important;
+    }
     .btn-v1-orange {
         display: none !important;
     }
@@ -1509,7 +1652,6 @@ section.cibil-subscription {
             display: block !important;
         }
     }
-
     .p-bold-show {
         display: block !important;
         font-family: "Intro", Regular;
@@ -1521,13 +1663,11 @@ section.cibil-subscription {
         letter-spacing: 0.02em;
         color: #2c2c2c;
     }
-
     .get-all {
         position: relative;
         @media screen and (min-width: 992px) {
             display: block !important;
         }
-
         .text-block {
             position: absolute;
             top: 0;
@@ -1550,10 +1690,8 @@ section.cibil-subscription {
                 font-size: 32px;
                 line-height: 44px;
                 /* or 137% */
-
                 text-align: center;
                 letter-spacing: -0.01em;
-
                 color: #2c2c2c;
             }
             a {
@@ -1584,9 +1722,11 @@ section.cibil-subscription {
         display: none;
     }
 }
+
 .v4-image {
     display: none !important;
 }
+
 .v4 {
     .v4-button {
         margin: auto;
@@ -1611,10 +1751,8 @@ section.cibil-subscription {
         font-size: 16px;
         line-height: 24px;
         /* or 150% */
-
         text-align: center;
         letter-spacing: 0.02em;
-
         color: #2c2c2c;
     }
     section {
@@ -1633,6 +1771,7 @@ section.cibil-subscription {
         }
     }
 }
+
 .goals {
     background-color: #f9f9f9;
     @media screen and (max-width: 992px) {
@@ -1654,7 +1793,6 @@ section.cibil-subscription {
         @media screen and (max-width: 992px) {
             max-width: 315px;
         }
-
         @media screen and (min-width: 992px) {
             font-size: 32px;
         }
@@ -1713,13 +1851,14 @@ section.cibil-subscription {
         }
     }
 }
-////////////////////////////@at-root
 
+////////////////////////////@at-root
 .footer-section {
     background: #ffffff;
     border-top: 5px solid #fcd833;
     padding: 20px 0 50px 0;
 }
+
 @media (min-width: 992px) {
     .footer-section .row {
         display: -webkit-box;
@@ -1730,54 +1869,65 @@ section.cibil-subscription {
         align-items: center;
     }
 }
+
 @media (max-width: 991px) {
     .footer-section {
         padding: 45px 20px 80px;
     }
 }
+
 @media (max-width: 991px) {
     .footer-left {
         text-align: center;
     }
 }
+
 .footer-right {
     text-align: right;
 }
+
 @media (max-width: 991px) {
     .footer-right {
         text-align: center;
     }
 }
+
 .footer-logo {
     margin-bottom: 30px;
 }
+
 .footer-text h3 {
     margin: 0;
     margin-bottom: 10px;
     font-size: 20px;
     color: #000000;
 }
+
 @media (max-width: 991px) {
     .footer-text h3 {
         font-size: 16px;
     }
 }
+
 .footer-text p {
     font-size: 20px;
     margin: 0;
     font-weight: 300;
 }
+
 @media (max-width: 991px) {
     .footer-text p {
         font-size: 16px;
     }
 }
+
 .footer-text p.rights {
     font-size: 12px;
     color: #000000;
     text-transform: uppercase;
     margin-top: 20px;
 }
+
 @media (max-width: 991px) {
     .footer-text p.rights {
         margin-top: 30px;
@@ -1789,19 +1939,80 @@ section.cibil-subscription {
     display: inline-block;
     margin-right: 8px;
 }
+
 @media (max-width: 991px) {
     .social-media-icons a img {
         width: 32px;
         height: 32px;
     }
 }
+
 .social-media-icons a:last-child {
     margin-right: 0;
 }
+
 @media (max-width: 991px) {
     .social-media-icons {
         padding-bottom: 30px;
         margin-bottom: 38px;
         border-bottom: 1px solid #c4c4c4;
+    }
+}
+
+.tool-tip {
+    position: absolute;
+    min-width: 264px;
+    min-height: 21px;
+    background: #f9f9f9;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    border-radius: 4px;
+    top: -59px;
+    right: -15px;
+    @media screen and (min-width: 992px) {
+        right: -90px;
+    }
+
+    font-family: "Intro", Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 12px;
+    color: #707070;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-img {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: -10px;
+        margin: auto;
+        height: 15px;
+        width: 15px;
+        background: #f9f9f9;
+        border: 1px solid #dddddd;
+        top: -17px;
+        transform: rotate(45deg);
+        border-top: 0;
+        border-left: 0;
+    }
+}
+.position-relative {
+    position: relative;
+}
+.opacity-1 {
+    opacity: 1;
+}
+.v4-pnly {
+    display: none !important;
+}
+.v4 {
+    .v4-pnly {
+        display: flex;
+        align-items: center;
     }
 }

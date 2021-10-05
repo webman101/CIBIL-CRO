@@ -29,6 +29,87 @@ h6 {
   margin: 0;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-md-flex {
+  display: flex !important;
+}
+
+@media screen and (max-width: 992px) {
+  .w-sm-90 {
+    margin: auto;
+    width: 75%;
+    display: flex;
+  }
+}
+@media screen and (min-width: 992px) {
+  .w-sm-90 {
+    width: 90%;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .d-md-flex {
+    display: flex;
+  }
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .flex-md-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .text-md-start {
+    text-align: left !important;
+  }
+
+  .justify-content-md-center {
+    justify-content: center;
+  }
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 992px) {
   .mhide {
     display: none !important;
@@ -122,6 +203,16 @@ h6 {
   .mt-30 {
     margin-top: 30px;
   }
+}
+
+@media screen and (min-width: 992px) {
+  .d-md-block {
+    display: block !important;
+  }
+}
+
+.text-black {
+  color: #000000 !important;
 }
 
 .bg-yellow {
@@ -261,26 +352,27 @@ header nav .logo {
   width: 91px;
 }
 
+@media screen and (max-width: 992px) {
+  .justify-content-sm-center {
+    justify-content: center;
+  }
+}
 .banner {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
 }
 @media screen and (max-width: 992px) {
   .banner {
-    background-image: url(../img/bannebg-mobile.png);
-    padding-bottom: 70px;
+    background: radial-gradient(136.5% 50% at 50% 50%, #1a95b9 0%, #39a1cb 100%);
+    text-align: center;
+  }
+  .banner .button-orange {
+    margin: auto;
+    margin-top: 30px;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 376px) {
   .banner {
-    background-image: url(../img/bannerbg.png);
-  }
-}
-@media screen and (min-width: 992px) {
-  .banner {
-    display: flex;
-    align-items: center;
+    padding-top: 100px;
   }
 }
 .banner .image-block {
@@ -291,17 +383,29 @@ header nav .logo {
 }
 @media screen and (max-width: 992px) {
   .banner .banner-text-block {
-    padding: 30px 0 30px 20px;
+    padding: 30px 20px 30px 20px;
+    position: absolute;
+    top: 0;
   }
 }
 @media screen and (min-width: 992px) {
   .banner .banner-text-block {
-    margin-left: 50px;
+    left: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99999;
   }
 }
 @media screen and (min-width: 1200px) {
   .banner .banner-text-block {
-    margin-left: 207px;
+    left: 207px;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    margin: auto;
+    z-index: 99999;
   }
 }
 .banner .banner-text-block h2 {
@@ -332,6 +436,7 @@ header nav .logo {
 @media screen and (max-width: 992px) {
   .banner .banner-text-block h4 {
     max-width: 267px;
+    margin: auto;
     margin-top: 20px;
   }
 }
@@ -421,7 +526,7 @@ section.cibil-subscription .text-p p {
 @media screen and (max-width: 992px) {
   section.cibil-subscription .w-sm-90 {
     margin: auto;
-    width: 75%;
+    width: 95%;
     display: flex;
   }
 }
@@ -435,6 +540,9 @@ section.cibil-subscription .text-p p {
 .cibil-subscription-plan .button-orange {
     margin-top: 20px;
   }
+}
+.cibil-subscription-plan .v1-text {
+  margin-bottom: 40px;
 }
 
 .plans {
@@ -736,6 +844,10 @@ section.cibil-subscription .text-p p {
   color: #2c2c2c;
 }
 
+.bg-transparent {
+  background-color: transparent !important;
+}
+
 .cibil-creditcard {
   background: #f9f9f9;
   padding: 40px 0 20px;
@@ -805,7 +917,7 @@ section.cibil-subscription .text-p p {
 .cibil-score .button-orange {
   display: block;
   margin: auto;
-  max-width: 295px;
+  max-width: 174px;
   margin-top: 28px;
 }
 @media screen and (max-width: 992px) {
@@ -918,8 +1030,10 @@ section.cibil-subscription .text-p p {
   margin-top: 0;
 }
 
-.mobile-slider {
-  padding: 0 14px;
+@media screen and (max-width: 992px) {
+  .mobile-slider .col-md-4 {
+    padding: 0;
+  }
 }
 
 .slick-dots {
@@ -927,6 +1041,7 @@ section.cibil-subscription .text-p p {
   display: flex !important;
   justify-content: center;
   cursor: pointer;
+  width: 100%;
 }
 .slick-dots li {
   width: 26.57px;
@@ -974,10 +1089,16 @@ section.cibil-subscription .text-p p {
 }
 
 .monitor {
+  padding-top: 30px;
   background: #f0fafc;
 }
 .monitor h2 {
   margin-bottom: 23px;
+}
+@media screen and (max-width: 992px) {
+  .monitor h2 {
+    padding-top: 0 !important;
+  }
 }
 @media screen and (min-width: 992px) {
   .monitor h2 {
@@ -1005,6 +1126,7 @@ section.cibil-subscription .text-p p {
 @media screen and (max-width: 992px) {
   .monitor .monitor-text {
     padding: 0 25px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1037,8 +1159,9 @@ section.cibil-subscription .text-p p {
 }
 
 .acordion {
-  padding: 60px 0 40px;
-  max-width: 1055px;
+  padding: 60px 0 70px;
+  width: 100%;
+  display: flex;
   margin: auto;
 }
 .acordion button.accordion {
@@ -1135,6 +1258,11 @@ section.cibil-subscription .text-p p {
 .interstial-container .col-md-5.equal-column {
   max-width: 457px;
   background: #f9f9f9;
+}
+@media screen and (max-width: 992px) {
+  .interstial-container .col-md-5.equal-column {
+    padding: 0;
+  }
 }
 .interstial-container .column {
   position: relative;
@@ -1503,6 +1631,9 @@ section.cibil-subscription .text-p p {
   display: none !important;
 }
 
+.v3 .v3-hide {
+  display: none !important;
+}
 .v3 .btn-v1-orange {
   display: none !important;
 }
@@ -1826,4 +1957,63 @@ section.cibil-subscription .text-p p {
     margin-bottom: 38px;
     border-bottom: 1px solid #c4c4c4;
   }
+}
+.tool-tip {
+  position: absolute;
+  min-width: 264px;
+  min-height: 21px;
+  background: #f9f9f9;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  top: -59px;
+  right: -15px;
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 12px;
+  color: #707070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .tool-tip {
+    right: -90px;
+  }
+}
+
+.info-img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: -10px;
+  margin: auto;
+  height: 15px;
+  width: 15px;
+  background: #f9f9f9;
+  border: 1px solid #dddddd;
+  top: -17px;
+  transform: rotate(45deg);
+  border-top: 0;
+  border-left: 0;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.v4-pnly {
+  display: none !important;
+}
+
+.v4 .v4-pnly {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=custom.css.map */
