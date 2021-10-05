@@ -392,7 +392,7 @@ header nav .logo {
   .banner .banner-text-block {
     left: 50px;
     position: absolute;
-    top: 0;
+    top: 30px;
     bottom: 0;
     margin: auto;
     z-index: 99999;
@@ -583,11 +583,6 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .plans .plan {
     min-height: 545px;
-  }
-}
-@media screen and (min-width: 1020px) {
-  .plans .plan {
-    min-height: 620px;
   }
 }
 @media screen and (min-width: 1200px) {

@@ -397,7 +397,8 @@ header {
         @media screen and (min-width: 992px) {
             left: 50px;
             position: absolute;
-            top: 0;
+            top: 30px;
+
             bottom: 0;
             margin: auto;
             z-index: 99999;
@@ -570,9 +571,9 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             min-height: 545px;
         }
-        @media screen and (min-width: 1020px) {
-            min-height: 620px;
-        }
+        // @media screen and (min-width: 1020px) {
+        //     min-height: 620px;
+        // }
         @media screen and (min-width: 1200px) {
             min-height: 545px;
         }
@@ -1648,7 +1649,7 @@ section.cibil-subscription {
     .v3-only {
         display: inline-block;
     }
-   
+
     .v3-hide {
         display: none !important;
     }
@@ -1734,7 +1735,8 @@ section.cibil-subscription {
     }
     .last-column {
         display: none;
-    } .v4-pnly {
+    }
+    .v4-pnly {
         display: none !important;
     }
 }
@@ -2041,13 +2043,10 @@ section.cibil-subscription {
 }
 
 @media screen and (min-width: 992px) {
-    .pe-md-0{
-        padding-right:0;
-        
-        
+    .pe-md-0 {
+        padding-right: 0;
     }
-    .ps-md-0{
-        padding-left:0;
+    .ps-md-0 {
+        padding-left: 0;
     }
 }
-
