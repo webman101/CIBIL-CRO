@@ -71,7 +71,11 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 }
 $('.info').mouseenter(function() {
     $('.tool-tip').addClass('opacity-1');
+    $('.info-img').addClass('opacity-1');
+
 });
 $('.info').mouseleave(function() {
     $('.tool-tip').removeClass('opacity-1');
+    $('.info-img').removeClass('opacity-1');
+
 });

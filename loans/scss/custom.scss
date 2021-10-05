@@ -1969,6 +1969,7 @@ section.cibil-subscription {
     border-radius: 4px;
     top: -59px;
     right: -15px;
+    opacity: 0;
     @media screen and (min-width: 992px) {
         right: -90px;
     }
@@ -1999,6 +2000,12 @@ section.cibil-subscription {
         transform: rotate(45deg);
         border-top: 0;
         border-left: 0;
+        opacity: 0;
+    }
+    &.opacity-1{
+        &::after {
+            opacity: 1;
+        }
     }
 }
 .position-relative {
