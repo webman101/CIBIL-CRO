@@ -370,7 +370,7 @@ header nav .logo {
     margin-top: 30px;
   }
 }
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 600px) {
   .banner {
     padding-top: 100px;
   }
@@ -1643,6 +1643,9 @@ section.cibil-subscription .text-p p {
 .v2 .mobile-score-plan-desc {
   margin-bottom: 20px;
 }
+.v2 .v4-pnly {
+  display: none !important;
+}
 
 .btn-v3-orange {
   display: none !important;
@@ -1685,6 +1688,12 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .v3 .get-all {
     display: block !important;
+    height: 288px;
+  }
+  .v3 .get-all img {
+    height: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 .v3 .get-all .text-block {
@@ -1701,6 +1710,7 @@ section.cibil-subscription .text-p p {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 60px 0;
 }
 .v3 .get-all .text-block .section-title {
   margin-bottom: 42px;
@@ -2045,6 +2055,9 @@ section.cibil-subscription .text-p p {
   display: flex;
   align-items: center;
 }
+.v4 .v3-only {
+  display: inline-block !important;
+}
 
 @media screen and (min-width: 992px) {
   .pe-md-0 {
@@ -2054,4 +2067,7 @@ section.cibil-subscription .text-p p {
   .ps-md-0 {
     padding-left: 0;
   }
+}
+.v3 .v3-only-lat {
+  display: block !important;
 }/*# sourceMappingURL=custom.css.map */
