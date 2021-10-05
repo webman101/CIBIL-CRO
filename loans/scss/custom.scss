@@ -569,11 +569,11 @@ section.cibil-subscription {
             margin-top: 50px;
         }
         @media screen and (min-width: 992px) {
-            min-height: 545px;
+            min-height: 640px;
         }
-        // @media screen and (min-width: 1020px) {
-        //     min-height: 620px;
-        // }
+         @media screen and (min-width: 1025px) {
+            min-height: 545px;
+         }
         @media screen and (min-width: 1200px) {
             min-height: 545px;
         }
