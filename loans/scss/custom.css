@@ -850,7 +850,7 @@ section.cibil-subscription .text-p p {
 
 .cibil-creditcard {
   background: #f9f9f9;
-  padding: 40px 0 20px;
+  padding: 40px 0 40px;
 }
 .cibil-creditcard .all-cards {
   width: 100%;
@@ -1229,7 +1229,7 @@ section.cibil-subscription .text-p p {
 }
 
 .beworthy {
-  padding: 40px 0 60px;
+  padding: 40px 0 15px;
   background: #f9f9f9;
 }
 .beworthy .button-orange {
@@ -1591,6 +1591,23 @@ section.cibil-subscription .text-p p {
   margin-bottom: 35px !important;
 }
 
+.v3-only,
+.v2-only {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+@media screen and (min-width: 992px) {
+  .d-md-none {
+    display: none;
+  }
+}
+.v2 .v2-only {
+  display: inline-block;
+}
 .v2 .plan-column-1 {
   display: none;
 }
@@ -1631,6 +1648,9 @@ section.cibil-subscription .text-p p {
   display: none !important;
 }
 
+.v3 .v3-only {
+  display: inline-block;
+}
 .v3 .v3-hide {
   display: none !important;
 }
@@ -1718,6 +1738,9 @@ section.cibil-subscription .text-p p {
 }
 .v3 .last-column {
   display: none;
+}
+.v3 .v4-pnly {
+  display: none !important;
 }
 
 .v4-image {
@@ -1820,7 +1843,7 @@ section.cibil-subscription .text-p p {
 .goals .goal {
   margin-top: 20px;
   border-radius: 6px;
-  padding: 30px;
+  padding: 20px;
   background: #fff;
   padding-bottom: 0;
 }
@@ -2021,4 +2044,14 @@ section.cibil-subscription .text-p p {
 .v4 .v4-pnly {
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .pe-md-0 {
+    padding-right: 0;
+  }
+
+  .ps-md-0 {
+    padding-left: 0;
+  }
 }/*# sourceMappingURL=custom.css.map */
