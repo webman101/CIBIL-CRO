@@ -1767,8 +1767,6 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             display: none !important;
         }
-        
-        
     }
 }
 
@@ -1782,14 +1780,11 @@ section.cibil-subscription {
         display: block !important;
         max-width: 250px;
         margin-top: 40px;
-        margin-bottom: 20px;    
-        
-        @media screen and (max-width: 992px) {
-            margin-bottom: 55px;    
+        margin-bottom: 20px;
 
+        @media screen and (max-width: 992px) {
+            margin-bottom: 55px;
         }
-        
-        
     }
     .v4-padding-bottom-0 {
         padding-bottom: 0;
@@ -1857,10 +1852,8 @@ section.cibil-subscription {
     padding-bottom: 34px;
     @media screen and (min-width: 992px) {
         padding-bottom: 96px;
-
     }
-    
-    
+
     .title {
         font-size: 24px;
         @media screen and (max-width: 992px) {
@@ -1883,13 +1876,9 @@ section.cibil-subscription {
             margin-bottom: 17px;
         }
     }
-    .section-title{
-        
+    .section-title {
         @media screen and (min-width: 992px) {
-            
         }
-        
-        
     }
     .goal {
         margin-top: 20px;
@@ -2179,5 +2168,10 @@ section.cibil-subscription {
         color: #2c2c2c;
         max-width: 717px;
         margin: auto;
+    }
+}
+@media screen and (max-width: 992px) {
+    .trasform-right {
+        margin-right: -13px;
     }
 }

@@ -2170,4 +2170,9 @@ section.cibil-subscription .text-p p {
     max-width: 717px;
     margin: auto;
   }
+}
+@media screen and (max-width: 992px) {
+  .trasform-right {
+    margin-right: -13px;
+  }
 }/*# sourceMappingURL=custom.css.map */
