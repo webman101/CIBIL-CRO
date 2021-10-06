@@ -1222,6 +1222,7 @@ section.cibil-subscription .text-p p {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+  max-width: 90%;
 }
 
 .accordion-content.last-border {
@@ -1651,6 +1652,10 @@ section.cibil-subscription .text-p p {
   display: none !important;
 }
 
+.v3-only-lat {
+  display: none;
+}
+
 .v3 .v3-only {
   display: inline-block;
 }
@@ -1993,7 +1998,8 @@ section.cibil-subscription .text-p p {
 }
 .tool-tip {
   position: absolute;
-  min-width: 264px;
+  width: 359px;
+  max-width: 375px;
   min-height: 21px;
   background: #f9f9f9;
   border: 1px solid #dddddd;
