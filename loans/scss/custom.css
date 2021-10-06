@@ -2180,4 +2180,9 @@ section.cibil-subscription .text-p p {
   .trasform-right {
     margin-right: -13px;
   }
+}
+@media screen and (min-width: 992px) {
+  .mobile-score-plan-desc.sm-14-black {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=custom.css.map */
