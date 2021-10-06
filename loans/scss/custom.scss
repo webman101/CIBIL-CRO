@@ -1706,6 +1706,7 @@ section.cibil-subscription {
             img {
                 height: 100%;
                 object-fit: fill;
+                width: 100%;
             }
         }
         .text-block {
@@ -1763,7 +1764,11 @@ section.cibil-subscription {
         display: none;
     }
     .v4-pnly {
-        display: none !important;
+        @media screen and (min-width: 992px) {
+            display: none !important;
+        }
+        
+        
     }
 }
 
@@ -1777,6 +1782,17 @@ section.cibil-subscription {
         display: block !important;
         max-width: 250px;
         margin-top: 40px;
+        margin-bottom: 20px;    
+        
+        @media screen and (max-width: 992px) {
+            margin-bottom: 55px;    
+
+        }
+        
+        
+    }
+    .v4-padding-bottom-0 {
+        padding-bottom: 0;
     }
     .v2-text {
         display: block;
@@ -1784,8 +1800,15 @@ section.cibil-subscription {
     .v1-image {
         display: none !important;
     }
+    .v4-text-none {
+        display: none !important;
+    }
     .v4-image {
         display: none !important;
+
+        @media screen and (min-width: 992px) {
+            display: block !important;
+        }
     }
     .p-bold-show {
         display: block !important;
@@ -1832,6 +1855,12 @@ section.cibil-subscription {
     padding-top: 40px;
     box-sizing: border-box;
     padding-bottom: 34px;
+    @media screen and (min-width: 992px) {
+        padding-bottom: 96px;
+
+    }
+    
+    
     .title {
         font-size: 24px;
         @media screen and (max-width: 992px) {
@@ -1853,6 +1882,14 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             margin-bottom: 17px;
         }
+    }
+    .section-title{
+        
+        @media screen and (min-width: 992px) {
+            
+        }
+        
+        
     }
     .goal {
         margin-top: 20px;
@@ -2006,14 +2043,14 @@ section.cibil-subscription {
 .tool-tip {
     position: absolute;
     width: 359px;
-    max-width: 375px;
+    max-width: 330px;
     min-height: 21px;
     background: #f9f9f9;
     border: 1px solid #dddddd;
     box-sizing: border-box;
     border-radius: 4px;
     top: -59px;
-    right: -15px;
+    right: -50px;
     opacity: 0;
     @media screen and (min-width: 992px) {
         right: -90px;
@@ -2092,4 +2129,55 @@ section.cibil-subscription {
 /* the parent */
 .slick-list {
     margin: 0 -10px;
+}
+@media screen and (max-width: 992px) {
+    .sm-14 {
+        font-size: 14px !important;
+        color: #707070 !important;
+    }
+    .sm-14-black {
+        font-family: "Intro", Book;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px !important;
+        line-height: 26px;
+
+        text-align: center;
+
+        color: #000000;
+
+        opacity: 0.6;
+    }
+    .p-medium-bold {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        /* Accent Black */
+
+        color: #2c2c2c;
+    }
+}
+@media screen and (min-width: 992px) {
+    .p-medium-bold {
+        font-family: "Intro", Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
+        /* or 125% */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+
+        color: #2c2c2c;
+        max-width: 717px;
+        margin: auto;
+    }
 }

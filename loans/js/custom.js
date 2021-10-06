@@ -79,3 +79,13 @@ $('.info').mouseleave(function() {
     $('.info-img').removeClass('opacity-1');
 
 });
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+    /* the viewport is less than 768 pixels wide */
+    $("document").ready(function() {
+        $(".is-open").ready(function() {
+            $(".is-open").click();
+        });
+    });
+
+}
