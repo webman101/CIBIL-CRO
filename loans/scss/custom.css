@@ -417,6 +417,16 @@ header nav .logo {
   }
 }
 @media screen and (min-width: 1200px) {
+  .banner .banner-text-block .banner .banner-text-block {
+    left: 150px;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    margin: auto;
+    z-index: 99999;
+  }
+}
+@media screen and (min-width: 1300px) {
   .banner .banner-text-block {
     left: 207px;
     position: absolute;

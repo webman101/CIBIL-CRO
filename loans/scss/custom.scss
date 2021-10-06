@@ -399,7 +399,7 @@ header {
             margin: auto;
             width: 98%;
             margin-left: 1.5%;
-            img{
+            img {
                 margin: auto;
             }
         }
@@ -423,6 +423,16 @@ header {
             z-index: 99999;
         }
         @media screen and (min-width: 1200px) {
+            .banner .banner-text-block {
+                left: 150px;
+                position: absolute;
+                top: 70px;
+                bottom: 0;
+                margin: auto;
+                z-index: 99999;
+            }
+        }
+        @media screen and (min-width: 1300px) {
             left: 207px;
             position: absolute;
             top: 100px;
@@ -2181,8 +2191,7 @@ section.cibil-subscription {
     }
 }
 @media screen and (min-width: 992px) {
-    .mobile-score-plan-desc.sm-14-black{
-        font-size:14px;
+    .mobile-score-plan-desc.sm-14-black {
+        font-size: 14px;
     }
 }
-
