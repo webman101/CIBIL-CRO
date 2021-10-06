@@ -28,6 +28,16 @@ h5,
 h6 {
     margin: 0;
 }
+.text-center {
+    @media screen and (max-width: 992px) {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 992px) {
+    .mt-sm-30 {
+        margin-top: 20px;
+    }
+}
 
 .row {
     display: flex;
@@ -363,7 +373,10 @@ header {
     @media screen and (max-width: 992px) {
         background: radial-gradient(136.5% 50% at 50% 50%, #1a95b9 0%, #39a1cb 100%);
         text-align: center;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         .button-orange {
             margin: auto;
 
@@ -371,7 +384,6 @@ header {
         }
     }
     @media screen and (max-width: 600px) {
-        padding-top: 100px;
     }
 
     @media screen and (max-width: 992px) {
@@ -383,6 +395,10 @@ header {
     @media screen and (min-width: 992px) {
     }
     .image-block {
+        @media screen and (max-width: 992px) {
+            margin: auto;
+        }
+
         margin-left: auto;
     }
     .image-block-mobile {
@@ -391,8 +407,6 @@ header {
     .banner-text-block {
         @media screen and (max-width: 992px) {
             padding: 30px 20px 30px 20px;
-            position: absolute;
-            top: 0;
         }
         @media screen and (min-width: 992px) {
             left: 50px;
@@ -571,9 +585,9 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             min-height: 640px;
         }
-         @media screen and (min-width: 1025px) {
+        @media screen and (min-width: 1025px) {
             min-height: 545px;
-         }
+        }
         @media screen and (min-width: 1200px) {
             min-height: 545px;
         }
@@ -1640,7 +1654,7 @@ section.cibil-subscription {
     .mobile-score-plan-desc {
         margin-bottom: 20px;
     }
-    .v4-pnly{
+    .v4-pnly {
         display: none !important;
     }
 }
@@ -1648,7 +1662,7 @@ section.cibil-subscription {
 .btn-v3-orange {
     display: none !important;
 }
-.v3-only-lat{
+.v3-only-lat {
     display: none;
 }
 .v3 {
@@ -1689,7 +1703,7 @@ section.cibil-subscription {
         @media screen and (min-width: 992px) {
             display: block !important;
             height: 288px;
-            img{
+            img {
                 height: 100%;
                 object-fit: fill;
             }
@@ -1771,7 +1785,7 @@ section.cibil-subscription {
         display: none !important;
     }
     .v4-image {
-        display: block !important;
+        display: none !important;
     }
     .p-bold-show {
         display: block !important;
@@ -2053,9 +2067,8 @@ section.cibil-subscription {
         display: flex;
         align-items: center;
     }
-    .v3-only{
+    .v3-only {
         display: inline-block !important;
-
     }
 }
 
@@ -2067,8 +2080,16 @@ section.cibil-subscription {
         padding-left: 0;
     }
 }
-.v3{
-    .v3-only-lat{
+.v3 {
+    .v3-only-lat {
         display: block !important;
     }
+}
+/* the slides */
+.slick-slide {
+    margin: 0 10px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
 }
