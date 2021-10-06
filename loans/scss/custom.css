@@ -391,6 +391,11 @@ header nav .logo {
 @media screen and (max-width: 992px) {
   .banner .image-block {
     margin: auto;
+    width: 98%;
+    margin-left: 1.5%;
+  }
+  .banner .image-block img {
+    margin: auto;
   }
 }
 .banner .image-block-mobile {

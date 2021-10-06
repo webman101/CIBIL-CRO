@@ -397,6 +397,11 @@ header {
     .image-block {
         @media screen and (max-width: 992px) {
             margin: auto;
+            width: 98%;
+            margin-left: 1.5%;
+            img{
+                margin: auto;
+            }
         }
 
         margin-left: auto;
