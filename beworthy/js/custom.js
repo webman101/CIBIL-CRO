@@ -72,3 +72,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
 
     });
 }
+
+if ($(".banner-slider").hasClass("slick-initialized")) {
+    $(".preload").hide();
+  }

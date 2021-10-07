@@ -1296,3 +1296,31 @@ section.cibil-subscription {
         padding: 0 22px;
     }
 }
+/*# sourceMappingURL=custom.css.map */
+.preload {
+    width: 100%;
+  }
+  @media screen and (max-width: 992px) {
+    .preload {
+      margin-top: 43px;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .banner {
+      height: 480px;
+    }
+  }
+  
+  .banner-slider {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+  }
+  .banner-slider.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }/*# sourceMappingURL=custom.css.map */

@@ -583,8 +583,7 @@ section.cibil-subscription .text-p p {
 .key-value .key img {
   width: 18px;
   height: 12px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media screen and (min-width: 992px) {
   .key-value .key img {
@@ -657,8 +656,7 @@ section.cibil-subscription .text-p p {
   overflow: hidden;
 }
 .testimonial .row-1 .image img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 .testimonial .row-1 .play-store {
@@ -669,8 +667,7 @@ section.cibil-subscription .text-p p {
 .testimonial .row-1 .play-store img {
   width: 24.48px;
   height: 27.33px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .testimonial .testimonial-title {
   font-family: "Intro", Regular;
@@ -795,8 +792,7 @@ section.cibil-subscription .text-p p {
 .cibil-steps-mobile .steps-list img {
   height: 40px;
   width: 40px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .cibil-steps-mobile .steps-list li {
   display: flex;
@@ -918,8 +914,7 @@ section.cibil-subscription .text-p p {
 .monitor .score-img img {
   width: 35px;
   height: 35px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .monitor .googleplay {
   text-decoration: none;
@@ -1327,4 +1322,35 @@ section.cibil-subscription .text-p p {
   .col-md-5.ps-md-4.text-p {
     padding: 0 22px;
   }
-}/*# sourceMappingURL=custom.css.map */
+}
+
+/*# sourceMappingURL=custom.css.map */
+.preload {
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .preload {
+    margin-top: 43px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    height: 480px;
+  }
+}
+.banner-slider {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+}
+
+.banner-slider.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+/*# sourceMappingURL=custom.css.map *//*# sourceMappingURL=custom.css.map */
