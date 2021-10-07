@@ -2242,13 +2242,13 @@ section.cibil-subscription .text-p p {
 .slider .slider-row {
   width: 100%;
   height: 120px;
-  background-image: url(../img/brands-slider.png);
+  background-image: url(../img/allbrands-slider.png);
   background-size: cover;
   animation: slide 50s linear infinite;
 }
 @media screen and (min-width: 992px) {
   .slider .slider-row {
-    background-size: contain;
+    background-size: cover;
   }
 }
 
