@@ -1860,7 +1860,7 @@ option:disabled {
   background: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
-  padding: 24px 1px;
+  padding: 24px 10px;
   margin-right: 20px;
 }
 .flex-box-container .flex-inner:last-child {
