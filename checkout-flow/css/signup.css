@@ -1909,7 +1909,7 @@ option:disabled {
 }
 @media screen and (min-width: 992px) {
   .plan-outer-blue {
-    border-radius: 5px;
+    border-radius: 8px;
     padding: 3px;
   }
 }
@@ -1959,8 +1959,8 @@ option:disabled {
 .plan-outer-blue .plan-includes .yellow-header {
   padding: 16px;
   background: #fcd800;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 .plan-outer-blue .plan-includes .yellow-header h6 {
   font-family: "Intro", Bold;

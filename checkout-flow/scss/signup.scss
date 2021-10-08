@@ -1955,7 +1955,7 @@ h3.mb-2 {
     background: #3ea3ce;
 
     @media screen and (min-width: 992px) {
-        border-radius: 5px;
+        border-radius: 8px;
         padding: 3px;
     }
 
@@ -2007,8 +2007,8 @@ h3.mb-2 {
         .yellow-header {
             padding: 16px;
             background: #fcd800;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
             h6 {
                 font-family: "Intro", Bold;
                 font-style: normal;
