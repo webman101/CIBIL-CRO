@@ -270,14 +270,14 @@ $(function() {
 });
 
 
-$('.plans-block-content-22').slideUp();
-$('.plans-block-mobile').slideUp();
+$('.plans-block-content-22').hide();
+$('.plans-block-mobile').hide();
 
 
 $(".upgrade-link").click(function(e) {
     e.preventDefault();
 
-    $(".plans-block-content-22").slideToggle("slow");
+    $(".plans-block-content-22").slideToggle("");
     $('.plans-block-mobile').slideToggle();
 
     $(this).toggleClass("active");
