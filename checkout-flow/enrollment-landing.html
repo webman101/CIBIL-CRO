@@ -250,7 +250,8 @@
                                         <div class="form-group">
                                             <p class="flex-otp-label mobile-pre"><strong class="text-bold">Mobile Number</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user mobile-input" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="10" />
+                                            <input class="dp-user mobile-input" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" min="0" pattern="[0-9]" onkeypress="return !(event.charCode == 46)" step="1" maxlength="10" />
+                                            
 
                                         </div>
                                         <div class="form-group req-field select-field">
