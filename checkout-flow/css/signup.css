@@ -1689,7 +1689,7 @@ input {
 
 .extra select {
   height: 46px;
-  font-size: 16px;
+  font-size: 14px;
   padding-left: 5px;
   padding-right: 5px;
   border: 1px solid #dbdbdb;
@@ -1699,6 +1699,11 @@ input {
   color: #777777;
   font-weight: 400;
   padding-left: 10px;
+}
+@media screen and (min-width: 400px) {
+  .extra select {
+    font-size: 16px;
+  }
 }
 .extra select {
   -webkit-appearance: menulist-button;

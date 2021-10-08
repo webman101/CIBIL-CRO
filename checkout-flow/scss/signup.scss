@@ -1741,7 +1741,12 @@ input {
 .extra {
     select {
         height: 46px;
+        font-size: 14px;
+      @media screen and (min-width: 400px) {
         font-size: 16px;
+      }
+      
+      
         padding-left: 5px;
         padding-right: 5px;
         border: 1px solid #dbdbdb;
