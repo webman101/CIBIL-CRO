@@ -257,16 +257,13 @@ h6 {
 
 @media screen and (min-width: 992px) {
     .yellow-title {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        // display: inline-flex;
+        // justify-content: center;
+        // align-items: center;
         line-height: 0;
 
         span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50px;
+     
         }
         .bg-yellow {
             margin-right: 5px;
