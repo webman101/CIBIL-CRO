@@ -230,7 +230,6 @@ h6 {
 
     @media screen and (min-width: 992px) {
         display: inline-block;
-
     }
 }
 .mr {
@@ -1011,12 +1010,10 @@ h3.section-title-40 {
         margin-bottom: 298px;
     }
 }
-.verification-container{
+.verification-container {
     @media screen and (min-width: 992px) {
         margin-bottom: 50px;
     }
-    
-    
 }
 .verify-card {
     background: #f9f9f9;
@@ -1050,7 +1047,7 @@ h3.section-title-40 {
                 color: #3ea3ce;
                 margin-bottom: 5px;
                 @media screen and (min-width: 992px) {
-                    margin-bottom: 35px;
+                    margin-bottom: 30px;
                 }
             }
             p {
@@ -2232,7 +2229,7 @@ h3.mb-2 {
         justify-content: space-between;
     }
     .top-head {
-        height: 150px;
+        height: 170px;
     }
     .column-outer {
         flex: 1;
@@ -2263,7 +2260,7 @@ h3.mb-2 {
         }
         // border-radius: 6px;
         .coumn-head {
-            height: 150px;
+            height: 170px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -2785,7 +2782,6 @@ h3.mb-2 {
                 width: 100%;
             }
             & .plans-radio-offer-text {
-               
             }
         }
         @media screen and (min-width: 992px) {
@@ -3026,10 +3022,8 @@ h3.mb-2 {
 /////////////////////////////////@at-root
 .features-carousel {
     .slick-dots {
-  
         margin-top: 10px;
         margin-bottom: 5px;
-    
     }
 }
 .coupon-toggle {
@@ -3121,34 +3115,95 @@ h3.mb-2 {
     font-size: 20px;
     color: white;
 }
-.hide{
+.hide {
     display: none !important;
 }
 //////////////////////////////
 /////////////////////////////
-.free-basic{
+.free-basic-show {
     display: none;
 }
-.free-plan{
-    .free-basic{
+.free-basic {
+    .free-basic-show {
         display: block;
     }
-    .non-basic{
+    .non-basic {
         display: none;
     }
 }
-.label-down{
-    font-family: 'Intro', Book;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 24px;
-/* identical to box height, or 171% */
+.label-down {
+    font-family: "Intro", Book;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
 
-letter-spacing: 0.02em;
+    letter-spacing: 0.02em;
 
-/* Accent Black */
+    /* Accent Black */
 
-color: #2C2C2C;
-margin-top: 6px;
+    color: #2c2c2c;
+    margin-top: 6px;
+}
+.skip-question {
+    @media screen and (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        margin-top: 34px;
+    }
+    button {
+        margin-top: 0 !important;
+        margin-right: 40px;
+    }
+    a {
+        display: block;
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-decoration-line: underline;
+
+        /* Accent Black */
+
+        color: #2c2c2c;
+    }
+}
+.max-width-329 {
+    max-width: 329px;
+}
+.text-plan-bold {
+    font-family: "Intro", Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    /* or 125% */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    /* Gray 1 */
+
+    color: #333333;
+    margin-top: 10px;
+}
+
+.checkout-page {
+    .free-plan-column-flex {
+        .feature {
+            flex-direction: column;
+        }
+    }
+}
+.features-grid-free {
+    .feature {
+        width: 33%;
+        flex: 1;
+    }
 }

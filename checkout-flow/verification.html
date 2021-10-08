@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./scss/signup.css">
+    <link rel="stylesheet" href="./css/signup.css">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
         <div class="bg-f9">
             <div class="container">
                 <div class="container-top">
-                    <h3 class="section-title-40 text-color-black">We need verify your mobile number & email ID</h3>
+                    <h3 class="section-title-40 text-color-black">We need verify your mobile number or email ID</h3>
                     <!-- <h4 class="section-title section-title-blue mb-05">VERIFY YOUR IDENTITY</h4> -->
                     <p class="section-subtitle-1 font-weight-400 mb-2">Please select your alternative mobile number or email id.</p>
                 </div>
@@ -65,8 +65,8 @@
 
                                         <div class="text-left">
                                             <form action="POST" class="account-info">
-                                                <div class="label-blue">MOBILE NO.</div>
-                                                <p class="section-subtitle-1 font-weight-400 mb-2">Select your mobile number</p>
+                                                <div class="label-blue">CONTACT DETAILS</div>
+                                                <p class="section-subtitle-1 font-weight-400 mb-2">Mobile number</p>
                                                 <ul class="question-answer-list verification verification-questions">
                                                     <li>
                                                         <div class="custom-radio cibil-radio-tick">
@@ -75,27 +75,18 @@
                                                         </div>
                                                         <div class="custom-radio cibil-radio-tick">
                                                             <input type="radio" id="radio2" name="radio_step1" class="custom-control-input">
-                                                            <label class="custom-control-label" for="radio2">******4621</label>
+                                                            <label class="custom-control-label" for="radio2">******1563</label>
                                                         </div>
                                                         <div class="custom-radio cibil-radio-tick">
                                                             <input type="radio" id="radio3" name="radio_step1" class="custom-control-input">
-                                                            <label class="custom-control-label" for="radio3">******4621</label>
+                                                            <label class="custom-control-label" for="radio3">******6522</label>
                                                         </div>
                                                         <div class="custom-radio cibil-radio-tick">
                                                             <input type="radio" id="radio4" name="radio_step1" class="custom-control-input">
-                                                            <label class="custom-control-label" for="radio4">******4621</label>
+                                                            <label class="custom-control-label" for="radio4">******0023</label>
                                                         </div>
-                                                    </li>
-                                                </ul>
+                                                        <p class="section-subtitle-1 font-weight-400 mb-2" style="margin-top: 23PX;">Email ID</p>
 
-                                            </form>
-                                        </div>
-                                        <div class="text-left mt-4">
-                                            <form action="POST" class="account-info">
-                                                <div class="label-blue">EMAIL ID.</div>
-                                                <p class="section-subtitle-1 font-weight-400 mb-2">Select your email ID</p>
-                                                <ul class="question-answer-list verification verification-questions">
-                                                    <li>
                                                         <div class="custom-radio cibil-radio-tick">
                                                             <input type="radio" id="radio5" name="radio_step1" class="custom-control-input">
                                                             <label class="custom-control-label" for="radio5">ri******@gmail.com</label>
@@ -120,8 +111,9 @@
 
                                     </div>
 
-                                    <div class="">
+                                    <div class="skip-question">
                                         <button id="verify-mobile-btn" class="button-orange disabled">Continue</button>
+                                        <a href="">Skip This Question</a>
                                     </div>
                                 </div>
                                 <div class="verify-card mt-3 m-visible">

@@ -147,6 +147,7 @@ $('.plans-list').click(function(e) {
     $('.month-change').text(month)
     $('.base-none').show();
     $('.base-none').removeClass('hide');
+    $('.free-plan-column-flex .features-grid').removeClass('features-grid-free');
 
 
 });
@@ -159,6 +160,8 @@ $('.plans-list').click(function(e) {
 $('.1mon').click(function() {
     $('.base-none').hide();
     $('.base-none').addClass('hide');
+    $('.free-plan-column-flex .features-grid').addClass('features-grid-free');
+
 
 });
 // var emailid = $('#emailId').val();
@@ -265,22 +268,8 @@ $(function() {
         }
     });
 });
-// $('#plans-block-content').slideUp();
-
-// $('.upgrade-link').click(function(e) {
-//     e.preventDefault();
-//     $(this).toggleClass('Hide');
-//     if ($('.upgrade-link.hide')) {
-//         $(this).text('Hide Plans');
-//     }
-//     else{
-//         $(this).text('Upgrade Plans');
-
-//     }
-//     $('#plans-block-content').slideToggle(300);
 
 
-// });
 $('.plans-block-content-22').slideUp();
 $('.plans-block-mobile').slideUp();
 
