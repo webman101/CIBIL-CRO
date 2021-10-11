@@ -1822,6 +1822,10 @@ option:disabled {
   flex: 1;
 }
 
+.enrollment-page .button-orange {
+  display: inline-flex !important;
+}
+
 .enrollment .flex-box-container .slick-list {
   padding: 0 5% 0 0;
 }

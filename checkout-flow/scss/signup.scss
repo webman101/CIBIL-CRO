@@ -1879,7 +1879,11 @@ option:disabled {
 .flex {
     flex: 1;
 }
-
+.enrollment-page{
+    .button-orange{
+        display: inline-flex !important;
+    }
+}
 .enrollment {
     @media screen and (max-width: 992px) {
         .flex-box-container {

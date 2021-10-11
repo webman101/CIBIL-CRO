@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="content content-otp enrollment">
+    <div class="content content-otp enrollment enrollment-page">
         <div class="bg-f9 checkout">
             <div class="plan-outer-blue m-visible">
                 <div class="plan-type pb-0">
@@ -250,8 +250,9 @@
                                         <div class="form-group">
                                             <p class="flex-otp-label mobile-pre"><strong class="text-bold">Mobile Number</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user mobile-input" type="number" id="inputBox" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" min="0" pattern="[0-9]" onkeypress="return !(event.charCode == 46)" step="1" maxlength="10" />
-                                            
+                                            <input class="dp-user mobile-input type-number" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  min="0" pattern="[0-9]" onkeypress="return !(event.charCode == 46)"
+                                                step="1" maxlength="10"  id="inputBox"/>
+
 
                                         </div>
                                         <div class="form-group req-field select-field">
@@ -267,18 +268,18 @@
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">ID Number</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user text-uppercase" type="text" placeholder="" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  maxlength="10" />
+                                            <input class="dp-user text-uppercase type-number" id="inputBox" type="text" placeholder="" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="10" />
                                             <div class="label-down">PAN Number should be 10 characters (For e.g. ACPQD2419D).</div>
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Date of Birth</strong> <span class="text-light"></span></p>
+                                            <input type="text" pattern="[0-9]*" name="date" type="text" class="single-date-field dp-user">
 
-                                            <input class="dp-user" type="number" id="inputBox" placeholder="DD / MM / YYYY" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  maxlength="10" />
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Pincode</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user " id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6" />
+                                            <input class="dp-user type-number" id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6" />
 
                                         </div>
                                         <p class="terms-and-condition">
@@ -488,6 +489,8 @@
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autotab/1.9.2/js/jquery.autotab.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
     <script src="./js/signup.js"></script>
     <script>
         $('.testimonial-slider').slick({
