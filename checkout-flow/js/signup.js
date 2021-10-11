@@ -317,4 +317,12 @@ $('.slick-dots').hide();
 // Autotab
 $('.date-field').autotab('number');
 
-$('.single-date-field').mask('00/00/0000', { placeholder:"DD / MM / YYYY" });
+$('.single-date-field').mask('00/00/0000', { placeholder: "DD / MM / YYYY" });
+
+
+
+
+$('.form-group').click(function(e) {
+    e.preventDefault();
+    $(this).find('.text-bold').addClass('f-bold');
+});
