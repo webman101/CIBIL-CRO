@@ -20,6 +20,31 @@ $('.span-link').click(function() {
 
 });
 
+// $('.otp-6').keyup(function(e) {
+//     if ($(this).val() != '') {
+//         $(this).addClass('disabled');
+
+//         $('#otp-btn').removeClass('disabled');
+//     } else {
+//         $('#otp-btn').addClass('disabled');
+
+//     }
+// });
+
+
+
+$('.otp-6').keyup(function(e) {
+     if(!$('input').val()){
+      $('#otp-btn').addClass('disabled');
+
+           return false;
+        } else {
+            $('#otp-btn').removeClass('disabled');
+
+
+    }
+});
+
 $('.otp').click(function(e) {
     $('.otp.input-focus').removeClass('input-focus');
     $(this).addClass('input-focus');
