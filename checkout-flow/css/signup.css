@@ -1165,6 +1165,11 @@ h3.section-title-40 {
   color: #fff !important;
 }
 
+.otp-block .button-orange {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 @media screen and (max-width: 992px) {
   form.otp-form {
     display: flex;

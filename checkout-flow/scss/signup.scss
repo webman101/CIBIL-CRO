@@ -1172,6 +1172,12 @@ h3.section-title-40 {
 .input-focus::placeholder {
     color: #fff !important;
 }
+.otp-block{
+    .button-orange {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
 .mobile-pre {
     &::after {
         // content: "+91";
