@@ -805,7 +805,7 @@ p {
   left: 5px;
   width: 8px;
   height: 8px;
-  background: #3ea3ce;
+  background: #00A6CA;
   border-radius: 50%;
   opacity: 0;
   transition: all ease-in 0.3s;
@@ -1357,7 +1357,7 @@ h3.section-title-40 {
   content: "";
   width: 12px;
   height: 12px;
-  background: #3ea3ce;
+  background: #00A6CA;
   position: absolute;
   top: 3px;
   left: 3px;
@@ -1394,7 +1394,7 @@ h3.section-title-40 {
   content: "";
   width: 12px;
   height: 12px;
-  background: #3ea3ce;
+  background: #00A6CA;
   position: absolute;
   top: 3px;
   left: 3px;
@@ -1930,7 +1930,7 @@ option:disabled {
 }
 
 .plan-outer-blue {
-  background: #3ea3ce;
+  background: #00A6CA;
 }
 @media screen and (min-width: 992px) {
   .plan-outer-blue {
@@ -2295,7 +2295,7 @@ option:disabled {
   object-fit: contain;
 }
 .interstial-container .most-popular {
-  background: #3ea3ce;
+  background: #00A6CA;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   height: 30px;
@@ -2320,7 +2320,7 @@ option:disabled {
   height: 101%;
   left: -2px;
   top: -2%;
-  background: #3ea3ce;
+  background: #00A6CA;
 }
 .interstial-container .save {
   position: absolute;
@@ -2707,7 +2707,7 @@ option:disabled {
 }
 .checkout .plans-block-content {
   padding: 55px 12px;
-  background: #3ea3ce;
+  background: #00A6CA;
 }
 @media screen and (min-width: 992px) {
   .checkout .plans-block-content {
@@ -2717,7 +2717,7 @@ option:disabled {
 }
 @media screen and (min-width: 992px) {
   .checkout .plans-block-header {
-    background: #3ea3ce;
+    background: #00A6CA;
     border-radius: 6px;
   }
 }
