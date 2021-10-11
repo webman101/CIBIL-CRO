@@ -824,7 +824,7 @@ p {
             left: 5px;
             width: 8px;
             height: 8px;
-            background: #00A6CA;
+            background: #00a6ca;
 
             border-radius: 50%;
             opacity: 0;
@@ -1147,7 +1147,7 @@ h3.section-title-40 {
         display: flex;
         margin-bottom: 6px;
         justify-content: space-between;
-        strong{
+        strong {
             font-weight: 600;
         }
     }
@@ -1230,23 +1230,21 @@ form.otp-form {
     @media screen and (min-width: 992px) {
         background: #f9f9f9;
     }
-    
-    
+
     padding: 20px 0;
     @media screen and (max-width: 992px) {
-        border-top: 1px solid #DDDDDD;
+        border-top: 1px solid #dddddd;
         .container {
             display: flex;
             flex-direction: column-reverse;
-            .footer-links{
+            .footer-links {
                 margin-bottom: 30px;
             }
-            .copyright{
-                margin-bottom: 0;            
+            .copyright {
+                margin-bottom: 0;
             }
         }
     }
-    
 
     .copyright {
         @media screen and (max-width: 992px) {
@@ -1389,7 +1387,7 @@ form.otp-form {
                                     content: "";
                                     width: 12px;
                                     height: 12px;
-                                    background: #00A6CA;
+                                    background: #00a6ca;
 
                                     position: absolute;
                                     top: 3px;
@@ -1429,7 +1427,7 @@ form.otp-form {
                                     content: "";
                                     width: 12px;
                                     height: 12px;
-                                    background: #00A6CA;
+                                    background: #00a6ca;
 
                                     position: absolute;
                                     top: 3px;
@@ -1893,7 +1891,6 @@ option:disabled {
                 // right: 0;
                 // top: 10px;
                 // background: #00A6CA;
-
             }
         }
     }
@@ -2005,8 +2002,7 @@ h3.mb-2 {
 }
 //////////////////////
 .plan-outer-blue {
-    background: #00A6CA;
-
+    background: #00a6ca;
 
     @media screen and (min-width: 992px) {
         border-radius: 8px;
@@ -2272,6 +2268,10 @@ h3.mb-2 {
 }
 
 .interstial-container {
+    @media screen and (min-width: 992px) {
+        padding-bottom: 100px !important;
+    }
+
     .col-md-5.equal-column {
         max-width: 457px;
     }
@@ -2334,8 +2334,9 @@ h3.mb-2 {
                 font-style: normal;
                 font-weight: bold;
                 font-size: 24px;
-                margin: 10px 0;
+                margin: 30px 0 20px;
                 letter-spacing: 0.02em;
+                color: #333333;
             }
             .plan-price {
                 font-family: "Intro", Regular;
@@ -2378,7 +2379,7 @@ h3.mb-2 {
         object-fit: contain;
     }
     .most-popular {
-        background: #00A6CA;
+        background: #00a6ca;
 
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
@@ -2403,8 +2404,7 @@ h3.mb-2 {
             height: 101%;
             left: -2px;
             top: -2%;
-            background: #00A6CA;
-
+            background: #00a6ca;
         }
     }
     .save {
@@ -2709,6 +2709,15 @@ h3.mb-2 {
         }
     }
 }
+.small-wrong {
+    width: 14.5px !important;
+    margin-left: 2px;
+}
+.small-right{
+    width: 18px;
+    height: 12px;
+    object-fit: contain;
+}
 .features-mobile-section {
     .nav-tabs {
         li {
@@ -2805,8 +2814,7 @@ h3.mb-2 {
 
     .plans-block-content {
         padding: 55px 12px;
-        background: #00A6CA;
-
+        background: #00a6ca;
 
         @media screen and (min-width: 992px) {
             border-radius: 6px;
@@ -2815,7 +2823,7 @@ h3.mb-2 {
     }
     .plans-block-header {
         @media screen and (min-width: 992px) {
-            background: #00A6CA;
+            background: #00a6ca;
 
             border-radius: 6px;
         }
