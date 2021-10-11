@@ -1064,7 +1064,7 @@ h3.section-title-40 {
 .span-link {
   font-family: "Intro", Bold;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   /* identical to box height, or 150% */
@@ -1073,6 +1073,11 @@ h3.section-title-40 {
   text-decoration-line: underline;
   /* Accent Black */
   color: #2c2c2c;
+}
+@media screen and (min-width: 992px) {
+  .span-link {
+    font-weight: bold;
+  }
 }
 
 .container-top {

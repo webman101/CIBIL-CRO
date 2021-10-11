@@ -1080,7 +1080,12 @@ h3.section-title-40 {
 .span-link {
     font-family: "Intro", Bold;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 400;
+    @media screen and (min-width: 992px) {
+        font-weight: bold;
+    }
+    
+    
     font-size: 16px;
     line-height: 24px;
     /* identical to box height, or 150% */
