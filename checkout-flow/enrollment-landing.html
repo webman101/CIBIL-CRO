@@ -280,7 +280,7 @@
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Pincode</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user type-number" id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6" />
+                                            <input class="dp-user type-number" id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6"  />
 
                                         </div>
                                         <p class="terms-and-condition">
@@ -520,6 +520,8 @@
             "-",
             "+",
             "e",
+            "."
+
         ];
 
         inputBox.addEventListener("keydown", function(e) {
@@ -535,6 +537,8 @@
             "-",
             "+",
             "e",
+            "."
+            
         ];
 
         inputBox.addEventListener("keydown", function(e) {
