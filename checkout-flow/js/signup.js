@@ -38,7 +38,6 @@ $('.otp').keyup(function(e) {
     if ($(this).val() != '') {
         $(this).addClass('disabled');
 
-        $('#otp-btn').removeClass('disabled');
     } else {
         $('#otp-btn').addClass('disabled');
 
@@ -46,6 +45,14 @@ $('.otp').keyup(function(e) {
 });
 
 
+$('.otp-6').keyup(function(e) {
+    if ($(this).val() != '') {
+        $('#otp-btn').removeClass('disabled');
+    } else {
+        $('#otp-btn').addClass('disabled');
+
+    }
+});
 
 $('#pincode').keyup(function(e) {
     if ($(this).val() != '') {
