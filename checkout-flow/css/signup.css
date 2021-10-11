@@ -1161,6 +1161,10 @@ h3.section-title-40 {
   margin-top: 34px;
 }
 
+.input-focus::placeholder {
+  color: #fff !important;
+}
+
 @media screen and (max-width: 992px) {
   form.otp-form {
     display: flex;

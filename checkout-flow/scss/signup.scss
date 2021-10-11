@@ -1169,6 +1169,9 @@ h3.section-title-40 {
         margin-top: 34px;
     }
 }
+.input-focus::placeholder {
+    color: #fff !important;
+}
 .mobile-pre {
     &::after {
         // content: "+91";
