@@ -1133,6 +1133,9 @@ h3.section-title-40 {
   margin-bottom: 6px;
   justify-content: space-between;
 }
+.content-otp .flex-otp-label strong {
+  font-weight: 600;
+}
 .content-otp .otp-form {
   margin-bottom: 20px;
 }

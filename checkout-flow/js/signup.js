@@ -45,15 +45,6 @@ $('.otp').keyup(function(e) {
 });
 
 
-$('.otp-6').keyup(function(e) {
-    if ($(this).val() != '') {
-        $('#otp-btn').removeClass('disabled');
-    } else {
-        $('#otp-btn').addClass('disabled');
-
-    }
-});
-
 $('#pincode').keyup(function(e) {
     if ($(this).val() != '') {
         $("#loan-button").attr("href", "https://ajency.github.io/CIBIL-CRO/checkout-flow/checkout")
@@ -61,6 +52,23 @@ $('#pincode').keyup(function(e) {
     }
 });
 
+
+
+
+
+// $('input').on('change', function() {
+//     if (areAllInputsEmpty())
+//         $('#otp-btn').addClass('disabled');
+
+//     else
+//         $('#otp-btn').removeClass('disabled');
+// });
+
+// function areAllInputsEmpty() {
+//     return $("input").filter(function() {
+//         return $.trim($(this).val()).length > 0
+//     }).length == 0
+// }
 
 // duplicate user
 $('.dp-user').keyup(function(e) {
@@ -299,7 +307,14 @@ if (window.matchMedia("(max-width: 768px)").matches) {
     $('.standard-plan-check input').prop('checked', true);
 }
 if (window.matchMedia("(min-width: 769px)").matches) {
-  $('.standard-plan-check-2 input').prop('checked', true);
+    $('.standard-plan-check-2 input').prop('checked', true);
 
 }
 $('.slick-dots').hide();
+///////////////////////////////
+
+
+// Autotab
+$('.date-field').autotab('number');
+
+$('.single-date-field').mask('00/00/0000', { placeholder:"DD / MM / YYYY" });

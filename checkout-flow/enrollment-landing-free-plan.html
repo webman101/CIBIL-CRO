@@ -272,8 +272,8 @@
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Date of Birth</strong> <span class="text-light"></span></p>
-
-                                            <input class="dp-user" type="number" placeholder="DD / MM / YYYY" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="10" />
+                                            <input type="text" pattern="[0-9]*" name="date" type="text" class="single-date-field dp-user">
+                                           
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Pincode</strong> <span class="text-light"></span></p>
@@ -401,6 +401,9 @@
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autotab/1.9.2/js/jquery.autotab.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+    <script src=""></script>
     <script src="./js/signup.js"></script>
     <script>
         $('.testimonial-slider').slick({
