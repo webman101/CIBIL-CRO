@@ -1077,11 +1077,20 @@ h3.section-title-40 {
 }
 
 .span-link {
-    font-weight: 600;
-    font-size: 14px;
+    font-family: 'Intro', Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
     text-align: right;
+    letter-spacing: 0.02em;
     text-decoration-line: underline;
-    color: #3ea3ce;
+    
+    /* Accent Black */
+    
+    color: #2C2C2C;
 }
 
 .container-top {
