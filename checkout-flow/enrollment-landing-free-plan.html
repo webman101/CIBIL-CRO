@@ -250,8 +250,9 @@
                                         <div class="form-group">
                                             <p class="flex-otp-label mobile-pre"><strong class="text-bold">Mobile Number</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user mobile-input" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" min="0" pattern="[0-9]" onkeypress="return !(event.charCode == 46)" step="1" maxlength="10" />
-                                            
+                                            <input class="dp-user mobile-input type-number" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  min="0" pattern="[0-9]" onkeypress="return !(event.charCode == 46)"
+                                                step="1" maxlength="10"  id="inputBox"/>
+
 
                                         </div>
                                         <div class="form-group req-field select-field">
@@ -267,18 +268,18 @@
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">ID Number</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user text-uppercase" type="text" placeholder="" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="10" />
+                                            <input class="dp-user text-uppercase type-number" id="inputBox" type="text" placeholder="" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="10" />
                                             <div class="label-down">PAN Number should be 10 characters (For e.g. ACPQD2419D).</div>
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Date of Birth</strong> <span class="text-light"></span></p>
                                             <input type="text" pattern="[0-9]*" name="date" type="text" class="single-date-field dp-user">
-                                           
+
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Pincode</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user " id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="6" />
+                                            <input class="dp-user type-number" id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6" />
 
                                         </div>
                                         <p class="terms-and-condition">
@@ -315,7 +316,7 @@
                                 </div>
                             </div>
                         </div>
-                      
+
                         <div class="customer-testimonial">
                             <div class="label-blue">CUSTOMER TESTIMONIALS</div>
 
@@ -425,6 +426,36 @@
 
             });
         }
+    </script>
+    <script>
+        var inputBox = document.getElementById("inputBox");
+
+        var invalidChars = [
+            "-",
+            "+",
+            "e",
+        ];
+
+        inputBox.addEventListener("keydown", function(e) {
+            if (invalidChars.includes(e.key)) {
+                e.preventDefault();
+            }
+        });
+    </script>
+     <script>
+        var inputBox = document.getElementById("pincode");
+
+        var invalidChars = [
+            "-",
+            "+",
+            "e",
+        ];
+
+        inputBox.addEventListener("keydown", function(e) {
+            if (invalidChars.includes(e.key)) {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 
