@@ -1072,7 +1072,7 @@ h3.section-title-40 {
   letter-spacing: 0.02em;
   text-decoration-line: underline;
   /* Accent Black */
-  color: #2C2C2C;
+  color: #2c2c2c;
 }
 
 .container-top {
@@ -1200,8 +1200,27 @@ h3.section-title-40 {
 }
 
 .footer {
-  background: #f9f9f9;
   padding: 20px 0;
+}
+@media screen and (min-width: 992px) {
+  .footer {
+    background: #f9f9f9;
+  }
+}
+@media screen and (max-width: 992px) {
+  .footer {
+    border-top: 1px solid #DDDDDD;
+  }
+  .footer .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .footer .container .footer-links {
+    margin-bottom: 30px;
+  }
+  .footer .container .copyright {
+    margin-bottom: 0;
+  }
 }
 .footer .copyright {
   margin-bottom: 12px;
