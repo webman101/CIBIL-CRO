@@ -2183,7 +2183,7 @@ option:disabled {
 }
 .interstial .features-grid .feature {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-top: 1px solid #dddddd;
   padding: 15px 0;
   min-height: 105px;
