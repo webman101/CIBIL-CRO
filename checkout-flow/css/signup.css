@@ -3186,4 +3186,10 @@ option:disabled {
 .features-grid-free .feature {
   width: 33%;
   flex: 1;
+}
+
+.multiply {
+  color: #707070;
+  margin-left: 5px;
+  margin-right: 7px;
 }/*# sourceMappingURL=signup.css.map */
