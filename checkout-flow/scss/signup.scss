@@ -63,9 +63,9 @@ h6 {
         color: rgba(0, 0, 0, 0.75);
     }
     &-blue {
-        color: #00A6CA;
+        color: #00a6ca;
         &:hover {
-            color: #00A6CA;
+            color: #00a6ca;
         }
     }
     &-white {
@@ -378,7 +378,7 @@ h6 {
     font-weight: 600;
     color: #000000;
     &-blue {
-        color: #00A6CA;
+        color: #00a6ca;
     }
     @media (max-width: 767px) {
         font-size: 16px;
@@ -609,11 +609,11 @@ p {
             top: -10px;
             background: #ffffff;
             font-size: 11px;
-            color: #00A6CA;
+            color: #00a6ca;
             padding: 0 3px;
         }
         &:focus {
-            border: 1px solid #00A6CA;
+            border: 1px solid #00a6ca;
         }
         &-otp {
             letter-spacing: 15px;
@@ -832,11 +832,11 @@ p {
         }
         &:hover,
         &:focus {
-            color: #00A6CA;
+            color: #00a6ca;
             text-decoration: underline;
             outline: 0;
             &::before {
-                border-color: #00A6CA;
+                border-color: #00a6ca;
             }
             &::after {
                 opacity: 1;
@@ -846,11 +846,11 @@ p {
             padding-bottom: 0;
         }
         &.active {
-            color: #00A6CA;
+            color: #00a6ca;
             text-decoration: underline;
             outline: 0;
             &::before {
-                border-color: #00A6CA;
+                border-color: #00a6ca;
             }
             &::after {
                 opacity: 1;
@@ -989,7 +989,7 @@ input[type="number"] {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #00A6CA;
+    color: #00a6ca;
     margin-bottom: 12px;
     font-family: "Intro", bold;
 }
@@ -1041,7 +1041,7 @@ h3.section-title-40 {
                 font-size: 16px;
                 font-family: "Intro", Bold;
                 text-transform: uppercase;
-                color: #00A6CA;
+                color: #00a6ca;
                 margin-bottom: 5px;
                 @media screen and (min-width: 992px) {
                     margin-bottom: 30px;
@@ -1084,8 +1084,7 @@ h3.section-title-40 {
     @media screen and (min-width: 992px) {
         font-weight: bold;
     }
-    
-    
+
     font-size: 16px;
     line-height: 24px;
     /* identical to box height, or 150% */
@@ -1386,7 +1385,7 @@ form.otp-form {
                                     border: 0.8px solid #b6b6b6;
                                     border-radius: 100%;
                                     background: #fff;
-                                    border: 0.8px solid #00A6CA;
+                                    border: 0.8px solid #00a6ca;
                                 }
                                 &:after {
                                     content: "";
@@ -1657,7 +1656,7 @@ input {
 }
 
 .sign-out {
-    color: #00A6CA;
+    color: #00a6ca;
 }
 
 .success-page {
@@ -1872,7 +1871,7 @@ option:disabled {
     letter-spacing: 0.02em;
     color: #2c2c2c;
     .tnc-link {
-        color: #00A6CA;
+        color: #00a6ca;
         font-weight: 600;
     }
 }
@@ -1884,11 +1883,11 @@ option:disabled {
 .flex {
     flex: 1;
 }
-.f-bold{
+.f-bold {
     font-weight: bold !important;
 }
-.enrollment-page{
-    .button-orange{
+.enrollment-page {
+    .button-orange {
         display: inline-flex !important;
     }
 }
@@ -2301,7 +2300,7 @@ h3.mb-2 {
         flex: 1;
         &.active {
             margin-top: -1;
-            border: 3px solid #00A6CA;
+            border: 3px solid #00a6ca;
             margin-top: -34px;
         }
         border-radius: 6px;
@@ -2322,7 +2321,7 @@ h3.mb-2 {
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
         &.active {
-            border: 0px solid #00A6CA;
+            border: 0px solid #00a6ca;
         }
         // border-radius: 6px;
         .coumn-head {
@@ -2597,7 +2596,7 @@ h3.mb-2 {
             &.active {
                 background: #fff;
                 /* border: 1px solid #fff; */
-                border: 2px solid #00A6CA;
+                border: 2px solid #00a6ca;
                 border-bottom: 2px solid #fff !important;
                 border-bottom: 0;
                 z-index: 1;
@@ -2617,7 +2616,7 @@ h3.mb-2 {
 
     margin-bottom: 20px;
     &.active {
-        border: 2px solid #00A6CA;
+        border: 2px solid #00a6ca;
     }
     &.tab-pane-2 {
         border: 1px solid #dddddd;
@@ -2725,7 +2724,7 @@ h3.mb-2 {
     width: 14.5px !important;
     margin-left: 2px;
 }
-.small-right{
+.small-right {
     width: 18px;
     height: 12px;
     object-fit: contain;
@@ -3165,7 +3164,7 @@ h3.mb-2 {
     color: #2c2c2c;
 }
 .input-focus {
-    border: 2px solid #00A6CA !important;
+    border: 2px solid #00a6ca !important;
 }
 
 .digit-group {
@@ -3285,8 +3284,18 @@ h3.mb-2 {
         flex: 1;
     }
 }
-.multiply{
+.multiply {
     color: #707070;
     margin-left: 5px;
     margin-right: 7px;
+}
+.promo-apply-button {
+    font-family: 'Intro', Bold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px !important;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2c2c2c;
 }
