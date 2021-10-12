@@ -2899,7 +2899,7 @@ option:disabled {
 
 .coupon-toggle .coupon-tab {
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 .coupon-toggle .toggle-code-input {
   padding-bottom: 30px;
@@ -3083,6 +3083,7 @@ option:disabled {
   object-fit: contain;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  transform: rotate(-180deg);
 }
 .coupon-tab .label-blue {
   padding: 0;
@@ -3098,7 +3099,7 @@ option:disabled {
 }
 
 .rotate {
-  transform: rotate(-180deg);
+  transform: rotate(-360deg) !important;
   transition: all 0.3s ease-in-out;
 }
 

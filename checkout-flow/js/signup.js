@@ -169,7 +169,7 @@ $('.plans-radio-col').click(function(e) {
 
 
 
-$('.plans-list').click(function(e) {
+$('.plans-radio-col').click(function(e) {
     $('.upgrade-link').show();
 
     var onemon = $(this).attr("value");
@@ -182,7 +182,7 @@ $('#12mon.plans-list').click(function(e) {
     $('.upgrade-link').hide();
 });
 
-$('.plans-list').click(function(e) {
+$('.plans-radio-col').click(function(e) {
     var month = $(this).attr("data-nobet");
     $('.month-change').text(month)
     $('.base-none').show();
@@ -191,7 +191,7 @@ $('.plans-list').click(function(e) {
 
 
 });
-$('.plans-list').click(function(e) {
+$('.plans-radio-col').click(function(e) {
     var month = $(this).attr("data-name");
     $('.plan-nam').text(month)
 });

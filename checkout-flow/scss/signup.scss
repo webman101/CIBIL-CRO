@@ -2997,7 +2997,7 @@ h3.mb-2 {
 .coupon-toggle {
     .coupon-tab {
         padding-top: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
     .toggle-code-input {
         padding-bottom: 30px;
@@ -3172,6 +3172,8 @@ h3.mb-2 {
         object-fit: contain;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
+        transform: rotate(-180deg);
+
     }
     .label-blue {
         padding: 0;
@@ -3186,7 +3188,7 @@ h3.mb-2 {
     padding-left: 20px;
 }
 .rotate {
-    transform: rotate(-180deg);
+    transform: rotate(-360deg) !important;
     transition: all 0.3s ease-in-out;
 }
 .rotate-reset {
