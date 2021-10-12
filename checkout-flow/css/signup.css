@@ -3240,7 +3240,7 @@ option:disabled {
 
 .promo-apply-button {
   font-family: "Intro", Bold;
-  font-size: 14px;
+  font-size: 16px !important;
   font-style: normal;
   font-weight: 700;
   line-height: 14px !important;
