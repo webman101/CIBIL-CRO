@@ -34,12 +34,12 @@ $('.span-link').click(function() {
 
 
 $('.otp-6').keyup(function(e) {
-     if(!$('input').val()){
-      $('#otp-btn').addClass('disabled');
+    if (!$('input').val()) {
+        $('#otp-btn').addClass('disabled');
 
-           return false;
-        } else {
-            $('#otp-btn').removeClass('disabled');
+        return false;
+    } else {
+        $('#otp-btn').removeClass('disabled');
 
 
     }
@@ -346,8 +346,32 @@ $('.single-date-field').mask('00/00/0000', { placeholder: "DD / MM / YYYY" });
 
 
 
+///////////// freelanding page
+$(function() {
+    $("#user-login-top").on("click", function(e) {
+        $("#user-login-wrapper").toggleClass("wide");
+    });
+    $(document).on("click", function(e) {
+        if ($(e.target).is(".form-group input") === false) {
+            $('.flex-otp-label').removeClass('f-bold');
 
-$('.form-group').click(function(e) {
+        }
+    });
+});
+
+$('.form-group input').click(function(e) {
     e.preventDefault();
-    $(this).find('.text-bold').addClass('f-bold');
+    $('.flex-otp-label').removeClass('f-bold');
+    $(this).siblings('.flex-otp-label').addClass('f-bold');
+});
+
+$('.form-group .password-relative').click(function(e) {
+    e.preventDefault();
+    $('.flex-otp-label').removeClass('f-bold');
+    $(this).siblings('.flex-otp-label').addClass('f-bold');
+});
+$('select').click(function(e) {
+    e.preventDefault();
+    $('.flex-otp-label').removeClass('f-bold');
+    $(this).siblings('.flex-otp-label').addClass('f-bold');
 });

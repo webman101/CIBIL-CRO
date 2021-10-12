@@ -1827,7 +1827,7 @@ option:disabled {
   flex: 1;
 }
 
-.f-bold {
+.f-bold strong {
   font-weight: bold !important;
 }
 
