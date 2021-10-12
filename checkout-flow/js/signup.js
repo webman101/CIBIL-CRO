@@ -70,12 +70,12 @@ $('.otp').keyup(function(e) {
 });
 
 
-$('#pincode').keyup(function(e) {
-    if ($(this).val() != '') {
-        $("#loan-button").attr("href", "https://ajency.github.io/CIBIL-CRO/checkout-flow/checkout")
-        $('#loan-button').removeClass('disabled');
-    }
-});
+// $('#pincode').keyup(function(e) {
+//     if ($(this).val() != '') {
+//         $("#loan-button").attr("href", "https://ajency.github.io/CIBIL-CRO/checkout-flow/checkout")
+//         $('#loan-button').removeClass('disabled');
+//     }
+// });
 
 
 
@@ -374,4 +374,116 @@ $('select').click(function(e) {
     e.preventDefault();
     $('.flex-otp-label').removeClass('f-bold');
     $(this).siblings('.flex-otp-label').addClass('f-bold');
+});
+
+
+
+
+///// email validation
+
+
+// $("#email-input").on("change", function() {
+//     emailInput = $(this).val();
+
+//     if (validateEmail(emailInput)) {
+//         $(this).css({
+//             color: "white",
+//             background: "white",
+//             border: "1px solid green"
+//         });
+//     } else {
+//         $(this).css({
+//             color: "red",
+//             border: "1px solid red"
+//         });
+
+//         // alert("not a valid email address");
+//     }
+// });
+$('#email-input').keyup(function(e) {
+
+    var emailInput = $(this).val();
+
+    if (validateEmail(emailInput)) {
+        $(this).css({
+            color: "black",
+            background: "white",
+            border: "1px solid green"
+        });
+    } else {
+        $(this).css({
+            color: "red",
+            border: "1px solid red"
+        });
+
+        // alert("not a valid email address");
+    }
+});
+
+
+function validateEmail(email) {
+    var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    return $.trim(email).match(pattern) ? true : false;
+}
+
+//// fromvalidation
+
+$(document).ready(function() {
+    // button, inner container, tag
+    bindCheckEvent("loan-button", "divRow1", "input");
+
+    function bindCheckEvent(btnCheckId, containerID, beCheckedAttr) {
+        $('input').keyup(function() {
+            checkIsEmpty(containerID, beCheckedAttr);
+        });
+        $('#loan-button').click(function() {
+            checkIsEmpty1(containerID, beCheckedAttr);
+        })
+    }
+
+    function checkIsEmpty(containerID, attr) {
+        // get elements in this container according to attribute
+        var elms = $("#" + containerID).find(attr);
+
+        var value;
+        var isEmpty;
+
+        for (var i = 0; i < elms.length; i++) {
+            isEmpty = true; // initialize
+            value = elms[i].value.trim();
+            if (value != "") {
+                isEmpty = false;
+            }
+            
+            if (isEmpty) {
+                $('#loan-button').addClass('disabled');
+            } else {
+                $('#loan-button').removeClass('disabled');
+                $(elms[i]).css("border-color", "#00000021"); // equals: elms[i].style.backgroundColor = "white";
+
+            }
+        }
+    }
+    function checkIsEmpty1(containerID, attr) {
+        // get elements in this container according to attribute
+        var elms = $("#" + containerID).find(attr);
+
+        var value;
+        var isEmpty;
+
+        for (var i = 0; i < elms.length; i++) {
+            isEmpty = true; // initialize
+            value = elms[i].value.trim();
+            if (value != "") {
+                isEmpty = false;
+            }
+            // 著色
+            if (isEmpty) {
+             $(elms[i]).css("border-color", "red"); // equals: elms[i].style.backgroundColor = "red";
+            } else {
+                $(elms[i]).css("border-color", "#00000021"); // equals: elms[i].style.backgroundColor = "white";
+            }
+        }
+    }
 });

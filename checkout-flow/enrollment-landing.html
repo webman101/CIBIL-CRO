@@ -211,7 +211,8 @@
         <div class="bg-white container-2">
             <div class="container min-container">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-7" id="divRow1">
+
                         <div class="signup-block otp-block">
                             <div class="signup-block-inner">
                                 <div class="d-block extra mx-580">
@@ -219,9 +220,10 @@
                                     <P class="braces">(All fields are required)</P>
 
                                     <form action="">
+
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Email Address</strong> <span class="text-light"></span></p>
-                                            <input class="dp-user" type="email" width="100%">
+                                            <input class="dp-user" type="email" width="100%" id="email-input">
                                         </div>
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Password</strong> <span class="text-light"></span></p>
@@ -280,7 +282,7 @@
                                         <div class="form-group">
                                             <p class="flex-otp-label"><strong class="text-bold">Pincode</strong> <span class="text-light"></span></p>
 
-                                            <input class="dp-user type-number" id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6"  />
+                                            <input class="dp-user type-number" id="pincode" type="number" width="100%" name="somename" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6" />
 
                                         </div>
                                         <p class="terms-and-condition">
@@ -538,7 +540,7 @@
             "+",
             "e",
             "."
-            
+
         ];
 
         inputBox.addEventListener("keydown", function(e) {
