@@ -225,6 +225,21 @@ $('#address').keyup(function(e) {
 
     }
 });
+$('.basic-plan-active').click(function(e) {
+    e.preventDefault();
+
+    $('#1mon').prop('checked', true);
+});
+$('.standard-plan-active').click(function(e) {
+    e.preventDefault();
+
+    $('#6mon').prop('checked', true);
+});
+$('.premium-plan-active').click(function(e) {
+    e.preventDefault();
+    $('#12mon').prop('checked', true);
+});
+
 
 // $('.standard-plan-check input').prop('checked', true);
 // $('.standard-plan-check-2 input').prop('checked', true);
@@ -455,7 +470,7 @@ $(document).ready(function() {
             if (value != "") {
                 isEmpty = false;
             }
-            
+
             if (isEmpty) {
                 $('#loan-button').addClass('disabled');
             } else {
@@ -465,6 +480,7 @@ $(document).ready(function() {
             }
         }
     }
+
     function checkIsEmpty1(containerID, attr) {
         // get elements in this container according to attribute
         var elms = $("#" + containerID).find(attr);
@@ -480,7 +496,7 @@ $(document).ready(function() {
             }
             // 著色
             if (isEmpty) {
-             $(elms[i]).css("border-color", "red"); // equals: elms[i].style.backgroundColor = "red";
+                $(elms[i]).css("border-color", "red"); // equals: elms[i].style.backgroundColor = "red";
             } else {
                 $(elms[i]).css("border-color", "#00000021"); // equals: elms[i].style.backgroundColor = "white";
             }

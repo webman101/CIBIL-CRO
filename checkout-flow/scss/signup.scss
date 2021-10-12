@@ -2126,11 +2126,9 @@ h3.mb-2 {
 
 .customer-testimonial {
     @media screen and (max-width: 992px) {
-        padding-bottom: 30px ;
-        
+        padding-bottom: 30px;
     }
-    
-    
+
     @media screen and (min-width: 992px) {
         margin-top: 30px;
     }
@@ -2995,6 +2993,12 @@ h3.mb-2 {
         }
     }
 }
+.checkout .plans-radio-col.active input .checkmark {
+ 
+}
+// .checkout .plans-radio-col.active input:checked ~ .checkmark{
+//     background-color: red !important;
+// }
 .coupon-toggle {
     .coupon-tab {
         padding-top: 20px;
@@ -3069,9 +3073,9 @@ h3.mb-2 {
         margin-bottom: 24px;
         pointer-events: none !important;
         text-decoration: none !important;
-        
     }
 }
+
 .price-details {
     .price-name {
         strong {
@@ -3174,7 +3178,6 @@ h3.mb-2 {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         transform: rotate(-180deg);
-
     }
     .label-blue {
         padding: 0;
@@ -3343,7 +3346,7 @@ h3.mb-2 {
 }
 .promo-apply-button {
     font-family: "Intro", Bold;
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-style: normal;
     font-weight: 700;
     line-height: 14px !important;
