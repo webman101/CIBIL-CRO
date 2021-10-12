@@ -2971,8 +2971,11 @@ option:disabled {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #2c2c2c;
+  color: #2c2c2c !important;
   margin-bottom: 24px;
+  pointer-events: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .price-details .price-name strong {
