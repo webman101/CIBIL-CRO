@@ -454,20 +454,20 @@ p {
             width: 100%;
             z-index: 1;
             margin: 0;
-            &:checked {
-                ~ {
-                    .checkmark {
-                        background-color: #2196f3;
-                        border: 1px solid #2196f3;
-                        &:after {
-                            display: block;
-                        }
-                    }
-                    label {
-                        background: #fef6ce;
-                    }
-                }
-            }
+            // &:checked {
+            //     ~ {
+            //         .checkmark {
+            //             background-color: #2c2c2c;
+            //             border: 1px solid #2c2c2c;
+            //             &:after {
+            //                 display: block;
+            //             }
+            //         }
+            //         label {
+            //             background: #fef6ce;
+            //         }
+            //     }
+            // }
         }
         .checkmark {
             &:after {
@@ -2925,20 +2925,20 @@ h3.mb-2 {
             width: 100%;
             z-index: 1;
             margin: 0;
-            &:checked {
-                ~ {
-                    .checkmark {
-                        background-color: #2c2c2c;
-                        border: 1px solid #2c2c2c;
-                        &:after {
-                            display: block;
-                        }
-                    }
-                    label {
-                        background: #fff;
-                    }
-                }
-            }
+            // &:checked {
+            //     ~ {
+            //         .checkmark {
+            //             background-color: #2c2c2c;
+            //             border: 1px solid #2c2c2c;
+            //             &:after {
+            //                 display: block;
+            //             }
+            //         }
+            //         label {
+            //             background: #fff;
+            //         }
+            //     }
+            // }
         }
         .checkmark {
             &:after {
@@ -2993,7 +2993,22 @@ h3.mb-2 {
         }
     }
 }
-.checkout .plans-radio-col.active input .checkmark {
+.plans-radio-col input:checked ~ label{
+background-color: #fff;
+}
+.checkout .plans-radio-col.active {
+
+
+        .checkmark {
+            background-color: #2c2c2c;
+            border: 1px solid #2c2c2c;
+            &:after {
+                display: block;
+            }
+        }
+        label {
+            background: #fff;
+        }
  
 }
 // .checkout .plans-radio-col.active input:checked ~ .checkmark{

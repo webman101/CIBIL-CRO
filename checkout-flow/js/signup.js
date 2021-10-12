@@ -230,6 +230,15 @@ $('.basic-plan-active').click(function(e) {
 
     $('#1mon').prop('checked', true);
 });
+
+// $('#1mon').click(function(e) {
+//     e.preventDefault();
+
+//     $('.basic-plan-active').addClass('active');
+// });
+
+
+
 $('.standard-plan-active').click(function(e) {
     e.preventDefault();
 
