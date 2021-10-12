@@ -2888,6 +2888,7 @@ h3.mb-2 {
         z-index: 2;
         flex: 1;
         margin-right: 10px;
+        cursor: pointer;
         &.active {
             &::after {
                 content: "";
