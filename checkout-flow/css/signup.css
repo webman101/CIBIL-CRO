@@ -2056,17 +2056,42 @@ option:disabled {
 
 .customer-testimonial {
   background: #f9f9f9;
-  padding: 30px;
+  padding: 20px;
   border-radius: 8px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 992px) {
+  .customer-testimonial {
+    padding-bottom: 30px;
+  }
 }
 @media screen and (min-width: 992px) {
   .customer-testimonial {
     margin-top: 30px;
   }
 }
+@media screen and (min-width: 992px) {
+  .customer-testimonial {
+    padding: 30px;
+  }
+}
 .customer-testimonial .label-blue {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 992px) {
+  .customer-testimonial .label-blue {
+    margin-left: 0px !important;
+    padding: 0 !important;
+    padding-bottom: 20px !important;
+    font-family: "Intro", Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #00a6ca;
+  }
 }
 
 .slick-dots {
@@ -2075,6 +2100,7 @@ option:disabled {
   margin-top: 10px;
 }
 .slick-dots li {
+  cursor: pointer;
   width: 10px;
   height: 10px;
   background: #dddddd;
