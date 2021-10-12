@@ -3135,14 +3135,18 @@ option:disabled {
   margin-top: 6px;
 }
 
+.skip-question {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+}
 @media screen and (min-width: 992px) {
   .skip-question {
-    display: flex;
-    align-items: center;
     margin-top: 34px;
   }
 }
 .skip-question button {
+  margin-bottom: 0;
   margin-top: 0 !important;
   margin-right: 40px;
 }
