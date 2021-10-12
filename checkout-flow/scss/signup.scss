@@ -3067,9 +3067,9 @@ h3.mb-2 {
         letter-spacing: 0.02em;
         color: #2c2c2c !important;
         margin-bottom: 24px;
-        pointer-events: none;
-        text-decoration: none;
-        color: inherit;
+        pointer-events: none !important;
+        text-decoration: none !important;
+        
     }
 }
 .price-details {
