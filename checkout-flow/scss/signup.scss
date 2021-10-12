@@ -1884,9 +1884,9 @@ option:disabled {
     flex: 1;
 }
 .f-bold {
-   strong{
-    font-weight: bold !important;
-   }
+    strong {
+        font-weight: bold !important;
+    }
 }
 .enrollment-page {
     .button-orange {
@@ -2630,16 +2630,34 @@ h3.mb-2 {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     h6 {
-        font-family: "Intro", bold;
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #707070;
+        margin-bottom: 10px;
+    }
+    h5 {
+        font-family: 'Intro', Bold;
         font-style: normal;
         font-weight: bold;
         font-size: 24px;
-        text-align: left;
         line-height: 30px;
+        /* identical to box height, or 125% */
+
         letter-spacing: 0.02em;
-        color: #333;
+
+        /* Gray 1 */
+
+        color: #333333;
+        margin-bottom: 0;
+
     }
     img {
         width: 36px;
@@ -3228,10 +3246,9 @@ h3.mb-2 {
 .skip-question {
     display: flex;
     margin-top: 40px;
-    
+
     align-items: center;
     @media screen and (min-width: 992px) {
- 
         margin-top: 34px;
     }
     button {
@@ -3296,7 +3313,7 @@ h3.mb-2 {
     margin-right: 7px;
 }
 .promo-apply-button {
-    font-family: 'Intro', Bold;
+    font-family: "Intro", Bold;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
