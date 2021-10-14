@@ -1881,7 +1881,14 @@ section.cibil-subscription {
         
         
     }
+    
 }
+@media screen and (max-width: 992px) {
+    .mb-sm-30{
+        margin-bottom: 30px !important;    
+    }
+}
+
 
 .goals {
     background-color: #f9f9f9;
