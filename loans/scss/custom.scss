@@ -1801,6 +1801,13 @@ section.cibil-subscription {
             margin-bottom: 55px;
         }
     }
+    .v4-button.dhide{
+      @media screen and (min-width: 992px) {
+        display: none !important;
+      }
+      
+      
+    }
     .p-medium-bold{
         display: none !important;
 
@@ -1893,7 +1900,7 @@ section.cibil-subscription {
     box-sizing: border-box;
     padding-bottom: 34px;
     @media screen and (min-width: 992px) {
-        padding-bottom: 96px;
+        padding-bottom: 76px;
     }
 
     .title {

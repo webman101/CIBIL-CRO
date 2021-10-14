@@ -1800,6 +1800,11 @@ section.cibil-subscription .text-p p {
     margin-bottom: 55px;
   }
 }
+@media screen and (min-width: 992px) {
+  .v4 .v4-button.dhide {
+    display: none !important;
+  }
+}
 .v4 .p-medium-bold {
   display: none !important;
 }
@@ -1880,7 +1885,7 @@ section.cibil-subscription .text-p p {
 }
 @media screen and (min-width: 992px) {
   .goals {
-    padding-bottom: 96px;
+    padding-bottom: 76px;
   }
 }
 .goals .title {
