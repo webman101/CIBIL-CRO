@@ -1926,7 +1926,8 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .goals .goal {
     margin-top: 33px;
-    min-height: 315px;
+    min-height: 300px;
+    padding-top: 30px;
   }
 }
 .goals .goal img {
