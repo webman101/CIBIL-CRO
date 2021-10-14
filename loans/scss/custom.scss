@@ -1801,6 +1801,24 @@ section.cibil-subscription {
             margin-bottom: 55px;
         }
     }
+    .p-medium-bold{
+        display: none !important;
+
+    }
+    // @media screen and (max-width: 992px) {
+    //     .mobile-score-plan-desc-v4{
+    //         display: block !important;
+    //     }
+    //     .btn-v1-orange{
+    //         display: block !important;
+    //     }
+    //     .p-medium-bold{
+    //         display: block !important;
+
+    //     }
+    //   }
+      
+ 
     .v4-padding-bottom-0 {
         padding-bottom: 0;
     }
@@ -1846,6 +1864,15 @@ section.cibil-subscription {
         .p-bold {
             display: none;
         }
+    }
+
+  
+    .bg-small-white{
+        @media screen and (max-width: 992px) {
+            background:white;
+        }
+        
+        
     }
 }
 
