@@ -358,7 +358,12 @@ p {
   min-height: 35px;
 }
 
+.col-12 {
+  width: 100%;
+}
+
 header nav {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2201,7 +2206,28 @@ section.cibil-subscription .text-p p {
     padding: 15px 0;
   }
 }
-.slider::after {
+
+.slider .slider-row {
+  width: 100%;
+  height: 120px;
+  background-image: url(../img/allbrands-slider.png);
+  background-size: cover;
+  margin: auto;
+  animation: slide 50s linear infinite;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .slider .slider-row {
+    background-size: cover;
+    background-position: -100px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .slider .slider-row {
+    max-width: 1200px;
+  }
+}
+.slider .slider-row::after {
   content: "";
   position: absolute;
   height: 100%;
@@ -2213,12 +2239,12 @@ section.cibil-subscription .text-p p {
   margin: auto;
 }
 @media screen and (max-width: 992px) {
-  .slider::after {
+  .slider .slider-row::after {
     width: 50px;
     background-size: 100%;
   }
 }
-.slider::before {
+.slider .slider-row::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -2232,24 +2258,10 @@ section.cibil-subscription .text-p p {
   background-position: left;
 }
 @media screen and (max-width: 992px) {
-  .slider::before {
+  .slider .slider-row::before {
     width: 100px;
     background-size: 100%;
     background-position: left;
-  }
-}
-
-.slider .slider-row {
-  width: 100%;
-  height: 120px;
-  background-image: url(../img/allbrands-slider.png);
-  background-size: cover;
-  animation: slide 50s linear infinite;
-}
-@media screen and (min-width: 992px) {
-  .slider .slider-row {
-    background-size: cover;
-    background-position: -100px;
   }
 }
 
