@@ -213,48 +213,27 @@ header {
         }
     }
 }
+.container {
+    max-width: 1200px;
+}
 .banner {
+    padding-top: 20px;
     background: #fff;
-    @media screen and (min-width: 992px) {
-        height: 460px;
-        position: relative;
-        padding-left: 212px;
-        .container,.row{
-            height: 100%;
-        }
-        .banner-image-block {
-            img {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                max-width: 626px;
-            }
-        }
-        .row {
-            align-items: center;
-            display: flex;
-        }
-    }
-    @media screen and (min-width: 1300px) {
-        padding-left: 10%;
-    }
-
-    .col-md-6 {
-        @media screen and (max-width: 992px) {
-            padding: 20px;
-            padding-bottom: 0;
-        }
-    }
     .row {
         @media screen and (max-width: 992px) {
             flex-direction: column-reverse;
-            .banner-image-block {
-                padding: 0;
+            .text-bloxck{
+                padding: 0 20px;
             }
         }
     }
-
+    display: flex;
+    .banner-image-block {
+        @media screen and (max-width: 992px) {
+            margin-bottom: 20px;
+            padding: 0;
+        }
+    }
     .button-orange {
         padding: 0 53px;
 

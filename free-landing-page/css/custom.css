@@ -229,46 +229,26 @@ header nav .logo {
   width: 91px;
 }
 
+.container {
+  max-width: 1200px;
+}
+
 .banner {
+  padding-top: 20px;
   background: #fff;
-}
-@media screen and (min-width: 992px) {
-  .banner {
-    height: 460px;
-    position: relative;
-    padding-left: 212px;
-  }
-  .banner .container, .banner .row {
-    height: 100%;
-  }
-  .banner .banner-image-block img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 626px;
-  }
-  .banner .row {
-    align-items: center;
-    display: flex;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .banner {
-    padding-left: 10%;
-  }
-}
-@media screen and (max-width: 992px) {
-  .banner .col-md-6 {
-    padding: 20px;
-    padding-bottom: 0;
-  }
+  display: flex;
 }
 @media screen and (max-width: 992px) {
   .banner .row {
     flex-direction: column-reverse;
   }
-  .banner .row .banner-image-block {
+  .banner .row .text-bloxck {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .banner .banner-image-block {
+    margin-bottom: 20px;
     padding: 0;
   }
 }
