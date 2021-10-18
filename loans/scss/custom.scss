@@ -205,7 +205,6 @@ h6 {
         }
     }
 }
-
 .pt-4 {
     @media screen and (max-width: 992px) {
         padding-top: 40px !important;
@@ -229,7 +228,11 @@ h6 {
 .bg-yellow {
     background-color: #fcd800;
 }
-
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+}
 .section-title {
     font-family: "Intro", Bold;
     font-weight: bold;
@@ -370,6 +373,10 @@ header {
 }
 
 .banner {
+    .row {
+        display: flex;
+        align-items: center;
+    }
     @media screen and (max-width: 992px) {
         background: radial-gradient(136.5% 50% at 50% 50%, #1a95b9 0%, #39a1cb 100%);
         text-align: center;
@@ -379,66 +386,25 @@ header {
         justify-content: center;
         .button-orange {
             margin: auto;
-
             margin-top: 30px;
         }
     }
-    @media screen and (max-width: 600px) {
-    }
 
-    @media screen and (max-width: 992px) {
-    }
     @media screen and (min-width: 992px) {
-        // background-image: url(../img/bannerbg.png);
+        background-image: url(../img/blubg.png);
+        background-size: 100%;
     }
     position: relative;
-    @media screen and (min-width: 992px) {
-    }
-    .image-block {
-        @media screen and (max-width: 992px) {
-            margin: auto;
-            width: 98%;
-            margin-left: 1.5%;
-            img {
-                margin: auto;
-            }
-        }
-
-        margin-left: auto;
-    }
+.image-block{
+    max-width: 543px;
+    margin-left: auto;
+}
     .image-block-mobile {
         margin: -30px 0;
     }
     .banner-text-block {
         @media screen and (max-width: 992px) {
             padding: 30px 20px 30px 20px;
-        }
-        @media screen and (min-width: 992px) {
-            left: 50px;
-            position: absolute;
-            top: 30px;
-
-            bottom: 0;
-            margin: auto;
-            z-index: 99999;
-        }
-        @media screen and (min-width: 1200px) {
-            .banner .banner-text-block {
-                left: 150px;
-                position: absolute;
-                top: 70px;
-                bottom: 0;
-                margin: auto;
-                z-index: 99999;
-            }
-        }
-        @media screen and (min-width: 1300px) {
-            left: 207px;
-            position: absolute;
-            top: 100px;
-            bottom: 0;
-            margin: auto;
-            z-index: 99999;
         }
         h2 {
             font-family: "Intro", Bold;
@@ -1801,16 +1767,13 @@ section.cibil-subscription {
             margin-bottom: 55px;
         }
     }
-    .v4-button.dhide{
-      @media screen and (min-width: 992px) {
-        display: none !important;
-      }
-      
-      
+    .v4-button.dhide {
+        @media screen and (min-width: 992px) {
+            display: none !important;
+        }
     }
-    .p-medium-bold{
+    .p-medium-bold {
         display: none !important;
-
     }
     // @media screen and (max-width: 992px) {
     //     .mobile-score-plan-desc-v4{
@@ -1824,8 +1787,7 @@ section.cibil-subscription {
 
     //     }
     //   }
-      
- 
+
     .v4-padding-bottom-0 {
         padding-bottom: 0;
     }
@@ -1873,22 +1835,17 @@ section.cibil-subscription {
         }
     }
 
-  
-    .bg-small-white{
+    .bg-small-white {
         @media screen and (max-width: 992px) {
-            background:white;
+            background: white;
         }
-        
-        
     }
-    
 }
 @media screen and (max-width: 992px) {
-    .mb-sm-30{
-        margin-bottom: 30px !important;    
+    .mb-sm-30 {
+        margin-bottom: 30px !important;
     }
 }
-
 
 .goals {
     background-color: #f9f9f9;
@@ -2242,7 +2199,11 @@ section.cibil-subscription {
     width: 100%;
     overflow: hidden;
     background-color: #f9f9f9;
-    padding: 30px 0;
+    padding: 5px 0;
+    @media screen and (min-width: 992px) {
+        padding: 15px 0;
+    }
+
     position: relative;
     &::after {
         content: "";
@@ -2288,9 +2249,11 @@ section.cibil-subscription {
     background-size: cover;
     @media screen and (min-width: 992px) {
         background-size: cover;
+        background-position: -100px;
     }
 
     animation: slide 50s linear infinite;
+    
 }
 .img-inside {
 }

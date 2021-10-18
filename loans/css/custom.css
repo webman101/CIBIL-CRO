@@ -230,6 +230,11 @@ h6 {
   background-color: #fcd800;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 .section-title {
   font-family: "Intro", Bold;
   font-weight: bold;
@@ -371,6 +376,10 @@ header nav .logo {
 .banner {
   position: relative;
 }
+.banner .row {
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 992px) {
   .banner {
     background: radial-gradient(136.5% 50% at 50% 50%, #1a95b9 0%, #39a1cb 100%);
@@ -385,18 +394,15 @@ header nav .logo {
     margin-top: 30px;
   }
 }
-.banner .image-block {
-  margin-left: auto;
+@media screen and (min-width: 992px) {
+  .banner {
+    background-image: url(../img/blubg.png);
+    background-size: 100%;
+  }
 }
-@media screen and (max-width: 992px) {
-  .banner .image-block {
-    margin: auto;
-    width: 98%;
-    margin-left: 1.5%;
-  }
-  .banner .image-block img {
-    margin: auto;
-  }
+.banner .image-block {
+  max-width: 543px;
+  margin-left: auto;
 }
 .banner .image-block-mobile {
   margin: -30px 0;
@@ -404,36 +410,6 @@ header nav .logo {
 @media screen and (max-width: 992px) {
   .banner .banner-text-block {
     padding: 30px 20px 30px 20px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .banner .banner-text-block {
-    left: 50px;
-    position: absolute;
-    top: 30px;
-    bottom: 0;
-    margin: auto;
-    z-index: 99999;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .banner .banner-text-block .banner .banner-text-block {
-    left: 150px;
-    position: absolute;
-    top: 70px;
-    bottom: 0;
-    margin: auto;
-    z-index: 99999;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .banner .banner-text-block {
-    left: 207px;
-    position: absolute;
-    top: 100px;
-    bottom: 0;
-    margin: auto;
-    z-index: 99999;
   }
 }
 .banner .banner-text-block h2 {
@@ -2217,8 +2193,13 @@ section.cibil-subscription .text-p p {
   width: 100%;
   overflow: hidden;
   background-color: #f9f9f9;
-  padding: 30px 0;
+  padding: 5px 0;
   position: relative;
+}
+@media screen and (min-width: 992px) {
+  .slider {
+    padding: 15px 0;
+  }
 }
 .slider::after {
   content: "";
@@ -2268,6 +2249,7 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .slider .slider-row {
     background-size: cover;
+    background-position: -100px;
   }
 }
 
