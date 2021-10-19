@@ -36,53 +36,20 @@ body {
   position: absolute;
   top: 0em;
   left: 0;
+  width: 45px;
+  height: 40px;
   -webkit-transform-origin: 8% 53%;
   -webkit-animation-duration: 2s;
   -webkit-animation-name: rotate-hand;
-  width: 45px;
-  height: 40px;
   -webkit-transform: rotate(320deg);
+  animation: rotate-hand 1s infinite linear;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
-
-@-webkit-keyframes rotate-hand {
-  0% {
-    -webkit-transform: rotate(180deg);
-    left: 0em;
-    top: 0em;
-  }
-  50% {
-    -webkit-transform: rotate(360deg);
-    left: 0em;
-    top: 0em;
-  }
-  100% {
-    -webkit-transform: rotate(320deg);
-    left: 0em;
-    top: 0em;
-  }
-}
-.slick-dots {
-  display: flex !important;
-  justify-content: center;
-  margin-top: 10px;
-}
-.slick-dots li {
-  height: 10px;
-  width: 10px;
-  background-color: #fff;
-  list-style-type: none;
-  border-radius: 50px;
-  margin: 0 5px;
-  cursor: pointer;
-}
-.slick-dots li button {
-  display: none;
-}
-.slick-dots li.slick-active {
-  background: #00a6ca;
-}
-
-.button {
+.cta-block .button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -103,4 +70,42 @@ body {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+.cta-block .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 10px;
+}
+.cta-block .slick-dots li {
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+  list-style-type: none;
+  border-radius: 50px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.cta-block .slick-dots li button {
+  display: none;
+}
+.cta-block .slick-dots li.slick-active {
+  background: #00a6ca;
+}
+
+@-webkit-keyframes rotate-hand {
+  0% {
+    -webkit-transform: rotate(180deg);
+    left: 0em;
+    top: 0em;
+  }
+  50% {
+    -webkit-transform: rotate(320deg);
+    left: 0em;
+    top: 0em;
+  }
+  100% {
+    -webkit-transform: rotate(320deg);
+    left: 0em;
+    top: 0em;
+  }
 }/*# sourceMappingURL=style.css.map */
