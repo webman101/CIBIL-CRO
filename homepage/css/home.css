@@ -446,7 +446,7 @@ a:focus {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #2C2C2C;
+  color: #2c2c2c;
   margin-bottom: 0;
   margin-top: 10px;
 }
@@ -551,17 +551,23 @@ a:focus {
   }
 }
 .hero-section .content-block .button-yellow {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.08em;
-  text-transform: capitalize;
-  color: #000000;
+  text-transform: uppercase;
   justify-content: center;
   max-width: 342px;
+  height: 50px;
+  padding: 0;
 }
 @media (max-width: 991px) {
   .hero-section .content-block .button-yellow {

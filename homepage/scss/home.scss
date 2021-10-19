@@ -310,11 +310,11 @@ h6 {
         }
     }
 }
-.d-{
-    &none{
+.d- {
+    &none {
         display: none;
     }
-    &md-block{
+    &md-block {
         display: block;
     }
 }
@@ -454,18 +454,15 @@ a {
     }
 }
 .login-link {
-    font-family: 'Intro', Book;
+    font-family: "Intro", Book;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    
-    
+
     letter-spacing: 0.02em;
-    
-    
-    
-    color: #2C2C2C;
+
+    color: #2c2c2c;
     margin-bottom: 0;
     margin-top: 10px;
     a {
@@ -502,7 +499,6 @@ a {
         background-color: #000 !important;
     }
 }
-
 
 .hero-section {
     background-image: url("../img/mobilebg.png");
@@ -550,7 +546,7 @@ a {
             }
         }
         .subtitle {
-            font-family: 'Intro', Regular;
+            font-family: "Intro", Regular;
             font-style: normal;
             font-weight: normal;
             font-size: 24px;
@@ -564,17 +560,23 @@ a {
             }
         }
         .button-yellow {
+            font-family: 'Intro', Regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #2c2c2c;
             font-weight: bold;
-            font-size: 18px;
-            line-height: 18px;
             display: flex;
             align-items: center;
             text-align: center;
-            letter-spacing: 0.08em;
-            text-transform: capitalize;
-            color: #000000;
+            text-transform: uppercase;
             justify-content: center;
             max-width: 342px;
+            height: 50px;
+            padding: 0;
             @media (max-width: 991px) {
                 margin: auto;
                 font-size: 16px;
@@ -606,7 +608,6 @@ a {
         padding-top: 20px;
     }
 }
-
 
 .features {
     margin-top: 70px;
