@@ -11,6 +11,9 @@ body {
     scroll-behavior: smooth;
     font-size: 16px;
 }
+.w-100 {
+    width: 100%;
+}
 a {
     outline: 0 !important;
     display: inline-block;
@@ -18,6 +21,7 @@ a {
         color: #2c2c2c;
     }
 }
+
 h1 {
     margin: 0;
 }
@@ -93,7 +97,7 @@ h6 {
 .section-title {
     font-family: "Intro", Bold;
     font-style: normal;
-    font-weight: bold;
+    font-weight: bold !important;
     font-size: 32px;
     line-height: 44px;
     text-align: center;
@@ -125,6 +129,23 @@ p {
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #2c2c2c;
+}
+.row{
+    display: flex;
+}
+.align-items-center{
+    align-items: center;
+}
+.d-block{
+    display: block;
+}
+.d-md-none{
+    @media screen and (min-width: 992px) {
+        display: none;
+
+    }
+    
+    
 }
 .text-grey {
     font-family: Intro, Regular;
@@ -216,17 +237,16 @@ header {
 .container {
     max-width: 1200px;
 }
-.banner {
-   @media screen and (min-width: 992px) {
-    padding-top: 20px;
-   }
-   
-   
+.banner-main {
+    @media screen and (min-width: 992px) {
+        padding-top: 20px;
+    }
+
     background: #fff;
     .row {
         @media screen and (max-width: 992px) {
             flex-direction: column-reverse;
-            .text-bloxck{
+            .text-bloxck {
                 padding: 0 20px;
             }
         }

@@ -13,6 +13,10 @@ body {
   font-size: 16px;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 a {
   outline: 0 !important;
   display: inline-block;
@@ -99,7 +103,7 @@ h6 {
 .section-title {
   font-family: "Intro", Bold;
   font-style: normal;
-  font-weight: bold;
+  font-weight: bold !important;
   font-size: 32px;
   line-height: 44px;
   text-align: center;
@@ -135,6 +139,24 @@ p {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+
+.row {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.d-block {
+  display: block;
+}
+
+@media screen and (min-width: 992px) {
+  .d-md-none {
+    display: none;
+  }
 }
 
 .text-grey {
@@ -233,38 +255,38 @@ header nav .logo {
   max-width: 1200px;
 }
 
-.banner {
+.banner-main {
   background: #fff;
   display: flex;
 }
 @media screen and (min-width: 992px) {
-  .banner {
+  .banner-main {
     padding-top: 20px;
   }
 }
 @media screen and (max-width: 992px) {
-  .banner .row {
+  .banner-main .row {
     flex-direction: column-reverse;
   }
-  .banner .row .text-bloxck {
+  .banner-main .row .text-bloxck {
     padding: 0 20px;
   }
 }
 @media screen and (max-width: 992px) {
-  .banner .banner-image-block {
+  .banner-main .banner-image-block {
     margin-bottom: 20px;
     padding: 0;
   }
 }
-.banner .button-orange {
+.banner-main .button-orange {
   padding: 0 53px;
 }
 @media screen and (max-width: 992px) {
-  .banner .button-orange {
+  .banner-main .button-orange {
     margin-bottom: 30px;
   }
 }
-.banner p {
+.banner-main p {
   font-family: "Intro", Regular;
   font-style: normal;
   font-weight: 400;
@@ -272,12 +294,12 @@ header nav .logo {
   max-width: 500px;
 }
 @media screen and (min-width: 992px) {
-  .banner p {
+  .banner-main p {
     font-size: 24px;
     line-height: 30px;
   }
 }
-.banner .button-orange {
+.banner-main .button-orange {
   width: 100%;
   padding: 0;
   display: flex;
