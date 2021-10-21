@@ -53,8 +53,8 @@ body {
 .cta-block .meter img {
   margin: auto;
   position: relative;
-  left: -8px;
-  top: 0;
+  left: -5px;
+  top: 1px;
   height: 18px;
 }
 .cta-block .button {
