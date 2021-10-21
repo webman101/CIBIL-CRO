@@ -29,13 +29,14 @@ body {
 .cta-block .meter {
   position: absolute;
   top: 30%;
-  left: 50%;
+  left: 49%;
   transform: translate(-50%, -50%);
 }
-.cta-block .meter img {
+.cta-block .meter .meter-guage {
   position: absolute;
   top: 0em;
   left: 0;
+  display: flex;
   width: 45px;
   height: 40px;
   -webkit-transform-origin: 8% 53%;
@@ -48,6 +49,13 @@ body {
   animation-delay: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+}
+.cta-block .meter img {
+  margin: auto;
+  position: relative;
+  left: -8px;
+  top: 0;
+  height: 18px;
 }
 .cta-block .button {
   display: flex;
