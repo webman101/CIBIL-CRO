@@ -14,6 +14,7 @@ section {
     width: 100%;
     max-width: 100%;
 }
+
 .cta-block {
     @media screen and (min-width: 992px) {
         width: 280px;
@@ -22,7 +23,11 @@ section {
     background: #006685;
     padding: 10px;
     position: relative;
-    min-height: 350px;
+    @media screen and (min-width: 992px) {
+        min-height: 350px;
+    }
+    
+    
     h5 {
         font-family: "Intro", Bold;
         font-style: normal;
@@ -67,7 +72,7 @@ section {
         li {
             height: 10px;
             width: 10px;
-            background-color: #fff;
+            background-color: #00a6ca;
             list-style-type: none;
             border-radius: 50px;
             margin: 0 5px;
@@ -76,7 +81,7 @@ section {
                 display: none;
             }
             &.slick-active {
-                background: #00a6ca;
+                background: #fff;
             }
         }
     }
@@ -233,11 +238,10 @@ section {
             animation-direction: alternate;
             animation-iteration-count: infinite;
             margin-top: -20px;
-           @media screen and (max-width: 992px) {
-            margin-left: 48%;
-           }
-           
-           
+            @media screen and (max-width: 992px) {
+                margin-left: 48%;
+            }
+
             width: 75px;
 
             @media screen and (min-width: 992px) {
@@ -254,5 +258,16 @@ section {
                 height: 20px;
             }
         }
+    }
+}
+.d-hide {
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
+.m-hide {
+    display: none;
+    @media screen and (min-width: 992px) {
+        display: block;
     }
 }

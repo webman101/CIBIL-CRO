@@ -21,11 +21,15 @@ section {
   background: #006685;
   padding: 10px;
   position: relative;
-  min-height: 350px;
 }
 @media screen and (min-width: 992px) {
   .cta-block {
     width: 280px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cta-block {
+    min-height: 350px;
   }
 }
 .cta-block h5 {
@@ -70,7 +74,7 @@ section {
 .cta-block .slick-dots li {
   height: 10px;
   width: 10px;
-  background-color: #fff;
+  background-color: #00a6ca;
   list-style-type: none;
   border-radius: 50px;
   margin: 0 5px;
@@ -80,7 +84,7 @@ section {
   display: none;
 }
 .cta-block .slick-dots li.slick-active {
-  background: #00a6ca;
+  background: #fff;
 }
 .cta-block .meter {
   position: absolute;
@@ -257,4 +261,19 @@ section {
   left: -2px;
   top: 1px;
   height: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .d-hide {
+    display: none;
+  }
+}
+
+.m-hide {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .m-hide {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
