@@ -6,9 +6,19 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
-
+section {
+    width: 100%;
+}
+.img-fluid {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
 .cta-block {
-    width: 280px;
+    @media screen and (min-width: 992px) {
+        width: 280px;
+    }
+
     background: #006685;
     padding: 10px;
     position: relative;
@@ -29,7 +39,11 @@ body {
 
     .meter {
         position: absolute;
-        top: 30%;
+        top: 35%;
+        @media screen and (min-width: 992px) {
+            top: 30%;
+        }
+
         left: 49%;
         transform: translate(-50%, -50%);
         .meter-guage {
@@ -37,7 +51,13 @@ body {
             top: 0em;
             left: 0;
             display: flex;
+            @media screen and (min-width: 992px) {
+                width: 70px;
+            }
+            
+            
             width: 45px;
+            
             height: 40px;
             -webkit-transform-origin: 8% 53%;
             -webkit-animation-duration: 2s;
@@ -189,7 +209,7 @@ body {
             margin: unset;
             margin-left: 174px;
         }
-        .right-side{
+        .right-side {
             display: flex;
             align-items: center;
         }

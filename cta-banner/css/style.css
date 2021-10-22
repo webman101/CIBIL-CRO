@@ -7,12 +7,26 @@ body {
   min-height: 100vh;
 }
 
+section {
+  width: 100%;
+}
+
+.img-fluid {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 .cta-block {
-  width: 280px;
   background: #006685;
   padding: 10px;
   position: relative;
   min-height: 350px;
+}
+@media screen and (min-width: 992px) {
+  .cta-block {
+    width: 280px;
+  }
 }
 .cta-block h5 {
   font-family: "Intro", Bold;
@@ -28,9 +42,14 @@ body {
 }
 .cta-block .meter {
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 49%;
   transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 992px) {
+  .cta-block .meter {
+    top: 30%;
+  }
 }
 .cta-block .meter .meter-guage {
   position: absolute;
@@ -49,6 +68,11 @@ body {
   animation-delay: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+}
+@media screen and (min-width: 992px) {
+  .cta-block .meter .meter-guage {
+    width: 70px;
+  }
 }
 .cta-block .meter img {
   margin: auto;
