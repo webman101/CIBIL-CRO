@@ -25,8 +25,7 @@ section {
     @media screen and (min-width: 992px) {
         min-height: 350px;
     }
-    
-    
+
     h5 {
         font-family: "Intro", Bold;
         font-style: normal;
@@ -97,11 +96,10 @@ section {
             top: 0em;
             left: 0;
             display: flex;
+            width: 70px;
             @media screen and (min-width: 992px) {
-                width: 70px;
+                width: 50px;
             }
-
-            width: 45px;
 
             height: 40px;
             -webkit-transform-origin: 8% 53%;
