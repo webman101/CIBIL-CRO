@@ -2,19 +2,25 @@ body {
     padding: 0;
     margin: 0;
     @media screen and (max-width: 992px) {
-        padding-top:50px;
+        padding-top: 50px;
     }
-    
-    
- @media screen and (min-width: 992px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
- 
- 
+
+    @media screen and (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     height: 200vh;
 }
+    /* the slides */
+    .slick-slide {
+        margin: 0 5px;
+      }
+      /* the parent */
+      .slick-list {
+        margin: 0 -5px;
+      }
 section {
     width: 100%;
 }
