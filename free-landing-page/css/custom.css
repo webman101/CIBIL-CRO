@@ -1511,11 +1511,20 @@ body {
   }
   .subscriptionBenefits .plans-radio-title {
     font-size: 15px;
+    margin-bottom: 2px;
+  }
+}
+@media screen and (max-width: 480px) and (min-width: 992px) {
+  .subscriptionBenefits .plans-radio-title {
     margin-bottom: 8px;
   }
+}
+@media (max-width: 480px) {
   .subscriptionBenefits .plans-radio-sub-title {
     font-size: 11px;
   }
+}
+@media (max-width: 480px) {
   .subscriptionBenefits .price-row .bttn {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1648,22 +1657,41 @@ body {
   font-family: "Intro", Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #2c2c2c;
   margin-top: 30px;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 992px) {
+  .popop3 .popup3 .popup-title {
+    max-width: 374px;
+    margin: auto;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .popup-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
 .popop3 .popup3 .icon-text {
   margin: 0 20px;
-  background: #f9f9f9;
   border-radius: 6px;
   padding: 15px;
+  padding-bottom: 0;
   display: flex;
-  align-items: center;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .icon-text {
+    align-items: center;
+    background: #f9f9f9;
+    padding-bottom: 15px;
+  }
 }
 .popop3 .popup3 .icon-text img {
   width: 50px;
@@ -1691,6 +1719,12 @@ body {
   letter-spacing: 0.02em;
   color: #2c2c2c;
   margin-bottom: 0;
+}
+@media screen and (max-width: 992px) {
+  .popop3 .popup3 .icon-text .text {
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 15px;
+  }
 }
 .popop3 .popup3 .yellow-strip {
   background: #fcd800;
@@ -1731,6 +1765,12 @@ body {
   border-radius: 6px;
   margin: 0 10px;
   padding: 4px 10px;
+}
+@media screen and (max-width: 992px) {
+  .popop3 .popup3 .yellow-strip .code {
+    height: 50px;
+    margin-left: 23px;
+  }
 }
 .popop3 .popup3 .yellow-strip .code .inner-bold {
   margin-left: 5px;
@@ -1788,19 +1828,29 @@ body {
   font-family: "Intro", Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .plans-radio-title {
+    font-size: 24px;
+  }
 }
 .popop3 .popup3 .plans-radio-price {
   font-family: "Intro", Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .plans-radio-price {
+    font-size: 16px;
+  }
 }
 .popop3 .popup3 .plans-radio-sub-title {
   font-family: "Intro", Book;
@@ -1921,6 +1971,16 @@ body {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+@media screen and (max-width: 992px) {
+  .popop3 .d-none {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .popop3 .d-md-block {
+    display: block;
+  }
+}
 
 .popop3 .checkmark {
   border: 1.6px solid #2c2c2c !important;
@@ -1932,4 +1992,16 @@ body {
   background: transparent !important;
   box-sizing: border-box !important;
   border-radius: 6px !important;
+}
+
+@media screen and (max-width: 992px) {
+  .m-hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .d-hide {
+    display: none;
+  }
 }/*# sourceMappingURL=custom.css.map */
