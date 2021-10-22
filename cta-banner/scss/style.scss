@@ -6,6 +6,7 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
+
 .cta-block {
     width: 280px;
     background: #006685;
@@ -102,6 +103,7 @@ body {
         }
     }
 }
+
 @-webkit-keyframes rotate-hand {
     0% {
         -webkit-transform: rotate(200deg);
@@ -117,5 +119,79 @@ body {
         -webkit-transform: rotate(330deg);
         left: 0em;
         top: 0em;
+    }
+}
+.cta-block-2 {
+    background: #006685;
+    padding: 10px;
+    position: relative;
+    padding-top: 40px;
+    border: 20px solid #f9f9f9;
+    img {
+        margin: auto;
+        display: block;
+    }
+    h5 {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        color: #ffffff;
+        margin: 40px 0 20px;
+    }
+    .button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 240px;
+        height: 50px;
+        background: #f16e00;
+        border-radius: 25px;
+
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        text-decoration: none;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+.cta-block-2 {
+    @media screen and (min-width: 992px) {
+        display: flex;
+        padding-top: 0;
+        align-items: center;
+        justify-content: space-between;
+        border: 0;
+        padding: 30px 100px;
+        margin: auto;
+        img {
+            max-width: 122px;
+            margin: unset;
+            margin-right: 35px;
+        }
+        h5 {
+            max-width: 407px;
+            text-align: left;
+            margin: unset;
+        }
+        .button {
+            width: 240px;
+            margin: unset;
+            margin-left: 174px;
+        }
+        .right-side{
+            display: flex;
+            align-items: center;
+        }
     }
 }
