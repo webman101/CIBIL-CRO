@@ -236,7 +236,7 @@ section {
   animation-direction: alternate;
   animation-iteration-count: infinite;
   margin-top: -20px;
-  margin-right: 89px;
+  margin-left: 48%;
   width: 75px;
 }
 @media screen and (min-width: 992px) {
