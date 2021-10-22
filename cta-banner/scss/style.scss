@@ -37,48 +37,6 @@ section {
         color: #ffffff;
     }
 
-    .meter {
-        position: absolute;
-        top: 35%;
-        @media screen and (min-width: 992px) {
-            top: 30%;
-        }
-
-        left: 49%;
-        transform: translate(-50%, -50%);
-        .meter-guage {
-            position: absolute;
-            top: 0em;
-            left: 0;
-            display: flex;
-            @media screen and (min-width: 992px) {
-                width: 70px;
-            }
-            
-            
-            width: 45px;
-            
-            height: 40px;
-            -webkit-transform-origin: 8% 53%;
-            -webkit-animation-duration: 2s;
-            -webkit-animation-name: rotate-hand;
-
-            -webkit-transform: rotate(360deg);
-            animation: rotate-hand 1s infinite linear;
-            animation-duration: 2.5s;
-            animation-timing-function: ease-out;
-            animation-delay: 1s;
-            animation-direction: alternate;
-            animation-iteration-count: infinite;
-        }
-        img {
-            margin: auto;
-            position: relative;
-            left: -5px;
-            top: 1px;
-            height: 18px;
-        }
-    }
     .button {
         display: flex;
         flex-direction: row;
@@ -91,7 +49,7 @@ section {
 
         font-family: "Intro", Regular;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 16px;
         line-height: 16px;
         text-decoration: none;
@@ -119,6 +77,46 @@ section {
             }
             &.slick-active {
                 background: #00a6ca;
+            }
+        }
+    }
+    .meter {
+        position: absolute;
+        top: 35%;
+        @media screen and (min-width: 992px) {
+            top: 30%;
+        }
+        left: 49%;
+        transform: translate(-50%, -50%);
+        .meter-guage {
+            position: absolute;
+            top: 0em;
+            left: 0;
+            display: flex;
+            @media screen and (min-width: 992px) {
+                width: 70px;
+            }
+
+            width: 45px;
+
+            height: 40px;
+            -webkit-transform-origin: 8% 53%;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-name: rotate-hand;
+
+            -webkit-transform: rotate(360deg);
+            animation: rotate-hand 1s infinite linear;
+            animation-duration: 2.5s;
+            animation-timing-function: ease-out;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            img {
+                margin: auto;
+                position: relative;
+                left: -5px;
+                top: 1px;
+                height: 18px;
             }
         }
     }
@@ -173,7 +171,7 @@ section {
 
         font-family: "Intro", Regular;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 16px;
         line-height: 16px;
         text-decoration: none;
@@ -212,6 +210,45 @@ section {
         .right-side {
             display: flex;
             align-items: center;
+        }
+    }
+    .meter {
+        position: relative;
+        .meter-guage {
+            position: relative;
+            top: -12px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+
+            -webkit-transform-origin: 8% 53%;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-name: rotate-hand;
+            -webkit-transform: rotate(360deg);
+            animation: rotate-hand 1s infinite linear;
+            animation-duration: 2.5s;
+            animation-timing-function: ease-out;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            margin-top: -20px;
+            margin-right: 89px;
+            width: 75px;
+
+            @media screen and (min-width: 992px) {
+                margin-top: -25px;
+                margin-right: 50px;
+                width: 45px;
+                height: 40px;
+            }
+            img {
+                margin: auto;
+                position: relative;
+                left: -2px;
+                top: 1px;
+                height: 20px;
+            }
         }
     }
 }
