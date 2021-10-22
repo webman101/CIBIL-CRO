@@ -1553,15 +1553,18 @@ body {
 				}
 			}
 		}
+
 		.plans-radio-title {
 			font-size: 15px;
 			margin-bottom: 2px;
 
+			@media screen and (max-width: 992px) {
+				text-transform: uppercase;
+			}
+
 			@media screen and (min-width: 992px) {
 				margin-bottom: 8px;
 			}
-			
-			
 		}
 		.plans-radio-sub-title {
 			font-size: 11px;
@@ -1742,13 +1745,14 @@ body {
 			margin: 0 20px;
 
 			border-radius: 6px;
-			padding: 15px;
+
 			padding-bottom: 0;
 			display: flex;
+			padding-right: 30px;
 			@media screen and (min-width: 992px) {
 				align-items: center;
 				background: #f9f9f9;
-				padding-bottom: 15px;
+				padding: 15px;
 			}
 
 			margin-bottom: 10px;
@@ -1913,7 +1917,6 @@ body {
 			font-size: 14px;
 			@media screen and (min-width: 992px) {
 				font-size: 16px;
-
 			}
 			line-height: 24px;
 
@@ -2085,4 +2088,28 @@ body {
 	@media screen and (min-width: 992px) {
 		display: none;
 	}
+}
+
+@media screen and (max-width: 992px) {
+	.plans-radio-col {
+		padding-bottom: 30px;
+	}
+	.popup-plans-card-tag {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background: #fcd800;
+		bottom: 0;
+		img {
+			margin: auto !important;
+		}
+	}
+}
+.quest {
+    height: 18px !important;
+    width: 18px !important;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: -3px;
 }

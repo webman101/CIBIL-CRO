@@ -1514,6 +1514,11 @@ body {
     margin-bottom: 2px;
   }
 }
+@media screen and (max-width: 480px) and (max-width: 992px) {
+  .subscriptionBenefits .plans-radio-title {
+    text-transform: uppercase;
+  }
+}
 @media screen and (max-width: 480px) and (min-width: 992px) {
   .subscriptionBenefits .plans-radio-title {
     margin-bottom: 8px;
@@ -1681,16 +1686,16 @@ body {
 .popop3 .popup3 .icon-text {
   margin: 0 20px;
   border-radius: 6px;
-  padding: 15px;
   padding-bottom: 0;
   display: flex;
+  padding-right: 30px;
   margin-bottom: 10px;
 }
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .icon-text {
     align-items: center;
     background: #f9f9f9;
-    padding-bottom: 15px;
+    padding: 15px;
   }
 }
 .popop3 .popup3 .icon-text img {
@@ -2004,4 +2009,29 @@ body {
   .d-hide {
     display: none;
   }
+}
+
+@media screen and (max-width: 992px) {
+  .plans-radio-col {
+    padding-bottom: 30px;
+  }
+
+  .popup-plans-card-tag {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fcd800;
+    bottom: 0;
+  }
+  .popup-plans-card-tag img {
+    margin: auto !important;
+  }
+}
+.quest {
+  height: 18px !important;
+  width: 18px !important;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: -3px;
 }/*# sourceMappingURL=custom.css.map */
