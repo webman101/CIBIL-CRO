@@ -226,6 +226,7 @@ body {
   font-weight: 400;
 }
 .free-landing-page .goals {
+  min-height: 280px;
   background-color: #f9f9f9;
   padding-top: 40px;
   box-sizing: border-box;
@@ -1289,7 +1290,6 @@ body {
   }
   .free-landing-page .goals .goal {
     margin-top: 33px;
-    min-height: 247px;
     padding-top: 30px;
   }
   .free-landing-page .goals .goal h6 {
@@ -1605,5 +1605,14 @@ body {
   }
   .subscriptionBenefits .features-section {
     display: none;
+  }
+}
+.goal {
+  min-height: 280px;
+}
+
+@media screen and (min-width: 1280px) {
+  .goal {
+    min-height: 247px;
   }
 }/*# sourceMappingURL=custom.css.map */
