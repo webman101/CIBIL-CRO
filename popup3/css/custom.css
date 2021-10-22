@@ -26,7 +26,7 @@
 }
 .popup3 .bg-yellow {
   background: #fcd800;
-  padding: 0 2px;
+  padding: 0 3px;
 }
 .popup3 .popup-title {
   font-family: "Intro", Bold;
@@ -108,11 +108,16 @@
 }
 .popup3 .yellow-strip .code {
   background: #ffffff;
+  display: flex;
+  align-items: center;
   border: 1px dashed #006685;
   box-sizing: border-box;
   border-radius: 6px;
   margin: 0 10px;
   padding: 4px 10px;
+}
+.popup3 .yellow-strip .code .inner-bold {
+  margin-left: 5px;
 }
 .popup3 .plans-radio-col {
   background: #ffffff;

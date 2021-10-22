@@ -25,7 +25,7 @@
     }
     .bg-yellow {
         background: #fcd800;
-        padding: 0 2px;
+        padding: 0 3px;
     }
     .popup-title {
         font-family: "Intro", Bold;
@@ -117,12 +117,16 @@
         }
         .code {
             background: #ffffff;
-
+display: flex;
+align-items: center;
             border: 1px dashed #006685;
             box-sizing: border-box;
             border-radius: 6px;
             margin: 0 10px;
             padding: 4px 10px;
+            .inner-bold {
+                margin-left: 5px;
+            }
         }
     }
     .plans-radio-col {
@@ -215,7 +219,6 @@
         z-index: 10;
         padding: 20px;
         padding-top: 0;
-        
     }
     .bttn-outline {
         display: flex;
