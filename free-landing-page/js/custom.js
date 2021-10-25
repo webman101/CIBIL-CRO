@@ -287,3 +287,24 @@ $('.popop3 .plans-radio-col').click(function(e) {
     $('.active').removeClass('active');
     $(this).addClass('active');
 });
+
+
+$('.quest-popup').click(function(e) {
+    e.preventDefault();
+    $('.tooltip-show').toggleClass('ttol-show');
+});
+
+
+
+
+
+$(document).mouseup(function(e) 
+{
+    var container = $(".quest-popup");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        $('.tooltip-show').removeClass('ttol-show');
+    }
+});

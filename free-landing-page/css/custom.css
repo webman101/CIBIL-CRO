@@ -285,6 +285,10 @@ body {
   margin-top: 40px;
 }
 
+.ttol-hide {
+  display: none;
+}
+
 .subscriptionBenefits .modal {
   z-index: 999999;
 }
@@ -2214,4 +2218,44 @@ body {
     position: sticky !important;
     top: 0;
   }
+}
+.tooltip-show {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #006685;
+  position: absolute;
+  width: 171px;
+  height: 45px;
+  background: #f9f9f9;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  right: 13px;
+  top: -40px;
+}
+.tooltip-show::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  background: #f9f9f9;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  z-index: 1111111;
+  height: 15px;
+  width: 15px;
+  transform: rotateZ(45deg);
+  right: 10px;
+  border-top: 0;
+  border-left: 0;
+}
+
+.ttol-show {
+  display: flex !important;
 }/*# sourceMappingURL=custom.css.map */
