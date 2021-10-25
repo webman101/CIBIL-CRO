@@ -1495,6 +1495,9 @@ body {
     min-width: 108px;
     padding: 14px 10px;
     font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .subscriptionBenefits .bttn-upgrade {
     padding: 14px 50px;
