@@ -1360,6 +1360,7 @@ body {
 		}
 	}
 }
+
 @media (max-width: 767px) {
 	.subscriptionBenefits {
 		.line-height-41 {
@@ -1844,7 +1845,6 @@ body {
 				font-family: "Intro", Book;
 				font-style: normal;
 				font-weight: normal;
-				font-size: 11px;
 				@media screen and (min-width: 400px) {
 					font-size: 14px;
 				}
@@ -1871,13 +1871,12 @@ body {
 				@media screen and (max-width: 992px) {
 					height: 50px;
 					margin-left: 23px;
-
 				}
 
 				.inner-bold {
 					margin-left: 5px;
 				}
-				.inner-light{
+				.inner-light {
 					@media screen and (min-width: 400px) {
 						font-size: 14px;
 					}
@@ -2192,8 +2191,7 @@ body {
 	@media screen and (min-width: 992px) {
 		width: 280px;
 	}
-	
-	
+
 	height: 50px;
 	background: #ffffff;
 	border: 1px solid #f16e00;
@@ -2201,7 +2199,6 @@ body {
 	border-radius: 25px;
 	text-decoration: none !important;
 	margin-right: 0.5em;
-	
 }
 .btn-2 {
 	font-family: "Intro", Regular;
@@ -2226,5 +2223,12 @@ body {
 	border: 1px solid #f16e00;
 	box-sizing: border-box;
 	border-radius: 25px;
-	
+}
+.popup3-close {
+	@media screen and (max-width: 992px) {
+		top: -8px !important;
+		z-index: 99;
+		filter: invert(1);
+		opacity: 1 !important;
+	}
 }

@@ -1788,7 +1788,6 @@ body {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
-  font-size: 11px;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.02em;
@@ -2159,5 +2158,14 @@ body {
 @media screen and (min-width: 992px) {
   .btn-2 {
     width: 280px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .popup3-close {
+    top: -8px !important;
+    z-index: 99;
+    filter: invert(1);
+    opacity: 1 !important;
   }
 }/*# sourceMappingURL=custom.css.map */
