@@ -1694,6 +1694,7 @@ body {
 		backdrop-filter: blur(10px);
 	}
 	.blue-strip {
+		position: relative;
 		background: #006685;
 		padding: 4px 0;
 		text-align: center;
@@ -2148,19 +2149,21 @@ body {
 	}
 }
 
-@media screen and (max-width: 992px) {
-	.plans-radio-col {
-		padding-bottom: 30px;
-	}
-	.popup-plans-card-tag {
-		position: absolute;
-		left: 0;
-		right: 0;
-		width: 100%;
-		background: #fcd800;
-		bottom: 0;
-		img {
-			margin: auto !important;
+.popop3 {
+	@media screen and (max-width: 992px) {
+		.plans-radio-col {
+			padding-bottom: 30px;
+		}
+		.popup-plans-card-tag {
+			position: absolute;
+			left: 0;
+			right: 0;
+			width: 100%;
+			background: #fcd800;
+			bottom: 0;
+			img {
+				margin: auto !important;
+			}
 		}
 	}
 }
@@ -2230,5 +2233,14 @@ body {
 		z-index: 99;
 		filter: invert(1);
 		opacity: 1 !important;
+	}
+	@media screen and (min-width: 992px) {
+		position: absolute !important;
+		top: 0 !important;
+		bottom: 0 !important;
+		margin: auto !important;
+		display: flex !important;
+		align-items: center !important;
+		right: 20px !important;
 	}
 }
