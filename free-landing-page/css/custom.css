@@ -1675,6 +1675,7 @@ body {
     line-height: 24px;
     margin-bottom: 24px;
     margin-top: 24px;
+    padding: 0 20px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1688,7 +1689,7 @@ body {
   border-radius: 6px;
   padding-bottom: 0;
   display: flex;
-  padding-right: 30px;
+  padding-right: 10px;
   margin-bottom: 10px;
 }
 @media screen and (min-width: 992px) {
@@ -1699,21 +1700,37 @@ body {
   }
 }
 .popop3 .popup3 .icon-text img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .icon-text img {
+    width: 50px;
+    height: 50px;
+  }
 }
 .popop3 .popup3 .icon-text .text {
-  margin-left: 15px;
+  margin-left: 10px;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .icon-text .text {
+    margin-left: 15px;
+  }
 }
 .popop3 .popup3 .icon-text .text h6 {
   font-family: "Intro", Regular;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
   margin-bottom: 0;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .icon-text .text h6 {
+    font-size: 16px;
+  }
 }
 .popop3 .popup3 .icon-text .text p {
   font-family: "Intro", Book;
@@ -1733,12 +1750,19 @@ body {
 }
 .popop3 .popup3 .yellow-strip {
   background: #fcd800;
-  padding: 15px;
+  padding: 20px;
+  padding-left: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .yellow-strip {
+    justify-content: center;
+    padding: 15px;
+  }
 }
 .popop3 .popup3 .yellow-strip .inner-bold {
   font-family: "Intro", Bold;
@@ -1755,11 +1779,16 @@ body {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #006685;
+}
+@media screen and (min-width: 400px) {
+  .popop3 .popup3 .yellow-strip .inner-light {
+    font-size: 14px;
+  }
 }
 .popop3 .popup3 .yellow-strip .code {
   background: #ffffff;
@@ -1768,8 +1797,12 @@ body {
   border: 1px dashed #006685;
   box-sizing: border-box;
   border-radius: 6px;
-  margin: 0 10px;
   padding: 4px 10px;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .yellow-strip .code {
+    margin: 0 10px;
+  }
 }
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .yellow-strip .code {
@@ -1833,10 +1866,15 @@ body {
   font-family: "Intro", Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+@media screen and (min-width: 400px) {
+  .popop3 .popup3 .plans-radio-title {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .plans-radio-title {
@@ -1861,10 +1899,15 @@ body {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #707070;
+}
+@media screen and (min-width: 400px) {
+  .popop3 .popup3 .plans-radio-sub-title {
+    font-size: 14px;
+  }
 }
 .popop3 .popup3 .sticky-modal-footer {
   box-shadow: none;
@@ -1929,7 +1972,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   /* Accent Black */
-  color: #2c2c2c;
+  color: #2c2c2c !important;
 }
 .popop3 .plans-radio-col {
   position: relative;
@@ -1987,6 +2030,14 @@ body {
   }
 }
 
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0 !important;
+}
+
 .popop3 .checkmark {
   border: 1.6px solid #2c2c2c !important;
   box-sizing: border-box !important;
@@ -2034,4 +2085,8 @@ body {
   display: inline-block;
   margin-left: 10px;
   margin-top: -3px;
+}
+
+.upgrade-link {
+  color: #2c2c2c;
 }/*# sourceMappingURL=custom.css.map */

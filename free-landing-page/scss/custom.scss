@@ -1721,12 +1721,14 @@ body {
 			font-family: "Intro", Bold;
 			font-style: normal;
 			font-weight: bold;
+
 			@media screen and (max-width: 992px) {
 				max-width: 374px;
 				margin: auto;
 				line-height: 24px;
 				margin-bottom: 24px;
 				margin-top: 24px;
+				padding: 0 20px;
 			}
 
 			@media screen and (min-width: 992px) {
@@ -1748,7 +1750,7 @@ body {
 
 			padding-bottom: 0;
 			display: flex;
-			padding-right: 30px;
+			padding-right: 10px;
 			@media screen and (min-width: 992px) {
 				align-items: center;
 				background: #f9f9f9;
@@ -1757,16 +1759,28 @@ body {
 
 			margin-bottom: 10px;
 			img {
-				width: 50px;
-				height: 50px;
+				width: 40px;
+				height: 40px;
+				@media screen and (min-width: 992px) {
+					width: 50px;
+					height: 50px;
+				}
 			}
 			.text {
-				margin-left: 15px;
+				margin-left: 10px;
+				@media screen and (min-width: 992px) {
+					margin-left: 15px;
+				}
+
 				h6 {
 					font-family: "Intro", Regular;
 					font-style: normal;
 					font-weight: 600;
-					font-size: 16px;
+					font-size: 14px;
+					@media screen and (min-width: 992px) {
+						font-size: 16px;
+					}
+
 					line-height: 24px;
 
 					letter-spacing: 0.02em;
@@ -1794,9 +1808,15 @@ body {
 		}
 		.yellow-strip {
 			background: #fcd800;
-			padding: 15px;
+			padding: 20px;
+			padding-left: 30px;
 			display: flex;
-			justify-content: center;
+			justify-content: space-between;
+			@media screen and (min-width: 992px) {
+				justify-content: center;
+				padding: 15px;
+			}
+
 			align-items: center;
 			margin-top: 20px;
 			margin-bottom: 20px;
@@ -1817,7 +1837,11 @@ body {
 				font-family: "Intro", Book;
 				font-style: normal;
 				font-weight: normal;
-				font-size: 14px;
+				font-size: 12px;
+				@media screen and (min-width: 400px) {
+					font-size: 14px;
+				}
+
 				line-height: 24px;
 
 				text-align: center;
@@ -1832,7 +1856,10 @@ body {
 				border: 1px dashed #006685;
 				box-sizing: border-box;
 				border-radius: 6px;
-				margin: 0 10px;
+				@media screen and (min-width: 992px) {
+					margin: 0 10px;
+				}
+
 				padding: 4px 10px;
 				@media screen and (max-width: 992px) {
 					height: 50px;
@@ -1899,7 +1926,11 @@ body {
 			font-family: "Intro", Bold;
 			font-style: normal;
 			font-weight: bold;
-			font-size: 16px;
+			font-size: 14px;
+			@media screen and (min-width: 400px) {
+				font-size: 16px;
+			}
+
 			@media screen and (min-width: 992px) {
 				font-size: 24px;
 			}
@@ -1928,7 +1959,11 @@ body {
 			font-family: "Intro", Book;
 			font-style: normal;
 			font-weight: normal;
-			font-size: 14px;
+			font-size: 12px;
+			@media screen and (min-width: 400px) {
+				font-size: 14px;
+			}
+
 			line-height: 24px;
 
 			letter-spacing: 0.02em;
@@ -2010,7 +2045,7 @@ body {
 
 			/* Accent Black */
 
-			color: #2c2c2c;
+			color: #2c2c2c !important;
 		}
 	}
 	.plans-radio-col {
@@ -2069,6 +2104,13 @@ body {
 		}
 	}
 }
+.border-bottom-0 {
+	border-bottom: 0 !important;
+}
+.padding-bottom-0 {
+	padding-bottom: 0 !important;
+}
+
 .popop3 .checkmark {
 	border: 1.6px solid #2c2c2c !important;
 	box-sizing: border-box !important;
@@ -2107,9 +2149,12 @@ body {
 	}
 }
 .quest {
-    height: 18px !important;
-    width: 18px !important;
-    display: inline-block;
-    margin-left: 10px;
-    margin-top: -3px;
+	height: 18px !important;
+	width: 18px !important;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: -3px;
+}
+.upgrade-link {
+	color: #2c2c2c;
 }
