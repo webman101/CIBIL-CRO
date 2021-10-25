@@ -865,6 +865,7 @@ body {
 .subscriptionBenefits .plans-radio-col {
   width: 32%;
   position: relative;
+  overflow: hidden;
 }
 .subscriptionBenefits .plans-radio-col label {
   background: #fff;
