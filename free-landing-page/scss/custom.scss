@@ -1813,7 +1813,7 @@ body {
 		}
 		.yellow-strip {
 			background: #fcd800;
-			padding: 20px;
+			padding: 10px 20px;
 
 			@media screen and (min-width: 400px) {
 				padding-left: 30px;
@@ -1875,7 +1875,7 @@ body {
 
 				padding: 4px 10px;
 				@media screen and (max-width: 992px) {
-					height: 50px;
+					height: 30px;
 					margin-left: 23px;
 				}
 
@@ -1895,7 +1895,11 @@ body {
 			border: 1px solid #acacac;
 			box-sizing: border-box;
 			border-radius: 6px;
-			padding-top: 36px;
+			padding-top: 25px;
+			@media screen and (min-width: 992px) {
+				padding-top: 36px;
+			}
+
 			.checkmark {
 				left: 12px;
 				right: unset;
@@ -1913,7 +1917,7 @@ body {
 			border: 0px;
 			box-shadow: none;
 			border-radius: 4px;
-			padding: 10px;
+			padding: 10px 10px 5px;
 			height: 100%;
 		}
 		.checkmark {
@@ -1945,15 +1949,21 @@ body {
 			font-style: normal;
 			font-weight: bold;
 			font-size: 14px;
+			@media screen and (max-width: 992px) {
+				margin-bottom: 0;
+				
+			}
+			
+			
 			@media screen and (min-width: 400px) {
 				font-size: 16px;
 			}
 
 			@media screen and (min-width: 992px) {
 				font-size: 24px;
+				line-height: 30px;
+				margin-bottom: 0;
 			}
-
-			line-height: 30px;
 
 			letter-spacing: 0.02em;
 
@@ -1964,6 +1974,10 @@ body {
 			font-style: normal;
 			font-weight: bold;
 			font-size: 14px;
+			@media screen and (max-width: 992px) {
+				margin-bottom: 0;
+			}
+
 			@media screen and (min-width: 992px) {
 				font-size: 16px;
 			}
@@ -2257,7 +2271,7 @@ body {
 		background: white;
 		box-shadow: 0px -10px 20px rgba(22, 32, 35, 0.14);
 	}
-	.blue-strip{
+	.blue-strip {
 		position: sticky !important;
 		top: 0;
 	}

@@ -1754,7 +1754,7 @@ body {
 }
 .popop3 .popup3 .yellow-strip {
   background: #fcd800;
-  padding: 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1819,7 +1819,7 @@ body {
 }
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .yellow-strip .code {
-    height: 50px;
+    height: 30px;
     margin-left: 23px;
   }
 }
@@ -1836,7 +1836,12 @@ body {
   border: 1px solid #acacac;
   box-sizing: border-box;
   border-radius: 6px;
-  padding-top: 36px;
+  padding-top: 25px;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .plans-radio-col {
+    padding-top: 36px;
+  }
 }
 .popop3 .popup3 .plans-radio-col .checkmark {
   left: 12px;
@@ -1854,7 +1859,7 @@ body {
   border: 0px;
   box-shadow: none;
   border-radius: 4px;
-  padding: 10px;
+  padding: 10px 10px 5px;
   height: 100%;
 }
 .popop3 .popup3 .checkmark {
@@ -1885,9 +1890,13 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 30px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+@media screen and (max-width: 992px) {
+  .popop3 .popup3 .plans-radio-title {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .plans-radio-title {
@@ -1897,6 +1906,8 @@ body {
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .plans-radio-title {
     font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 0;
   }
 }
 .popop3 .popup3 .plans-radio-price {
@@ -1907,6 +1918,11 @@ body {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+@media screen and (max-width: 992px) {
+  .popop3 .popup3 .plans-radio-price {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .plans-radio-price {
