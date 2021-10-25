@@ -2242,7 +2242,7 @@ body {
 .tooltip-show::after {
   content: "";
   position: absolute;
-  bottom: -9px;
+  bottom: -7px;
   background: #f9f9f9;
   border: 1px solid #dddddd;
   box-sizing: border-box;
