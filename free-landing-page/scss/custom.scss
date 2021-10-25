@@ -1809,7 +1809,10 @@ body {
 		.yellow-strip {
 			background: #fcd800;
 			padding: 20px;
-			padding-left: 30px;
+
+			@media screen and (min-width: 400px) {
+				padding-left: 30px;
+			}
 			display: flex;
 			justify-content: space-between;
 			@media screen and (min-width: 992px) {
@@ -1824,7 +1827,11 @@ body {
 				font-family: "Intro", Bold;
 				font-style: normal;
 				font-weight: bold;
-				font-size: 16px;
+				font-size: 14px;
+				@media screen and (min-width: 400px) {
+					font-size: 16px;
+				}
+
 				line-height: 24px;
 
 				text-align: center;
@@ -1837,7 +1844,7 @@ body {
 				font-family: "Intro", Book;
 				font-style: normal;
 				font-weight: normal;
-				font-size: 12px;
+				font-size: 10px;
 				@media screen and (min-width: 400px) {
 					font-size: 14px;
 				}
@@ -1864,10 +1871,16 @@ body {
 				@media screen and (max-width: 992px) {
 					height: 50px;
 					margin-left: 23px;
+
 				}
 
 				.inner-bold {
 					margin-left: 5px;
+				}
+				.inner-light{
+					@media screen and (min-width: 400px) {
+						font-size: 14px;
+					}
 				}
 			}
 		}
@@ -1982,6 +1995,10 @@ body {
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
+			@media screen and (max-width: 992px) {
+				padding: 0 !important;
+			}
+
 			padding: 17px 40px;
 			width: 100%;
 			max-width: 280px;
@@ -2157,4 +2174,57 @@ body {
 }
 .upgrade-link {
 	color: #2c2c2c;
+}
+
+.btn-1 {
+	font-family: "Intro", Regular;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.02em;
+	color: #2c2c2c;
+
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	width: 176px;
+	@media screen and (min-width: 992px) {
+		width: 280px;
+	}
+	
+	
+	height: 50px;
+	background: #ffffff;
+	border: 1px solid #f16e00;
+	box-sizing: border-box;
+	border-radius: 25px;
+	text-decoration: none !important;
+	margin-right: 0.5em;
+	
+}
+.btn-2 {
+	font-family: "Intro", Regular;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	text-align: center;
+	letter-spacing: 0.02em;
+	color: #2c2c2c;
+	text-decoration: none !important;
+	margin-left: 0.5em;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	width: 176px;
+	@media screen and (min-width: 992px) {
+		width: 280px;
+	}
+
+	height: 50px;
+	background: #f16e00;
+	border: 1px solid #f16e00;
+	box-sizing: border-box;
+	border-radius: 25px;
+	
 }

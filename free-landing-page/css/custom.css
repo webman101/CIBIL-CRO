@@ -1751,12 +1751,16 @@ body {
 .popop3 .popup3 .yellow-strip {
   background: #fcd800;
   padding: 20px;
-  padding-left: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 400px) {
+  .popop3 .popup3 .yellow-strip {
+    padding-left: 30px;
+  }
 }
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .yellow-strip {
@@ -1768,18 +1772,23 @@ body {
   font-family: "Intro", Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #006685;
   margin-left: 9px;
 }
+@media screen and (min-width: 400px) {
+  .popop3 .popup3 .yellow-strip .inner-bold {
+    font-size: 16px;
+  }
+}
 .popop3 .popup3 .yellow-strip .inner-light {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.02em;
@@ -1812,6 +1821,11 @@ body {
 }
 .popop3 .popup3 .yellow-strip .code .inner-bold {
   margin-left: 5px;
+}
+@media screen and (min-width: 400px) {
+  .popop3 .popup3 .yellow-strip .code .inner-light {
+    font-size: 14px;
+  }
 }
 .popop3 .popup3 .plans-radio-col {
   background: #ffffff;
@@ -1941,6 +1955,11 @@ body {
   letter-spacing: 0.02em;
   /* Accent Black */
   color: #2c2c2c;
+}
+@media screen and (max-width: 992px) {
+  .popop3 .popup3 .bttn-outline {
+    padding: 0 !important;
+  }
 }
 .popop3 .popup3 .d-flex {
   display: flex;
@@ -2089,4 +2108,56 @@ body {
 
 .upgrade-link {
   color: #2c2c2c;
+}
+
+.btn-1 {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 176px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #f16e00;
+  box-sizing: border-box;
+  border-radius: 25px;
+  text-decoration: none !important;
+  margin-right: 0.5em;
+}
+@media screen and (min-width: 992px) {
+  .btn-1 {
+    width: 280px;
+  }
+}
+
+.btn-2 {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  text-decoration: none !important;
+  margin-left: 0.5em;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 176px;
+  height: 50px;
+  background: #f16e00;
+  border: 1px solid #f16e00;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+@media screen and (min-width: 992px) {
+  .btn-2 {
+    width: 280px;
+  }
 }/*# sourceMappingURL=custom.css.map */
