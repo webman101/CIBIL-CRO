@@ -298,13 +298,28 @@ $('.quest-popup').click(function(e) {
 
 
 
-$(document).mouseup(function(e) 
-{
+$(document).mouseup(function(e) {
     var container = $(".quest-popup");
 
     // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0) 
-    {
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
         $('.tooltip-show').removeClass('ttol-show');
     }
+});
+$('.basic-plan-hide').addClass('hide');
+
+$('.col-1-active').click(function(e) {
+    e.preventDefault();
+
+
+    $('.basic-plan-hide').addClass('hide');
+
+});
+
+$('.col-2-active,.col-3-active').click(function(e) {
+    e.preventDefault();
+
+
+    $('.basic-plan-hide').removeClass('hide');
+
 });
