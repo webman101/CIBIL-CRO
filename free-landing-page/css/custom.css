@@ -2302,6 +2302,18 @@ body {
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+@media screen and (max-width: 992px) {
+  .modal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 105%;
+    width: 100%;
+    background-color: white;
+  }
+}
+
 .no-coupon .yellow-strip {
   display: none !important;
 }

@@ -2365,6 +2365,21 @@ body {
 		// bottom: 0;
 	}
 }
+.modal{
+	@media screen and (max-width: 992px) {
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 105%;
+			width: 100%;
+			background-color: white;
+			}
+	}
+	
+	
+}
 .no-coupon {
 	.yellow-strip {
 		display: none !important;
