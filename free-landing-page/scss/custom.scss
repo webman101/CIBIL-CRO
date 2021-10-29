@@ -2358,3 +2358,17 @@ body {
 		bottom: 0;
 	}
 }
+// .no-coupon{
+// 	.yellow-strip{
+// 		display: none !important;
+// 	}
+// }
+@media screen and (max-width: 992px) {
+	.fixed-height {
+		height: 350px;
+		overflow: auto;
+	}
+	.scroll-auto {
+		height: 400px;
+	}
+}
