@@ -323,3 +323,22 @@ $('.col-2-active,.col-3-active').click(function(e) {
     $('.basic-plan-hide').removeClass('hide');
 
 });
+$('.col-1-active').click(function(e) {
+    e.preventDefault();
+
+
+    $(".fixed-height").css({"height": "unset"});
+    $(".scroll-auto").css({"height": "unset"});
+
+});
+$('.col-2-active,.col-3-active').click(function(e) {
+    e.preventDefault();
+
+    $(".fixed-height").css({"height": "350px"});
+    $(".scroll-auto").css({"height": "400px"});
+
+
+});  
+       
+
+// scroll-auto

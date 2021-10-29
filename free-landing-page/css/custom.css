@@ -2305,11 +2305,6 @@ body {
 
 @media screen and (max-width: 992px) {
   .fixed-height {
-    height: 350px;
     overflow: auto;
-  }
-
-  .scroll-auto {
-    height: 400px;
   }
 }/*# sourceMappingURL=custom.css.map */
