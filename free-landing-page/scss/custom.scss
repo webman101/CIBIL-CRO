@@ -2341,8 +2341,6 @@ body {
 	@media screen and (max-width: 992px) {
 		margin-top: 80px;
 	}
-	
-	
 }
 .modal.fade .modal-dialog {
 	-webkit-transform: translate(0, 25%);
@@ -2360,7 +2358,7 @@ body {
 	-ms-transform: translate(0, 0);
 	-o-transform: translate(0, 0);
 	transform: translate(0, 0);
-	margin-top: 0;
+	// margin-top: 0;
 	@media screen and (max-width: 992px) {
 		// margin-top: 50px;
 		// position: absolute;
@@ -2371,13 +2369,18 @@ body {
 	.yellow-strip {
 		display: none !important;
 	}
-	.popop3 .popup3 {
-		height: 100vh;
-		.sticky-modal-footer {
-			padding-top: 30px;
+
+	@media screen and (max-width: 992px) {
+		.popop3,
+		.popup-outer {
+			height: 100vh;
 		}
-	}
-	@media screen and (max-width: 992px){
+		.popop3 .popup3 {
+			height: 100%;
+			.sticky-modal-footer {
+				padding-top: 30px;
+			}
+		}
 		.formobile-sticky {
 			position: sticky;
 			bottom: 0;
