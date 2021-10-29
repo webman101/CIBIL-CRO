@@ -1852,6 +1852,11 @@ body {
   left: 12px;
   right: unset;
 }
+@media screen and (max-width: 400px) {
+  .popop3 .popup3 .plans-radio-col .checkmark {
+    left: 10px;
+  }
+}
 .popop3 .popup3 .plans-radio-col input:checked ~ label {
   background: none;
   border: none;
@@ -1864,8 +1869,13 @@ body {
   border: 0px;
   box-shadow: none;
   border-radius: 4px;
-  padding: 10px 10px 5px;
+  padding: 10px 7px 5px;
   height: 100%;
+}
+@media screen and (max-width: 400px) {
+  .popop3 .popup3 label {
+    padding-left: 5px;
+  }
 }
 .popop3 .popup3 .checkmark {
   border-radius: 0;
@@ -1894,7 +1904,7 @@ body {
   font-family: "Intro", Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
 }
@@ -1905,7 +1915,7 @@ body {
 }
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .plans-radio-title {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1920,6 +1930,7 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
@@ -1927,6 +1938,11 @@ body {
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .plans-radio-price {
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 400px) {
+  .popop3 .popup3 .plans-radio-price {
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -2024,7 +2040,7 @@ body {
 .popop3 .plans-radio-col::after {
   content: "";
   position: absolute;
-  left: 18px;
+  left: 15px;
   top: 14px;
   width: 5px;
   height: 10px;
@@ -2032,6 +2048,11 @@ body {
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+@media screen and (min-width: 400px) {
+  .popop3 .plans-radio-col::after {
+    left: 18px;
+  }
 }
 .popop3 .modal-content {
   border: 0;
@@ -2259,4 +2280,24 @@ body {
 
 .ttol-show {
   display: flex !important;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, 25%);
+  -ms-transform: translate(0, 25%);
+  -o-transform: translate(0, 25%);
+  transform: translate(0, 25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -o-transform 0.3s ease-out;
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  margin-top: 0;
 }/*# sourceMappingURL=custom.css.map */

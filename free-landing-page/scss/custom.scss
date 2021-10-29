@@ -1906,7 +1906,11 @@ body {
 			}
 
 			.checkmark {
+				@media screen and (max-width: 400px) {
+					left: 10px;
+				}
 				left: 12px;
+
 				right: unset;
 			}
 		}
@@ -1922,7 +1926,11 @@ body {
 			border: 0px;
 			box-shadow: none;
 			border-radius: 4px;
-			padding: 10px 10px 5px;
+			@media screen and (max-width: 400px) {
+				padding-left: 5px;
+			}
+
+			padding: 10px 7px 5px;
 			height: 100%;
 		}
 		.checkmark {
@@ -1953,13 +1961,14 @@ body {
 			font-family: "Intro", Bold;
 			font-style: normal;
 			font-weight: bold;
-			font-size: 14px;
+			font-size: 12px;
+
 			@media screen and (max-width: 992px) {
 				margin-bottom: 0;
 			}
 
 			@media screen and (min-width: 400px) {
-				font-size: 16px;
+				font-size: 14px;
 			}
 
 			@media screen and (min-width: 992px) {
@@ -1980,7 +1989,10 @@ body {
 			@media screen and (max-width: 992px) {
 				margin-bottom: 0;
 			}
-
+			font-size: 12px;
+			@media screen and (min-width: 400px) {
+				font-size: 14px;
+			}
 			@media screen and (min-width: 992px) {
 				font-size: 16px;
 			}
@@ -2092,7 +2104,11 @@ body {
 		&::after {
 			content: "";
 			position: absolute;
-			left: 18px;
+			left: 15px;
+			@media screen and (min-width: 400px) {
+				left: 18px;
+			}
+
 			top: 14px;
 			width: 5px;
 			height: 10px;
@@ -2321,4 +2337,24 @@ body {
 }
 .ttol-show {
 	display: flex !important;
+}
+
+
+.modal.fade .modal-dialog {
+	-webkit-transform: translate(0, 25%);
+	-ms-transform: translate(0, 25%);
+	-o-transform: translate(0, 25%);
+	transform: translate(0, 25%);
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	-o-transition: -o-transform 0.3s ease-out;
+	transition: -webkit-transform 0.3s ease-out;
+	transition: transform 0.3s ease-out;
+	transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -o-transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0,0);
+	margin-top: 0;
 }
