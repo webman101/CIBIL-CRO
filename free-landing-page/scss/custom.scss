@@ -2338,7 +2338,11 @@ body {
 	display: flex !important;
 }
 .formobile-sticky {
-	margin-top: 80px;
+	@media screen and (max-width: 992px) {
+		margin-top: 80px;
+	}
+	
+	
 }
 .modal.fade .modal-dialog {
 	-webkit-transform: translate(0, 25%);
@@ -2363,11 +2367,25 @@ body {
 		// bottom: 0;
 	}
 }
-// .no-coupon{
-// 	.yellow-strip{
-// 		display: none !important;
-// 	}
-// }
+.no-coupon {
+	.yellow-strip {
+		display: none !important;
+	}
+	.popop3 .popup3 {
+		height: 100vh;
+		.sticky-modal-footer {
+			padding-top: 30px;
+		}
+	}
+	@media screen and (max-width: 992px){
+		.formobile-sticky {
+			position: sticky;
+			bottom: 0;
+			background: white;
+			box-shadow: 0px -20px 20px rgb(22 32 35 / 14%);
+		}
+	}
+}
 // @media screen and (max-width: 992px) {
 // 	.fixed-height {
 // 		overflow: auto;

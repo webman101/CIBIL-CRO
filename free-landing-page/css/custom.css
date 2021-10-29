@@ -2278,8 +2278,10 @@ body {
   display: flex !important;
 }
 
-.formobile-sticky {
-  margin-top: 80px;
+@media screen and (max-width: 992px) {
+  .formobile-sticky {
+    margin-top: 80px;
+  }
 }
 
 .modal.fade .modal-dialog {
@@ -2300,4 +2302,21 @@ body {
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
   margin-top: 0;
+}
+.no-coupon .yellow-strip {
+  display: none !important;
+}
+.no-coupon .popop3 .popup3 {
+  height: 100vh;
+}
+.no-coupon .popop3 .popup3 .sticky-modal-footer {
+  padding-top: 30px;
+}
+@media screen and (max-width: 992px) {
+  .no-coupon .formobile-sticky {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    box-shadow: 0px -20px 20px rgba(22, 32, 35, 0.14);
+  }
 }/*# sourceMappingURL=custom.css.map */
