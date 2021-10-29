@@ -323,18 +323,20 @@ $('.col-2-active,.col-3-active').click(function(e) {
     $('.basic-plan-hide').removeClass('hide');
 
 });
+$(".fixed-height").css({"height": "300px","padding-top":"35px"});
+
 $('.col-1-active').click(function(e) {
     e.preventDefault();
 
 
-    $(".fixed-height").css({"height": "unset"});
-    $(".scroll-auto").css({"height": "unset"});
+    $(".fixed-height").css({"height": "300px","padding-top":"35px"});
+    $(".scroll-auto").css({"height": "300px"});
 
 });
 $('.col-2-active,.col-3-active').click(function(e) {
     e.preventDefault();
 
-    $(".fixed-height").css({"height": "350px"});
+    $(".fixed-height").css({"height": "350px","padding-top":"80px"});
     $(".scroll-auto").css({"height": "400px"});
 
 
