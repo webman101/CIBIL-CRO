@@ -2333,4 +2333,7 @@ body {
     background: white;
     box-shadow: 0px -20px 20px rgba(22, 32, 35, 0.14);
   }
+}
+.no-coupon .popop3 .popup3 .sticky-modal-footer {
+  padding-top: 30px;
 }/*# sourceMappingURL=custom.css.map */
