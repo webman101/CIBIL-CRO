@@ -2302,8 +2302,11 @@ body {
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+.no-coupon .yellow-strip {
+  display: none !important;
+}
 @media screen and (max-width: 992px) {
-  .modal::before {
+  .no-coupon .modal::before {
     content: "";
     position: absolute;
     top: 0;
@@ -2312,10 +2315,6 @@ body {
     width: 100%;
     background-color: white;
   }
-}
-
-.no-coupon .yellow-strip {
-  display: none !important;
 }
 @media screen and (max-width: 992px) {
   .no-coupon .popop3,
