@@ -1720,6 +1720,7 @@ body {
 		background-color: #fff;
 		margin: auto;
 		max-width: 720px;
+		height: 100vh;
 		.sticky-modal-footer {
 			position: static;
 		}
@@ -2354,7 +2355,7 @@ body {
 	transform: translate(0, 0);
 	margin-top: 0;
 	@media screen and (max-width: 992px) {
-		margin-top: 50px;
+		// margin-top: 50px;
 		// position: absolute;
 		// bottom: 0;
 	}
