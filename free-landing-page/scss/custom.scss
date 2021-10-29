@@ -1906,10 +1906,7 @@ body {
 			}
 
 			.checkmark {
-				@media screen and (max-width: 400px) {
-					left: 10px;
-				}
-				left: 12px;
+				left: 10px;
 
 				right: unset;
 			}
@@ -1926,11 +1923,11 @@ body {
 			border: 0px;
 			box-shadow: none;
 			border-radius: 4px;
-			@media screen and (max-width: 400px) {
-				padding-left: 5px;
+			@media screen and (max-width: 600px) {
+				padding-left: 4px;
 			}
 
-			padding: 10px 7px 5px;
+			padding: 5px 0 5px;
 			height: 100%;
 		}
 		.checkmark {
@@ -2105,8 +2102,8 @@ body {
 			content: "";
 			position: absolute;
 			left: 15px;
-			@media screen and (min-width: 400px) {
-				left: 18px;
+			@media screen and (min-width: 992px) {
+				left: 17px;
 			}
 
 			top: 14px;
