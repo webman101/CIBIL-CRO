@@ -2300,4 +2300,10 @@ body {
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
   margin-top: 0;
+}
+@media screen and (max-width: 992px) {
+  .modal.in .modal-dialog {
+    position: absolute;
+    bottom: 0;
+  }
 }/*# sourceMappingURL=custom.css.map */

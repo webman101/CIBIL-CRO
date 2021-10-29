@@ -2339,7 +2339,6 @@ body {
 	display: flex !important;
 }
 
-
 .modal.fade .modal-dialog {
 	-webkit-transform: translate(0, 25%);
 	-ms-transform: translate(0, 25%);
@@ -2355,6 +2354,10 @@ body {
 	-webkit-transform: translate(0, 0);
 	-ms-transform: translate(0, 0);
 	-o-transform: translate(0, 0);
-	transform: translate(0,0);
+	transform: translate(0, 0);
 	margin-top: 0;
+	@media screen and (max-width: 992px) {
+		position: absolute;
+		bottom: 0;
+	}
 }
