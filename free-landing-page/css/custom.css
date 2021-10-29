@@ -1659,7 +1659,7 @@ body {
   background-color: #fff;
   margin: auto;
   max-width: 720px;
-  height: 100vh;
+  height: 100%;
 }
 .popop3 .popup3 .sticky-modal-footer {
   position: static;
@@ -2276,6 +2276,10 @@ body {
 
 .ttol-show {
   display: flex !important;
+}
+
+.formobile-sticky {
+  margin-top: 80px;
 }
 
 .modal.fade .modal-dialog {
