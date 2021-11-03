@@ -2224,7 +2224,7 @@ section.cibil-subscription .text-p p {
 }
 @media screen and (min-width: 1600px) {
   .slider .slider-row {
-    max-width: 1200px;
+   
   }
 }
 .slider .slider-row::after {
