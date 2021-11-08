@@ -37,7 +37,7 @@
 }
 
 .banner {
-  background-image: url(/img/bgbanner.png);
+  background-image: url(img/bgbanner.png);
   background-size: cover;
   padding: 40px 10px;
   background-repeat: no-repeat;
