@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .d-md-block {
+    display: block;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.banner {
+  background-image: url(img/bgbanner.png);
+  background-size: cover;
+  padding: 40px 10px;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    background-size: 100% 102%;
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .banner img {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner img {
+    width: 594px;
+  }
+}
+
+.text-block .title {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  margin-bottom: 11px;
+  letter-spacing: -0.01em;
+  color: #2c2c2c;
+}
+@media screen and (min-width: 992px) {
+  .text-block .title {
+    width: 600px;
+  }
+}
+.text-block p {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+.text-block p strong {
+  font-weight: 700;
+}
+.text-block p .discount {
+  font-weight: 700;
+  background-color: #fcd800;
+}
+.text-block .description {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .text-block .description {
+    margin-bottom: 50px;
+  }
+}
+.text-block .offer-code {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .text-block .offer-code {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .col-md-6 {
+    width: 594px;
+    max-width: 594px;
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 195px;
+  height: 50px;
+  background: #f16e00;
+  border-radius: 25px;
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c !important;
+  text-decoration: none !important;
+}
+@media screen and (max-width: 992px) {
+  .button {
+    margin: auto;
+  }
+}
+.button:hover {
+  background-color: #db6402;
+}
+
+.grid-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 992px) {
+  .grid-section {
+    padding-top: 45px;
+    padding-bottom: 60px;
+  }
+}
+
+.section-title {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  margin-bottom: 40px;
+}
+
+.grid {
+  min-height: 106px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 20px 10px;
+}
+@media screen and (max-width: 992px) {
+  .grid {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .grid {
+    max-width: 280px;
+  }
+}
+.grid h6 {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #707070;
+  margin-bottom: 8px;
+}
+.grid p {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #707070;
+}/*# sourceMappingURL=style.css.map */
