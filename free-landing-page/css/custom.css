@@ -1328,7 +1328,7 @@ body {
     max-width: 315px;
   }
   .free-landing-page .goals .goal {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
 }
 @media screen and (max-width: 385px) {
@@ -1630,12 +1630,12 @@ body {
   }
 }
 .goal {
-  min-height: 280px;
 }
 
 @media screen and (min-width: 1280px) {
   .goal {
     min-height: 247px;
+    
   }
 }
 .popop3 .popup-outer {
