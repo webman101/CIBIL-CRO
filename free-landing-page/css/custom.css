@@ -370,16 +370,9 @@ body {
 .subscriptionBenefits .light-white-bg {
   background: rgba(255, 255, 255, 0.15);
 }
-.subscriptionBenefits .light-blue-gradient {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3ea3ce),
-    color-stop(27.33%, #3ea3ce),
-    color-stop(149.5%, rgba(62, 163, 206, 0))
-  );
-  background: linear-gradient(180deg, #3ea3ce 0, #3ea3ce 27.33%, rgba(62, 163, 206, 0) 149.5%);
+.subscriptionBenefits .light-blue-gradient {	
+  background: -webkit-gradient(linear, left top, left bottom, from(#3ea3ce), color-stop(27.33%, #3ea3ce), color-stop(149.5%, rgba(62, 163, 206, 0)));	
+  background: linear-gradient(180deg, #3ea3ce 0, #3ea3ce 27.33%, rgba(62, 163, 206, 0) 149.5%);	
 }
 .subscriptionBenefits .light-yellow-bg {
   background: rgba(252, 216, 51, 0.15);
@@ -1678,7 +1671,6 @@ body {
   background-color: #fff;
   margin: auto;
   max-width: 720px;
-  height: 100%;
 }
 .popop3 .popup3 .sticky-modal-footer {
   position: static;
