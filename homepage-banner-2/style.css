@@ -86,7 +86,6 @@
   }
 }
 .text-block .description {
-  margin-bottom: 0;
   font-size: 16px;
 }
 @media screen and (max-width: 992px) {
