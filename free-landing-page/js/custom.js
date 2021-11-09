@@ -312,6 +312,7 @@ $(".btn-2").attr("href", "https://myscore.cibil.com/CreditView/enrollShort.page?
 $('.col-1-active').click(function(e) {
     e.preventDefault();
     $(".btn-2").attr("href", "https://myscore.cibil.com/CreditView/enrollShort.page?enterprise=CIBIL&amp;offer=1M550RM")
+    $('.base-plan-coupon .yellow-strip').removeClass('hide');
 
     $('.basic-plan-hide').addClass('hide');
 
@@ -322,7 +323,7 @@ $('.col-2-active').click(function(e) {
     $(".btn-2").attr("href", "https://myscore.cibil.com/CreditView/enrollShort.page?enterprise=CIBIL&amp;offer=6M800RM")
 
     $('.basic-plan-hide').removeClass('hide');
-
+    $('.base-plan-coupon .yellow-strip').addClass('hide');
 });
 $('.col-3-active').click(function(e) {
     e.preventDefault();
@@ -330,5 +331,7 @@ $('.col-3-active').click(function(e) {
     $(".btn-2").attr("href", "https://myscore.cibil.com/CreditView/enrollShort.page?enterprise=CIBIL&amp;offer=1Y1200RM")
 
     $('.basic-plan-hide').removeClass('hide');
+    $('.base-plan-coupon .yellow-strip').addClass('hide');
+
 
 });

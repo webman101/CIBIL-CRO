@@ -1833,7 +1833,7 @@ body {
 			}
 
 			align-items: center;
-			margin-top: 20px;
+			// margin-top: 20px;
 			margin-bottom: 20px;
 			.inner-bold {
 				font-family: "Intro", Bold;
@@ -2409,12 +2409,8 @@ body {
 		}
 	}
 }
-// @media screen and (max-width: 992px) {
-// 	.fixed-height {
-// 		overflow: auto;
-// 	}
-// 	.scroll-auto {
-// 		// height: 400px;
-
-// 	}
-// }
+@media screen and (max-width: 992px) {
+	.fixed-height {
+		margin-bottom: 20px;
+	}
+}

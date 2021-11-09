@@ -2337,3 +2337,8 @@ body {
 .no-coupon .popop3 .popup3 .sticky-modal-footer {
   padding-top: 30px;
 }/*# sourceMappingURL=custom.css.map */
+@media screen and (min-width: 992px) {
+  .base-plan-coupon .fixed-height {
+    margin-bottom: 30px;
+  }
+}
