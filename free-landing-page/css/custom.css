@@ -371,7 +371,14 @@ body {
   background: rgba(255, 255, 255, 0.15);
 }
 .subscriptionBenefits .light-blue-gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#3ea3ce), color-stop(27.33%, #3ea3ce), color-stop(149.5%, rgba(62, 163, 206, 0)));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#3ea3ce),
+    color-stop(27.33%, #3ea3ce),
+    color-stop(149.5%, rgba(62, 163, 206, 0))
+  );
   background: linear-gradient(180deg, #3ea3ce 0, #3ea3ce 27.33%, rgba(62, 163, 206, 0) 149.5%);
 }
 .subscriptionBenefits .light-yellow-bg {
@@ -1635,7 +1642,6 @@ body {
 @media screen and (min-width: 1280px) {
   .goal {
     min-height: 247px;
-    
   }
 }
 .popop3 .popup-outer {
@@ -2318,7 +2324,7 @@ body {
 }
 @media screen and (max-width: 992px) {
   .no-coupon .popop3,
-.no-coupon .popup-outer {
+  .no-coupon .popup-outer {
     height: 100vh;
   }
   .no-coupon .popop3 .popup3 {
@@ -2336,7 +2342,16 @@ body {
 }
 .no-coupon .popop3 .popup3 .sticky-modal-footer {
   padding-top: 30px;
-}/*# sourceMappingURL=custom.css.map */
+} /*# sourceMappingURL=custom.css.map */
+@media screen and (max-width: 992px) {
+  .base-plan-coupon .sticky-modal-footer {
+    padding-top: 20px !important;
+  }
+  .base-plan-coupon .yellow-strip{
+    margin-bottom: 0 !important;
+  }
+    
+}
 @media screen and (min-width: 992px) {
   .base-plan-coupon .fixed-height {
     margin-bottom: 30px;
