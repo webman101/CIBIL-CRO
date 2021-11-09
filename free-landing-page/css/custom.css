@@ -1856,8 +1856,13 @@ body {
   }
 }
 .popop3 .popup3 .plans-radio-col .checkmark {
-  left: 11px;
-  right: unset;
+  left: 9px;
+}
+@media screen and (min-width: 992px) {
+  .popop3 .popup3 .plans-radio-col .checkmark {
+    left: 11px;
+    right: unset;
+  }
 }
 .popop3 .popup3 .plans-radio-col input:checked ~ label {
   background: none;
