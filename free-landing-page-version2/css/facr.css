@@ -1844,7 +1844,6 @@ body {
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .yellow-strip .code {
     height: 30px;
-    margin-left: 23px;
   }
 }
 .popop3 .popup3 .yellow-strip .code .inner-bold {
@@ -1865,7 +1864,7 @@ body {
 .mobile-flex-coupon img {
   height: 15px;
   width: 15px;
-  margin-right: 6px;
+  margin-right: 14px;
 }
 .mobile-flex-coupon .inner-bold {
   margin-left: 0 !important;
@@ -2309,7 +2308,6 @@ body {
 
 .arrotool {
   position: relative;
-  margin-right: -6px;
   cursor: pointer;
 }
 .tooltip-show::after {
