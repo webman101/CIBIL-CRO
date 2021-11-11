@@ -293,7 +293,7 @@
         letter-spacing: 0.02em;
         color: #2c2c2c;
         position: relative;
-        span{
+        span {
             position: relative;
             z-index: 2;
         }
@@ -301,15 +301,17 @@
             content: "";
             position: absolute;
             width: 102%;
-            height: 105%;
+            height: 101%;
             left: -2px;
-            top: -2%;
+            top: 0;
             background: #fcd800;
+            bottom: 0;
+            transform: translateY(0px);
         }
     }
     .column-footer {
         height: 30px;
-        background: #F9F9F9;
+        background: #f9f9f9;
         display: flex;
         align-items: center;
         text-align: center;
@@ -343,7 +345,7 @@
         border-top-right-radius: 6px;
         transform: translateY(-3px);
     }
-    .save::before{
+    .save::before {
         display: none;
     }
 }
@@ -421,6 +423,7 @@
     box-sizing: border-box;
     border-radius: 8px;
     padding: 30px;
+    margin-top: -3px;
 }
 .verify-card-text h3 {
     font-weight: bold;

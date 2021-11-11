@@ -299,14 +299,16 @@
   content: "";
   position: absolute;
   width: 102%;
-  height: 105%;
+  height: 101%;
   left: -2px;
-  top: -2%;
+  top: 0;
   background: #fcd800;
+  bottom: 0;
+  transform: translateY(0px);
 }
 .interstial-container .column-footer {
   height: 30px;
-  background: #F9F9F9;
+  background: #f9f9f9;
   display: flex;
   align-items: center;
   text-align: center;
@@ -408,6 +410,7 @@
   box-sizing: border-box;
   border-radius: 8px;
   padding: 30px;
+  margin-top: -3px;
 }
 
 .verify-card-text h3 {
