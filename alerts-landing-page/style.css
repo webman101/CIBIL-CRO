@@ -95,6 +95,11 @@
 .banner {
   background: #f9f9f9;
 }
+@media screen and (max-width: 992px) {
+  .banner {
+    padding-top: 30px;
+  }
+}
 .banner .title {
   font-family: "Intro", Bold;
   font-style: normal;
@@ -205,6 +210,9 @@
   color: #2c2c2c;
 }
 
+.interstial-container {
+  padding-bottom: 30px;
+}
 @media screen and (min-width: 992px) {
   .interstial-container {
     padding-bottom: 100px !important;
