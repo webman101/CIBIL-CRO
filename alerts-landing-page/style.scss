@@ -66,6 +66,26 @@
         background-color: #db6402;
     }
 }
+.button-outline {
+    background: #ffffff !important;
+    /* Secondary Orange */
+
+    border: 1px solid #f16e00;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+.blue-title {
+    font-family: "Intro", Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #00a6ca;
+}
 .banner {
     background: #f9f9f9;
     .title {
@@ -170,11 +190,8 @@
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
-            /* or 150% */
 
             letter-spacing: 0.02em;
-
-            /* Accent Black */
 
             color: #2c2c2c;
         }
@@ -188,10 +205,11 @@
     }
 
     .col-md-5.equal-column {
-        max-width: 457px;
     }
     .col-md-7.equal-column {
-        max-width: 730px;
+        @media screen and (min-width: 992px) {
+            padding-right: 5px;
+        }
     }
     .right-coulumn-section {
         display: flex;
@@ -215,6 +233,13 @@
         margin-right: 20px;
         &:last-child {
             margin-right: 0;
+        }
+        .button {
+            position: absolute;
+            bottom: -80px;
+            left: 0;
+            right: 0;
+            width: unset;
         }
     }
 
@@ -410,49 +435,18 @@
 }
 .active {
     .column-footer {
-        position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        // &::after{
-        //     content: "";
-        //     position: absolute;
-        //     width: 103%;
-        //     height: 101%;
-        //     left: -2px;
-        //     bottom: -5%;
-        //     background: #dddddd;
-        // }
+    }
+}
+.features-mobile-section {
+    .top-head {
+        min-height: 0;
     }
 }
 
-.right-button-section {
-    .column-outer {
-        position: relative;
-        padding: 0;
-        max-width: 175px;
-        border: none;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        text-align: center;
-        background-color: white;
-        .column {
-            border: none;
-            padding: 0;
-            width: 100%;
-            button {
-                width: 100%;
-                padding: 0;
-                min-width: unset !important;
-                height: 52px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 0;
-            }
-        }
-    }
+.column-outer {
 }
 
 .col-1-link {
@@ -515,4 +509,169 @@
 }
 .interstial-container {
     background: #f9f9f9;
+}
+.nav {
+    display: flex;
+    margin-top: 50px;
+    li {
+        flex: 1;
+        position: relative;
+        padding-left: 16px;
+        padding-top: 15px;
+        background: #f9f9f9;
+
+        border: 1px solid #acacac;
+        box-sizing: border-box;
+        border-bottom: 0;
+        &.base-plan {
+            border-right: 0;
+            &.active::after {
+                width: 100.5%;
+            }
+        }
+        &.base-standard {
+            border-left: 0;
+            &.active {
+                &::after {
+                    width: 100.5%;
+                    left: -0.5px;
+                }
+                span {
+                    margin-left: -16.3px;
+                }
+            }
+            border-top-right-radius: 6px;
+        }
+        &.active {
+            background-color: #fff;
+            border: 2px solid #00a6ca;
+            border-bottom: 0;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                height: 5px;
+                bottom: -5px;
+                left: 0;
+                background: #fff;
+                width: 100%;
+            }
+        }
+        .tag-intabs {
+            position: absolute;
+            top: -31px;
+            width: 100%;
+            left: 0;
+        }
+        .plan-name {
+            font-family: "Intro", Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+
+            color: #707070;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-family: "Intro", Bold;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            color: #2c2c2c;
+            margin-top: 0;
+        }
+        h4 {
+            font-family: "Intro", Regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 24px;
+
+            letter-spacing: 0.02em;
+
+            color: #2c2c2c;
+            margin-top: 0;
+        }
+        h6 {
+            font-family: "Intro", Regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 9px;
+
+            color: #707070;
+            margin-top: 0;
+        }
+        span {
+            background: #fcd800;
+            width: 84px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -16.1px;
+            font-family: "Intro", Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #2c2c2c;
+            margin-bottom: -0.5px;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .most-popular::after {
+        top: 0;
+    }
+}
+.tab-content {
+    button.button.full-width-button {
+        width: 100%;
+        margin-bottom: 30px;
+        border: 0;
+    }
+    .tab-pane {
+        padding: 20px;
+        &.active {
+            background-color: #fff;
+            border: 2px solid #00a6ca;
+        }
+    }
+    .small-right {
+        width: 21px !important;
+        height: 12px !important;
+        margin-top: 5px;
+    }
+    .feature {
+        border: 0;
+        padding: 0;
+        min-height: 0;
+        margin-bottom: 14px;
+        font-family: "Intro", Book;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        align-items: flex-start;
+        p {
+            margin-bottom: 0;
+        }
+    }
 }
