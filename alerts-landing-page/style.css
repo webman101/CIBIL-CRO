@@ -683,6 +683,7 @@
 }
 .score-simulator-lp .save.bg-white::before {
   background-color: white;
+  width: 0;
 }
 .score-simulator-lp .nav li.base-plan {
   border-right: 1px solid #acacac;
