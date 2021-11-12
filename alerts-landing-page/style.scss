@@ -712,25 +712,31 @@
     .border-right-0 {
         border-right: 0 !important;
     }
-   @media screen and (max-width: 400px) {
-    .nav li span {
-        margin-left: -7px;
-        margin-bottom: -0.4px;
+    @media screen and (max-width: 400px) {
+        .nav li span {
+            margin-left: -7px;
+            margin-bottom: -0.4px;
+        }
+
+        .nav li.active span {
+            margin-left: -8px;
+            margin-bottom: -3px;
+        }
+        .base-standard.active span {
+            margin-left: -7.1px !important;
+        }
     }
 
-    .nav li.active span {
-        margin-left: -8px;
-        margin-bottom: -3px;
-    }
-    .base-standard.active span {
-        margin-left: -7.1px !important;
-    }
-   }
-   
-   
     .nav li {
         @media screen and (max-width: 400px) {
             padding-left: 7px;
         }
+    }
+    .interstial-container .most-popular::after {
+        width: 102%;
+        left: -1 px;
+    }
+    .interstial-container .base-plan.active .most-popular::after {
+        width: 104%;
     }
 }

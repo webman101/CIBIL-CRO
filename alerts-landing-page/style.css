@@ -716,4 +716,11 @@
   .score-simulator-lp .nav li {
     padding-left: 7px;
   }
+}
+.score-simulator-lp .interstial-container .most-popular::after {
+  width: 102%;
+  left: -1 px;
+}
+.score-simulator-lp .interstial-container .base-plan.active .most-popular::after {
+  width: 104%;
 }/*# sourceMappingURL=style.css.map */
