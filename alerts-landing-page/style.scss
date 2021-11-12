@@ -725,6 +725,9 @@
         .base-standard.active span {
             margin-left: -7.1px !important;
         }
+        .nav li h6 {
+            font-size: 13px;
+        }
     }
 
     .nav li {
@@ -738,5 +741,11 @@
     }
     .interstial-container .base-plan.active .most-popular::after {
         width: 104%;
+    }
+    @media screen and (max-width: 992px) {
+        .banner .row-reverse {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

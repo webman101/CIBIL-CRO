@@ -711,6 +711,9 @@
   .score-simulator-lp .base-standard.active span {
     margin-left: -7.1px !important;
   }
+  .score-simulator-lp .nav li h6 {
+    font-size: 13px;
+  }
 }
 @media screen and (max-width: 400px) {
   .score-simulator-lp .nav li {
@@ -723,4 +726,10 @@
 }
 .score-simulator-lp .interstial-container .base-plan.active .most-popular::after {
   width: 104%;
+}
+@media screen and (max-width: 992px) {
+  .score-simulator-lp .banner .row-reverse {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
