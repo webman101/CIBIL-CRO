@@ -93,11 +93,7 @@
 .text-block .description {
   margin-bottom: 30px;
 }
-@media screen and (min-width: 992px) {
-  .text-block .description {
-    margin-bottom: 50px;
-  }
-}
+
 .text-block .offer-code {
   margin-bottom: 30px;
 }
