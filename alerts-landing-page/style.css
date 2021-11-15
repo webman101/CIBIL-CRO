@@ -710,7 +710,7 @@
 @media screen and (max-width: 400px) {
   .score-simulator-lp .nav li span {
     margin-left: -7px;
-    margin-bottom: 0.5px;
+    margin-bottom: 0.2px;
   }
   .score-simulator-lp .nav li.active span {
     margin-left: -7.1px;
