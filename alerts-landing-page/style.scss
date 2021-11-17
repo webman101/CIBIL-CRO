@@ -95,7 +95,15 @@
             right: 0;
             margin: auto;
         }
+      
     }
+    @media screen and (max-width: 1366px) {
+        .col-md-7 {
+            transform: translateY(-35px);
+        }
+    }
+    
+    
 
     background: #f9f9f9;
     .banner-image {
@@ -107,6 +115,10 @@
     }
 
     .title {
+        @media screen and (max-width: 1200px) {
+            font-size: 25px;
+            line-height: 30px;
+        }
         font-family: "Intro", Bold;
         font-style: normal;
         font-weight: bold;
@@ -118,6 +130,11 @@
         color: #2c2c2c;
     }
     .description {
+        @media screen and (max-width: 1200px) {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 10px 0 20px;
+        }
         font-family: "Intro", Regular;
         font-style: normal;
         font-weight: normal;
