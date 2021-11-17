@@ -95,6 +95,17 @@
 .banner {
   background: #f9f9f9;
 }
+.banner .position-float {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.banner .banner-image {
+  width: 100%;
+  display: block;
+}
 @media screen and (max-width: 992px) {
   .banner {
     padding-top: 30px;

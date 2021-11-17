@@ -87,8 +87,18 @@
     color: #00a6ca;
 }
 .banner {
+    .position-float {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
     background: #f9f9f9;
-
+    .banner-image {
+        width: 100%;
+        display: block;
+    }
     @media screen and (max-width: 992px) {
         padding-top: 30px;
     }
@@ -503,12 +513,11 @@
         align-items: center;
         @media screen and (min-width: 992px) {
             align-items: flex-start;
-            &.first-feature{
+            &.first-feature {
                 padding-top: 25px;
             }
         }
-        
-        
+
         border-top: 1px solid #dddddd;
         padding: 15px 0;
         min-height: 78px;
