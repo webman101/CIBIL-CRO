@@ -87,13 +87,16 @@
     color: #00a6ca;
 }
 .banner {
-    .position-float {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+    @media screen and (min-width: 992px) {
+        .position-float {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
     }
+
     background: #f9f9f9;
     .banner-image {
         width: 100%;
