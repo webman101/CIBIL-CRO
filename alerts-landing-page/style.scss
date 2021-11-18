@@ -55,7 +55,7 @@
     line-height: 16px;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #2c2c2c !important;
+    color: #000 !important;
     text-decoration: none !important;
 
     @media screen and (max-width: 992px) {
@@ -148,7 +148,7 @@
 
         letter-spacing: -0.01em;
 
-        color: #2c2c2c;
+        color: #000;
     }
     .description {
         @media screen and (max-width: 1200px) {
