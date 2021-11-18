@@ -73,6 +73,28 @@
   background-color: #db6402;
 }
 
+@media screen and (max-width: 992px) {
+  .pt-sm-0 {
+    padding-top: 0 !important;
+  }
+}
+.button-yellow {
+  background: #FCD800;
+  width: auto;
+  max-width: 308px;
+  font-weight: 700;
+}
+.button-yellow:hover {
+  background-color: #FCD800;
+}
+
+.button-yellow-yellow {
+  background: #ffffff !important;
+  border: 1px solid #FCD800 !important;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
 .button-outline {
   background: #ffffff !important;
   /* Secondary Orange */
@@ -93,6 +115,7 @@
 }
 
 .banner {
+  position: relative;
   background: #f9f9f9;
 }
 @media screen and (min-width: 992px) {
@@ -102,6 +125,7 @@
     left: 0;
     right: 0;
     margin: auto;
+    bottom: 0;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1366px) {
@@ -148,6 +172,9 @@
     line-height: 24px;
     margin: 10px 0 20px;
   }
+}
+.banner .row {
+  height: 100%;
 }
 @media screen and (max-width: 992px) {
   .banner .row-reverse {

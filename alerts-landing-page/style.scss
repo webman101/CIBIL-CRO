@@ -66,6 +66,29 @@
         background-color: #db6402;
     }
 }
+@media screen and (max-width: 992px) {
+    .pt-sm-0{
+        padding-top: 0 !important;
+    }
+}
+
+
+.button-yellow{
+    background: #FCD800;
+    width: auto;
+    max-width: 308px;
+    font-weight: 700;
+    &:hover {
+        background-color: #FCD800;
+    }
+}
+.button-yellow-yellow{
+    background: #ffffff !important;
+
+    border: 1px solid #FCD800 !important;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
 .button-outline {
     background: #ffffff !important;
     /* Secondary Orange */
@@ -87,6 +110,7 @@
     color: #00a6ca;
 }
 .banner {
+    position: relative;
     @media screen and (min-width: 992px) {
         .position-float {
             position: absolute;
@@ -94,6 +118,8 @@
             left: 0;
             right: 0;
             margin: auto;
+            bottom: 0;
+            
         }
     }
     @media only screen and (min-width: 600px) and (max-width: 1366px) {
@@ -140,6 +166,9 @@
 
         color: #2c2c2c;
         margin: 30px 0 40px;
+    }
+    .row {
+        height: 100%;
     }
     @media screen and (max-width: 992px) {
         .row-reverse {
