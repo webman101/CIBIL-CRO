@@ -237,15 +237,16 @@
 }
 .col-grid .grid {
   display: flex;
-  align-items: flex-start;
   padding: 12px;
   border: 1px solid #dddddd;
   box-sizing: border-box;
   border-radius: 4px;
   height: 100%;
+  align-items: center;
 }
 @media screen and (max-width: 992px) {
   .col-grid .grid {
+    align-items: flex-start;
     margin-bottom: 20px;
     height: 111px;
     padding-top: 15px;
