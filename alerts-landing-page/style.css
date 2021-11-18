@@ -182,8 +182,6 @@
     flex-direction: column-reverse;
     padding-bottom: 30px;
     text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   .banner .row-reverse .title {
     font-size: 32px;
