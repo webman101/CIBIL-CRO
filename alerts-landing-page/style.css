@@ -248,8 +248,9 @@
   .col-grid .grid {
     align-items: flex-start;
     margin-bottom: 20px;
-    height: 111px;
-    padding-top: 15px;
+    min-height: 109px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 .col-grid .grid img {
@@ -766,8 +767,10 @@
   display: none;
 }
 
-.option-orange .interstial-container {
-  padding-top: 70px;
+@media screen and (min-width: 992px) {
+  .option-orange .interstial-container {
+    padding-top: 70px;
+  }
 }
 .option-orange .button-yellow {
   display: none;
