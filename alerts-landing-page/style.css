@@ -155,8 +155,8 @@
     flex-direction: column-reverse;
     padding-bottom: 30px;
     text-align: center;
-    padding-left: 26px;
-    padding-right: 26px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .banner .row-reverse .title {
     font-size: 32px;
@@ -212,7 +212,7 @@
 }
 .col-grid .grid {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 12px;
   border: 1px solid #dddddd;
   box-sizing: border-box;
@@ -237,6 +237,7 @@
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+  margin-bottom: 0;
 }
 
 .interstial-container {
@@ -563,6 +564,11 @@
   border: 1px solid #acacac;
   box-sizing: border-box;
   border-bottom: 0;
+}
+@media screen and (max-width: 992px) {
+  .nav li {
+    flex: 1;
+  }
 }
 .nav li.base-plan {
   border-right: 0;
