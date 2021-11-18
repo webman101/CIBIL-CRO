@@ -766,6 +766,9 @@
   display: none;
 }
 
+.option-orange .interstial-container {
+  padding-top: 70px;
+}
 .option-orange .button-yellow {
   display: none;
 }
