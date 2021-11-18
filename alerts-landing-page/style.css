@@ -536,9 +536,6 @@
   min-height: 78px;
 }
 @media screen and (min-width: 992px) {
-  .features-grid .feature {
-    align-items: flex-start;
-  }
   .features-grid .feature.first-feature {
     padding-top: 25px;
   }
