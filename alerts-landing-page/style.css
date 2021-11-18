@@ -104,7 +104,7 @@
     margin: auto;
   }
 }
-@media screen and (max-width: 1366px) {
+@media only screen and (min-width: 600px) and (max-width: 1366px) {
   .banner .col-md-7 {
     transform: translateY(-35px);
   }
