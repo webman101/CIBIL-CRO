@@ -237,7 +237,7 @@
 }
 .col-grid .grid {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 12px;
   border: 1px solid #dddddd;
   box-sizing: border-box;
@@ -248,6 +248,7 @@
   .col-grid .grid {
     margin-bottom: 20px;
     height: 111px;
+    padding-top: 15px;
   }
 }
 .col-grid .grid img {
