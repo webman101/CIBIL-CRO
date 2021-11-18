@@ -222,6 +222,7 @@
 @media screen and (max-width: 992px) {
   .col-grid .grid {
     margin-bottom: 20px;
+    height: 111px;
   }
 }
 .col-grid .grid img {
@@ -238,6 +239,21 @@
   letter-spacing: 0.02em;
   color: #2c2c2c;
   margin-bottom: 0;
+}
+
+.alerts-lp .equal-column {
+  max-width: 643px;
+}
+.alerts-lp .column-outer {
+  width: 160px;
+  flex: unset;
+}
+.alerts-lp .equal-column {
+  width: auto;
+}
+.alerts-lp .alert-page-row {
+  display: flex;
+  justify-content: center;
 }
 
 .interstial-container {

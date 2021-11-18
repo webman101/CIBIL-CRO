@@ -207,6 +207,7 @@
         height: 100%;
         @media screen and (max-width: 992px) {
             margin-bottom: 20px;
+            height: 111px;
         }
 
         img {
@@ -228,7 +229,22 @@
         }
     }
 }
-
+.alerts-lp{
+    .equal-column{
+        max-width: 643px;
+    }
+    .column-outer{
+        width: 160px;
+        flex: unset;
+    }
+    .equal-column{
+        width: auto;
+    }
+    .alert-page-row{
+        display: flex;
+        justify-content: center;
+    }
+}
 .interstial-container {
     padding-bottom: 30px;
     padding-top: 20px;
