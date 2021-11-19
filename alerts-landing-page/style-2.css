@@ -116,9 +116,13 @@
 
 .banner {
   position: relative;
+  padding-top: 0;
   background: #f9f9f9;
 }
 @media screen and (min-width: 992px) {
+  .banner {
+    padding-top: 43px;
+  }
   .banner .position-float {
     position: absolute;
     top: 0;
@@ -136,11 +140,6 @@
 .banner .banner-image {
   width: 100%;
   display: block;
-}
-@media screen and (max-width: 992px) {
-  .banner {
-    padding-top: 30px;
-  }
 }
 .banner .title {
   font-family: "Intro", Bold;

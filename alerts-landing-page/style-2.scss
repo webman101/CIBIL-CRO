@@ -110,7 +110,9 @@
 }
 .banner {
     position: relative;
+    padding-top: 0;
     @media screen and (min-width: 992px) {
+        padding-top: 43px;
         .position-float {
             position: absolute;
             top: 0;
@@ -130,9 +132,6 @@
     .banner-image {
         width: 100%;
         display: block;
-    }
-    @media screen and (max-width: 992px) {
-        padding-top: 30px;
     }
 
     .title {
