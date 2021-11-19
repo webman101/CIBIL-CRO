@@ -116,7 +116,7 @@
 
 .banner {
   position: relative;
-  padding-top: 0;
+  padding-top: 20px;
   background: #f9f9f9;
 }
 @media screen and (min-width: 992px) {
