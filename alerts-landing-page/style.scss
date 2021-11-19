@@ -226,7 +226,7 @@
 
     .grid {
         display: flex;
-        
+
         padding: 12px;
         border: 1px solid #dddddd;
         box-sizing: border-box;
@@ -235,8 +235,7 @@
         @media screen and (max-width: 992px) {
             align-items: flex-start;
             margin-bottom: 20px;
-            min-height: 109px;
-            padding-top: 20px;
+            min-height: 101px;
             padding-bottom: 20px;
         }
         align-items: center;
@@ -253,7 +252,7 @@
             line-height: 24px;
 
             letter-spacing: 0.02em;
-
+            padding-top: 7px;
             color: #2c2c2c;
             margin-bottom: 0;
         }
@@ -769,18 +768,17 @@
     display: none;
 }
 .option-yellow {
-    .col-grid,.button-orange,
+    .col-grid,
+    .button-orange,
     .option-orange-section {
         display: none;
     }
 }
 .option-orange {
-    .interstial-container{
-      @media screen and (min-width: 992px) {
-        padding-top: 70px;
-      }
-      
-      
+    .interstial-container {
+        @media screen and (min-width: 992px) {
+            padding-top: 70px;
+        }
     }
     .button-yellow {
         display: none;

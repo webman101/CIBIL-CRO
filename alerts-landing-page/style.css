@@ -248,8 +248,7 @@
   .col-grid .grid {
     align-items: flex-start;
     margin-bottom: 20px;
-    min-height: 109px;
-    padding-top: 20px;
+    min-height: 101px;
     padding-bottom: 20px;
   }
 }
@@ -265,6 +264,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
+  padding-top: 7px;
   color: #2c2c2c;
   margin-bottom: 0;
 }
@@ -762,7 +762,8 @@
   display: none;
 }
 
-.option-yellow .col-grid, .option-yellow .button-orange,
+.option-yellow .col-grid,
+.option-yellow .button-orange,
 .option-yellow .option-orange-section {
   display: none;
 }
