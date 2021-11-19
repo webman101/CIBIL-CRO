@@ -67,25 +67,24 @@
     }
 }
 @media screen and (max-width: 992px) {
-    .pt-sm-0{
+    .pt-sm-0 {
         padding-top: 0 !important;
     }
 }
 
-
-.button-yellow{
-    background: #FCD800;
+.button-yellow {
+    background: #fcd800;
     width: auto;
     max-width: 308px;
     font-weight: 700;
     &:hover {
-        background-color: #FCD800;
+        background-color: #fcd800;
     }
 }
-.button-yellow-yellow{
+.button-outline-yellow {
     background: #ffffff !important;
 
-    border: 1px solid #FCD800 !important;
+    border: 1px solid #fcd800 !important;
     box-sizing: border-box;
     border-radius: 25px;
 }
@@ -119,7 +118,6 @@
             right: 0;
             margin: auto;
             bottom: 0;
-            
         }
     }
     @media only screen and (min-width: 600px) and (max-width: 1366px) {
@@ -228,7 +226,7 @@
 
     .grid {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         padding: 12px;
         border: 1px solid #dddddd;
         box-sizing: border-box;
@@ -250,6 +248,9 @@
             font-weight: normal;
             font-size: 16px;
             line-height: 24px;
+            @media screen and (max-width: 992px) {
+                margin-top: 7px;
+            }
 
             letter-spacing: 0.02em;
 
@@ -258,19 +259,22 @@
         }
     }
 }
-.alerts-lp{
-    
-    .equal-column{
-        max-width: 643px;
+@media screen and (max-width: 992px) {
+    .px-sm-0 {
+        padding-left: 0;
+        padding-right: 0;
     }
-    .column-outer{
+}
+
+.score-simulator-lp {
+    .column-outer {
         width: 160px;
         flex: unset;
     }
-    .equal-column{
+    .equal-column {
         width: auto;
     }
-    .alert-page-row{
+    .score-simulator-row {
         display: flex;
         justify-content: center;
     }
@@ -526,6 +530,8 @@
 }
 
 .column-outer {
+    @media screen and (min-width: 992px) {
+    }
 }
 
 .col-1-link {
@@ -546,6 +552,10 @@
     border-radius: 8px;
     padding: 30px;
     margin-top: -3px;
+
+    @media screen and (min-width: 992px) {
+        width: 463px;
+    }
 }
 .verify-card-text h3 {
     font-weight: bold;
@@ -831,5 +841,21 @@
             padding-left: 0;
             padding-right: 0;
         }
+    }
+}
+.yellow-theme {
+    .button-orange {
+        display: none;
+    }
+    .orange-section {
+        display: none;
+    }
+}
+.orange-theme {
+    .button-outline-yellow,.button-yellow {
+        display: none;
+    }
+    .yellow-section {
+        display: none;
     }
 }
