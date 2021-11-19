@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -90,7 +92,6 @@
 }
 .button-outline {
     background: #ffffff !important;
-    /* Secondary Orange */
 
     border: 1px solid #f16e00;
     box-sizing: border-box;
@@ -120,13 +121,11 @@
             bottom: 0;
         }
     }
-    @media only screen and (min-width: 600px) and (max-width: 1366px) {
-        .col-md-7 {
-            transform: translateY(-35px);
-        }
-    }
-
-    background: #f9f9f9;
+    // @media only screen and (min-width: 600px) and (max-width: 1366px) {
+    //     .col-md-7 {
+    //         transform: translateY(-35px);
+    //     }
+    // }
     .banner-image {
         width: 100%;
         display: block;
@@ -134,14 +133,27 @@
     @media screen and (max-width: 992px) {
         padding-top: 30px;
     }
+    @media screen and (min-width: 992px) {
+        .col-md-7 {
+            margin-bottom: 65px;
+        }
+        .col-md-5 {
+            width: 632px;
+            padding: 0;
+            img {
+                width: 100%;
+            }
+        }
+    }
 
     .title {
         @media screen and (max-width: 1200px) {
             font-size: 25px;
             line-height: 30px;
         }
-        font-family: "Intro", Bold;
-        font-style: normal;
+        font-family: "Intro", Bold italic;
+
+        font-style: italic;
         font-weight: bold;
         font-size: 40px;
         line-height: 44px;
@@ -149,6 +161,19 @@
         letter-spacing: -0.01em;
 
         color: #000;
+    }
+    .source {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+
+        letter-spacing: 0.02em;
+
+        margin-top: 14px;
+
+        color: #2c2c2c;
     }
     .description {
         @media screen and (max-width: 1200px) {
@@ -167,6 +192,7 @@
     }
     .row {
         height: 100%;
+        align-items: flex-end;
     }
     @media screen and (max-width: 992px) {
         .row-reverse {

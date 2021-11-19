@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -97,7 +98,6 @@
 
 .button-outline {
   background: #ffffff !important;
-  /* Secondary Orange */
   border: 1px solid #f16e00;
   box-sizing: border-box;
   border-radius: 25px;
@@ -116,7 +116,6 @@
 
 .banner {
   position: relative;
-  background: #f9f9f9;
 }
 @media screen and (min-width: 992px) {
   .banner .position-float {
@@ -128,11 +127,6 @@
     bottom: 0;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1366px) {
-  .banner .col-md-7 {
-    transform: translateY(-35px);
-  }
-}
 .banner .banner-image {
   width: 100%;
   display: block;
@@ -142,9 +136,21 @@
     padding-top: 30px;
   }
 }
+@media screen and (min-width: 992px) {
+  .banner .col-md-7 {
+    margin-bottom: 65px;
+  }
+  .banner .col-md-5 {
+    width: 632px;
+    padding: 0;
+  }
+  .banner .col-md-5 img {
+    width: 100%;
+  }
+}
 .banner .title {
-  font-family: "Intro", Bold;
-  font-style: normal;
+  font-family: "Intro", Bold italic;
+  font-style: italic;
   font-weight: bold;
   font-size: 40px;
   line-height: 44px;
@@ -156,6 +162,16 @@
     font-size: 25px;
     line-height: 30px;
   }
+}
+.banner .source {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  margin-top: 14px;
+  color: #2c2c2c;
 }
 .banner .description {
   font-family: "Intro", Regular;
@@ -175,6 +191,7 @@
 }
 .banner .row {
   height: 100%;
+  align-items: flex-end;
 }
 @media screen and (max-width: 992px) {
   .banner .row-reverse {
