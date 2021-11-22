@@ -131,11 +131,6 @@
   width: 100%;
   display: block;
 }
-@media screen and (min-width: 992px) {
-  .banner .banner-image {
-    height: 450px;
-  }
-}
 @media screen and (max-width: 992px) {
   .banner {
     padding-top: 30px;
