@@ -230,6 +230,11 @@ h6 {
   background-color: #fcd800;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 .section-title {
   font-family: "Intro", Bold;
   font-weight: bold;
@@ -353,7 +358,12 @@ p {
   min-height: 35px;
 }
 
+.col-12 {
+  width: 100%;
+}
+
 header nav {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -371,6 +381,10 @@ header nav .logo {
 .banner {
   position: relative;
 }
+.banner .row {
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 992px) {
   .banner {
     background: radial-gradient(136.5% 50% at 50% 50%, #1a95b9 0%, #39a1cb 100%);
@@ -385,18 +399,15 @@ header nav .logo {
     margin-top: 30px;
   }
 }
-.banner .image-block {
-  margin-left: auto;
+@media screen and (min-width: 992px) {
+  .banner {
+    background-image: url(../img/blubg.png);
+    background-size: 100%;
+  }
 }
-@media screen and (max-width: 992px) {
-  .banner .image-block {
-    margin: auto;
-    width: 98%;
-    margin-left: 1.5%;
-  }
-  .banner .image-block img {
-    margin: auto;
-  }
+.banner .image-block {
+  max-width: 412px;
+  margin-left: auto;
 }
 .banner .image-block-mobile {
   margin: -30px 0;
@@ -404,36 +415,6 @@ header nav .logo {
 @media screen and (max-width: 992px) {
   .banner .banner-text-block {
     padding: 30px 20px 30px 20px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .banner .banner-text-block {
-    left: 50px;
-    position: absolute;
-    top: 30px;
-    bottom: 0;
-    margin: auto;
-    z-index: 99999;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .banner .banner-text-block .banner .banner-text-block {
-    left: 150px;
-    position: absolute;
-    top: 70px;
-    bottom: 0;
-    margin: auto;
-    z-index: 99999;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .banner .banner-text-block {
-    left: 207px;
-    position: absolute;
-    top: 100px;
-    bottom: 0;
-    margin: auto;
-    z-index: 99999;
   }
 }
 .banner .banner-text-block h2 {
@@ -764,8 +745,7 @@ section.cibil-subscription .text-p p {
 .key-value .key img {
   width: 18px;
   height: 12px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media screen and (min-width: 992px) {
   .key-value .key img {
@@ -838,8 +818,7 @@ section.cibil-subscription .text-p p {
   overflow: hidden;
 }
 .testimonial .row-1 .image img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 .testimonial .row-1 .play-store {
@@ -850,8 +829,7 @@ section.cibil-subscription .text-p p {
 .testimonial .row-1 .play-store img {
   width: 24.48px;
   height: 27.33px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .testimonial .testimonial-title {
   font-family: "Intro", Regular;
@@ -1034,8 +1012,7 @@ section.cibil-subscription .text-p p {
 .cibil-steps-mobile .steps-list img {
   height: 40px;
   width: 40px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .cibil-steps-mobile .steps-list li {
   display: flex;
@@ -1725,8 +1702,7 @@ section.cibil-subscription .text-p p {
   }
   .v3 .get-all img {
     height: 100%;
-    -o-object-fit: fill;
-       object-fit: fill;
+    object-fit: fill;
     width: 100%;
   }
 }
@@ -1796,7 +1772,7 @@ section.cibil-subscription .text-p p {
 .v4 .v4-button {
   margin: auto;
   display: block !important;
-  max-width: 250px;
+  max-width: 174px;
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -1804,6 +1780,14 @@ section.cibil-subscription .text-p p {
   .v4 .v4-button {
     margin-bottom: 55px;
   }
+}
+@media screen and (min-width: 992px) {
+  .v4 .v4-button.dhide {
+    display: none !important;
+  }
+}
+.v4 .p-medium-bold {
+  display: none !important;
 }
 .v4 .v4-padding-bottom-0 {
   padding-bottom: 0;
@@ -1855,7 +1839,17 @@ section.cibil-subscription .text-p p {
 .v4 .goals .p-bold {
   display: none;
 }
+@media screen and (max-width: 992px) {
+  .v4 .bg-small-white {
+    background: white;
+  }
+}
 
+@media screen and (max-width: 992px) {
+  .mb-sm-30 {
+    margin-bottom: 30px !important;
+  }
+}
 .goals {
   background-color: #f9f9f9;
   padding-top: 40px;
@@ -1877,7 +1871,7 @@ section.cibil-subscription .text-p p {
 }
 @media screen and (min-width: 992px) {
   .goals {
-    padding-bottom: 96px;
+    padding-bottom: 76px;
   }
 }
 .goals .title {
@@ -1923,13 +1917,13 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .goals .goal {
     margin-top: 33px;
-    min-height: 315px;
+    min-height: 300px;
+    padding-top: 30px;
   }
 }
 .goals .goal img {
   width: 59px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .goals .goal h6 {
   font-family: "Intro", Bold;
@@ -1964,7 +1958,11 @@ section.cibil-subscription .text-p p {
 
 @media (min-width: 992px) {
   .footer-section .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 }
@@ -2194,5 +2192,85 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .mobile-score-plan-desc.sm-14-black {
     font-size: 14px;
+  }
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  padding: 5px 0;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .slider {
+    padding: 15px 0;
+  }
+}
+
+.slider .slider-row {
+  width: 100%;
+  height: 80px;
+  background-image: url(../img/allbrands-slider.png);
+  background-size: cover;
+  margin: auto;
+  animation: slide 50s linear infinite;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .slider .slider-row {
+    background-size: cover;
+    background-position: -100px;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .slider .slider-row {
+    max-width: 1200px;
+  }
+}
+.slider .slider-row::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 200px;
+  background-image: url(../img/overlay-left.png);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media screen and (max-width: 992px) {
+  .slider .slider-row::after {
+    width: 50px;
+    background-size: 100%;
+  }
+}
+.slider .slider-row::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 259px;
+  background-image: url(../img/overlay-right.png);
+  top: 0;
+  right: -4px;
+  bottom: 0;
+  margin: auto;
+  background-size: 100%;
+  background-position: left;
+}
+@media screen and (max-width: 992px) {
+  .slider .slider-row::before {
+    width: 100px;
+    background-size: 100%;
+    background-position: left;
+  }
+}
+
+@keyframes slide {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -2956px;
   }
 }/*# sourceMappingURL=custom.css.map */
