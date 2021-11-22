@@ -131,6 +131,11 @@
   width: 100%;
   display: block;
 }
+@media screen and (min-width: 992px) {
+  .banner .banner-image {
+    height: 450px;
+  }
+}
 @media screen and (max-width: 992px) {
   .banner {
     padding-top: 30px;
@@ -139,13 +144,6 @@
 @media screen and (min-width: 992px) {
   .banner .col-md-7 {
     margin-bottom: 65px;
-  }
-  .banner .col-md-5 {
-    width: 632px;
-    padding: 0;
-  }
-  .banner .col-md-5 img {
-    width: 100%;
   }
 }
 .banner .title {
