@@ -403,10 +403,10 @@ header nav .logo {
   .banner {
     background-image: url(../img/blubg.png);
     background-size: 100%;
+    padding-top: 20px;
   }
 }
 .banner .image-block {
-  max-width: 412px;
   margin-left: auto;
 }
 .banner .image-block-mobile {
@@ -434,6 +434,17 @@ header nav .logo {
     line-height: 44px;
     letter-spacing: -0.01em;
   }
+}
+.banner .banner-text-block h3 {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  /* or 137% */
+  letter-spacing: -0.01em;
+  /* White */
+  color: #ffffff;
 }
 .banner .banner-text-block h4 {
   font-family: "Intro", Regular;
@@ -504,6 +515,22 @@ header nav .logo {
   background: #fcd800;
   z-index: 1;
 }
+.banner .banner-text-block p {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  letter-spacing: 0.02em;
+  /* White */
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.banner-1 {
+  max-width: 412px;
+}
 
 section.cibil-subscription {
   padding: 40px 10px;
@@ -549,9 +576,6 @@ section.cibil-subscription .text-p p {
 .cibil-subscription-plan .button-orange {
     margin-top: 20px;
   }
-}
-.cibil-subscription-plan .v1-text {
-  margin-bottom: 40px;
 }
 
 .plans {
@@ -890,48 +914,6 @@ section.cibil-subscription .text-p p {
   }
 }
 
-.cibil-score p {
-  font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #2c2c2c;
-  max-width: 717px;
-  margin: auto;
-  margin-top: 59px;
-  margin-bottom: 40px;
-}
-.cibil-score .p-bold {
-  font-family: "Intro", Bold;
-  font-style: normal;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #2c2c2c;
-  max-width: 730px;
-  margin: auto;
-}
-@media screen and (min-width: 992px) {
-  .cibil-score .p-bold {
-    font-size: 24px;
-  }
-}
-.cibil-score .button-orange {
-  display: block;
-  margin: auto;
-  max-width: 174px;
-  margin-top: 28px;
-}
-@media screen and (max-width: 992px) {
-  .cibil-score {
-    padding-bottom: 0;
-  }
-}
-
 .mobile-score-plan-desc {
   font-family: "Intro", Book;
   font-style: normal;
@@ -949,28 +931,6 @@ section.cibil-subscription .text-p p {
   .pl-44 {
     padding-left: 44px;
   }
-}
-
-.steps {
-  margin-top: 47px;
-}
-.steps .numb {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #3ea3ce;
-  border-radius: 50px;
-  font-family: "Intro", Bold;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #ffffff;
 }
 
 .cibil-steps {
@@ -1568,40 +1528,6 @@ section.cibil-subscription .text-p p {
   }
 }
 
-.get-all {
-  display: none !important;
-}
-
-.desc-v3 {
-  display: none;
-}
-
-.type-2 {
-  display: none;
-}
-
-.goals {
-  display: none;
-}
-
-.v1 .cibil-score {
-  padding-bottom: 100px;
-}
-.v1 .mobile-score-plan-desc {
-  display: none;
-}
-.v1 .subtext {
-  display: none;
-}
-.v1 .cibil-subscription-plan .section-title {
-  margin-bottom: 35px !important;
-}
-
-.v3-only,
-.v2-only {
-  display: none;
-}
-
 .d-block {
   display: block;
 }
@@ -1611,238 +1537,8 @@ section.cibil-subscription .text-p p {
     display: none;
   }
 }
-.v2 .v2-only {
-  display: inline-block;
-}
-.v2 .plan-column-1 {
-  display: none;
-}
-.v2 .v1-image {
-  display: none !important;
-}
-@media screen and (min-width: 992px) {
-  .v2 .v4-image {
-    display: block !important;
-  }
-}
-.v2 .p-bold-show {
-  display: block !important;
-  font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  /* or 150% */
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #2c2c2c;
-}
-.v2 .type-2 {
-  display: block;
-}
-.v2 .type-1 {
-  display: none;
-}
-.v2 .last-column {
-  display: none;
-}
-.v2 .mobile-score-plan-desc {
-  margin-bottom: 20px;
-}
-.v2 .v4-pnly {
-  display: none !important;
-}
-
 .btn-v3-orange {
   display: none !important;
-}
-
-.v3-only-lat {
-  display: none;
-}
-
-.v3 .v3-only {
-  display: inline-block;
-}
-.v3 .v3-hide {
-  display: none !important;
-}
-.v3 .btn-v1-orange {
-  display: none !important;
-}
-.v3 .btn-v3-orange {
-  display: block !important;
-}
-.v3 .v1-image {
-  display: none !important;
-}
-@media screen and (min-width: 992px) {
-  .v3 .v4-image {
-    display: block !important;
-  }
-}
-.v3 .p-bold-show {
-  display: block !important;
-  font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #2c2c2c;
-}
-.v3 .get-all {
-  position: relative;
-}
-@media screen and (min-width: 992px) {
-  .v3 .get-all {
-    display: block !important;
-    height: 288px;
-  }
-  .v3 .get-all img {
-    height: 100%;
-    object-fit: fill;
-    width: 100%;
-  }
-}
-.v3 .get-all .text-block {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 60px 0;
-}
-.v3 .get-all .text-block .section-title {
-  margin-bottom: 42px;
-  font-family: "Intro", Bold;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 44px;
-  /* or 137% */
-  text-align: center;
-  letter-spacing: -0.01em;
-  color: #2c2c2c;
-}
-.v3 .get-all .text-block a {
-  max-width: 240px;
-  display: block;
-  margin: auto;
-}
-.v3 .mobile-score-plan-desc {
-  display: none;
-}
-.v3 .cibil-subscription-plan {
-  display: none !important;
-}
-.v3 .desc-v3 {
-  display: block;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-.v3 .type-2 {
-  display: block;
-}
-.v3 .type-1 {
-  display: none;
-}
-.v3 .last-column {
-  display: none;
-}
-@media screen and (min-width: 992px) {
-  .v3 .v4-pnly {
-    display: none !important;
-  }
-}
-
-.v4-image {
-  display: none !important;
-}
-
-.v4 .v4-button {
-  margin: auto;
-  display: block !important;
-  max-width: 174px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 992px) {
-  .v4 .v4-button {
-    margin-bottom: 55px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .v4 .v4-button.dhide {
-    display: none !important;
-  }
-}
-.v4 .p-medium-bold {
-  display: none !important;
-}
-.v4 .v4-padding-bottom-0 {
-  padding-bottom: 0;
-}
-.v4 .v2-text {
-  display: block;
-}
-.v4 .v1-image {
-  display: none !important;
-}
-.v4 .v4-text-none {
-  display: none !important;
-}
-.v4 .v4-image {
-  display: none !important;
-}
-@media screen and (min-width: 992px) {
-  .v4 .v4-image {
-    display: block !important;
-  }
-}
-.v4 .p-bold-show {
-  display: block !important;
-  font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  /* or 150% */
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: #2c2c2c;
-}
-.v4 section {
-  display: none;
-}
-.v4 .banner {
-  display: flex;
-}
-.v4 .cibil-score,
-.v4 .goals {
-  display: flex;
-}
-.v4 .cibil-score .mobile-score-plan-desc,
-.v4 .cibil-score .button-orange,
-.v4 .cibil-score .p-bold,
-.v4 .goals .mobile-score-plan-desc,
-.v4 .goals .button-orange,
-.v4 .goals .p-bold {
-  display: none;
-}
-@media screen and (max-width: 992px) {
-  .v4 .bg-small-white {
-    background: white;
-  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1851,7 +1547,6 @@ section.cibil-subscription .text-p p {
   }
 }
 .goals {
-  background-color: #f9f9f9;
   padding-top: 40px;
   box-sizing: border-box;
   padding-bottom: 34px;
@@ -1906,7 +1601,7 @@ section.cibil-subscription .text-p p {
   margin-top: 20px;
   border-radius: 6px;
   padding: 20px;
-  background: #fff;
+  background-color: #f9f9f9;
   padding-bottom: 0;
 }
 @media screen and (max-width: 992px) {
@@ -1917,27 +1612,28 @@ section.cibil-subscription .text-p p {
 @media screen and (min-width: 992px) {
   .goals .goal {
     margin-top: 33px;
-    min-height: 300px;
-    padding-top: 30px;
+    min-height: 280px;
+    padding-top: 20px;
+    padding-right: 10px;
   }
 }
 .goals .goal img {
-  width: 59px;
   object-fit: contain;
 }
 .goals .goal h6 {
   font-family: "Intro", Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
   margin: 26px 0 14px;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 992px) {
   .goals .goal h6 {
-    margin: 35px 0 14px;
+    margin: 20px 0 14px;
   }
 }
 .goals .goal p {
@@ -2104,18 +1800,6 @@ section.cibil-subscription .text-p p {
   opacity: 1;
 }
 
-.v4-pnly {
-  display: none !important;
-}
-
-.v4 .v4-pnly {
-  display: flex;
-  align-items: center;
-}
-.v4 .v3-only {
-  display: inline-block !important;
-}
-
 @media screen and (min-width: 992px) {
   .pe-md-0 {
     padding-right: 0;
@@ -2125,10 +1809,6 @@ section.cibil-subscription .text-p p {
     padding-left: 0;
   }
 }
-.v3 .v3-only-lat {
-  display: block !important;
-}
-
 /* the slides */
 .slick-slide {
   margin: 0 10px;
@@ -2273,4 +1953,87 @@ section.cibil-subscription .text-p p {
   to {
     background-position-x: -2956px;
   }
+}
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.steps .step {
+  margin: 0 10px;
+  width: 180px;
+  height: 160px;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  /* Accent Grey 3 */
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+}
+.steps .step .icon {
+  display: flex;
+  justify-content: center;
+}
+.steps .step .grey-bg {
+  width: 156px;
+  height: 26px;
+  margin: auto;
+  background: #707070;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  letter-spacing: 0.02em;
+  /* White */
+  border-radius: 5px;
+  color: #ffffff;
+}
+.steps .step .number {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3ea3ce;
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  /* white */
+  color: #ffffff;
+  margin: auto;
+  margin-top: 12px;
+}
+.steps p {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  text-align: center;
+  letter-spacing: 0.02em;
+  /* Accent Black */
+  color: #2c2c2c;
+}
+
+.steps-btn {
+  display: flex;
+  margin-top: 40px;
+}
+.steps-btn .button-orange {
+  width: 100%;
+  max-width: 164px;
 }/*# sourceMappingURL=custom.css.map */
