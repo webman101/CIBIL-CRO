@@ -325,6 +325,7 @@
 .interstial-container .column-outer.active {
   margin-top: -1;
   margin-top: -34px;
+  border: 2px solid #00A6CA;
 }
 .interstial-container .column-outer:last-child {
   margin-right: 0;
