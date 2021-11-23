@@ -613,4 +613,26 @@ header nav .logo {
     font-size: 32px;
     line-height: 44px;
   }
+}
+
+.mobile-small {
+  margin-top: 30px;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .mobile-small {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .d-none {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .d-md-block {
+    display: block;
+  }
 }/*# sourceMappingURL=custom.css.map */

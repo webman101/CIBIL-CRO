@@ -593,3 +593,21 @@ header {
         line-height: 44px;
     }
 }
+
+.mobile-small {
+    margin-top: 30px;
+    text-align: center;
+    @media screen and (min-width: 992px) {
+        font-size: 24px;
+    }
+}
+.d-none {
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+.d-md-block {
+    @media screen and (min-width: 992px) {
+        display: block;
+    }
+}
