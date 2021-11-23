@@ -608,4 +608,10 @@ header nav .logo {
   .slider .slider-row {
     max-width: 1200px;
   }
+}
+@media screen and (min-width: 992px) {
+  .banner .banner-text-block .banner-2-text {
+    font-size: 32px;
+    line-height: 44px;
+  }
 }/*# sourceMappingURL=custom.css.map */

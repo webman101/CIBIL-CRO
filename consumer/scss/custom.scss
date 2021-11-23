@@ -588,3 +588,9 @@ header {
         }
     }
 }
+.banner .banner-text-block .banner-2-text {
+    @media screen and (min-width: 992px) {
+        font-size: 32px;
+        line-height: 44px;
+    }
+}
