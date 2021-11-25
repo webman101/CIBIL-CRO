@@ -1,26 +1,5 @@
-body {
-    padding: 0;
-    margin: 0;
-    @media screen and (max-width: 992px) {
-        padding-top: 50px;
-    }
 
-    @media screen and (min-width: 992px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
-    height: 200vh;
-}
-/* the slides */
-.slick-slide {
-    margin: 0 5px;
-}
-/* the parent */
-.slick-list {
-    margin: 0 -5px;
-}
 section {
     width: 100%;
 }
@@ -30,133 +9,7 @@ section {
     max-width: 100%;
 }
 
-.cta-block {
-    @media screen and (min-width: 992px) {
-        width: 280px;
-    }
 
-    background: #006685;
-    padding: 10px;
-    position: relative;
-    @media screen and (min-width: 992px) {
-        min-height: 350px;
-    }
-
-    h5 {
-        font-family: "Intro", Bold;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
-        margin: auto;
-        margin-top: 20px;
-        text-align: center;
-        letter-spacing: 0.02em;
-
-        color: #ffffff;
-    }
-
-    .button {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        max-width: 240px;
-        height: 50px;
-        background: #f16e00;
-        border-radius: 25px;
-
-        font-family: "Intro", Regular;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 16px;
-        text-decoration: none;
-        text-align: center;
-        letter-spacing: 0.02em;
-        color: #2c2c2c;
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    .slick-dots {
-        display: flex !important;
-        justify-content: center;
-        margin-top: 10px;
-        li {
-            height: 10px;
-            width: 10px;
-            background-color: #00a6ca;
-            list-style-type: none;
-            border-radius: 50px;
-            margin: 0 5px;
-            cursor: pointer;
-            button {
-                display: none;
-            }
-            &.slick-active {
-                background: #fff;
-            }
-        }
-    }
-    .meter {
-        position: absolute;
-        top: 35%;
-        @media screen and (min-width: 992px) {
-            top: 30%;
-        }
-        left: 49%;
-        transform: translate(-50%, -50%);
-        .meter-guage {
-            position: absolute;
-            top: 0em;
-            left: 0;
-            display: flex;
-            width: 70px;
-            @media screen and (min-width: 992px) {
-                width: 50px;
-            }
-
-            height: 40px;
-            -webkit-transform-origin: 8% 53%;
-            -webkit-animation-duration: 2s;
-            -webkit-animation-name: rotate-hand;
-
-            -webkit-transform: rotate(360deg);
-            animation: rotate-hand 1s infinite linear;
-            animation-duration: 2.5s;
-            animation-timing-function: ease-out;
-            animation-delay: 1s;
-            animation-direction: alternate;
-            animation-iteration-count: infinite;
-            img {
-                margin: auto;
-                position: relative;
-                left: -5px;
-                top: 1px;
-                height: 18px;
-            }
-        }
-    }
-}
-
-@-webkit-keyframes rotate-hand {
-    0% {
-        -webkit-transform: rotate(200deg);
-        left: 0em;
-        top: 0em;
-    }
-    50% {
-        -webkit-transform: rotate(330deg);
-        left: 0em;
-        top: 0em;
-    }
-    100% {
-        -webkit-transform: rotate(330deg);
-        left: 0em;
-        top: 0em;
-    }
-}
 .cta-block-2 {
     background: #006685;
     padding: 10px;
@@ -228,48 +81,6 @@ section {
         .right-side {
             display: flex;
             align-items: center;
-        }
-    }
-    .meter {
-        position: relative;
-        .meter-guage {
-            position: relative;
-            top: -12px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            display: flex;
-
-            -webkit-transform-origin: 8% 53%;
-            -webkit-animation-duration: 2s;
-            -webkit-animation-name: rotate-hand;
-            -webkit-transform: rotate(360deg);
-            animation: rotate-hand 1s infinite linear;
-            animation-duration: 2.5s;
-            animation-timing-function: ease-out;
-            animation-delay: 1s;
-            animation-direction: alternate;
-            animation-iteration-count: infinite;
-            margin-top: -20px;
-            @media screen and (max-width: 992px) {
-                margin-left: 48%;
-            }
-
-            width: 75px;
-
-            @media screen and (min-width: 992px) {
-                margin-top: -25px;
-                margin-right: 50px;
-                width: 45px;
-                height: 40px;
-            }
-            img {
-                margin: auto;
-                position: relative;
-                left: -2px;
-                top: 1px;
-                height: 20px;
-            }
         }
     }
 }

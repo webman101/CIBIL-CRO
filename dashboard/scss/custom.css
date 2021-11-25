@@ -205,8 +205,8 @@ h6 {
   z-index: 2;
   padding-top: 60px;
   background-color: #3ea3ce;
-  width: 30%;
-  padding-left: 60px;
+  width: 100%;
+  max-width: 317px;
 }
 .dashboard .right-column {
   position: relative;
@@ -286,8 +286,7 @@ h6 {
 .animated-chart-1 .chart1 {
   width: 292px;
   height: 198px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-top: 20px;
 }
 .animated-chart-1 a.link-16 {
@@ -312,8 +311,7 @@ h6 {
   /* identical to box height */
   text-align: right;
   letter-spacing: 0.02em;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   /* Accent Black */
   color: #2c2c2c;
   margin-left: 14px;
@@ -322,8 +320,7 @@ h6 {
 .animated-chart-1 .watch-video img {
   width: 21px;
   height: 21px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .f-24-title {
@@ -346,7 +343,6 @@ h6 {
   align-items: center;
   text-align: center;
   letter-spacing: 0.02em;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   color: #2c2c2c;
 }/*# sourceMappingURL=custom.css.map */

@@ -232,8 +232,8 @@ $brand-blue: #3ea3ce;
         z-index: 2;
         padding-top: 60px;
         background-color: #3ea3ce;
-        width: 30%;
-        padding-left: 60px;
+        width: 100%;
+        max-width: 317px;
     }
     .right-column {
         position: relative;
