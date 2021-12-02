@@ -123,6 +123,11 @@ body {
 .exit-intent-popup .popup .image-block .image-container img {
   width: 100%;
   margin-bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+  object-position: bottom;
+  object-fit: cover;
+  height: 100%;
 }
 
 .text-right-block {
@@ -421,7 +426,4 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .email-only .hide-for {
   display: none;
-}
-.email-only .image-container {
-  position: relative !important;
 }/*# sourceMappingURL=style.css.map */

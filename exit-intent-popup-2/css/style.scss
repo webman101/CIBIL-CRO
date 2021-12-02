@@ -120,6 +120,11 @@ $color: #3ea3ce;
                 img {
                     width: 100%;
                     margin-bottom: 0;
+                    width: 100%;
+                    margin-bottom: 0;
+                    object-position: bottom;
+                    object-fit: cover;
+                    height: 100%;
                 }
             }
         }
@@ -398,24 +403,22 @@ input[type="number"]::-webkit-outer-spin-button {
     .height-120 {
         height: 120px !important;
         transition: all 0.2s ease-in-out;
-      
     }
 }
 .totrigger {
     overflow: hidden;
     height: 55px;
 }
-.for-email-only{
+.for-email-only {
     display: none;
 }
 .email-only {
-    .for-email-only{
+    .for-email-only {
         display: block;
     }
     .hide-for {
         display: none;
     }
-    .image-container{
-        position: relative !important;
+    .image-container {
     }
 }
