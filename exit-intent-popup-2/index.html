@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Popup | CIBIL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
+    <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<div class="outer">
+    <!-- for scroll test dont include this-->
+    <div class="exit-intent-popup">
+        <div class="popup">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 p-0 image-block">
+                        <div class="image-container">
+                            <img src="./img/image-left.png" alt="" class="d-block">
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-right-block">
+
+                        <img src="./img/close.png" alt="" class="close-tab">
+                        <div class="text-block">
+                            <div class="title">
+                                Interested in a Free CIBIL Score & Report?
+                            </div>
+                            <div class="blue-title">
+                                Enter your details below and get access to your <span>Free CIBIL score & Report now.</span>
+                            </div>
+                            <form action="" method="post" id="register-form" novalidate="novalidate">
+
+                                <div id="form-content">
+
+
+                                    <div class="form-group">
+                                        <div class="label-flex">
+                                            <span class="label">Enter Email ID</span>
+                                            <span class="required">Required</span>
+                                        </div>
+                                        <input class="form-control" type="text" name="name" id="popup-name">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <div class="label-flex">
+                                            <span class="label">Phone Number</span>
+                                        </div>
+                                        <input class="form-control" id="popup-number" type="number" name="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="10">
+                                    </div>
+
+                                    <div class="form-group check-box-input">
+                                        <div>
+                                            <input type="checkbox" id="html">
+                                            <label for="html" class="check"></label>
+                                        </div>
+                                        <p>I understand that by clicking on the "Get FREE CIBIL Score & Report" button, I agree to CIBIL's Terms and Conditions and I am providing "written instructions" authorizing CIBIL to obtain information from my personal credit profile from CIBIL in order to confirm my identity and display my credit data to me.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="btn btn-primary disabled" id="submit" type="submit" name="Get FREE CIBIL Score & Report" value="Get FREE CIBIL Score & Report">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+
+    <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
+    <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

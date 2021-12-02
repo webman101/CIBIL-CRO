@@ -1,0 +1,351 @@
+body {
+  font-size: 16px;
+}
+
+.blue-title {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.blue-title span {
+  background-color: #fcd800;
+}
+
+.title {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  color: #302e46;
+}
+@media screen and (min-width: 992px) {
+  .title {
+    font-size: 1.8em;
+    line-height: 42px;
+  }
+}
+
+.subtitle {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  color: #302e46;
+  opacity: 0.95;
+}
+@media screen and (min-width: 992px) {
+  .subtitle {
+    font-size: 1.5em;
+    line-height: 24px;
+  }
+}
+
+.outer {
+  height: 300vh;
+}
+
+@media screen and (max-width: 992px) {
+  .m-hidden {
+    display: none;
+  }
+}
+.m-vissible {
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .m-vissible {
+    display: none;
+  }
+}
+
+.exit-intent-popup {
+  height: 100%;
+  background: #e5e5e5;
+}
+.exit-intent-popup .popup .container,
+.exit-intent-popup .popup .row {
+  height: 100%;
+}
+.exit-intent-popup .popup .logo {
+  width: 112px;
+  margin: 30px;
+}
+.exit-intent-popup .popup .image-block {
+  background: #EDEDED;
+  max-width: 515px;
+}
+.exit-intent-popup .popup .image-block .image-container {
+  margin-top: 0 !important;
+  position: absolute;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 33px;
+  padding: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.exit-intent-popup .popup .image-block .image-container img {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.text-right-block {
+  background-color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .text-right-block {
+    width: max-content;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .text-right-block {
+    padding: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .text-block {
+    max-width: 558px;
+    padding: 50px 35px 25px;
+    position: relative;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+.text-block .title {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.text-block .subtitle {
+  margin-bottom: 30px;
+}
+
+.error {
+  color: red;
+}
+
+label.error {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 4px 5px;
+  margin-top: -1px;
+  color: #b50000;
+  font-weight: normal;
+  border: 0;
+  font-size: 11px;
+}
+
+.label-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.label-flex .label {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3ea3ce;
+  margin-bottom: 2px;
+  letter-spacing: 0.02em;
+  padding-bottom: 0;
+  color: #000000;
+  opacity: 0.75;
+  padding-left: 0;
+}
+.label-flex .required {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  opacity: 0.75;
+}
+
+label.error:before {
+  display: none;
+}
+
+input {
+  width: 100%;
+  border-radius: 0 !important;
+  font-size: 16px !important;
+  height: 50px;
+}
+
+.form-control {
+  height: 50px;
+}
+
+input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #dbdbdb !important;
+  outline: 0;
+  box-shadow: none;
+}
+
+input::placeholder {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  color: #777777;
+}
+
+#checkbox {
+  background: #3ea3ce;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group input[type=checkbox] {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-group .check {
+  position: relative;
+  cursor: pointer;
+}
+
+.form-group .check:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+  border: 1px solid #2c2c2c;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form-group input[type=checkbox]:checked + .check:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/mark.png);
+  background-position: center;
+  opacity: 1;
+  border-radius: 4px;
+  background-size: contain;
+}
+
+.form-group input[type=checkbox]:checked + .check:before {
+  border: 1px solid #ffffff;
+}
+
+.check-box-input {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.check-box-input > div {
+  margin-top: -5px;
+  margin-right: 6px;
+}
+.check-box-input p {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  max-width: 400px;
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.8;
+}
+
+#submit {
+  background: #f16e33;
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  font-size: 16px;
+  text-align: center;
+  color: #2c2c2c;
+  border-radius: 50px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 317px;
+  height: 50px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.close-tab {
+  all: initial;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  opacity: 1;
+  height: 26px;
+  width: 26px;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.exit-intent-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(33, 33, 33, 0.8);
+  transform: translateY(60%) scale(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exit-intent-popup.visible {
+  transform: translateY(0) scale(1);
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
