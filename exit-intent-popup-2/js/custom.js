@@ -76,12 +76,14 @@ $('#html').on('change', function() {
 
 
 $('.show-less').hide();
+$('more').addClass('opacity0')
 
 $('.show-more').click(function(e) {
     e.preventDefault();
     $(this).hide();
     $('.check-box-input p').addClass('height-120');
 
+    $('more').removeClass('opacity0')
     $('.show-less').show();
 
 });
@@ -96,9 +98,9 @@ $('.show-less').click(function(e) {
 
 if (window.outerWidth < 425) {
     setTimeout(function() { $('.exit-intent-popup').addClass('visible'); }, 3000);
-  
+
 }
-$('.close-tab').click(function (e) { 
+$('.close-tab').click(function(e) {
     e.preventDefault();
     $('.exit-intent-popup').removeClass('visible');
 });
