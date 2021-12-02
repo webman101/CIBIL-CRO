@@ -58,19 +58,37 @@ document.querySelector('.exit-intent-popup').addEventListener('click', exit);
 
 // $('#popup-name').on('change', function() {
 //     if ($(this).val() !== "") {
-      
+
 //     }
 // });
 // if($("#html").prop('checked') == true){
 //     $('#submit').removeClass('disabled');
 // }
 
- $('#html').on('change', function() {
+$('#html').on('change', function() {
     if ($("#html").is(":checked")) {
         $('#submit').removeClass('disabled');
-    }
-    else{
+    } else {
         $('#submit').addClass('disabled');
 
     }
- });
+});
+
+
+$('.show-less').hide();
+
+$('.show-more').click(function(e) {
+    e.preventDefault();
+    $(this).hide();
+    $('.check-box-input p').addClass('height-120');
+
+    $('.show-less').show();
+
+});
+$('.show-less').click(function(e) {
+    e.preventDefault();
+    $('.check-box-input p').removeClass('height-120');
+    $('.show-more').show();
+    $(this).hide();
+
+});
