@@ -22,12 +22,37 @@ $color: #3ea3ce;
     text-transform: uppercase;
     color: #000000;
     margin-bottom: 30px;
-    span {
-        background-color: #fcd800;
+    @media screen and (max-width: 992px) {
+        font-family: "Intro", Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        text-align: center;
+
+        /* Primary Blue */
+
+        color: #00a6ca;
+    }
+
+    @media screen and (min-width: 992px) {
+        span {
+            background-color: #fcd800;
+        }
     }
 }
 .title {
     @include font-intro-regular;
+    @media screen and (max-width: 992px) {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        color: #2c2c2c;
+        text-align: center;
+    }
+
     @media screen and (min-width: 992px) {
         font-size: 1.8em;
         line-height: 42px;
@@ -47,17 +72,19 @@ $color: #3ea3ce;
     opacity: 0.95;
 }
 .outer {
-    height: 300vh;
+    @media screen and (min-width: 992px) {
+        height: 300vh;
+    }
 }
 @media screen and (max-width: 992px) {
     .m-hidden {
-        display: none;
+        display: none !important;
     }
 }
 .m-vissible {
-    display: inline-block;
+    display: inline-block !important;
     @media screen and (min-width: 992px) {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -78,9 +105,13 @@ $color: #3ea3ce;
             max-width: 515px;
             .image-container {
                 margin-top: 0 !important;
-                position: absolute;
+                @media screen and (min-width: 992px) {
+                    position: absolute;
+                    overflow: hidden;
+                }
+
                 margin: auto;
-                overflow: hidden;
+
                 margin-top: 33px;
                 padding: 0;
                 bottom: 0;
@@ -335,7 +366,10 @@ input[type="number"]::-webkit-outer-spin-button {
     z-index: 9;
 }
 .exit-intent-popup {
-    position: fixed;
+    @media screen and (min-width: 992px) {
+        position: fixed;
+    }
+
     top: 0;
     left: 0;
     bottom: 0;
@@ -349,11 +383,13 @@ input[type="number"]::-webkit-outer-spin-button {
     transform: translateY(0) scale(1);
 }
 .popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    @media screen and (min-width: 992px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
 }
 .height-120 {
     height: 120px !important;

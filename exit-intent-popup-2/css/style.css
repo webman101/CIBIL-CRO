@@ -13,8 +13,24 @@ body {
   color: #000000;
   margin-bottom: 30px;
 }
-.blue-title span {
-  background-color: #fcd800;
+@media screen and (max-width: 992px) {
+  .blue-title {
+    font-family: "Intro", Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    /* Primary Blue */
+    color: #00a6ca;
+  }
+}
+@media screen and (min-width: 992px) {
+  .blue-title span {
+    background-color: #fcd800;
+  }
 }
 
 .title {
@@ -22,6 +38,15 @@ body {
   font-style: normal;
   font-weight: normal;
   color: #302e46;
+}
+@media screen and (max-width: 992px) {
+  .title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #2c2c2c;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 992px) {
   .title {
@@ -44,21 +69,23 @@ body {
   }
 }
 
-.outer {
-  height: 300vh;
+@media screen and (min-width: 992px) {
+  .outer {
+    height: 300vh;
+  }
 }
 
 @media screen and (max-width: 992px) {
   .m-hidden {
-    display: none;
+    display: none !important;
   }
 }
 .m-vissible {
-  display: inline-block;
+  display: inline-block !important;
 }
 @media screen and (min-width: 992px) {
   .m-vissible {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -80,14 +107,18 @@ body {
 }
 .exit-intent-popup .popup .image-block .image-container {
   margin-top: 0 !important;
-  position: absolute;
   margin: auto;
-  overflow: hidden;
   margin-top: 33px;
   padding: 0;
   bottom: 0;
   height: 100%;
   width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .exit-intent-popup .popup .image-block .image-container {
+    position: absolute;
+    overflow: hidden;
+  }
 }
 .exit-intent-popup .popup .image-block .image-container img {
   width: 100%;
@@ -340,7 +371,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .exit-intent-popup {
-  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -350,17 +380,24 @@ input[type=number]::-webkit-outer-spin-button {
   transform: translateY(60%) scale(0);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 992px) {
+  .exit-intent-popup {
+    position: fixed;
+  }
+}
 
 .exit-intent-popup.visible {
   transform: translateY(0) scale(1);
 }
 
-.popup {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+@media screen and (min-width: 992px) {
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
 }
 
 .height-120 {

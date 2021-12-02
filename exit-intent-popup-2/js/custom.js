@@ -92,3 +92,12 @@ $('.show-less').click(function(e) {
     $(this).hide();
 
 });
+
+
+if (window.outerWidth < 425) {
+    setTimeout(function() { $('.exit-intent-popup').addClass('visible'); }, 3000);
+    $('.close-tab').click(function (e) { 
+        e.preventDefault();
+        $('.exit-intent-popup').removeClass('visible');
+    });
+}
