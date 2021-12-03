@@ -134,6 +134,11 @@ header {
         align-items: center;
     }
     .image-block {
+        @media screen and (max-width: 992px) {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
         margin-left: auto;
     }
     .banner-text-block {
@@ -583,7 +588,7 @@ header {
 @media screen and (min-width: 1600px) {
     .slider {
         .slider-row {
-            max-width: 1200px;
+            // max-width: 1200px;
         }
     }
 }
@@ -610,4 +615,32 @@ header {
     @media screen and (min-width: 992px) {
         display: block;
     }
+}
+.banner {
+    position: relative;
+}
+.tnc {
+    width: 115px;
+    height: 36px;
+    right: 130px;
+    bottom: 0;
+    @media screen and (max-width: 992px) {
+        transform: rotate(-90deg);
+        right: -38px;
+        bottom: 40px;
+    }
+
+    position: absolute;
+    background: rgba(0, 102, 133, 0.3);
+
+    font-family: "Intro", Book;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
