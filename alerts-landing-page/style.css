@@ -203,8 +203,10 @@
   .banner .row-reverse .description {
     font-size: 16px;
     line-height: 24px;
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    max-width: 280px;
   }
 }
 
