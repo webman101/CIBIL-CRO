@@ -314,11 +314,13 @@
     @media screen and (min-width: 992px) {
         padding-bottom: 110px !important;
         padding-top: 70px;
-        .section-title{
+        .section-title {
             margin-bottom: 80px;
         }
     }
-
+    .column-inner {
+        height: 100%;
+    }
     .col-md-5.equal-column {
     }
     .col-md-7.equal-column {
@@ -329,6 +331,10 @@
     .right-coulumn-section {
         display: flex;
         justify-content: space-between;
+
+        @media screen and (min-width: 992px) {
+            height: 100%;
+        }
     }
     .top-head {
         height: 130px;
@@ -501,7 +507,7 @@
         }
     }
     .column-footer {
-        height: 30px;
+        height: 39px;
         background: #f9f9f9;
         display: flex;
         align-items: center;
@@ -516,6 +522,8 @@
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
         line-height: 30px;
+        position: absolute;
+        bottom: 0;
         span {
             position: relative;
             z-index: 2;
