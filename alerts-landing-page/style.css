@@ -762,6 +762,8 @@
 }
 .tab-content .tab-pane {
   padding: 20px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 .tab-content .tab-pane.active {
   background-color: #fff;
