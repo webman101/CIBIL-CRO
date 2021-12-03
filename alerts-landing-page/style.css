@@ -458,8 +458,8 @@
   width: 102%;
   height: 101%;
   left: -2px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 2px;
   top: -2%;
   background: #00a6ca;
 }
