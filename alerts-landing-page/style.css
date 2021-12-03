@@ -309,6 +309,9 @@
     padding-bottom: 110px !important;
     padding-top: 70px;
   }
+  .interstial-container .section-title {
+    margin-bottom: 80px;
+  }
 }
 @media screen and (min-width: 992px) {
   .interstial-container .col-md-7.equal-column {
