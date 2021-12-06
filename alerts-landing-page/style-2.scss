@@ -286,8 +286,6 @@
         padding-top: 70px;
     }
 
-    .col-md-5.equal-column {
-    }
     .col-md-7.equal-column {
         @media screen and (min-width: 992px) {
             padding-right: 5px;
@@ -390,10 +388,6 @@
         justify-content: center;
         align-items: center;
         border-top: 1px solid #dddddd;
-        .marks {
-            // width: 15px;
-            // height: 15px;
-        }
     }
     .wrong-marks {
         width: 14px;
