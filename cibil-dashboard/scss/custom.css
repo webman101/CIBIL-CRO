@@ -55,6 +55,12 @@ h6 {
   font-size: 24px !important;
 }
 
+@media screen and (min-width: 992px) {
+  .mr-md-15 {
+    margin-right: 15px;
+  }
+}
+
 .text-color-black {
   color: #000000;
 }
@@ -147,28 +153,99 @@ h6 {
 }
 
 .pb-0 {
-  margin-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 .pb-1 {
-  margin-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 .pb-15 {
-  margin-top: 15px !important;
+  padding-bottom: 15px !important;
 }
 .pb-2 {
-  margin-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 .pb-3 {
-  margin-top: 30px !important;
+  padding-bottom: 30px !important;
 }
 .pb-4 {
-  margin-top: 40px !important;
+  padding-bottom: 40px !important;
 }
 .pb-5 {
-  margin-top: 50px !important;
+  padding-bottom: 50px !important;
 }
 .pb-6 {
-  margin-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+.pt-1 {
+  padding-top: 10px !important;
+}
+.pt-15 {
+  padding-top: 15px !important;
+}
+.pt-2 {
+  padding-top: 20px !important;
+}
+.pt-3 {
+  padding-top: 30px !important;
+}
+.pt-4 {
+  padding-top: 40px !important;
+}
+.pt-5 {
+  padding-top: 50px !important;
+}
+.pt-6 {
+  padding-top: 60px !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+.mr-1 {
+  margin-right: 10px !important;
+}
+.mr-15 {
+  margin-right: 15px !important;
+}
+.mr-2 {
+  margin-right: 20px !important;
+}
+.mr-3 {
+  margin-right: 30px !important;
+}
+.mr-4 {
+  margin-right: 40px !important;
+}
+.mr-5 {
+  padding-top: 50px !important;
+}
+.mr-6 {
+  padding-top: 60px !important;
+}
+
+.max-width-120 {
+  max-width: 120px;
+}
+
+.height-auto {
+  height: auto;
+  height: max-content;
+}
+
+.rounded-border {
+  border: 1px solid #ededed;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.rounded-border-1 {
+  border: 1px solid #dde0ef;
+  box-sizing: border-box;
+  border-radius: 16px;
 }
 
 .title-light {
@@ -176,6 +253,28 @@ h6 {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+
+.para-intro-regular-2c {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+
+.para-intro-book-70 {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.02em;
+  /* Accent Grey 5 */
+  color: #707070;
 }
 
 @media (min-width: 992px) {
@@ -209,6 +308,16 @@ h6 {
   color: #707070;
 }
 
+.text-light {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #707070 !important;
+}
+
 .text-blue {
   font-family: "Intro" Bold;
   font-weight: bold;
@@ -234,6 +343,10 @@ h6 {
   font-weight: 400;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
 .py-20 {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -247,6 +360,17 @@ h6 {
 .px-30 {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .px-md-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.px-20 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .mb-10 {
@@ -329,11 +453,17 @@ h6 {
   width: 100%;
   max-width: 250px;
 }
+@media screen and (max-width: 992px) {
+  .dashboard .left-column {
+    display: none;
+  }
+}
 .dashboard .right-column {
   position: relative;
   z-index: 2;
   padding-top: 60px;
   height: 80%;
+  background: #f6f7fc;
 }
 
 .tabs {
@@ -414,8 +544,12 @@ h6 {
 }
 .animated-chart-1 .watch-video {
   margin-top: 35px;
-  display: flex;
-  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .animated-chart-1 .watch-video {
+    display: flex;
+    align-items: center;
+  }
 }
 .animated-chart-1 .watch-video a {
   display: inline-flex;
@@ -459,10 +593,14 @@ h6 {
   background: #006685;
   box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.21);
   border-radius: 8px;
-  margin-left: 66px;
   padding: 30px;
   width: 100%;
   max-width: 393px;
+}
+@media screen and (min-width: 992px) {
+  .multiple-items-slider .slider-item {
+    margin-left: 66px;
+  }
 }
 .multiple-items-slider .slider-item h6 {
   font-family: "Intro", Bold;
@@ -510,4 +648,106 @@ h6 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
+}
+
+.icon-column-box {
+  border-top: 3px solid #dddddd;
+  background: #fafafa;
+  border-radius: 4px;
+  padding: 16px;
+}
+@media screen and (max-width: 992px) {
+  .icon-column-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .icon-column-box {
+    padding: 30px 23px;
+  }
+}
+.icon-column-box img {
+  margin-bottom: 28px;
+}
+@media screen and (max-width: 992px) {
+  .icon-column-box img {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .icon-column-box p {
+    margin-bottom: 7px;
+  }
+}
+.icon-column-box bold {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+.icon-column-box .light {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #707070;
+}
+
+.banner-adds {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+}
+.banner-adds .adds-text {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #dddddd;
+}
+
+@media screen and (min-width: 992px) {
+  .show-col-6-flex .icon-column-box {
+    position: relative;
+    height: 128px;
+  }
+  .show-col-6-flex .icon-column-box .text {
+    height: 48px;
+    position: absolute;
+    bottom: 10px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .show-col-6-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .show-col-6-flex .icon-column-box {
+    width: 48%;
+    flex: unset;
+  }
+  .show-col-6-flex .icon-column-box img {
+    width: 25px;
+  }
+  .show-col-6-flex .icon-column-box .light {
+    margin: 0;
+    line-height: unset;
+  }
+  .show-col-6-flex .icon-column-box:nth-child(odd) {
+    margin-right: 5px;
+  }
+  .show-col-6-flex .icon-column-box:nth-child(even) {
+    margin-left: 5px;
+  }
 }/*# sourceMappingURL=custom.css.map */
