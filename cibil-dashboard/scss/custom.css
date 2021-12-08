@@ -450,8 +450,7 @@ h6 {
   z-index: 2;
   padding-top: 60px;
   background-color: #006685;
-  width: 100%;
-  max-width: 250px;
+  width: 20%;
 }
 @media screen and (max-width: 992px) {
   .dashboard .left-column {
@@ -464,6 +463,19 @@ h6 {
   padding-top: 60px;
   height: 80%;
   background: #f6f7fc;
+  width: 80%;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.dashboard .right-column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 452px;
+  z-index: -1;
 }
 
 .tabs {
@@ -536,7 +548,7 @@ h6 {
   margin-top: 20px;
 }
 .animated-chart-1 a.link-16 {
-  margin-top: 50px;
+  margin-top: 20px;
   display: block;
 }
 .animated-chart-1 .f-24-title {
@@ -589,18 +601,57 @@ h6 {
   color: #2c2c2c;
 }
 
+.card-inner {
+  height: 625px;
+  background-color: white;
+}
+
+.overlay-card {
+  display: none;
+  background: #ffffff;
+  border: 1px solid #dde0ef;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 16px;
+  height: 625px;
+  background-position: bottom right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overlay-card h6 {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2c2c2c;
+}
+.overlay-card p {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  margin-top: 30px;
+  color: #000000;
+}
+.overlay-card a {
+  margin-right: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .multiple-items-slider {
+    margin-top: 50px;
+    margin-left: 66px;
+  }
+}
 .multiple-items-slider .slider-item {
   background: #006685;
   box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.21);
   border-radius: 8px;
   padding: 30px;
   width: 100%;
-  max-width: 393px;
-}
-@media screen and (min-width: 992px) {
-  .multiple-items-slider .slider-item {
-    margin-left: 66px;
-  }
 }
 .multiple-items-slider .slider-item h6 {
   font-family: "Intro", Bold;
@@ -750,4 +801,25 @@ h6 {
   .show-col-6-flex .icon-column-box:nth-child(even) {
     margin-left: 5px;
   }
+}
+
+.slick-dots {
+  display: flex !important;
+  justify-content: center;
+  padding: 0;
+  margin-top: 20px;
+}
+.slick-dots li {
+  width: 30px;
+  height: 8px;
+  background: #dddddd;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 5px;
+}
+.slick-dots li.slick-active {
+  background: #006685;
+}
+.slick-dots li button {
+  display: none;
 }/*# sourceMappingURL=custom.css.map */
