@@ -158,6 +158,15 @@ h6 {
         margin-top: 60px !important;
     }
 }
+
+@media screen and (min-width: 992px) {
+.mt-md-19 {
+        margin-top: 19px !important;
+    }
+    .mt-md-30{
+        margin-top: 30px;
+    }
+}
 .pb {
     &-0 {
         padding-bottom: 0 !important;
@@ -634,8 +643,8 @@ $brand-blue: #006685;
     text-decoration-line: underline;
     color: #2c2c2c;
 }
-.card-inner{
-    height: 625px;
+.card-inner {
+    height: 595px;
     background-color: white;
 }
 .overlay-card {
@@ -668,7 +677,7 @@ $brand-blue: #006685;
         margin-top: 30px;
         color: #000000;
     }
-    a{
+    a {
         margin-right: auto;
     }
 }
