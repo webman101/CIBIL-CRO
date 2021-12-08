@@ -266,6 +266,14 @@ h6 {
   border-radius: 16px;
 }
 
+.border-top-1 {
+  border-top: 1px solid #dde0ef !important;
+}
+
+.border-top-0 {
+  border-top: 0;
+}
+
 .title-light {
   font-family: Intro Book;
   line-height: 24px;
