@@ -270,6 +270,10 @@ h6 {
   border-top: 1px solid #dde0ef !important;
 }
 
+.text-black-2c {
+  color: #2c2c2c;
+}
+
 .border-top-0 {
   border-top: 0;
 }
@@ -325,6 +329,16 @@ h6 {
 
 .brand-blue {
   background-color: #006685;
+}
+
+.text-intro-bold {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+}
+
+.text-red {
+  color: #d74025 !important;
+  font-family: "Intro", Regular;
 }
 
 .para-intro-book-70 {
@@ -632,8 +646,24 @@ h6 {
   background-color: white;
 }
 
+.for-overlay {
+  position: relative;
+}
+.for-overlay .closeovelay {
+  position: absolute;
+  right: 4.17%;
+  top: 3.2%;
+  cursor: pointer;
+}
+.for-overlay .overlay-card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .overlay-card {
-  display: none;
   background: #ffffff;
   border: 1px solid #dde0ef;
   box-sizing: border-box;
@@ -848,4 +878,8 @@ h6 {
 }
 .slick-dots li button {
   display: none;
+}
+
+.multiple-items-2 .icon-column-box {
+  min-height: 240px;
 }/*# sourceMappingURL=custom.css.map */

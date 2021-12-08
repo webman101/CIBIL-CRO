@@ -272,7 +272,9 @@ h6 {
 .border-top-1 {
     border-top: 1px solid #dde0ef !important;
 }
-
+.text-black-2c {
+    color: #2c2c2c;
+}
 .border-top-0 {
     border-top: 0;
 }
@@ -343,7 +345,14 @@ $brand-blue: #006685;
 
     font-weight: bold;
 }
-
+.text-intro-bold {
+    font-family: "Intro", Bold;
+    font-weight: bold;
+}
+.text-red {
+    color: #d74025 !important;
+    font-family: "Intro", Regular;
+}
 ////////////////////@at-root text
 .para-intro-book-70 {
     font-family: "Intro", Book;
@@ -662,8 +671,23 @@ $brand-blue: #006685;
     height: 595px;
     background-color: white;
 }
+.for-overlay {
+    position: relative;
+    .closeovelay {
+        position: absolute;
+        right: 4.17%;
+        top: 3.2%;
+        cursor: pointer;
+    }
+    .overlay-card {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
 .overlay-card {
-    display: none;
     background: #ffffff;
     border: 1px solid #dde0ef;
     box-sizing: border-box;
@@ -895,5 +919,10 @@ $brand-blue: #006685;
         button {
             display: none;
         }
+    }
+}
+.multiple-items-2 {
+    .icon-column-box {
+        min-height: 240px;
     }
 }
