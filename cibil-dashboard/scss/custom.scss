@@ -518,11 +518,14 @@ $brand-blue: #006685;
         position: relative;
         z-index: 2;
         padding-top: 60px;
-        height: 80%;
         background: #f6f7fc;
-        width: 80%;
-        padding-left: 60px;
-        padding-right: 60px;
+
+        @media screen and (min-width: 992px) {
+            padding-left: 60px;
+            padding-right: 60px;
+            width: 80%;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -670,6 +673,63 @@ $brand-blue: #006685;
 .card-inner {
     height: 595px;
     background-color: white;
+}
+.column-slider {
+    .slick-prev {
+        display: none !important;
+    }
+    .slick-list {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 70px;
+            background: linear-gradient(
+                270deg,
+                #ffffff 54.64%,
+                rgba(255, 255, 255, 0.0729167) 88.53%,
+                rgba(255, 255, 255, 0) 95.5%
+            );
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+    }
+    button.slick-next {
+        display: inline-block;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 65px;
+        margin: auto;
+        height: max-content;
+        background: no-repeat;
+        border: 0;
+        background-image: url(../img/slider-arrow-right.svg);
+        background-size: contain;
+        button{
+            display: none;
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .slick-dots {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .slick-slider {
+            margin: 0 -15px;
+        }
+
+        .slick-slide {
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        .slick-list {
+            padding: 0 20% 0 0 !important;
+        }
+    }
 }
 .for-overlay {
     position: relative;

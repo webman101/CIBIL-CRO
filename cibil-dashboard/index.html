@@ -94,7 +94,7 @@
 
                                 <div class="col-md-6">
                                     <div class="for-overlay">
-                                        
+
                                         <div class="w-100 border-1 mt-3 rounded-border-1 overflow-hidden card-inner">
                                             <div class="card-head bg-white py-25 px-20 px-md-30 border-bottom-1 pb-2">
                                                 <div class="text-blue text-uppercase mb-10">
@@ -131,7 +131,7 @@
                                 </div>
                                 <div class="col-md-6 pl-40">
                                     <div class="for-overlay">
-                                        
+
                                         <div class="w-100 border-1 mt-3 rounded-border-1 overflow-hidden card-inner">
                                             <div class="card-head bg-white py-25 px-20 px-md-30 border-bottom-1 pb-2">
                                                 <div class="text-blue text-uppercase mb-10">
@@ -269,7 +269,7 @@
                             <div class="banner-adds bg-white mt-3 rounded-border-1">
                                 BANNER ADS
                             </div>
-                            <div class="section-grid ">
+                            <div class="section-grid column-slider">
                                 <div class="row">
 
                                     <div class="col-md-12">
@@ -283,20 +283,7 @@
                                                 </p>
                                             </div>
                                             <div class="card-body px-20 px-md-30">
-                                                <style>
-                                                    .slick-slider {
-                                                        margin: 0 -15px;
-                                                    }
-                                                    
-                                                    .slick-slide {
-                                                        margin-right: 15px;
-                                                        margin-left: 15px;
-                                                    }
-                                                    
-                                                    .slick-list {
-                                                        padding: 0 20% 0 0 !important;
-                                                    }
-                                                </style>
+
                                                 <div class="multiple-items-2">
                                                     <div class="icon-column-box bg-white border-1">
 
@@ -576,7 +563,14 @@
                 arrows: false,
                 dots: true,
                 cellpadding: 20,
-                arrows: false,
+                arrows: true,
+                responsive: [{
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }]
             });
         });
     </script>
