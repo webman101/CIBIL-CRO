@@ -61,6 +61,15 @@ h6 {
   }
 }
 
+.bg-yellow {
+  background-color: #fcd800;
+  padding: 0 2px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
 .text-color-black {
   color: #000000;
 }

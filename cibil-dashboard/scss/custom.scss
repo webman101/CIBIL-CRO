@@ -60,6 +60,13 @@ h6 {
         margin-right: 15px;
     }
 }
+.bg-yellow {
+    background-color: #fcd800;
+    padding: 0 2px;
+}
+.text-bold {
+    font-weight: bold;
+}
 .text-color {
     &-black {
         color: #000000;
@@ -160,10 +167,10 @@ h6 {
 }
 
 @media screen and (min-width: 992px) {
-.mt-md-19 {
+    .mt-md-19 {
         margin-top: 19px !important;
     }
-    .mt-md-30{
+    .mt-md-30 {
         margin-top: 30px;
     }
 }
