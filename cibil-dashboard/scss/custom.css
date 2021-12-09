@@ -789,6 +789,10 @@ h6 {
   margin-right: auto;
 }
 
+.multiple-items-slider {
+  /* the slides */
+  /* the parent */
+}
 @media screen and (min-width: 992px) {
   .multiple-items-slider {
     margin-top: 50px;
@@ -825,6 +829,12 @@ h6 {
   letter-spacing: 0.02em;
   text-decoration-line: underline;
   color: #ffffff;
+}
+.multiple-items-slider .slick-slide {
+  margin: 0 10px;
+}
+.multiple-items-slider .slick-list {
+  margin: 0 -10px;
 }
 
 .alerts {

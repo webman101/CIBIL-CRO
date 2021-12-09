@@ -878,6 +878,14 @@ $brand-blue: #006685;
             color: #ffffff;
         }
     }
+    /* the slides */
+    .slick-slide {
+        margin: 0 10px;
+    }
+    /* the parent */
+    .slick-list {
+        margin: 0 -10px;
+    }
 }
 .alerts {
     background: #f9f9f9;
