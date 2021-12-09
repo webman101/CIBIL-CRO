@@ -425,6 +425,10 @@ h6 {
   font-weight: 400;
 }
 
+.fw-700 {
+  font-weight: 700;
+}
+
 .flex-1 {
   flex: 1;
 }
