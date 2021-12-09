@@ -245,6 +245,13 @@ h6 {
   padding-top: 60px !important;
 }
 
+.p-1 {
+  padding: 10px !important;
+}
+.p-2 {
+  padding: 20px !important;
+}
+
 .max-width-120 {
   max-width: 120px;
 }
@@ -645,8 +652,12 @@ h6 {
 }
 
 .card-inner {
-  height: 595px;
   background-color: white;
+}
+@media screen and (min-width: 992px) {
+  .card-inner {
+    height: 595px;
+  }
 }
 
 .column-slider .slick-prev {
@@ -658,17 +669,18 @@ h6 {
 .column-slider .slick-list::before {
   content: "";
   position: absolute;
-  height: 100%;
-  width: 70px;
+  height: 80%;
+  width: 60px;
   background: linear-gradient(270deg, #ffffff 54.64%, rgba(255, 255, 255, 0.0729167) 88.53%, rgba(255, 255, 255, 0) 95.5%);
   right: 0;
   top: 0;
   z-index: 1;
+  bottom: 0;
+  margin: auto;
 }
 .column-slider button.slick-next {
-  display: inline-block;
   position: absolute;
-  right: 20px;
+  right: 1px;
   top: 0;
   bottom: 65px;
   margin: auto;
@@ -677,6 +689,7 @@ h6 {
   border: 0;
   background-image: url(../img/slider-arrow-right.svg);
   background-size: contain;
+  color: transparent;
 }
 .column-slider button.slick-next button {
   display: none;
@@ -690,8 +703,8 @@ h6 {
     margin: 0 -15px;
   }
   .column-slider .slick-slide {
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   .column-slider .slick-list {
     padding: 0 20% 0 0 !important;
@@ -896,16 +909,39 @@ h6 {
     width: 48%;
     flex: unset;
   }
+}
+@media screen and (max-width: 992px) and (max-width: 400px) {
+  .show-col-6-flex .icon-column-box {
+    padding: 5px !important;
+  }
+  .show-col-6-flex .icon-column-box .light {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 992px) {
+  .show-col-6-flex .icon-column-box img {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 27px;
+  }
+}
+@media screen and (max-width: 992px) {
   .show-col-6-flex .icon-column-box img {
     width: 25px;
   }
+}
+@media screen and (max-width: 992px) {
   .show-col-6-flex .icon-column-box .light {
     margin: 0;
     line-height: unset;
   }
+}
+@media screen and (max-width: 992px) {
   .show-col-6-flex .icon-column-box:nth-child(odd) {
     margin-right: 5px;
   }
+}
+@media screen and (max-width: 992px) {
   .show-col-6-flex .icon-column-box:nth-child(even) {
     margin-left: 5px;
   }

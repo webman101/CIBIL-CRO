@@ -252,6 +252,14 @@ h6 {
         padding-top: 60px !important;
     }
 }
+.p {
+    &-1 {
+        padding: 10px !important;
+    }
+    &-2 {
+        padding: 20px !important;
+    }
+}
 .max-width-120 {
     max-width: 120px;
 }
@@ -671,7 +679,10 @@ $brand-blue: #006685;
     color: #2c2c2c;
 }
 .card-inner {
-    height: 595px;
+    @media screen and (min-width: 992px) {
+        height: 595px;
+    }
+
     background-color: white;
 }
 .column-slider {
@@ -683,8 +694,8 @@ $brand-blue: #006685;
         &::before {
             content: "";
             position: absolute;
-            height: 100%;
-            width: 70px;
+            height: 80%;
+            width: 60px;
             background: linear-gradient(
                 270deg,
                 #ffffff 54.64%,
@@ -694,12 +705,13 @@ $brand-blue: #006685;
             right: 0;
             top: 0;
             z-index: 1;
+            bottom: 0;
+            margin: auto;
         }
     }
     button.slick-next {
-        display: inline-block;
         position: absolute;
-        right: 20px;
+        right: 1px;
         top: 0;
         bottom: 65px;
         margin: auto;
@@ -708,7 +720,8 @@ $brand-blue: #006685;
         border: 0;
         background-image: url(../img/slider-arrow-right.svg);
         background-size: contain;
-        button{
+        color: transparent;
+        button {
             display: none;
         }
     }
@@ -722,8 +735,8 @@ $brand-blue: #006685;
         }
 
         .slick-slide {
-            margin-right: 15px;
-            margin-left: 15px;
+            margin-right: 10px;
+            margin-left: 10px;
         }
 
         .slick-list {
@@ -945,6 +958,22 @@ $brand-blue: #006685;
         .icon-column-box {
             width: 48%;
             flex: unset;
+            @media screen and (max-width: 400px) {
+                padding: 5px !important;
+                img{
+                }
+                .light {
+              
+                    font-size: 12px;
+                }
+            }
+            @media screen and (max-width: 992px) {
+                img{
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    height: 27px;
+                }
+            }
             img {
                 width: 25px;
             }
