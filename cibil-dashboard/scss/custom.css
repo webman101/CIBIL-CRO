@@ -1125,9 +1125,6 @@ h6 {
   background-image: url(../img/downarrow-carret.svg);
   background-size: contain;
 }
-.blue-dropdown-groups-section .dd-button:hover {
-  background-color: #eeeeee;
-}
 .blue-dropdown-groups-section .dd-input {
   display: none;
 }
@@ -1143,13 +1140,15 @@ h6 {
   border-radius: 4px;
   padding: 0;
   margin: 2px 0 0 0;
-  background-color: #ffffff;
   list-style-type: none;
+  background: #006685;
+  box-shadow: 0px 0px 15px -5px #282828;
 }
 .blue-dropdown-groups-section .dd-menu li {
   padding: 10px 20px;
   cursor: pointer;
   white-space: nowrap;
+  margin-left: 10px;
 }
 .blue-dropdown-groups-section .dd-menu li a {
   display: block;
@@ -1159,4 +1158,80 @@ h6 {
 .blue-dropdown-groups-section .dd-menu li.divider {
   padding: 0;
   border-bottom: 1px solid #cccccc;
+}
+
+.image-column {
+  width: 121px;
+  padding-right: 30px;
+  position: relative;
+}
+.image-column::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #dddddd;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+}
+.image-column img {
+  width: 100%;
+}
+
+.compare-row {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  padding: 32px 30px;
+}
+.compare-row .button-row {
+  margin-left: auto;
+}
+
+.limit-column {
+  padding-left: 30px;
+  position: relative;
+  width: 193px;
+}
+.limit-column::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #dddddd;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+}
+
+.interest-column {
+  width: 200px;
+  padding-left: 30px;
+  position: relative;
+}
+.interest-column::before {
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 1px;
+  background-color: #dddddd;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+}
+
+.annual-fees {
+  padding-left: 30px;
+  position: relative;
+  width: 130px;
 }/*# sourceMappingURL=custom.css.map */
