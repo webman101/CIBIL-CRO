@@ -55,9 +55,13 @@ h6 {
         font-size: 24px !important;
     }
 }
-.mr-md-15 {
-    @media screen and (min-width: 992px) {
+
+@media screen and (min-width: 992px) {
+    .mr-md-15 {
         margin-right: 15px;
+    }
+    .mr-md-30 {
+        margin-right: 30px;
     }
 }
 .bg-yellow {
@@ -260,6 +264,14 @@ h6 {
         padding: 20px !important;
     }
 }
+.ml {
+    &-2 {
+        margin-left: 20px;
+    }
+    &-15 {
+        margin-left: 15px;
+    }
+}
 .max-width-120 {
     max-width: 120px;
 }
@@ -286,9 +298,40 @@ h6 {
 .border-top-0 {
     border-top: 0;
 }
+.border-ac {
+    border: 1px solid #acacac;
+    box-sizing: border-box;
+}
+.border-ac-section {
+    background: #ffffff;
+    border: 1px solid #acacac;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 15px 8px 15px 20px;
+    min-height: 62px;
+    align-items: center;
+    display: flex;
+}
+.text-button {
+    font-family: "Intro", Bold;
 
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    padding: 0 8px;
+
+    color: #2c2c2c;
+}
+.border-radius-6px {
+    border-radius: 6px;
+}
 .title-light {
-    font-family: Intro Book;
+    font-family: "Intro", Book;
 
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -296,8 +339,7 @@ h6 {
 }
 .para-intro-regular-2c {
     font-family: "Intro", Regular;
-    font-style: normal;
-    font-weight: normal;
+
     font-size: 16px;
     line-height: 24px;
 
@@ -307,17 +349,15 @@ h6 {
 }
 .para-intro-book-70 {
     font-family: "Intro", Book;
-    font-style: normal;
-    font-weight: normal;
+
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
-    letter-spacing: 0.02em;
 
-    /* Accent Grey 5 */
+    letter-spacing: 0.02em;
 
     color: #707070;
 }
+
 .m-visible {
     @media (min-width: 992px) {
         display: none !important;
@@ -373,8 +413,7 @@ $brand-blue: #006685;
 }
 .text-light {
     font-family: "Intro", Book;
-    font-style: normal;
-    font-weight: normal;
+
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -598,10 +637,6 @@ $brand-blue: #006685;
     margin: 20px;
     padding: 0;
     list-style: none;
-
-    li {
-        display: none;
-    }
 }
 
 .animated-chart-1 {
@@ -772,16 +807,14 @@ $brand-blue: #006685;
     background-repeat: no-repeat;
     h6 {
         font-family: "Intro", Regular;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 24px;
         line-height: 30px;
         color: #2c2c2c;
     }
     p {
         font-family: "Intro", Book;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 14px;
         line-height: 24px;
 
@@ -852,8 +885,7 @@ $brand-blue: #006685;
     padding: 10px;
     .date {
         font-family: "Intro", Book;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 14px;
         line-height: 24px;
 
@@ -863,7 +895,7 @@ $brand-blue: #006685;
     }
     .cibilalert {
         font-family: "Intro", Bold;
-        font-style: normal;
+
         font-weight: bold;
         font-size: 16px;
         line-height: 24px;
@@ -901,8 +933,7 @@ $brand-blue: #006685;
     }
     bold {
         font-family: "Intro", Regular;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.02em;
@@ -911,8 +942,6 @@ $brand-blue: #006685;
     .light {
         font-family: "Intro", Regular;
 
-        font-style: normal;
-        font-weight: normal;
         font-size: 14px;
         line-height: 24px;
 
@@ -927,7 +956,7 @@ $brand-blue: #006685;
     height: 240px;
     .adds-text {
         font-family: "Intro", Bold;
-        font-style: normal;
+
         font-weight: bold;
         font-size: 16px;
         line-height: 24px;
@@ -960,15 +989,14 @@ $brand-blue: #006685;
             flex: unset;
             @media screen and (max-width: 400px) {
                 padding: 5px !important;
-                img{
+                img {
                 }
                 .light {
-              
                     font-size: 12px;
                 }
             }
             @media screen and (max-width: 992px) {
-                img{
+                img {
                     margin-top: 0 !important;
                     margin-bottom: 0 !important;
                     height: 27px;
@@ -1013,5 +1041,175 @@ $brand-blue: #006685;
 .multiple-items-2 {
     .icon-column-box {
         min-height: 240px;
+    }
+}
+
+////////////////////////@at-root
+/////////Offers
+.page-type-2 {
+    .right-column::before {
+        height: 255px;
+    }
+    .tabs-content {
+        margin: 0;
+    }
+}
+.navigation-tabs {
+    display: flex;
+    align-items: center;
+    & > div {
+        background: #f9f9f9;
+        padding: 4px 10px;
+        border: 1px solid #dddddd;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-family: "Intro", Book;
+        font-size: 14px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.02em;
+        color: #707070;
+        &.navigation-active-tab {
+            color: #2c2c2c;
+        }
+    }
+    img {
+        margin: 0 10px;
+    }
+}
+.page-title-with-icon {
+    display: flex;
+    align-items: center;
+    h3 {
+        font-family: "Intro", Regular;
+
+        font-size: 40px;
+        line-height: 50px;
+        color: #2c2c2c;
+        margin-left: 16px;
+    }
+}
+//////////////switch-tabs-section
+.switch-tabs-section {
+    display: flex;
+    align-items: center;
+    .switch-tab {
+        height: 128px;
+        background-color: #fff;
+        padding-left: 20px;
+        padding-top: 14px;
+        flex: 1;
+        border-right: 1px solid #dddddd;
+        .numb {
+            width: 34px;
+            height: 34px;
+            background: #707070;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        p {
+            font-family: "Intro", Bold;
+
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+
+            letter-spacing: 0.02em;
+
+            color: #2c2c2c;
+        }
+        &.active {
+            border-top: 6px solid #00a6ca;
+            .numb {
+                background-color: #00a6ca;
+            }
+        }
+    }
+}
+.text-color-70 {
+    color: #707070 !important;
+}
+.blue-dropdown-groups-section {
+    background: #006685;
+    padding: 22px 30px;
+
+    .dropdown {
+        display: inline-block;
+        position: relative;
+        min-width: 121px;
+    }
+    .dd-button {
+        display: inline-block;
+        border-radius: 4px;
+        padding: 10px 30px 10px 20px;
+        background-color: transparent;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: "Intro", Regular;
+
+        font-size: 14px;
+        line-height: 140%;
+
+        color: #ffffff;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 6px;
+            background-image: url(../img/downarrow-carret.svg);
+            background-size: contain;
+        }
+        &:hover {
+            background-color: #eeeeee;
+        }
+    }
+    .dd-input {
+        display: none;
+        + {
+            .dd-menu {
+                display: none;
+            }
+        }
+        &:checked {
+            + {
+                .dd-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+    .dd-menu {
+        position: absolute;
+        top: 100%;
+        border-radius: 4px;
+        padding: 0;
+        margin: 2px 0 0 0;
+        background-color: #ffffff;
+        list-style-type: none;
+        li {
+            padding: 10px 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            &:hover {
+            }
+            a {
+                display: block;
+                margin: -10px -20px;
+                padding: 10px 20px;
+            }
+        }
+        li.divider {
+            padding: 0;
+            border-bottom: 1px solid #cccccc;
+        }
     }
 }

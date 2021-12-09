@@ -59,8 +59,11 @@ h6 {
   .mr-md-15 {
     margin-right: 15px;
   }
-}
 
+  .mr-md-30 {
+    margin-right: 30px;
+  }
+}
 .bg-yellow {
   background-color: #fcd800;
   padding: 0 2px;
@@ -252,6 +255,13 @@ h6 {
   padding: 20px !important;
 }
 
+.ml-2 {
+  margin-left: 20px;
+}
+.ml-15 {
+  margin-left: 15px;
+}
+
 .max-width-120 {
   max-width: 120px;
 }
@@ -285,8 +295,41 @@ h6 {
   border-top: 0;
 }
 
+.border-ac {
+  border: 1px solid #acacac;
+  box-sizing: border-box;
+}
+
+.border-ac-section {
+  background: #ffffff;
+  border: 1px solid #acacac;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 15px 8px 15px 20px;
+  min-height: 62px;
+  align-items: center;
+  display: flex;
+}
+
+.text-button {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  padding: 0 8px;
+  color: #2c2c2c;
+}
+
+.border-radius-6px {
+  border-radius: 6px;
+}
+
 .title-light {
-  font-family: Intro Book;
+  font-family: "Intro", Book;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
@@ -294,8 +337,6 @@ h6 {
 
 .para-intro-regular-2c {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -304,13 +345,9 @@ h6 {
 
 .para-intro-book-70 {
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  /* identical to box height, or 171% */
   letter-spacing: 0.02em;
-  /* Accent Grey 5 */
   color: #707070;
 }
 
@@ -357,8 +394,6 @@ h6 {
 
 .text-light {
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -576,9 +611,6 @@ h6 {
   padding: 0;
   list-style: none;
 }
-.tabs-content li {
-  display: none;
-}
 
 .animated-chart-1 {
   height: 477px;
@@ -741,16 +773,12 @@ h6 {
 }
 .overlay-card h6 {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 30px;
   color: #2c2c2c;
 }
 .overlay-card p {
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -806,8 +834,6 @@ h6 {
 }
 .alerts .date {
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -815,7 +841,6 @@ h6 {
 }
 .alerts .cibilalert {
   font-family: "Intro", Bold;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -855,8 +880,6 @@ h6 {
 }
 .icon-column-box bold {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -864,8 +887,6 @@ h6 {
 }
 .icon-column-box .light {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   color: #707070;
@@ -879,7 +900,6 @@ h6 {
 }
 .banner-adds .adds-text {
   font-family: "Intro", Bold;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -970,4 +990,159 @@ h6 {
 
 .multiple-items-2 .icon-column-box {
   min-height: 240px;
+}
+
+.page-type-2 .right-column::before {
+  height: 255px;
+}
+.page-type-2 .tabs-content {
+  margin: 0;
+}
+
+.navigation-tabs {
+  display: flex;
+  align-items: center;
+}
+.navigation-tabs > div {
+  background: #f9f9f9;
+  padding: 4px 10px;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "Intro", Book;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  color: #707070;
+}
+.navigation-tabs > div.navigation-active-tab {
+  color: #2c2c2c;
+}
+.navigation-tabs img {
+  margin: 0 10px;
+}
+
+.page-title-with-icon {
+  display: flex;
+  align-items: center;
+}
+.page-title-with-icon h3 {
+  font-family: "Intro", Regular;
+  font-size: 40px;
+  line-height: 50px;
+  color: #2c2c2c;
+  margin-left: 16px;
+}
+
+.switch-tabs-section {
+  display: flex;
+  align-items: center;
+}
+.switch-tabs-section .switch-tab {
+  height: 128px;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-top: 14px;
+  flex: 1;
+  border-right: 1px solid #dddddd;
+}
+.switch-tabs-section .switch-tab .numb {
+  width: 34px;
+  height: 34px;
+  background: #707070;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.switch-tabs-section .switch-tab p {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+.switch-tabs-section .switch-tab.active {
+  border-top: 6px solid #00a6ca;
+}
+.switch-tabs-section .switch-tab.active .numb {
+  background-color: #00a6ca;
+}
+
+.text-color-70 {
+  color: #707070 !important;
+}
+
+.blue-dropdown-groups-section {
+  background: #006685;
+  padding: 22px 30px;
+}
+.blue-dropdown-groups-section .dropdown {
+  display: inline-block;
+  position: relative;
+  min-width: 121px;
+}
+.blue-dropdown-groups-section .dd-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 30px 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "Intro", Regular;
+  font-size: 14px;
+  line-height: 140%;
+  color: #ffffff;
+}
+.blue-dropdown-groups-section .dd-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 6px;
+  background-image: url(../img/downarrow-carret.svg);
+  background-size: contain;
+}
+.blue-dropdown-groups-section .dd-button:hover {
+  background-color: #eeeeee;
+}
+.blue-dropdown-groups-section .dd-input {
+  display: none;
+}
+.blue-dropdown-groups-section .dd-input + .dd-menu {
+  display: none;
+}
+.blue-dropdown-groups-section .dd-input:checked + .dd-menu {
+  display: block;
+}
+.blue-dropdown-groups-section .dd-menu {
+  position: absolute;
+  top: 100%;
+  border-radius: 4px;
+  padding: 0;
+  margin: 2px 0 0 0;
+  background-color: #ffffff;
+  list-style-type: none;
+}
+.blue-dropdown-groups-section .dd-menu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.blue-dropdown-groups-section .dd-menu li a {
+  display: block;
+  margin: -10px -20px;
+  padding: 10px 20px;
+}
+.blue-dropdown-groups-section .dd-menu li.divider {
+  padding: 0;
+  border-bottom: 1px solid #cccccc;
 }/*# sourceMappingURL=custom.css.map */
