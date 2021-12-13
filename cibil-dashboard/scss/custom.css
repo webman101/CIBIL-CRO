@@ -1048,11 +1048,21 @@ h6 {
 }
 .page-type-2 .tabs-content {
   margin: 0;
+  padding-top: 0;
 }
 @media screen and (max-width: 992px) {
-  .page-type-2 .list-tab {
-    padding-left: 20px;
-    padding-right: 20px;
+  .page-type-2 .list-tab > div {
+    padding: 20px;
+  }
+}
+.page-type-2 a.text-button.text-center {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .page-type-2 .right-column {
+    padding-top: 0px;
   }
 }
 
@@ -1134,7 +1144,7 @@ h6 {
   align-items: center;
 }
 .switch-tabs-section .switch-tab {
-  height: 128px;
+  min-height: 128px;
   background-color: #fff;
   padding-left: 20px;
   padding-top: 14px;
@@ -1144,10 +1154,15 @@ h6 {
 .switch-tabs-section .switch-tab p {
   font-family: "Intro", Bold;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+@media screen and (min-width: 1366px) {
+  .switch-tabs-section .switch-tab p {
+    font-size: 16px;
+  }
 }
 .switch-tabs-section .switch-tab.disabled p {
   color: #acacac;

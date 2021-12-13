@@ -1104,12 +1104,28 @@ $brand-blue: #006685;
     }
     .tabs-content {
         margin: 0;
+        padding-top: 0;  
     }
     .list-tab {
         @media screen and (max-width: 992px) {
-            padding-left: 20px;
-            padding-right: 20px;
+        >div{
+            padding: 20px;
+            
         }
+        }
+    }
+    a.text-button.text-center{
+        text-align: center;
+        display: block;
+    width: 100%;
+    }
+    .right-column{
+        
+        @media screen and (max-width: 992px) {
+            padding-top: 00px;  
+        }
+        
+        
     }
 }
 .navigation-tabs {
@@ -1187,7 +1203,7 @@ $brand-blue: #006685;
     display: flex;
     align-items: center;
     .switch-tab {
-        height: 128px;
+        min-height: 128px;
         background-color: #fff;
         padding-left: 20px;
         padding-top: 14px;
@@ -1198,7 +1214,12 @@ $brand-blue: #006685;
             font-family: "Intro", Bold;
 
             font-weight: bold;
-            font-size: 16px;
+            font-size: 14px;
+            @media screen and (min-width: 1366px) {
+                font-size: 16px;
+            }
+            
+            
             line-height: 24px;
 
             letter-spacing: 0.02em;
