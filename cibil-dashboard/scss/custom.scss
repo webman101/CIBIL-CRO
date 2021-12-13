@@ -496,6 +496,29 @@ $brand-blue: #006685;
         padding-left: 40px;
     }
 }
+
+@media screen and (min-width: 992px) {
+    .mt-md-0 {
+        margin-top: 0 !important;
+    }
+    .pt-md-40 {
+        padding-top: 40px !important;
+    }
+    .pb-md-20 {
+        padding-bottom: 20px !important;
+    }
+}
+
+.pl-60 {
+    @media screen and (min-width: 992px) {
+        padding-left: 60px;
+    }
+}
+.pl-0 {
+    @media screen and (min-width: 992px) {
+        padding-left: 0px !important;
+    }
+}
 /////////////////////@at-root
 .border-bottom-1 {
     border-bottom: 1px solid #dde0ef;
@@ -541,6 +564,10 @@ $brand-blue: #006685;
     width: calc(316px / 2);
     display: block;
     margin: auto;
+
+    position: fixed;
+    top: 20px;
+    left: 50px;
 }
 .dashboard {
     position: relative;
@@ -587,16 +614,16 @@ $brand-blue: #006685;
             width: 80%;
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            height: 452px;
-            z-index: -1;
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     background-color: white;
+        //     height: 452px;
+        //     z-index: -1;
+        // }
     }
 }
 
@@ -1125,6 +1152,11 @@ $brand-blue: #006685;
 //////////////switch-tabs-section
 .switching-tabs {
     background-color: #ffffff;
+
+    @media screen and (min-width: 992px) {
+        margin-top: 40px;
+    }
+
     .benefits-outer {
         padding: 20px;
         .row {
@@ -1173,8 +1205,26 @@ $brand-blue: #006685;
 
             color: #2c2c2c;
         }
+        &.disabled {
+            p {
+                color: #acacac;
+            }
+            .numb {
+                background-color: #dddddd;
+            }
+        }
         &.active {
-            border-top: 6px solid #00a6ca;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                height: 6px;
+                width: 100%;
+                left: 0;
+                right: 0;
+                top: 0;
+                background-color: #00a6ca;
+            }
             .numb {
                 background-color: #00a6ca;
             }
@@ -1186,9 +1236,9 @@ $brand-blue: #006685;
 }
 .blue-dropdown-groups-section {
     background: #006685;
-    padding: 22px 0 22px 20px;
-    padding-left: 0;
-
+    height: 60px;
+    display: flex;
+    align-items: center;
     .dropdown {
         display: inline-block;
         position: relative;
@@ -1197,7 +1247,7 @@ $brand-blue: #006685;
         &::before {
             content: "";
             position: absolute;
-            height: 50px;
+            height: 70%;
             width: 1px;
             background-color: #dddddd;
             top: 0;
@@ -1390,7 +1440,7 @@ $brand-blue: #006685;
             position: absolute;
             height: 18px;
             width: 18px;
-            background-image: url(../img/greencheck.svg);
+            background-image: url(../img/greencheck1.svg);
             background-size: contain;
             left: 0;
         }
@@ -1538,7 +1588,7 @@ $brand-blue: #006685;
 .three-column {
     display: flex;
     padding: 10px;
-    border-top: 1px solid #DDDDDD;
+    border-top: 1px solid #dddddd;
     & > div {
         flex: 1;
         position: relative;
@@ -1553,13 +1603,13 @@ $brand-blue: #006685;
             margin: auto;
             right: 10px;
         }
-        &:last-child{
+        &:last-child {
             &::before {
-             display: none;
-            }  
+                display: none;
+            }
         }
     }
-   
+
     .para-intro-regular-2c {
         font-family: "Intro", Bold;
         font-style: normal;

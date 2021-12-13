@@ -483,6 +483,31 @@ h6 {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .mt-md-0 {
+    margin-top: 0 !important;
+  }
+
+  .pt-md-40 {
+    padding-top: 40px !important;
+  }
+
+  .pb-md-20 {
+    padding-bottom: 20px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .pl-60 {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .pl-0 {
+    padding-left: 0px !important;
+  }
+}
+
 .border-bottom-1 {
   border-bottom: 1px solid #dde0ef;
 }
@@ -521,6 +546,9 @@ h6 {
   width: calc(316px / 2);
   display: block;
   margin: auto;
+  position: fixed;
+  top: 20px;
+  left: 50px;
 }
 
 .dashboard {
@@ -569,16 +597,6 @@ h6 {
     padding-right: 60px;
     width: 80%;
   }
-}
-.dashboard .right-column::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  height: 452px;
-  z-index: -1;
 }
 
 .tabs {
@@ -1080,6 +1098,11 @@ h6 {
   background-color: #ffffff;
   margin-bottom: 60px;
 }
+@media screen and (min-width: 992px) {
+  .switching-tabs {
+    margin-top: 40px;
+  }
+}
 .switching-tabs .benefits-outer {
   padding: 20px;
 }
@@ -1126,8 +1149,24 @@ h6 {
   letter-spacing: 0.02em;
   color: #2c2c2c;
 }
+.switch-tabs-section .switch-tab.disabled p {
+  color: #acacac;
+}
+.switch-tabs-section .switch-tab.disabled .numb {
+  background-color: #dddddd;
+}
 .switch-tabs-section .switch-tab.active {
-  border-top: 6px solid #00a6ca;
+  position: relative;
+}
+.switch-tabs-section .switch-tab.active::after {
+  position: absolute;
+  content: "";
+  height: 6px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #00a6ca;
 }
 .switch-tabs-section .switch-tab.active .numb {
   background-color: #00a6ca;
@@ -1139,8 +1178,9 @@ h6 {
 
 .blue-dropdown-groups-section {
   background: #006685;
-  padding: 22px 0 22px 20px;
-  padding-left: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 .blue-dropdown-groups-section .dropdown {
   display: inline-block;
@@ -1151,7 +1191,7 @@ h6 {
 .blue-dropdown-groups-section .dropdown::before {
   content: "";
   position: absolute;
-  height: 50px;
+  height: 70%;
   width: 1px;
   background-color: #dddddd;
   top: 0;
@@ -1339,7 +1379,7 @@ h6 {
   position: absolute;
   height: 18px;
   width: 18px;
-  background-image: url(../img/greencheck.svg);
+  background-image: url(../img/greencheck1.svg);
   background-size: contain;
   left: 0;
 }
@@ -1475,7 +1515,7 @@ h6 {
 .three-column {
   display: flex;
   padding: 10px;
-  border-top: 1px solid #DDDDDD;
+  border-top: 1px solid #dddddd;
 }
 .three-column > div {
   flex: 1;
