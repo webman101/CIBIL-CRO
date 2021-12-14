@@ -14,7 +14,9 @@ body {
 a {
     outline: none !important;
 }
-
+button,a{
+    cursor: pointer;
+}
 h1,
 h2,
 h3,
@@ -768,21 +770,24 @@ $brand-blue: #006685;
     .slick-list {
         position: relative;
         &::before {
-            content: "";
-            position: absolute;
-            height: 80%;
-            width: 60px;
-            background: linear-gradient(
-                270deg,
-                #ffffff 54.64%,
-                rgba(255, 255, 255, 0.0729167) 88.53%,
-                rgba(255, 255, 255, 0) 95.5%
-            );
-            right: 0;
-            top: 0;
-            z-index: 1;
-            bottom: 0;
-            margin: auto;
+            @media screen and (min-width: 992px) {
+                content: "";
+                position: absolute;
+                height: 80%;
+
+                width: 60px;
+                background: linear-gradient(
+                    270deg,
+                    #ffffff 54.64%,
+                    rgba(255, 255, 255, 0.0729167) 88.53%,
+                    rgba(255, 255, 255, 0) 95.5%
+                );
+                right: 0;
+                top: 0;
+                z-index: 1;
+                bottom: 0;
+                margin: auto;
+            }
         }
     }
     button.slick-next {
@@ -928,6 +933,17 @@ $brand-blue: #006685;
         margin: 0 -10px;
     }
 }
+@media screen and (max-width: 992px) {
+    .slick-slider {
+        margin: 0 -15px;
+    }
+
+    .slick-slide {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
 .alerts {
     background: #f9f9f9;
     border-radius: 4px;
@@ -1166,7 +1182,6 @@ $brand-blue: #006685;
     background-color: #ffffff;
 
     @media screen and (min-width: 992px) {
-        margin-top: 40px;
     }
 
     .benefits-outer {
@@ -1462,6 +1477,13 @@ $brand-blue: #006685;
         }
     }
 }
+.mobile-grid {
+    background: #ffffff;
+    border: 1px solid #dde0ef;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-top: 20px;
+}
 .mobile-switch-container {
     .dropdown-container {
         background: #00a6ca;
@@ -1469,6 +1491,11 @@ $brand-blue: #006685;
         .dropdown {
             background: #ffffff;
             width: 100%;
+            /* Primary Blue */
+
+            border: 1px solid #00a6ca;
+            box-sizing: border-box;
+            border-radius: 6px;
             .dd-button {
                 color: #2c2c2c !important;
                 width: 100%;

@@ -15,6 +15,10 @@ a {
   outline: none !important;
 }
 
+button, a {
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -734,17 +738,19 @@ h6 {
 .column-slider .slick-list {
   position: relative;
 }
-.column-slider .slick-list::before {
-  content: "";
-  position: absolute;
-  height: 80%;
-  width: 60px;
-  background: linear-gradient(270deg, #ffffff 54.64%, rgba(255, 255, 255, 0.0729167) 88.53%, rgba(255, 255, 255, 0) 95.5%);
-  right: 0;
-  top: 0;
-  z-index: 1;
-  bottom: 0;
-  margin: auto;
+@media screen and (min-width: 992px) {
+  .column-slider .slick-list::before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 60px;
+    background: linear-gradient(270deg, #ffffff 54.64%, rgba(255, 255, 255, 0.0729167) 88.53%, rgba(255, 255, 255, 0) 95.5%);
+    right: 0;
+    top: 0;
+    z-index: 1;
+    bottom: 0;
+    margin: auto;
+  }
 }
 .column-slider button.slick-next {
   position: absolute;
@@ -873,6 +879,16 @@ h6 {
   margin: 0 -10px;
 }
 
+@media screen and (max-width: 992px) {
+  .slick-slider {
+    margin: 0 -15px;
+  }
+
+  .slick-slide {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
 .alerts {
   background: #f9f9f9;
   border-radius: 4px;
@@ -1107,11 +1123,6 @@ h6 {
 .switching-tabs {
   background-color: #ffffff;
   margin-bottom: 60px;
-}
-@media screen and (min-width: 992px) {
-  .switching-tabs {
-    margin-top: 40px;
-  }
 }
 .switching-tabs .benefits-outer {
   padding: 20px;
@@ -1399,6 +1410,14 @@ h6 {
   left: 0;
 }
 
+.mobile-grid {
+  background: #ffffff;
+  border: 1px solid #dde0ef;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
 .mobile-switch-container .dropdown-container {
   background: #00a6ca;
   padding: 20px;
@@ -1406,6 +1425,10 @@ h6 {
 .mobile-switch-container .dropdown-container .dropdown {
   background: #ffffff;
   width: 100%;
+  /* Primary Blue */
+  border: 1px solid #00a6ca;
+  box-sizing: border-box;
+  border-radius: 6px;
 }
 .mobile-switch-container .dropdown-container .dropdown .dd-button {
   color: #2c2c2c !important;
