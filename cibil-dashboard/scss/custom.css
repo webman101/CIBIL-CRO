@@ -1568,4 +1568,75 @@ h6 {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+
+.largetabs #largetabs-nav {
+  display: flex;
+  padding: 0;
+}
+.largetabs #largetabs-nav li {
+  padding: 0;
+  margin: 0;
+  min-height: 128px;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-top: 14px;
+  flex: 1;
+  border-right: 1px solid #dddddd;
+}
+.largetabs #largetabs-nav li p {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+@media screen and (min-width: 1366px) {
+  .largetabs #largetabs-nav li p {
+    font-size: 16px;
+  }
+}
+.largetabs #largetabs-nav li.disabled p,
+.largetabs #largetabs-nav li.disabled a {
+  color: #acacac;
+}
+.largetabs #largetabs-nav li.disabled .numb {
+  background-color: #dddddd;
+}
+.largetabs #largetabs-nav li.active {
+  position: relative;
+}
+.largetabs #largetabs-nav li.active::after {
+  position: absolute;
+  content: "";
+  height: 6px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #00a6ca;
+}
+.largetabs #largetabs-nav li.active .numb {
+  background-color: #00a6ca;
+}
+.largetabs #largetabs-nav li a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    padding-left: 20%;
+    position: relative;
+  }
+  footer::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 101%;
+    width: 20%;
+    background-color: #006685;
+    border-top: 1px solid #006685;
+  }
 }/*# sourceMappingURL=custom.css.map */

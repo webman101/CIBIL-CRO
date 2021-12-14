@@ -1104,28 +1104,24 @@ $brand-blue: #006685;
     }
     .tabs-content {
         margin: 0;
-        padding-top: 0;  
+        padding-top: 0;
     }
     .list-tab {
         @media screen and (max-width: 992px) {
-        >div{
-            padding: 20px;
-            
-        }
+            > div {
+                padding: 20px;
+            }
         }
     }
-    a.text-button.text-center{
+    a.text-button.text-center {
         text-align: center;
         display: block;
-    width: 100%;
+        width: 100%;
     }
-    .right-column{
-        
+    .right-column {
         @media screen and (max-width: 992px) {
-            padding-top: 00px;  
+            padding-top: 00px;
         }
-        
-        
     }
 }
 .navigation-tabs {
@@ -1218,8 +1214,7 @@ $brand-blue: #006685;
             @media screen and (min-width: 1366px) {
                 font-size: 16px;
             }
-            
-            
+
             line-height: 24px;
 
             letter-spacing: 0.02em;
@@ -1654,5 +1649,83 @@ $brand-blue: #006685;
         letter-spacing: 0.02em;
 
         color: #2c2c2c;
+    }
+}
+////////////////////////@at-root
+
+.largetabs {
+    #largetabs-nav {
+        display: flex;
+        padding: 0;
+        li {
+            padding: 0;
+            margin: 0;
+            min-height: 128px;
+            background-color: #fff;
+            padding-left: 20px;
+            padding-top: 14px;
+            flex: 1;
+            border-right: 1px solid #dddddd;
+
+            p {
+                font-family: "Intro", Bold;
+
+                font-weight: bold;
+                font-size: 14px;
+                @media screen and (min-width: 1366px) {
+                    font-size: 16px;
+                }
+
+                line-height: 24px;
+
+                letter-spacing: 0.02em;
+
+                color: #2c2c2c;
+            }
+            &.disabled {
+                p,
+                a {
+                    color: #acacac;
+                }
+                .numb {
+                    background-color: #dddddd;
+                }
+            }
+            &.active {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 6px;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    background-color: #00a6ca;
+                }
+                .numb {
+                    background-color: #00a6ca;
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+footer {
+    @media screen and (min-width: 992px) {
+        padding-left: 20%;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            height: 101%;
+            width: 20%;
+            background-color: #006685;
+            border-top: 1px solid #006685;
+        }
     }
 }
