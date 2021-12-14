@@ -613,23 +613,15 @@ $brand-blue: #006685;
 
         @media screen and (min-width: 992px) {
             padding-left: 60px;
-            padding-right: 60px;
             width: 80%;
         }
-
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     background-color: white;
-        //     height: 452px;
-        //     z-index: -1;
-        // }
     }
 }
-
+.pr-60 {
+    @media screen and (min-width: 992px) {
+        padding-right: 60px;
+    }
+}
 .tabs {
     margin: 0;
     margin-top: 90px;
@@ -1574,6 +1566,10 @@ $brand-blue: #006685;
             + {
                 .dd-menu {
                     display: block;
+                    z-index: 2;
+                    display: block;
+                    width: 100%;
+                    background: #fff;
                 }
             }
         }
@@ -1858,4 +1854,39 @@ input {
 }
 input:focus {
     outline: none;
+}
+.compare-message {
+    background: #fcd800;
+    padding: 10px 15px;
+    @media screen and (min-width: 992px) {
+        padding: 15px 80px 20px;
+    }
+
+    .offer-to-compare {
+        display: flex;
+        justify-content: space-between;
+        & > div {
+            position: relative;
+            margin: 0 5px;
+            @media screen and (max-width: 992px) {
+                border: 1px solid #707070;
+                box-sizing: border-box;
+                border-radius: 4px;
+                padding: 8px;
+                .offer-image {
+                    max-width: 62px;
+                }
+                .times {
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            background-color: #fff;
+            padding: 14px;
+        }
+    }
 }
