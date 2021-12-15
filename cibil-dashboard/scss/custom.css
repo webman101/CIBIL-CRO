@@ -1304,7 +1304,7 @@ h6 {
 
 .image-column {
   width: 130px;
-  padding-right: 30px;
+  padding-right: 18px;
   position: relative;
 }
 .image-column::before {
