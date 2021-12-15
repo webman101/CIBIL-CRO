@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -1458,6 +1459,46 @@ h6 {
   border-bottom: 1px solid #dddddd;
   padding-bottom: 20px;
 }
+.checkbox-row input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+.checkbox-row input[type=checkbox] {
+  display: none;
+}
+.checkbox-row input[type=checkbox] + label:before {
+  content: "✔";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.2s;
+}
+.checkbox-row input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+.checkbox-row input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+.checkbox-row input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+.checkbox-row input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
 .checkbox-row a {
   position: relative;
 }
@@ -1736,6 +1777,13 @@ h6 {
   text-decoration: none;
 }
 
+@media screen and (max-width: 992px) {
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+}
 @media screen and (min-width: 992px) {
   footer {
     padding-left: 20%;
@@ -1751,84 +1799,6 @@ h6 {
     background-color: #006685;
     border-top: 1px solid #006685;
   }
-}
-
-.checkbox {
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  border: 2px solid #2c2c2c;
-  height: 16px;
-  width: 16px;
-  overflow: hidden;
-  border-radius: 4px;
-}
-.checkbox-input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.checkbox-input:focus {
-  border: 0 !important;
-  outline: 0 !important;
-}
-.checkbox-input:checked ~ .checkbox-checkmark-box .checkbox-checkmark:after {
-  display: block;
-}
-.checkbox-input:checked ~ .checkbox-checkmark-box .checkbox-checkmark {
-  background-color: #2c2c2c;
-}
-
-.checkbox-checkmark-box {
-  width: 16px;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0;
-}
-
-.checkbox-checkmark {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0;
-  cursor: pointer;
-}
-.checkbox-checkmark:before {
-  content: "";
-  display: none;
-  width: 10px;
-  height: 5px;
-  position: absolute;
-  background-color: red;
-  top: -3px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-.checkbox-checkmark:after {
-  content: "";
-  display: none;
-  border-left: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  width: 10px;
-  height: 5px;
-  background-size: contain;
-  transform: rotateZ(-45deg);
-  position: absolute;
-  top: -3px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
 }
 
 input {
