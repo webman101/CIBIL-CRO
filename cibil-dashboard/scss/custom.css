@@ -1218,6 +1218,7 @@ h6 {
   height: 60px;
   display: flex;
   align-items: center;
+  padding-left: 23px;
 }
 
 .dropdown {
@@ -1235,7 +1236,7 @@ h6 {
   top: 0;
   bottom: 0;
   margin: auto;
-  right: -30px;
+  right: -10px;
 }
 .dropdown:last-child::before {
   display: none;
@@ -1245,20 +1246,21 @@ h6 {
   display: inline-block;
   border-radius: 4px;
   padding: 10px 30px 10px 20px;
+  padding: 10px 53px 10px 0px;
   background-color: transparent;
   cursor: pointer;
   white-space: nowrap;
   font-family: "Intro", Regular;
   font-size: 14px;
   line-height: 140%;
-  padding-left: 20px;
+  padding-left: 0;
   color: #ffffff;
 }
 .dd-button:after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 20px;
   transform: translateY(-50%);
   width: 12px;
   height: 6px;
@@ -1827,9 +1829,17 @@ input:focus {
 }
 .compare-message .offer-to-compare > div {
   position: relative;
-  margin: 0 5px;
   background-color: #fff;
   padding: 14px;
+}
+@media screen and (min-width: 992px) {
+  .compare-message .offer-to-compare > div {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+    margin: 0 10px;
+  }
 }
 @media screen and (max-width: 992px) {
   .compare-message .offer-to-compare > div {
@@ -1848,6 +1858,20 @@ input:focus {
     width: 20px;
     height: 20px;
   }
+}
+.compare-message .offer-to-compare > div span {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  /* Accent Black */
+  color: #2c2c2c;
+  margin: 0 13px 0 10px;
 }
 
 .modalpopup {

@@ -1269,6 +1269,7 @@ $brand-blue: #006685;
     height: 60px;
     display: flex;
     align-items: center;
+    padding-left: 23px;
 }
 .dropdown {
     display: inline-block;
@@ -1284,7 +1285,7 @@ $brand-blue: #006685;
         top: 0;
         bottom: 0;
         margin: auto;
-        right: -30px;
+        right: -10px;
     }
     &:last-child {
         &::before {
@@ -1296,6 +1297,7 @@ $brand-blue: #006685;
     display: inline-block;
     border-radius: 4px;
     padding: 10px 30px 10px 20px;
+    padding: 10px 53px 10px 0px;
     background-color: transparent;
     cursor: pointer;
     white-space: nowrap;
@@ -1303,13 +1305,13 @@ $brand-blue: #006685;
 
     font-size: 14px;
     line-height: 140%;
-    padding-left: 20px;
+    padding-left: 0;
     color: #ffffff;
     &:after {
         content: "";
         position: absolute;
         top: 50%;
-        right: 0;
+        right: 20px;
         transform: translateY(-50%);
         width: 12px;
         height: 6px;
@@ -1518,18 +1520,18 @@ $brand-blue: #006685;
     padding-right: 55px;
     border-bottom: 1px solid #dddddd;
     padding-bottom: 20px;
-    input[type=checkbox] + label {
+    input[type="checkbox"] + label {
         display: block;
         margin: 0.2em;
         cursor: pointer;
         padding: 0.2em;
-      }
-      
-      input[type=checkbox] {
+    }
+
+    input[type="checkbox"] {
         display: none;
-      }
-      
-      input[type=checkbox] + label:before {
+    }
+
+    input[type="checkbox"] + label:before {
         content: "\2714";
         border: 0.1em solid #000;
         border-radius: 0.2em;
@@ -1541,29 +1543,29 @@ $brand-blue: #006685;
         margin-right: 0.2em;
         vertical-align: bottom;
         color: transparent;
-        transition: .2s;
-      }
-      
-      input[type=checkbox] + label:active:before {
+        transition: 0.2s;
+    }
+
+    input[type="checkbox"] + label:active:before {
         transform: scale(0);
-      }
-      
-      input[type=checkbox]:checked + label:before {
+    }
+
+    input[type="checkbox"]:checked + label:before {
         background-color: MediumSeaGreen;
         border-color: MediumSeaGreen;
         color: #fff;
-      }
-      
-      input[type=checkbox]:disabled + label:before {
+    }
+
+    input[type="checkbox"]:disabled + label:before {
         transform: scale(1);
         border-color: #aaa;
-      }
-      
-      input[type=checkbox]:checked:disabled + label:before {
+    }
+
+    input[type="checkbox"]:checked:disabled + label:before {
         transform: scale(1);
         background-color: #bfb;
         border-color: #bfb;
-      }
+    }
     a {
         position: relative;
         &::after {
@@ -1872,8 +1874,7 @@ footer {
         flex-direction: column-reverse;
         padding: 20px;
     }
-    
-    
+
     @media screen and (min-width: 992px) {
         padding-left: 20%;
         position: relative;
@@ -2003,12 +2004,21 @@ input:focus {
         justify-content: space-between;
         & > div {
             position: relative;
-            margin: 0 5px;
+        
+            @media screen and (min-width: 992px) {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                justify-content: space-between;
+                margin: 0 10px;
+            }
+
             @media screen and (max-width: 992px) {
                 border: 1px solid #707070;
                 box-sizing: border-box;
                 border-radius: 4px;
                 padding: 8px;
+
                 .offer-image {
                     max-width: 62px;
                 }
@@ -2020,7 +2030,23 @@ input:focus {
                     height: 20px;
                 }
             }
+            span {
+                font-family: "Intro", Book;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                /* identical to box height, or 150% */
 
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.02em;
+
+                /* Accent Black */
+
+                color: #2c2c2c;
+                margin: 0 13px 0 10px;
+            }
             background-color: #fff;
             padding: 14px;
         }
@@ -2062,10 +2088,10 @@ input:focus {
 .modal-wrapper {
     position: absolute;
     z-index: 9999;
-    
+
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     background-color: #fff;
     box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35);
