@@ -468,6 +468,10 @@ h6 {
     padding-left: 30px;
     padding-right: 30px;
   }
+
+  .pl-md-2 {
+    padding-left: 20px;
+  }
 }
 .p-15 {
   padding: 15px;
@@ -607,6 +611,10 @@ h6 {
   .pr-60 {
     padding-right: 60px;
   }
+}
+
+.pr-20 {
+  padding-right: 20px;
 }
 
 .tabs {
@@ -837,10 +845,6 @@ h6 {
   margin-right: auto;
 }
 
-.multiple-items-slider {
-  /* the slides */
-  /* the parent */
-}
 @media screen and (min-width: 992px) {
   .multiple-items-slider {
     margin-top: 50px;
@@ -1335,25 +1339,56 @@ h6 {
   margin-left: auto;
 }
 
-.input-lists {
-  display: flex;
+@media screen and (min-width: 992px) {
+  .input-lists {
+    display: flex;
+    padding-left: 20px;
+  }
+}
+.input-lists > div {
+  flex: 1;
+  margin-right: 20px;
+}
+@media screen and (max-width: 992px) {
+  .input-lists > div {
+    margin-bottom: 20px;
+  }
 }
 .input-lists .dropdown {
   background: #ffffff;
-  /* Accent Grey 4 */
   border: 1px solid #acacac;
   box-sizing: border-box;
   height: 50px;
+  width: 100%;
 }
 .input-lists input {
   background: #ffffff;
-  /* Accent Grey 4 */
   border: 1px solid #acacac;
   box-sizing: border-box;
   height: 50px;
+  width: 100%;
+  padding-left: 30px;
+  position: relative;
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.input-lists input + span {
+  position: absolute;
+  left: 15px;
+  bottom: 13px;
+  margin: auto;
 }
 .input-lists .dd-button {
-  columns: #2c2c2c;
+  color: #2c2c2c;
+  line-height: 50px;
+  height: 50px;
+  padding: 0;
+  padding-left: 15px;
 }
 .input-lists p {
   font-family: "Intro", Regular;
@@ -1361,9 +1396,7 @@ h6 {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
   letter-spacing: 0.02em;
-  /* Black */
   color: #000000;
   margin-bottom: 5px;
 }
@@ -1480,7 +1513,6 @@ h6 {
 .mobile-switch-container .dropdown-container .dropdown {
   background: #ffffff;
   width: 100%;
-  /* Primary Blue */
   border: 1px solid #00a6ca;
   box-sizing: border-box;
   border-radius: 6px;
@@ -1638,11 +1670,9 @@ h6 {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
   display: flex;
   align-items: center;
   letter-spacing: 0.02em;
-  /* Accent Black */
   color: #2c2c2c;
 }
 .three-column p {
@@ -1848,4 +1878,136 @@ input:focus {
     width: 20px;
     height: 20px;
   }
+}
+
+.modalpopup {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.modalpopup.is-visible {
+  visibility: visible;
+}
+.modalpopup.is-visible .modal-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+.modalpopup.is-visible .modal-transition {
+  opacity: 1;
+}
+
+.modal-overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+
+.modal-wrapper {
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.35);
+  width: 90%;
+  max-width: 1004px;
+  border: 1px solid #dde0ef;
+  box-sizing: border-box;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.modal-transition {
+  transition: all 0.3s 0.12s;
+  opacity: 0;
+}
+
+.modal-content > *:first-child {
+  margin-top: 0;
+}
+.modal-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  color: #aaa;
+  background: none;
+  border: 0;
+}
+.modal-close:hover {
+  color: #777;
+}
+
+.modal-heading {
+  font-size: 1.125em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.close-modal {
+  display: flex;
+  margin-left: auto;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.termsandconditionpopup {
+  border: 1px solid #dde0ef;
+  box-sizing: border-box;
+  border-radius: 6px;
+  max-width: 1065px;
+  padding: 30px;
+}
+.termsandconditionpopup h5 {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+}
+.termsandconditionpopup h6 {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #00a6ca;
+}
+.termsandconditionpopup p {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+.termsandconditionpopup a {
+  margin-top: 30px;
 }/*# sourceMappingURL=custom.css.map */

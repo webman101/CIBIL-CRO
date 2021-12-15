@@ -44,3 +44,31 @@ $(document).ready(function() {
         return false;
     });
 });
+
+
+$(".price").after('<span>₹</span>');
+$('.modal-toggle1').on('click', function(e) {
+    e.preventDefault();
+    $('.modal1').toggleClass('is-visible');
+    $('body').toggleClass('overflow-hidden');
+});
+$('.close-modal').on('click', function(e) {
+    e.preventDefault();
+    $('.modal1').removeClass('is-visible');
+    $('body').removeClass('overflow-hidden');
+
+});
+
+
+
+$('.modal-toggle2').on('click', function(e) {
+    e.preventDefault();
+    $('.modal2').toggleClass('is-visible');
+    $('body').removeClass('overflow-hidden');
+});
+$('.close-modal').on('click', function(e) {
+    e.preventDefault();
+    $('.modal2').removeClass('is-visible');
+    $('body').removeClass('overflow-hidden');
+
+});
