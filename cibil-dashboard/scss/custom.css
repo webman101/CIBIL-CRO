@@ -1480,7 +1480,6 @@ h6 {
 }
 .checkbox-row .form-group {
   display: block;
-  margin-bottom: 15px;
 }
 .checkbox-row .form-group input {
   padding: 0;
@@ -1503,6 +1502,10 @@ h6 {
   margin-right: 5px;
   width: 16px;
   height: 16px;
+  background: #f9f9f9;
+  box-sizing: border-box;
+  border-radius: 2px;
+  overflow: hidden;
 }
 .checkbox-row .form-group input:checked + label:before {
   content: "";
@@ -1512,8 +1515,8 @@ h6 {
   position: relative;
   vertical-align: middle;
   cursor: pointer;
-  height: 12px;
-  width: 12px;
+  height: 16px;
+  width: 16px;
   position: absolute;
   top: 0;
   left: 0;

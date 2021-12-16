@@ -1538,7 +1538,6 @@ $brand-blue: #006685;
 
     .form-group {
         display: block;
-        margin-bottom: 15px;
     }
 
     .form-group input {
@@ -1563,6 +1562,11 @@ $brand-blue: #006685;
         margin-right: 5px;
         width: 16px;
         height: 16px;
+        background: #f9f9f9;
+
+        box-sizing: border-box;
+        border-radius: 2px;
+        overflow: hidden;
     }
 
     .form-group input:checked + label:before {
@@ -1573,8 +1577,8 @@ $brand-blue: #006685;
         position: relative;
         vertical-align: middle;
         cursor: pointer;
-        height: 12px;
-        width: 12px;
+        height: 16px;
+        width: 16px;
         position: absolute;
         top: 0;
         left: 0;
