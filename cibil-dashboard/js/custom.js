@@ -72,3 +72,29 @@ $('.close-modal').on('click', function(e) {
     $('body').removeClass('overflow-hidden');
 
 });
+
+
+$(document).mouseup(function(e) {
+    var container = $(".dd-input");
+
+    if (!container.is(e.target) // if clicked outside
+        &&
+        container.has(e.target).length === 0) {
+        container.hide();
+        $(".dd-input").prop("checked", false); //to uncheck
+    }
+});
+$('.benefits-outer').slideUp();
+
+$('.offer-details').click(function(e) {
+    e.preventDefault();
+    $(this).next().filter('.benefits-outer').slideToggle();
+    $(this).closest('.benefits-outer').show();
+    // $('.benefits-outer').slideToggle();
+});
+
+var options = {
+    valueNames: ['name', 'Amount','percent','annual-fees']
+};
+
+var userList = new List('users', options);
