@@ -94,7 +94,35 @@ $('.offer-details').click(function(e) {
 });
 
 var options = {
-    valueNames: ['name', 'Amount','percent','annual-fees']
+    valueNames: ['name', 'Amount', 'percent', 'annual-fees']
 };
 
 var userList = new List('users', options);
+
+
+function getBank(el) {
+    bank = $(el).attr('bank');
+    alert(bank);
+    $('.compare-price').text(bank);
+}
+
+
+
+function extraTicketAttachment(el) {
+    jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0"><img src="img/comparebajaj.svg" alt="" class="offer-image"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    // bank = $(el).attr('bank');
+    // alert(bank);
+    // $('.compare-price').text(bank);
+}
+function extraTicketAttachmenthdfc(el) {
+    jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0"><img src="img/hdfc.png" alt="" class="offer-image" width="73px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    // bank = $(el).attr('bank');
+    // alert(bank);
+    // $('.compare-price').text(bank);
+}
+function extraTicketAttachmentaditya(el) {
+    jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0"><img src="img/aditya.png" alt="" class="offer-image" width="73px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    // bank = $(el).attr('bank');
+    // alert(bank);
+    // $('.compare-price').text(bank);
+}

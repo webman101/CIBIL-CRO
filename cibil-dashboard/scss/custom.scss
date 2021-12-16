@@ -1101,6 +1101,11 @@ $brand-blue: #006685;
     }
 }
 .multiple-items-2 {
+    .slick-arrow {
+        @media screen and (max-width: 992px) {
+            display: none !important;
+        }
+    }
     .icon-column-box {
         min-height: 240px;
     }
@@ -1108,6 +1113,25 @@ $brand-blue: #006685;
 
 ////////////////////////@at-root
 /////////Offers
+@media screen and (max-width: 992px) {
+    .p-sm-20 {
+        padding: 20px;
+    }
+    .px-sm-20 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .mx-sm-20 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .mb-sm-20 {
+        margin-bottom: 20px;
+    }
+    .border-radius-sm-0 {
+        border-radius: 0 !important;
+    }
+}
 .page-type-2 {
     .right-column::before {
         height: 275px;
@@ -1120,11 +1144,6 @@ $brand-blue: #006685;
         padding-top: 0;
     }
     .list-tab {
-        @media screen and (max-width: 992px) {
-            > div {
-                padding: 20px;
-            }
-        }
     }
     a.text-button.text-center {
         text-align: center;
@@ -2023,53 +2042,59 @@ input:focus {
     .offer-to-compare {
         display: flex;
         justify-content: space-between;
-        & > div {
-            position: relative;
+        .compare-grouped {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
 
-            @media screen and (min-width: 992px) {
-                display: flex;
-                align-items: center;
-                flex: 1;
-                justify-content: space-between;
-                margin: 0 10px;
-            }
+            & > div {
+                position: relative;
 
-            @media screen and (max-width: 992px) {
-                border: 1px solid #707070;
-                box-sizing: border-box;
-                border-radius: 4px;
-                padding: 8px;
-
-                .offer-image {
-                    max-width: 62px;
+                @media screen and (min-width: 992px) {
+                    display: flex;
+                    align-items: center;
+                    flex: 1;
+                    justify-content: space-between;
+                    margin: 0 10px;
                 }
-                .times {
-                    position: absolute;
-                    right: 5px;
-                    top: 5px;
-                    width: 20px;
-                    height: 20px;
+
+                @media screen and (max-width: 992px) {
+                    border: 1px solid #707070;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    padding: 8px;
+
+                    .offer-image {
+                        max-width: 62px;
+                    }
+                    .times {
+                        position: absolute;
+                        right: 5px;
+                        top: 5px;
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
+                span {
+                    font-family: "Intro", Book;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    /* identical to box height, or 150% */
+
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.02em;
+
+                    /* Accent Black */
+
+                    color: #2c2c2c;
+                    margin: 0 13px 0 10px;
+                }
+                background-color: #fff;
+                padding: 14px;
             }
-            span {
-                font-family: "Intro", Book;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 24px;
-                /* identical to box height, or 150% */
-
-                display: flex;
-                align-items: center;
-                letter-spacing: 0.02em;
-
-                /* Accent Black */
-
-                color: #2c2c2c;
-                margin: 0 13px 0 10px;
-            }
-            background-color: #fff;
-            padding: 14px;
         }
     }
 }
@@ -2299,5 +2324,54 @@ input {
         top: -2px;
         right: -45px;
         transform: rotateZ(180deg) !important;
+    }
+}
+//////////////////////////
+.mobile-filter {
+    padding: 23px 19px;
+    padding-top: 0;
+    .form-element {
+        overflow: hidden;
+        position: relative;
+        input {
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+        display: flex;
+        align-items: center;
+        /* Accent Black */
+
+        border: 1px solid #2c2c2c;
+        box-sizing: border-box;
+        border-radius: 6px;
+        padding: 8px 10px;
+        input:checked ~ label::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 100%;
+            margin: auto;
+            background-color: #ededed;
+            z-index: -1;
+        }
+    }
+    p {
+        font-family: "Intro", Regular;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        /* identical to box height, or 171% */
+
+        display: flex;
+        align-items: center;
+
+        /* Accent Black */
+
+        color: #2c2c2c;
+        margin-bottom: 8px;
+        margin-top: 22px;
     }
 }
