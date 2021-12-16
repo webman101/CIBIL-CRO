@@ -2219,7 +2219,6 @@ input {
     margin-bottom: 10px;
 }
 .blue-dropdown-groups-section {
-    
     cursor: pointer;
     .sort {
         border-radius: 6px;
@@ -2257,12 +2256,14 @@ input {
         }
     }
     .name {
+        &:after {
+            right: -12px !important;
+        }
         &.asc:after {
             right: -12px !important;
         }
         &.desc:after {
             right: -12px !important;
-
         }
     }
     .sort:after {
@@ -2275,9 +2276,9 @@ input {
         content: "";
         position: relative;
         top: -10px;
-        right: -50px;
+        right: -45px;
     }
-    .sort.asc:after {
+    .sort.arrow:after {
         width: 0;
         height: 0;
         border-left: 5px solid transparent;
@@ -2293,10 +2294,11 @@ input {
         height: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-bottom: 5px solid #fff;
+        border-top: 5px solid #fff;
         content: "";
         position: relative;
-        top: -4px;
+        top: -2px;
         right: -45px;
+        transform: rotateZ(180deg) !important;
     }
 }
