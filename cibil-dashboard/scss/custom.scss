@@ -1053,8 +1053,6 @@ $brand-blue: #006685;
             flex: unset;
             @media screen and (max-width: 400px) {
                 padding: 5px !important;
-                img {
-                }
                 .light {
                     font-size: 12px;
                 }
@@ -1349,8 +1347,6 @@ $brand-blue: #006685;
         cursor: pointer;
         white-space: nowrap;
         margin-left: 10px;
-        &:hover {
-        }
         a {
             display: block;
             margin: -10px -20px;
@@ -1520,52 +1516,7 @@ $brand-blue: #006685;
     padding-right: 55px;
     border-bottom: 1px solid #dddddd;
     padding-bottom: 20px;
-    input[type="checkbox"] + label {
-        display: block;
-        margin: 0.2em;
-        cursor: pointer;
-        padding: 0.2em;
-    }
 
-    input[type="checkbox"] {
-        display: none;
-    }
-
-    input[type="checkbox"] + label:before {
-        content: "\2714";
-        border: 0.1em solid #000;
-        border-radius: 0.2em;
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-        padding-left: 0.2em;
-        padding-bottom: 0.3em;
-        margin-right: 0.2em;
-        vertical-align: bottom;
-        color: transparent;
-        transition: 0.2s;
-    }
-
-    input[type="checkbox"] + label:active:before {
-        transform: scale(0);
-    }
-
-    input[type="checkbox"]:checked + label:before {
-        background-color: MediumSeaGreen;
-        border-color: MediumSeaGreen;
-        color: #fff;
-    }
-
-    input[type="checkbox"]:disabled + label:before {
-        transform: scale(1);
-        border-color: #aaa;
-    }
-
-    input[type="checkbox"]:checked:disabled + label:before {
-        transform: scale(1);
-        background-color: #bfb;
-        border-color: #bfb;
-    }
     a {
         position: relative;
         &::after {
@@ -1584,7 +1535,72 @@ $brand-blue: #006685;
             border-left: 0;
         }
     }
+
+    .form-group {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .form-group input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+    }
+
+    .form-group label {
+        position: relative;
+        cursor: pointer;
+        -webkit-appearance: none;
+        background-color: #fff;
+        border: 2px solid #000000;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 5px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .form-group input:checked + label:before {
+        content: "";
+        -webkit-appearance: none;
+        background-color: black;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 0;
+    }
+
+    .form-group input:checked + label:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: 1px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 5px;
+        height: 10px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
 }
+
 .benefits-list {
     padding: 0;
     margin: 0;
@@ -1722,8 +1738,6 @@ $brand-blue: #006685;
             cursor: pointer;
             white-space: nowrap;
             margin-left: 10px;
-            &:hover {
-            }
             a {
                 display: block;
                 margin: -10px -20px;
@@ -1983,12 +1997,12 @@ footer {
 //         margin: auto;
 //     }
 // }
-input {
-    background-color: transparent;
-    border: 0px solid;
-    height: 30px;
-    width: 260px;
-}
+// input {
+//     background-color: transparent;
+//     border: 0px solid;
+//     height: 30px;
+//     width: 260px;
+// }
 input:focus {
     outline: none;
 }
@@ -2004,7 +2018,7 @@ input:focus {
         justify-content: space-between;
         & > div {
             position: relative;
-        
+
             @media screen and (min-width: 992px) {
                 display: flex;
                 align-items: center;
