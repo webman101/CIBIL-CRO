@@ -1855,7 +1855,6 @@ input:focus {
 }
 .compare-message .offer-to-compare .compare-grouped {
   display: flex;
-  justify-content: space-between;
   width: 100%;
 }
 .compare-message .offer-to-compare .compare-grouped > div {
@@ -1867,9 +1866,11 @@ input:focus {
   .compare-message .offer-to-compare .compare-grouped > div {
     display: flex;
     align-items: center;
-    flex: 1;
     justify-content: space-between;
     margin: 0 10px;
+    min-width: 245px;
+    padding: 4px;
+    padding-right: 14px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -2166,4 +2167,12 @@ input {
   color: #2c2c2c;
   margin-bottom: 8px;
   margin-top: 22px;
+}
+
+.hide-it {
+  display: none;
+}
+
+.times {
+  cursor: pointer;
 }/*# sourceMappingURL=custom.css.map */

@@ -2044,7 +2044,6 @@ input:focus {
         justify-content: space-between;
         .compare-grouped {
             display: flex;
-            justify-content: space-between;
             width: 100%;
 
             & > div {
@@ -2053,9 +2052,12 @@ input:focus {
                 @media screen and (min-width: 992px) {
                     display: flex;
                     align-items: center;
-                    flex: 1;
+                    // flex: 1;
                     justify-content: space-between;
                     margin: 0 10px;
+                    min-width: 245px;
+                    padding: 4px;
+                    padding-right: 14px;
                 }
 
                 @media screen and (max-width: 992px) {
@@ -2374,4 +2376,10 @@ input {
         margin-bottom: 8px;
         margin-top: 22px;
     }
+}
+.hide-it{
+    display: none;
+}
+.times{
+    cursor: pointer;
 }
