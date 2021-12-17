@@ -220,4 +220,8 @@ $('.compare-button').click(function(e) {
 
 // });
 
-
+$('.sorttoggle').slideUp();
+$('.sort-tab').click(function (e) { 
+    e.preventDefault();
+    $('.sorttoggle').slideToggle();
+});
