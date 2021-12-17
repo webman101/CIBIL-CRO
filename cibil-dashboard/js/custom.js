@@ -208,3 +208,16 @@ $('.compare-button').click(function(e) {
   
   // call the plugin
   $(".b-select").numericFlexboxSorting();
+
+
+
+
+//   $('.mobile-grid').each(function(e) {
+      
+//   var tentativeamt = document.getElementById("tentative-amt").innerHTML;
+//     e.preventDefault();
+//     $(this).data('fees',tentativeamt); //setter
+
+// });
+
+
