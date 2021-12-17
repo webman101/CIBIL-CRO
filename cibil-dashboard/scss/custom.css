@@ -1580,6 +1580,7 @@ h6 {
   box-sizing: border-box;
   border-radius: 8px;
   margin-top: 20px;
+  width: 100%;
 }
 
 .mobile-switch-container .dropdown-container {
@@ -1843,6 +1844,8 @@ input:focus {
 .compare-message {
   background: #fcd800;
   padding: 10px 15px;
+  padding-left: 15px;
+  margin-top: 20px;
 }
 @media screen and (min-width: 992px) {
   .compare-message {
@@ -1855,40 +1858,59 @@ input:focus {
 }
 .compare-message .offer-to-compare {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .compare-message .offer-to-compare {
+    justify-content: space-between;
+  }
 }
 .compare-message .offer-to-compare .compare-grouped {
   position: relative;
   display: flex;
   width: 100%;
 }
-.compare-message .offer-to-compare .compare-grouped > div {
+@media screen and (max-width: 992px) {
+  .compare-message .offer-to-compare .compare-grouped {
+    height: 100px;
+  }
+  .compare-message .offer-to-compare .compare-grouped img.offer-image {
+    margin: 5px;
+    margin-top: 8px;
+  }
+}
+.compare-message .offer-to-compare .compare-grouped .filled {
   position: relative;
   z-index: 1;
   background-color: #fff;
   padding: 14px;
 }
 @media screen and (min-width: 992px) {
-  .compare-message .offer-to-compare .compare-grouped > div {
+  .compare-message .offer-to-compare .compare-grouped .filled {
     align-items: center;
     justify-content: space-between;
-    margin-right: 10px;
-    min-width: 250px;
+    min-width: 251px;
     padding: 4px;
     padding-right: 14px;
   }
 }
+@media screen and (max-width: 400px) {
+  .compare-message .offer-to-compare .compare-grouped .filled {
+    height: 90px !important;
+  }
+}
 @media screen and (max-width: 992px) {
-  .compare-message .offer-to-compare .compare-grouped > div {
+  .compare-message .offer-to-compare .compare-grouped .filled {
+    height: 67px;
     border: 1px solid #707070;
     box-sizing: border-box;
     border-radius: 4px;
-    padding: 8px;
+    padding: 0;
   }
-  .compare-message .offer-to-compare .compare-grouped > div .offer-image {
-    max-width: 62px;
+  .compare-message .offer-to-compare .compare-grouped .filled .offer-image {
+    max-width: 40px;
   }
-  .compare-message .offer-to-compare .compare-grouped > div .times {
+  .compare-message .offer-to-compare .compare-grouped .filled .times {
     position: absolute;
     right: 5px;
     top: 5px;
@@ -1896,7 +1918,7 @@ input:focus {
     height: 20px;
   }
 }
-.compare-message .offer-to-compare .compare-grouped > div span {
+.compare-message .offer-to-compare .compare-grouped .filled span {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
@@ -1910,27 +1932,46 @@ input:focus {
   color: #2c2c2c;
   margin: 0 13px 0 10px;
 }
-.compare-message .offer-to-compare .compare-grouped > div:nth-child(-n+3) {
+.compare-message .offer-to-compare .compare-grouped .filled:nth-child(-n+3) {
   display: flex;
+}
+@media screen and (max-width: 992px) {
+  .compare-message .offer-to-compare .compare-grouped .filled:nth-child(-n+3).filled {
+    flex-direction: column;
+    flex-basis: 33%;
+  }
+}
+.compare-message .offer-to-compare .compare-grouped .filled:nth-child(2) {
+  margin: 0 3px !important;
+}
+@media screen and (min-width: 992px) {
+  .compare-message .offer-to-compare .compare-grouped .filled:nth-child(2) {
+    margin: 0 5px !important;
+  }
 }
 
 .compare-grouped-position-absolute {
   position: absolute !important;
   top: 0;
-  bottom: 0;
-  margin: auto;
+  display: flex !important;
   left: 0;
   right: 0;
   display: flex;
   background-color: transparent !important;
+}
+@media screen and (max-width: 992px) {
+  .compare-grouped-position-absolute {
+    width: 100%;
+    padding: 0 !important;
+  }
 }
 .compare-grouped-position-absolute > div {
   position: relative;
   border: 1px dashed #006685;
   box-sizing: border-box;
   border-radius: 4px;
-  min-width: 245px;
-  height: 50px;
+  height: max-content;
+  width: 118px;
   background-color: #fff;
   font-size: 14px;
   line-height: 24px;
@@ -1941,11 +1982,22 @@ input:focus {
   color: #707070;
   text-align: center;
 }
+@media screen and (max-width: 992px) {
+  .compare-grouped-position-absolute > div {
+    flex-basis: 33%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .compare-grouped-position-absolute > div {
+    min-width: 245px;
+    height: 50px;
+  }
+}
 @media screen and (min-width: 992px) {
   .compare-grouped-position-absolute > div {
     align-items: center;
+    flex: 1;
     justify-content: space-between;
-    margin-right: 10px;
     min-width: 245px;
     padding: 4px;
     padding-right: 14px;
@@ -1967,6 +2019,19 @@ input:focus {
     top: 5px;
     width: 20px;
     height: 20px;
+  }
+}
+.compare-grouped-position-absolute > div:nth-child(2) {
+  margin: 0 3px !important;
+}
+@media screen and (min-width: 992px) {
+  .compare-grouped-position-absolute > div:nth-child(2) {
+    margin: 0 5px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .compare-grouped-position-absolute {
+    border: 0 !important;
   }
 }
 
@@ -2239,4 +2304,19 @@ input {
 
 .times {
   cursor: pointer;
+}
+
+.boxes {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 -10px;
+}
+
+.boxes li {
+  width: 25%;
+  padding: 0 10px;
+  margin-top: 20px;
+  box-sizing: border-box;
 }/*# sourceMappingURL=custom.css.map */

@@ -1653,6 +1653,7 @@ $brand-blue: #006685;
     box-sizing: border-box;
     border-radius: 8px;
     margin-top: 20px;
+    width: 100%;
 }
 .mobile-switch-container {
     .dropdown-container {
@@ -1931,110 +1932,14 @@ footer {
     }
 }
 
-// .checkbox {
-//     display: flex;
-//     align-items: center;
-//     position: relative;
-//     cursor: pointer;
-//     user-select: none;
-//     border: 2px solid #2c2c2c;
-//     height: 16px;
-//     width: 16px;
-//     overflow: hidden;
-//     border-radius: 4px;
-//     &:hover {
-//         .checkbox-checkmark {
-//         }
-//     }
-// }
-
-// .checkbox-input {
-//     position: absolute;
-//     opacity: 0;
-//     cursor: pointer;
-//     height: 0;
-//     width: 0;
-//     &:focus {
-//         border: 0 !important;
-//         outline: 0 !important;
-//     }
-//     &:focus ~ .checkbox-checkmark-box {
-//     }
-
-//     &:checked ~ .checkbox-checkmark-box {
-//         .checkbox-checkmark {
-//             &:after {
-//                 display: block;
-//             }
-//         }
-//     }
-
-//     &:checked ~ .checkbox-checkmark-box {
-//         .checkbox-checkmark {
-//             background-color: #2c2c2c;
-//         }
-//     }
-// }
-
-// .checkbox-checkmark-box {
-//     width: 16px;
-//     height: 16px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     border-radius: 0;
-// }
-
-// .checkbox-checkmark {
-//     width: 20px;
-//     height: 20px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     border-radius: 0;
-//     cursor: pointer;
-//     &:before {
-//         content: "";
-//         display: none;
-//         width: 10px;
-//         height: 5px;
-//         position: absolute;
-//         background-color: red;
-//         top: -3px;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         margin: auto;
-//     }
-//     &:after {
-//         content: "";
-//         display: none;
-//         border-left: 2px solid #ffffff;
-//         border-bottom: 2px solid #ffffff;
-//         width: 10px;
-//         height: 5px;
-//         background-size: contain;
-//         transform: rotateZ(-45deg);
-//         position: absolute;
-//         top: -3px;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         margin: auto;
-//     }
-// }
-// input {
-//     background-color: transparent;
-//     border: 0px solid;
-//     height: 30px;
-//     width: 260px;
-// }
 input:focus {
     outline: none;
 }
 .compare-message {
     background: #fcd800;
     padding: 10px 15px;
+    padding-left: 15px;
+    margin-top: 20px;
     @media screen and (min-width: 992px) {
         padding: 15px 80px 20px;
     }
@@ -2044,34 +1949,49 @@ input:focus {
     }
     .offer-to-compare {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        @media screen and (min-width: 992px) {
+            justify-content: space-between;
+        }
+
         .compare-grouped {
             position: relative;
 
             display: flex;
             width: 100%;
+            @media screen and (max-width: 992px) {
+                height: 100px;
+                img.offer-image {
+                    margin: 5px;
+                    margin-top: 8px;
+                }
+            }
 
-            & > div {
+            .filled {
                 position: relative;
                 z-index: 1;
                 @media screen and (min-width: 992px) {
                     align-items: center;
                     // flex: 1;
                     justify-content: space-between;
-                    margin-right: 10px;
-                    min-width: 250px;
+                    
+                    min-width: 251px;
                     padding: 4px;
                     padding-right: 14px;
                 }
+                @media screen and (max-width: 400px) {
+                    height: 90px !important;
+                }
 
                 @media screen and (max-width: 992px) {
+                    height: 67px;
                     border: 1px solid #707070;
                     box-sizing: border-box;
                     border-radius: 4px;
-                    padding: 8px;
+                    padding: 0;
 
                     .offer-image {
-                        max-width: 62px;
+                        max-width: 40px;
                     }
                     .times {
                         position: absolute;
@@ -2102,27 +2022,54 @@ input:focus {
                 padding: 14px;
                 &:nth-child(-n + 3) {
                     display: flex;
+
+                    &.filled {
+                        @media screen and (max-width: 992px) {
+                            flex-direction: column;
+                            flex-basis: 33%;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    margin: 0 3px !important;
+                    @media screen and (min-width: 992px) {
+                        margin: 0 5px !important;
+                    }
                 }
             }
         }
     }
 }
 .compare-grouped-position-absolute {
+    @media screen and (max-width: 992px) {
+        // left: 50%;
+        // transform: translateX(-50%);
+        width: 100%;
+        padding: 0 !important;
+    }
     position: absolute !important;
     top: 0;
-    bottom: 0;
-    margin: auto;
+    display: flex !important;
     left: 0;
     right: 0;
     display: flex;
     background-color: transparent !important;
+
     & > div {
         position: relative;
         border: 1px dashed #006685;
         box-sizing: border-box;
         border-radius: 4px;
-        min-width: 245px;
-        height: 50px;
+        height: max-content;
+        width: 118px;
+        @media screen and (max-width: 992px) {
+            flex-basis: 33%;
+        }
+        @media screen and (min-width: 992px) {
+            min-width: 245px;
+            height: 50px;
+        }
+
         background-color: #fff;
         font-size: 14px;
         line-height: 24px;
@@ -2134,9 +2081,8 @@ input:focus {
         text-align: center;
         @media screen and (min-width: 992px) {
             align-items: center;
-            // flex: 1;
+            flex: 1;
             justify-content: space-between;
-            margin-right: 10px;
             min-width: 245px;
             padding: 4px;
             padding-right: 14px;
@@ -2159,6 +2105,15 @@ input:focus {
                 height: 20px;
             }
         }
+        &:nth-child(2) {
+            margin: 0 3px !important;
+            @media screen and (min-width: 992px) {
+                margin: 0 5px !important;
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        border: 0 !important;
     }
 }
 .modalpopup {
@@ -2443,4 +2398,19 @@ input {
 }
 .times {
     cursor: pointer;
+}
+
+.boxes {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 -10px;
+}
+
+.boxes li {
+    width: 25%;
+    padding: 0 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
 }
