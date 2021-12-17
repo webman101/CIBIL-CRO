@@ -110,7 +110,8 @@ function getBank(el) {
 function extraTicketAttachment(el) {
 
     if ($('input.append-onclick').is(':checked')) {
-        jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+        
     }
 
     // bank = $(el).attr('bank');
@@ -121,7 +122,7 @@ function extraTicketAttachment(el) {
 function extraTicketAttachmenthdfc(el) {
     if ($('input.append-onclick').is(':checked')) {
 
-        jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0"><img src="img/hdfc.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/hdfc.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
     }
 
     // bank = $(el).attr('bank');
@@ -132,7 +133,7 @@ function extraTicketAttachmenthdfc(el) {
 function extraTicketAttachmentaditya(el) {
     if ($('input.append-onclick').is(':checked')) {
 
-        jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0"><img src="img/aditya.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/aditya.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
     }
 
     // bank = $(el).attr('bank');
@@ -158,6 +159,7 @@ $("input.append-onclick").change(function() {
 
 $(document).on("click", ".times", function() {
     $(this).parent().hide();
+    // jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0 blanked" style="border: 1px dashed #006685;box-sizing: border-box;border-radius: 4px;"></div>')
 });
 
 $('.compare-button').click(function(e) {
