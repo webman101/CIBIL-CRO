@@ -1144,6 +1144,11 @@ $brand-blue: #006685;
         padding-top: 0;
     }
     .list-tab {
+        @media screen and (max-width: 992px) {
+            overflow:hidden;
+        }
+        
+        
     }
     a.text-button.text-center {
         text-align: center;
