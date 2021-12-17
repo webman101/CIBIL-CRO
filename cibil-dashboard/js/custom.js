@@ -111,7 +111,7 @@ function extraTicketAttachment(el) {
 
     if ($('input.append-onclick').is(':checked')) {
         jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
-        
+
     }
 
     // bank = $(el).attr('bank');
@@ -145,7 +145,7 @@ function extraTicketAttachmentaditya(el) {
 // $(document).on("click", ".compare-button", function() {
 //     if ($('input.append-onclick').prop('checked', false)) {
 
-//         $(this).closest('.itemsBox').css("display", "none");
+//         $(this).closest('.itemsBox').;
 //     }
 // });
 
@@ -173,55 +173,63 @@ $('.compare-button').click(function(e) {
 
 (function($) {
     "use strict";
-  
+
     $.fn.numericFlexboxSorting = function(options) {
-      const settings = $.extend({
-        elToSort: ".boxes .mobile-grid"
-        // ,elToSort: ".boxes li"
+        const settings = $.extend({
+            elToSort: ".boxes .mobile-grid"
+                // ,elToSort: ".boxes li"
 
-      }, options);
-  
-      const $select = this;
-      const ascOrder = (a, b) => a - b;
-      const descOrder = (a, b) => b - a;
-  
-      $select.on("change", () => {
-        const selectedOption = $select.find(".radio-input:checked").attr("data-sort");
-        sortColumns(settings.elToSort, selectedOption);
-      });
-  
-      function sortColumns(el, opt) {
-        const attr = "data-" + opt.split(":")[0];
-        const sortMethod = (opt.includes("asc")) ? ascOrder : descOrder;
-        const sign = (opt.includes("asc")) ? "" : "-";
-  
-        const sortArray = $(el).map((i, el) => $(el).attr(attr)).sort(sortMethod);
-  
-        for (let i = 0; i < sortArray.length; i++) {
-          $(el).filter(`[${attr}="${sortArray[i]}"]`).css("order", sign + sortArray[i]);
+        }, options);
+
+        const $select = this;
+        const ascOrder = (a, b) => a - b;
+        const descOrder = (a, b) => b - a;
+
+        $select.on("change", () => {
+            const selectedOption = $select.find(".radio-input:checked").attr("data-sort");
+            sortColumns(settings.elToSort, selectedOption);
+        });
+
+        function sortColumns(el, opt) {
+            const attr = "data-" + opt.split(":")[0];
+            const sortMethod = (opt.includes("asc")) ? ascOrder : descOrder;
+            const sign = (opt.includes("asc")) ? "" : "-";
+
+            const sortArray = $(el).map((i, el) => $(el).attr(attr)).sort(sortMethod);
+
+            for (let i = 0; i < sortArray.length; i++) {
+                $(el).filter(`[${attr}="${sortArray[i]}"]`).css("order", sign + sortArray[i]);
+            }
         }
-      }
-  
-      return $select;
+
+        return $select;
     };
-  })(jQuery);
-  
-  // call the plugin
-  $(".b-select").numericFlexboxSorting();
+})(jQuery);
+
+// call the plugin
+$(".b-select").numericFlexboxSorting();
 
 
 
 
-//   $('.mobile-grid').each(function(e) {
-      
-//   var tentativeamt = document.getElementById("tentative-amt").innerHTML;
-//     e.preventDefault();
-//     $(this).data('fees',tentativeamt); //setter
-
-// });
 
 $('.sorttoggle').slideUp();
-$('.sort-tab').click(function (e) { 
+$('.sort-tab').click(function(e) {
     e.preventDefault();
     $('.sorttoggle').slideToggle();
+    $('.sort-tab').toggleClass('reversearrow');
 });
+
+
+
+
+
+
+$(document).on("click", ".radio-input", function() {
+
+    var arnvh = $(this).closest(".sorttoggle1").children(".sorttitle").text();
+
+    $('.sort-tab span').text('Sorted by: ' + arnvh);
+
+});
+

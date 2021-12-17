@@ -1262,22 +1262,31 @@ $brand-blue: #006685;
         }
         &.active {
             position: relative;
-            &::after {
-                position: absolute;
-                content: "";
-                height: 6px;
-                width: 100%;
-                left: 0;
-                right: 0;
-                top: 0;
-                background-color: #00a6ca;
+            @media screen and (min-width: 992px) {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 6px;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    background-color: #00a6ca;
+                }
             }
+
             .numb {
                 background-color: #00a6ca;
             }
         }
     }
 }
+@media screen and (max-width: 992px) {
+    .mobile-switch-container .dd-button:after {
+        display: none;
+    }
+}
+
 .text-color-70 {
     color: #707070 !important;
 }
@@ -1974,7 +1983,7 @@ input:focus {
                     align-items: center;
                     // flex: 1;
                     justify-content: space-between;
-                    
+
                     min-width: 251px;
                     padding: 4px;
                     padding-right: 14px;
@@ -2413,4 +2422,8 @@ input {
     padding: 0 10px;
     margin-top: 20px;
     box-sizing: border-box;
+}
+.reversearrow span::after {
+    transform: rotateZ(225deg);
+    top: 4px;
 }
