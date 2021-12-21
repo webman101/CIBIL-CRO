@@ -1125,8 +1125,9 @@ h6 {
   display: flex;
   align-items: center;
 }
-.navigation-tabs > div {
+.navigation-tabs > a {
   background: #f9f9f9;
+  text-decoration: none;
   padding: 4px 10px;
   border: 1px solid #dddddd;
   box-sizing: border-box;
@@ -1140,7 +1141,7 @@ h6 {
   letter-spacing: 0.02em;
   color: #707070;
 }
-.navigation-tabs > div.navigation-active-tab {
+.navigation-tabs > a.navigation-active-tab {
   color: #2c2c2c;
 }
 .navigation-tabs img {
@@ -1306,7 +1307,6 @@ h6 {
 }
 
 .dd-menu {
-  position: absolute;
   top: 100%;
   border-radius: 4px;
   padding: 0;
@@ -2362,4 +2362,9 @@ input {
   margin-top: 20px;
   bottom: 25px;
   position: relative;
+}
+
+.reverse-arrow::after {
+  transform: rotate(-135deg) !important;
+  top: 7px !important;
 }/*# sourceMappingURL=custom.css.map */

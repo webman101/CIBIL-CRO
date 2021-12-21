@@ -1172,8 +1172,9 @@ $brand-blue: #006685;
 .navigation-tabs {
     display: flex;
     align-items: center;
-    & > div {
+    & > a {
         background: #f9f9f9;
+        text-decoration: none;
         padding: 4px 10px;
         border: 1px solid #dddddd;
         box-sizing: border-box;
@@ -1377,7 +1378,7 @@ $brand-blue: #006685;
     }
 }
 .dd-menu {
-    position: absolute;
+    // position: absolute;
     top: 100%;
     border-radius: 4px;
     padding: 0;
@@ -2467,5 +2468,11 @@ input {
         margin-top: 20px;
         bottom: 25px;
         position: relative;
+    }
+}
+.reverse-arrow {
+    &::after {
+        transform: rotate(-135deg) !important;
+        top: 7px !important;
     }
 }

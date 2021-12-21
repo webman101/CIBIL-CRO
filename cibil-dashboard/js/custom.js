@@ -88,9 +88,9 @@ $('.benefits-outer').slideUp();
 
 $('.offer-details').click(function(e) {
     e.preventDefault();
-$('.benefits-outer').slideUp();
-
     // $(this).next().filter('.benefits-outer').slideToggle();
+    $(this).toggleClass('reverse-arrow')
+
     $(this).closest('.itemsBox').siblings('.benefits-outer').slideToggle();
     // $('.benefits-outer').slideDOwn();
 });
@@ -98,7 +98,7 @@ $('.offer-details').click(function(e) {
     e.preventDefault();
     // $(this).next().filter('.benefits-outer').slideToggle();
 
-
+    $(this).toggleClass('reverse-arrow')
     $(this).closest('.mobile-grid').siblings('.benefits-outer').slideToggle();
     // $('.benefits-outer').slideDOwn();
 });
