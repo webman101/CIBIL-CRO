@@ -1052,6 +1052,7 @@ h6 {
   border-radius: 4px;
   display: inline-block;
   margin: 0 5px;
+  cursor: pointer;
 }
 .slick-dots li.slick-active {
   background: #006685;
