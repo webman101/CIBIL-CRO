@@ -549,6 +549,15 @@ h6 {
   color: #2c2c2c;
 }
 
+.button-icon-outline {
+  background: #ffffff;
+  /* Secondary Orange */
+  border: 1px solid #f16e00;
+  box-sizing: border-box;
+  border-radius: 25px;
+  background-color: transparent;
+}
+
 .logo {
   position: relative;
   z-index: 2;
@@ -889,16 +898,6 @@ h6 {
   margin: 0 -10px;
 }
 
-@media screen and (max-width: 992px) {
-  .slick-slider {
-    margin: 0 -15px;
-  }
-
-  .slick-slide {
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
 .alerts {
   background: #f9f9f9;
   border-radius: 4px;
@@ -1350,8 +1349,6 @@ h6 {
 
 .compare-row {
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   display: flex;
@@ -1396,8 +1393,6 @@ h6 {
   padding-left: 30px;
   position: relative;
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -1418,8 +1413,6 @@ h6 {
 }
 .input-lists p {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -1755,7 +1748,6 @@ h6 {
 }
 .three-column .para-intro-regular-2c {
   font-family: "Intro", Bold;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -1932,15 +1924,11 @@ input:focus {
 }
 .compare-message .offer-to-compare .compare-grouped .filled span {
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
   display: flex;
   align-items: center;
   letter-spacing: 0.02em;
-  /* Accent Black */
   color: #2c2c2c;
   margin: 0 13px 0 10px;
 }
@@ -2148,8 +2136,6 @@ input:focus {
 }
 .termsandconditionpopup h5 {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 24px;
   line-height: 30px;
   color: #2c2c2c;
@@ -2157,7 +2143,6 @@ input:focus {
 }
 .termsandconditionpopup h6 {
   font-family: "Intro", Bold;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -2168,8 +2153,6 @@ input:focus {
 }
 .termsandconditionpopup p {
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -2274,8 +2257,7 @@ input {
   position: relative;
   display: flex;
   align-items: center;
-  /* Accent Black */
-  border: 1px solid #2c2c2c;
+  border: 1px solid #dde0ef;
   box-sizing: border-box;
   border-radius: 6px;
   padding: 8px 10px;
@@ -2297,14 +2279,10 @@ input {
 }
 .mobile-filter p {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  /* identical to box height, or 171% */
   display: flex;
   align-items: center;
-  /* Accent Black */
   color: #2c2c2c;
   margin-bottom: 8px;
   margin-top: 22px;
@@ -2327,7 +2305,6 @@ input {
 }
 
 .boxes li {
-  width: 25%;
   padding: 0 10px;
   margin-top: 20px;
   box-sizing: border-box;
@@ -2336,4 +2313,38 @@ input {
 .reversearrow span::after {
   transform: rotateZ(225deg);
   top: 4px;
+}
+
+.mobileslider {
+  width: 100%;
+  background-color: transparent;
+}
+.mobileslider .slick-track {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.mobileslider .slick-slide {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 0px;
+  margin: 5px;
+  height: auto;
+}
+.mobileslider .slick-slide.slick-current, .mobileslider .slick-slide.slick-center {
+  padding: 30px 0px;
+}
+.mobileslider .icon-column-box {
+  min-height: 260px;
+  margin: 0;
+}
+.mobileslider .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  padding: 0;
+  margin-top: 20px;
+  bottom: 25px;
+  position: relative;
 }/*# sourceMappingURL=custom.css.map */

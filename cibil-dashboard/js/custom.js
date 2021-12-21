@@ -90,6 +90,7 @@ $('.offer-details').click(function(e) {
     e.preventDefault();
     // $(this).next().filter('.benefits-outer').slideToggle();
     $(this).closest('.itemsBox').siblings('.benefits-outer').slideToggle();
+    $('.benefits-outer').slideToggle();
 });
 
 var options = {

@@ -561,7 +561,15 @@ $brand-blue: #006685;
         color: #2c2c2c;
     }
 }
+.button-icon-outline {
+    background: #ffffff;
+    /* Secondary Orange */
 
+    border: 1px solid #f16e00;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: transparent;
+}
 ///////////////////////////////////
 ///////////////////////////////////
 .logo {
@@ -932,16 +940,16 @@ $brand-blue: #006685;
         margin: 0 -10px;
     }
 }
-@media screen and (max-width: 992px) {
-    .slick-slider {
-        margin: 0 -15px;
-    }
+// @media screen and (max-width: 992px) {
+//     .slick-slider {
+//         margin: 0 -15px;
+//     }
 
-    .slick-slide {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-}
+//     .slick-slide {
+//         margin-right: 10px;
+//         margin-left: 10px;
+//     }
+// }
 
 .alerts {
     background: #f9f9f9;
@@ -1145,10 +1153,8 @@ $brand-blue: #006685;
     }
     .list-tab {
         @media screen and (max-width: 992px) {
-            overflow:hidden;
+            overflow: hidden;
         }
-        
-        
     }
     a.text-button.text-center {
         text-align: center;
@@ -1415,8 +1421,7 @@ $brand-blue: #006685;
 }
 .compare-row {
     font-family: "Intro", Book;
-    font-style: normal;
-    font-weight: normal;
+
     font-size: 16px;
     line-height: 24px;
     display: flex;
@@ -1461,8 +1466,7 @@ $brand-blue: #006685;
         padding-left: 30px;
         position: relative;
         font-family: "Intro", Book;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 16px;
         line-height: 24px;
 
@@ -1487,8 +1491,7 @@ $brand-blue: #006685;
     }
     p {
         font-family: "Intro", Regular;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 16px;
         line-height: 24px;
 
@@ -1841,7 +1844,7 @@ $brand-blue: #006685;
 
     .para-intro-regular-2c {
         font-family: "Intro", Bold;
-        font-style: normal;
+
         font-weight: bold;
         font-size: 16px;
         line-height: 24px;
@@ -2017,17 +2020,13 @@ input:focus {
                 }
                 span {
                     font-family: "Intro", Book;
-                    font-style: normal;
-                    font-weight: normal;
+
                     font-size: 16px;
                     line-height: 24px;
-                    /* identical to box height, or 150% */
 
                     display: flex;
                     align-items: center;
                     letter-spacing: 0.02em;
-
-                    /* Accent Black */
 
                     color: #2c2c2c;
                     margin: 0 13px 0 10px;
@@ -2230,8 +2229,7 @@ input:focus {
     padding: 30px;
     h5 {
         font-family: "Intro", Regular;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 24px;
         line-height: 30px;
 
@@ -2240,7 +2238,7 @@ input:focus {
     }
     h6 {
         font-family: "Intro", Bold;
-        font-style: normal;
+
         font-weight: bold;
         font-size: 16px;
         line-height: 24px;
@@ -2253,8 +2251,7 @@ input:focus {
     }
     p {
         font-family: "Intro", Book;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 16px;
         line-height: 24px;
 
@@ -2371,9 +2368,8 @@ input {
         }
         display: flex;
         align-items: center;
-        /* Accent Black */
 
-        border: 1px solid #2c2c2c;
+        border: 1px solid #dde0ef;
         box-sizing: border-box;
         border-radius: 6px;
         padding: 8px 10px;
@@ -2391,16 +2387,12 @@ input {
     }
     p {
         font-family: "Intro", Regular;
-        font-style: normal;
-        font-weight: normal;
+
         font-size: 14px;
         line-height: 24px;
-        /* identical to box height, or 171% */
 
         display: flex;
         align-items: center;
-
-        /* Accent Black */
 
         color: #2c2c2c;
         margin-bottom: 8px;
@@ -2423,7 +2415,6 @@ input {
 }
 
 .boxes li {
-    width: 25%;
     padding: 0 10px;
     margin-top: 20px;
     box-sizing: border-box;
@@ -2431,4 +2422,40 @@ input {
 .reversearrow span::after {
     transform: rotateZ(225deg);
     top: 4px;
+}
+
+.mobileslider {
+    width: 100%;
+    background-color: transparent;
+    .slick-track {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    .slick-slide {
+        float: none;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px 0px;
+        margin: 5px;
+        height: auto;
+        &.slick-current,
+        &.slick-center {
+            padding: 30px 0px;
+            //margin: 50px 0px;
+        }
+    }
+    .icon-column-box {
+        min-height: 260px;
+        margin: 0;
+    }
+    .slick-dots {
+        display: flex !important;
+        justify-content: center;
+        padding: 0;
+        margin-top: 20px;
+        bottom: 25px;
+        position: relative;
+    }
 }
