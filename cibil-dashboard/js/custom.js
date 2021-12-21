@@ -88,11 +88,20 @@ $('.benefits-outer').slideUp();
 
 $('.offer-details').click(function(e) {
     e.preventDefault();
+$('.benefits-outer').slideUp();
+
     // $(this).next().filter('.benefits-outer').slideToggle();
     $(this).closest('.itemsBox').siblings('.benefits-outer').slideToggle();
-    $('.benefits-outer').slideToggle();
+    // $('.benefits-outer').slideDOwn();
 });
+$('.offer-details').click(function(e) {
+    e.preventDefault();
+    // $(this).next().filter('.benefits-outer').slideToggle();
 
+
+    $(this).closest('.mobile-grid').siblings('.benefits-outer').slideToggle();
+    // $('.benefits-outer').slideDOwn();
+});
 var options = {
     valueNames: ['name', 'Amount', 'percent', 'annual-fees']
 };
@@ -105,7 +114,6 @@ function getBank(el) {
     alert(bank);
     $('.compare-price').text(bank);
 }
-
 
 
 function extraTicketAttachment(el) {
@@ -150,10 +158,13 @@ function extraTicketAttachmentaditya(el) {
 //     }
 // });
 
+$('.compare-message').hide();
 
 
 $("input.append-onclick").change(function() {
     $(this).closest(".itemsBox").addClass('d-block', this.checked);
+
+    $('.compare-message').show();
 });
 
 
@@ -161,6 +172,8 @@ $("input.append-onclick").change(function() {
 $(document).on("click", ".times", function() {
     $(this).parent().hide();
     // jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0 blanked" style="border: 1px dashed #006685;box-sizing: border-box;border-radius: 4px;"></div>')
+
+    // $("input").prop("checked", false); //to uncheck
 });
 
 $('.compare-button').click(function(e) {
@@ -234,3 +247,6 @@ $(document).on("click", ".radio-input", function() {
 
 });
 
+
+var sho = $("#tab1 .list>div").length;
+$('.numb').text(sho);

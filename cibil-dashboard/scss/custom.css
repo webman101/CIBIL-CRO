@@ -324,6 +324,7 @@ h6 {
   min-height: 62px;
   align-items: center;
   display: flex;
+  flex-grow: 1;
 }
 
 .text-button {
@@ -1212,6 +1213,9 @@ h6 {
     font-size: 16px;
   }
 }
+.switch-tabs-section .switch-tab.disabled {
+  pointer-events: none;
+}
 .switch-tabs-section .switch-tab.disabled p {
   color: #acacac;
 }
@@ -1790,6 +1794,9 @@ h6 {
     font-size: 16px;
   }
 }
+.largetabs #largetabs-nav li.disabled {
+  pointer-events: none;
+}
 .largetabs #largetabs-nav li.disabled p,
 .largetabs #largetabs-nav li.disabled a {
   color: #acacac;
@@ -1859,6 +1866,8 @@ input:focus {
 .compare-message .filled {
   position: relative;
   z-index: 5 !important;
+  flex-basis: 33%;
+  display: none;
 }
 .compare-message .offer-to-compare {
   display: flex;
@@ -1996,7 +2005,7 @@ input:focus {
 @media screen and (min-width: 992px) {
   .compare-grouped-position-absolute > div {
     align-items: center;
-    flex: 1;
+    flex-basis: 33%;
     justify-content: space-between;
     min-width: 245px;
     padding: 4px;
@@ -2308,6 +2317,11 @@ input {
   padding: 0 10px;
   margin-top: 20px;
   box-sizing: border-box;
+}
+@media screen and (max-width: 992px) {
+  .boxes li {
+    padding-left: 30px;
+  }
 }
 
 .reversearrow span::after {
