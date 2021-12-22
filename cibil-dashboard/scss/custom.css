@@ -1385,10 +1385,25 @@ h6 {
 }
 .input-lists .dropdown {
   background: #ffffff;
+  border-radius: 0;
   border: 1px solid #acacac;
   box-sizing: border-box;
   height: 50px;
   width: 100%;
+}
+.input-lists .autocomplete {
+  position: relative;
+}
+.input-lists .autocomplete:after {
+  content: "";
+  position: absolute;
+  top: 39%;
+  right: 15px;
+  transform: rotateZ(-45deg);
+  width: 6px;
+  height: 6px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 .input-lists input {
   background: #ffffff;
@@ -1624,6 +1639,7 @@ h6 {
   position: relative;
   min-width: 121px;
   margin-right: 30px;
+  border-radius: 0;
 }
 .mobile-switch-container .dropdown::before {
   content: "";

@@ -46,7 +46,7 @@ $(document).ready(function() {
 });
 
 
-// $(".price").after('<span>₹</span>');
+$(".price").after('<span>₹</span>');
 $('.modal-toggle1').on('click', function(e) {
     e.preventDefault();
     $('.modal1').toggleClass('is-visible');
@@ -116,54 +116,54 @@ function getBank(el) {
 }
 
 
-// function extraTicketAttachment(el) {
+function extraTicketAttachment(el) {
 
-//     if ($('input.append-onclick').is(':checked')) {
-//         jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    if ($('input.append-onclick').is(':checked')) {
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
 
+    }
+
+    // bank = $(el).attr('bank');
+    // alert(bank);
+    // $('.compare-price').text(bank);
+}
+
+function extraTicketAttachmenthdfc(el) {
+    if ($('input.append-onclick').is(':checked')) {
+
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/hdfc.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    }
+
+    // bank = $(el).attr('bank');
+    // alert(bank);
+    // $('.compare-price').text(bank);
+}
+
+function extraTicketAttachmentaditya(el) {
+    if ($('input.append-onclick').is(':checked')) {
+
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/aditya.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    }
+
+    // bank = $(el).attr('bank');
+    // alert(bank);
+    // $('.compare-price').text(bank);
+}
+
+
+// $(document).on("click", ".compare-button", function() {
+//     if ($('input.append-onclick').prop('checked', false)) {
+
+//         $(this).closest('.itemsBox').;
 //     }
-
-//     // bank = $(el).attr('bank');
-//     // alert(bank);
-//     // $('.compare-price').text(bank);
-// }
-
-// function extraTicketAttachmenthdfc(el) {
-//     if ($('input.append-onclick').is(':checked')) {
-
-//         jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/hdfc.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
-//     }
-
-//     // bank = $(el).attr('bank');
-//     // alert(bank);
-//     // $('.compare-price').text(bank);
-// }
-
-//  function extraTicketAttachmentaditya(el) {
-//      if ($('input.append-onclick').is(':checked')) {
-//          jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/aditya.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
-//      }
-
-//  }
-
-
-// // $(document).on("click", ".compare-button", function() {
-// //     if ($('input.append-onclick').prop('checked', false)) {
-
-// //         $(this).closest('.itemsBox').;
-// //     }
-// // });
+// });
 
 $('.compare-message').hide();
 
 
-// $("input.append-onclick").change(function() {
-//     $(this).closest(".itemsBox").addClass('d-block', this.checked);
-//     $('.compare-message').show();
-// });
-
 $("input.append-onclick").change(function() {
-    $(this).closest(".itemsBox").find('.compare-row').hide();
+    $(this).closest(".itemsBox").addClass('d-block', this.checked);
+
     $('.compare-message').show();
 });
 
@@ -249,6 +249,4 @@ $(document).on("click", ".radio-input", function() {
 
 
 var sho = $("#tab1 .list>div").length;
-$('.numb').text(sho);
-
-
+$('.numb').text(sho); 
