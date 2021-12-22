@@ -547,6 +547,7 @@ $brand-blue: #006685;
     border: 1px solid #f16e00;
     box-sizing: border-box;
     border-radius: 25px;
+    font-weight: 600;
     img {
         margin-right: 15px;
     }
@@ -1480,7 +1481,7 @@ $brand-blue: #006685;
         & + span {
             position: absolute;
             left: 15px;
-            bottom: 13px;
+            bottom: 23px;
             margin: auto;
         }
     }

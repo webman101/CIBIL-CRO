@@ -537,6 +537,7 @@ h6 {
   border: 1px solid #f16e00;
   box-sizing: border-box;
   border-radius: 25px;
+  font-weight: 600;
 }
 .button-icon img {
   margin-right: 15px;
@@ -1406,7 +1407,7 @@ h6 {
 .input-lists input + span {
   position: absolute;
   left: 15px;
-  bottom: 13px;
+  bottom: 23px;
   margin: auto;
 }
 .input-lists .dd-button {
