@@ -131,7 +131,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
         pointer-events: none;
         background: #f9f9f9;
     }
-    border: none;
+    border: none !important;
     outline: none;
 }
 
@@ -574,7 +574,7 @@ input:disabled {
 .button-outline-yellow {
     background: #ffffff !important;
 
-    border: 1px solid #fcd800 !important;
+    border: 1px solid #f16e00 !important;
     box-sizing: border-box;
     font-weight: 600;
     border-radius: 25px;
