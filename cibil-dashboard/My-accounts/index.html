@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Offers | CIBIL</title>
+    <title>My Account | CIBIL</title>
     <meta name="description" content="Do you want to correct information on your CIBIL Report, and don’t know where to start? You can now initiate a dispute online with CIBIL for inaccuracies, account ownership and duplication of information that reflect in your Credit Report. CIBIL does not charge its consumers for this service.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
@@ -37,16 +37,16 @@
                                     </a>
                                     <img src="../img/carrot-right.svg" alt="">
                                     <a class="navigation-active-tab">
-                                        Offers
+                                        My Account
                                     </a>
                                 </div>
                                 <div>
-                                    <div class="page-title-with-icon mt-3 mb-2 d-flex align-items-center">
-                                        <img src="../img/offers-title-icon.svg" alt="" class="me-2">
+                                    <div class="page-title-with-icon mt-3 mt-md-30 mb-2 d-flex align-items-center">
+                                        <img src="img/account.svg" alt="" class="me-2">
                                         <h3>My Account</h3>
                                     </div>
-                                    <p class="para-intro-regular-2c mb-0">
-                                        Get tailored loan offers from top banks & financial institutions in India based on your latest CIBIL Score.
+                                    <p class="para-intro-regular-2c mb-0 mt-md-20">
+                                        Check your account details, subscription status and manage your login password.
                                     </p>
                                 </div>
 
@@ -55,7 +55,7 @@
                             <div class="common-type-tabs-section mt-0 mt-md-30">
 
                                 <!-- Nav tabs -->
-                                <ul class="nav" role="tablist">
+                                <ul class="nav common-tabs" role="tablist">
                                     <li role="presentation" class="active">
                                         <a href="#home" aria-controls="home" role="tab" data-toggle="tab"> <img src="img/password.svg" class="d-none d-md-block" alt="">
                                             <p class="para-intro-regular-2c">
@@ -89,19 +89,19 @@
                                             </div>
                                             <div class="form-group mt-20 mt-md-30">
                                                 <label for="" class="para-intro-regular-2c d-block fw-600">Old Password</label>
-                                                <input type="email" class="d-block w-100 ">
+                                                <input type="password" placeholder="New Password" class="d-block w-100" data-pwmatch="NewPW" data-pwmatch-length="6">
                                                 <span class="message mt-6 d-block">Please enter your old password</span>
                                             </div>
                                             <div class="form-group mt-20 mt-md-30">
                                                 <label for="" class="para-intro-regular-2c d-block fw-600">New Password</label>
-                                                <input type="email" class="d-block w-100 ">
-                                                <span class="message mt-6 d-block">Please enter your old password</span>
+                                                <input type="password" placeholder="Confirm Password" class="d-block w-100" data-pwmatch="ConfirmPW">
+                                                <span class="message mt-6 d-block">Please enter your new password</span>
                                             </div>
-
-                                            <a href="" class="orange-button para-intro-regular-2c text-decoration-none mt-30 mt-md-40">Update</a>
+                                            <input type="submit" class="orange-button para-intro-regular-2c text-decoration-none mt-30 mt-md-40 " data-pwmatch="submit" value="Update" disabled>
+                                            
                                         </form>
 
-                                        <div class="p-10 bg-white mt-md-30 common-section mobile-margin">
+                                        <div class="p-10 bg-white mt-md-30 common-section mobile-margin mb-md-60">
                                             <div class="blue-title">
                                                 Free Annual CIBIL Score and Report
                                             </div>
@@ -117,7 +117,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="p-10 bg-white mt-md-30 common-section mobile-margin">
+                                        <!-- <div class="p-10 bg-white mt-md-30 common-section mobile-margin">
                                             <div class="blue-title">
                                                 Free Annual CIBIL Score and Report
                                             </div>
@@ -132,10 +132,10 @@
                                                   
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="messages">
-                                        <div class="bg-white p-20 me-md-60">
+                                        <div class="bg-white p-20 pt-30 me-md-60">
                                             <div class="notification d-flex align-items-center mb-0  ">
                                                 <img src="img/notification2.svg" alt="">
                                                 <p class="para-book mb-0 ml-10">
@@ -469,13 +469,16 @@
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="profile2">
-                                        <div class="notification d-flex align-items-center mb-md-30">
-                                            <img src="img/notification2.svg" alt="">
-                                            <p class="para-book mb-0 ml-10">
-                                                Stay updated on changes to your account and your CIBIL Score and Report through Email and SMS
-                                            </p>
+                                        <div class="bg-white" style="padding: 20px;
+                                        padding-top: 30px;">
+                                            <div class="notification d-flex align-items-center">
+                                                <img src="img/notification2.svg" alt="">
+                                                <p class="para-book mb-0 ml-10">
+                                                    Stay updated on changes to your account and your CIBIL Score and Report through Email and SMS
+                                                </p>
+                                            </div>
                                         </div>
-                                        <form action="">
+                                        <form action="" class="mb-md-30">
                                             <div class="form-group">
                                                 <label for="" class="para-intro-regular-2c d-block fw-600">Registered Mobile Number</label>
                                                 <input type="number" class="d-block w-100 disabled" placeholder="+91 - 987654321">
@@ -493,11 +496,11 @@
                                             </div>
                                             <div class="form-group mt-md-30">
                                                 <label for="" class="para-intro-regular-2c d-block fw-600">Your Registered Email Address</label>
-                                                <input type="email" class="d-block w-100 " placeholder="rajesh@gmail.com">
+                                                <input type="email" class="d-block w-100 disabled" placeholder="rajesh@gmail.com">
                                                 <div class="d-flex align-items-center checkbox mt-20 mb-30 mb-md-0 mt-md-20">
 
                                                     <div class="form-group">
-                                                        <input type="checkbox" id="3" class="append-onclick">
+                                                        <input type="checkbox" id="3" class="append-onclick ">
                                                         <label for="3"></label>
                                                     </div>
 
@@ -506,44 +509,14 @@
                                                     <p class="para-book font-14 d-inline-block mb-0 ml-10" style="line-height: unset;">Send Email alert notifications</p>
                                                 </div>
                                             </div>
-                                            <a href="" class="orange-button para-intro-regular-2c text-decoration-none mt-md-40">Update</a>
+                                            <input type="submit" class="orange-button para-intro-regular-2c text-decoration-none mt-30 mt-md-40 " data-pwmatch="submit" value="Update" disabled>
+
                                             <hr class="mt-md-30 mb-md-20">
                                             <p class="para-intro-regular-2c color-70">Please call Customer Support to update your registered mobile number or email address at 022-61404300 between Monday to Friday 10AM-6PM.</p>
                                         </form>
 
 
-                                        <div class="p-10 bg-white mt-md-30 common-section mobile-margin">
-                                            <div class="blue-title">
-                                                Free Annual CIBIL Score and Report
-                                            </div>
-                                            <hr>
 
-                                            <div class="row">
-                                                <div class="col-2 col-md-1">
-                                                    <img src="img/doc.svg" alt="">
-                                                </div>
-                                                <div class="col-10 col-md-7">
-                                                    <p class="para-book color-2c mb-10">Your next Free Annual CIBIL Score and Report will become available on <span style="font-weight: 600;">01/01/2022</span></p>
-                                                  
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="p-10 bg-white mt-md-30 common-section mobile-margin">
-                                            <div class="blue-title">
-                                                Free Annual CIBIL Score and Report
-                                            </div>
-                                            <hr>
-
-                                            <div class="row">
-                                                <div class="col-2 col-md-1">
-                                                    <img src="img/doc.svg" alt="">
-                                                </div>
-                                                <div class="col-10 col-md-7">
-                                                    <p class="para-book color-2c mb-10">Your next Free Annual CIBIL Score and Report will become available on <span style="font-weight: 600;">01/01/2022</span></p>
-                                                  
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
 
                                 </div>
@@ -556,9 +529,29 @@
 
 
             </div>
+
         </div>
 
-
+        <footer class="text-center" style="border-top: 1px solid #DDDDDD;background-color: #fff;padding-top: 20px;">
+            <p class="text-black-2c font-14">© Copyright 2021 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.</p>
+            <ul class="d-flex m-0 p-0 justify-content-center">
+                <li>
+                    <a href="#" class="d-block text-black-2c font-14 mr-3">
+                        <p>FAQs</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-block text-black-2c font-14 mr-3">
+                        <p>Terms and Conditions</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="d-block text-black-2c font-14">
+                        <p>Privacy Policy</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </div>
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/slick.min.js"></script>

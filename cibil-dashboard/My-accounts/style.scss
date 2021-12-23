@@ -42,6 +42,7 @@ $spaceamounts: (
     40,
     45,
     50,
+    60,
     75,
     100
 ); // Adjust this to include the pixel amounts you need.
@@ -116,8 +117,15 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     border-radius: 25px;
     font-weight: 600;
     height: 50px;
+    &.disabled {
+        pointer-events: none;
+        background: #f9f9f9;
+    }
 }
 
+input:disabled {
+    background: #dddddd  !important;
+}
 ///////////////////////////////////
 ///////////////////////////////////
 .logo {
@@ -265,6 +273,18 @@ $sides: (top, bottom, left, right); // Leave this variable alone
         margin: 0 10px;
     }
 }
+.page-title-with-icon {
+    display: flex;
+    align-items: center;
+    h3 {
+        font-family: "Intro", Regular;
+
+        font-size: 40px;
+        line-height: 50px;
+        color: #2c2c2c;
+        margin-left: 16px;
+    }
+}
 .common-type-tabs-section {
     border-top: 1px solid #dddddd;
 
@@ -281,8 +301,10 @@ $sides: (top, bottom, left, right); // Leave this variable alone
             margin: 0;
             width: 100%;
             max-width: 200px;
+
             @media screen and (min-width: 992px) {
                 border-top: 6px solid #ffffff;
+                min-height: 122px;
             }
 
             border-bottom: 1px solid #dddddd;
@@ -297,7 +319,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
                 display: flex;
                 align-items: flex-end;
                 @media screen and (min-width: 992px) {
-                    margin-top: 15px;
+                    margin-top: 10px;
                 }
 
                 margin-bottom: 0;
@@ -319,8 +341,6 @@ $sides: (top, bottom, left, right); // Leave this variable alone
                 max-width: 200px;
 
                 @media screen and (min-width: 992px) {
-                    padding: 20px;
-                    height: 122px;
                 }
 
                 text-align: left;
@@ -910,6 +930,20 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 }
 .interstial-container {
 }
+@media screen and (max-width: 992px) {
+    .common-tabs {
+        li {
+            border-top: 6px solid #ffffff;
+            &.active {
+                padding-top: 15px !important;
+            }
+        }
+    }
+}
+.border-right-0 {
+    border-right: 0;
+}
+
 .nav {
     display: flex;
     @media screen and (min-width: 992px) {
@@ -929,8 +963,13 @@ $sides: (top, bottom, left, right); // Leave this variable alone
         border-bottom: 0;
         &.base-plan {
             border-right: 0;
+            border-left: 1px solid #dddddd;
+
+            &.active {
+                border-left: 2px solid #00a6ca;
+            }
             &.active::after {
-                width: 100.5%;
+                width: 100%;
             }
         }
         &.base-standard {
@@ -944,18 +983,21 @@ $sides: (top, bottom, left, right); // Leave this variable alone
                     margin-left: -16.3px;
                 }
             }
-            border-top-right-radius: 6px;
+            @media screen and (min-width: 992px) {
+                border-top-right-radius: 6px;
+            }
         }
         &.active {
             background-color: #fff;
             border-top: 6px solid #00a6ca;
             border-bottom: 0;
             position: relative;
+            padding-top: 10px;
             &::after {
                 content: "";
                 position: absolute;
-                height: 5px;
-                bottom: -5px;
+                height: 15px;
+                bottom: -10px;
                 left: 0;
                 background: #fff;
                 width: 100%;
@@ -1085,7 +1127,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
     }
 }
 .mobiletabsection {
-    border: 2px solid #00a6ca;
+    border-right: 0;
     border-top: 0;
     .tab-content {
         padding: 20px;
@@ -1104,17 +1146,71 @@ $sides: (top, bottom, left, right); // Leave this variable alone
         }
         .tab-content {
             border-top: 2px solid #00a6ca;
+            border: 2px solid #00a6ca;
+        }
+        .base-standard {
+            border-left: 1px solid #dddddd;
         }
         .base-premium.active {
+            border-right: 2px solid #00a6ca;
+        }
+        .base-standard.active {
+            border-left: 2px solid #00a6ca !important;
         }
         #myTabs {
             li {
                 &:last-child.active {
-                    border-right: 0 solid #00a6ca;
                     border-left: 2px solid #00a6ca;
-
+                    border-right: 2px solid #00a6ca;
                 }
             }
         }
     }
+}
+footer {
+    @media screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    @media screen and (min-width: 992px) {
+        padding-left: 20%;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            height: 110%;
+            width: 20%;
+            background-color: #006685;
+            border-top: 1px solid #006685;
+        }
+    }
+    a {
+        font-family: "Intro", Book;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        /* identical to box height, or 171% */
+
+        text-align: right;
+        letter-spacing: 0.02em;
+        text-decoration-line: underline;
+
+        /* Accent Black */
+        margin: 0 15px;
+        color: #2c2c2c;
+    }
+}
+.border-left-0 {
+    border-left: none !important;
+}
+.border-left-1 {
+    border-left: 1px solid #dddddd !important;
+}
+input.orange-button{
+    padding-left: 40px !important;
 }

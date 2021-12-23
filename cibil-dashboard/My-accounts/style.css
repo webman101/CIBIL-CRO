@@ -445,6 +445,38 @@ h6 {
   padding-right: 50px !important;
 }
 
+.mt-60 {
+  margin-top: 60px !important;
+}
+
+.pt-60 {
+  padding-top: 60px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.pb-60 {
+  padding-bottom: 60px !important;
+}
+
+.ml-60 {
+  margin-left: 60px !important;
+}
+
+.pl-60 {
+  padding-left: 60px !important;
+}
+
+.mr-60 {
+  margin-right: 60px !important;
+}
+
+.pr-60 {
+  padding-right: 60px !important;
+}
+
 .mt-75 {
   margin-top: 75px !important;
 }
@@ -926,6 +958,38 @@ h6 {
     padding-right: 50px !important;
   }
 
+  .mt-md-60 {
+    margin-top: 60px !important;
+  }
+
+  .pt-md-60 {
+    padding-top: 60px !important;
+  }
+
+  .mb-md-60 {
+    margin-bottom: 60px !important;
+  }
+
+  .pb-md-60 {
+    padding-bottom: 60px !important;
+  }
+
+  .ml-md-60 {
+    margin-left: 60px !important;
+  }
+
+  .pl-md-60 {
+    padding-left: 60px !important;
+  }
+
+  .mr-md-60 {
+    margin-right: 60px !important;
+  }
+
+  .pr-md-60 {
+    padding-right: 60px !important;
+  }
+
   .mt-md-75 {
     margin-top: 75px !important;
   }
@@ -1036,6 +1100,14 @@ h6 {
   border-radius: 25px;
   font-weight: 600;
   height: 50px;
+}
+.orange-button.disabled {
+  pointer-events: none;
+  background: #f9f9f9;
+}
+
+input:disabled {
+  background: #dddddd !important;
 }
 
 .logo {
@@ -1189,6 +1261,18 @@ h6 {
   margin: 0 10px;
 }
 
+.page-title-with-icon {
+  display: flex;
+  align-items: center;
+}
+.page-title-with-icon h3 {
+  font-family: "Intro", Regular;
+  font-size: 40px;
+  line-height: 50px;
+  color: #2c2c2c;
+  margin-left: 16px;
+}
+
 .common-type-tabs-section {
   border-top: 1px solid #dddddd;
 }
@@ -1213,6 +1297,7 @@ h6 {
 @media screen and (min-width: 992px) {
   .common-type-tabs-section .nav li {
     border-top: 6px solid #ffffff;
+    min-height: 122px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1228,7 +1313,7 @@ h6 {
 }
 @media screen and (min-width: 992px) {
   .common-type-tabs-section .nav li p {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 .common-type-tabs-section .nav li.active p {
@@ -1241,12 +1326,6 @@ h6 {
   max-width: 200px;
   text-align: left;
   cursor: pointer;
-}
-@media screen and (min-width: 992px) {
-  .common-type-tabs-section .nav li a {
-    padding: 20px;
-    height: 122px;
-  }
 }
 .common-type-tabs-section .tab-content input {
   height: 50px;
@@ -1792,6 +1871,18 @@ h6 {
   margin-right: 23px;
 }
 
+@media screen and (max-width: 992px) {
+  .common-tabs li {
+    border-top: 6px solid #ffffff;
+  }
+  .common-tabs li.active {
+    padding-top: 15px !important;
+  }
+}
+.border-right-0 {
+  border-right: 0;
+}
+
 .nav {
   display: flex;
 }
@@ -1815,13 +1906,16 @@ h6 {
 }
 .nav li.base-plan {
   border-right: 0;
+  border-left: 1px solid #dddddd;
+}
+.nav li.base-plan.active {
+  border-left: 2px solid #00a6ca;
 }
 .nav li.base-plan.active::after {
-  width: 100.5%;
+  width: 100%;
 }
 .nav li.base-standard {
   border-left: 0;
-  border-top-right-radius: 6px;
 }
 .nav li.base-standard.active::after {
   width: 100.5%;
@@ -1830,17 +1924,23 @@ h6 {
 .nav li.base-standard.active span {
   margin-left: -16.3px;
 }
+@media screen and (min-width: 992px) {
+  .nav li.base-standard {
+    border-top-right-radius: 6px;
+  }
+}
 .nav li.active {
   background-color: #fff;
   border-top: 6px solid #00a6ca;
   border-bottom: 0;
   position: relative;
+  padding-top: 10px;
 }
 .nav li.active::after {
   content: "";
   position: absolute;
-  height: 5px;
-  bottom: -5px;
+  height: 15px;
+  bottom: -10px;
   left: 0;
   background: #fff;
   width: 100%;
@@ -1959,7 +2059,7 @@ h6 {
   }
 }
 .mobiletabsection {
-  border: 2px solid #00a6ca;
+  border-right: 0;
   border-top: 0;
 }
 .mobiletabsection .tab-content {
@@ -1978,9 +2078,69 @@ h6 {
   }
   .interstial-container .tab-content {
     border-top: 2px solid #00a6ca;
+    border: 2px solid #00a6ca;
+  }
+  .interstial-container .base-standard {
+    border-left: 1px solid #dddddd;
+  }
+  .interstial-container .base-premium.active {
+    border-right: 2px solid #00a6ca;
+  }
+  .interstial-container .base-standard.active {
+    border-left: 2px solid #00a6ca !important;
   }
   .interstial-container #myTabs li:last-child.active {
-    border-right: 0 solid #00a6ca;
     border-left: 2px solid #00a6ca;
+    border-right: 2px solid #00a6ca;
   }
+}
+
+@media screen and (max-width: 992px) {
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer {
+    padding-left: 20%;
+    position: relative;
+  }
+  footer::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 110%;
+    width: 20%;
+    background-color: #006685;
+    border-top: 1px solid #006685;
+  }
+}
+footer a {
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  text-align: right;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  /* Accent Black */
+  margin: 0 15px;
+  color: #2c2c2c;
+}
+
+.border-left-0 {
+  border-left: none !important;
+}
+
+.border-left-1 {
+  border-left: 1px solid #dddddd !important;
+}
+
+input.orange-button {
+  padding-left: 40px !important;
 }/*# sourceMappingURL=style.css.map */
