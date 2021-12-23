@@ -1064,11 +1064,20 @@ h6 {
 
 .para-intro-regular-2c {
   font-family: "Intro", Regular;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
+  color: #2c2c2c;
+}
+
+.para-intro-bold-2c {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
   color: #2c2c2c;
 }
 
@@ -1100,6 +1109,8 @@ h6 {
   border-radius: 25px;
   font-weight: 600;
   height: 50px;
+  border: none;
+  outline: none;
 }
 .orange-button.disabled {
   pointer-events: none;
@@ -1108,6 +1119,7 @@ h6 {
 
 input:disabled {
   background: #dddddd !important;
+  color: #707070;
 }
 
 .logo {
@@ -1245,14 +1257,15 @@ input:disabled {
   border: 1px solid #dddddd;
   box-sizing: border-box;
   border-radius: 4px;
-  font-family: "Intro", Book;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  color: #707070;
+  font-family: "Intro", Regular;
+  font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  letter-spacing: 0.02em;
-  color: #707070;
 }
 .navigation-tabs > a.navigation-active-tab {
   color: #2c2c2c;
@@ -1310,6 +1323,7 @@ input:disabled {
   display: flex;
   align-items: flex-end;
   margin-bottom: 0;
+  color: #707070;
 }
 @media screen and (min-width: 992px) {
   .common-type-tabs-section .nav li p {
@@ -1317,7 +1331,12 @@ input:disabled {
   }
 }
 .common-type-tabs-section .nav li.active p {
-  font-weight: 600;
+  font-family: "Intro", Bold;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
 }
 .common-type-tabs-section .nav li a {
   all: unset;
@@ -1465,7 +1484,6 @@ input:disabled {
   background: #f16e00;
   border-radius: 25px;
   font-family: "Intro", Regular;
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
@@ -1515,7 +1533,6 @@ input:disabled {
 
 .blue-title {
   font-family: "Intro", Bold;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -1526,7 +1543,6 @@ input:disabled {
 
 .section-title {
   font-family: "Intro", Bold;
-  font-style: normal;
   font-weight: bold;
   line-height: 24px;
   text-align: center;
@@ -1621,7 +1637,6 @@ input:disabled {
 }
 .interstial-container .column .coumn-head .plan-name {
   font-family: "Intro", Regular;
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -1631,7 +1646,6 @@ input:disabled {
 }
 .interstial-container .column .coumn-head .plan-duration {
   font-family: "Intro", Bold;
-  font-style: normal;
   font-weight: bold;
   font-size: 24px;
   margin: 10px 0 10px;
@@ -1640,7 +1654,6 @@ input:disabled {
 }
 .interstial-container .column .coumn-head .plan-price {
   font-family: "Intro", Regular;
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -1711,7 +1724,6 @@ input:disabled {
   background: #fcd800;
   height: 30px;
   font-family: "Intro", Book;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -1785,7 +1797,6 @@ input:disabled {
 
 .plan-title {
   font-family: "Intro", Regular;
-  font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -1953,7 +1964,6 @@ input:disabled {
 }
 .nav li .plan-name {
   font-family: "Intro", Book;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
@@ -1963,7 +1973,6 @@ input:disabled {
 }
 .nav li h3 {
   font-family: "Intro", Bold;
-  font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -1975,7 +1984,6 @@ input:disabled {
 }
 .nav li h4 {
   font-family: "Intro", Regular;
-  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   margin-bottom: 10px;
@@ -1986,7 +1994,6 @@ input:disabled {
 }
 .nav li h6 {
   font-family: "Intro", Regular;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -2003,7 +2010,6 @@ input:disabled {
   justify-content: center;
   margin-left: -16.1px;
   font-family: "Intro", Book;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
@@ -2047,7 +2053,6 @@ input:disabled {
     min-height: 0;
     margin-bottom: 14px;
     font-family: "Intro", Book;
-    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -2120,15 +2125,12 @@ input:disabled {
 }
 footer a {
   font-family: "Intro", Book;
-  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  /* identical to box height, or 171% */
   text-align: right;
   letter-spacing: 0.02em;
   text-decoration-line: underline;
-  /* Accent Black */
   margin: 0 15px;
   color: #2c2c2c;
 }

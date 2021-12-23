@@ -41,31 +41,38 @@ $(document).ready(function() {
 // confirm_password.onkeyup = validatePassword;
 $(document).ready(function() {
 
-    /* --------------------------------- */
-    $('[data-pwmatch]').keyup(function() {
+    // /* --------------------------------- */
+    // $('[data-pwmatch]').keyup(function() {
 
-        if (!$('[data-pwmatch="NewPW"]').attr("data-pwmatch-length")) { var pwlength = '8'; } else { var pwlength = $('[data-pwmatch="NewPW"]').attr("data-pwmatch-length"); }
+    //     if (!$('[data-pwmatch="NewPW"]').attr("data-pwmatch-length")) { var pwlength = '8'; } else { var pwlength = $('[data-pwmatch="NewPW"]').attr("data-pwmatch-length"); }
 
 
 
-        if ($('[data-pwmatch="NewPW"]').val().length > pwlength - 1 && $('[data-pwmatch="NewPW"]').val() == $('[data-pwmatch="ConfirmPW"]').val()) {
-            $('[data-pwmatch="submit"]').attr('disabled', false);
-            $('#PasswordMatch').text('true');
-            $('#PasswordMatch').css('color', 'green');
-        } else {
-            $('[data-pwmatch="submit"]').attr('disabled', true);
-            $('#PasswordMatch').text('false');
-            $('#PasswordMatch').css('color', 'red');
-        }
-        var MatchPW = $('#PasswordMatch').val();
+    //     if ($('[data-pwmatch="NewPW"]').val().length > pwlength - 1 && $('[data-pwmatch="NewPW"]').val() == $('[data-pwmatch="ConfirmPW"]').val()) {
+    //         $('[data-pwmatch="submit"]').attr('disabled', false);
+    //         $('#PasswordMatch').text('true');
+    //         $('#PasswordMatch').css('color', 'green');
+    //     } else {
+    //         $('[data-pwmatch="submit"]').attr('disabled', true);
+    //         $('#PasswordMatch').text('false');
+    //         $('#PasswordMatch').css('color', 'red');
+    //     }
+    //     var MatchPW = $('#PasswordMatch').val();
 
-    });
+    // });
 
     /* ------------------------------------------------------ */
 });
 
-
-
 $("input.append-onclick").change(function() {
     $('[data-pwmatch="submit"]').attr('disabled', false);
+});
+
+
+$("input").keyup(function() {
+    if ($('.password').val() && $('.passwords').val()) {
+        $('[data-pwmatch="submit"]').attr('disabled', false);
+    } else {
+        $('[data-pwmatch="submit"]').attr('disabled', true);
+    }
 });
