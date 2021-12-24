@@ -64,15 +64,46 @@ $(document).ready(function() {
     /* ------------------------------------------------------ */
 });
 
-$("input.append-onclick").change(function() {
-    $('[data-pwmatch="submit"]').attr('disabled', false);
+
+// $("input").keyup(function() {
+//     if ($('.password').val() && $('.passwords').val()) {
+//         $('[data-pwmatch="submit"]').attr('disabled', false);
+//     } else {
+//         $('[data-pwmatch="submit"]').attr('disabled', true);
+//     }
+// });
+
+
+
+$(function() {
+    var regExp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+    $('.password').on('keyup', function(updateCount) {
+        $('.message').hide();
+        regExp.test($(this).val()) ? $('.password').val() && $('.passwords').val() && $('.message').hide() && $('[data-pwmatch="submit"]').attr('disabled', false) : $('.message').show() && $('[data-pwmatch="submit"]').attr('disabled', true);
+    });
+
 });
 
 
-$("input").keyup(function() {
-    if ($('.password').val() && $('.passwords').val()) {
-        $('[data-pwmatch="submit"]').attr('disabled', false);
+$('.password').keyup(updateCount);
+
+function updateCount() {
+    var cs = $(this).val().length;
+    console.log(cs);
+    if (cs < 8) {
+        console.log('Please enter 8-15 characters using at least one letter and number');
     } else {
+        console.log('more than 8');
+
+    }
+}
+
+$("input.append-onclick").change(function() {
+    if ($('#2').prop('checked') || $('#3').prop('checked')) {
+        $('[data-pwmatch="submit"]').attr('disabled', false);
+    }
+    else{
         $('[data-pwmatch="submit"]').attr('disabled', true);
     }
 });
