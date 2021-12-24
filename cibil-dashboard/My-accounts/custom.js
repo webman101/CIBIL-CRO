@@ -64,10 +64,6 @@ $(document).ready(function() {
     /* ------------------------------------------------------ */
 });
 
-$("input.append-onclick").change(function() {
-    $('[data-pwmatch="submit"]').attr('disabled', false);
-});
-
 
 // $("input").keyup(function() {
 //     if ($('.password').val() && $('.passwords').val()) {
@@ -102,3 +98,12 @@ function updateCount() {
 
     }
 }
+
+$("input.append-onclick").change(function() {
+    if ($('#2').prop('checked') || $('#3').prop('checked')) {
+        $('[data-pwmatch="submit"]').attr('disabled', false);
+    }
+    else{
+        $('[data-pwmatch="submit"]').attr('disabled', true);
+    }
+});

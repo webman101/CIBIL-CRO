@@ -1120,6 +1120,7 @@ h6 {
 input:disabled {
   background: #dddddd !important;
   color: #707070;
+  font-weight: 600;
 }
 
 .logo {
@@ -2131,8 +2132,13 @@ footer a {
   text-align: right;
   letter-spacing: 0.02em;
   text-decoration-line: underline;
-  margin: 0 15px;
+  margin: 0 0.5em;
   color: #2c2c2c;
+}
+@media screen and (min-width: 992px) {
+  footer a {
+    margin: 0 15px;
+  }
 }
 
 .border-left-0 {
@@ -2181,4 +2187,14 @@ input.orange-button {
 .subscription-active.active .subscription-tab {
   background-repeat: no-repeat;
   background-image: url(/img/contact-blue.svg);
+}
+
+@media screen and (min-width: 992px) {
+  .common-type-tabs-section .nav li {
+    padding: 0;
+  }
+  .common-type-tabs-section .nav li a {
+    padding: 10px;
+    padding-left: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
