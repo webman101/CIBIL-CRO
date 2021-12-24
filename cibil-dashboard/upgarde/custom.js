@@ -69,36 +69,10 @@ $("input.append-onclick").change(function() {
 });
 
 
-// $("input").keyup(function() {
-//     if ($('.password').val() && $('.passwords').val()) {
-//         $('[data-pwmatch="submit"]').attr('disabled', false);
-//     } else {
-//         $('[data-pwmatch="submit"]').attr('disabled', true);
-//     }
-// });
-
-
-
-$(function() {
-    var regExp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-
-    $('.password').on('keyup', function(updateCount) {
-        $('.message').hide();
-        regExp.test($(this).val()) ? $('.password').val() && $('.passwords').val() && $('.message').hide() && $('[data-pwmatch="submit"]').attr('disabled', false) : $('.message').show() && $('[data-pwmatch="submit"]').attr('disabled', true);
-    });
-
-});
-
-
-$('.password').keyup(updateCount);
-
-function updateCount() {
-    var cs = $(this).val().length;
-    console.log(cs);
-    if (cs < 8) {
-        console.log('Please enter 8-15 characters using at least one letter and number');
+$("input").keyup(function() {
+    if ($('.password').val() && $('.passwords').val()) {
+        $('[data-pwmatch="submit"]').attr('disabled', false);
     } else {
-        console.log('more than 8');
-
+        $('[data-pwmatch="submit"]').attr('disabled', true);
     }
-}
+});
