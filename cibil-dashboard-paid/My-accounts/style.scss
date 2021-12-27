@@ -91,6 +91,13 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 
     color: #2c2c2c;
 }
+.para-intro-regular {
+    font-family: "Intro", Regular;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #2c2c2c;
+}
 .para-intro-bold-2c {
     font-family: "Intro", Bold;
 
@@ -115,6 +122,9 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 }
 .color-70 {
     color: #707070;
+}
+.bgf9 {
+    background: #f9f9f9;
 }
 /////////////////////@at-root buttons
 
@@ -205,6 +215,43 @@ input:disabled {
 }
 .pr-20 {
     padding-right: 20px;
+}
+
+.button-icon {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding: 0 30px;
+    width: auto;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f16e00;
+    text-decoration: none;
+    border: 1px solid #f16e00;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-weight: 600;
+    img {
+        margin-right: 15px;
+    }
+    span {
+        font-family: "Intro", Regular;
+
+        line-height: 24px;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.02em;
+
+        color: #2c2c2c;
+    }
+}
+.rounded-border-1 {
+    border: 1px solid #dde0ef;
+    box-sizing: border-box;
+    border-radius: 6px;
 }
 .tabs {
     margin: 0;
@@ -701,7 +748,7 @@ input:disabled {
             left: 0;
             right: 0;
             width: unset;
-          
+
             @media screen and (max-width: 1200px) {
                 font-size: 12px;
             }
@@ -1067,7 +1114,7 @@ input:disabled {
                 border-top-right-radius: 6px;
             }
         }
-      
+
         &.active {
             background-color: #fff;
             border-top: 6px solid #00a6ca;
@@ -1109,8 +1156,7 @@ input:disabled {
                 font-size: 14px;
             }
             font-size: 16px;
-            
-            
+
             line-height: 24px;
 
             letter-spacing: 0.02em;
@@ -1170,7 +1216,7 @@ input:disabled {
     .most-popular::after {
         top: 0;
     }
-    .base-premium{
+    .base-premium {
         &.active {
             span {
                 margin-left: -8.3px;
@@ -1310,20 +1356,20 @@ input.orange-button {
     padding-left: 40px !important;
 }
 .password-tab {
-    background-image: url(/img/password-grey.svg);
+    background-image: url(img/password-grey.svg);
     height: 30px;
     background-repeat: no-repeat;
     width: 32px;
 }
 .notification-tab {
     height: 30px;
-    background-image: url(/img/notification.svg);
+    background-image: url(img/notification.svg);
 
     background-repeat: no-repeat;
     width: 32px;
 }
 .subscription-tab {
-    background-image: url(/img/contact.svg);
+    background-image: url(img/contact.svg);
     height: 30px;
     background-repeat: no-repeat;
     width: 32px;
@@ -1331,19 +1377,19 @@ input.orange-button {
 .password-active.active {
     .password-tab {
         background-repeat: no-repeat;
-        background-image: url(/img/password.svg);
+        background-image: url(img/password.svg);
     }
 }
 .notification-active.active {
     .notification-tab {
         background-repeat: no-repeat;
-        background-image: url(/img/notification-blue.svg);
+        background-image: url(img/notification-blue.svg);
     }
 }
 .subscription-active.active {
     .subscription-tab {
         background-repeat: no-repeat;
-        background-image: url(/img/contact-blue.svg);
+        background-image: url(img/contact-blue.svg);
     }
 }
 @media screen and (min-width: 992px) {
@@ -1355,8 +1401,80 @@ input.orange-button {
         }
     }
 }
-.mobile-navtabs{
-    li{
+.mobile-navtabs {
+    li {
         padding-left: 8px !important;
     }
+}
+.pill {
+    background: #a9d161;
+    /* Secondary Green */
+
+    border: 1px solid #a9d161;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 2px 15px;
+}
+.custom-table {
+    height: 100%;
+    display: flex;
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+        border: 1px solid #dde0ef;
+        padding-top: 20px;
+    }
+
+    .table-column {
+        flex-grow: 1;
+        height: 100%;
+        @media screen and (max-width: 992px) {
+            margin-bottom:20px;
+        }
+        
+        
+        .table-head {
+            padding: 15px 20px;
+            padding-bottom: 0;
+            padding-top: 6px;
+
+            @media screen and (min-width: 992px) {
+                background: #ededed;
+                padding: 15px 20px;
+            }
+
+            border-right: 1px solid #f9f9f9;
+            height: 100%;
+        }
+        .table-row {
+            border-right: 1px solid #dde0ef;
+            padding: 15px 20px;
+            padding-bottom: 0;
+            padding-top: 6px;
+
+            @media screen and (min-width: 992px) {
+                padding: 15px 20px;
+                min-height: 120px;
+            }
+        }
+    }
+    border-bottom: 1px solid #dde0ef;
+}
+.yellow-pill {
+    background: #fcd800;
+    border-radius: 4px;
+    font-family: "Intro", Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.02em;
+
+    /* Accent Black */
+
+    color: #2c2c2c;
+    display: inline-block;
+    padding: 1px 15px;
+    font-weight: 600;
 }
