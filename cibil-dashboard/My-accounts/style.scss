@@ -1310,20 +1310,20 @@ input.orange-button {
     padding-left: 40px !important;
 }
 .password-tab {
-    background-image: url(/img/password-grey.svg);
+    background-image: url(img/password-grey.svg);
     height: 30px;
     background-repeat: no-repeat;
     width: 32px;
 }
 .notification-tab {
     height: 30px;
-    background-image: url(/img/notification.svg);
+    background-image: url(img/notification.svg);
 
     background-repeat: no-repeat;
     width: 32px;
 }
 .subscription-tab {
-    background-image: url(/img/contact.svg);
+    background-image: url(img/contact.svg);
     height: 30px;
     background-repeat: no-repeat;
     width: 32px;
@@ -1331,19 +1331,19 @@ input.orange-button {
 .password-active.active {
     .password-tab {
         background-repeat: no-repeat;
-        background-image: url(/img/password.svg);
+        background-image: url(img/password.svg);
     }
 }
 .notification-active.active {
     .notification-tab {
         background-repeat: no-repeat;
-        background-image: url(/img/notification-blue.svg);
+        background-image: url(img/notification-blue.svg);
     }
 }
 .subscription-active.active {
     .subscription-tab {
         background-repeat: no-repeat;
-        background-image: url(/img/contact-blue.svg);
+        background-image: url(img/contact-blue.svg);
     }
 }
 @media screen and (min-width: 992px) {
