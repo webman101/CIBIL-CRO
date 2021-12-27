@@ -30,7 +30,24 @@ h6 {
 }
 
 ////////////////// spacing
-$spaceamounts: ( 2, 4, 5, 6, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 100); // Adjust this to include the pixel amounts you need.
+$spaceamounts: (
+    2,
+    4,
+    5,
+    6,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    60,
+    75,
+    100
+); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
 @each $space in $spaceamounts {
     @each $side in $sides {
@@ -251,7 +268,7 @@ input:disabled {
 .navigation-tabs {
     display: flex;
     align-items: center;
-    &>a {
+    & > a {
         background: #f9f9f9;
         text-decoration: none;
         padding: 4px 10px;
@@ -281,7 +298,11 @@ input:disabled {
     align-items: center;
     h3 {
         font-family: "Intro", Regular;
-        font-size: 40px;
+        font-size: 24px;
+        @media screen and (min-width: 992px) {
+            font-size: 40px;
+        }
+
         line-height: 50px;
         color: #2c2c2c;
         margin-left: 16px;
@@ -343,7 +364,8 @@ input:disabled {
                 display: block;
                 width: 100%;
                 max-width: 200px;
-                @media screen and (min-width: 992px) {}
+                @media screen and (min-width: 992px) {
+                }
                 text-align: left;
                 cursor: pointer;
             }
@@ -764,7 +786,7 @@ input:disabled {
         justify-content: center;
         color: #ffffff;
         position: relative;
-        >div {
+        > div {
             position: relative;
             z-index: 2;
         }
@@ -885,7 +907,8 @@ input:disabled {
 }
 
 .column-outer {
-    @media screen and (min-width: 992px) {}
+    @media screen and (min-width: 992px) {
+    }
 }
 
 .col-1-link {
@@ -936,7 +959,8 @@ input:disabled {
     color: #2c2c2c;
 }
 
-.features-grid {}
+.features-grid {
+}
 
 .feature {
     display: flex;
@@ -960,7 +984,8 @@ input:disabled {
     }
 }
 
-.interstial-container {}
+.interstial-container {
+}
 
 @media screen and (max-width: 992px) {
     .common-tabs {
@@ -1133,7 +1158,8 @@ input:disabled {
         .tab-pane {
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
-            &.active {}
+            &.active {
+            }
         }
         .small-right {
             width: 21px !important;
