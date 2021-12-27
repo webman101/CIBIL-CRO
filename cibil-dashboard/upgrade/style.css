@@ -1911,7 +1911,7 @@ input:disabled {
 }
 
 .description-bold {
-  font-family: "Intro", Regular;
+  font-family: "Intro", Book !important;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
