@@ -1762,7 +1762,7 @@ input:disabled {
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-family: "Intro", Regular;
+  font-family: "Intro", book;
   font-weight: 600;
   font-size: 14px;
   color: #707070;
