@@ -83,7 +83,6 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 .para-intro-regular-2c {
     font-family: "Intro", Regular;
 
-    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
 
@@ -276,7 +275,6 @@ input:disabled {
         color: #707070;
         font-family: "Intro", Regular;
 
-        font-weight: normal;
         font-size: 14px;
         line-height: 24px;
 
@@ -324,6 +322,10 @@ input:disabled {
             margin: 0;
             width: 100%;
             max-width: 200px;
+            @media screen and (max-width: 992px) {
+                border-top: 1px solid #dddddd;
+                border-top-right-radius: 6px;
+            }
 
             @media screen and (min-width: 992px) {
                 border-top: 6px solid #ffffff;
@@ -701,7 +703,7 @@ input:disabled {
             left: 0;
             right: 0;
             width: unset;
-          
+
             @media screen and (max-width: 1200px) {
                 font-size: 12px;
             }
@@ -818,9 +820,9 @@ input:disabled {
         &::after {
             content: "";
             position: absolute;
-            width: 102%;
+            width: 100%;
             height: 101%;
-            left: -2px;
+            left: 0;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
             @media screen and (min-width: 992px) {
@@ -837,7 +839,6 @@ input:disabled {
         height: 30px;
         font-family: "Intro", Book;
 
-        font-weight: normal;
         font-size: 14px;
         line-height: 24px;
         display: flex;
@@ -897,7 +898,14 @@ input:disabled {
         padding: 10px;
     }
 }
-
+.tag-intabs-current {
+    color: #2c2c2c !important;
+    font-weight: 600;
+    background-color: #dddddd;
+    &::after {
+        background-color: #dddddd !important;
+    }
+}
 .in-active {
     margin-top: -3px;
     .save {
@@ -1067,7 +1075,7 @@ input:disabled {
                 border-top-right-radius: 6px;
             }
         }
-      
+
         &.active {
             background-color: #fff;
             border-top: 6px solid #00a6ca;
@@ -1087,13 +1095,14 @@ input:disabled {
         .tag-intabs {
             position: absolute;
             top: -31px;
-            width: 101%;
+            width: 100%;
             left: 0;
+            right: 0;
+            margin: auto;
         }
         .plan-name {
             font-family: "Intro", Book;
 
-            font-weight: normal;
             font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.02em;
@@ -1109,8 +1118,7 @@ input:disabled {
                 font-size: 14px;
             }
             font-size: 16px;
-            
-            
+
             line-height: 24px;
 
             letter-spacing: 0.02em;
@@ -1123,7 +1131,6 @@ input:disabled {
         h4 {
             font-family: "Intro", Regular;
 
-            font-weight: normal;
             font-size: 16px;
             margin-bottom: 10px;
             line-height: 24px;
@@ -1136,7 +1143,6 @@ input:disabled {
         h6 {
             font-family: "Intro", Regular;
 
-            font-weight: normal;
             font-size: 14px;
             line-height: 24px;
             margin-bottom: 9px;
@@ -1154,7 +1160,6 @@ input:disabled {
             margin-left: -8.1px;
             font-family: "Intro", Book;
 
-            font-weight: normal;
             font-size: 14px;
             line-height: 24px;
             display: flex;
@@ -1170,7 +1175,7 @@ input:disabled {
     .most-popular::after {
         top: 0;
     }
-    .base-premium{
+    .base-premium {
         &.active {
             span {
                 margin-left: -8.3px;
@@ -1209,7 +1214,6 @@ input:disabled {
             margin-bottom: 14px;
             font-family: "Intro", Book;
 
-            font-weight: normal;
             font-size: 14px;
             letter-spacing: 0.02em;
             color: #2c2c2c;
@@ -1285,7 +1289,6 @@ footer {
     a {
         font-family: "Intro", Book;
 
-        font-weight: normal;
         font-size: 14px;
         line-height: 24px;
 
@@ -1299,6 +1302,32 @@ footer {
 
         color: #2c2c2c;
     }
+}
+.curret-plan {
+    position: absolute;
+    height: 50px;
+    background: #dddddd;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    border: 1px solid #dddddd !important;
+    top: -50px;
+    left: -1px;
+    width: 101%;
+    font-family: "Intro", Regular;
+
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #2c2c2c;
 }
 .border-left-0 {
     border-left: none !important;
@@ -1355,8 +1384,8 @@ input.orange-button {
         }
     }
 }
-.mobile-navtabs{
-    li{
+.mobile-navtabs {
+    li {
         padding-left: 8px !important;
     }
 }
