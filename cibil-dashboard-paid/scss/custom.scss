@@ -1201,8 +1201,10 @@ $brand-blue: #006685;
     align-items: center;
     h3 {
         font-family: "Intro", Regular;
-
-        font-size: 40px;
+        font-size: 24px;
+        @media screen and (min-width: 992px) {
+         font-size: 40px;
+        }
         line-height: 50px;
         color: #2c2c2c;
         margin-left: 16px;

@@ -1260,7 +1260,7 @@ input:disabled {
   justify-content: center;
   letter-spacing: 0.02em;
   color: #707070;
-  font-family: "Intro", Regular;
+  font-family: "Intro", book;
   font-size: 14px;
   line-height: 24px;
   display: flex;
@@ -1279,10 +1279,15 @@ input:disabled {
 }
 .page-title-with-icon h3 {
   font-family: "Intro", Regular;
-  font-size: 40px;
+  font-size: 24px;
   line-height: 50px;
   color: #2c2c2c;
   margin-left: 16px;
+}
+@media screen and (min-width: 992px) {
+  .page-title-with-icon h3 {
+    font-size: 40px;
+  }
 }
 
 @media screen and (min-width: 992px) {

@@ -273,7 +273,7 @@ input:disabled {
         justify-content: center;
         letter-spacing: 0.02em;
         color: #707070;
-        font-family: "Intro", Regular;
+        font-family: "Intro", book;
 
         font-size: 14px;
         line-height: 24px;
@@ -294,8 +294,12 @@ input:disabled {
     align-items: center;
     h3 {
         font-family: "Intro", Regular;
-
+        font-size: 24px;
+       @media screen and (min-width: 992px) {
         font-size: 40px;
+       }
+       
+       
         line-height: 50px;
         color: #2c2c2c;
         margin-left: 16px;
