@@ -285,13 +285,25 @@ input:disabled {
         display: flex;
         align-items: center;
         &.navigation-active-tab {
-		font-family: 'Intro', Regular;
-        color: #2c2c2c;
+            font-family: "Intro", Regular;
+            color: #2c2c2c;
         }
     }
     img {
         margin: 0 10px;
     }
+}
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+    .ml-md-60 {
+        margin-left: 60px !important;
+    }
+    .mr-md-60 {
+        margin-right: 60px !important;
+    }
+}
+.max-width-1200 {
+    margin: auto;
+    max-width: 1200px;
 }
 
 .page-title-with-icon {
@@ -318,7 +330,12 @@ input:disabled {
     }
     @media screen and (min-width: 1200px) {
         border-top: none;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1400px) {
         padding-left: 60px;
+    }
+    @media screen and (min-width: 1400px) {
+        padding-left: 0;
     }
     .nav {
         display: flex;

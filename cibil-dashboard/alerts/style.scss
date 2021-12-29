@@ -1046,12 +1046,7 @@ footer {
 	.mb-md-60 {
 		margin-bottom: 60px !important;
 	}
-	.ml-md-60 {
-		margin-left: 60px !important;
-	}
-	.mr-md-60 {
-		margin-right: 60px !important;
-	}
+
 	.mt-md-75 {
 		margin-top: 75px !important;
 	}
@@ -1154,6 +1149,19 @@ footer {
 		}
 	}
 }
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+	.ml-md-60 {
+		margin-left: 60px !important;
+	}
+	.mr-md-60 {
+		margin-right: 60px !important;
+	}
+}
+.max-width-1200{
+	margin: auto;
+	max-width: 1200px;
+}
+
 @media screen and (max-width: 992px) {
 	.dashboard {
 		.left-column {

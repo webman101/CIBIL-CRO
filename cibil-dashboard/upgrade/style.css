@@ -1276,6 +1276,20 @@ input:disabled {
   margin: 0 10px;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  .ml-md-60 {
+    margin-left: 60px !important;
+  }
+
+  .mr-md-60 {
+    margin-right: 60px !important;
+  }
+}
+.max-width-1200 {
+  margin: auto;
+  max-width: 1200px;
+}
+
 .page-title-with-icon {
   display: flex;
   align-items: center;
@@ -1305,7 +1319,16 @@ input:disabled {
 @media screen and (min-width: 1200px) {
   .common-type-tabs-section {
     border-top: none;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .common-type-tabs-section {
     padding-left: 60px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .common-type-tabs-section {
+    padding-left: 0;
   }
 }
 .common-type-tabs-section .nav {
