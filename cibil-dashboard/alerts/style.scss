@@ -2,7 +2,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: Intro, book;
+	font-family: "Intro", book;
 	scroll-behavior: smooth;
 	-webkit-tap-highlight-color: transparent;
 }
@@ -186,7 +186,7 @@ h6 {
 	padding: 20px;
 }
 .para-intro-regular-2c {
-	font-family: Intro, Regular;
+	font-family: "Intro", Regular;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
@@ -194,7 +194,7 @@ h6 {
 	color: #2c2c2c;
 }
 .para-intro-bold-2c {
-	font-family: Intro, Bold;
+	font-family: "Intro", Bold;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 24px;
@@ -326,7 +326,7 @@ h6 {
 		justify-content: center;
 		letter-spacing: 0.02em;
 		color: #707070;
-		font-family: Intro, book;
+		font-family: "Intro", book;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 24px;
@@ -335,6 +335,8 @@ h6 {
 	}
 	> a.navigation-active-tab {
 		color: #2c2c2c;
+		font-family: "Intro", Regular;
+		font-weight: 600;
 	}
 	img {
 		margin: 0 10px;
@@ -344,7 +346,7 @@ h6 {
 	display: flex;
 	align-items: center;
 	h3 {
-		font-family: Intro, Regular;
+		font-family: "Intro", Regular;
 		font-size: 24px;
 		line-height: 50px;
 		color: #2c2c2c;
@@ -362,7 +364,7 @@ h6 {
 			max-width: 200px;
 			border-bottom: 1px solid #ddd;
 			background-color: #fff;
-			border-right: 1px solid #ACACAC;
+			border-right: 1px solid #acacac;
 
 			p {
 				height: 50px;
@@ -382,7 +384,7 @@ h6 {
 		}
 		li.active {
 			p {
-				font-family: Intro, Bold;
+				font-family: "Intro", Bold;
 				font-weight: 700;
 				font-size: 16px;
 				line-height: 24px;
@@ -414,7 +416,7 @@ h6 {
 	height: 50px;
 	background: #f16e00;
 	border-radius: 25px;
-	font-family: Intro, Regular;
+	font-family: "Intro", Regular;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 16px;
@@ -449,7 +451,7 @@ h6 {
 	border-radius: 25px;
 }
 .blue-title {
-	font-family: Intro, Bold;
+	font-family: "Intro", Bold;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 24px;
@@ -458,7 +460,7 @@ h6 {
 	color: #00a6ca;
 }
 .section-title {
-	font-family: Intro, Bold;
+	font-family: "Intro", Bold;
 	font-weight: 700;
 	line-height: 24px;
 	text-align: center;
@@ -515,7 +517,7 @@ h6 {
 			align-items: center;
 			justify-content: center;
 			.plan-name {
-				font-family: Intro, book;
+				font-family: "Intro", book;
 				font-weight: 600;
 				font-size: 16px;
 				line-height: 24px;
@@ -524,7 +526,7 @@ h6 {
 				color: #707070;
 			}
 			.plan-duration {
-				font-family: Intro, Bold;
+				font-family: "Intro", Bold;
 				font-weight: 700;
 				font-size: 18px;
 				margin: 10px 0 10px;
@@ -532,7 +534,7 @@ h6 {
 				color: #2c2c2c;
 			}
 			.plan-price {
-				font-family: Intro, Regular;
+				font-family: "Intro", Regular;
 				font-weight: 600;
 				font-size: 16px;
 				line-height: 24px;
@@ -570,7 +572,7 @@ h6 {
 		border-top-left-radius: 6px;
 		border-top-right-radius: 6px;
 		height: 30px;
-		font-family: Intro, Regular;
+		font-family: "Intro", Regular;
 		font-size: 14px;
 		line-height: 140%;
 		display: flex;
@@ -598,7 +600,7 @@ h6 {
 	.save {
 		background: #fcd800;
 		height: 30px;
-		font-family: Intro, Book;
+		font-family: "Intro", Book;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 24px;
@@ -632,7 +634,7 @@ h6 {
 		align-items: center;
 		text-align: center;
 		justify-content: center;
-		font-family: Intro, book;
+		font-family: "Intro", book;
 		font-weight: 600;
 		font-size: 14px;
 		color: #707070;
@@ -665,7 +667,7 @@ h6 {
 	}
 }
 .plan-title {
-	font-family: Intro, Regular;
+	font-family: "Intro", Regular;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 24px;
@@ -686,7 +688,7 @@ h6 {
 	}
 }
 .col-1-link {
-	font-family: Intro, Regular;
+	font-family: "Intro", Regular;
 	font-size: 14px;
 	text-align: center;
 	letter-spacing: 0.02em;
@@ -708,14 +710,14 @@ h6 {
 	h3 {
 		font-weight: 700;
 		font-size: 16px;
-		font-family: Intro, Bold;
+		font-family: "Intro", Bold;
 		text-transform: uppercase;
 		color: #00a6ca;
 		margin-bottom: 20px;
 		margin-top: 0;
 	}
 	p {
-		font-family: Intro, Book;
+		font-family: "Intro", Book;
 		font-size: 16px;
 		letter-spacing: 0.02em;
 		color: #2c2c2c;
@@ -723,7 +725,7 @@ h6 {
 	}
 }
 .description-bold {
-	font-family: Intro, Book !important;
+	font-family: "Intro", Book !important;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 24px;
@@ -762,7 +764,7 @@ h6 {
 			left: 0;
 		}
 		.plan-name {
-			font-family: Intro, Book;
+			font-family: "Intro", Book;
 			font-weight: 400;
 			font-size: 16px;
 			line-height: 24px;
@@ -771,7 +773,7 @@ h6 {
 			margin-bottom: 10px;
 		}
 		h3 {
-			font-family: Intro, Bold;
+			font-family: "Intro", Bold;
 			font-weight: 700;
 			font-size: 16px;
 			line-height: 24px;
@@ -782,7 +784,7 @@ h6 {
 			margin-top: 0;
 		}
 		h4 {
-			font-family: Intro, Regular;
+			font-family: "Intro", Regular;
 			font-weight: 400;
 			font-size: 16px;
 			margin-bottom: 10px;
@@ -792,7 +794,7 @@ h6 {
 			margin-top: 0;
 		}
 		h6 {
-			font-family: Intro, Regular;
+			font-family: "Intro", Regular;
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 24px;
@@ -808,7 +810,7 @@ h6 {
 			align-items: center;
 			justify-content: center;
 			margin-left: -8.1px;
-			font-family: Intro, Book;
+			font-family: "Intro", Book;
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 24px;
@@ -883,7 +885,7 @@ h6 {
 }
 footer {
 	a {
-		font-family: Intro, Book;
+		font-family: "Intro", Book;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 24px;
@@ -918,7 +920,7 @@ footer {
 	}
 }
 @media screen and (min-width: 992px) {
-	.mt-md-0{
+	.mt-md-0 {
 		margin-top: 0 !important;
 	}
 	.mt-md-2 {
@@ -1177,15 +1179,14 @@ footer {
 			li {
 				border-bottom: 0;
 				padding-bottom: 0;
-				background: #F9F9F9;
-				
-				border-top: 1px solid #ACACAC;
+				background: #f9f9f9;
+
+				border-top: 1px solid #acacac;
 			}
 			li.active {
 				border-top: 2px solid #00a6ca;
 				border-right: 2px solid #00a6ca;
 				background: #ffffff;
-
 			}
 		}
 		.tab-content {
@@ -1246,7 +1247,7 @@ footer {
 			padding: 0;
 			min-height: 0;
 			margin-bottom: 14px;
-			font-family: Intro, Book;
+			font-family: "Intro", Book;
 			font-weight: 400;
 			font-size: 14px;
 			letter-spacing: 0.02em;

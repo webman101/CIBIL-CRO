@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Intro, book;
+  font-family: "Intro", book;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
@@ -246,7 +246,7 @@ h6 {
 }
 
 .para-intro-regular-2c {
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -255,7 +255,7 @@ h6 {
 }
 
 .para-intro-bold-2c {
-  font-family: Intro, Bold;
+  font-family: "Intro", Bold;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -397,7 +397,7 @@ h6 {
   justify-content: center;
   letter-spacing: 0.02em;
   color: #707070;
-  font-family: Intro, book;
+  font-family: "Intro", book;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -406,6 +406,8 @@ h6 {
 }
 .navigation-tabs > a.navigation-active-tab {
   color: #2c2c2c;
+  font-family: "Intro", Regular;
+  font-weight: 600;
 }
 .navigation-tabs img {
   margin: 0 10px;
@@ -416,7 +418,7 @@ h6 {
   align-items: center;
 }
 .page-title-with-icon h3 {
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-size: 24px;
   line-height: 50px;
   color: #2c2c2c;
@@ -436,7 +438,7 @@ h6 {
   max-width: 200px;
   border-bottom: 1px solid #ddd;
   background-color: #fff;
-  border-right: 1px solid #ACACAC;
+  border-right: 1px solid #acacac;
 }
 .common-type-tabs-section .nav li p {
   height: 50px;
@@ -454,7 +456,7 @@ h6 {
   cursor: pointer;
 }
 .common-type-tabs-section .nav li.active p {
-  font-family: Intro, Bold;
+  font-family: "Intro", Bold;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -484,7 +486,7 @@ h6 {
   height: 50px;
   background: #f16e00;
   border-radius: 25px;
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
@@ -523,7 +525,7 @@ h6 {
 }
 
 .blue-title {
-  font-family: Intro, Bold;
+  font-family: "Intro", Bold;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -533,7 +535,7 @@ h6 {
 }
 
 .section-title {
-  font-family: Intro, Bold;
+  font-family: "Intro", Bold;
   font-weight: 700;
   line-height: 24px;
   text-align: center;
@@ -594,7 +596,7 @@ h6 {
   justify-content: center;
 }
 .interstial-container .column .coumn-head .plan-name {
-  font-family: Intro, book;
+  font-family: "Intro", book;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -603,7 +605,7 @@ h6 {
   color: #707070;
 }
 .interstial-container .column .coumn-head .plan-duration {
-  font-family: Intro, Bold;
+  font-family: "Intro", Bold;
   font-weight: 700;
   font-size: 18px;
   margin: 10px 0 10px;
@@ -611,7 +613,7 @@ h6 {
   color: #2c2c2c;
 }
 .interstial-container .column .coumn-head .plan-price {
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -647,7 +649,7 @@ h6 {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   height: 30px;
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-size: 14px;
   line-height: 140%;
   display: flex;
@@ -675,7 +677,7 @@ h6 {
 .interstial-container .save {
   background: #fcd800;
   height: 30px;
-  font-family: Intro, Book;
+  font-family: "Intro", Book;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -709,7 +711,7 @@ h6 {
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-family: Intro, book;
+  font-family: "Intro", book;
   font-weight: 600;
   font-size: 14px;
   color: #707070;
@@ -743,7 +745,7 @@ h6 {
 }
 
 .plan-title {
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -763,7 +765,7 @@ h6 {
 }
 
 .col-1-link {
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-size: 14px;
   text-align: center;
   letter-spacing: 0.02em;
@@ -786,14 +788,14 @@ h6 {
 .verify-card-text h3 {
   font-weight: 700;
   font-size: 16px;
-  font-family: Intro, Bold;
+  font-family: "Intro", Bold;
   text-transform: uppercase;
   color: #00a6ca;
   margin-bottom: 20px;
   margin-top: 0;
 }
 .verify-card-text p {
-  font-family: Intro, Book;
+  font-family: "Intro", Book;
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
@@ -801,7 +803,7 @@ h6 {
 }
 
 .description-bold {
-  font-family: Intro, Book !important;
+  font-family: "Intro", Book !important;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -845,7 +847,7 @@ h6 {
   left: 0;
 }
 .nav li .plan-name {
-  font-family: Intro, Book;
+  font-family: "Intro", Book;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -854,7 +856,7 @@ h6 {
   margin-bottom: 10px;
 }
 .nav li h3 {
-  font-family: Intro, Bold;
+  font-family: "Intro", Bold;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -865,7 +867,7 @@ h6 {
   margin-top: 0;
 }
 .nav li h4 {
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 10px;
@@ -875,7 +877,7 @@ h6 {
   margin-top: 0;
 }
 .nav li h6 {
-  font-family: Intro, Regular;
+  font-family: "Intro", Regular;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -891,7 +893,7 @@ h6 {
   align-items: center;
   justify-content: center;
   margin-left: -8.1px;
-  font-family: Intro, Book;
+  font-family: "Intro", Book;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -959,7 +961,7 @@ h6 {
 }
 
 footer a {
-  font-family: Intro, Book;
+  font-family: "Intro", Book;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -1305,8 +1307,8 @@ footer a {
   .interstial-container .nav li {
     border-bottom: 0;
     padding-bottom: 0;
-    background: #F9F9F9;
-    border-top: 1px solid #ACACAC;
+    background: #f9f9f9;
+    border-top: 1px solid #acacac;
   }
   .interstial-container .nav li.active {
     border-top: 2px solid #00a6ca;
@@ -1365,7 +1367,7 @@ footer a {
     padding: 0;
     min-height: 0;
     margin-bottom: 14px;
-    font-family: Intro, Book;
+    font-family: "Intro", Book;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.02em;

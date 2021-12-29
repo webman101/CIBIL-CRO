@@ -1189,7 +1189,8 @@ $brand-blue: #006685;
         letter-spacing: 0.02em;
         color: #707070;
         &.navigation-active-tab {
-            color: #2c2c2c;
+		font-family: 'Intro', Regular;
+        color: #2c2c2c;
         }
     }
     img {

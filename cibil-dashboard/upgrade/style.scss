@@ -285,7 +285,8 @@ input:disabled {
         display: flex;
         align-items: center;
         &.navigation-active-tab {
-            color: #2c2c2c;
+		font-family: 'Intro', Regular;
+        color: #2c2c2c;
         }
     }
     img {

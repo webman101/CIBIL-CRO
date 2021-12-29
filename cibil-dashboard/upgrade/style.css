@@ -1269,6 +1269,7 @@ input:disabled {
   align-items: center;
 }
 .navigation-tabs > a.navigation-active-tab {
+  font-family: "Intro", Regular;
   color: #2c2c2c;
 }
 .navigation-tabs img {
