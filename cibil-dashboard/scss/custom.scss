@@ -1310,7 +1310,7 @@ $brand-blue: #006685;
     color: #707070 !important;
 }
 .blue-dropdown-groups-section {
-    background: #006685;
+    background: #00A6CA;
     height: 60px;
     display: flex;
     align-items: center;
@@ -1663,6 +1663,9 @@ $brand-blue: #006685;
         border: solid #fff;
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
+    }
+    .form-group input:checked + label {
+        border: 0;
     }
 }
 

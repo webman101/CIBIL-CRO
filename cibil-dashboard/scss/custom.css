@@ -1259,7 +1259,7 @@ h6 {
 }
 
 .blue-dropdown-groups-section {
-  background: #006685;
+  background: #00A6CA;
   height: 60px;
   display: flex;
   align-items: center;
@@ -1582,6 +1582,9 @@ h6 {
   border: solid #fff;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+.checkbox-row .form-group input:checked + label {
+  border: 0;
 }
 
 .benefits-list {
