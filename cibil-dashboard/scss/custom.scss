@@ -577,7 +577,6 @@ input {
 	display: flex;
 	align-items: center;
 	> a {
-	
 		background: #f9f9f9;
 		text-decoration: none;
 		padding: 4px 10px;
@@ -1625,11 +1624,9 @@ input {
 	}
 	li.active {
 		background-color: #fff;
-	
-			border-top: 6px solid #00a6ca !important;
-		
-		
-		
+
+		border-top: 6px solid #00a6ca !important;
+
 		border-bottom: 0;
 		position: relative;
 		padding-top: 10px;
@@ -2160,7 +2157,7 @@ input.orange-button {
 	.pb-md-60 {
 		padding-bottom: 60px !important;
 	}
-	
+
 	.pl-md-60 {
 		padding-left: 60px !important;
 	}
@@ -2269,7 +2266,7 @@ input.orange-button {
 	.ms-md-60 {
 		margin-left: 30px;
 	}
-	
+
 	.d-md-flex {
 		display: flex;
 		display: flex;
@@ -2516,7 +2513,7 @@ input.orange-button {
 	.ms-md-60 {
 		margin-left: 60px;
 	}
-	
+
 	.interstial-container {
 		.col-md-6.equal-column {
 			padding-right: 5px;
@@ -2556,10 +2553,9 @@ input.orange-button {
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
 	.common-type-tabs-section {
 		padding-left: 60px;
-		
 	}
 }
-@media screen and (min-width: 992px)  and (max-width: 1200px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
 	.common-type-tabs-section {
 		padding-right: 60px;
 	}
@@ -2597,23 +2593,20 @@ input.orange-button {
 			}
 		}
 	}
-	
 }
 @media screen and (min-width: 992px) {
-	.pb-md-0{
-		padding-bottom: 0 !important;	
+	.pb-md-0 {
+		padding-bottom: 0 !important;
 	}
 }
-
 
 .alerts-text-block {
 	padding-left: 20px;
-	
+
 	@media screen and (min-width: 992px) {
-		padding-bottom: 30px;	
+		padding-bottom: 30px;
 	}
-	
-	
+
 	h3 {
 		font-family: "Intro", Bold;
 
@@ -2650,5 +2643,32 @@ input.orange-button {
 		@media screen and (min-width: 992px) {
 			margin-top: 40px;
 		}
+	}
+}
+.success-message {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	background: #dcecbd;
+	border-radius: 6px;
+	max-width: 580px;
+	margin-top: 30px;
+	img {
+		margin-right: 10px;
+	}
+	p {
+		font-family: "Intro", Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+		/* identical to box height, or 171% */
+
+		letter-spacing: 0.02em;
+
+		/* Black */
+		margin-bottom: 0;
+
+		color: #000000;
 	}
 }

@@ -95,6 +95,7 @@ function updateCount() {
         console.log('Please enter 8-15 characters using at least one letter and number');
     } else {
         console.log('more than 8');
+        $('[data-pwmatch="submit"]').attr('disabled', false);
 
     }
 }
@@ -106,4 +107,10 @@ $("input.append-onclick").change(function() {
     else{
         $('[data-pwmatch="submit"]').attr('disabled', true);
     }
+});
+$('.success-message').hide();
+$('[data-pwmatch="submit"]').click(function (e) { 
+    e.preventDefault();
+    $('.success-message').show();
+
 });
