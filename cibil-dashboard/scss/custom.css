@@ -733,21 +733,6 @@ input:disabled {
   background: #f9f9f9;
   text-decoration: none;
   padding: 4px 10px;
-  border: 1px solid #dddddd;
-  box-sizing: border-box;
-  border-radius: 4px;
-  justify-content: center;
-  letter-spacing: 0.02em;
-  color: #707070;
-  font-family: "Intro", book;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  background: #f9f9f9;
-  text-decoration: none;
-  padding: 4px 10px;
   border: 1px solid #ddd;
   box-sizing: border-box;
   border-radius: 4px;
@@ -2856,10 +2841,14 @@ input.orange-button {
     margin-right: 60px;
   }
 }
-@media screen and (max-width: 1500px) {
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
   .common-type-tabs-section {
     padding-left: 60px;
-    padding-left: 60px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .common-type-tabs-section {
+    padding-right: 60px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -2889,8 +2878,18 @@ input.orange-button {
     font-size: 14px;
   }
 }
+@media screen and (min-width: 992px) {
+  .pb-md-0 {
+    padding-bottom: 0 !important;
+  }
+}
 .alerts-text-block {
   padding-left: 20px;
+}
+@media screen and (min-width: 992px) {
+  .alerts-text-block {
+    padding-bottom: 30px;
+  }
 }
 .alerts-text-block h3 {
   font-family: "Intro", Bold;
