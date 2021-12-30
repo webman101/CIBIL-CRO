@@ -1534,12 +1534,22 @@ ul.accordion .inner.show {
 }
 ul.accordion .inner .col-md-4 {
   border-right: 1px solid #dde0ef;
-  padding: 15px 20px;
+  padding: 13px 10px;
+}
+@media screen and (min-width: 992px) {
+  ul.accordion .inner .col-md-4 {
+    padding: 15px 20px;
+  }
 }
 ul.accordion li {
   margin: 0 0 5px 0px;
   border: 1px solid #dde0ef;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+@media screen and (min-width: 992px) {
+  ul.accordion li {
+    border-radius: 4px;
+  }
 }
 ul.accordion li a.toggle {
   width: 100%;
@@ -1587,4 +1597,9 @@ ul.accordion .arrow-rotate {
 }
 ul.accordion .active-arrow .arrow-rotate {
   transform: rotate(0);
+}
+
+.max-width-1200 {
+  margin: inherit auto !important;
+  max-width: 1200px;
 }/*# sourceMappingURL=style.css.map */
