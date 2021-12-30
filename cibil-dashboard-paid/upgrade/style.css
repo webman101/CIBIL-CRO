@@ -1238,6 +1238,7 @@ input:disabled {
 @media screen and (min-width: 992px) {
   .header-container {
     padding: 40px 60px;
+    padding-bottom: 20px;
   }
 }
 
