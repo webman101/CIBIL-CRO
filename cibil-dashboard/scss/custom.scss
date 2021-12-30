@@ -1027,19 +1027,6 @@ input {
 						border: solid #fff;
 						border-width: 0 2px 2px 0;
 						transform: rotate(45deg);
-						content: "";
-						display: block;
-						position: absolute;
-						top: -2px;
-						left: 1px;
-						right: 0;
-						bottom: 0;
-						margin: auto;
-						width: 5px;
-						height: 10px;
-						border: solid #fff;
-						border-width: 0 2px 2px 0;
-						transform: rotate(45deg);
 					}
 				}
 			}
@@ -1941,31 +1928,31 @@ input.orange-button {
 	padding-left: 40px !important;
 }
 .password-tab {
-	background-image: url(img/password-grey.svg);
+	background-image: url(../img/password-grey.svg);
 	height: 30px;
 	background-repeat: no-repeat;
 	width: 32px;
-	background-image: url(img/password-grey.svg);
+	background-image: url(../img/password-grey.svg);
 	height: 30px;
 	background-repeat: no-repeat;
 	width: 32px;
 }
 .notification-tab {
 	height: 30px;
-	background-image: url(img/notification.svg);
+	background-image: url(../img/notification.svg);
 	background-repeat: no-repeat;
 	width: 32px;
 	height: 30px;
-	background-image: url(img/notification.svg);
+	background-image: url(../img/notification.svg);
 	background-repeat: no-repeat;
 	width: 32px;
 }
 .subscription-tab {
-	background-image: url(img/contact.svg);
+	background-image: url(../img/contact.svg);
 	height: 30px;
 	background-repeat: no-repeat;
 	width: 32px;
-	background-image: url(img/contact.svg);
+	background-image: url(../img/contact.svg);
 	height: 30px;
 	background-repeat: no-repeat;
 	width: 32px;
@@ -1973,25 +1960,25 @@ input.orange-button {
 .password-active.active {
 	.password-tab {
 		background-repeat: no-repeat;
-		background-image: url(img/password.svg);
+		background-image: url(../img/password.svg);
 		background-repeat: no-repeat;
-		background-image: url(img/password.svg);
+		background-image: url(../img/password.svg);
 	}
 }
 .notification-active.active {
 	.notification-tab {
 		background-repeat: no-repeat;
-		background-image: url(img/notification-blue.svg);
+		background-image: url(../img/notification-blue.svg);
 		background-repeat: no-repeat;
-		background-image: url(img/notification-blue.svg);
+		background-image: url(../img/notification-blue.svg);
 	}
 }
 .subscription-active.active {
 	.subscription-tab {
 		background-repeat: no-repeat;
-		background-image: url(img/contact-blue.svg);
+		background-image: url(../img/contact-blue.svg);
 		background-repeat: no-repeat;
-		background-image: url(img/contact-blue.svg);
+		background-image: url(../img/contact-blue.svg);
 	}
 }
 .mobile-navtabs {
@@ -2001,6 +1988,9 @@ input.orange-button {
 	}
 }
 @media screen and (min-width: 992px) {
+	.mb-md-0{
+		margin-bottom: 0;
+	}
 	.mt-md-2 {
 		margin-top: 2px !important;
 		margin-top: 2px !important;
