@@ -17,7 +17,7 @@ a {
   cursor: pointer;
 }
 a:hover {
-  color: #F16E00;
+  color: #f16e00;
 }
 
 button {
@@ -752,17 +752,12 @@ input:disabled {
 .navigation-tabs > a.navigation-active-tab {
   font-family: "Intro", Regular;
   color: #2c2c2c;
-  font-family: Intro, Regular;
-  color: #2c2c2c;
 }
 .navigation-tabs img {
-  margin: 0 10px;
   margin: 0 10px;
 }
 
 .max-width-1200 {
-  margin: auto;
-  max-width: 1200px;
   margin: auto;
   max-width: 1200px;
 }
@@ -770,15 +765,8 @@ input:disabled {
 .page-title-with-icon {
   display: flex;
   align-items: center;
-  display: flex;
-  align-items: center;
 }
 .page-title-with-icon h3 {
-  font-family: "Intro", Regular;
-  font-size: 24px;
-  line-height: 50px;
-  color: #2c2c2c;
-  margin-left: 16px;
   font-family: Intro, Regular;
   font-size: 24px;
   line-height: 50px;
@@ -788,21 +776,12 @@ input:disabled {
 
 .common-type-tabs-section {
   border-top: 1px solid #dddddd;
-  border-top: 1px solid #ddd;
 }
 .common-type-tabs-section .nav {
   display: flex;
   justify-content: flex-start;
-  display: flex;
-  justify-content: flex-start;
 }
 .common-type-tabs-section .nav li {
-  margin: 0;
-  width: 100%;
-  max-width: 200px;
-  border-bottom: 1px solid #dddddd;
-  background-color: #ffffff;
-  border-right: 1px solid #dddddd;
   margin: 0;
   width: 100%;
   max-width: 200px;
@@ -816,19 +795,8 @@ input:disabled {
   align-items: flex-end;
   margin-bottom: 0;
   color: #707070;
-  height: 50px;
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 0;
-  color: #707070;
 }
 .common-type-tabs-section .nav li a {
-  all: unset;
-  display: block;
-  width: 100%;
-  max-width: 200px;
-  text-align: left;
-  cursor: pointer;
   all: unset;
   display: block;
   width: 100%;
@@ -843,19 +811,8 @@ input:disabled {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
-  font-family: Intro, Bold;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  color: #2c2c2c;
 }
 .common-type-tabs-section .tab-content input {
-  height: 50px;
-  max-width: 580px;
-  margin-top: 5px;
-  padding-left: 15px;
-  border: 1px solid #acacac;
   height: 50px;
   max-width: 580px;
   margin-top: 2px;
@@ -863,9 +820,6 @@ input:disabled {
   border: 1px solid #acacac;
 }
 .common-type-tabs-section .tab-content input.disabled {
-  pointer-events: none;
-  background: #f9f9f9;
-  box-sizing: border-box;
   pointer-events: none;
   background: #f9f9f9;
   box-sizing: border-box;
@@ -2557,13 +2511,10 @@ input.orange-button {
 @media screen and (min-width: 992px) {
   .dhide {
     display: none !important;
-    display: none !important;
   }
 }
 @media screen and (min-width: 992px) {
   .section-title {
-    font-size: 24px;
-    line-height: 30px;
     font-size: 24px;
     line-height: 30px;
   }
@@ -2571,39 +2522,30 @@ input.orange-button {
 @media screen and (min-width: 992px) {
   .interstial-container {
     padding-bottom: 110px !important;
-    padding-top: 70px;
-    padding-bottom: 110px !important;
-    padding-top: 70px;
+    padding-top: 69px;
   }
   .interstial-container .column-outer {
     margin-right: 10px;
-    margin-right: 10px;
   }
   .interstial-container .most-popular::after {
-    border-top-right-radius: 0;
     border-top-right-radius: 0;
   }
 }
 @media screen and (min-width: 992px) {
   .feature.first-feature {
     padding-top: 25px;
-    padding-top: 25px;
   }
 }
 @media screen and (min-width: 992px) {
   .nav {
     margin-top: 50px;
-    margin-top: 50px;
   }
   .nav li.base-standard {
-    border-top-right-radius: 6px;
     border-top-right-radius: 6px;
   }
 }
 @media screen and (min-width: 992px) {
   footer {
-    padding-left: 20%;
-    position: relative;
     padding-left: 20%;
     position: relative;
   }
@@ -2616,38 +2558,25 @@ input.orange-button {
     width: 20%;
     background-color: #006685;
     border-top: 1px solid #006685;
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    height: 110%;
-    width: 20%;
-    background-color: #006685;
-    border-top: 1px solid #006685;
   }
   footer a {
-    margin: 0 15px;
     margin: 0 15px;
   }
 }
 @media screen and (max-width: 992px) {
   .dashboard .left-column {
     display: none;
-    display: none;
   }
 
   .common-type-tabs-section .nav li {
-    padding-bottom: 20px;
     padding-bottom: 20px;
   }
 
   .mhide {
     display: none !important;
-    display: none !important;
   }
 
   .button {
-    margin: auto;
     margin: auto;
   }
 
@@ -2666,61 +2595,45 @@ input.orange-button {
 
   .interstial-container {
     padding: 10px;
-    padding: 10px;
   }
   .interstial-container .nav li {
-    border-bottom: 0;
-    padding-bottom: 0;
     border-bottom: 0;
     padding-bottom: 0;
   }
   .interstial-container .nav li.active {
     border-top: 2px solid #00a6ca;
     border-right: 2px solid #00a6ca;
-    border-top: 2px solid #00a6ca;
-    border-right: 2px solid #00a6ca;
   }
   .interstial-container .tab-content {
     border-top: 2px solid #00a6ca;
     border: 2px solid #00a6ca;
-    border-top: 2px solid #00a6ca;
-    border: 2px solid #00a6ca;
   }
   .interstial-container .base-standard {
-    border-left: 1px solid #dddddd;
     border-left: 1px solid #ddd;
   }
   .interstial-container .base-premium.active {
     border-right: 2px solid #00a6ca;
-    border-right: 2px solid #00a6ca;
   }
   .interstial-container .base-standard.active {
     border-left: 2px solid #00a6ca !important;
-    border-left: 2px solid #00a6ca !important;
   }
   .interstial-container #myTabs li:last-child.active {
-    border-left: 2px solid #00a6ca;
-    border-right: 2px solid #00a6ca;
     border-left: 2px solid #00a6ca;
     border-right: 2px solid #00a6ca;
   }
 
   .common-tabs li {
     border-top: 6px solid #ffffff;
-    border-top: 6px solid #fff;
   }
   .common-tabs li.active {
-    padding-top: 15px !important;
     padding-top: 15px !important;
   }
 
   .nav li {
     flex: 1;
-    flex: 1;
   }
 
   .mobile-margin {
-    margin: 20px;
     margin: 20px;
   }
 
@@ -2728,20 +2641,12 @@ input.orange-button {
     width: 100%;
     margin-bottom: 30px;
     border: 0;
-    width: 100%;
-    margin-bottom: 30px;
-    border: 0;
   }
   .tab-content .tab-pane {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
   }
   .tab-content .small-right {
-    width: 21px !important;
-    height: 12px !important;
-    margin-top: 5px;
     width: 21px !important;
     height: 12px !important;
     margin-top: 5px;
@@ -2757,26 +2662,12 @@ input.orange-button {
     letter-spacing: 0.02em;
     color: #2c2c2c;
     align-items: flex-start;
-    border: 0;
-    padding: 0;
-    min-height: 0;
-    margin-bottom: 14px;
-    font-family: Intro, Book;
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    color: #2c2c2c;
-    align-items: flex-start;
   }
   .tab-content .feature p {
-    margin-bottom: 0;
     margin-bottom: 0;
   }
 
   footer {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 20px;
     display: flex;
     flex-direction: column-reverse;
     padding: 20px;
@@ -2802,29 +2693,23 @@ input.orange-button {
 
   .interstial-container .col-md-6.equal-column {
     padding-right: 5px;
-    padding-right: 5px;
   }
   .interstial-container .column-outer {
-    margin-right: 20px;
     margin-right: 20px;
   }
   .interstial-container .column .coumn-head .plan-duration {
     font-size: 22px;
-    font-size: 22px;
   }
   .interstial-container .coulumn-image {
-    min-height: 78px;
     min-height: 78px;
   }
 
   .feature {
     min-height: 78px;
-    min-height: 78px;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .common-type-tabs-section {
-    padding-left: 60px;
     padding-left: 60px;
   }
 
@@ -2846,26 +2731,20 @@ input.orange-button {
   .interstial-container .col-md-6.equal-column {
     padding-right: 0;
     padding-left: 10px;
-    padding-right: 0;
-    padding-left: 10px;
   }
   .interstial-container .column-outer .button {
     font-size: 12px;
-    font-size: 12px;
   }
   .interstial-container .column {
-    padding: 0 10px 0;
     padding: 0 10px 0;
   }
 }
 @media screen and (max-width: 600px) {
   .interstial-container {
     padding: 10px;
-    padding: 10px;
   }
 
   .nav li h3 {
-    font-size: 14px;
     font-size: 14px;
   }
 }
@@ -2946,6 +2825,10 @@ input.orange-button {
 
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
   .upgrade-plan-page {
+    padding-right: 60px;
+  }
+
+  .my-accounts {
     padding-right: 60px;
   }
 }/*# sourceMappingURL=custom.css.map */
