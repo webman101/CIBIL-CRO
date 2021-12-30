@@ -2939,4 +2939,10 @@ input.orange-button {
   .success-message p {
     font-size: 14px;
   }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  .upgrade-plan-page {
+    padding-right: 60px;
+  }
 }/*# sourceMappingURL=custom.css.map */
