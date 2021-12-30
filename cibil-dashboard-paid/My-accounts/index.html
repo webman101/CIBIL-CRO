@@ -31,285 +31,287 @@
                     <ul class="tabs-content">
                         <li class="list-tab p-0 ">
                             <div class="bg-white header-container" style="border-bottom: 1px solid #DDDDDD;">
-                                <div class="navigation-tabs">
-                                    <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/">
+                                <div class="max-width-1200">
+                                    <div class="navigation-tabs">
+                                        <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/">
                                         Dashboard Home
                                     </a>
-                                    <img src="../img/carrot-right.svg" alt="">
-                                    <a class="navigation-active-tab">
+                                        <img src="../img/carrot-right.svg" alt="">
+                                        <a class="navigation-active-tab">
                                         My Account
                                     </a>
-                                </div>
-                                <div>
-                                    <div class="page-title-with-icon mt-3 mt-md-30 mb-2 d-flex align-items-center">
-                                        <img src="img/account.svg" alt="" class="me-2">
-                                        <h3>My Account</h3>
                                     </div>
-                                    <p class="para-intro-regular-2c mb-0 mt-md-20">
-                                        Check your account details, subscription status and manage your login password.
-                                    </p>
+                                    <div>
+                                        <div class="page-title-with-icon mt-3 mt-md-30 mb-2 d-flex align-items-center">
+                                            <img src="img/account.svg" alt="" class="me-2">
+                                            <h3>My Account</h3>
+                                        </div>
+                                        <p class="para-intro-regular-2c mb-0 mt-md-20">
+                                            Check your account details, subscription status and manage your login password.
+                                        </p>
+                                    </div>
                                 </div>
-
                             </div>
 
-                            <div class="common-type-tabs-section mt-0 mt-md-30 mb-md-60">
+                            <div class="common-type-tabs-section  mt-0 mt-md-30 mb-md-60">
+                                <div class="max-width-1200">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav common-tabs " role="tablist">
+                                        <li role="presentation" class="password-active active">
+                                            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                                                <div class="image d-none d-md-inline-block password-tab">
 
-                                <!-- Nav tabs -->
-                                <ul class="nav common-tabs" role="tablist">
-                                    <li role="presentation" class="password-active active">
-                                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
-                                            <div class="image d-none d-md-inline-block password-tab">
+                                                </div>
+                                                <p class="para-intro-regular-2c">
+                                                    Change <br> Password
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class="notification-active">
+                                            <a href="#profile2" aria-controls="profile2" role="tab" data-toggle="tab">
+                                                <div class="image d-none d-md-inline-block notification-tab">
 
-                                            </div>
-                                            <p class="para-intro-regular-2c">
-                                                Change <br> Password
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li role="presentation" class="notification-active">
-                                        <a href="#profile2" aria-controls="profile2" role="tab" data-toggle="tab">
-                                            <div class="image d-none d-md-inline-block notification-tab">
+                                                </div>
+                                                <p class="para-intro-regular-2c">
+                                                    Notification
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class=" border-right-0 subscription-active" style="border-right: 0;">
+                                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
+                                                <div class="image d-none d-md-inline-block subscription-tab">
 
-                                            </div>
-                                            <p class="para-intro-regular-2c">
-                                                Notification
-                                            </p>
-                                        </a>
-                                    </li>
-                                    <li role="presentation" class=" border-right-0 subscription-active" style="border-right: 0;">
-                                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">
-                                            <div class="image d-none d-md-inline-block subscription-tab">
+                                                </div>
+                                                <p class="para-intro-regular-2c">
+                                                    Subscription
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
 
-                                            </div>
-                                            <p class="para-intro-regular-2c">
-                                                Subscription
-                                            </p>
-                                        </a>
-                                    </li>
-                                </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content me-md-60">
+                                        <div role="tabpanel" class="tab-pane active" id="home">
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <label for="" class="para-intro-regular-2c d-block fw-600">Username</label>
+                                                    <input type="number" class="d-block w-100 disabled" placeholder="rajesh@gmail.com">
+                                                </div>
+                                                <div class="form-group mt-20 mt-md-30">
+                                                    <label for="" class="para-intro-regular-2c d-block fw-600">Old Password</label>
+                                                    <input type="password" placeholder="" class="d-block w-100 passwords" data-pwmatch="NewPW" data-pwmatch-length="6">
+                                                    <span class="message mt-6 d-block">Please enter your old password</span>
+                                                </div>
+                                                <div class="form-group mt-20 mt-md-30">
+                                                    <label for="" class="para-intro-regular-2c d-block fw-600">New Password</label>
+                                                    <input type="password" placeholder="" class="d-block w-100 password" data-pwmatch="ConfirmPW" maxlength="15">
+                                                    <span class="message mt-6 d-block">Please enter your new password</span>
+                                                    <span class="message error">Please enter 8-15 characters using at least one letter and number</span>
+                                                </div>
+                                                <div class="d-flex justify-content-end justify-content-md-start">
+                                                    <input type="submit" class="orange-button para-intro-regular-2c text-decoration-none mt-30 mt-md-40 " data-pwmatch="submit" value="Update" disabled>
+                                                </div>
 
-                                <!-- Tab panes -->
-                                <div class="tab-content me-md-60">
-                                    <div role="tabpanel" class="tab-pane active" id="home">
-                                        <form action="">
-                                            <div class="form-group">
-                                                <label for="" class="para-intro-regular-2c d-block fw-600">Username</label>
-                                                <input type="number" class="d-block w-100 disabled" placeholder="rajesh@gmail.com">
-                                            </div>
-                                            <div class="form-group mt-20 mt-md-30">
-                                                <label for="" class="para-intro-regular-2c d-block fw-600">Old Password</label>
-                                                <input type="password" placeholder="" class="d-block w-100 passwords" data-pwmatch="NewPW" data-pwmatch-length="6">
-                                                <span class="message mt-6 d-block">Please enter your old password</span>
-                                            </div>
-                                            <div class="form-group mt-20 mt-md-30">
-                                                <label for="" class="para-intro-regular-2c d-block fw-600">New Password</label>
-                                                <input type="password" placeholder="" class="d-block w-100 password" data-pwmatch="ConfirmPW" maxlength="15">
-                                                <span class="message mt-6 d-block">Please enter your new password</span>
-                                                <span class="message error">Please enter 8-15 characters using at least one letter and number</span>
-                                            </div>
-                                           <div class="d-flex justify-content-end justify-content-md-start">
-                                            <input type="submit" class="orange-button para-intro-regular-2c text-decoration-none mt-30 mt-md-40 " data-pwmatch="submit" value="Update" disabled>
-                                           </div>
+                                            </form>
 
-                                        </form>
-
-                                        <div class="p-10 bg-white mt-md-30 common-section mobile-margin mb-md-60">
-                                            <div class="blue-title">
-                                                Free Annual CIBIL Score and Report
-                                            </div>
-                                            <hr style="    height: 1px;
+                                            <div class="p-10 bg-white mt-md-30 common-section mobile-margin mb-md-60">
+                                                <div class="blue-title">
+                                                    Free Annual CIBIL Score and Report
+                                                </div>
+                                                <hr style="    height: 1px;
                                             margin-left: -20px;
                                             margin-right: -20px;">
 
-                                            <div class="row">
-                                                <div class="col-2 col-md-1">
-                                                    <img src="img/doc.svg" alt="">
-                                                </div>
-                                                <div class="col-10 col-md-10">
-                                                    <p class="para-book color-2c mb-10">You currently have an active unlimited subscription. you will be able to access Free Annual Score & report after the subscription period expires</p>
-                                            
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="messages">
-                                        <div class="bg-white p-20 d-md-none">
-                                            <div class="text-center p-20 bgf9 d-flex flex-column align-items-center justify-content-center h-100">
-                                                <h3 class="para-intro-regular mb-10">
-                                                    3 Days Left
-                                                </h3>
-                                                <p class="para-book mb-20">
-                                                    before your subscription ends.
-                                                </p>
-                                                <div class="button-row d-md-flex justify-content-center ">
-                                                    <a href="" class="button-icon  mt-2 mb-1">
-                                                        <span>Renew Now</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="common-type-tabs-section border-0 bg-white p-20 pl-20">
-                                            <div class=" p-20 rounded-border-1">
                                                 <div class="row">
-                                                    <div class="col-md-7">
-                                                        
-                                                        <p class="para-intro-regular-2c mb-6 fw-600">
-                                                            Your Subscription
-                                                        </p>
-                                                        <p class="para-intro-regular-2c color-70 mt-0 mb-20">
-                                                            1 Year Unlimited CIBIL Report, Score & Monitoring
-                                                        </p>
-                                                        <p class="para-intro-regular-2c mb-6 fw-600">
-                                                            Subscription status
-                                                        </p>
-                                                        <p class="para-intro-regular-2c mt-0 pill d-inline-block mb-30">
-                                                            active
-                                                        </p>
-                                                        <div class="row">
-                                                            <div class="col-6 col-md-3">
-                                                                <p class="para-intro-regular-2c mb-6 fw-600">
-                                                                    Start Date
-                                                                </p>
-                                                                <p class="para-intro-regular-2c color-70 mt-0">
-                                                                    09/04/2021
-                                                                </p>
-                                                            </div>
-                                                            <div class="col-6 col-md-3">
-                                                                <p class="para-intro-regular-2c mb-6 fw-600">
-                                                                    End Date
-                                                                </p>
-                                                                <p class="para-intro-regular-2c color-70 mt-0">
-                                                                    10/04/2022
-                                                                </p>
-                                                            </div>
-                                                        </div>
+                                                    <div class="col-2 col-md-1">
+                                                        <img src="img/doc.svg" alt="">
                                                     </div>
-                                                    <div class="col-md-5">
-                                                        <div class="text-center p-20 bgf9 flex-column align-items-center justify-content-center h-100 d-none d-md-flex">
-                                                            <h3 class="para-intro-regular mb-10">
-                                                                3 Days Left
-                                                            </h3>
-                                                            <p class="para-book mb-20">
-                                                                before your subscription ends.
+                                                    <div class="col-10 col-md-10">
+                                                        <p class="para-book color-2c mb-10">You currently have an active unlimited subscription. you will be able to access Free Annual Score & report after the subscription period expires</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="messages">
+                                            <div class="bg-white p-20 d-md-none">
+                                                <div class="text-center p-20 bgf9 d-flex flex-column align-items-center justify-content-center h-100">
+                                                    <h3 class="para-intro-regular mb-10">
+                                                        3 Days Left
+                                                    </h3>
+                                                    <p class="para-book mb-20">
+                                                        before your subscription ends.
+                                                    </p>
+                                                    <div class="button-row d-md-flex justify-content-center ">
+                                                        <a href="" class="button-icon  mt-2 mb-1">
+                                                            <span>Renew Now</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="common-type-tabs-section border-0 bg-white p-20 pl-20">
+                                                <div class=" p-20 rounded-border-1">
+                                                    <div class="row">
+                                                        <div class="col-md-7">
+
+                                                            <p class="para-intro-regular-2c mb-6 fw-600">
+                                                                Your Subscription
                                                             </p>
-                                                            <div class="button-row d-md-flex justify-content-center ">
-                                                                <a href="" class="button-icon  mt-2 mb-1">
-                                                                    <span>Renew Now</span>
-                                                                </a>
+                                                            <p class="para-intro-regular-2c color-70 mt-0 mb-20">
+                                                                1 Year Unlimited CIBIL Report, Score & Monitoring
+                                                            </p>
+                                                            <p class="para-intro-regular-2c mb-6 fw-600">
+                                                                Subscription status
+                                                            </p>
+                                                            <p class="para-intro-regular-2c mt-0 pill d-inline-block mb-30">
+                                                                active
+                                                            </p>
+                                                            <div class="row">
+                                                                <div class="col-6 col-md-3">
+                                                                    <p class="para-intro-regular-2c mb-6 fw-600">
+                                                                        Start Date
+                                                                    </p>
+                                                                    <p class="para-intro-regular-2c color-70 mt-0">
+                                                                        09/04/2021
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-6 col-md-3">
+                                                                    <p class="para-intro-regular-2c mb-6 fw-600">
+                                                                        End Date
+                                                                    </p>
+                                                                    <p class="para-intro-regular-2c color-70 mt-0">
+                                                                        10/04/2022
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            <div class="text-center p-20 bgf9 flex-column align-items-center justify-content-center h-100 d-none d-md-flex">
+                                                                <h3 class="para-intro-regular mb-10">
+                                                                    3 Days Left
+                                                                </h3>
+                                                                <p class="para-book mb-20">
+                                                                    before your subscription ends.
+                                                                </p>
+                                                                <div class="button-row d-md-flex justify-content-center ">
+                                                                    <a href="" class="button-icon  mt-2 mb-1">
+                                                                        <span>Renew Now</span>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="custom-table mt-30">
-                                                <div class="table-column" style="border-left: 1px solid #DDE0EF;">
-                                                    <div class="table-head">
-                                                        <p class="para-intro-regular-2c mb-6 fw-600">
-                                                            Start Date
-                                                        </p>
+                                                <div class="custom-table mt-30">
+                                                    <div class="table-column" style="border-left: 1px solid #DDE0EF;">
+                                                        <div class="table-head">
+                                                            <p class="para-intro-regular-2c mb-6 fw-600">
+                                                                Start Date
+                                                            </p>
+                                                        </div>
+                                                        <div class="table-row">
+                                                            <p class="para-intro-regular-2c color-70 mt-0 mb-0">
+                                                                12/08/2020
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                    <div class="table-row">
-                                                        <p class="para-intro-regular-2c color-70 mt-0 mb-0">
-                                                            12/08/2020
-                                                        </p>
+                                                    <div class="table-column">
+                                                        <div class="table-head">
+                                                            <p class="para-intro-regular-2c mb-6 fw-600">
+                                                                Subscription
+                                                            </p>
+                                                        </div>
+                                                        <div class="table-row">
+                                                            <p class="para-intro-regular-2c color-70 mt-0 mb-0">
+                                                                6 Months Unlimited <br class="d-none d-md-block"> CIBIL Report, Score <br class="d-none d-md-block"> & Monitoring
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="table-column">
-                                                    <div class="table-head">
-                                                        <p class="para-intro-regular-2c mb-6 fw-600">
-                                                            Subscription
-                                                        </p>
+                                                    <div class="table-column">
+                                                        <div class="table-head">
+                                                            <p class="para-intro-regular-2c mb-6 fw-600">
+                                                                Offer Status
+                                                            </p>
+                                                        </div>
+                                                        <div class="table-row">
+                                                            <div class="yellow-pill">
+                                                                Upcoming
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="table-row">
-                                                        <p class="para-intro-regular-2c color-70 mt-0 mb-0">
-                                                            6 Months Unlimited <br class="d-none d-md-block"> CIBIL Report, Score <br class="d-none d-md-block"> & Monitoring
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="table-column">
-                                                    <div class="table-head">
-                                                        <p class="para-intro-regular-2c mb-6 fw-600">
-                                                            Offer Status
-                                                        </p>
-                                                    </div>
-                                                    <div class="table-row">
-                                                        <div class="yellow-pill">
-                                                            Upcoming
+                                                    <div class="table-column">
+                                                        <div class="table-head">
+                                                            <p class="para-intro-regular-2c mb-6 fw-600">
+                                                                Service Period
+                                                            </p>
+                                                        </div>
+                                                        <div class="table-row">
+                                                            <p class="para-intro-regular-2c color-70 mt-0 mb-0">
+                                                                12/08/2020 - 12/09/2020
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="table-column">
-                                                    <div class="table-head">
-                                                        <p class="para-intro-regular-2c mb-6 fw-600">
-                                                            Service Period
-                                                        </p>
-                                                    </div>
-                                                    <div class="table-row">
-                                                        <p class="para-intro-regular-2c color-70 mt-0 mb-0">
-                                                            12/08/2020 - 12/09/2020
-                                                        </p>
-                                                    </div>
-                                                </div>
                                             </div>
-                                        </div>
 
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id="profile2">
-                                        <div class="bg-white" style="padding: 20px;
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane" id="profile2">
+                                            <div class="bg-white" style="padding: 20px;
                                         padding-top: 30px;">
-                                            <div class="notification d-flex align-items-center">
-                                                <img src="img/notification2.svg" alt="">
-                                                <p class="para-book mb-0 ml-10">
-                                                    Stay updated on changes to your account and your CIBIL Score and Report through Email and SMS
-                                                </p>
+                                                <div class="notification d-flex align-items-center">
+                                                    <img src="img/notification2.svg" alt="">
+                                                    <p class="para-book mb-0 ml-10">
+                                                        Stay updated on changes to your account and your CIBIL Score and Report through Email and SMS
+                                                    </p>
+                                                </div>
                                             </div>
+                                            <form action="" class="mb-md-30">
+                                                <div class="form-group">
+                                                    <label for="" class="para-intro-regular-2c d-block fw-600">Registered Mobile Number</label>
+                                                    <input type="number" class="d-block w-100 disabled" placeholder="+91 - 987654321">
+                                                    <div class="d-flex align-items-center checkbox mt-20 mb-30 mb-md-0 mt-md-20">
+
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="2" class="append-onclick">
+                                                            <label for="2"></label>
+
+
+
+                                                            <p class="para-book font-14 d-inline-block mb-0 ml-10" style="line-height: unset;">Send SMS alert notifications</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr style="margin-left: -20px;margin-right: -20px;">
+                                                <div class="form-group mt-md-30">
+                                                    <label for="" class="para-intro-regular-2c d-block fw-600">Your Registered Email Address</label>
+                                                    <input type="email" class="d-block w-100 disabled" placeholder="rajesh@gmail.com">
+                                                    <div class="d-flex align-items-center checkbox mt-20 mb-30 mb-md-0 mt-md-20">
+
+                                                        <div class="form-group">
+                                                            <input type="checkbox" id="3" class="append-onclick ">
+                                                            <label for="3"></label>
+                                                        </div>
+
+
+
+                                                        <p class="para-book font-14 d-inline-block mb-0 ml-10" style="line-height: unset;">Send Email alert notifications</p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-end justify-content-md-start">
+                                                    <input type="submit" class="orange-button para-intro-regular-2c text-decoration-none mt-30 mt-md-40 " data-pwmatch="submit" value="Update" disabled>
+                                                </div>
+
+
+                                                <hr class="mt-md-30 mb-md-20">
+                                                <p class="para-intro-regular-2c color-70">Please call Customer Support to update your registered mobile number or email address at 022-61404300 between Monday to Friday 10AM-6PM.</p>
+                                            </form>
+
+
+
                                         </div>
-                                        <form action="" class="mb-md-30">
-                                            <div class="form-group">
-                                                <label for="" class="para-intro-regular-2c d-block fw-600">Registered Mobile Number</label>
-                                                <input type="number" class="d-block w-100 disabled" placeholder="+91 - 987654321">
-                                                <div class="d-flex align-items-center checkbox mt-20 mb-30 mb-md-0 mt-md-20">
-
-                                                    <div class="form-group">
-                                                        <input type="checkbox" id="2" class="append-onclick">
-                                                        <label for="2"></label>
-
-
-
-                                                        <p class="para-book font-14 d-inline-block mb-0 ml-10" style="line-height: unset;">Send SMS alert notifications</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr style="margin-left: -20px;margin-right: -20px;"> 
-                                            <div class="form-group mt-md-30">
-                                                <label for="" class="para-intro-regular-2c d-block fw-600">Your Registered Email Address</label>
-                                                <input type="email" class="d-block w-100 disabled" placeholder="rajesh@gmail.com">
-                                                <div class="d-flex align-items-center checkbox mt-20 mb-30 mb-md-0 mt-md-20">
-
-                                                    <div class="form-group">
-                                                        <input type="checkbox" id="3" class="append-onclick ">
-                                                        <label for="3"></label>
-                                                    </div>
-
-
-
-                                                    <p class="para-book font-14 d-inline-block mb-0 ml-10" style="line-height: unset;">Send Email alert notifications</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-end justify-content-md-start">
-                                                <input type="submit" class="orange-button para-intro-regular-2c text-decoration-none mt-30 mt-md-40 " data-pwmatch="submit" value="Update" disabled>
-                                               </div>
-                                           
-
-                                            <hr class="mt-md-30 mb-md-20">
-                                            <p class="para-intro-regular-2c color-70">Please call Customer Support to update your registered mobile number or email address at 022-61404300 between Monday to Friday 10AM-6PM.</p>
-                                        </form>
-
-
 
                                     </div>
-
                                 </div>
                             </div>
                         </li>
