@@ -1,10 +1,6 @@
 /*# sourceMappingURL=style.css.map */
 * {
-	margin: 0;
-	padding: 0;
-	font-family: "Intro", book;
-	scroll-behavior: smooth;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	
 	margin: 0;
 	padding: 0;
 	font-family: Intro, book;
@@ -14,53 +10,45 @@
 body {
 	font-family: "Intro";
 	scroll-behavior: smooth;
-	font-family: Intro;
-	scroll-behavior: smooth;
 }
 a {
-	outline: none !important;
-	cursor: pointer;
 	outline: 0 !important;
 	cursor: pointer;
 }
 button {
 	cursor: pointer;
-	cursor: pointer;
 }
 h1 {
 	margin: 0;
-	margin: 0;
+	
 }
 h2 {
 	margin: 0;
-	margin: 0;
+	
 }
 h3 {
 	margin: 0;
-	margin: 0;
+	
 }
 h4 {
 	margin: 0;
-	margin: 0;
+	
 }
 h5 {
 	margin: 0;
-	margin: 0;
+	
 }
 h6 {
 	margin: 0;
-	margin: 0;
+	
 }
 .mt-2 {
-	margin-top: 2px !important;
 	margin-top: 2px !important;
 }
 .pt-2 {
 	padding-top: 2px !important;
-	padding-top: 2px !important;
 }
 .mb-2 {
-	margin-bottom: 2px !important;
 	margin-bottom: 2px !important;
 }
 .pb-2 {
@@ -68,13 +56,11 @@ h6 {
 }
 .ml-2 {
 	margin-left: 2px !important;
-	margin-left: 2px !important;
 }
 .pl-2 {
 	padding-left: 2px !important;
 }
 .mr-2 {
-	margin-right: 2px !important;
 	margin-right: 2px !important;
 }
 .pr-2 {
@@ -82,14 +68,11 @@ h6 {
 }
 .mt-4 {
 	margin-top: 4px !important;
-	margin-top: 4px !important;
 }
 .pt-4 {
 	padding-top: 4px !important;
-	padding-top: 4px !important;
 }
 .mb-4 {
-	margin-bottom: 4px !important;
 	margin-bottom: 4px !important;
 }
 .pb-4 {
@@ -97,13 +80,11 @@ h6 {
 }
 .ml-4 {
 	margin-left: 4px !important;
-	margin-left: 4px !important;
 }
 .pl-4 {
 	padding-left: 4px !important;
 }
 .mr-4 {
-	margin-right: 4px !important;
 	margin-right: 4px !important;
 }
 .pr-4 {
@@ -111,14 +92,11 @@ h6 {
 }
 .mt-5 {
 	margin-top: 5px !important;
-	margin-top: 5px !important;
 }
 .pt-5 {
 	padding-top: 5px !important;
-	padding-top: 5px !important;
 }
 .mb-5 {
-	margin-bottom: 5px !important;
 	margin-bottom: 5px !important;
 }
 .pb-5 {
@@ -126,13 +104,11 @@ h6 {
 }
 .ml-5 {
 	margin-left: 5px !important;
-	margin-left: 5px !important;
 }
 .pl-5 {
 	padding-left: 5px !important;
 }
 .mr-5 {
-	margin-right: 5px !important;
 	margin-right: 5px !important;
 }
 .pr-5 {
@@ -140,14 +116,11 @@ h6 {
 }
 .mt-6 {
 	margin-top: 6px !important;
-	margin-top: 6px !important;
 }
 .pt-6 {
 	padding-top: 6px !important;
-	padding-top: 6px !important;
 }
 .mb-6 {
-	margin-bottom: 6px !important;
 	margin-bottom: 6px !important;
 }
 .pb-6 {
@@ -155,13 +128,11 @@ h6 {
 }
 .ml-6 {
 	margin-left: 6px !important;
-	margin-left: 6px !important;
 }
 .pl-6 {
 	padding-left: 6px !important;
 }
 .mr-6 {
-	margin-right: 6px !important;
 	margin-right: 6px !important;
 }
 .pr-6 {
@@ -169,14 +140,11 @@ h6 {
 }
 .mt-10 {
 	margin-top: 10px !important;
-	margin-top: 10px !important;
 }
 .pt-10 {
 	padding-top: 10px !important;
-	padding-top: 10px !important;
 }
 .mb-10 {
-	margin-bottom: 10px !important;
 	margin-bottom: 10px !important;
 }
 .pb-10 {
@@ -184,13 +152,11 @@ h6 {
 }
 .ml-10 {
 	margin-left: 10px !important;
-	margin-left: 10px !important;
 }
 .pl-10 {
 	padding-left: 10px !important;
 }
 .mr-10 {
-	margin-right: 10px !important;
 	margin-right: 10px !important;
 }
 .pr-10 {
@@ -198,14 +164,11 @@ h6 {
 }
 .mt-15 {
 	margin-top: 15px !important;
-	margin-top: 15px !important;
 }
 .pt-15 {
 	padding-top: 15px !important;
-	padding-top: 15px !important;
 }
 .mb-15 {
-	margin-bottom: 15px !important;
 	margin-bottom: 15px !important;
 }
 .pb-15 {
@@ -213,13 +176,11 @@ h6 {
 }
 .ml-15 {
 	margin-left: 15px !important;
-	margin-left: 15px !important;
 }
 .pl-15 {
 	padding-left: 15px !important;
 }
 .mr-15 {
-	margin-right: 15px !important;
 	margin-right: 15px !important;
 }
 .pr-15 {
@@ -227,14 +188,11 @@ h6 {
 }
 .mt-20 {
 	margin-top: 20px !important;
-	margin-top: 20px !important;
 }
 .pt-20 {
 	padding-top: 20px !important;
-	padding-top: 20px !important;
 }
 .mb-20 {
-	margin-bottom: 20px !important;
 	margin-bottom: 20px !important;
 }
 .pb-20 {
@@ -242,232 +200,227 @@ h6 {
 }
 .ml-20 {
 	margin-left: 20px !important;
-	margin-left: 20px !important;
 }
 .pl-20 {
 	padding-left: 20px !important;
 }
 .mr-20 {
 	margin-right: 20px !important;
-	margin-right: 20px !important;
 }
 .pr-20 {
 	padding-right: 20px !important;
-	padding-right: 20px;
 }
 .mt-25 {
-	margin-top: 25px !important;
 	margin-top: 25px !important;
 }
 .pt-25 {
 	padding-top: 25px !important;
-	padding-top: 25px !important;
 }
 .mb-25 {
-	margin-bottom: 25px !important;
+	
 	margin-bottom: 25px !important;
 }
 .pb-25 {
 	padding-bottom: 25px !important;
 }
 .ml-25 {
-	margin-left: 25px !important;
+	
 	margin-left: 25px !important;
 }
 .pl-25 {
 	padding-left: 25px !important;
 }
 .mr-25 {
-	margin-right: 25px !important;
+	
 	margin-right: 25px !important;
 }
 .pr-25 {
 	padding-right: 25px !important;
 }
 .mt-30 {
-	margin-top: 30px !important;
+	
 	margin-top: 30px !important;
 }
 .pt-30 {
-	padding-top: 30px !important;
+	
 	padding-top: 30px !important;
 }
 .mb-30 {
-	margin-bottom: 30px !important;
+	
 	margin-bottom: 30px !important;
 }
 .pb-30 {
 	padding-bottom: 30px !important;
 }
 .ml-30 {
-	margin-left: 30px !important;
+	
 	margin-left: 30px !important;
 }
 .pl-30 {
 	padding-left: 30px !important;
 }
 .mr-30 {
-	margin-right: 30px !important;
+	
 	margin-right: 30px !important;
 }
 .pr-30 {
 	padding-right: 30px !important;
 }
 .mt-35 {
-	margin-top: 35px !important;
+	
 	margin-top: 35px !important;
 }
 .pt-35 {
-	padding-top: 35px !important;
+	
 	padding-top: 35px !important;
 }
 .mb-35 {
-	margin-bottom: 35px !important;
+	
 	margin-bottom: 35px !important;
 }
 .pb-35 {
 	padding-bottom: 35px !important;
 }
 .ml-35 {
-	margin-left: 35px !important;
+	
 	margin-left: 35px !important;
 }
 .pl-35 {
 	padding-left: 35px !important;
 }
 .mr-35 {
-	margin-right: 35px !important;
+	
 	margin-right: 35px !important;
 }
 .pr-35 {
 	padding-right: 35px !important;
 }
 .mt-40 {
-	margin-top: 40px !important;
+	
 	margin-top: 40px !important;
 }
 .pt-40 {
-	padding-top: 40px !important;
+	
 	padding-top: 40px !important;
 }
 .mb-40 {
-	margin-bottom: 40px !important;
+	
 	margin-bottom: 40px !important;
 }
 .pb-40 {
 	padding-bottom: 40px !important;
 }
 .ml-40 {
-	margin-left: 40px !important;
+	
 	margin-left: 40px !important;
 }
 .pl-40 {
 	padding-left: 40px !important;
 }
 .mr-40 {
-	margin-right: 40px !important;
+	
 	margin-right: 40px !important;
 }
 .pr-40 {
 	padding-right: 40px !important;
 }
 .mt-45 {
-	margin-top: 45px !important;
+	
 	margin-top: 45px !important;
 }
 .pt-45 {
-	padding-top: 45px !important;
+	
 	padding-top: 45px !important;
 }
 .mb-45 {
-	margin-bottom: 45px !important;
+	
 	margin-bottom: 45px !important;
 }
 .pb-45 {
 	padding-bottom: 45px !important;
 }
 .ml-45 {
-	margin-left: 45px !important;
+	
 	margin-left: 45px !important;
 }
 .pl-45 {
 	padding-left: 45px !important;
 }
 .mr-45 {
-	margin-right: 45px !important;
+	
 	margin-right: 45px !important;
 }
 .pr-45 {
 	padding-right: 45px !important;
 }
 .mt-50 {
-	margin-top: 50px !important;
+	
 	margin-top: 50px !important;
 }
 .pt-50 {
-	padding-top: 50px !important;
+	
 	padding-top: 50px !important;
 }
 .mb-50 {
-	margin-bottom: 50px !important;
+	
 	margin-bottom: 50px !important;
 }
 .pb-50 {
 	padding-bottom: 50px !important;
 }
 .ml-50 {
-	margin-left: 50px !important;
+	
 	margin-left: 50px !important;
 }
 .pl-50 {
 	padding-left: 50px !important;
 }
 .mr-50 {
-	margin-right: 50px !important;
+	
 	margin-right: 50px !important;
 }
 .pr-50 {
 	padding-right: 50px !important;
 }
 .mt-60 {
-	margin-top: 60px !important;
+	
 	margin-top: 60px !important;
 }
 .pt-60 {
-	padding-top: 60px !important;
+	
 	padding-top: 60px !important;
 }
 .mb-60 {
-	margin-bottom: 60px !important;
+	
 	margin-bottom: 60px !important;
 }
 .pb-60 {
 	padding-bottom: 60px !important;
 }
 .ml-60 {
-	margin-left: 60px !important;
+	
 	margin-left: 60px !important;
 }
 .pl-60 {
 	padding-left: 60px !important;
 }
 .mr-60 {
-	margin-right: 60px !important;
+	
 	margin-right: 60px !important;
 }
 .pr-60 {
 	padding-right: 60px !important;
 }
 .mt-75 {
-	margin-top: 75px !important;
+	
 	margin-top: 75px !important;
 }
 .pt-75 {
 	padding-top: 75px !important;
-	padding-top: 75px !important;
+	
 }
 .mb-75 {
-	margin-bottom: 75px !important;
+	
 	margin-bottom: 75px !important;
 }
 .pb-75 {
@@ -475,13 +428,11 @@ h6 {
 }
 .ml-75 {
 	margin-left: 75px !important;
-	margin-left: 75px !important;
 }
 .pl-75 {
 	padding-left: 75px !important;
 }
 .mr-75 {
-	margin-right: 75px !important;
 	margin-right: 75px !important;
 }
 .pr-75 {
@@ -489,14 +440,11 @@ h6 {
 }
 .mt-100 {
 	margin-top: 100px !important;
-	margin-top: 100px !important;
 }
 .pt-100 {
 	padding-top: 100px !important;
-	padding-top: 100px !important;
 }
 .mb-100 {
-	margin-bottom: 100px !important;
 	margin-bottom: 100px !important;
 }
 .pb-100 {
@@ -504,13 +452,11 @@ h6 {
 }
 .ml-100 {
 	margin-left: 100px !important;
-	margin-left: 100px !important;
 }
 .pl-100 {
 	padding-left: 100px !important;
 }
 .mr-100 {
-	margin-right: 100px !important;
 	margin-right: 100px !important;
 }
 .pr-100 {
@@ -518,19 +464,12 @@ h6 {
 }
 .p-10 {
 	padding: 20px;
-	padding: 20px;
 }
 .p-20 {
 	padding: 20px;
-	padding: 20px;
 }
 .para-intro-regular-2c {
-	font-family: "Intro", Regular;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 0.02em;
-	color: #2c2c2c;
+	
 	font-family: Intro, Regular;
 	font-weight: 400;
 	font-size: 16px;
@@ -539,13 +478,7 @@ h6 {
 	color: #2c2c2c;
 }
 .para-intro-bold-2c {
-	font-family: "Intro", Bold;
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 0.02em;
-	text-decoration-line: underline;
-	color: #2c2c2c;
+
 	font-family: Intro, Bold;
 	font-weight: 700;
 	font-size: 16px;
@@ -556,37 +489,21 @@ h6 {
 }
 .fw-600 {
 	font-weight: 600;
-	font-weight: 600;
 }
 .para-book {
 	font-family: "Intro", Book;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.02em;
-	font-family: Intro, Book;
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 0.02em;
 }
 .color-2c {
-	color: #2c2c2c;
 	color: #2c2c2c;
 }
 .color-70 {
 	color: #707070;
-	color: #707070;
 }
 .orange-button {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	padding: 0 40px;
-	background: #f16e00;
-	border-radius: 25px;
-	font-weight: 600;
-	height: 50px;
-	border: none !important;
-	outline: none;
+	
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -601,28 +518,16 @@ h6 {
 .orange-button.disabled {
 	pointer-events: none;
 	background: #f9f9f9;
-	pointer-events: none;
-	background: #f9f9f9;
 }
 input {
 	&:disabled {
-		background: #dddddd !important;
-		color: #707070;
-		font-weight: 600;
 		background: #ddd !important;
 		color: #707070;
 		font-weight: 600;
 	}
 }
 .logo {
-	position: relative;
-	z-index: 2;
-	width: calc(316px / 2);
-	display: block;
-	margin: auto;
-	position: fixed;
-	top: 20px;
-	left: 50px;
+	
 	position: relative;
 	z-index: 2;
 	width: calc(316px / 2);
@@ -634,7 +539,6 @@ input {
 }
 .dashboard {
 	position: relative;
-	position: relative;
 	&::before {
 		content: "";
 		position: absolute;
@@ -643,23 +547,10 @@ input {
 		width: 26%;
 		height: 100%;
 		z-index: 0;
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 26%;
-		height: 100%;
-		z-index: 0;
+		
 	}
 	&::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 74%;
-		height: 80%;
-		z-index: 0;
-		background: #fff;
+		
 		content: "";
 		position: absolute;
 		top: 0;
@@ -670,11 +561,7 @@ input {
 		background: #fff;
 	}
 	.left-column {
-		position: relative;
-		z-index: 2;
-		padding-top: 60px;
-		background-color: #006685;
-		width: 20%;
+	
 		position: relative;
 		z-index: 2;
 		padding-top: 60px;
@@ -682,10 +569,7 @@ input {
 		width: 20%;
 	}
 	.right-column {
-		position: relative;
-		z-index: 2;
-		padding-top: 60px;
-		background: #f6f7fc;
+	
 		position: relative;
 		z-index: 2;
 		padding-top: 60px;
@@ -693,12 +577,7 @@ input {
 	}
 }
 .tabs {
-	margin: 0;
-	margin-top: 90px;
-	padding: 0;
-	list-style: none;
-	position: relative;
-	padding-left: 0;
+
 	margin: 0;
 	margin-top: 90px;
 	padding: 0;
@@ -708,15 +587,7 @@ input {
 	.active-tab {
 		position: relative;
 		color: black;
-		position: relative;
-		color: #000;
 		&:after {
-			width: 100%;
-			height: 2px;
-			position: absolute;
-			content: "";
-			bottom: -0.1em;
-			left: 0;
 			width: 100%;
 			height: 2px;
 			position: absolute;
@@ -726,18 +597,7 @@ input {
 		}
 	}
 	li {
-		height: 60px;
-		display: flex;
-		align-items: center;
-		font-weight: 400;
-		width: 100%;
-		text-align: left;
-		padding-left: 42px;
-		border-bottom-left-radius: 50px;
-		border-top-left-radius: 50px;
-		color: #fff;
-		cursor: pointer;
-		display: flex;
+		
 		height: 60px;
 		display: flex;
 		align-items: center;
@@ -752,29 +612,21 @@ input {
 		display: flex;
 		img {
 			margin-right: 20px;
-			margin-right: 20px;
 		}
 	}
 	li.active-tab {
-		background: #006685;
-		color: #fcd833;
 		background: #006685;
 		color: #fcd833;
 	}
 }
 .header-container {
 	padding: 30px 20px;
-	padding: 30px 20px;
 }
 .tabs-content {
 	padding: 0;
 	list-style: none;
-	padding: 0;
-	list-style: none;
 }
 .navigation-tabs {
-	display: flex;
-	align-items: center;
 	display: flex;
 	align-items: center;
 	>a {
@@ -1034,14 +886,14 @@ input {
 	}
 	label {
 		position: relative;
-		cursor: pointer;
+		
 		-webkit-appearance: none;
 		background-color: #fff;
 		border: 2px solid #000000;
 		display: inline-block;
 		position: relative;
 		vertical-align: middle;
-		cursor: pointer;
+		
 		margin-right: 5px;
 		width: 16px;
 		height: 16px;
@@ -1057,7 +909,7 @@ input {
 		display: inline-block;
 		position: relative;
 		vertical-align: middle;
-		cursor: pointer;
+		
 		margin-right: 5px;
 		width: 16px;
 		height: 16px;
@@ -2795,10 +2647,10 @@ input.orange-button {
 		padding-left: 60px;
 	}
 }
-@media screen and (min-width: 1400px) {
+@media screen and (max-width: 1500px) {
 	.common-type-tabs-section {
-		padding-left: 0;
-		padding-left: 0;
+		padding-left: 60px;
+		padding-left: 60px;
 	}
 }
 @media screen and (max-width: 1200px) {
