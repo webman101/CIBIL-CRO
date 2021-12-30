@@ -1238,6 +1238,7 @@ input:disabled {
 @media screen and (min-width: 992px) {
   .header-container {
     padding: 40px 60px;
+    padding-bottom: 20px;
   }
 }
 
@@ -1528,6 +1529,8 @@ ul.accordion .inner .row {
 }
 ul.accordion .inner .row p {
   margin-bottom: 0;
+  color: #2c2c2c;
+  font-family: "intro", regular;
 }
 ul.accordion .inner.show {
   /*display: block;*/

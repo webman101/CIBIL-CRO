@@ -252,6 +252,7 @@ input:disabled {
     padding: 30px 20px;
     @media screen and (min-width: 992px) {
         padding: 40px 60px;
+        padding-bottom: 20px;
     }
 }
 .tabs-content {
@@ -295,11 +296,10 @@ input:disabled {
     h3 {
         font-family: "Intro", Regular;
         font-size: 24px;
-       @media screen and (min-width: 992px) {
-        font-size: 40px;
-       }
-       
-       
+        @media screen and (min-width: 992px) {
+            font-size: 40px;
+        }
+
         line-height: 50px;
         color: #2c2c2c;
         margin-left: 16px;
@@ -536,8 +536,7 @@ ul.accordion {
     @media screen and (min-width: 992px) {
         margin: 0 60px;
     }
-    
-    
+
     list-style: none;
     padding: 0;
     background-color: #fff;
@@ -551,6 +550,8 @@ ul.accordion {
             align-items: center;
             p {
                 margin-bottom: 0;
+                color: #2c2c2c;
+                font-family: 'intro',regular;
             }
         }
         &.show {
@@ -562,8 +563,6 @@ ul.accordion {
             @media screen and (min-width: 992px) {
                 padding: 15px 20px;
             }
-            
-            
         }
     }
 
@@ -574,8 +573,6 @@ ul.accordion {
         @media screen and (min-width: 992px) {
             border-radius: 4px;
         }
-        
-        
 
         a.toggle {
             width: 100%;
@@ -631,7 +628,7 @@ ul.accordion {
         transform: rotate(0);
     }
 }
-.max-width-1200{
-	margin: inherit auto !important;
-	max-width: 1200px;
+.max-width-1200 {
+    margin: inherit auto !important;
+    max-width: 1200px;
 }
