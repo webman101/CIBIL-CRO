@@ -2927,11 +2927,16 @@ input.orange-button {
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   /* identical to box height, or 171% */
   letter-spacing: 0.02em;
   /* Black */
   margin-bottom: 0;
   color: #000000;
+}
+@media screen and (min-width: 414px) {
+  .success-message p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=custom.css.map */

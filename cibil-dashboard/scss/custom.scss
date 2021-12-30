@@ -2660,7 +2660,12 @@ input.orange-button {
 		font-family: "Intro", Book;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 14px;
+		font-size: 12px;
+		@media screen and (min-width: 414px) {
+			font-size: 14px;
+		}
+		
+		
 		line-height: 24px;
 		/* identical to box height, or 171% */
 
