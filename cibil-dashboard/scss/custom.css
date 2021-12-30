@@ -2564,50 +2564,56 @@ input.orange-button {
     padding-left: 20px;
   }
   .common-type-tabs-section .nav li {
-    border-top: 6px solid #ffffff;
-    min-height: 122px;
-    padding: 0;
     border-top: 6px solid #fff;
     min-height: 122px;
     padding: 0;
   }
   .common-type-tabs-section .nav li p {
     margin-top: 10px;
-    margin-top: 10px;
   }
   .common-type-tabs-section .nav li a {
     padding: 10px;
     padding-left: 15px;
-    padding: 10px;
-    padding-left: 15px;
   }
-
+}
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  .common-type-tabs-section .nav li a {
+    padding-left: 20px;
+    padding-bottom: 14px;
+  }
+}
+@media screen and (min-width: 992px) {
   .ms-md-60 {
     margin-left: 30px;
   }
-
+}
+@media screen and (min-width: 992px) {
   .me-md-60 {
     margin-right: 30px;
     margin-right: 30px;
   }
-
+}
+@media screen and (min-width: 992px) {
   .d-md-flex {
     display: flex;
     display: flex;
   }
-
+}
+@media screen and (min-width: 992px) {
   .dhide {
     display: none !important;
     display: none !important;
   }
-
+}
+@media screen and (min-width: 992px) {
   .section-title {
     font-size: 24px;
     line-height: 30px;
     font-size: 24px;
     line-height: 30px;
   }
-
+}
+@media screen and (min-width: 992px) {
   .interstial-container {
     padding-bottom: 110px !important;
     padding-top: 70px;
@@ -2622,12 +2628,14 @@ input.orange-button {
     border-top-right-radius: 0;
     border-top-right-radius: 0;
   }
-
+}
+@media screen and (min-width: 992px) {
   .feature.first-feature {
     padding-top: 25px;
     padding-top: 25px;
   }
-
+}
+@media screen and (min-width: 992px) {
   .nav {
     margin-top: 50px;
     margin-top: 50px;
@@ -2636,7 +2644,8 @@ input.orange-button {
     border-top-right-radius: 6px;
     border-top-right-radius: 6px;
   }
-
+}
+@media screen and (min-width: 992px) {
   footer {
     padding-left: 20%;
     position: relative;
