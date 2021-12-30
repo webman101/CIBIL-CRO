@@ -16,6 +16,9 @@ a {
   outline: 0 !important;
   cursor: pointer;
 }
+a:hover {
+  color: #F16E00;
+}
 
 button {
   cursor: pointer;
