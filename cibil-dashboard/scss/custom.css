@@ -1779,24 +1779,12 @@ input:disabled {
 }
 .nav li.active {
   background-color: #fff;
-  border-top: 6px solid #00a6ca;
-  border-bottom: 0;
-  position: relative;
-  padding-top: 10px;
-  background-color: #fff;
-  border-top: 6px solid #00a6ca;
+  border-top: 6px solid #00a6ca !important;
   border-bottom: 0;
   position: relative;
   padding-top: 10px;
 }
 .nav li.active::after {
-  content: "";
-  position: absolute;
-  height: 15px;
-  bottom: -10px;
-  left: 0;
-  background: #fff;
-  width: 100%;
   content: "";
   position: absolute;
   height: 15px;

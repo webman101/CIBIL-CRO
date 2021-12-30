@@ -1625,23 +1625,15 @@ input {
 	}
 	li.active {
 		background-color: #fff;
-		border-top: 6px solid #00a6ca;
-		border-bottom: 0;
-		position: relative;
-		padding-top: 10px;
-		background-color: #fff;
-		border-top: 6px solid #00a6ca;
+	
+			border-top: 6px solid #00a6ca !important;
+		
+		
+		
 		border-bottom: 0;
 		position: relative;
 		padding-top: 10px;
 		&::after {
-			content: "";
-			position: absolute;
-			height: 15px;
-			bottom: -10px;
-			left: 0;
-			background: #fff;
-			width: 100%;
 			content: "";
 			position: absolute;
 			height: 15px;
@@ -2564,6 +2556,7 @@ input.orange-button {
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
 	.common-type-tabs-section {
 		padding-left: 60px;
+		
 	}
 }
 @media screen and (min-width: 992px)  and (max-width: 1200px) {
