@@ -1521,7 +1521,6 @@ ul.accordion .inner {
   padding-left: 1em;
   overflow: hidden;
   display: none;
-  border: 1px solid #dde0ef;
 }
 ul.accordion .inner .row {
   border-bottom: 1px solid #dde0ef;
@@ -1539,6 +1538,8 @@ ul.accordion .inner .col-md-4 {
 }
 ul.accordion li {
   margin: 0 0 5px 0px;
+  border: 1px solid #dde0ef;
+  border-radius: 4px;
 }
 ul.accordion li a.toggle {
   width: 100%;

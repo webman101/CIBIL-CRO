@@ -546,7 +546,6 @@ ul.accordion {
         padding-left: 1em;
         overflow: hidden;
         display: none;
-        border: 1px solid #dde0ef;
         .row {
             border-bottom: 1px solid #dde0ef;
             align-items: center;
@@ -565,6 +564,8 @@ ul.accordion {
 
     li {
         margin: 0 0 5px 0px;
+        border: 1px solid #dde0ef;
+        border-radius: 4px;
         a.toggle {
             width: 100%;
             display: flex;
