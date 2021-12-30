@@ -2444,18 +2444,8 @@ input.orange-button {
     padding-bottom: 60px !important;
   }
 
-  .ml-md-60 {
-    margin-left: 60px !important;
-    margin-left: 60px !important;
-  }
-
   .pl-md-60 {
     padding-left: 60px !important;
-  }
-
-  .mr-md-60 {
-    margin-right: 60px !important;
-    margin-right: 60px !important;
   }
 
   .pr-md-60 {
@@ -2464,16 +2454,13 @@ input.orange-button {
 
   .mt-md-75 {
     margin-top: 75px !important;
-    margin-top: 75px !important;
   }
 
   .pt-md-75 {
     padding-top: 75px !important;
-    padding-top: 75px !important;
   }
 
   .mb-md-75 {
-    margin-bottom: 75px !important;
     margin-bottom: 75px !important;
   }
 
@@ -2482,7 +2469,6 @@ input.orange-button {
   }
 
   .ml-md-75 {
-    margin-left: 75px !important;
     margin-left: 75px !important;
   }
 
@@ -2584,12 +2570,6 @@ input.orange-button {
 @media screen and (min-width: 992px) {
   .ms-md-60 {
     margin-left: 30px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .me-md-60 {
-    margin-right: 30px;
-    margin-right: 30px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -2826,30 +2806,22 @@ input.orange-button {
     padding: 20px;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1400px) {
+@media screen and (min-width: 992px) and (max-width: 1600px) {
   .ml-md-60 {
-    margin-left: 60px !important;
     margin-left: 60px !important;
   }
 
   .mr-md-60 {
-    margin-right: 60px !important;
     margin-right: 60px !important;
   }
 }
 @media screen and (min-width: 1200px) {
   .common-type-tabs-section {
     border-top: none;
-    border-top: none;
   }
 
   .ms-md-60 {
     margin-left: 60px;
-  }
-
-  .me-md-60 {
-    margin-right: 60px;
-    margin-right: 60px;
   }
 
   .interstial-container .col-md-6.equal-column {
@@ -2878,6 +2850,10 @@ input.orange-button {
   .common-type-tabs-section {
     padding-left: 60px;
     padding-left: 60px;
+  }
+
+  .me-md-60 {
+    margin-right: 60px;
   }
 }
 @media screen and (max-width: 1500px) {
