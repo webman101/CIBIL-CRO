@@ -2601,7 +2601,7 @@ input.orange-button {
     padding-bottom: 0;
   }
   .interstial-container .nav li.active {
-    border-top: 2px solid #00a6ca;
+    border-top: 2px solid #00a6ca !important;
     border-right: 2px solid #00a6ca;
   }
   .interstial-container .tab-content {
