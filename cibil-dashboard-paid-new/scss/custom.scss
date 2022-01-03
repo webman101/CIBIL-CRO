@@ -82,9 +82,9 @@ h6 {
         color: rgba(0, 0, 0, 0.75);
     }
     &-blue {
-        color: #006685;
+        color: #00A6CA;
         &:hover {
-            color: #006685;
+            color: #00A6CA;
         }
     }
     &-white {
@@ -389,7 +389,7 @@ h6 {
 .border-1 {
     border: 1px solid #dde0ef;
 }
-$brand-blue: #006685;
+$brand-blue: #00A6CA;
 .brand-blue {
     background-color: $brand-blue;
 }
@@ -614,7 +614,7 @@ $brand-blue: #006685;
         position: relative;
         z-index: 2;
         padding-top: 60px;
-        background-color: #006685;
+        background-color: #00A6CA;
         width: 20%;
 
         @media screen and (max-width: 992px) {
@@ -682,7 +682,7 @@ $brand-blue: #006685;
             margin-right: 20px;
         }
         &.active-tab {
-            background: #006685;
+            background: #00A6CA;
             color: #fcd833;
         }
     }
@@ -711,6 +711,7 @@ $brand-blue: #006685;
         object-fit: contain;
         margin-top: 20px;
     }
+
     a.link-16 {
         margin-top: 20px;
         display: block;
@@ -748,6 +749,28 @@ $brand-blue: #006685;
         }
     }
 }
+.chart-footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 30px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(1, 83, 101, 0.2);
+    border-radius: 8px;
+    a {
+        font-family: "Intro", Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height */
+
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-decoration-line: underline;
+
+        color: #252525;
+    }
+}
 .f-24-title {
     font-family: "Intro", bold;
 
@@ -770,7 +793,7 @@ $brand-blue: #006685;
 }
 .card-inner {
     @media screen and (min-width: 992px) {
-        height: 595px;
+        min-height: 595px;
     }
 
     background-color: white;
@@ -892,7 +915,7 @@ $brand-blue: #006685;
     }
 
     .slider-item {
-        background: #006685;
+        background: #00A6CA;
         box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.21);
         border-radius: 8px;
         @media screen and (min-width: 992px) {
@@ -1107,7 +1130,7 @@ $brand-blue: #006685;
         margin: 0 5px;
         cursor: pointer;
         &.slick-active {
-            background: #006685;
+            background: #00A6CA;
         }
         button {
             display: none;
@@ -1312,7 +1335,7 @@ $brand-blue: #006685;
     color: #707070 !important;
 }
 .blue-dropdown-groups-section {
-    background: #006685;
+    background: #00A6CA;
     height: 60px;
     display: flex;
     align-items: center;
@@ -1390,7 +1413,7 @@ $brand-blue: #006685;
     padding: 0;
     margin: 2px 0 0 0;
     list-style-type: none;
-    // background: #006685;
+    // background: #00A6CA;
     background-color: #ffffff;
     box-shadow: 0px 0px 15px -5px #282828;
     z-index: 9;
@@ -1800,7 +1823,7 @@ $brand-blue: #006685;
         padding: 0;
         margin: 2px 0 0 0;
         list-style-type: none;
-        background: #006685;
+        background: #00A6CA;
         box-shadow: 0px 0px 15px -5px #282828;
         li {
             padding: 10px 20px;
@@ -1969,8 +1992,8 @@ footer {
             left: 0;
             height: 110%;
             width: 20%;
-            background-color: #006685;
-            border-top: 1px solid #006685;
+            background-color: #00A6CA;
+            border-top: 1px solid #00A6CA;
         }
     }
 }
@@ -2098,7 +2121,7 @@ input:focus {
 
     & > div {
         position: relative;
-        border: 1px dashed #006685;
+        border: 1px dashed #00A6CA;
         box-sizing: border-box;
         border-radius: 4px;
         height: max-content;
@@ -2606,7 +2629,7 @@ input {
             position: relative;
             z-index: 2;
             padding-top: 60px;
-            background-color: #006685;
+            background-color: #00A6CA;
             width: 20%;
 
             @media screen and (max-width: 992px) {
@@ -2671,7 +2694,7 @@ input {
                 margin-right: 20px;
             }
             &.active-tab {
-                background: #006685;
+                background: #00A6CA;
                 color: #fcd833;
             }
         }
@@ -2851,8 +2874,8 @@ input {
                 left: 0;
                 height: 110%;
                 width: 20%;
-                background-color: #006685;
-                border-top: 1px solid #006685;
+                background-color: #00A6CA;
+                border-top: 1px solid #00A6CA;
             }
         }
         a {
@@ -3254,7 +3277,7 @@ input {
             position: relative;
             z-index: 2;
             padding-top: 60px;
-            background-color: #006685;
+            background-color: #00A6CA;
             width: 20%;
             @media screen and (max-width: 992px) {
                 display: none;
@@ -3353,7 +3376,7 @@ input {
                 margin-right: 20px;
             }
             &.active-tab {
-                background: #006685;
+                background: #00A6CA;
                 color: #fcd833;
             }
         }
@@ -4350,8 +4373,8 @@ input {
                 left: 0;
                 height: 110%;
                 width: 20%;
-                background-color: #006685;
-                border-top: 1px solid #006685;
+                background-color: #00A6CA;
+                border-top: 1px solid #00A6CA;
             }
         }
         a {
@@ -4618,7 +4641,7 @@ input {
             position: relative;
             z-index: 2;
             padding-top: 60px;
-            background-color: #006685;
+            background-color: #00A6CA;
             width: 20%;
 
             @media screen and (max-width: 992px) {
@@ -4683,7 +4706,7 @@ input {
                 margin-right: 20px;
             }
             &.active-tab {
-                background: #006685;
+                background: #00A6CA;
                 color: #fcd833;
             }
         }
@@ -5742,8 +5765,8 @@ input {
                 left: 0;
                 height: 110%;
                 width: 20%;
-                background-color: #006685;
-                border-top: 1px solid #006685;
+                background-color: #00A6CA;
+                border-top: 1px solid #00A6CA;
             }
         }
         a {
@@ -5854,4 +5877,10 @@ input {
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: 1200px;
+}
+//////////////////////// paid-homeapge
+.credit-summary{
+    .alerts{
+        height: 108px;
+    }
 }

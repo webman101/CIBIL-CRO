@@ -85,10 +85,10 @@ h6 {
   color: rgba(0, 0, 0, 0.75);
 }
 .text-color-blue {
-  color: #006685;
+  color: #00A6CA;
 }
 .text-color-blue:hover {
-  color: #006685;
+  color: #00A6CA;
 }
 .text-color-white {
   color: #ffffff;
@@ -388,7 +388,7 @@ h6 {
 }
 
 .brand-blue {
-  background-color: #006685;
+  background-color: #00A6CA;
 }
 
 .text-intro-bold {
@@ -599,7 +599,7 @@ h6 {
   position: relative;
   z-index: 2;
   padding-top: 60px;
-  background-color: #006685;
+  background-color: #00A6CA;
   width: 20%;
 }
 @media screen and (max-width: 992px) {
@@ -669,7 +669,7 @@ h6 {
   margin-right: 20px;
 }
 .tabs li.active-tab {
-  background: #006685;
+  background: #00A6CA;
   color: #fcd833;
 }
 
@@ -730,6 +730,27 @@ h6 {
   object-fit: cover;
 }
 
+.chart-footer {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 30px;
+  background: #ffffff;
+  box-shadow: 0px 0px 30px rgba(1, 83, 101, 0.2);
+  border-radius: 8px;
+}
+.chart-footer a {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  color: #252525;
+}
+
 .f-24-title {
   font-family: "Intro", bold;
   font-weight: bold;
@@ -755,7 +776,7 @@ h6 {
 }
 @media screen and (min-width: 992px) {
   .card-inner {
-    height: 595px;
+    min-height: 595px;
   }
 }
 
@@ -865,7 +886,7 @@ h6 {
   }
 }
 .multiple-items-slider .slider-item {
-  background: #006685;
+  background: #00A6CA;
   box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.21);
   border-radius: 8px;
   padding: 30px;
@@ -1058,7 +1079,7 @@ h6 {
   cursor: pointer;
 }
 .slick-dots li.slick-active {
-  background: #006685;
+  background: #00A6CA;
 }
 .slick-dots li button {
   display: none;
@@ -1261,7 +1282,7 @@ h6 {
 }
 
 .blue-dropdown-groups-section {
-  background: #006685;
+  background: #00A6CA;
   height: 60px;
   display: flex;
   align-items: center;
@@ -1709,7 +1730,7 @@ h6 {
   padding: 0;
   margin: 2px 0 0 0;
   list-style-type: none;
-  background: #006685;
+  background: #00A6CA;
   box-shadow: 0px 0px 15px -5px #282828;
 }
 .mobile-switch-container .dd-menu li {
@@ -1868,8 +1889,8 @@ h6 {
     left: 0;
     height: 110%;
     width: 20%;
-    background-color: #006685;
-    border-top: 1px solid #006685;
+    background-color: #00A6CA;
+    border-top: 1px solid #00A6CA;
   }
 }
 
@@ -2001,7 +2022,7 @@ input:focus {
 }
 .compare-grouped-position-absolute > div {
   position: relative;
-  border: 1px dashed #006685;
+  border: 1px dashed #00A6CA;
   box-sizing: border-box;
   border-radius: 4px;
   height: max-content;
@@ -2489,7 +2510,7 @@ input {
   position: relative;
   z-index: 2;
   padding-top: 60px;
-  background-color: #006685;
+  background-color: #00A6CA;
   width: 20%;
 }
 @media screen and (max-width: 992px) {
@@ -2555,7 +2576,7 @@ input {
   margin-right: 20px;
 }
 .paid-alerts-page .tabs li.active-tab {
-  background: #006685;
+  background: #00A6CA;
   color: #fcd833;
 }
 .paid-alerts-page .header-container {
@@ -2714,8 +2735,8 @@ input {
     left: 0;
     height: 110%;
     width: 20%;
-    background-color: #006685;
-    border-top: 1px solid #006685;
+    background-color: #00A6CA;
+    border-top: 1px solid #00A6CA;
   }
 }
 .paid-alerts-page footer a {
@@ -3803,7 +3824,7 @@ input {
   position: relative;
   z-index: 2;
   padding-top: 60px;
-  background-color: #006685;
+  background-color: #00A6CA;
   width: 20%;
 }
 @media screen and (max-width: 992px) {
@@ -3902,7 +3923,7 @@ input {
   margin-right: 20px;
 }
 .accounts-paid-page .tabs li.active-tab {
-  background: #006685;
+  background: #00A6CA;
   color: #fcd833;
 }
 .accounts-paid-page .header-container {
@@ -4833,8 +4854,8 @@ input {
     left: 0;
     height: 110%;
     width: 20%;
-    background-color: #006685;
-    border-top: 1px solid #006685;
+    background-color: #00A6CA;
+    border-top: 1px solid #00A6CA;
   }
 }
 .accounts-paid-page footer a {
@@ -5075,7 +5096,7 @@ input {
   position: relative;
   z-index: 2;
   padding-top: 60px;
-  background-color: #006685;
+  background-color: #00A6CA;
   width: 20%;
 }
 @media screen and (max-width: 992px) {
@@ -5141,7 +5162,7 @@ input {
   margin-right: 20px;
 }
 .upgrade-page .tabs li.active-tab {
-  background: #006685;
+  background: #00A6CA;
   color: #fcd833;
 }
 .upgrade-page .header-container {
@@ -6098,8 +6119,8 @@ input {
     left: 0;
     height: 110%;
     width: 20%;
-    background-color: #006685;
-    border-top: 1px solid #006685;
+    background-color: #00A6CA;
+    border-top: 1px solid #00A6CA;
   }
 }
 .upgrade-page footer a {
@@ -6196,4 +6217,8 @@ input {
   margin-left: auto !important;
   margin-right: auto !important;
   max-width: 1200px;
+}
+
+.credit-summary .alerts {
+  height: 108px;
 }/*# sourceMappingURL=custom.css.map */

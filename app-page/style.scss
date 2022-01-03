@@ -392,3 +392,73 @@
 .slick-dots .slick-active button {
     background: #00a6ca;
 }
+
+.circle1 {
+    position: relative;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.zonecircle {
+    animation: myfirst 1s infinite;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 50%;
+    height: 50%;
+    border: solid 1px #00a6ca;
+    transform-origin: 100% 0%;
+    transform: rotate(0deg);
+}
+.avatarcircle {
+    position: absolute;
+    /* left: 0; */
+    top: 50%;
+    border-radius: 50%;
+    width: 95px;
+    height: 95px;
+    overflow: hidden;
+    background-image: url(/img/notify.svg);
+    background-position: center;
+    left: 50%;
+    /* right: 0; */
+    margin: auto;
+    background-repeat: no-repeat;
+    background-color: #e6f3f9;
+    transform: translate(-50%, -50%);
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+    0% {
+        background: #00a6ca;
+        transform: rotate(0deg);
+    }
+    50% {
+        background: #00a6ca;
+        transform: rotate(180deg);
+    }
+    100% {
+        background: #00a6ca;
+        transform: rotate(359deg);
+    }
+}
+
+/* Standard syntax */
+@keyframes myfirst {
+    0% {
+        background: #00a6ca;
+        transform: rotate(0deg);
+    }
+    50% {
+        background: #00a6ca;
+
+        transform: rotate(180deg);
+    }
+    100% {
+        background: #00a6ca;
+        transform: rotate(359deg);
+    }
+}
