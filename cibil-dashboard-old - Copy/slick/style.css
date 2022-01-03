@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(45deg, #51cce2, #3369e7);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.slick-slider {
+  width: 100%;
+  background-color: transparent;
+}
+.slick-slider .slick-track {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100px;
+  justify-content: center;
+}
+.slick-slider .slick-slide {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 0px;
+  margin: 10px;
+  background-color: white;
+  transition: all 0.3s ease;
+  height: auto;
+  text-align: center;
+}
+.slick-slider .slick-slide.slick-current, .slick-slider .slick-slide.slick-center {
+  background: linear-gradient(45deg, #f69259, #f16975);
+  padding: 30px 0px;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  top: 0px;
+  background-color: transparent;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}/*# sourceMappingURL=style.css.map */

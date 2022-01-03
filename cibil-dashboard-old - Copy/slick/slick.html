@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="slick-slider">
+        <div>AA</div>
+        <div>BB</div>
+        <div>CC</div>
+        <div>DD</div>
+        <div>EE</div>
+        <div>FF</div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('.slick-slider').slick({
+                centerMode: true,
+                slidesToShow: 1,
+                swipe: true,
+                swipeToSlide: true,
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
