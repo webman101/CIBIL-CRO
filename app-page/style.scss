@@ -441,8 +441,10 @@
         top: 0px;
         right: 0px;
         @media screen and (min-width: 992px) {
-            top: 0.5px;
-            right: -2px;
+            // top: 0.5px;
+            // right: -2px;
+            top: 0;
+            right: 0;
         }
 
         z-index: 9;
