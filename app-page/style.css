@@ -370,8 +370,8 @@
   }
 }
 .progress {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   font-size: 30px;
   border-radius: 50%;
   overflow: hidden;
@@ -382,11 +382,11 @@
   background-color: #E0F4FC;
 }
 .progress::after {
-  width: 75px;
-  height: 75px;
+  width: 55px;
+  height: 55px;
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0.5px;
   bottom: 0;
   margin: auto;
   left: 0;
