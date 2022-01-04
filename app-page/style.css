@@ -357,7 +357,7 @@
   text-align: center;
   line-height: 200px;
   margin: 20px;
-  background-color: #e0f4fc;
+  background-color: transparent;
   margin-left: 0;
 }
 .progress::after {
@@ -368,6 +368,7 @@
   bottom: 0;
   margin: auto;
   left: 0;
+  background-color: transparent;
   top: 0px;
   right: 0px;
   z-index: 9;
@@ -404,7 +405,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: #e7f4fa;
+  background-color: #e0f4fc;
 }
 
 .progress .left,
