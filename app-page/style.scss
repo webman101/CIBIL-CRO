@@ -350,39 +350,53 @@
         opacity: 1;
     }
 }
+.circle {
+    position: relative;
+    display: inline-block;
+    height: 70px;
+}
+.progress-line {
+ 
 
-.progress {
     width: 70px;
     height: 70px;
-    font-size: 30px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    line-height: 200px;
-    margin: 20px;
-    // background-color: #e0f4fc;
-    background-color: transparent;
-    margin-left: 0;
+    display: inline-block;
+    position: absolute;
+    background-color: unset;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    // font-size: 30px;
+    // border-radius: 50%;
+    // overflow: hidden;
+
+    // border: none !important;
+    // box-shadow: none !important;
+    // text-align: center;
+    // line-height: 200px;
+    // margin: 20px;
+    // // background-color: #e0f4fc;
+    // background-color: transparent;
+    // margin-left: 0;
     &::after {
         width: 55px;
         height: 55px;
         content: "";
         position: absolute;
-
-        bottom: 0;
-        margin: auto;
-        left: 0;
+        // left: 0;
+        // bottom: 0;
+        // margin: auto;
         background-color: transparent;
-        top: 0px;
-        right: 0px;
-        @media screen and (min-width: 992px) {
-            // top: 0.5px;
-            // right: -2px;
-            top: 0;
-            right: 0;
-        }
 
+  
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+      
         z-index: 9;
         background-position: center;
         background-size: contain;
@@ -390,7 +404,7 @@
 }
 
 .item-1.slick-slide {
-    .progress {
+    .progress-line {
         &::after {
             background-image: url(img/icon1.png);
         }
@@ -398,7 +412,7 @@
 }
 
 .item-2.slick-slide {
-    .progress {
+    .progress-line {
         &::after {
             background-image: url(img/icon2.svg);
         }
@@ -406,7 +420,7 @@
 }
 
 .item-3.slick-slide {
-    .progress {
+    .progress-line {
         &::after {
             background-image: url(img/icon3.svg);
         }
@@ -414,7 +428,7 @@
 }
 
 .item-4.slick-slide {
-    .progress {
+    .progress-line {
         &::after {
             background-image: url(img/icon4.svg);
         }
@@ -438,10 +452,14 @@
     position: absolute;
     top: 0;
     left: 0;
+
     border: 2px solid #00a6ca;
     border-radius: 100px 0px 0px 100px;
     border-right: 0;
     transform-origin: right;
+}
+
+.progress .left {
 }
 
 .slick-active .progress .left {
