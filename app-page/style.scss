@@ -358,22 +358,22 @@
 }
 .fading-text {
     transition: opacity 5s ease-in;
-    opacity: 0;
+    // opacity: 0;
 }
 .fade-image {
     transition: opacity 5s ease-in;
-    opacity: 0;
+    // opacity: 0;
 }
-.slick-active .fade-image {
-    animation: opacity 2s 2s forwards;
-}
-.slick-active .fading-text {
-    animation: opacity 2s 1s forwards;
-}
+// .slick-active .fade-image {
+//     animation: opacity 1s 1s forwards;
+// }
+// .slick-active .fading-text {
+//     animation: opacity 1s 1s forwards;
+// }
 /* Standard syntax */
 @keyframes opacity {
     0% {
-        transition: opacity 5s ease-in;
+        transition: opacity 1s ease-in;
 
         opacity: 0;
     }
@@ -381,32 +381,32 @@
         opacity: 1;
     }
 }
-@keyframes myfirst {
-    0% {
-        background: #00a6ca;
-        transform: rotate(180deg);
-    }
-    25% {
-        background: #00a6ca;
+// @keyframes myfirst {
+//     0% {
+//         background: #00a6ca;
+//         transform: rotate(180deg);
+//     }
+//     25% {
+//         background: #00a6ca;
 
-        transform: rotate(270deg);
-    }
-    50% {
-        background: #00a6ca;
+//         transform: rotate(270deg);
+//     }
+//     50% {
+//         background: #00a6ca;
 
-        transform: rotate(360deg);
-    }
-    75% {
-        background: #00a6ca;
+//         transform: rotate(360deg);
+//     }
+//     75% {
+//         background: #00a6ca;
 
-        transform: rotate(450deg);
-    }
-    100% {
-        background: #00a6ca;
+//         transform: rotate(450deg);
+//     }
+//     100% {
+//         background: #00a6ca;
 
-        transform: rotate(540deg);
-    }
-}
+//         transform: rotate(540deg);
+//     }
+// }
 
 .progress {
     width: 90px;
@@ -420,22 +420,48 @@
     margin: 20px;
     background-color: #e7f4fa;
     &::after {
-        background-image: url(img/notify.svg);
-        width: 85px;
-        height: 85px;
+        width: 75px;
+        height: 75px;
         content: "";
         position: absolute;
-        top: -4px;
+        top: 0px;
         bottom: 0;
         margin: auto;
         left: 0;
-        right: -3px;
+        right: -2px;
         z-index: 9;
         background-position: center;
         background-size: contain;
     }
 }
-
+.item-1.slick-slide {
+    .progress {
+        &::after {
+            background-image: url(img/icon1.png);
+        }
+    }
+}
+.item-2.slick-slide {
+    .progress {
+        &::after {
+            background-image: url(img/icon2.svg);
+        }
+    }
+}
+.item-3.slick-slide {
+    .progress {
+        &::after {
+            background-image: url(img/icon3.svg);
+        }
+    }
+}
+.item-4.slick-slide {
+    .progress {
+        &::after {
+            background-image: url(img/icon4.svg);
+        }
+    }
+}
 .progress .overlay {
     width: 50%;
     height: 100%;
