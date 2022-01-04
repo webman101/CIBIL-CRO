@@ -66,11 +66,16 @@
   }
 }
 .app-page .banner {
-  background-image: url(img/bg-desktop.png);
+  background-image: url(img/bannerbg.png);
   background-position: center;
   background-size: cover;
   padding-top: 40px;
   position: relative;
+}
+@media screen and (min-width: 992px) {
+  .app-page .banner {
+    background-image: url(img/bg-desktop.png);
+  }
 }
 @media screen and (min-width: 992px) {
   .app-page .banner {
