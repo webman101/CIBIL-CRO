@@ -320,7 +320,6 @@
 }
 
 .slick-active .zonecircle {
-  animation: myfirst 2s infinite;
   -webkit-animation-timing-function: linear;
   /* Chrome, Safari, Opera */
   animation-timing-function: linear;
@@ -344,13 +343,11 @@
   width: 95px;
   height: 95px;
   overflow: hidden;
-  background-image: url(img/notify.svg);
   background-position: 0px -3px;
   left: 50%;
   /* right: 0; */
   margin: auto;
   background-repeat: no-repeat;
-  background-color: #e6f3f9;
   transform: translate(-50%, -50%);
 }
 
@@ -402,5 +399,98 @@
   100% {
     background: #00a6ca;
     transform: rotate(540deg);
+  }
+}
+.progress {
+  width: 90px;
+  height: 90px;
+  font-size: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  line-height: 200px;
+  margin: 20px;
+  background-color: #e7f4fa;
+}
+.progress::after {
+  background-image: url(img/notify.svg);
+  width: 85px;
+  height: 85px;
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: -3px;
+  z-index: 9;
+  background-position: center;
+  background-size: contain;
+}
+
+.progress .overlay {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #e7f4fa;
+}
+
+.progress .left,
+.progress .right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #00a6ca;
+  border-radius: 100px 0px 0px 100px;
+  border-right: 0;
+  transform-origin: right;
+}
+
+.slick-active .progress .left {
+  animation: load1 4s linear forwards;
+}
+
+.slick-active .progress:nth-of-type(2) .right,
+.slick-active .progress:nth-of-type(3) .right {
+  animation: load2 4s linear forwards 4s;
+}
+
+.slick-active .progress:last-of-type .right,
+.slick-active .progress:first-of-type .right {
+  animation: load3 4s linear forwards 4s;
+}
+
+@keyframes load1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+  100% {
+    z-index: 100;
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    z-index: 100;
+    transform: rotate(180deg);
+  }
+  100% {
+    z-index: 100;
+    transform: rotate(360deg);
   }
 }/*# sourceMappingURL=style.css.map */
