@@ -189,6 +189,18 @@
 }
 .app-page .app-store img {
   max-width: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .app-page .app-store img {
+    max-width: 156px;
+    height: 52px;
+  }
+}
+.app-page .app-store a {
+  max-width: 168px;
+  height: 53px;
+  display: block;
 }
 .app-page .app-store a:first-child {
   margin-right: 25px;

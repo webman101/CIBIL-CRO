@@ -188,9 +188,18 @@
             padding: 0 25px;
         }
         img {
+            @media screen and (max-width: 992px) {
+                max-width: 156px;
+                height: 52px;
+            }
+
             max-width: 100%;
+            width: 100%;
         }
         a {
+            max-width: 168px;
+            height: 53px;
+            display: block;
             &:first-child {
                 margin-right: 25px;
             }
@@ -301,12 +310,11 @@
             background-repeat: no-repeat;
             &.slide-m-prev {
                 background-image: url(img/uparrowblue.svg);
-                    transform: rotate(180deg);
+                transform: rotate(180deg);
                 width: 27.64px;
                 cursor: pointer;
                 height: 24px;
                 &:hover {
-                   
                 }
             }
             &.slide-m-next {
