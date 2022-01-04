@@ -329,7 +329,6 @@
   transition: opacity 5s ease-in;
 }
 
-/* Standard syntax */
 @keyframes opacity {
   0% {
     transition: opacity 1s ease-in;
@@ -453,4 +452,5 @@
     z-index: 100;
     transform: rotate(360deg);
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/* Standard syntax *//*# sourceMappingURL=style.css.map */

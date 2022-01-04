@@ -323,49 +323,6 @@
     background: #00a6ca;
 }
 
-// .circle1 {
-//     position: relative;
-//     border-radius: 50%;
-//     width: 100px;
-//     height: 100px;
-//     overflow: hidden;
-// }
-
-// .slick-active .zonecircle {
-//     // animation: myfirst 2s infinite;
-//     -webkit-animation-timing-function: linear;
-//     /* Chrome, Safari, Opera */
-//     animation-timing-function: linear;
-//     animation-iteration-count: 8;
-//     position: absolute;
-//     top: 50%;
-//     left: 0px;
-//     width: 50%;
-//     background: #00a6ca;
-//     height: 50%;
-//     border: solid 1px #00a6ca;
-//     transform-origin: 100% 0%;
-//     transform: rotate(180deg);
-// }
-
-// .avatarcircle {
-//     position: absolute;
-//     /* left: 0; */
-//     top: 50%;
-//     border-radius: 50%;
-//     width: 95px;
-//     height: 95px;
-//     overflow: hidden;
-//     // background-image: url(img/notify.svg);
-//     background-position: 0px -3px;
-//     left: 50%;
-//     /* right: 0; */
-//     margin: auto;
-//     background-repeat: no-repeat;
-//     // background-color: #e6f3f9;
-//     transform: translate(-50%, -50%);
-// }
-
 .fading-text {
     transition: opacity 5s ease-in;
     // opacity: 0;
@@ -375,15 +332,6 @@
     transition: opacity 5s ease-in;
     // opacity: 0;
 }
-
-// .slick-active .fade-image {
-//     animation: opacity 1s 1s forwards;
-// }
-// .slick-active .fading-text {
-//     animation: opacity 1s 1s forwards;
-// }
-
-/* Standard syntax */
 
 @keyframes opacity {
     0% {
@@ -395,28 +343,6 @@
     }
 }
 
-// @keyframes myfirst {
-//     0% {
-//         background: #00a6ca;
-//         transform: rotate(180deg);
-//     }
-//     25% {
-//         background: #00a6ca;
-//         transform: rotate(270deg);
-//     }
-//     50% {
-//         background: #00a6ca;
-//         transform: rotate(360deg);
-//     }
-//     75% {
-//         background: #00a6ca;
-//         transform: rotate(450deg);
-//     }
-//     100% {
-//         background: #00a6ca;
-//         transform: rotate(540deg);
-//     }
-// }
 .progress {
     width: 70px;
     height: 70px;
@@ -552,3 +478,76 @@
         transform: rotate(360deg);
     }
 }
+// @keyframes myfirst {
+//     0% {
+//         background: #00a6ca;
+//         transform: rotate(180deg);
+//     }
+//     25% {
+//         background: #00a6ca;
+//         transform: rotate(270deg);
+//     }
+//     50% {
+//         background: #00a6ca;
+//         transform: rotate(360deg);
+//     }
+//     75% {
+//         background: #00a6ca;
+//         transform: rotate(450deg);
+//     }
+//     100% {
+//         background: #00a6ca;
+//         transform: rotate(540deg);
+//     }
+// }
+
+// .slick-active .fade-image {
+//     animation: opacity 1s 1s forwards;
+// }
+// .slick-active .fading-text {
+//     animation: opacity 1s 1s forwards;
+// }
+
+/* Standard syntax */
+// .circle1 {
+//     position: relative;
+//     border-radius: 50%;
+//     width: 100px;
+//     height: 100px;
+//     overflow: hidden;
+// }
+
+// .slick-active .zonecircle {
+//     // animation: myfirst 2s infinite;
+//     -webkit-animation-timing-function: linear;
+//     /* Chrome, Safari, Opera */
+//     animation-timing-function: linear;
+//     animation-iteration-count: 8;
+//     position: absolute;
+//     top: 50%;
+//     left: 0px;
+//     width: 50%;
+//     background: #00a6ca;
+//     height: 50%;
+//     border: solid 1px #00a6ca;
+//     transform-origin: 100% 0%;
+//     transform: rotate(180deg);
+// }
+
+// .avatarcircle {
+//     position: absolute;
+//     /* left: 0; */
+//     top: 50%;
+//     border-radius: 50%;
+//     width: 95px;
+//     height: 95px;
+//     overflow: hidden;
+//     // background-image: url(img/notify.svg);
+//     background-position: 0px -3px;
+//     left: 50%;
+//     /* right: 0; */
+//     margin: auto;
+//     background-repeat: no-repeat;
+//     // background-color: #e6f3f9;
+//     transform: translate(-50%, -50%);
+// }
