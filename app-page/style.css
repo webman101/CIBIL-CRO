@@ -16,6 +16,11 @@
   order: 3;
 }
 
+@media screen and (min-width: 992px) {
+  .pt-md-5 {
+    margin-top: 90px;
+  }
+}
 .app-page .row {
   display: flex !important;
 }
@@ -314,19 +319,21 @@
   overflow: hidden;
 }
 
-.zonecircle {
-  animation: myfirst 1s infinite;
+.slick-active .zonecircle {
+  animation: myfirst 2s infinite;
   -webkit-animation-timing-function: linear;
   /* Chrome, Safari, Opera */
   animation-timing-function: linear;
+  animation-iteration-count: 8;
   position: absolute;
   top: 50%;
   left: 0px;
   width: 50%;
+  background: #00a6ca;
   height: 50%;
   border: solid 1px #00a6ca;
   transform-origin: 100% 0%;
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }
 
 .avatarcircle {
@@ -337,8 +344,8 @@
   width: 95px;
   height: 95px;
   overflow: hidden;
-  background-image: url(/img/notify.svg);
-  background-position: center;
+  background-image: url(img/notify.svg);
+  background-position: 0px -3px;
   left: 50%;
   /* right: 0; */
   margin: auto;
@@ -347,33 +354,53 @@
   transform: translate(-50%, -50%);
 }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes myfirst {
+.fading-text {
+  transition: opacity 5s ease-in;
+  opacity: 0;
+}
+
+.fade-image {
+  transition: opacity 5s ease-in;
+  opacity: 0;
+}
+
+.slick-active .fade-image {
+  animation: opacity 2s 2s forwards;
+}
+
+.slick-active .fading-text {
+  animation: opacity 2s 1s forwards;
+}
+
+/* Standard syntax */
+@keyframes opacity {
   0% {
-    background: #00a6ca;
-    transform: rotate(0deg);
-  }
-  50% {
-    background: #00a6ca;
-    transform: rotate(180deg);
+    transition: opacity 5s ease-in;
+    opacity: 0;
   }
   100% {
-    background: #00a6ca;
-    transform: rotate(359deg);
+    opacity: 1;
   }
 }
-/* Standard syntax */
 @keyframes myfirst {
   0% {
     background: #00a6ca;
-    transform: rotate(0deg);
+    transform: rotate(180deg);
+  }
+  25% {
+    background: #00a6ca;
+    transform: rotate(270deg);
   }
   50% {
     background: #00a6ca;
-    transform: rotate(180deg);
+    transform: rotate(360deg);
+  }
+  75% {
+    background: #00a6ca;
+    transform: rotate(450deg);
   }
   100% {
     background: #00a6ca;
-    transform: rotate(359deg);
+    transform: rotate(540deg);
   }
 }/*# sourceMappingURL=style.css.map */
