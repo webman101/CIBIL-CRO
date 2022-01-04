@@ -300,14 +300,11 @@
     background-repeat: no-repeat;
   }
   .slider-controls .slick-arrow.slide-m-prev {
-    background-image: url(img/uparrow.svg);
+    background-image: url(img/uparrowblue.svg);
+    transform: rotate(180deg);
     width: 27.64px;
     cursor: pointer;
     height: 24px;
-  }
-  .slider-controls .slick-arrow.slide-m-prev:hover {
-    background-image: url(img/uparrowblue.svg);
-    transform: rotate(180deg);
   }
   .slider-controls .slick-arrow.slide-m-next {
     width: 27.64px;
