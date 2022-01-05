@@ -158,7 +158,7 @@
   }
 }
 .banner .description {
-  font-family: "Intro", Regular;
+  font-family: "Intro", book;
 
   font-size: 24px;
   line-height: 30px;
@@ -866,7 +866,6 @@
   display: none;
 } /*# sourceMappingURL=style-2.css.map */
 .disclaimer {
-  padding: 40px 30px;
   text-align: center;
   max-width: 875px;
   font-family: "Intro", Book;
@@ -881,4 +880,14 @@
   /* Accent Black */
 
   color: #2c2c2c;
+}
+@media screen and (max-width: 992px) {
+  .disclaimer {
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .disclaimer {
+    padding: 40px 30px;
+  }
 }
