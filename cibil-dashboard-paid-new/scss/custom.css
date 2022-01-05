@@ -6232,4 +6232,8 @@ input {
 
 .credit-summary .alerts {
   height: 108px;
+}
+
+.upgrade-page footer a:hover {
+  color: #F16E00;
 }/*# sourceMappingURL=custom.css.map */
