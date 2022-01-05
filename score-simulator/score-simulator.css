@@ -55,7 +55,7 @@
   background: #f16e00;
   border-radius: 25px;
   font-family: "Intro", Regular;
-  font-style: normal;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
@@ -106,7 +106,7 @@
 
 .blue-title {
   font-family: "Intro", Bold;
-  font-style: normal;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -144,7 +144,7 @@
 }
 .banner .title {
   font-family: "Intro", Bold;
-  font-style: normal;
+
   font-weight: bold;
   font-size: 40px;
   line-height: 44px;
@@ -159,8 +159,7 @@
 }
 .banner .description {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 24px;
   line-height: 30px;
   color: #2c2c2c;
@@ -201,7 +200,7 @@
 
 .section-title {
   font-family: "Intro", Bold;
-  font-style: normal;
+
   font-weight: bold;
   line-height: 24px;
   text-align: center;
@@ -259,8 +258,7 @@
 .col-grid .grid p {
   max-width: 400px;
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -367,7 +365,7 @@
 }
 .interstial-container .column .coumn-head .plan-name {
   font-family: "Intro", Regular;
-  font-style: normal;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -377,7 +375,7 @@
 }
 .interstial-container .column .coumn-head .plan-duration {
   font-family: "Intro", Bold;
-  font-style: normal;
+
   font-weight: bold;
   font-size: 24px;
   margin: 10px 0 10px;
@@ -386,7 +384,7 @@
 }
 .interstial-container .column .coumn-head .plan-price {
   font-family: "Intro", Regular;
-  font-style: normal;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -457,8 +455,7 @@
   background: #fcd800;
   height: 30px;
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 14px;
   line-height: 24px;
   display: flex;
@@ -530,7 +527,7 @@
 
 .plan-title {
   font-family: "Intro", Regular;
-  font-style: normal;
+
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -683,8 +680,7 @@
 }
 .nav li .plan-name {
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -693,7 +689,7 @@
 }
 .nav li h3 {
   font-family: "Intro", Bold;
-  font-style: normal;
+
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -705,8 +701,7 @@
 }
 .nav li h4 {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 16px;
   margin-bottom: 10px;
   line-height: 24px;
@@ -716,8 +711,7 @@
 }
 .nav li h6 {
   font-family: "Intro", Regular;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 9px;
@@ -733,8 +727,7 @@
   justify-content: center;
   margin-left: -16.1px;
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 14px;
   line-height: 24px;
   display: flex;
@@ -775,8 +768,7 @@
   min-height: 0;
   margin-bottom: 14px;
   font-family: "Intro", Book;
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 14px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
@@ -866,4 +858,21 @@
 }
 .orange-theme .yellow-section {
   display: none;
-}/*# sourceMappingURL=style-2.css.map */
+} /*# sourceMappingURL=style-2.css.map */
+.disclaimer {
+  padding: 40px 30px;
+  text-align: center;
+  max-width: 875px;
+  font-family: "Intro", Book;
+margin: auto;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  /* Accent Black */
+
+  color: #2c2c2c;
+}
