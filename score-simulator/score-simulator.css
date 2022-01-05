@@ -270,7 +270,13 @@
     padding: 0;
   }
 }
+@media screen and (max-width: 992px) {
+  .row2 {
+    margin: auto;
 
+    margin-top: 0;
+  }
+}
 @media screen and (min-width: 992px) {
   .row2 {
     margin: auto;
@@ -864,7 +870,7 @@
   text-align: center;
   max-width: 875px;
   font-family: "Intro", Book;
-margin: auto;
+  margin: auto;
   font-size: 14px;
   line-height: 24px;
   /* or 171% */
