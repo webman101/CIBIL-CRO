@@ -2575,8 +2575,6 @@ input.orange-button {
 }
 
 .main-dashboard {
-
-
 	a {
 		outline: none !important;
 	}
@@ -4967,7 +4965,7 @@ input.orange-button {
 		top: 7px !important;
 	} /*# sourceMappingURL=custom.css.map */
 }
-.offers-page{
+.offers-page {
 	* {
 		margin: 0;
 		padding: 0;
@@ -4975,12 +4973,12 @@ input.orange-button {
 		scroll-behavior: smooth;
 		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	}
-	
+
 	body {
 		font-family: "Intro";
 		scroll-behavior: smooth;
 	}
-	
+
 	a {
 		outline: none !important;
 	}
@@ -5028,7 +5026,7 @@ input.orange-button {
 			font-size: 24px !important;
 		}
 	}
-	
+
 	@media screen and (min-width: 992px) {
 		.mr-md-15 {
 			margin-right: 15px;
@@ -5087,7 +5085,7 @@ input.orange-button {
 			background-color: #ededed;
 		}
 	}
-	
+
 	.mb {
 		&-0 {
 			margin-bottom: 0 !important;
@@ -5117,7 +5115,7 @@ input.orange-button {
 			margin-bottom: 60px !important;
 		}
 	}
-	
+
 	.mt {
 		&-0 {
 			margin-top: 0 !important;
@@ -5144,7 +5142,7 @@ input.orange-button {
 			margin-top: 60px !important;
 		}
 	}
-	
+
 	@media screen and (min-width: 992px) {
 		.mt-md-19 {
 			margin-top: 19px !important;
@@ -5296,17 +5294,17 @@ input.orange-button {
 	}
 	.text-button {
 		font-family: "Intro", Bold;
-	
+
 		font-weight: bold;
 		font-size: 16px;
 		line-height: 24px;
-	
+
 		display: flex;
 		align-items: center;
 		letter-spacing: 0.02em;
 		text-decoration-line: underline;
 		padding: 0 8px;
-	
+
 		color: #2c2c2c;
 	}
 	.border-radius-6px {
@@ -5314,38 +5312,38 @@ input.orange-button {
 	}
 	.title-light {
 		font-family: "Intro", Book;
-	
+
 		line-height: 24px;
 		letter-spacing: 0.02em;
 		color: #2c2c2c;
 	}
 	.para-intro-regular-2c {
 		font-family: "Intro", Regular;
-	
+
 		font-size: 16px;
 		line-height: 24px;
-	
+
 		letter-spacing: 0.02em;
-	
+
 		color: #2c2c2c;
 	}
 	.para-intro-book-70 {
 		font-family: "Intro", Book;
-	
+
 		font-size: 14px;
 		line-height: 24px;
-	
+
 		letter-spacing: 0.02em;
-	
+
 		color: #707070;
 	}
-	
+
 	.m-visible {
 		@media (min-width: 992px) {
 			display: none !important;
 		}
 	}
-	
+
 	.m-hidden {
 		@media (max-width: 991px) {
 			display: none !important;
@@ -5363,7 +5361,7 @@ input.orange-button {
 	.brand-blue {
 		background-color: $brand-blue;
 	}
-	
+
 	@mixin font-intro-regular {
 		font-family: "Intro", Regular;
 	}
@@ -5372,7 +5370,7 @@ input.orange-button {
 	}
 	@mixin font-intro-bold {
 		font-family: "Intro", bold;
-	
+
 		font-weight: bold;
 	}
 	.text-intro-bold {
@@ -5386,16 +5384,16 @@ input.orange-button {
 	////////////////////@at-root text
 	.para-intro-book-70 {
 		font-family: "Intro", Book;
-	
+
 		line-height: 24px;
-	
+
 		letter-spacing: 0.02em;
-	
+
 		color: #707070;
 	}
 	.text-light {
 		font-family: "Intro", Book;
-	
+
 		font-size: 14px;
 		line-height: 24px;
 		letter-spacing: 0.02em;
@@ -5403,23 +5401,23 @@ input.orange-button {
 	}
 	.text-blue {
 		font-family: "Intro" Bold;
-	
+
 		font-weight: bold;
-	
+
 		line-height: 24px;
-	
+
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
-	
+
 		color: #00a6ca;
 	}
 	.para-intro-regular {
 		font-family: "Intro", Regular;
-	
+
 		line-height: 30px;
-	
+
 		text-align: center;
-	
+
 		color: #242424;
 	}
 	@media screen and (min-width: 992px) {
@@ -5473,7 +5471,7 @@ input.orange-button {
 			padding-left: 40px;
 		}
 	}
-	
+
 	@media screen and (min-width: 992px) {
 		.mt-md-0 {
 			margin-top: 0 !important;
@@ -5485,7 +5483,7 @@ input.orange-button {
 			padding-bottom: 20px !important;
 		}
 	}
-	
+
 	.pl-60 {
 		@media screen and (min-width: 992px) {
 			padding-left: 60px;
@@ -5501,7 +5499,7 @@ input.orange-button {
 		border-bottom: 1px solid #dde0ef;
 	}
 	///////////////// button
-	
+
 	.button-icon {
 		height: 50px;
 		line-height: 50px;
@@ -5523,20 +5521,20 @@ input.orange-button {
 		}
 		span {
 			font-family: "Intro", Regular;
-	
+
 			line-height: 24px;
-	
+
 			display: flex;
 			align-items: center;
 			letter-spacing: 0.02em;
-	
+
 			color: #2c2c2c;
 		}
 	}
 	.button-icon-outline {
 		background: #ffffff;
 		/* Secondary Orange */
-	
+
 		border: 1px solid #f16e00;
 		box-sizing: border-box;
 		border-radius: 25px;
@@ -5550,7 +5548,7 @@ input.orange-button {
 		width: calc(316px / 2);
 		display: block;
 		margin: auto;
-	
+
 		position: fixed;
 		top: 20px;
 		left: 50px;
@@ -5574,7 +5572,7 @@ input.orange-button {
 			width: 74%;
 			height: 80%;
 			z-index: 0;
-	
+
 			background: #fff;
 		}
 		.left-column {
@@ -5583,7 +5581,7 @@ input.orange-button {
 			padding-top: 60px;
 			background-color: #006685;
 			width: 20%;
-	
+
 			@media screen and (max-width: 992px) {
 				display: none;
 			}
@@ -5593,7 +5591,7 @@ input.orange-button {
 			z-index: 2;
 			padding-top: 60px;
 			background: #f6f7fc;
-	
+
 			@media screen and (min-width: 992px) {
 				padding-left: 60px;
 				width: 80%;
@@ -5615,11 +5613,11 @@ input.orange-button {
 		list-style: none;
 		position: relative;
 		padding-left: 0;
-	
+
 		.active-tab {
 			position: relative;
 			color: black;
-	
+
 			&:after {
 				width: 100%;
 				height: 2px;
@@ -5634,9 +5632,9 @@ input.orange-button {
 			display: flex;
 			align-items: center;
 			@include font-intro-regular;
-	
+
 			font-weight: 400;
-	
+
 			width: 100%;
 			text-align: left;
 			padding-left: 42px;
@@ -5654,13 +5652,13 @@ input.orange-button {
 			}
 		}
 	}
-	
+
 	.tabs-content {
 		margin: 20px;
 		padding: 0;
 		list-style: none;
 	}
-	
+
 	.animated-chart-1 {
 		height: 477px;
 		background: #ffffff;
@@ -5671,7 +5669,7 @@ input.orange-button {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-	
+
 		.chart1 {
 			width: 292px;
 			height: 198px;
@@ -5691,19 +5689,19 @@ input.orange-button {
 				display: flex;
 				align-items: center;
 			}
-	
+
 			a {
 				display: inline-flex;
 				font-family: "Intro", Regular;
-	
+
 				font-weight: bold;
-	
+
 				line-height: 16px;
-	
+
 				text-align: right;
 				letter-spacing: 0.02em;
 				text-decoration-line: underline;
-	
+
 				color: #2c2c2c;
 				margin-left: 14px;
 				margin-right: 6px;
@@ -5717,7 +5715,7 @@ input.orange-button {
 	}
 	.f-24-title {
 		font-family: "Intro", bold;
-	
+
 		font-weight: bold;
 		font-size: 24px;
 		line-height: 30px;
@@ -5726,7 +5724,7 @@ input.orange-button {
 	}
 	.link-16 {
 		font-family: "Intro", Regular;
-	
+
 		line-height: 16px;
 		display: flex;
 		align-items: center;
@@ -5739,7 +5737,7 @@ input.orange-button {
 		@media screen and (min-width: 992px) {
 			height: 595px;
 		}
-	
+
 		background-color: white;
 	}
 	.column-slider {
@@ -5753,7 +5751,7 @@ input.orange-button {
 					content: "";
 					position: absolute;
 					height: 80%;
-	
+
 					width: 60px;
 					background: linear-gradient(
 						270deg,
@@ -5793,12 +5791,12 @@ input.orange-button {
 			.slick-slider {
 				margin: 0 -15px;
 			}
-	
+
 			.slick-slide {
 				margin-right: 10px;
 				margin-left: 10px;
 			}
-	
+
 			.slick-list {
 				padding: 0 20% 0 0 !important;
 			}
@@ -5832,17 +5830,17 @@ input.orange-button {
 		background-repeat: no-repeat;
 		h6 {
 			font-family: "Intro", Regular;
-	
+
 			font-size: 24px;
 			line-height: 30px;
 			color: #2c2c2c;
 		}
 		p {
 			font-family: "Intro", Book;
-	
+
 			font-size: 14px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
 			margin-top: 30px;
 			color: #000000;
@@ -5851,63 +5849,63 @@ input.orange-button {
 			margin-right: auto;
 		}
 	}
-	
+
 	.multiple-items-slider {
 		@media screen and (min-width: 992px) {
 			margin-top: 50px;
 			margin-left: 66px;
 		}
-	
+
 		.slider-item {
 			background: #006685;
 			box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.21);
 			border-radius: 8px;
 			@media screen and (min-width: 992px) {
 			}
-	
+
 			padding: 30px;
 			width: 100%;
 			h6 {
 				font-family: "Intro", Bold;
-	
+
 				font-weight: bold;
-	
+
 				line-height: 24px;
-	
+
 				letter-spacing: 0.02em;
 				text-transform: uppercase;
-	
+
 				color: #ffffff;
 				margin: 10px 0;
 			}
 			p {
 				font-family: "Intro", Regular;
-	
+
 				line-height: 24px;
-	
+
 				letter-spacing: 0.02em;
-	
+
 				color: #ffffff;
 				margin-bottom: 40px;
 			}
 			a {
 				font-family: "Intro", Bold;
-	
+
 				font-weight: bold;
-	
+
 				line-height: 24px;
-	
+
 				letter-spacing: 0.02em;
 				text-decoration-line: underline;
-	
+
 				color: #ffffff;
 			}
 		}
-	
+
 		.slick-slide {
 			margin: 0 10px;
 		}
-	
+
 		.slick-list {
 			margin: 0 -10px;
 		}
@@ -5916,34 +5914,34 @@ input.orange-button {
 	//     .slick-slider {
 	//         margin: 0 -15px;
 	//     }
-	
+
 	//     .slick-slide {
 	//         margin-right: 10px;
 	//         margin-left: 10px;
 	//     }
 	// }
-	
+
 	.alerts {
 		background: #f9f9f9;
 		border-radius: 4px;
 		padding: 10px;
 		.date {
 			font-family: "Intro", Book;
-	
+
 			font-size: 14px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
-	
+
 			color: #2c2c2c;
 		}
 		.cibilalert {
 			font-family: "Intro", Bold;
-	
+
 			font-weight: bold;
 			font-size: 16px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
 		}
 	}
@@ -5952,20 +5950,20 @@ input.orange-button {
 		background: #fafafa;
 		border-radius: 4px;
 		padding: 16px;
-	
+
 		@media screen and (max-width: 992px) {
 			display: flex;
 			align-items: center;
 			margin-bottom: 20px;
 		}
-	
+
 		@media screen and (min-width: 992px) {
 			padding: 30px 23px;
 		}
-	
+
 		img {
 			margin-bottom: 28px;
-	
+
 			@media screen and (max-width: 992px) {
 				margin-right: 20px;
 			}
@@ -5977,7 +5975,7 @@ input.orange-button {
 		}
 		bold {
 			font-family: "Intro", Regular;
-	
+
 			font-size: 16px;
 			line-height: 24px;
 			letter-spacing: 0.02em;
@@ -5985,14 +5983,14 @@ input.orange-button {
 		}
 		.light {
 			font-family: "Intro", Regular;
-	
+
 			font-size: 14px;
 			line-height: 24px;
-	
+
 			color: #707070;
 		}
 	}
-	
+
 	.banner-adds {
 		display: flex;
 		align-items: center;
@@ -6000,14 +5998,14 @@ input.orange-button {
 		height: 240px;
 		.adds-text {
 			font-family: "Intro", Bold;
-	
+
 			font-weight: bold;
 			font-size: 16px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
 			text-transform: uppercase;
-	
+
 			color: #dddddd;
 		}
 	}
@@ -6023,7 +6021,7 @@ input.orange-button {
 				}
 			}
 		}
-	
+
 		@media screen and (max-width: 992px) {
 			display: flex;
 			flex-wrap: wrap;
@@ -6091,7 +6089,7 @@ input.orange-button {
 			min-height: 240px;
 		}
 	}
-	
+
 	////////////////////////@at-root
 	/////////Offers
 	@media screen and (max-width: 992px) {
@@ -6159,8 +6157,8 @@ input.orange-button {
 			letter-spacing: 0.02em;
 			color: #707070;
 			&.navigation-active-tab {
-			font-family: 'Intro', Regular;
-			color: #2c2c2c;
+				font-family: "Intro", Regular;
+				color: #2c2c2c;
 			}
 		}
 		img {
@@ -6172,7 +6170,7 @@ input.orange-button {
 		align-items: center;
 		h3 {
 			font-family: "Intro", Regular;
-	
+
 			font-size: 24px;
 			@media screen and (min-width: 992px) {
 				font-size: 40px;
@@ -6185,10 +6183,10 @@ input.orange-button {
 	//////////////switch-tabs-section
 	.switching-tabs {
 		background-color: #ffffff;
-	
+
 		@media screen and (min-width: 992px) {
 		}
-	
+
 		.benefits-outer {
 			padding: 20px;
 			.row {
@@ -6225,20 +6223,20 @@ input.orange-button {
 			padding-top: 14px;
 			flex: 1;
 			border-right: 1px solid #dddddd;
-	
+
 			p {
 				font-family: "Intro", Bold;
-	
+
 				font-weight: bold;
 				font-size: 14px;
 				@media screen and (min-width: 1366px) {
 					font-size: 16px;
 				}
-	
+
 				line-height: 24px;
-	
+
 				letter-spacing: 0.02em;
-	
+
 				color: #2c2c2c;
 			}
 			&.disabled {
@@ -6264,7 +6262,7 @@ input.orange-button {
 						background-color: #00a6ca;
 					}
 				}
-	
+
 				.numb {
 					background-color: #00a6ca;
 				}
@@ -6276,12 +6274,12 @@ input.orange-button {
 			display: none;
 		}
 	}
-	
+
 	.text-color-70 {
 		color: #707070 !important;
 	}
 	.blue-dropdown-groups-section {
-		background: #00A6CA;
+		background: #00a6ca;
 		height: 60px;
 		display: flex;
 		align-items: center;
@@ -6318,7 +6316,7 @@ input.orange-button {
 		cursor: pointer;
 		white-space: nowrap;
 		font-family: "Intro", Regular;
-	
+
 		font-size: 14px;
 		line-height: 140%;
 		padding-left: 0;
@@ -6400,7 +6398,7 @@ input.orange-button {
 	}
 	.compare-row {
 		font-family: "Intro", Book;
-	
+
 		font-size: 16px;
 		line-height: 24px;
 		display: flex;
@@ -6416,10 +6414,10 @@ input.orange-button {
 	.input-lists {
 		@media screen and (min-width: 992px) {
 			display: flex;
-	
+
 			padding-left: 20px;
 		}
-	
+
 		& > div {
 			flex: 1;
 			margin-right: 20px;
@@ -6451,7 +6449,7 @@ input.orange-button {
 		}
 		input {
 			background: #ffffff;
-	
+
 			border: 1px solid #acacac;
 			box-sizing: border-box;
 			height: 50px;
@@ -6459,12 +6457,12 @@ input.orange-button {
 			padding-left: 30px;
 			position: relative;
 			font-family: "Intro", Book;
-	
+
 			font-size: 16px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
-	
+
 			color: #000000;
 			& + span {
 				position: absolute;
@@ -6473,23 +6471,23 @@ input.orange-button {
 				margin: auto;
 			}
 		}
-	
+
 		.dd-button {
 			color: #2c2c2c;
 			line-height: 50px;
 			height: 50px;
-	
+
 			padding: 0;
 			padding-left: 15px;
 		}
 		p {
 			font-family: "Intro", Regular;
-	
+
 			font-size: 16px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
-	
+
 			color: #000000;
 			margin-bottom: 5px;
 		}
@@ -6509,7 +6507,7 @@ input.orange-button {
 		padding-left: 20px;
 		position: relative;
 		width: 230px;
-	
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -6548,7 +6546,7 @@ input.orange-button {
 		padding-right: 55px;
 		border-bottom: 1px solid #dddddd;
 		padding-bottom: 20px;
-	
+
 		a {
 			position: relative;
 			&::after {
@@ -6567,11 +6565,11 @@ input.orange-button {
 				border-left: 0;
 			}
 		}
-	
+
 		.form-group {
 			display: block;
 		}
-	
+
 		.form-group input {
 			padding: 0;
 			height: initial;
@@ -6580,7 +6578,7 @@ input.orange-button {
 			display: none;
 			cursor: pointer;
 		}
-	
+
 		.form-group label {
 			position: relative;
 			cursor: pointer;
@@ -6595,12 +6593,12 @@ input.orange-button {
 			width: 16px;
 			height: 16px;
 			background: #f9f9f9;
-	
+
 			box-sizing: border-box;
 			border-radius: 2px;
 			overflow: hidden;
 		}
-	
+
 		.form-group input:checked + label:before {
 			content: "";
 			-webkit-appearance: none;
@@ -6619,7 +6617,7 @@ input.orange-button {
 			margin: auto;
 			padding: 0;
 		}
-	
+
 		.form-group input:checked + label:after {
 			content: "";
 			display: block;
@@ -6639,7 +6637,7 @@ input.orange-button {
 			border: 0;
 		}
 	}
-	
+
 	.benefits-list {
 		padding: 0;
 		margin: 0;
@@ -6675,7 +6673,7 @@ input.orange-button {
 			.dropdown {
 				background: #ffffff;
 				width: 100%;
-	
+
 				border: 1px solid #00a6ca;
 				box-sizing: border-box;
 				border-radius: 6px;
@@ -6726,7 +6724,7 @@ input.orange-button {
 			cursor: pointer;
 			white-space: nowrap;
 			font-family: "Intro", Regular;
-	
+
 			font-size: 14px;
 			line-height: 140%;
 			padding-left: 20px;
@@ -6838,31 +6836,31 @@ input.orange-button {
 				}
 			}
 		}
-	
+
 		.para-intro-regular-2c {
 			font-family: "Intro", Bold;
-	
+
 			font-weight: bold;
 			font-size: 16px;
 			line-height: 24px;
-	
+
 			display: flex;
 			align-items: center;
 			letter-spacing: 0.02em;
-	
+
 			color: #2c2c2c;
 		}
 		p {
 			font-size: 14px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
-	
+
 			color: #2c2c2c;
 		}
 	}
 	////////////////////////@at-root
-	
+
 	.largetabs {
 		#largetabs-nav {
 			display: flex;
@@ -6876,20 +6874,20 @@ input.orange-button {
 				padding-top: 14px;
 				flex: 1;
 				border-right: 1px solid #dddddd;
-	
+
 				p {
 					font-family: "Intro", Bold;
-	
+
 					font-weight: bold;
 					font-size: 14px;
 					@media screen and (min-width: 1366px) {
 						font-size: 16px;
 					}
-	
+
 					line-height: 24px;
-	
+
 					letter-spacing: 0.02em;
-	
+
 					color: #2c2c2c;
 				}
 				&.disabled {
@@ -6930,7 +6928,7 @@ input.orange-button {
 			flex-direction: column-reverse;
 			padding: 20px;
 		}
-	
+
 		@media screen and (min-width: 992px) {
 			padding-left: 20%;
 			position: relative;
@@ -6946,7 +6944,7 @@ input.orange-button {
 			}
 		}
 	}
-	
+
 	input:focus {
 		outline: none;
 	}
@@ -6970,10 +6968,10 @@ input.orange-button {
 			@media screen and (min-width: 992px) {
 				justify-content: space-between;
 			}
-	
+
 			.compare-grouped {
 				position: relative;
-	
+
 				display: flex;
 				width: 100%;
 				@media screen and (max-width: 992px) {
@@ -6983,7 +6981,7 @@ input.orange-button {
 						margin-top: 8px;
 					}
 				}
-	
+
 				.filled {
 					position: relative;
 					z-index: 1;
@@ -6991,7 +6989,7 @@ input.orange-button {
 						align-items: center;
 						// flex: 1;
 						justify-content: space-between;
-	
+
 						min-width: 251px;
 						padding: 4px;
 						padding-right: 14px;
@@ -6999,14 +6997,14 @@ input.orange-button {
 					@media screen and (max-width: 400px) {
 						height: 90px !important;
 					}
-	
+
 					@media screen and (max-width: 992px) {
 						height: 67px;
 						border: 1px solid #707070;
 						box-sizing: border-box;
 						border-radius: 4px;
 						padding: 0;
-	
+
 						.offer-image {
 							max-width: 40px;
 						}
@@ -7020,14 +7018,14 @@ input.orange-button {
 					}
 					span {
 						font-family: "Intro", Book;
-	
+
 						font-size: 16px;
 						line-height: 24px;
-	
+
 						display: flex;
 						align-items: center;
 						letter-spacing: 0.02em;
-	
+
 						color: #2c2c2c;
 						margin: 0 13px 0 10px;
 					}
@@ -7035,7 +7033,7 @@ input.orange-button {
 					padding: 14px;
 					&:nth-child(-n + 3) {
 						display: flex;
-	
+
 						&.filled {
 							@media screen and (max-width: 992px) {
 								flex-direction: column;
@@ -7067,7 +7065,7 @@ input.orange-button {
 		right: 0;
 		display: flex;
 		background-color: transparent !important;
-	
+
 		& > div {
 			position: relative;
 			border: 1px dashed #006685;
@@ -7082,7 +7080,7 @@ input.orange-button {
 				min-width: 245px;
 				height: 50px;
 			}
-	
+
 			background-color: #fff;
 			font-size: 14px;
 			line-height: 24px;
@@ -7101,13 +7099,13 @@ input.orange-button {
 				padding: 4px;
 				padding-right: 14px;
 			}
-	
+
 			@media screen and (max-width: 992px) {
 				border: 1px solid #707070;
 				box-sizing: border-box;
 				border-radius: 4px;
 				padding: 8px;
-	
+
 				.offer-image {
 					max-width: 62px;
 				}
@@ -7166,11 +7164,11 @@ input.orange-button {
 	.modal-wrapper {
 		position: absolute;
 		z-index: 9999;
-	
+
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-	
+
 		background-color: #fff;
 		box-shadow: 0 0 1.5em hsla(0, 0%, 0%, 0.35);
 		width: 90%;
@@ -7185,7 +7183,7 @@ input.orange-button {
 		// transform: translateY(-10%);
 		opacity: 0;
 	}
-	
+
 	.modal-content {
 		> * {
 			&:first-child {
@@ -7230,34 +7228,34 @@ input.orange-button {
 		padding: 30px;
 		h5 {
 			font-family: "Intro", Regular;
-	
+
 			font-size: 24px;
 			line-height: 30px;
-	
+
 			color: #2c2c2c;
 			margin-bottom: 30px;
 		}
 		h6 {
 			font-family: "Intro", Bold;
-	
+
 			font-weight: bold;
 			font-size: 16px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
 			text-transform: uppercase;
 			margin-bottom: 10px;
-	
+
 			color: #00a6ca;
 		}
 		p {
 			font-family: "Intro", Book;
-	
+
 			font-size: 16px;
 			line-height: 24px;
-	
+
 			letter-spacing: 0.02em;
-	
+
 			color: #2c2c2c;
 		}
 		a {
@@ -7267,7 +7265,7 @@ input.orange-button {
 	.list {
 		font-family: sans-serif;
 	}
-	
+
 	input {
 		border-radius: 5px;
 		padding: 7px 14px;
@@ -7369,7 +7367,7 @@ input.orange-button {
 			}
 			display: flex;
 			align-items: center;
-	
+
 			border: 1px solid #dde0ef;
 			box-sizing: border-box;
 			border-radius: 6px;
@@ -7388,13 +7386,13 @@ input.orange-button {
 		}
 		p {
 			font-family: "Intro", Regular;
-	
+
 			font-size: 14px;
 			line-height: 24px;
-	
+
 			display: flex;
 			align-items: center;
-	
+
 			color: #2c2c2c;
 			margin-bottom: 8px;
 			margin-top: 22px;
@@ -7406,7 +7404,7 @@ input.orange-button {
 	.times {
 		cursor: pointer;
 	}
-	
+
 	.boxes {
 		list-style: none;
 		display: flex;
@@ -7414,7 +7412,7 @@ input.orange-button {
 		padding: 0;
 		margin: 0 -10px;
 	}
-	
+
 	.boxes li {
 		padding: 0 10px;
 		margin-top: 20px;
@@ -7427,7 +7425,7 @@ input.orange-button {
 		transform: rotateZ(225deg);
 		top: 4px;
 	}
-	
+
 	.mobileslider {
 		width: 100%;
 		background-color: transparent;
@@ -7469,5 +7467,4 @@ input.orange-button {
 			top: 7px !important;
 		}
 	}
-	
 }

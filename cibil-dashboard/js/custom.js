@@ -88,19 +88,12 @@ $('.benefits-outer').slideUp();
 
 $('.offer-details').click(function(e) {
     e.preventDefault();
-    // $(this).next().filter('.benefits-outer').slideToggle();
     $(this).toggleClass('reverse-arrow')
-
     $(this).closest('.itemsBox').siblings('.benefits-outer').slideToggle();
-    // $('.benefits-outer').slideDOwn();
 });
 $('.offer-details').click(function(e) {
     e.preventDefault();
-    // $(this).next().filter('.benefits-outer').slideToggle();
-
-    $(this).toggleClass('reverse-arrow')
     $(this).closest('.mobile-grid').siblings('.benefits-outer').slideToggle();
-    // $('.benefits-outer').slideDOwn();
 });
 var options = {
     valueNames: ['name', 'Amount', 'percent', 'annual-fees']
@@ -248,8 +241,8 @@ $(document).on("click", ".radio-input", function() {
 });
 
 
-var sho = $("#tab1 .list>div").length;
-$('.numb').text(sho);
+// var sho = $("#tab1 .list>div").length;
+// $('.numb').text(sho);
 
 
 $(document).ready(function() {
