@@ -5,6 +5,13 @@
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Intro", book;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 body {
     font-family: "Intro";
@@ -82,9 +89,9 @@ h6 {
         color: rgba(0, 0, 0, 0.75);
     }
     &-blue {
-        color: #00A6CA;
+        color: #00a6ca;
         &:hover {
-            color: #00A6CA;
+            color: #00a6ca;
         }
     }
     &-white {
@@ -389,7 +396,7 @@ h6 {
 .border-1 {
     border: 1px solid #dde0ef;
 }
-$brand-blue: #00A6CA;
+$brand-blue: #00a6ca;
 .brand-blue {
     background-color: $brand-blue;
 }
@@ -614,7 +621,7 @@ $brand-blue: #00A6CA;
         position: relative;
         z-index: 2;
         padding-top: 60px;
-        background-color: #00A6CA;
+        background-color: #00a6ca;
         width: 20%;
 
         @media screen and (max-width: 992px) {
@@ -682,7 +689,7 @@ $brand-blue: #00A6CA;
             margin-right: 20px;
         }
         &.active-tab {
-            background: #00A6CA;
+            background: #00a6ca;
             color: #fcd833;
         }
     }
@@ -915,7 +922,7 @@ $brand-blue: #00A6CA;
     }
 
     .slider-item {
-        background: #00A6CA;
+        background: #00a6ca;
         box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.21);
         border-radius: 8px;
         @media screen and (min-width: 992px) {
@@ -1130,7 +1137,7 @@ $brand-blue: #00A6CA;
         margin: 0 5px;
         cursor: pointer;
         &.slick-active {
-            background: #00A6CA;
+            background: #00a6ca;
         }
         button {
             display: none;
@@ -1235,6 +1242,13 @@ $brand-blue: #00A6CA;
         color: #2c2c2c;
         margin-left: 16px;
     }
+    img {
+        @media screen and (max-width: 992px) {
+            width: 36px;
+            height: 36px;
+            margin-right: 0 !important;
+        }
+    }
 }
 //////////////switch-tabs-section
 .switching-tabs {
@@ -1335,7 +1349,7 @@ $brand-blue: #00A6CA;
     color: #707070 !important;
 }
 .blue-dropdown-groups-section {
-    background: #00A6CA;
+    background: #00a6ca;
     height: 60px;
     display: flex;
     align-items: center;
@@ -1823,7 +1837,7 @@ $brand-blue: #00A6CA;
         padding: 0;
         margin: 2px 0 0 0;
         list-style-type: none;
-        background: #00A6CA;
+        background: #00a6ca;
         box-shadow: 0px 0px 15px -5px #282828;
         li {
             padding: 10px 20px;
@@ -1992,8 +2006,8 @@ footer {
             left: 0;
             height: 110%;
             width: 20%;
-            background-color: #00A6CA;
-            border-top: 1px solid #00A6CA;
+            background-color: #00a6ca;
+            border-top: 1px solid #00a6ca;
         }
     }
 }
@@ -2121,7 +2135,7 @@ input:focus {
 
     & > div {
         position: relative;
-        border: 1px dashed #00A6CA;
+        border: 1px dashed #00a6ca;
         box-sizing: border-box;
         border-radius: 4px;
         height: max-content;
@@ -2629,7 +2643,7 @@ input {
             position: relative;
             z-index: 2;
             padding-top: 60px;
-            background-color: #00A6CA;
+            background-color: #00a6ca;
             width: 20%;
 
             @media screen and (max-width: 992px) {
@@ -2694,7 +2708,7 @@ input {
                 margin-right: 20px;
             }
             &.active-tab {
-                background: #00A6CA;
+                background: #00a6ca;
                 color: #fcd833;
             }
         }
@@ -2874,8 +2888,8 @@ input {
                 left: 0;
                 height: 110%;
                 width: 20%;
-                background-color: #00A6CA;
-                border-top: 1px solid #00A6CA;
+                background-color: #00a6ca;
+                border-top: 1px solid #00a6ca;
             }
         }
         a {
@@ -3081,14 +3095,6 @@ input {
     }
 }
 .accounts-paid-page {
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: "Intro", book;
-        scroll-behavior: smooth;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    }
-
     body {
         font-family: "Intro";
         scroll-behavior: smooth;
@@ -3277,7 +3283,7 @@ input {
             position: relative;
             z-index: 2;
             padding-top: 60px;
-            background-color: #00A6CA;
+            background-color: #00a6ca;
             width: 20%;
             @media screen and (max-width: 992px) {
                 display: none;
@@ -3376,7 +3382,7 @@ input {
                 margin-right: 20px;
             }
             &.active-tab {
-                background: #00A6CA;
+                background: #00a6ca;
                 color: #fcd833;
             }
         }
@@ -4373,8 +4379,8 @@ input {
                 left: 0;
                 height: 110%;
                 width: 20%;
-                background-color: #00A6CA;
-                border-top: 1px solid #00A6CA;
+                background-color: #00a6ca;
+                border-top: 1px solid #00a6ca;
             }
         }
         a {
@@ -4390,6 +4396,9 @@ input {
                 margin: 0 15px;
             }
             color: #2c2c2c;
+            &:hover{
+                color: #F16E00;
+            }
         }
     }
 
@@ -4641,7 +4650,7 @@ input {
             position: relative;
             z-index: 2;
             padding-top: 60px;
-            background-color: #00A6CA;
+            background-color: #00a6ca;
             width: 20%;
 
             @media screen and (max-width: 992px) {
@@ -4706,7 +4715,7 @@ input {
                 margin-right: 20px;
             }
             &.active-tab {
-                background: #00A6CA;
+                background: #00a6ca;
                 color: #fcd833;
             }
         }
@@ -5765,8 +5774,8 @@ input {
                 left: 0;
                 height: 110%;
                 width: 20%;
-                background-color: #00A6CA;
-                border-top: 1px solid #00A6CA;
+                background-color: #00a6ca;
+                border-top: 1px solid #00a6ca;
             }
         }
         a {
@@ -5879,8 +5888,8 @@ input {
     max-width: 1200px;
 }
 //////////////////////// paid-homeapge
-.credit-summary{
-    .alerts{
+.credit-summary {
+    .alerts {
         height: 108px;
     }
 }
