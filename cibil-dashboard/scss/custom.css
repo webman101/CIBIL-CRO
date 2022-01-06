@@ -20,6 +20,11 @@ a:hover {
   color: #f16e00;
 }
 
+.text-intro-bold {
+  font-family: "Intro", Bold;
+  font-weight: bold;
+}
+
 button {
   cursor: pointer;
 }
@@ -484,18 +489,15 @@ h6 {
   margin-left: 60px !important;
 }
 
-.pl-60 {
-  padding-left: 60px !important;
-}
-
 .mr-60 {
   margin-right: 60px !important;
 }
 
-.pr-60 {
-  padding-right: 60px !important;
+@media screen and (min-width: 992px) {
+  .pr-60 {
+    padding-right: 60px !important;
+  }
 }
-
 .mt-75 {
   margin-top: 75px !important;
 }
@@ -617,6 +619,10 @@ h6 {
   height: 50px;
   border: none !important;
   outline: 0;
+}
+
+.bd-f9 {
+  background: #f9f9f9;
 }
 
 .orange-button.disabled {
@@ -921,20 +927,6 @@ input:disabled {
 }
 .checkbox label {
   position: relative;
-  -webkit-appearance: none;
-  background-color: #fff;
-  border: 2px solid #000000;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  margin-right: 5px;
-  width: 16px;
-  height: 16px;
-  background: #f9f9f9;
-  box-sizing: border-box;
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative;
   cursor: pointer;
   -webkit-appearance: none;
   background-color: #fff;
@@ -952,16 +944,13 @@ input:disabled {
 }
 
 .notification {
-  background: #ffffff;
-  border: 1px solid #acacac;
-  box-sizing: border-box;
-  border-radius: 6px;
-  padding: 20px;
   background: #fff;
   border: 1px solid #acacac;
   box-sizing: border-box;
   border-radius: 6px;
   padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .d-block {
@@ -2753,6 +2742,10 @@ input.orange-button {
     padding-bottom: 0 !important;
   }
 }
+.border-1 {
+  border: 1px solid #dde0ef;
+}
+
 .alerts-text-block {
   padding-left: 20px;
 }
@@ -2793,6 +2786,14 @@ input.orange-button {
   }
 }
 
+.p-15 {
+  padding: 15px;
+}
+
+.text-color-blue {
+  color: #006685;
+}
+
 .success-message {
   padding: 10px;
   display: flex;
@@ -2821,6 +2822,10 @@ input.orange-button {
   .success-message p {
     font-size: 14px;
   }
+}
+
+.flex-1 {
+  flex-grow: 1;
 }
 
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
@@ -2905,9 +2910,6 @@ input.orange-button {
 }
 .main-dashboard .text-color-black-75 {
   color: rgba(0, 0, 0, 0.75);
-}
-.main-dashboard .text-color-blue {
-  color: #006685;
 }
 .main-dashboard .text-color-blue:hover {
   color: #006685;
@@ -3177,15 +3179,8 @@ input.orange-button {
 .main-dashboard .max-width-350 {
   max-width: 350px;
 }
-.main-dashboard .border-1 {
-  border: 1px solid #dde0ef;
-}
 .main-dashboard .brand-blue {
   background-color: #006685;
-}
-.main-dashboard .text-intro-bold {
-  font-family: "Intro", Bold;
-  font-weight: bold;
 }
 .main-dashboard .text-red {
   color: #d74025 !important;
@@ -3229,9 +3224,6 @@ input.orange-button {
 .main-dashboard .fw-700 {
   font-weight: 700;
 }
-.main-dashboard .flex-1 {
-  flex: 1;
-}
 .main-dashboard .py-20 {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -3252,9 +3244,6 @@ input.orange-button {
   .main-dashboard .pl-md-2 {
     padding-left: 20px;
   }
-}
-.main-dashboard .p-15 {
-  padding: 15px;
 }
 .main-dashboard .px-20 {
   padding-left: 20px;
@@ -5091,13 +5080,6 @@ input.orange-button {
   top: 7px !important;
 }
 
-.offers-page * {
-  margin: 0;
-  padding: 0;
-  font-family: "Intro", book;
-  scroll-behavior: smooth;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
 .offers-page body {
   font-family: "Intro";
   scroll-behavior: smooth;
@@ -6259,7 +6241,7 @@ input.orange-button {
   color: #707070 !important;
 }
 .offers-page .blue-dropdown-groups-section {
-  background: #00A6CA;
+  background: #00a6ca;
   height: 60px;
   display: flex;
   align-items: center;
@@ -6400,8 +6382,8 @@ input.orange-button {
   transform: rotateZ(-45deg);
   width: 6px;
   height: 6px;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-left: 1px solid #8a8a8a;
+  border-bottom: 1px solid #8a8a8a;
 }
 .offers-page .input-lists input {
   background: #ffffff;
@@ -6409,7 +6391,7 @@ input.orange-button {
   box-sizing: border-box;
   height: 50px;
   width: 100%;
-  padding-left: 30px;
+  padding-left: 16px;
   position: relative;
   font-family: "Intro", Book;
   font-size: 16px;
@@ -7350,4 +7332,50 @@ input.orange-button {
 .offers-page .reverse-arrow::after {
   transform: rotate(-135deg) !important;
   top: 7px !important;
+}
+
+select {
+  background: #ffffff;
+  border-radius: 0;
+  border: 1px solid #acacac;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding-left: 16px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url(../img/arrow-dropdown.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: center;
+}
+
+.numb {
+  width: 34px;
+  height: 34px;
+  background: #00a6ca;
+  border-radius: 21px;
+}
+
+.offers-page-tabs li {
+  width: unset;
+  max-width: unset;
+  flex: 1;
+}
+.offers-page-tabs li a {
+  width: unset !important;
+  max-width: unset !important;
+}
+
+.alert-icon-image {
+  width: 45px;
+  margin-right: 25px;
+  display: flex;
+}
+.alert-icon-image img {
+  margin-right: 0 !important;
+  margin: auto;
 }/*# sourceMappingURL=custom.css.map */

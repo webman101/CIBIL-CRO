@@ -17,6 +17,10 @@ a {
 		color: #f16e00;
 	}
 }
+.text-intro-bold {
+	font-family: "Intro", Bold;
+	font-weight: bold;
+}
 button {
 	cursor: pointer;
 }
@@ -365,15 +369,15 @@ h6 {
 .ml-60 {
 	margin-left: 60px !important;
 }
-.pl-60 {
-	padding-left: 60px !important;
-}
 .mr-60 {
 	margin-right: 60px !important;
 }
-.pr-60 {
-	padding-right: 60px !important;
+@media screen and (min-width: 992px) {
+	.pr-60 {
+		padding-right: 60px !important;
+	}
 }
+
 .mt-75 {
 	margin-top: 75px !important;
 }
@@ -471,6 +475,9 @@ h6 {
 	height: 50px;
 	border: none !important;
 	outline: 0;
+}
+.bd-f9 {
+	background: #f9f9f9;
 }
 .orange-button.disabled {
 	pointer-events: none;
@@ -775,22 +782,6 @@ input {
 	}
 	label {
 		position: relative;
-
-		-webkit-appearance: none;
-		background-color: #fff;
-		border: 2px solid #000000;
-		display: inline-block;
-		position: relative;
-		vertical-align: middle;
-
-		margin-right: 5px;
-		width: 16px;
-		height: 16px;
-		background: #f9f9f9;
-		box-sizing: border-box;
-		border-radius: 2px;
-		overflow: hidden;
-		position: relative;
 		cursor: pointer;
 		-webkit-appearance: none;
 		background-color: #fff;
@@ -809,16 +800,13 @@ input {
 	}
 }
 .notification {
-	background: #ffffff;
-	border: 1px solid #acacac;
-	box-sizing: border-box;
-	border-radius: 6px;
-	padding: 20px;
 	background: #fff;
 	border: 1px solid #acacac;
 	box-sizing: border-box;
 	border-radius: 6px;
 	padding: 20px;
+	position: relative;
+	z-index: 1;
 }
 .d-block {
 	display: block;
@@ -2481,7 +2469,9 @@ input.orange-button {
 		padding-bottom: 0 !important;
 	}
 }
-
+.border-1 {
+	border: 1px solid #dde0ef;
+}
 .alerts-text-block {
 	padding-left: 20px;
 
@@ -2527,6 +2517,12 @@ input.orange-button {
 		}
 	}
 }
+.p-15 {
+	padding: 15px;
+}
+.text-color-blue {
+	color: #006685;
+}
 .success-message {
 	padding: 10px;
 	display: flex;
@@ -2557,6 +2553,9 @@ input.orange-button {
 
 		color: #000000;
 	}
+}
+.flex-1 {
+	flex-grow: 1;
 }
 
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
@@ -2648,9 +2647,7 @@ input.orange-button {
 	.text-color-black-75 {
 		color: rgba(0, 0, 0, 0.75);
 	}
-	.text-color-blue {
-		color: #006685;
-	}
+	
 	.text-color-blue:hover {
 		color: #006685;
 	}
@@ -2947,17 +2944,10 @@ input.orange-button {
 		max-width: 350px;
 	}
 
-	.border-1 {
-		border: 1px solid #dde0ef;
-	}
+
 
 	.brand-blue {
 		background-color: #006685;
-	}
-
-	.text-intro-bold {
-		font-family: "Intro", Bold;
-		font-weight: bold;
 	}
 
 	.text-red {
@@ -3009,9 +2999,6 @@ input.orange-button {
 		font-weight: 700;
 	}
 
-	.flex-1 {
-		flex: 1;
-	}
 
 	.py-20 {
 		padding-top: 20px;
@@ -3038,10 +3025,7 @@ input.orange-button {
 			padding-left: 20px;
 		}
 	}
-	.p-15 {
-		padding: 15px;
-	}
-
+	
 	.px-20 {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -4966,14 +4950,6 @@ input.orange-button {
 	} /*# sourceMappingURL=custom.css.map */
 }
 .offers-page {
-	* {
-		margin: 0;
-		padding: 0;
-		font-family: "Intro", book;
-		scroll-behavior: smooth;
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	}
-
 	body {
 		font-family: "Intro";
 		scroll-behavior: smooth;
@@ -6443,8 +6419,8 @@ input.orange-button {
 				transform: rotateZ(-45deg);
 				width: 6px;
 				height: 6px;
-				border-left: 1px solid #000;
-				border-bottom: 1px solid #000;
+				border-left: 1px solid #8a8a8a;
+				border-bottom: 1px solid #8a8a8a;
 			}
 		}
 		input {
@@ -6454,7 +6430,7 @@ input.orange-button {
 			box-sizing: border-box;
 			height: 50px;
 			width: 100%;
-			padding-left: 30px;
+			padding-left: 16px;
 			position: relative;
 			font-family: "Intro", Book;
 
@@ -7466,5 +7442,51 @@ input.orange-button {
 			transform: rotate(-135deg) !important;
 			top: 7px !important;
 		}
+	}
+}
+select {
+	background: #ffffff;
+	border-radius: 0;
+	border: 1px solid #acacac;
+	box-sizing: border-box;
+	height: 50px;
+	width: 100%;
+	padding-left: 16px;
+	position: relative;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: transparent;
+
+	background-image: url(../img/arrow-dropdown.svg);
+	background-size: 10px;
+	background-repeat: no-repeat;
+	background-position-x: 95%;
+	background-position-y: center;
+}
+.numb {
+	width: 34px;
+	height: 34px;
+	background: #00a6ca;
+	border-radius: 21px;
+}
+/////////////////////// Offers page
+.offers-page-tabs {
+	li {
+		width: unset;
+		max-width: unset;
+		flex: 1;
+		a {
+			width: unset !important;
+			max-width: unset !important;
+		}
+	}
+}
+.alert-icon-image {
+	width: 45px;
+	margin-right: 25px;
+	display: flex;
+	img {
+		margin-right: 0 !important;
+		margin: auto;
 	}
 }

@@ -109,36 +109,34 @@ function getBank(el) {
 }
 
 
-// function extraTicketAttachment(el) {
+function extraTicketAttachment(el) {
 
-//     if ($('input.append-onclick').is(':checked')) {
-//         jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    if ($('input.append-onclick').is(':checked')) {
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
 
-//     }
+    }
 
-//     // bank = $(el).attr('bank');
-//     // alert(bank);
-//     // $('.compare-price').text(bank);
-// }
+    // bank = $(el).attr('bank');
+    // alert(bank);
+    // $('.compare-price').text(bank);
+}
 
-// function extraTicketAttachmenthdfc(el) {
-//     if ($('input.append-onclick').is(':checked')) {
+function extraTicketAttachmenthdfc(el) {
+    if ($('input.append-onclick').is(':checked')) {
 
-//         jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/hdfc.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
-//     }
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/hdfc.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    }
 
-//     // bank = $(el).attr('bank');
-//     // alert(bank);
-//     // $('.compare-price').text(bank);
-// }
+    //     // bank = $(el).attr('bank');
+    //     // alert(bank);
+    //     // $('.compare-price').text(bank);
+}
 
-//  function extraTicketAttachmentaditya(el) {
-//      if ($('input.append-onclick').is(':checked')) {
-//          jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/aditya.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
-//      }
-
-//  }
-
+function extraTicketAttachmentaditya(el) {
+    if ($('input.append-onclick').is(':checked')) {
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/aditya.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    }
+}
 
 // // $(document).on("click", ".compare-button", function() {
 // //     if ($('input.append-onclick').prop('checked', false)) {
@@ -147,7 +145,7 @@ function getBank(el) {
 // //     }
 // // });
 
-$('.compare-message').hide();
+// $('.compare-message').hide();
 
 
 // $("input.append-onclick").change(function() {
@@ -156,18 +154,18 @@ $('.compare-message').hide();
 // });
 
 $("input.append-onclick").change(function() {
-    $(this).closest(".itemsBox").find('.compare-row').hide();
+    // $(this).closest(".itemsBox").find('.compare-row').hide();
     $('.compare-message').show();
 });
 
 
 
-$(document).on("click", ".times", function() {
-    $(this).parent().hide();
-    // jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0 blanked" style="border: 1px dashed #006685;box-sizing: border-box;border-radius: 4px;"></div>')
+// $(document).on("click", ".times", function() {
+//     $(this).parent().hide();
+//     // jQuery(".offer-to-compare .compare-grouped").append('<div class="ms-0 blanked" style="border: 1px dashed #006685;box-sizing: border-box;border-radius: 4px;"></div>')
 
-    // $("input").prop("checked", false); //to uncheck
-});
+//     // $("input").prop("checked", false); //to uncheck
+// });
 
 $('.compare-button').click(function(e) {
     e.preventDefault();
@@ -232,14 +230,13 @@ $('.sort-tab').click(function(e) {
 
 
 
-// $(document).on("click", ".radio-input", function() {
+$(document).on("click", ".radio-input", function() {
 
-//     var arnvh = $(this).closest(".sorttoggle1").children(".sorttitle").text();
+    var arnvh = $(this).closest(".sorttoggle1").children(".sorttitle").text();
 
-//     $('.sort-tab span').text('Sorted by: ' + arnvh).removeClass('fw-700');
-    
+    $('.sort-tab span').text('Sorted by: ' + arnvh);
 
-// });
+});
 
 
 // var sho = $("#tab1 .list>div").length;
@@ -289,7 +286,7 @@ $(document).ready(function() {
 
     // password.onchange = validatePassword;
     // confirm_password.onkeyup = validatePassword;
-   
+
 
     // $("input").keyup(function() {
     //     if ($('.password').val() && $('.passwords').val()) {
@@ -333,3 +330,31 @@ $(document).ready(function() {
         }
     });
 });
+
+$("input.append-onclick").change(function() {
+    // if ($('input.append-onclick').is(':checked')) {
+    //     jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/aditya.png" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    // }
+
+    var amt = $(this).closest(".itemsBox").find('.limit-column').text();
+    $('.filled-item-1 .compare-price').text(amt);
+    $('.filled-item-1').addClass('active')
+    if ($('.filled-item-1').hasclass('active')) {
+        alert();
+    }
+
+});
+
+
+$('input[type="checkbox"]').click(function() {
+    if ($(this).is(":checked")) {
+
+        var html1 = '<img src="+  $(this).val()  + " alt=" " class="offer-image " width="52px ">'+'<span class="compare-price ">' +  $(this).val()  + '</span>'+'<img src="img/times.svg " alt=" " class="times ">'
+        var html = "<p>" + $(this).val() + "</p>";
+        $("#divList").prepend(html1);
+    }
+});
+
+// $(document).on("click", ".times", function() {
+//     $("#divList").remove(html);
+// });
