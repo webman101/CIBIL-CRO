@@ -7499,10 +7499,22 @@ select {
 .report-accordion-content {
 	transition: height 0.2s ease-in-out;
 }
-.toggle-accordion-content-collapsed {
-	height: 0;
-	opacity: 0;
-	overflow: hidden;
+.accordionItem.open .report-accordion-content {
+	height: auto;
+	opacity: 1;
+	transition: height 0.5s ease-in-out;
+}
+
+.accordionItem.close {
+	.report-accordion-content {
+		height: 0;
+		opacity: 0;
+		transition: height 0.5s ease-in-out;
+		overflow: hidden;
+	}
+	.toggle-arrow {
+		transform: rotate(180deg);
+	}
 }
 .py-10 {
 	padding-top: 10px;
@@ -7514,7 +7526,4 @@ select {
 }
 .border-bottom-1-dd {
 	border-bottom: 1px solid #dddddd;
-}
-.reverse {
-    transform: rotate(180deg);
 }

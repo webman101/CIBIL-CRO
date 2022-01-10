@@ -335,17 +335,20 @@ $(document).ready(function() {
 });
 
 var arrowToggle = document.querySelector('.toggle-arrow')
-var accordionContent = document.querySelector('.report-accordion-content')
+// var accordionContent = document.querySelector('.report-accordion-content')
 
 
 
 
-var accArrow = document.getElementsByClassName('toggle-arrow');
-var accItem = document.getElementsByClassName('parent_accordion');
 
 
-for (i = 0; i < accArrow.length; i++) {
-    accArrow[i].addEventListener('click', toggleItem, false);
+var accItem = document.getElementsByClassName('accordionItem');
+var accHD = document.getElementsByClassName('accordionItemHeading');
+
+
+
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
 }
 function toggleItem() {
     var itemClass = this.parentNode.className;
@@ -355,4 +358,7 @@ function toggleItem() {
     if (itemClass == 'accordionItem close') {
         this.parentNode.className = 'accordionItem open';
     }
+ 
 }
+
+
