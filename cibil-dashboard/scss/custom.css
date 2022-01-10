@@ -8103,6 +8103,11 @@ select {
   transition: height 0.5s ease-in-out;
 }
 
+.toggle-arrow {
+  transition: all 0.1s ease-in-out;
+  transform: rotate(180deg);
+}
+
 .accordionItem.close .report-accordion-content {
   height: 0;
   opacity: 0;
@@ -8111,7 +8116,7 @@ select {
 }
 
 .accordionItem.close .toggle-arrow {
-  transform: rotate(180deg);
+  transform: rotate(0);
 }
 
 .py-10 {
