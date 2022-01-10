@@ -30,7 +30,6 @@ $('.for-overlay .closeovelay').click(function(e) {
 $(document).ready(function() {
     // Show the first tab and hide the rest
     $('#largetabs-nav li:first-arrowToggle').addClass('active');
-    $('.tab-content').hide();
     $('.tab-content:first').show();
 
     // Click function
