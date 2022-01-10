@@ -8074,46 +8074,57 @@ select {
 }
 
 .report-page .password-active.active .password-tab {
-  background-image: url(../cibil-report/iconblue1.svg);
+  background-image: url(../cibil-report/iconblue6.svg);
 }
 
 .report-page .notification-active.active .notification-tab {
-  background-image: url(../cibil-report/iconblue2.svg);
+  background-image: url(../cibil-report/iconblue1.svg);
 }
 
 .report-page .subscription-active.active .subscription-tab {
-  background-image: url(../cibil-report/iconblue3.svg);
+  background-image: url(../cibil-report/iconblue2.svg);
 }
 
 .report-page .password-tab {
-  background-image: url(../cibil-report/iconrepot1.svg);
+  background-image: url(../cibil-report/iconrepot6.svg);
 }
 
 .report-page .notification-tab {
-  background-image: url(../cibil-report/iconrepot2.svg);
+  background-image: url(../cibil-report/iconrepot1.svg);
 }
 
 .report-page .subscription-tab {
-  background-image: url(../cibil-report/iconrepot3.svg);
+  background-image: url(../cibil-report/iconrepot2.svg);
 }
 
 .report-page .employment .password-tab {
-  background-image: url(../cibil-report/iconrepot4.svg);
+  background-image: url(../cibil-report/iconrepot3.svg);
+}
+
+.report-page .employment.password-active.active .password-tab {
+  background-image: url(../cibil-report/iconblue3.svg);
 }
 
 .report-page .accounttab .notification-tab {
   background-image: url(../cibil-report/iconrepot5.svg);
   background-position: top;
-  margin-top: -7px;
-  margin-bottom: 16px;
-}
-
-.report-page .inquirytab {
-  background-image: url(../cibil-report/iconrepot6.svg);
 }
 
 .report-page .inquirytab .subscription-tab {
+  background-image: url(../cibil-report/iconrepot5.svg);
+}
+
+.report-page .inquirytab.subscription-active.active .subscription-tab {
+  background-image: url(../cibil-report/iconblue5.svg);
+}
+
+.report-page .accounttab .notification-tab {
   background-image: url(../cibil-report/iconrepot4.svg);
+  background-position: top;
+}
+
+.notification-active.accounttab.active .notification-tab {
+  background-image: url(../cibil-report/iconblue4.svg);
 }
 
 .alert-icon-image {

@@ -7483,43 +7483,52 @@ select {
 }
 .report-page {
 	.password-active.active .password-tab {
-		background-image: url(../cibil-report/iconblue1.svg);
+		background-image: url(../cibil-report/iconblue6.svg);
 	}
 	.notification-active.active .notification-tab {
-		background-image: url(../cibil-report/iconblue2.svg);
+		background-image: url(../cibil-report/iconblue1.svg);
 	}
 	.subscription-active.active .subscription-tab {
-		background-image: url(../cibil-report/iconblue3.svg);
+		background-image: url(../cibil-report/iconblue2.svg);
 	}
 	.password-tab {
-		background-image: url(../cibil-report/iconrepot1.svg);
+		background-image: url(../cibil-report/iconrepot6.svg);
 	}
 	.notification-tab {
-		background-image: url(../cibil-report/iconrepot2.svg);
+		background-image: url(../cibil-report/iconrepot1.svg);
 	}
 	.subscription-tab {
-		background-image: url(../cibil-report/iconrepot3.svg);
+		background-image: url(../cibil-report/iconrepot2.svg);
 	}
 	.employment {
 		.password-tab {
-			background-image: url(../cibil-report/iconrepot4.svg);
+			background-image: url(../cibil-report/iconrepot3.svg);
+		}
+		&.password-active.active .password-tab {
+			background-image: url(../cibil-report/iconblue3.svg);
 		}
 	}
 	.accounttab {
 		.notification-tab {
 			background-image: url(../cibil-report/iconrepot5.svg);
 			background-position: top;
-			margin-top: -7px;
-			margin-bottom: 16px;
 		}
 	}
 	.inquirytab {
-		background-image: url(../cibil-report/iconrepot6.svg);
-		.subscription-tab{
-			background-image: url(../cibil-report/iconrepot4.svg);
-
+		.subscription-tab {
+			background-image: url(../cibil-report/iconrepot5.svg);
+		}
+		&.subscription-active.active .subscription-tab {
+			background-image: url(../cibil-report/iconblue5.svg);
 		}
 	}
+}
+.report-page .accounttab .notification-tab {
+	background-image: url(../cibil-report/iconrepot4.svg);
+	background-position: top;
+}
+.notification-active.accounttab.active .notification-tab {
+	background-image: url(../cibil-report/iconblue4.svg);
 }
 .alert-icon-image {
 	width: 45px;
