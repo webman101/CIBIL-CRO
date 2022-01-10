@@ -2,13 +2,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Intro, book;
+  font-family: "Intro", book;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  font-family: "Intro";
+  font-family: "Intro", book;
   scroll-behavior: smooth;
 }
 
@@ -3198,14 +3198,6 @@ input.orange-button {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #707070 !important;
-}
-.main-dashboard .text-blue {
-  font-family: "Intro" Bold;
-  font-weight: bold;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #00a6ca;
 }
 .main-dashboard .para-intro-regular {
   font-family: "Intro", Regular;
@@ -7378,4 +7370,19 @@ select {
 .alert-icon-image img {
   margin-right: 0 !important;
   margin: auto;
+}
+
+.text-blue {
+  font-family: "Intro" Bold;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #00a6ca;
+}
+
+@media screen and (min-width: 992px) {
+  .border-right-md-1 {
+    border-right: 1px solid #dddddd;
+  }
 }/*# sourceMappingURL=custom.css.map */

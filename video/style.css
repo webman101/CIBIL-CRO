@@ -10,16 +10,25 @@ body {
 }
 
 .o-video {
-  width: 100%;
-  height: 100vh;
   position: relative;
+}
+@media screen and (min-width: 992px) {
+  .o-video {
+    width: 100%;
+    height: 100vh;
+  }
 }
 
 .o-video > iframe {
-  width: 90%;
-  height: 90vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .o-video > iframe {
+    width: 90%;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }/*# sourceMappingURL=style.css.map */
