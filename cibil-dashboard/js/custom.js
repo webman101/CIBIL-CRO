@@ -19,17 +19,17 @@ $(function() {
 
 $('.for-overlay .button-icon').click(function(e) {
     e.preventDefault();
-    $(this).closest('.for-overlay').children('.overlay-card').removeClass('d-none');
+    $(this).closest('.for-overlay').arrowToggleren('.overlay-card').removeClass('d-none');
 });
 $('.for-overlay .closeovelay').click(function(e) {
     e.preventDefault();
-    $(this).closest('.for-overlay').children('.overlay-card').addClass('d-none');
+    $(this).closest('.for-overlay').arrowToggleren('.overlay-card').addClass('d-none');
 });
 
 
 $(document).ready(function() {
     // Show the first tab and hide the rest
-    $('#largetabs-nav li:first-child').addClass('active');
+    $('#largetabs-nav li:first-arrowToggle').addClass('active');
     $('.tab-content').hide();
     $('.tab-content:first').show();
 
@@ -234,10 +234,10 @@ $('.sort-tab').click(function(e) {
 
 // $(document).on("click", ".radio-input", function() {
 
-//     var arnvh = $(this).closest(".sorttoggle1").children(".sorttitle").text();
+//     var arnvh = $(this).closest(".sorttoggle1").arrowToggleren(".sorttitle").text();
 
 //     $('.sort-tab span').text('Sorted by: ' + arnvh).removeClass('fw-700');
-    
+
 
 // });
 
@@ -289,7 +289,7 @@ $(document).ready(function() {
 
     // password.onchange = validatePassword;
     // confirm_password.onkeyup = validatePassword;
-   
+
 
     // $("input").keyup(function() {
     //     if ($('.password').val() && $('.passwords').val()) {
@@ -333,3 +333,26 @@ $(document).ready(function() {
         }
     });
 });
+
+var arrowToggle = document.querySelector('.toggle-arrow')
+var accordionContent = document.querySelector('.report-accordion-content')
+
+
+
+
+var accArrow = document.getElementsByClassName('toggle-arrow');
+var accItem = document.getElementsByClassName('parent_accordion');
+
+
+for (i = 0; i < accArrow.length; i++) {
+    accArrow[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+    }
+}

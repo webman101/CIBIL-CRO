@@ -18,6 +18,9 @@ a {
 		color: #f16e00;
 	}
 }
+p {
+	margin-bottom: 0;
+}
 .text-intro-bold {
 	font-family: "Intro", Bold;
 	font-weight: bold;
@@ -55,6 +58,7 @@ h6 {
 .pb-2 {
 	padding-bottom: 2px !important;
 }
+
 .ml-2 {
 	margin-left: 2px !important;
 }
@@ -7491,4 +7495,26 @@ select {
 	@media screen and (min-width: 992px) {
 		border-right: 1px solid #dddddd;
 	}
+}
+.report-accordion-content {
+	transition: height 0.2s ease-in-out;
+}
+.toggle-accordion-content-collapsed {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+}
+.py-10 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.px-30 {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.border-bottom-1-dd {
+	border-bottom: 1px solid #dddddd;
+}
+.reverse {
+    transform: rotate(180deg);
 }
