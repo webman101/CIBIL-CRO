@@ -692,7 +692,7 @@ input:disabled {
   background: #f6f7fc;
 }
 
-.tabs {
+.reporttabs {
   margin: 0;
   margin-top: 90px;
   padding: 0;
@@ -701,12 +701,12 @@ input:disabled {
   padding-left: 0;
 }
 
-.tabs .active-tab {
+.reporttabs .active-tab {
   position: relative;
   color: black;
 }
 
-.tabs .active-tab:after {
+.reporttabs .active-tab:after {
   width: 100%;
   height: 2px;
   position: absolute;
@@ -715,7 +715,7 @@ input:disabled {
   left: 0;
 }
 
-.tabs li {
+.reporttabs li {
   height: 60px;
   display: flex;
   align-items: center;
@@ -730,11 +730,11 @@ input:disabled {
   display: flex;
 }
 
-.tabs li img {
+.reporttabs li img {
   margin-right: 20px;
 }
 
-.tabs li.active-tab {
+.reporttabs li.active-tab {
   background: #006685;
   color: #fcd833;
 }
@@ -743,7 +743,7 @@ input:disabled {
   padding: 30px 20px;
 }
 
-.tabs-content {
+.reporttabs-content {
   padding: 0;
   list-style: none;
 }
@@ -842,7 +842,7 @@ input:disabled {
   color: #2c2c2c;
 }
 
-.common-type-tabs-section .tab-content input {
+.common-type-tabs-section .reporttab-content input {
   height: 50px;
   max-width: 580px;
   margin-top: 2px;
@@ -850,13 +850,13 @@ input:disabled {
   border: 1px solid #acacac;
 }
 
-.common-type-tabs-section .tab-content input.disabled {
+.common-type-tabs-section .reporttab-content input.disabled {
   pointer-events: none;
   background: #f9f9f9;
   box-sizing: border-box;
 }
 
-.common-type-tabs-section .tab-content input.disabled::placeholder {
+.common-type-tabs-section .reporttab-content input.disabled::placeholder {
   font-family: "Intro", Book;
   font-size: 16px;
   line-height: 24px;
@@ -869,7 +869,7 @@ input:disabled {
   color: #707070;
 }
 
-.common-type-tabs-section .tab-content .message {
+.common-type-tabs-section .reporttab-content .message {
   font-size: 14px;
   font-size: 14px;
 }
@@ -1836,7 +1836,7 @@ input:disabled {
   border-top: 0;
 }
 
-.mobiletabsection .tab-content {
+.mobiletabsection .reporttab-content {
   padding: 20px;
   background-color: #ffffff;
   padding: 20px;
@@ -2524,7 +2524,7 @@ input.orange-button {
     border-top: 2px solid #00a6ca !important;
     border-right: 2px solid #00a6ca;
   }
-  .interstial-container .tab-content {
+  .interstial-container .reporttab-content {
     border-top: 2px solid #00a6ca;
     border: 2px solid #00a6ca;
   }
@@ -2553,21 +2553,21 @@ input.orange-button {
   .mobile-margin {
     margin: 20px;
   }
-  .tab-content button.button.full-width-button {
+  .reporttab-content button.button.full-width-button {
     width: 100%;
     margin-bottom: 30px;
     border: 0;
   }
-  .tab-content .tab-pane {
+  .reporttab-content .reporttab-pane {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-  .tab-content .small-right {
+  .reporttab-content .small-right {
     width: 21px !important;
     height: 12px !important;
     margin-top: 5px;
   }
-  .tab-content .feature {
+  .reporttab-content .feature {
     border: 0;
     padding: 0;
     min-height: 0;
@@ -2579,7 +2579,7 @@ input.orange-button {
     color: #2c2c2c;
     align-items: flex-start;
   }
-  .tab-content .feature p {
+  .reporttab-content .feature p {
     margin-bottom: 0;
   }
   footer {
@@ -3439,7 +3439,7 @@ input.orange-button {
   padding-right: 20px;
 }
 
-.main-dashboard .tabs {
+.main-dashboard .reporttabs {
   margin: 0;
   margin-top: 90px;
   padding: 0;
@@ -3448,12 +3448,12 @@ input.orange-button {
   padding-left: 0;
 }
 
-.main-dashboard .tabs .active-tab {
+.main-dashboard .reporttabs .active-tab {
   position: relative;
   color: black;
 }
 
-.main-dashboard .tabs .active-tab:after {
+.main-dashboard .reporttabs .active-tab:after {
   width: 100%;
   height: 2px;
   position: absolute;
@@ -3462,7 +3462,7 @@ input.orange-button {
   left: 0;
 }
 
-.main-dashboard .tabs li {
+.main-dashboard .reporttabs li {
   height: 60px;
   display: flex;
   align-items: center;
@@ -3478,16 +3478,16 @@ input.orange-button {
   display: flex;
 }
 
-.main-dashboard .tabs li img {
+.main-dashboard .reporttabs li img {
   margin-right: 20px;
 }
 
-.main-dashboard .tabs li.active-tab {
+.main-dashboard .reporttabs li.active-tab {
   background: #006685;
   color: #fcd833;
 }
 
-.main-dashboard .tabs-content {
+.main-dashboard .reporttabs-content {
   margin: 20px;
   padding: 0;
   list-style: none;
@@ -3962,7 +3962,7 @@ input.orange-button {
   }
 }
 
-.main-dashboard .page-type-2 .tabs-content {
+.main-dashboard .page-type-2 .reporttabs-content {
   margin: 0;
   padding-top: 0;
 }
@@ -6084,7 +6084,7 @@ input.orange-button {
   padding-right: 20px;
 }
 
-.offers-page .tabs {
+.offers-page .reporttabs {
   margin: 0;
   margin-top: 90px;
   padding: 0;
@@ -6093,12 +6093,12 @@ input.orange-button {
   padding-left: 0;
 }
 
-.offers-page .tabs .active-tab {
+.offers-page .reporttabs .active-tab {
   position: relative;
   color: black;
 }
 
-.offers-page .tabs .active-tab:after {
+.offers-page .reporttabs .active-tab:after {
   width: 100%;
   height: 2px;
   position: absolute;
@@ -6107,7 +6107,7 @@ input.orange-button {
   left: 0;
 }
 
-.offers-page .tabs li {
+.offers-page .reporttabs li {
   height: 60px;
   display: flex;
   align-items: center;
@@ -6123,16 +6123,16 @@ input.orange-button {
   display: flex;
 }
 
-.offers-page .tabs li img {
+.offers-page .reporttabs li img {
   margin-right: 20px;
 }
 
-.offers-page .tabs li.active-tab {
+.offers-page .reporttabs li.active-tab {
   background: #006685;
   color: #fcd833;
 }
 
-.offers-page .tabs-content {
+.offers-page .reporttabs-content {
   margin: 20px;
   padding: 0;
   list-style: none;
@@ -6598,7 +6598,7 @@ input.orange-button {
   }
 }
 
-.offers-page .page-type-2 .tabs-content {
+.offers-page .page-type-2 .reporttabs-content {
   margin: 0;
   padding-top: 0;
 }
@@ -8131,5 +8131,90 @@ select {
 
 .border-bottom-1-dd {
   border-bottom: 1px solid #dddddd;
+}
+
+#reporttabs {
+  padding-top: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+#reporttabs .whiteborder {
+  border-bottom: 4px solid #00a6ca;
+  border-radius: 3px 3px 0 0;
+}
+
+#reporttabs .reporttabContent {
+  position: relative;
+  top: -1px;
+  z-index: 1;
+  padding-top: 10px;
+  border-radius: 0 0 3px 3px;
+  padding-bottom: 20px;
+}
+
+.reporttab {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  /* Accent Black */
+  color: #2c2c2c;
+  margin-left: 20px;
+  padding-bottom: 7px;
+}
+
+#reporttabs .hide {
+  display: none;
+}
+
+#reporttabs .show {
+  display: block;
+}
+
+.payments {
+  margin-top: 20px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.payments .para-intro-regular-2c {
+  margin-right: 74px;
+}
+
+.standard-box {
+  padding: 20px;
+  padding-bottom: 0;
+  background-color: #fff;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 20px 0;
+}
+
+.standard-box .key-value {
+  margin-right: 30px;
+  font-family: Intro Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.standard-box .key-value .key {
+  font-weight: 600;
+}
+
+.standard-box .key-value .value {
+  margin-left: 5px;
 }
 /*# sourceMappingURL=custom.css.map */

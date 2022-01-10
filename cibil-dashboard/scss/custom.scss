@@ -540,7 +540,7 @@ input {
 		background: #f6f7fc;
 	}
 }
-.tabs {
+.reporttabs {
 	margin: 0;
 	margin-top: 90px;
 	padding: 0;
@@ -584,7 +584,7 @@ input {
 .header-container {
 	padding: 30px 20px;
 }
-.tabs-content {
+.reporttabs-content {
 	padding: 0;
 	list-style: none;
 }
@@ -670,7 +670,7 @@ input {
 			}
 		}
 	}
-	.tab-content {
+	.reporttab-content {
 		input {
 			height: 50px;
 			max-width: 580px;
@@ -1610,7 +1610,7 @@ input {
 	border-top: 0;
 	border-right: 0;
 	border-top: 0;
-	.tab-content {
+	.reporttab-content {
 		padding: 20px;
 		background-color: #ffffff;
 		padding: 20px;
@@ -2310,7 +2310,7 @@ input.orange-button {
 				border-right: 2px solid #00a6ca;
 			}
 		}
-		.tab-content {
+		.reporttab-content {
 			border-top: 2px solid #00a6ca;
 			border: 2px solid #00a6ca;
 		}
@@ -2348,13 +2348,13 @@ input.orange-button {
 	.mobile-margin {
 		margin: 20px;
 	}
-	.tab-content {
+	.reporttab-content {
 		button.button.full-width-button {
 			width: 100%;
 			margin-bottom: 30px;
 			border: 0;
 		}
-		.tab-pane {
+		.reporttab-pane {
 			border-bottom-left-radius: 5px;
 			border-bottom-right-radius: 5px;
 		}
@@ -3169,7 +3169,7 @@ input.orange-button {
 		padding-right: 20px;
 	}
 
-	.tabs {
+	.reporttabs {
 		margin: 0;
 		margin-top: 90px;
 		padding: 0;
@@ -3177,11 +3177,11 @@ input.orange-button {
 		position: relative;
 		padding-left: 0;
 	}
-	.tabs .active-tab {
+	.reporttabs .active-tab {
 		position: relative;
 		color: black;
 	}
-	.tabs .active-tab:after {
+	.reporttabs .active-tab:after {
 		width: 100%;
 		height: 2px;
 		position: absolute;
@@ -3189,7 +3189,7 @@ input.orange-button {
 		bottom: -0.1em;
 		left: 0;
 	}
-	.tabs li {
+	.reporttabs li {
 		height: 60px;
 		display: flex;
 		align-items: center;
@@ -3204,15 +3204,15 @@ input.orange-button {
 		cursor: pointer;
 		display: flex;
 	}
-	.tabs li img {
+	.reporttabs li img {
 		margin-right: 20px;
 	}
-	.tabs li.active-tab {
+	.reporttabs li.active-tab {
 		background: #006685;
 		color: #fcd833;
 	}
 
-	.tabs-content {
+	.reporttabs-content {
 		margin: 20px;
 		padding: 0;
 		list-style: none;
@@ -3648,7 +3648,7 @@ input.orange-button {
 			height: 255px;
 		}
 	}
-	.page-type-2 .tabs-content {
+	.page-type-2 .reporttabs-content {
 		margin: 0;
 		padding-top: 0;
 	}
@@ -5575,7 +5575,7 @@ input.orange-button {
 	.pr-20 {
 		padding-right: 20px;
 	}
-	.tabs {
+	.reporttabs {
 		margin: 0;
 		margin-top: 90px;
 		padding: 0;
@@ -5622,7 +5622,7 @@ input.orange-button {
 		}
 	}
 
-	.tabs-content {
+	.reporttabs-content {
 		margin: 20px;
 		padding: 0;
 		list-style: none;
@@ -6087,7 +6087,7 @@ input.orange-button {
 				height: 255px;
 			}
 		}
-		.tabs-content {
+		.reporttabs-content {
 			margin: 0;
 			padding-top: 0;
 		}
@@ -7529,4 +7529,81 @@ select {
 }
 .border-bottom-1-dd {
 	border-bottom: 1px solid #dddddd;
+}
+#reporttabs {
+	padding-top: 20px;
+
+	cursor: pointer;
+	position: relative;
+	z-index: 5;
+}
+#reporttabs .whiteborder {
+	border-bottom: 4px solid #00a6ca;
+	border-radius: 3px 3px 0 0;
+}
+#reporttabs .reporttabContent {
+	position: relative;
+	top: -1px;
+	z-index: 1;
+	padding-top: 10px;
+	border-radius: 0 0 3px 3px;
+	padding-bottom: 20px;
+}
+.reporttab {
+	font-family: "Intro", Bold;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 24px;
+	/* identical to box height, or 150% */
+
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+
+	/* Accent Black */
+
+	color: #2c2c2c;
+	margin-left: 20px;
+	padding-bottom: 7px;
+}
+#reporttabs .hide {
+	display: none;
+}
+#reporttabs .show {
+	display: block;
+}
+.payments {
+	margin-top: 20px;
+	padding-left: 20px;
+	margin-bottom: 30px;
+	.para-intro-regular-2c {
+		margin-right: 74px;
+	}
+}
+.standard-box {
+	padding: 20px;
+	padding-bottom: 0;
+	background-color: #fff;
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 20px 20px 0;
+	.key-value {
+		margin-right: 30px;
+		font-family: Intro Regular;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.02em;
+		color: #2c2c2c;
+		display: flex;
+		margin-bottom: 20px;
+		.key {
+			font-weight: 600;
+		}
+		.value {
+			margin-left: 5px;
+		}
+	}
 }
