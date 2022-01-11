@@ -858,7 +858,7 @@
   }
 }
 .score-simulator-lp .interstial-container .most-popular::after {
-  width: 101%;
+  width: 102%;
   left: -1px;
 }
 .score-simulator-lp .interstial-container .base-plan.active .most-popular::after {
