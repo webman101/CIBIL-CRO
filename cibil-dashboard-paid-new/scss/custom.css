@@ -6214,6 +6214,9 @@ input {
   max-width: 1200px;
 }
 
+.report-page .common-type-tabs-section {
+  padding-bottom: 60px;
+}
 .report-page .credit-summary .alerts {
   height: 108px;
 }

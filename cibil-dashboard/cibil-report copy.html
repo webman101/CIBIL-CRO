@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>My Account | CIBIL</title>
+    <meta name="description" content="Do you want to correct information on your CIBIL Report, and don’t know where to start? You can now initiate a dispute online with CIBIL for inaccuracies, account ownership and duplication of information that reflect in your Credit Report. CIBIL does not charge its consumers for this service.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/slick.css">
+    <link rel="stylesheet" href="scss/custom.css">
+
+</head>
+
+<body>
+
+    <div class="dropdown-select-list">
+        <ul>
+            <li value="1" class="init">
+                <img src="cibil-report/iconblue6.svg" alt="">
+                <p class="d-inline-block">
+                    Summary Report
+                </p>
+            </li>
+
+            <li value="2">
+                <img src="cibil-report/iconblue2.svg" alt="">
+                <p class="d-inline-block">
+                    Personal Information
+                </p>
+            </li>
+
+            <li value="3">
+                <img src="cibil-report/iconblue3.svg" alt="">
+                <p class="d-inline-block">
+                    Contact Information
+                </p>
+            </li>
+
+            <li value="4">
+                <img src="cibil-report/iconblue4.svg" alt="">
+                <p class="d-inline-block">
+                    Employment Information
+                </p>
+            </li>
+
+            <li value="5">
+                <img src="cibil-report/iconblue5.svg" alt="">
+                <p class="d-inline-block">
+                    Account Information
+                </p>
+            </li>
+
+            <li value="6">
+                <img src="cibil-report/iconblue1.svg" alt="">
+                <p class="d-inline-block">
+                    Enquiry Information
+                </p>
+            </li>
+        </ul>
+
+        <div id="tab1" class="dropdowntab-content">
+            This is tab 1 content.
+        </div>
+        <div id="tab2" class="dropdowntab-content">
+            This is tab 2 content.
+        </div>
+        <div id="tab3" class="dropdowntab-content">
+            This is tab 3 content.
+        </div>
+        <div id="tab4" class="dropdowntab-content">
+            This is tab 4 content.
+        </div>
+        <div id="tab5" class="dropdowntab-content">
+            This is tab 5 content.
+        </div>
+        <div id="tab6" class="dropdowntab-content">
+            This is tab 6 content.
+        </div>
+    </div>
+
+   
+
+    <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
+    <script src="https://assets.transunion.com/resources/js/lib/min/slick.min.js"></script>
+    <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script>
+        $('.dropdowntab-content').hide();
+        $('#tab1').show();
+
+        $('li').click(function(e) {
+            e.preventDefault();
+            var dropval = $(this).val();
+            $('.dropdowntab-content').hide();
+
+            $('#tab' + dropval).show()
+        });
+    </script>
+    <script>
+        $("ul").on("click", ".init", function() {
+            $(this).closest("ul").children('li:not(.init)').toggle();
+        });
+
+        var allOptions = $("ul").children('li:not(.init)');
+        $("ul").on("click", "li:not(.init)", function() {
+            allOptions.removeClass('selected');
+            $(this).addClass('selected');
+            $("ul").children('.init').html($(this).html());
+            allOptions.toggle();
+        });
+    </script>
+</body>
+
+</html>
