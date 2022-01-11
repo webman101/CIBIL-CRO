@@ -7338,7 +7338,11 @@ select {
 }
 .report-page {
 	.alerts-text-block .alerts-icon-text{
-		margin-bottom: 44px;
+		@media screen and (max-width: 992px) {
+			margin-bottom: 44px;
+		}
+		
+		
 	}
 	.password-active.active .password-tab {
 		background-image: url(../cibil-report/iconblue6.svg);

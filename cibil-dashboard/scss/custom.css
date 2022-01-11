@@ -7227,8 +7227,10 @@ select {
   max-width: unset !important;
 }
 
-.report-page .alerts-text-block .alerts-icon-text {
-  margin-bottom: 44px;
+@media screen and (max-width: 992px) {
+  .report-page .alerts-text-block .alerts-icon-text {
+    margin-bottom: 44px;
+  }
 }
 .report-page .password-active.active .password-tab {
   background-image: url(../cibil-report/iconblue6.svg);
