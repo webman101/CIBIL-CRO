@@ -252,3 +252,89 @@ var sho = $("#tab1 .list>div").length;
 $('.numb').text(sho);
 
 
+
+var arrowToggle = document.querySelector('.toggle-arrow')
+// var accordionContent = document.querySelector('.report-accordion-content')
+
+
+
+
+
+
+var accItem = document.getElementsByClassName('accordionItem');
+var accHD = document.getElementsByClassName('accordionItemHeading');
+
+
+
+for (i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+    var itemClass = this.parentNode.className;
+    for (i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+    }
+    if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+    }
+ 
+}
+
+
+
+
+var tab; // заголовок вкладки
+var tabContent; // блок содержащий контент вкладки
+
+
+window.onload=function() {
+    tabContent=document.getElementsByClassName('reporttabContent');
+    tab=document.getElementsByClassName('reporttab');
+    hideTabsContent(1);
+}
+
+document.getElementById('reporttabs').onclick= function (event) {
+    var target=event.target;
+    if (target.className=='reporttab') {
+       for (var i=0; i<tab.length; i++) {
+           if (target == tab[i]) {
+               showTabsContent(i);
+               break;
+           }
+       }
+    }
+}
+
+function hideTabsContent(a) {
+    for (var i=a; i<tabContent.length; i++) {
+        tabContent[i].classList.remove('show');
+        tabContent[i].classList.add("hide");
+        tab[i].classList.remove('whiteborder');
+    }
+}
+
+function showTabsContent(b){
+    if (tabContent[b].classList.contains('hide')) {
+        hideTabsContent(0);
+        tab[b].classList.add('whiteborder');
+        tabContent[b].classList.remove('hide');
+        tabContent[b].classList.add('show');
+    }
+}
+
+
+$('.tabgroup > div').hide();
+$('.tabgroup > div:first-of-type').show();
+$('.hitabs a').click(function(e){
+  e.preventDefault();
+    var $this = $(this),
+        tabgroup = '#'+$this.parents('.hitabs').data('tabgroup'),
+        others = $this.closest('li').siblings().children('a'),
+        target = $this.attr('href');
+    others.removeClass('active');
+    $this.addClass('active');
+    $(tabgroup).children('div').hide();
+    $(target).show();
+  
+})
+    
