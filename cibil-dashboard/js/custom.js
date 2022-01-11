@@ -334,7 +334,7 @@ $(document).ready(function() {
 });
 
 var arrowToggle = document.querySelector('.toggle-arrow')
-// var accordionContent = document.querySelector('.report-accordion-content')
+    // var accordionContent = document.querySelector('.report-accordion-content')
 
 
 
@@ -349,6 +349,7 @@ var accHD = document.getElementsByClassName('accordionItemHeading');
 for (i = 0; i < accHD.length; i++) {
     accHD[i].addEventListener('click', toggleItem, false);
 }
+
 function toggleItem() {
     var itemClass = this.parentNode.className;
     for (i = 0; i < accItem.length; i++) {
@@ -357,7 +358,7 @@ function toggleItem() {
     if (itemClass == 'accordionItem close') {
         this.parentNode.className = 'accordionItem open';
     }
- 
+
 }
 
 
@@ -367,33 +368,33 @@ var tab; // заголовок вкладки
 var tabContent; // блок содержащий контент вкладки
 
 
-window.onload=function() {
-    tabContent=document.getElementsByClassName('reporttabContent');
-    tab=document.getElementsByClassName('reporttab');
+window.onload = function() {
+    tabContent = document.getElementsByClassName('reporttabContent');
+    tab = document.getElementsByClassName('reporttab');
     hideTabsContent(1);
 }
 
-document.getElementById('reporttabs').onclick= function (event) {
-    var target=event.target;
-    if (target.className=='reporttab') {
-       for (var i=0; i<tab.length; i++) {
-           if (target == tab[i]) {
-               showTabsContent(i);
-               break;
-           }
-       }
+document.getElementById('reporttabs').onclick = function(event) {
+    var target = event.target;
+    if (target.className == 'reporttab') {
+        for (var i = 0; i < tab.length; i++) {
+            if (target == tab[i]) {
+                showTabsContent(i);
+                break;
+            }
+        }
     }
 }
 
 function hideTabsContent(a) {
-    for (var i=a; i<tabContent.length; i++) {
+    for (var i = a; i < tabContent.length; i++) {
         tabContent[i].classList.remove('show');
         tabContent[i].classList.add("hide");
         tab[i].classList.remove('whiteborder');
     }
 }
 
-function showTabsContent(b){
+function showTabsContent(b) {
     if (tabContent[b].classList.contains('hide')) {
         hideTabsContent(0);
         tab[b].classList.add('whiteborder');
@@ -401,3 +402,29 @@ function showTabsContent(b){
         tabContent[b].classList.add('show');
     }
 }
+
+
+// $('.report-page-tabs li').addClass('hide-important');
+// $('.report-page-tabs li:first-child').removeClass('hide-important');
+
+
+
+      
+if ($(window).width() < 480 || $(window).height() < 480) {
+
+
+        $(".report-page-tabs").on("click", ".init", function() {
+            $(this).closest(".report-page-tabs").children('li:not(.init)').toggle();
+        });
+
+        var allOptions = $(".report-page-tabs").children('li:not(.init)');
+
+        $(".report-page-tabs").on("click", "li:not(.init)", function() {
+            allOptions.removeClass('selected');
+            $(this).addClass('selected');
+            $(".report-page-tabs").children('.init').html($(this).html());
+            allOptions.toggle();
+        });
+
+          }
+    

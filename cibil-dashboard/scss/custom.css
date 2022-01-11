@@ -795,10 +795,14 @@ input:disabled {
 .common-type-tabs-section .nav li {
   margin: 0;
   width: 100%;
-  max-width: 200px;
   border-bottom: 1px solid #ddd;
   background-color: #fff;
   border-right: 1px solid #ddd;
+}
+@media screen and (min-width: 992px) {
+  .common-type-tabs-section .nav li {
+    max-width: 200px;
+  }
 }
 .common-type-tabs-section .nav li p {
   height: 50px;
@@ -1660,10 +1664,14 @@ input:disabled {
 }
 .nav li.active {
   background-color: #fff;
-  border-top: 6px solid #00a6ca !important;
   border-bottom: 0;
   position: relative;
   padding-top: 10px;
+}
+@media screen and (min-width: 992px) {
+  .nav li.active {
+    border-top: 6px solid #00a6ca !important;
+  }
 }
 .nav li.active::after {
   content: "";
@@ -2338,7 +2346,6 @@ input.orange-button {
 }
 @media screen and (min-width: 992px) and (min-width: 992px) {
   .common-type-tabs-section .nav li a {
-    padding-left: 20px;
     padding-bottom: 14px;
   }
 }
@@ -2411,10 +2418,6 @@ input.orange-button {
 @media screen and (max-width: 992px) {
   .dashboard .left-column {
     display: none;
-  }
-
-  .common-type-tabs-section .nav li {
-    padding-bottom: 20px;
   }
 
   .mhide {
@@ -7357,7 +7360,7 @@ select {
 #reporttabs .whiteborder {
   border-bottom: 4px solid #00a6ca;
   border-radius: 3px 3px 0 0;
-  background: #EDEDED;
+  background: #ededed;
 }
 
 #reporttabs .reporttabContent {
@@ -7581,19 +7584,48 @@ select {
 }
 
 @media screen and (max-width: 992px) {
-  .report-page-tabs {
-    background: #00a6ca;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  .outer-blue {
     padding: 20px;
+    background: #00a6ca;
+  }
+
+  .report-page-tabs {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .report-page-tabs::after {
+    content: "";
+    position: absolute;
+    background-image: url(../cibil-report/carret-down.svg);
+    width: 12px;
+    height: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 20px;
+    right: 30px;
+    z-index: 9;
   }
   .report-page-tabs li {
-    all: unset !important;
-    display: flex !important;
+    display: flex;
     width: 100% !important;
+    padding-bottom: 0 !important;
+    flex: unset;
+    border: 0;
+    padding-left: 20px !important;
+    padding: 0;
+  }
+  .report-page-tabs li.active::after {
+    display: none;
+  }
+  .report-page-tabs li.active {
+    padding-top: 0 !important;
   }
   .report-page-tabs li a {
     all: unset !important;
-    padding: 20px !important;
+    padding: 0 !important;
+    padding-left: 20px;
     list-style-type: none !important;
     z-index: 2 !important;
     background: #ffffff !important;
@@ -7608,9 +7640,10 @@ select {
   .report-page-tabs li a .image {
     width: 25px;
     margin-right: 15px;
+    background-position: center;
+    background-size: contain;
   }
   .report-page-tabs li.active {
-    all: unset !important;
     width: 100% !important;
   }
 }
@@ -7623,4 +7656,7 @@ select {
   .pb-sm-20 {
     padding-bottom: 20px;
   }
+}
+.hide-important {
+  display: none !important;
 }/*# sourceMappingURL=custom.css.map */

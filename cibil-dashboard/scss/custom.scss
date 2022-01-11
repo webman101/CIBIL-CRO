@@ -642,10 +642,14 @@ input {
 		li {
 			margin: 0;
 			width: 100%;
-			max-width: 200px;
+			@media screen and (min-width: 992px) {
+				max-width: 200px;
+			}
+
 			border-bottom: 1px solid #ddd;
 			background-color: #fff;
 			border-right: 1px solid #ddd;
+
 			p {
 				height: 50px;
 				display: flex;
@@ -1507,7 +1511,10 @@ input {
 	}
 	li.active {
 		background-color: #fff;
-		border-top: 6px solid #00a6ca !important;
+		@media screen and (min-width: 992px) {
+			border-top: 6px solid #00a6ca !important;
+		}
+
 		border-bottom: 0;
 		position: relative;
 		padding-top: 10px;
@@ -2058,7 +2065,6 @@ input.orange-button {
 					padding: 10px;
 					padding-left: 15px;
 					@media screen and (min-width: 992px) {
-						padding-left: 20px;
 						padding-bottom: 14px;
 					}
 				}
@@ -2127,8 +2133,7 @@ input.orange-button {
 	}
 	.common-type-tabs-section {
 		.nav {
-			li {
-				padding-bottom: 20px;
+			li.active {
 			}
 		}
 	}
@@ -7337,12 +7342,10 @@ select {
 	}
 }
 .report-page {
-	.alerts-text-block .alerts-icon-text{
+	.alerts-text-block .alerts-icon-text {
 		@media screen and (max-width: 992px) {
 			margin-bottom: 44px;
 		}
-		
-		
 	}
 	.password-active.active .password-tab {
 		background-image: url(../cibil-report/iconblue6.svg);
@@ -7463,8 +7466,8 @@ select {
 #reporttabs .whiteborder {
 	border-bottom: 4px solid #00a6ca;
 	border-radius: 3px 3px 0 0;
-	
-	background: #EDEDED;
+
+	background: #ededed;
 }
 #reporttabs .reporttabContent {
 	position: relative;
@@ -7493,8 +7496,6 @@ select {
 	@media screen and (max-width: 992px) {
 		padding: 20px;
 	}
-	
-	
 }
 #reporttabs .hide {
 	display: none;
@@ -7687,17 +7688,48 @@ select {
 	}
 }
 @media screen and (max-width: 992px) {
-	.report-page-tabs {
-		background: #00a6ca;
-		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+	.outer-blue {
 		padding: 20px;
+		background: #00a6ca;
+	}
+	.report-page-tabs {
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+		position: relative;
+		border-radius: 6px;
+		overflow: hidden;
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url(../cibil-report/carret-down.svg);
+			width: 12px;
+			height: 6px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			top: 20px;
+			right: 30px;
+			z-index: 9;
+		}
 		li {
-			all: unset !important;
-			display: flex !important;
+			display: flex;
 			width: 100% !important;
+			padding-bottom: 0 !important;
+			flex: unset;
+			border: 0;
+			padding-left: 20px !important;
+			padding: 0;
+			&.active::after {
+				display: none;
+			}
+			&.active {
+				padding-top: 0 !important;
+			}
+			&.init {
+			}
 			a {
 				all: unset !important;
-				padding: 20px !important;
+				padding: 0 !important;
+				padding-left: 20px;
 				list-style-type: none !important;
 				z-index: 2 !important;
 				background: #ffffff !important;
@@ -7711,10 +7743,11 @@ select {
 				.image {
 					width: 25px;
 					margin-right: 15px;
+					background-position: center;
+					background-size: contain;
 				}
 			}
 			&.active {
-				all: unset !important;
 				width: 100% !important;
 			}
 		}
@@ -7723,12 +7756,13 @@ select {
 @media screen and (min-width: 992px) {
 	.mt-md-0 {
 		margin-top: 0 !important;
-		
 	}
 }
 @media screen and (max-width: 992px) {
-	.pb-sm-20{
+	.pb-sm-20 {
 		padding-bottom: 20px;
 	}
 }
-
+.hide-important {
+	display: none !important;
+}
