@@ -3275,4 +3275,52 @@ input {
     padding-bottom: 20px;
   }
 }
-/*# sourceMappingURL=custom.css.map *//*# sourceMappingURL=custom.css.map */
+/*# sourceMappingURL=custom.css.map */
+@media screen and (max-width: 992px) {
+  .report-page .alerts-text-block .alerts-icon-text {
+    margin-bottom: 44px;
+  }
+}
+.report-page .password-active.active .password-tab {
+  background-image: url(../cibil-report/iconblue6.svg);
+}
+.report-page .notification-active.active .notification-tab {
+  background-image: url(../cibil-report/iconblue1.svg);
+}
+.report-page .subscription-active.active .subscription-tab {
+  background-image: url(../cibil-report/iconblue2.svg);
+}
+.report-page .password-tab {
+  background-image: url(../cibil-report/iconrepot6.svg);
+}
+.report-page .notification-tab {
+  background-image: url(../cibil-report/iconrepot1.svg);
+}
+.report-page .subscription-tab {
+  background-image: url(../cibil-report/iconrepot2.svg);
+}
+.report-page .employment .password-tab {
+  background-image: url(../cibil-report/iconrepot3.svg);
+}
+.report-page .employment.password-active.active .password-tab {
+  background-image: url(../cibil-report/iconblue3.svg);
+}
+.report-page .accounttab .notification-tab {
+  background-image: url(../cibil-report/iconrepot5.svg);
+  background-position: top;
+}
+.report-page .inquirytab .subscription-tab {
+  background-image: url(../cibil-report/iconrepot5.svg);
+}
+.report-page .inquirytab.subscription-active.active .subscription-tab {
+  background-image: url(../cibil-report/iconblue5.svg);
+}
+
+.report-page .accounttab .notification-tab {
+  background-image: url(../cibil-report/iconrepot4.svg);
+  background-position: top;
+}
+
+.notification-active.accounttab.active .notification-tab {
+  background-image: url(../cibil-report/iconblue4.svg);
+}/*# sourceMappingURL=custom.css.map */
