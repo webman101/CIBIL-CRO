@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Intro", book;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Intro", book;
+  scroll-behavior: smooth;
+}
+
+a {
+  outline: 0 !important;
+  cursor: pointer;
+  color: #2c2c2c;
+}
+
+a:hover {
+  color: #f16e00;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 1240px;
+}
+
+.orange-button {
+  padding: 17px 40px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f16e00;
+  border-radius: 25px;
+  font-family: Intro Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.02em;
+  /* Accent Black */
+  color: #2c2c2c;
+}
+
+.banner .banner-text-block {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: auto;
+  height: max-content;
+}
+.banner .banner-text-block h2 {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 44px;
+  /* or 110% */
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.banner .banner-text-block p {
+  font-family: Intro Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 139%;
+  /* or 33px */
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.banner .carousel-indicators {
+  display: flex;
+  justify-content: flex-start;
+}
+.banner .carousel-indicators li {
+  all: unset;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.banner .carousel-indicators li img {
+  object-fit: contain;
+}/*# sourceMappingURL=custom.css.map */
