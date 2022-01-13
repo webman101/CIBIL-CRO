@@ -6,21 +6,11 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Intro", book;
-    scroll-behavior: smooth;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body {
-    font-family: "Intro";
-    scroll-behavior: smooth;
-}
-
 a {
     outline: none !important;
+    &:hover {
+        color: #f16e00;
+    }
 }
 
 button,
@@ -833,7 +823,12 @@ $brand-blue: #00a6ca;
                 position: absolute;
                 height: 80%;
                 width: 60px;
-                background: linear-gradient( 270deg, #ffffff 54.64%, rgba(255, 255, 255, 0.0729167) 88.53%, rgba(255, 255, 255, 0) 95.5%);
+                background: linear-gradient(
+                    270deg,
+                    #ffffff 54.64%,
+                    rgba(255, 255, 255, 0.0729167) 88.53%,
+                    rgba(255, 255, 255, 0) 95.5%
+                );
                 right: 0;
                 top: 0;
                 z-index: 1;
@@ -931,7 +926,8 @@ $brand-blue: #00a6ca;
         background: #00a6ca;
         box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.21);
         border-radius: 8px;
-        @media screen and (min-width: 992px) {}
+        @media screen and (min-width: 992px) {
+        }
         padding: 30px;
         width: 100%;
         h6 {
@@ -1186,7 +1182,10 @@ $brand-blue: #00a6ca;
 .navigation-tabs {
     display: flex;
     align-items: center;
-    &>a {
+    @media screen and (max-width: 992px) {
+        margin-bottom: 30px;    
+    }
+    & > a {
         background: #f9f9f9;
         text-decoration: none;
         padding: 4px 10px;
@@ -1235,7 +1234,8 @@ $brand-blue: #00a6ca;
 //////////////switch-tabs-section
 .switching-tabs {
     background-color: #ffffff;
-    @media screen and (min-width: 992px) {}
+    @media screen and (min-width: 992px) {
+    }
     .benefits-outer {
         padding: 20px;
         .row {
@@ -1468,7 +1468,7 @@ $brand-blue: #00a6ca;
         display: flex;
         padding-left: 20px;
     }
-    &>div {
+    & > div {
         flex: 1;
         margin-right: 20px;
         @media screen and (max-width: 992px) {
@@ -1510,7 +1510,7 @@ $brand-blue: #00a6ca;
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #000000;
-        &+span {
+        & + span {
             position: absolute;
             left: 15px;
             bottom: 23px;
@@ -1637,7 +1637,7 @@ $brand-blue: #00a6ca;
         border-radius: 2px;
         overflow: hidden;
     }
-    .form-group input:checked+label:before {
+    .form-group input:checked + label:before {
         content: "";
         -webkit-appearance: none;
         background-color: black;
@@ -1655,7 +1655,7 @@ $brand-blue: #00a6ca;
         margin: auto;
         padding: 0;
     }
-    .form-group input:checked+label:after {
+    .form-group input:checked + label:after {
         content: "";
         display: block;
         position: absolute;
@@ -1852,7 +1852,7 @@ $brand-blue: #00a6ca;
     display: flex;
     padding: 10px;
     border-top: 1px solid #dddddd;
-    &>div {
+    & > div {
         flex: 1;
         position: relative;
         &::before {
@@ -2082,7 +2082,7 @@ input:focus {
     right: 0;
     display: flex;
     background-color: transparent !important;
-    &>div {
+    & > div {
         position: relative;
         border: 1px dashed #00a6ca;
         box-sizing: border-box;
@@ -2201,7 +2201,7 @@ input:focus {
 }
 
 .modal-content {
-    >* {
+    > * {
         &:first-child {
             margin-top: 0;
         }
@@ -2386,7 +2386,7 @@ input {
         box-sizing: border-box;
         border-radius: 6px;
         padding: 8px 10px;
-        input:checked~label::before {
+        input:checked ~ label::before {
             content: "";
             position: absolute;
             left: 0;
@@ -2657,7 +2657,7 @@ input {
     .navigation-tabs {
         display: flex;
         align-items: center;
-        &>a {
+        & > a {
             background: #f9f9f9;
             text-decoration: none;
             padding: 4px 10px;
@@ -2779,7 +2779,8 @@ input {
         }
     }
     .column-outer {
-        @media screen and (min-width: 992px) {}
+        @media screen and (min-width: 992px) {
+        }
     }
     .border-right-0 {
         border-right: 0;
@@ -2948,7 +2949,7 @@ input {
                 border-radius: 0.15em;
                 transition: background 0.3s ease;
                 text-decoration: none;
-                &>div {
+                & > div {
                     display: flex;
                     p {
                         font-family: "Intro", Bold;
@@ -2988,10 +2989,6 @@ input {
 }
 
 .accounts-paid-page {
-    body {
-        font-family: "Intro";
-        scroll-behavior: smooth;
-    }
     a {
         outline: none !important;
     }
@@ -3008,7 +3005,24 @@ input {
         margin: 0;
     }
     ////////////////// spacing
-    $spaceamounts: ( 2, 4, 5, 6, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 75, 100); // Adjust this to include the pixel amounts you need.
+    $spaceamounts: (
+        2,
+        4,
+        5,
+        6,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        60,
+        75,
+        100
+    ); // Adjust this to include the pixel amounts you need.
     $sides: (top, bottom, left, right); // Leave this variable alone
     @each $space in $spaceamounts {
         @each $side in $sides {
@@ -3252,7 +3266,7 @@ input {
     .navigation-tabs {
         display: flex;
         align-items: center;
-        &>a {
+        & > a {
             background: #f9f9f9;
             text-decoration: none;
             padding: 4px 10px;
@@ -3344,7 +3358,8 @@ input {
                     display: block;
                     width: 100%;
                     max-width: 200px;
-                    @media screen and (min-width: 992px) {}
+                    @media screen and (min-width: 992px) {
+                    }
                     text-align: left;
                     cursor: pointer;
                 }
@@ -3747,7 +3762,7 @@ input {
             justify-content: center;
             color: #ffffff;
             position: relative;
-            >div {
+            > div {
                 position: relative;
                 z-index: 2;
             }
@@ -3862,7 +3877,8 @@ input {
         }
     }
     .column-outer {
-        @media screen and (min-width: 992px) {}
+        @media screen and (min-width: 992px) {
+        }
     }
     .col-1-link {
         font-family: "Intro", Regular;
@@ -3907,7 +3923,8 @@ input {
         letter-spacing: 0.02em;
         color: #2c2c2c;
     }
-    .features-grid {}
+    .features-grid {
+    }
     .feature {
         display: flex;
         align-items: center;
@@ -3929,7 +3946,8 @@ input {
             margin-right: 23px;
         }
     }
-    .interstial-container {}
+    .interstial-container {
+    }
     @media screen and (max-width: 992px) {
         .common-tabs {
             li {
@@ -4093,7 +4111,8 @@ input {
             .tab-pane {
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
-                &.active {}
+                &.active {
+                }
             }
             .small-right {
                 width: 21px !important;
@@ -4500,7 +4519,7 @@ input {
     .navigation-tabs {
         display: flex;
         align-items: center;
-        &>a {
+        & > a {
             background: #f9f9f9;
             text-decoration: none;
             padding: 4px 10px;
@@ -4596,7 +4615,8 @@ input {
                     display: block;
                     width: 100%;
                     max-width: 200px;
-                    @media screen and (min-width: 992px) {}
+                    @media screen and (min-width: 992px) {
+                    }
                     text-align: left;
                     cursor: pointer;
                 }
@@ -4999,7 +5019,7 @@ input {
             justify-content: center;
             color: #ffffff;
             position: relative;
-            >div {
+            > div {
                 position: relative;
                 z-index: 2;
             }
@@ -5132,7 +5152,8 @@ input {
         }
     }
     .column-outer {
-        @media screen and (min-width: 992px) {}
+        @media screen and (min-width: 992px) {
+        }
     }
     .col-1-link {
         font-family: "Intro", Regular;
@@ -5177,7 +5198,8 @@ input {
         letter-spacing: 0.02em;
         color: #2c2c2c;
     }
-    .features-grid {}
+    .features-grid {
+    }
     .feature {
         display: flex;
         align-items: center;
@@ -5199,7 +5221,8 @@ input {
             margin-right: 23px;
         }
     }
-    .interstial-container {}
+    .interstial-container {
+    }
     @media screen and (max-width: 992px) {
         .common-tabs {
             li {
@@ -5365,7 +5388,8 @@ input {
             .tab-pane {
                 border-bottom-left-radius: 5px;
                 border-bottom-right-radius: 5px;
-                &.active {}
+                &.active {
+                }
             }
             .small-right {
                 width: 21px !important;
@@ -8128,7 +8152,7 @@ input {
 //             font-weight: 700;
 //         }
 //         .text-blue {
-//             font-family: Intro Bold;
+//             font-family: 'Intro', Bold;
 //             font-weight: 700;
 //             line-height: 24px;
 //             letter-spacing: 0.02em;
@@ -8598,7 +8622,7 @@ input {
 //     }
 // }
 // .text-blue {
-//     font-family: Intro Bold;
+//     font-family: 'Intro', Bold;
 //     font-weight: 700;
 //     line-height: 24px;
 //     letter-spacing: 0.02em;
@@ -9956,13 +9980,8 @@ input {
 //     margin-right: 20px;
 // }
 .report-page {
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: Intro, book;
-        scroll-behavior: smooth;
-        -webkit-tap-highlight-color: transparent;
-    }
+    padding-bottom: 60px;
+
     body {
         font-family: Intro, book;
         scroll-behavior: smooth;
@@ -10500,7 +10519,7 @@ input {
         display: flex;
         align-items: center;
     }
-    .navigation-tabs>a {
+    .navigation-tabs > a {
         background: #f9f9f9;
         text-decoration: none;
         padding: 4px 10px;
@@ -10517,7 +10536,7 @@ input {
         display: flex;
         align-items: center;
     }
-    .navigation-tabs>a.navigation-active-tab {
+    .navigation-tabs > a.navigation-active-tab {
         font-family: Intro, Regular;
         color: #2c2c2c;
     }
@@ -10930,7 +10949,7 @@ input {
         color: #fff;
         position: relative;
     }
-    .interstial-container .most-popular>div {
+    .interstial-container .most-popular > div {
         position: relative;
         z-index: 2;
         position: relative;
@@ -12111,6 +12130,9 @@ input {
     .flex-1 {
         flex-grow: 1;
     }
+    .flex-grow-1 {
+        flex-grow: 1;
+    }
     @media screen and (min-width: 1400px) and (max-width: 1600px) {
         .upgrade-plan-page {
             padding-right: 60px;
@@ -12796,7 +12818,7 @@ input {
         display: flex;
         align-items: center;
     }
-    .main-dashboard .navigation-tabs>a {
+    .main-dashboard .navigation-tabs > a {
         background: #f9f9f9;
         text-decoration: none;
         padding: 4px 10px;
@@ -12812,7 +12834,7 @@ input {
         letter-spacing: 0.02em;
         color: #707070;
     }
-    .main-dashboard .navigation-tabs>a.navigation-active-tab {
+    .main-dashboard .navigation-tabs > a.navigation-active-tab {
         font-family: Intro, Regular;
         color: #2c2c2c;
     }
@@ -12968,10 +12990,7 @@ input {
         padding: 7px 14px;
         margin-bottom: 10px;
     }
-    .offers-page body {
-        font-family: Intro;
-        scroll-behavior: smooth;
-    }
+
     .offers-page a {
         outline: 0 !important;
     }
@@ -13278,7 +13297,7 @@ input {
         color: #707070;
     }
     .offers-page .text-blue {
-        font-family: Intro Bold;
+        font-family: "Intro", Bold;
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0.02em;
@@ -13668,7 +13687,7 @@ input {
         display: flex;
         align-items: center;
     }
-    .offers-page .navigation-tabs>a {
+    .offers-page .navigation-tabs > a {
         background: #f9f9f9;
         text-decoration: none;
         padding: 4px 10px;
@@ -13684,7 +13703,7 @@ input {
         letter-spacing: 0.02em;
         color: #707070;
     }
-    .offers-page .navigation-tabs>a.navigation-active-tab {
+    .offers-page .navigation-tabs > a.navigation-active-tab {
         font-family: Intro, Regular;
         color: #2c2c2c;
     }
@@ -13910,7 +13929,7 @@ input {
         margin: auto;
     }
     .text-blue {
-        font-family: Intro Bold;
+        font-family: "Intro", Bold;
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0.02em;
@@ -14103,27 +14122,27 @@ input {
         .mobile-section-with-spaces {
             margin: 20px !important;
         }
-        .mobile-details-section>div {
+        .mobile-details-section > div {
             padding: 0 !important;
             margin-bottom: 20px;
         }
-        .mobile-details-section>div .para-intro-regular-2c {
+        .mobile-details-section > div .para-intro-regular-2c {
             margin-bottom: 4px !important;
         }
-        .mobile-details-section>div:last-child {
-            margin-bottom: 0;
+        .mobile-details-section > div:last-child {
+          
         }
         .mobile-details-section-grey {
             margin-top: 20px;
         }
-        .mobile-details-section-grey>div {
+        .mobile-details-section-grey > div {
             padding: 0 !important;
             margin-bottom: 20px;
         }
-        .mobile-details-section-grey>div .para-intro-regular-2c {
+        .mobile-details-section-grey > div .para-intro-regular-2c {
             margin-bottom: 4px !important;
         }
-        .mobile-details-section-grey>div:last-child {
+        .mobile-details-section-grey > div:last-child {
             margin-bottom: 0;
         }
     }
@@ -14267,7 +14286,8 @@ input {
 }
 
 .tabgroup {
-    div {}
+    div {
+    }
 }
 
 .clearfix:after {

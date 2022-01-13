@@ -6,21 +6,11 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Intro", book;
-  scroll-behavior: smooth;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body {
-  font-family: "Intro";
-  scroll-behavior: smooth;
-}
-
 a {
   outline: none !important;
+}
+a:hover {
+  color: #f16e00;
 }
 
 button,
@@ -1155,6 +1145,11 @@ h6 {
 .navigation-tabs {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .navigation-tabs {
+    margin-bottom: 30px;
+  }
 }
 .navigation-tabs > a {
   background: #f9f9f9;
@@ -2925,10 +2920,6 @@ input {
   transform: rotate(0);
 }
 
-.accounts-paid-page body {
-  font-family: "Intro";
-  scroll-behavior: smooth;
-}
 .accounts-paid-page a {
   outline: none !important;
 }
@@ -6205,12 +6196,8 @@ input {
   max-width: 1200px;
 }
 
-.report-page * {
-  margin: 0;
-  padding: 0;
-  font-family: Intro, book;
-  scroll-behavior: smooth;
-  -webkit-tap-highlight-color: transparent;
+.report-page {
+  padding-bottom: 60px;
 }
 .report-page body {
   font-family: Intro, book;
@@ -8360,6 +8347,9 @@ input {
 .report-page .flex-1 {
   flex-grow: 1;
 }
+.report-page .flex-grow-1 {
+  flex-grow: 1;
+}
 @media screen and (min-width: 1400px) and (max-width: 1600px) {
   .report-page .upgrade-plan-page {
     padding-right: 60px;
@@ -9217,10 +9207,6 @@ input {
   padding: 7px 14px;
   margin-bottom: 10px;
 }
-.report-page .offers-page body {
-  font-family: Intro;
-  scroll-behavior: smooth;
-}
 .report-page .offers-page a {
   outline: 0 !important;
 }
@@ -9527,7 +9513,7 @@ input {
   color: #707070;
 }
 .report-page .offers-page .text-blue {
-  font-family: Intro Bold;
+  font-family: "Intro", Bold;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -10159,7 +10145,7 @@ input {
   margin: auto;
 }
 .report-page .text-blue {
-  font-family: Intro Bold;
+  font-family: "Intro", Bold;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -10358,9 +10344,6 @@ input {
   }
   .report-page .mobile-details-section > div .para-intro-regular-2c {
     margin-bottom: 4px !important;
-  }
-  .report-page .mobile-details-section > div:last-child {
-    margin-bottom: 0;
   }
   .report-page .mobile-details-section-grey {
     margin-top: 20px;
