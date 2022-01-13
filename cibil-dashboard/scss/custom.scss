@@ -7467,7 +7467,11 @@ select {
 	border-bottom: 4px solid #00a6ca;
 	border-radius: 3px 3px 0 0;
 
-	background: #ededed;
+	@media screen and (max-width: 992px) {
+		background: #ededed;
+	}
+	
+	
 }
 #reporttabs .reporttabContent {
 	position: relative;

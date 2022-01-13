@@ -409,22 +409,21 @@ function showTabsContent(b) {
 
 
 
-      
+
 if ($(window).width() < 480 || $(window).height() < 480) {
 
 
-        $(".report-page-tabs").on("click", ".init", function() {
-            $(this).closest(".report-page-tabs").children('li:not(.init)').toggle();
-        });
+    $(".report-page-tabs").on("click", ".init", function() {
+        $(this).closest(".report-page-tabs").children('li:not(.init)').toggle();
+    });
 
-        var allOptions = $(".report-page-tabs").children('li:not(.init)');
+    var allOptions = $(".report-page-tabs").children('li:not(.init)');
 
-        $(".report-page-tabs").on("click", "li:not(.init)", function() {
-            allOptions.removeClass('selected');
-            $(this).addClass('selected');
-            $(".report-page-tabs").children('.init').html($(this).html());
-            allOptions.toggle();
-        });
+    $(".report-page-tabs").on("click", "li:not(.init)", function() {
+        allOptions.removeClass('selected');
+        $(this).addClass('selected');
+        $(".report-page-tabs").children('.init').html($(this).html());
+        allOptions.toggle();
+    });
 
-          }
-    
+}

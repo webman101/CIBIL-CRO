@@ -2364,7 +2364,12 @@ input {
     align-items: flex-end;
     margin-bottom: 0;
     color: #707070;
+    @media screen and (max-width: 992px) {
+        font-weight: 600;
+        color: #2c2c2c;
+    }
 }
+
 .report-page .common-type-tabs-section .nav li a {
     all: unset;
     display: block;
@@ -2660,7 +2665,9 @@ input {
 .report-page #reporttabs .whiteborder {
     border-bottom: 4px solid #00a6ca;
     border-radius: 3px 3px 0 0;
-    background: #ededed;
+    @media screen and (max-width: 992px) {
+        background: #ededed;
+    }
 }
 .report-page #reporttabs .reporttabContent {
     position: relative;
@@ -2809,6 +2816,9 @@ input {
         right: 30px;
         z-index: 9;
     }
+    .report-page .report-page-tabs.reverse::after {
+        transform: rotate(180deg);
+    }
     .report-page .report-page-tabs li {
         display: flex;
         width: 100% !important;
@@ -2864,6 +2874,7 @@ input {
     display: flex;
     padding: 0;
     margin: 0;
+    margin-bottom: 30px;
 }
 .hitabs li {
     font-family: Intro, Bold;
@@ -2974,4 +2985,31 @@ input {
 }
 .notification-active.accounttab.active .notification-tab {
     background-image: url(../cibil-report/iconblue4.svg);
+}
+@media screen and (max-width: 992px) {
+    .report-page .notification-tab {
+        background-image: url(../cibil-report/iconblue1.svg);
+    }
+    .report-page .subscription-tab {
+        background-image: url(../cibil-report/iconblue2.svg);
+    }
+    .report-page .password-tab {
+        background-image: url(../cibil-report/iconblue6.svg);
+    }
+    .report-page .employment .password-tab {
+        background-image: url(../cibil-report/iconblue3.svg);
+    }
+    .report-page .accounttab .notification-tab {
+        background-image: url(../cibil-report/iconblue4.svg);
+
+        background-position: top;
+    }
+    .report-page .inquirytab .subscription-tab{
+        background-image: url(../cibil-report/iconblue5.svg);
+
+
+    }
+}
+.init{
+    display: none;
 }
