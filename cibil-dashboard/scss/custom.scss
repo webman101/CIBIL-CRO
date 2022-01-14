@@ -1303,6 +1303,9 @@ input.orange-button {
 	.pr-md-60 {
 		padding-right: 60px !important;
 	}
+	.pl-md-60 {
+		padding-left: 60px !important;
+	}
 	.dashboard .right-column {
 		padding-left: 60px;
 		width: 80%;
@@ -4117,17 +4120,18 @@ select {
 .score-simulator-free-page {
 }
 
-#exampleModal {
+.modal {
 	.modal-dialog {
 		max-width: 1065px;
 	}
 	.popuop {
 		padding: 20px;
 	}
-	.close{
+	.close {
 		position: absolute;
 		right: 10px;
 		top: 10px;
+		cursor: pointer;
 	}
 	.blue-title {
 		font-family: "Intro", Bold;
@@ -4160,4 +4164,33 @@ select {
 		margin-top: 20px;
 		margin-bottom: 30px;
 	}
+}
+
+.nooffers-text {
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	@media screen and (max-width: 992px) {
+		max-width: 342px;
+	}
+
+	p {
+		margin: auto;
+		text-align: center;
+		color: #2c2c2c;
+		padding: 15px;
+		padding-bottom: 0;
+	}
+}
+.title {
+	font-family: "Intro", Regular;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 30px;
+	/* identical to box height, or 125% */
+
+	color: #2c2c2c;
 }

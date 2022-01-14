@@ -1317,6 +1317,10 @@ input.orange-button {
     padding-right: 60px !important;
   }
 
+  .pl-md-60 {
+    padding-left: 60px !important;
+  }
+
   .dashboard .right-column {
     padding-left: 60px;
     width: 80%;
@@ -4120,18 +4124,19 @@ select {
   }
 }
 /*# sourceMappingURL=custom.css.map */
-#exampleModal .modal-dialog {
+.modal .modal-dialog {
   max-width: 1065px;
 }
-#exampleModal .popuop {
+.modal .popuop {
   padding: 20px;
 }
-#exampleModal .close {
+.modal .close {
   position: absolute;
   right: 10px;
   top: 10px;
+  cursor: pointer;
 }
-#exampleModal .blue-title {
+.modal .blue-title {
   font-family: "Intro", Bold;
   font-style: normal;
   font-weight: bold;
@@ -4143,7 +4148,7 @@ select {
   color: #00a6ca;
   margin-left: 20px;
 }
-#exampleModal p {
+.modal p {
   font-family: "Intro", Regular;
   font-style: normal;
   font-weight: normal;
@@ -4155,4 +4160,34 @@ select {
   color: #2c2c2c;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+.nooffers-text {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@media screen and (max-width: 992px) {
+  .nooffers-text {
+    max-width: 342px;
+  }
+}
+.nooffers-text p {
+  margin: auto;
+  text-align: center;
+  color: #2c2c2c;
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+.title {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  /* identical to box height, or 125% */
+  color: #2c2c2c;
 }/*# sourceMappingURL=custom.css.map */

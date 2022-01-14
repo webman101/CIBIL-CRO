@@ -427,3 +427,11 @@ if ($(window).width() < 480 || $(window).height() < 480) {
     });
 
 }
+
+
+function extraTicketAttachment(el) {
+    if ($('input.append-onclick').is(':checked')) {
+        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+    }
+  
+}
