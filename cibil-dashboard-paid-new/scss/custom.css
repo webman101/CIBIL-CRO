@@ -73,6 +73,14 @@ h6 {
   .mt-md-30 {
     margin-top: 30px;
   }
+
+  .mr-md-20 {
+    margin-right: 20px;
+  }
+
+  .pt-md-30 {
+    padding-top: 30px;
+  }
 }
 .pb-0 {
   padding-bottom: 0 !important;
@@ -120,6 +128,10 @@ h6 {
 .text-intro-bold {
   font-family: "Intro", Bold;
   font-weight: bold;
+}
+
+.color-2c {
+  color: #2c2c2c;
 }
 
 .text-blue {
@@ -793,11 +805,9 @@ input {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 0;
-  /* Accent Black */
   color: #2c2c2c;
   margin-right: 20px;
 }
@@ -806,9 +816,7 @@ input {
   font-family: "Intro", Book;
   font-size: 14px;
   line-height: 24px;
-  /* identical to box height, or 171% */
   letter-spacing: 0.02em;
-  /* Accent Black */
   color: #2c2c2c;
 }
 
@@ -881,27 +889,27 @@ input {
 }
 
 @media screen and (min-width: 992px) {
-  .accounts-paid-page .mt-md-20 {
+  .mt-md-20 {
     margin-top: 20px !important;
   }
 
-  .accounts-paid-page .mb-md-20 {
+  .mb-md-20 {
     margin-bottom: 20px !important;
   }
 
-  .accounts-paid-page .mt-md-30 {
+  .mt-md-30 {
     margin-top: 30px !important;
   }
 
-  .accounts-paid-page .mb-md-30 {
+  .mb-md-30 {
     margin-bottom: 30px !important;
   }
 
-  .accounts-paid-page .mt-md-40 {
+  .mt-md-40 {
     margin-top: 40px !important;
   }
 
-  .accounts-paid-page .mb-md-60 {
+  .mb-md-60 {
     margin-bottom: 60px !important;
   }
 }
@@ -921,7 +929,7 @@ input {
   color: #2c2c2c;
 }
 
-.accounts-paid-page .para-intro-regular {
+.para-intro-regular {
   font-family: "Intro", Regular;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -943,7 +951,7 @@ input {
   color: #2c2c2c;
 }
 
-.accounts-paid-page .color-70 {
+.color-70 {
   color: #707070;
 }
 
@@ -1480,7 +1488,6 @@ input {
 }
 .accounts-paid-page .pill {
   background: #a9d161;
-  /* Secondary Green */
   border: 1px solid #a9d161;
   box-sizing: border-box;
   border-radius: 4px;
@@ -1543,9 +1550,7 @@ input {
   font-family: "Intro", Regular;
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
   letter-spacing: 0.02em;
-  /* Accent Black */
   color: #2c2c2c;
   display: inline-block;
   padding: 1px 15px;
@@ -2830,7 +2835,7 @@ input {
     margin-top: 60px !important;
   }
 
-  .report-page .pr-md-60 {
+  .pr-md-60 {
     padding-right: 60px !important;
   }
 
@@ -3004,7 +3009,6 @@ input {
 
 .report-page .reporttab {
   font-family: Intro, Bold;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -3049,7 +3053,6 @@ input {
 .report-page .standard-box .key-value {
   margin-right: 30px;
   font-family: Intro Regular;
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -3366,6 +3369,182 @@ input {
     background-image: url(../cibil-report/iconblue5.svg);
   }
 }
-.init {
+.hide {
   display: none;
+}
+
+.score-simulator #accordionExample1 .accordion-item {
+  all: unset;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 0;
+  padding-left: 20px;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+.score-simulator #accordionExample1 .accordion-item .accordion-body {
+  padding-left: 0;
+}
+.score-simulator #accordionExample1 .accordion-item .accordion-body select {
+  height: 50px;
+  width: 100%;
+  max-width: 281px;
+  margin-top: 5px;
+  padding-left: 15px;
+  border: 1px solid #acacac;
+}
+.score-simulator #accordionExample1 .accordion-item .accordion-body input[type=text] {
+  height: 50px;
+  width: 100%;
+  max-width: 281px;
+  margin-top: 5px;
+  padding-left: 15px;
+  border: 1px solid #acacac;
+  border-radius: 0;
+}
+.score-simulator #accordionExample1 .accordion-item .accordion-header {
+  all: unset;
+}
+.score-simulator #accordionExample1 .accordion-item .accordion-header .accordion-button {
+  all: unset;
+  display: block;
+  width: 100%;
+  height: 64px;
+  position: relative;
+}
+.score-simulator #accordionExample1 .accordion-item .accordion-header .accordion-button::after {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  background-image: url(../score-simulator/arrow-circle-down.svg);
+  background-position: center;
+  background-size: contain;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.score-simulator #accordionExample2 .accordion-item {
+  all: unset;
+  display: block;
+  width: 100%;
+  border-top: 2px solid #ececec;
+}
+.score-simulator #accordionExample2 .accordion-item .accordion-body {
+  padding-left: 0;
+}
+.score-simulator #accordionExample2 .accordion-item .accordion-header {
+  all: unset;
+}
+.score-simulator #accordionExample2 .accordion-item .accordion-header .accordion-button {
+  all: unset;
+  display: block;
+  width: 100%;
+  height: 64px;
+  position: relative;
+  background-color: #fff;
+}
+.score-simulator #accordionExample2 .accordion-item .accordion-header .accordion-button::after {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  background-image: url(../score-simulator/minus.svg);
+  background-position: center;
+  background-size: contain;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.score-simulator #accordionExample2 .accordion-item .accordion-header .accordion-button.collapsed::after {
+  background-image: url(../score-simulator/plus.svg);
+}
+.score-simulator .button-group {
+  display: flex;
+}
+.score-simulator .button-group a {
+  width: 189px;
+  height: 50px;
+  background: #dddddd;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.02em;
+  /* Accent Grey 5 */
+  color: #707070;
+  text-decoration: none;
+}
+.score-simulator .button-group .disabled-outline {
+  background: #ffffff;
+  /* Accent Grey 4 */
+  border: 1px solid #acacac;
+}
+
+.title {
+  font-family: "Intro", Regular;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2c2c2c;
+}
+
+.inputgroupradio {
+  display: flex;
+}
+.inputgroupradio label {
+  width: 70px;
+  height: 50px;
+  border: 1px solid #acacac;
+  -webkit-appearance: none;
+  font-family: "Intro", Book;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #707070;
+}
+.inputgroupradio input[type=radio] {
+  display: none;
+}
+.inputgroupradio input[type=radio]:checked + label {
+  width: 70px;
+  height: 50px;
+  background: #00a6ca;
+  border-color: #00a6ca;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 992px) {
+  .pl-md-60 {
+    padding-left: 60px;
+  }
+}
+.disclaimer {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+  /* Accent Black */
+  color: #2c2c2c;
+  border-top: 1px solid #DDDDDD;
+}
+@media screen and (min-width: 992px) {
+  .disclaimer {
+    padding: 30px 60px;
+  }
 }/*# sourceMappingURL=custom.css.map */
