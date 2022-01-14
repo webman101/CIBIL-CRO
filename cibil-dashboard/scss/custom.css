@@ -2934,6 +2934,11 @@ input.orange-button {
 .offers-page .input-lists .autocomplete {
   position: relative;
 }
+@media screen and (min-width: 992px) {
+  .offers-page .input-lists .autocomplete {
+    width: 300px;
+  }
+}
 
 .offers-page .input-lists .autocomplete:after {
   content: "";
@@ -4190,4 +4195,10 @@ select {
   line-height: 30px;
   /* identical to box height, or 125% */
   color: #2c2c2c;
+}
+
+@media screen and (max-width: 992px) {
+  .input-lists > div {
+    margin-right: 0 !important;
+  }
 }/*# sourceMappingURL=custom.css.map */
