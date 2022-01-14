@@ -4119,4 +4119,40 @@ select {
     padding-bottom: 20px;
   }
 }
-/*# sourceMappingURL=custom.css.map *//*# sourceMappingURL=custom.css.map */
+/*# sourceMappingURL=custom.css.map */
+#exampleModal .modal-dialog {
+  max-width: 1065px;
+}
+#exampleModal .popuop {
+  padding: 20px;
+}
+#exampleModal .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#exampleModal .blue-title {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  /* identical to box height, or 125% */
+  letter-spacing: 0.02em;
+  /* Primary Blue */
+  color: #00a6ca;
+  margin-left: 20px;
+}
+#exampleModal p {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  letter-spacing: 0.02em;
+  /* Accent Black */
+  color: #2c2c2c;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=custom.css.map */

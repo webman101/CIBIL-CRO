@@ -878,8 +878,7 @@ input:disabled {
 	transform: translateY(0);
 }
 .interstial-container .bg-white.save::before {
-
-display: none;
+	display: none;
 }
 .interstial-container .column-footer {
 	height: 30px;
@@ -4115,6 +4114,50 @@ select {
 	}
 }
 /*# sourceMappingURL=custom.css.map */
-.score-simulator-free-page{
+.score-simulator-free-page {
+}
 
+#exampleModal {
+	.modal-dialog {
+		max-width: 1065px;
+	}
+	.popuop {
+		padding: 20px;
+	}
+	.close{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	.blue-title {
+		font-family: "Intro", Bold;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 30px;
+		/* identical to box height, or 125% */
+
+		letter-spacing: 0.02em;
+
+		/* Primary Blue */
+
+		color: #00a6ca;
+		margin-left: 20px;
+	}
+	p {
+		font-family: "Intro", Regular;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+		/* or 150% */
+
+		letter-spacing: 0.02em;
+
+		/* Accent Black */
+
+		color: #2c2c2c;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
 }
