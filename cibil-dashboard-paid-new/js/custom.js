@@ -342,12 +342,14 @@ $('.hitabs a').click(function(e) {
 
 
 
+
 if ($(window).width() < 480 || $(window).height() < 480) {
 
+    $('.report-page-tabs li:not(.init)').hide();
 
     $(".report-page-tabs").on("click", ".init", function() {
         $(this).closest(".report-page-tabs").children('li:not(.init)').toggle();
-    $('.report-page-tabs').toggleClass('reverse');
+        $('.report-page-tabs').toggleClass('reverse');
 
     });
 
