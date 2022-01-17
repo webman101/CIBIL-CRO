@@ -9,6 +9,7 @@
 body {
   font-family: "Intro", book;
   scroll-behavior: smooth;
+  background: #f6f7fc;
 }
 
 a {
@@ -264,6 +265,21 @@ input:disabled {
   width: 26%;
   height: 100%;
   z-index: 0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.dashboard-outer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 60%;
+  z-index: 0;
+  background: #fff;
 }
 
 .dashboard .left-column {
@@ -1905,6 +1921,7 @@ input.orange-button {
   width: 26%;
   height: 100%;
   z-index: 0;
+  display: none;
 }
 
 .main-dashboard .dashboard .left-column {
@@ -2114,6 +2131,7 @@ input.orange-button {
   background: #f9f9f9;
   border-radius: 4px;
   padding: 10px;
+  filter: blur(6px);
 }
 
 .main-dashboard .alerts .date {
@@ -2213,11 +2231,20 @@ input.orange-button {
     width: 48%;
     flex: unset;
   }
+  .show-col-6-flex .icon-column-box .text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: max-content;
+    left: 43px;
+  }
 }
 
 @media screen and (max-width: 992px) and (max-width: 400px) {
   .main-dashboard .show-col-6-flex .icon-column-box {
     padding: 5px !important;
+    min-height: 76px;
   }
   .main-dashboard .show-col-6-flex .icon-column-box .light {
     font-size: 12px;
@@ -2255,6 +2282,64 @@ input.orange-button {
   .main-dashboard .show-col-6-flex .icon-column-box:nth-child(even) {
     margin-left: 5px;
   }
+}
+
+.main-dashboard .multiple-items-2 {
+  /* the slides */
+  /* the parent */
+}
+
+.main-dashboard .multiple-items-2 .slick-slide {
+  margin: 0 10px;
+}
+
+.main-dashboard .multiple-items-2 .slick-list {
+  margin: 0 -10px;
+}
+
+.main-dashboard .multiple-items-2 .slick-list {
+  padding: 0 20% 0 0 !important;
+}
+
+.main-dashboard .multiple-items-2 button.slick-prev.slick-arrow {
+  display: none !important;
+}
+
+.main-dashboard .multiple-items-2 button.slick-next.slick-arrow {
+  display: inline-block;
+  position: absolute;
+  right: -20px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  background-position: center;
+}
+
+.main-dashboard .multiple-items-2 button.slick-next.slick-arrow::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(270deg, #ffffff 54.64%, rgba(255, 255, 255, 0.0729167) 88.53%, rgba(255, 255, 255, 0) 95.5%);
+  right: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main-dashboard .multiple-items-2 button.slick-next.slick-arrow::after {
+  position: absolute;
+  content: "";
+  background-image: url(../img/slider-arrow-right.svg);
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  top: 0;
+  background-position-y: 40%;
 }
 
 .main-dashboard .multiple-items-2 .icon-column-box {
@@ -2466,7 +2551,7 @@ input.orange-button {
   color: #00a6ca;
 }
 
-.offers-page .fw-700 {
+.fw-700 {
   font-weight: 700;
 }
 
@@ -4214,15 +4299,30 @@ select {
 }
 
 .guage-2 canvas {
-  width: 200px;
+  width: 175px !important;
+}
+
+@media screen and (max-width: 992px) {
+  .guage-2 canvas {
+    max-width: 165px !important;
+  }
 }
 
 .guage-2 #preview-textfield {
   font-size: 34px;
 }
 
-.guage-2 img {
-  width: 165px;
+@media screen and (min-width: 992px) {
+  .guage-2 img {
+    width: 145px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .guage-2 img {
+    max-width: 158px !important;
+    width: 90%;
+  }
 }
 
 .guage-2 .filled-guage {
@@ -4320,5 +4420,43 @@ select {
   /* Black */
   color: #000000;
   opacity: 0.5;
+}
+
+.yellow-count-numb {
+  height: 20px;
+  width: 20px;
+  font-size: 14px;
+  background: #fcd800;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 992px) {
+  .yellow-count-numb {
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+  }
+}
+
+.yellow-count-numb.disabled {
+  background: #dddddd;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -10px;
+}
+
+@media screen and (min-width: 992px) {
+  .pl-md-40 {
+    padding-left: 40px;
+  }
 }
 /*# sourceMappingURL=custom.css.map */
