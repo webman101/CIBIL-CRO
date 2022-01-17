@@ -254,16 +254,16 @@ input:disabled {
 	z-index: 0;
 }
 
-.dashboard::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 74%;
-	height: 80%;
-	z-index: 0;
-	background: #fff;
-}
+// .dashboard::after {
+// 	content: "";
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	width: 74%;
+// 	height: 80%;
+// 	z-index: 0;
+// 	background: #fff;
+// }
 
 .dashboard .left-column {
 	position: relative;
@@ -1896,16 +1896,16 @@ input.orange-button {
 	z-index: 0;
 }
 
-.main-dashboard .dashboard::after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 74%;
-	height: 80%;
-	z-index: 0;
-	background: #fff;
-}
+// .main-dashboard .dashboard::after {
+// 	content: "";
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	width: 74%;
+// 	height: 80%;
+// 	z-index: 0;
+// 	background: #fff;
+// }
 
 .main-dashboard .dashboard .left-column {
 	position: relative;
@@ -2931,8 +2931,6 @@ input.orange-button {
 	@media screen and (min-width: 992px) {
 		width: 300px;
 	}
-	
-	
 }
 
 .offers-page .input-lists .autocomplete:after {
@@ -4200,10 +4198,71 @@ select {
 	color: #2c2c2c;
 }
 @media screen and (max-width: 992px) {
-	.input-lists{
-		&>div{
+	.input-lists {
+		& > div {
 			margin-right: 0 !important;
-		}	
+		}
 	}
 }
 
+#exampleModal {
+	background: #141414d1;
+	.modal-dialog {
+		transition: transform 0.3s ease-out;
+		transform: translate(0, 50%);
+	}
+}
+#preview {
+	position: relative;
+}
+.semicircle-center {
+	background: #ededed;
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-radius: 50px;
+	&::after {
+		height: 30px;
+		width: 60px;
+		position: absolute;
+		content: "";
+		background: #ffffff;
+		bottom: 0;
+	}
+}
+#preview-textfield {
+	font-family: "Intro", Bold;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 44px;
+	/* identical to box height, or 110% */
+
+	text-align: center;
+	letter-spacing: -0.01em;
+
+	/* Black */
+
+	color: #000000;
+}
+.slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	li {
+		width: 30px;
+		height: 8px;
+		background: #dddddd;
+		border-radius: 4px;
+		margin: 20px 5px;
+		&.slick-active {
+			background: #006685;
+		}
+		button {
+			display: none;
+		}
+	}
+}
