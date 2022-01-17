@@ -4215,24 +4215,24 @@ select {
 #preview {
 	position: relative;
 }
-.semicircle-center {
-	background: #ededed;
-	height: 60px;
-	width: 60px;
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	border-radius: 50px;
-	&::after {
-		height: 30px;
-		width: 60px;
-		position: absolute;
-		content: "";
-		background: #ffffff;
-		bottom: 0;
-	}
-}
+// .semicircle-center {
+// 	background: #ededed;
+// 	height: 60px;
+// 	width: 60px;
+// 	position: absolute;
+// 	left: 0;
+// 	right: 0;
+// 	margin: auto;
+// 	border-radius: 50px;
+// 	&::after {
+// 		height: 30px;
+// 		width: 60px;
+// 		position: absolute;
+// 		content: "";
+// 		background: #ffffff;
+// 		bottom: 0;
+// 	}
+// }
 #preview-textfield {
 	font-family: "Intro", Bold;
 	font-style: normal;
