@@ -20,9 +20,10 @@
   <div class="main-dashboard">
     <div class="dashboard">
         <div class="container">
+           <div class="dashboard-page">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="animated-chart-1">
+                    <div class="animated-chart-1 position-relative">
                         <div class="f-24-title">
                             Hello Rahul
                         </div>
@@ -31,19 +32,24 @@
                         </div>
                         
                         <div id="preview">
-                            <canvas width="380" height="150" id="canvas-preview"></canvas>
+                            <canvas width="380" height="150" id="canvas-preview" class="canvas-preview"></canvas>
+                            <div class="start-to-end">
+                                <span>300</span>
+                                <span>900</span>
+                            </div>
                             <div id="preview-textfield" style="font-size: 41px;">702</div>
                             <div class="semicircle-center"></div>
                             <a href="#" class="cibil-link"><span>CIBIL</span> Score</a>
+                          
                         </div>
                         
-                        <a href="#" class="link-16">Score Analysis</a>
-                        <div class="watch-video">
-                            <span class="img"><img src="img/playu.svg" alt=""></span>
-                            <a href="#" class="link1">Watch this video </a>
-                            <br>
-                            <span> to know more about CIBIL</span>
+                        
+                        <div class="d-flex align-items-center justify-content-between w-100 p-md-30 py-md-20 mt-md-30" style="box-shadow: 0px 0px 30px rgba(1, 83, 101, 0.2);">
+                            <a href="#" class=" para-intro-bold-2c fw-700">Score Analysis</a>
+                            <a href="" class="button-outline para-intro-bold-2c  fw-700 mb-0" style="padding: 9px 32px;text-decoration: none;">Refresh Now</a>
                         </div>
+
+                        <img src="img/greyquestionmark.svg" alt="" class="greyquestionmark">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -109,7 +115,17 @@
                                 <p class="para-intro-regular mt-md-19 f-md-24 max-width-350 mx-auto fw-400">
                                     What will happen to my CIBIL Score if I take on a new loan or a credit card?
                                 </p>
-                                <img src="img/two-meter1.svg" alt="" class="w-90 mx-auto d-block">
+                                <div id="preview">
+                                    <canvas width="380" height="150" id="canvas-preview" class="canvas-preview"></canvas>
+                                    <div class="start-to-end">
+                                        <span>300</span>
+                                        <span>900</span>
+                                    </div>
+                                    <div id="preview-textfield" style="font-size: 41px;">702</div>
+                                    <div class="semicircle-center"></div>
+                                    <a href="#" class="cibil-link"><span>CIBIL</span> Score</a>
+                                  
+                                </div>
                                 <hr class="mt-md-30">
                                 <a href="" class="button-icon mx-auto mt-2 mb-1">
                                     <img src="img/lock.svg" alt="">
@@ -536,6 +552,7 @@
                     </div>
                 </div>
             </div>
+           </div>
         </div>
     </div>
   </div>
@@ -546,8 +563,8 @@
     <script src="dist/gauge.js"></script>
     <script>
         var opts = {
-            angle: 0, // The span of the gauge arc
-            lineWidth: 0.1, // The line thickness
+            angle: -0.02, // The span of the gauge arc
+            lineWidth: 0.15, // The line thickness
             radiusScale: 1, // Relative radius
             color: '#6FADCF',
             pointer: {
@@ -557,14 +574,16 @@
             },
             limitMax: false, // If false, max value increases automatically if value > maxValue
             limitMin: false, // If true, the min value of the gauge will be fixed
-            colorStart: '#6FADCF', // Colors
-            colorStop: '#A9D161', // just experiment with them
+            colorStart: '#B16B1E',
+            colorStop: '#4BB806', // just experiment with them
             strokeColor: '#E0E0E0', // to see which ones work best for you
             generateGradient: true,
             highDpiSupport: true, // High resolution support
-
+            percentColors: [[0.0, "#B16B1E" ], [0.20, "#B16B1E"], [0.50, "#B16B1E"], [0.80, "#4BB806"], [1.0, "#4BB806"]],
+            
         };
-        var target = document.getElementById('canvas-preview'); // your canvas element
+     
+        var target = document.querySelectorAll('.canvas-preview'); // your canvas element
         var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
         gauge.maxValue = 900; // set max gauge value
         gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
