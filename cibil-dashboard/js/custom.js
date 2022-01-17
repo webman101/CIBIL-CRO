@@ -83,7 +83,7 @@ $(document).mouseup(function(e) {
         $(".dd-input").prop("checked", false); //to uncheck
     }
 });
-$('.benefits-outer').slideUp();
+// $('.benefits-outer').slideUp();
 
 $('.offer-details').click(function(e) {
     e.preventDefault();
@@ -219,7 +219,7 @@ $(".b-select").numericFlexboxSorting();
 
 
 
-$('.sorttoggle').slideUp();
+// $('.sorttoggle').slideUp();
 $('.sort-tab').click(function(e) {
     e.preventDefault();
     $('.sorttoggle').slideToggle();
@@ -412,6 +412,7 @@ function showTabsContent(b) {
 
 if ($(window).width() < 480 || $(window).height() < 480) {
 
+    $(".report-page-tabs li:not(.init)").toggle();
 
     $(".report-page-tabs").on("click", ".init", function() {
         $(this).closest(".report-page-tabs").children('li:not(.init)').toggle();
