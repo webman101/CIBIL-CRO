@@ -4228,4 +4228,23 @@ select {
 .slick-dots li button {
   display: none;
 }
+
+.cibil-link {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  display: block;
+  /* identical to box height */
+  text-align: center;
+  text-decoration: none;
+  /* Brand Blue */
+  margin-top: 10px;
+}
+
+.cibil-link span {
+  color: #3ea3ce;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=custom.css.map */

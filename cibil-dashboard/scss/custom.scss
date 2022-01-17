@@ -4266,3 +4266,21 @@ select {
 		}
 	}
 }
+.cibil-link {
+	font-family: "Intro", Bold;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 22px;
+	display: block;
+	/* identical to box height */
+
+	text-align: center;
+	text-decoration: none;
+	/* Brand Blue */
+	margin-top: 10px;
+	span {
+		color: #3ea3ce;
+		text-transform: uppercase;
+	}
+}
