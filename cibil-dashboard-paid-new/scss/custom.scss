@@ -3998,7 +3998,7 @@ h6 {
         font-family: Intro, Regular;
     }
     .text-blue {
-        font-family: Intro Bold;
+        font-family: 'Intro', Bold;
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0.02em;
@@ -4166,7 +4166,7 @@ h6 {
     border-radius: 21px;
 }
 .text-blue {
-    font-family: Intro Bold;
+    font-family: 'Intro', Bold;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -4688,5 +4688,85 @@ h6 {
 @media screen and (min-width: 992px) {
     .pl-md-40 {
         padding-left: 40px;
+    }
+}
+.paid-alerts-non-blurred {
+    .alerts {
+        filter: unset;
+    }
+}
+.coloured-column {
+    .coloured {
+        width: 100%;
+        min-height: 70px;
+        margin-bottom: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        &.active{
+            &::before {
+                content: "";
+                position: absolute;
+                height: 70px;
+                width: 70px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                right: 70px;
+                border: 8px solid #ffffff;
+                border-top: 0;
+                border-right: 0;
+
+                transform: rotate(45deg);
+            }
+        }
+        span {
+            min-width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-family: 'Intro', Bold;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            text-align: center;
+            letter-spacing: 0.02em;
+
+            /* White */
+
+            color: #ffffff;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 70px;
+            border: 3px solid #ffffff;
+        }
+        &:nth-child(1) {
+            background: #009900;
+        }
+        &:nth-child(2) {
+            background: #a9d161;
+        }
+        &:nth-child(3) {
+            background: #fcd800;
+        }
+        &:nth-child(4) {
+            background: #f18200;
+        }
+        &:nth-child(5) {
+            background: #e15825;
+            margin-bottom: 0;
+        }
     }
 }
