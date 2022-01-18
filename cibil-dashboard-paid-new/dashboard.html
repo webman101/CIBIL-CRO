@@ -250,7 +250,7 @@
                         </div>
                         <div class="row">
 
-                            <div class="col-md-6 paid-alerts-non-blurred">
+                            <div class="col-md-6 paid-alerts-non-blurred credit-summary">
                                 <div class="for-overlay">
 
                                     <div class="w-100 border-1 mt-3 rounded-border-1 overflow-hidden card-inner credit-summary">
@@ -258,12 +258,12 @@
                                             <div class="text-blue text-uppercase mb-10">
                                                 Credit summary
                                             </div>
-                                            <p class="para-intro-book-70 pb-0 mb-0 font-16">
+                                            <p class="para-intro-book-70 pb-0 mb-0 font-16" style="min-height: 48px;">
                                                 Bite-sized summary of your credit profile.
                                             </p>
                                         </div>
                                         <div class="card-body px-20 px-md-30 bg-white">
-                                            <div class="alerts mb-2 d-flex justify-content-between bg-white" style="border: 1px solid #DDDDDD;border-radius: 6px;height: auto;">
+                                            <div class="alerts mb-2 d-flex justify-content-between bg-white align-items-center" style="border: 1px solid #DDDDDD;border-radius: 6px;height: auto;">
                                                 <div>
                                                     <div class="cibilalert">
                                                         Current Balance
@@ -272,7 +272,7 @@
 
 
                                                 </div>
-                                                <div style="font-family: 'Intro', Regular;font-size: 24px;line-height: 30px;color: #2C2C2C;">
+                                                <div class="fw-600" style="font-family: 'Intro', Regular;font-size: 24px;line-height: 30px;color: #2C2C2C;">
                                                     ₹99,000.00
                                                 </div>
                                             </div>
@@ -399,9 +399,11 @@
                                                 <span>20%</span>
                                                 <span>300 - 722</span>
                                             </div>
-
+                                            <p class="para-intro-book-70 pb-0 mb-10 mt-20">
+                                                Based on your Transunion CIBIL data
+                                            </p>
                                         </div>
-
+                                        
                                     </div>
                                     <div class="overlay-card d-none" style="background-image: url(../img/overlaybg2.png);background-size: 195px 265px;">
                                         <img src="img/closeovelay.svg" class="closeovelay" alt="">
@@ -416,6 +418,68 @@
                                 </div>
                             </div>
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        
+
+
+                        
                         <div class="section-grid ">
                             <div class="row">
 
@@ -490,9 +554,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="banner-adds bg-white mt-3 rounded-border-1" style="color: #DDDDDD;">
-                            BANNER ADS
-                        </div>
+                      
                         <div class="section-grid column-slider">
                             <div class="row">
 
@@ -912,5 +974,56 @@
                 }]
             });
         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const DATA_COUNT = 12;
+        const NUMBER_CFG = {
+            count: DATA_COUNT,
+            min: 0,
+            max: 100
+        };
+
+        const labels = [
+            [],
+            ['Sep/Oct', '2020'],
+            ['Nov/Dec', '2020'],
+            ['Jan/Feb', '2020'],
+            ['Mar/Apr', '2020'],
+            ['May/Jun', '2020'],
+            ['Jul/Aug', '2020'],
+            []
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: '#939393',
+                data: [0, 0, 0, 0, 532, 426, 856],
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        ticks: {
+                            min: 500, // minimum value
+                max: 850 // maximum value
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script>
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
     </script>
 </body>

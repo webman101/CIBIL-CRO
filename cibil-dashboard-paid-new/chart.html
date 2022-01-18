@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chart.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const DATA_COUNT = 12;
+        const NUMBER_CFG = {
+            count: DATA_COUNT,
+            min: 0,
+            max: 100
+        };
+
+        const labels = [
+            [],
+            ['Sep/Oct', '2020'],
+            ['Nov/Dec', '2020'],
+            ['Jan/Feb', '2020'],
+            ['Mar/Apr', '2020'],
+            ['May/Jun', '2020'],
+            ['Jul/Aug', '2020'],
+            []
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0, 0, 0, 0, 732, 676, 856],
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        ticks: {
+                            min: 500, // minimum value
+                max: 850 // maximum value
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <script>
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+
+</body>
+
+</html>

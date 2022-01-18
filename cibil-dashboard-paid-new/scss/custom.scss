@@ -2328,7 +2328,7 @@ input {
     font-weight: 600;
 }
 .report-page .para-book {
-    font-family: Intro, Book;
+    font-family: "Intro", Book;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -3218,12 +3218,12 @@ input {
 * {
     margin: 0;
     padding: 0;
-    font-family: Intro, book;
+    font-family: "Intro", book;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
 }
 body {
-    font-family: Intro, book;
+    font-family: "Intro", book;
     scroll-behavior: smooth;
     background: #f6f7fc;
 }
@@ -3344,7 +3344,7 @@ h6 {
     font-weight: 600;
 }
 .para-book {
-    font-family: Intro, Book;
+    font-family: "Intro", Book;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -3596,12 +3596,11 @@ h6 {
         color: #2c2c2c;
     }
     .para-intro-book-70 {
-        font-family: Intro, Book;
-        font-size: 14px;
+        font-family: "Intro", Book;
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #707070;
-        font-family: Intro, Book;
+        font-family: "Intro", Book;
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #707070;
@@ -3614,7 +3613,7 @@ h6 {
         font-family: Intro, Regular;
     }
     .text-light {
-        font-family: Intro, Book;
+        font-family: "Intro", Book;
         font-size: 14px;
         line-height: 24px;
         letter-spacing: 0.02em;
@@ -3768,7 +3767,7 @@ h6 {
             color: #2c2c2c;
         }
         p {
-            font-family: Intro, Book;
+            font-family: "Intro", Book;
             font-size: 14px;
             line-height: 24px;
             letter-spacing: 0.02em;
@@ -3819,7 +3818,7 @@ h6 {
         padding: 10px;
         filter: blur(2px);
         .date {
-            font-family: Intro, Book;
+            font-family: "Intro", Book;
             font-size: 14px;
             line-height: 24px;
             letter-spacing: 0.02em;
@@ -3963,7 +3962,7 @@ h6 {
         color: #2c2c2c;
     }
     .title-light {
-        font-family: Intro, Book;
+        font-family: "Intro", Book;
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #2c2c2c;
@@ -3976,12 +3975,12 @@ h6 {
         color: #2c2c2c;
     }
     .para-intro-book-70 {
-        font-family: Intro, Book;
+        font-family: "Intro", Book;
         font-size: 14px;
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #707070;
-        font-family: Intro, Book;
+        font-family: "Intro", Book;
         line-height: 24px;
         letter-spacing: 0.02em;
         color: #707070;
@@ -3998,7 +3997,7 @@ h6 {
         font-family: Intro, Regular;
     }
     .text-blue {
-        font-family: 'Intro', Bold;
+        font-family: "Intro", Bold;
         font-weight: 700;
         line-height: 24px;
         letter-spacing: 0.02em;
@@ -4166,7 +4165,7 @@ h6 {
     border-radius: 21px;
 }
 .text-blue {
-    font-family: 'Intro', Bold;
+    font-family: "Intro", Bold;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -4704,7 +4703,7 @@ h6 {
         display: flex;
         align-items: center;
         overflow: hidden;
-        &.active{
+        &.active {
             &::before {
                 content: "";
                 position: absolute;
@@ -4727,7 +4726,7 @@ h6 {
             align-items: center;
             justify-content: center;
             margin-right: 20px;
-            font-family: 'Intro', Bold;
+            font-family: "Intro", Bold;
             font-style: normal;
             font-weight: bold;
             font-size: 16px;
@@ -4769,4 +4768,56 @@ h6 {
             margin-bottom: 0;
         }
     }
+}
+.credit-summary {
+    .alerts {
+        min-height: 91px;
+        padding-left: 20px;
+    }
+}
+
+@keyframes chartjs-render-animation {
+    from {
+        opacity: 0.99;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.chartjs-render-monitor {
+    animation: chartjs-render-animation 1ms;
+}
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+    position: absolute;
+    direction: ltr;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1;
+}
+.chartjs-size-monitor-expand > div {
+    position: absolute;
+    width: 1000000px;
+    height: 1000000px;
+    left: 0;
+    top: 0;
+}
+.chartjs-size-monitor-shrink > div {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+}
+
+
+#myChart{
+    background-color: #ffffff;
+    margin-top: 30px;
 }
