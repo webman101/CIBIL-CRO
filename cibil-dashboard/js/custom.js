@@ -374,7 +374,7 @@ window.onload = function() {
     hideTabsContent(1);
 }
 
-document.getElementById('reporttabs').onclick = function(event) {
+$('#reporttabs').on("click", function(event) {
     var target = event.target;
     if (target.className == 'reporttab') {
         for (var i = 0; i < tab.length; i++) {
@@ -384,7 +384,7 @@ document.getElementById('reporttabs').onclick = function(event) {
             }
         }
     }
-}
+});
 
 function hideTabsContent(a) {
     for (var i = a; i < tabContent.length; i++) {
@@ -430,9 +430,40 @@ if ($(window).width() < 480 || $(window).height() < 480) {
 }
 
 
-function extraTicketAttachment(el) {
-    if ($('input.append-onclick').is(':checked')) {
-        jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
-    }
+// function extraTicketAttachment(el) {
+//     if ($('input.append-onclick').is(':checked')) {
+//         jQuery(".offer-to-compare .compare-grouped").prepend('<div class="ms-0 filled"><img src="img/comparebajaj.svg" alt="" class="offer-image" width="52px"><span class="compare-price">₹8,00,000</span><img src="img/times.svg" alt="" class="times"></div>')
+//     }
   
-}
+// }
+
+/** compare offers**/
+
+$(".form-group").on("change", function(){
+    if ($('input.append-onclick').is(':checked')) {
+        var dataSrc = $(this).parents('.itemsBox').find(".image-column img").attr("data-src");
+        var chkBankName = $(this).find("input.append-onclick").attr("data-bank");
+        var ammount =  $(this).parents('.itemsBox').find(".limit-column").text();
+        console.log(ammount);
+        var elem = $("<div class='ms-0 filled' data-bank='"+ chkBankName +"'><img class='filled-img' width='32%' src='"+ dataSrc +"'/><p class='para-intro-regular-2c'>"+ ammount +"</p><img src='img/times.svg' class='closeComp'/></div>");
+        $( ".compare-grouped-position-absolute" ).append(elem);
+    }else{
+        $('.compare-grouped-position-absolute .filled').remove();
+    }
+
+    if ( $('.compare-grouped-position-absolute').children().length == 2 ) {
+        $(".compare-button").removeClass("disabled");
+    }
+});
+
+$('.compare-grouped-position-absolute').on('click','.filled', function(){
+    var tempName = $(this).attr("data-bank");
+    $('body').find("[data-bank='" + tempName + "']").prop('checked',false);
+    $(this).remove();
+    if ($(this).length == 1 ) {
+        $(".compare-button").addClass("disabled");
+    }else if ($(this).length == 0 ) {
+        $(".compare-message").hide();
+    }
+});
+
