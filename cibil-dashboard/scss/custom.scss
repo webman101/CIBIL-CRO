@@ -3461,6 +3461,15 @@ input.orange-button {
 		height: 100px;
 	}
 }
+@media(max-width: 767px){
+  .compare-button , .clear-compare{
+    display: none;
+  }
+}
+.clear-compare span{
+  white-space: nowrap;
+  display: inline-block;
+}
 .compare-button.disabled{
   background-color: #ddd;
   border-color: #ddd;

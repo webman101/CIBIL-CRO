@@ -3538,6 +3538,14 @@ input.orange-button {
     border: 0 !important;
   }
 }
+@media(max-width: 767px){
+  .compare-button , .clear-compare{
+    display: none;
+  }
+}
+.clear-compare span{
+  white-space: nowrap;
+}
 .compare-button.disabled{
   background-color: #ddd;
   border-color: #ddd;
