@@ -546,15 +546,17 @@ if ($(window).width() < 480 || $(window).height() < 480) {
 /** compare offers**/
 
 $(".form-group").on("change", function(){
-    if ($('input.append-onclick').is(':checked')) {
+     var chkBankName1 = $(this).find("input.append-onclick").attr("data-bank");
+    if ($("input.append-onclick[data-bank='" + chkBankName1 + "']").is(':checked')) {
         $(".compare-message").show();
         var dataSrc = $(this).parents('.compareList').find(".image-column img").attr("data-src");
         var chkBankName = $(this).find("input.append-onclick").attr("data-bank");
         var ammount =  $(this).parents('.compareList').find(".limit-column").text();
         var elem = $("<div class='ms-0 filled' data-bank='"+ chkBankName +"'><img class='filled-img' width='32%' src='"+ dataSrc +"'/><p class='para-intro-regular-2c'>"+ ammount +"</p><img src='img/times.svg' class='closeComp'/></div>");
         $( ".compare-grouped-position-absolute" ).append(elem);
-    }else{
-       $( ".compare-grouped-position-absolute .filled" ).remove(); 
+    } else{
+        var chkBankName2 = $(this).find("input.append-onclick").attr("data-bank");
+        $(this).parents(".right-column").find(".filled[data-bank='" + chkBankName2 + "']").remove();
     }
 
     if ( $('.compare-grouped-position-absolute').children().length == 2 ) {
@@ -564,8 +566,8 @@ $(".form-group").on("change", function(){
     if ( $('.compare-grouped-position-absolute').children().length == 0 ) {
         $(".compare-message").hide();
     }
-
 });
+
 
 $('.compare-grouped-position-absolute').on('click','.filled', function(){
     var tempName = $(this).attr("data-bank");
