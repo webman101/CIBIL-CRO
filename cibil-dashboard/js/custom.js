@@ -17,15 +17,121 @@ $(function() {
     });
 });
 
-$('.for-overlay .button-icon').click(function(e) {
-    e.preventDefault();
-    $(this).closest('.for-overlay').arrowToggleren('.overlay-card').removeClass('d-none');
+
+
+
+$(document).ready(function() {
+
+    var opts = {
+        angle: -0.02, // The span of the gauge arc
+        lineWidth: 0.15, // The line thickness
+        radiusScale: 1, // Relative radius
+        color: '#6FADCF',
+        pointer: {
+            length: 0.4, // // Relative to gauge radius
+            strokeWidth: 0.035, // The thickness
+            color: '#000000' // Fill color
+        },
+        limitMax: false, // If false, max value increases automatically if value > maxValue
+        limitMin: false, // If true, the min value of the gauge will be fixed
+        colorStart: '#B16B1E',
+        colorStop: '#4BB806', // just experiment with them
+        strokeColor: '#E0E0E0', // to see which ones work best for you
+        generateGradient: true,
+        highDpiSupport: true, // High resolution support
+        percentColors: [
+            [0.0, "#B16B1E"],
+            [0.20, "#B16B1E"],
+            [0.50, "#B16B1E"],
+            [0.80, "#4BB806"],
+            [1.0, "#4BB806"]
+        ],
+
+    };
+
+    var target = document.getElementById('canvas-preview'); // your canvas element
+    var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+    gauge.maxValue = 900; // set max gauge value
+    gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
+    gauge.animationSpeed = 32; // set animation speed (32 is default value)
+    gauge.set(702); // set actual value
+
 });
-$('.for-overlay .closeovelay').click(function(e) {
-    e.preventDefault();
-    $(this).closest('.for-overlay').arrowToggleren('.overlay-card').addClass('d-none');
+$(document).ready(function() {
+
+
+    var opts = {
+        angle: -0.02, // The span of the gauge arc
+        lineWidth: 0.15, // The line thickness
+        radiusScale: 1, // Relative radius
+        color: '#6FADCF',
+        pointer: {
+            length: 0.4, // // Relative to gauge radius
+            strokeWidth: 0.035, // The thickness
+            color: '#000000' // Fill color
+        },
+        limitMax: false, // If false, max value increases automatically if value > maxValue
+        limitMin: false, // If true, the min value of the gauge will be fixed
+        colorStart: '#B16B1E',
+        colorStop: '#4BB806', // just experiment with them
+        strokeColor: '#E0E0E0', // to see which ones work best for you
+        generateGradient: true,
+        highDpiSupport: true, // High resolution support
+        percentColors: [
+            [0.0, "#B16B1E"],
+            [0.20, "#B16B1E"],
+            [0.50, "#B16B1E"],
+            [0.80, "#4BB806"],
+            [1.0, "#4BB806"]
+        ],
+
+    };
+
+    var target = document.getElementById('canvas-preview1'); // your canvas element
+    var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+    gauge.maxValue = 900; // set max gauge value
+    gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
+    gauge.animationSpeed = 32; // set animation speed (32 is default value)
+    gauge.set(702); // set actual value
+
 });
 
+$(document).ready(function() {
+    $('.multiple-items').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true
+    });
+    $('.multiple-items-2').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        cellpadding: 20,
+        arrows: true,
+        responsive: [{
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }]
+    });
+
+
+    $('.get-my-score').click(function(e) {
+        e.preventDefault();
+        $(this).closest('.for-overlay').children('.overlay-card').removeClass('d-none');
+    });
+    $('.for-overlay .closeovelay').click(function(e) {
+        e.preventDefault();
+        $(this).closest('.for-overlay').children('.overlay-card').addClass('d-none');
+    });
+    
+});
 
 $(document).ready(function() {
     // Show the first tab and hide the rest

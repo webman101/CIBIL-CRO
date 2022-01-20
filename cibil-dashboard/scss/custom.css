@@ -1922,7 +1922,6 @@ input.orange-button {
 
 .main-dashboard .para-intro-book-70 {
   font-family: "Intro", Book;
-  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #707070;
@@ -2251,6 +2250,7 @@ input.orange-button {
   font-size: 24px;
   line-height: 30px;
   color: #2c2c2c;
+  max-width: 95%;
 }
 
 .main-dashboard .overlay-card p {
@@ -3768,6 +3768,8 @@ input.orange-button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 10px;
   }
 }
@@ -3813,6 +3815,8 @@ input.orange-button {
   -webkit-box-pack: justify !important;
       -ms-flex-pack: justify !important;
           justify-content: space-between !important;
+  display: flex;
+  justify-content: space-between !important;
   width: 100%;
 }
 
