@@ -201,10 +201,6 @@ function scoreSimToken() {
     }
 }
 
-function a11yClick(e) {
-    var t = e.charCode || e.keyCode;
-    return "click" == e.type || (("keypress" == e.type || "keydown" == e.type) && (32 == t || 13 == t ? (e.preventDefault(), !0) : void 0));
-}
 
 function findElementJson(e, t, r) {
     for (var n = 0; n < e.length; n++)
@@ -567,7 +563,7 @@ function buildHistoryChart(e) {
                 ae.node.setAttribute("class", "inner data" + i), re.push(ne, ae), (re.tui_dataset = "data" + i);
                 var ie = "<dl class='data" + i + "' style='top:" + (f[i] + 15) + "px;left:" + (V - 80) + "px'>";
                 for (j = 0; j < h[i].length; j++)
-                    (ie += "<dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd>" : 1 === h[i][j].score ? "<dd>NH</dd>" : "<dd>" + h[i][j].score + "</dd>");
+                    (ie += "<dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd>" : 1 === h[i][j].score ? "<dd>NH</dd>" : "<dd>/" + h[i][j].score + "</dd>");
                 (ie += "</dl>"), $("#chart-history svg").after(ie);
             }
     } else $(".no-scoretrending-history").show(), $("#chart-history svg").css("display", "none");
@@ -1567,10 +1563,6 @@ function trim(e) {
     e.value = e.value.replace(/^\s*|\s*$/gm, "");
 }
 
-function isNumberKey(e) {
-    var t = e.which ? e.which : event.keyCode;
-    return !(t > 31 && (t < 48 || t > 57));
-}
 
 function generate(e) {
     "CS" === e
@@ -7353,14 +7345,6 @@ function renewalDateTimer() {
                 o = this.fixHooks[a];
             for (o || (this.fixHooks[a] = o = ke.test(a) ? this.mouseHooks : Oe.test(a) ? this.keyHooks : {}), n = o.props ? this.props.concat(o.props) : this.props, e = new ae.Event(i), t = n.length; t--;)(r = n[t]), (e[r] = i[r]);
             return e.target || (e.target = i.srcElement || fe), 3 === e.target.nodeType && (e.target = e.target.parentNode), (e.metaKey = !!e.metaKey), o.filter ? o.filter(e, i) : e;
-        },
-        props: "altKey bubbles cancelable ctrlKey currentTarget eventPhase metaKey relatedTarget shiftKey target timeStamp view which".split(" "),
-        fixHooks: {},
-        keyHooks: {
-            props: "char charCode key keyCode".split(" "),
-            filter: function(e, t) {
-                return null == e.which && (e.which = null != t.charCode ? t.charCode : t.keyCode), e;
-            },
         },
         mouseHooks: {
             props: "button buttons clientX clientY fromElement offsetX offsetY pageX pageY screenX screenY toElement".split(" "),
@@ -16702,18 +16686,18 @@ var locale = locale || "en";
 $("body").addClass("lang-" + locale);
 var month = [
         {},
-        { max: 31, abbr: "Jan", name: "January", abbr_hi: "जन" },
-        { max: isLeapYear ? 29 : 28, abbr: "Feb", name: "February", abbr_hi: "फ़र" },
-        { max: 31, abbr: "Mar", name: "March", abbr_hi: "मार्च" },
-        { max: 30, abbr: "Apr", name: "April", abbr_hi: "अप्रैल" },
-        { max: 31, abbr: "May", name: "May", abbr_hi: "मई" },
-        { max: 30, abbr: "Jun", name: "June", abbr_hi: "जून" },
-        { max: 31, abbr: "Jul", name: "July", abbr_hi: "जुलाई" },
-        { max: 31, abbr: "Aug", name: "August", abbr_hi: "अगस्त" },
-        { max: 30, abbr: "Sep", name: "September", abbr_hi: "सितं" },
-        { max: 31, abbr: "Oct", name: "October", abbr_hi: "अक्टू" },
-        { max: 30, abbr: "Nov", name: "November", abbr_hi: "नवं" },
-        { max: 31, abbr: "Dec", name: "December", abbr_hi: "दिसं" },
+        { max: 31, abbr: "01", name: "01", abbr_hi: "जन" },
+        { max: isLeapYear ? 29 : 28, abbr: "02", name: "02", abbr_hi: "फ़र" },
+        { max: 31, abbr: "03", name: "03", abbr_hi: "मार्च" },
+        { max: 30, abbr: "04", name: "04", abbr_hi: "अप्रैल" },
+        { max: 31, abbr: "05", name: "05", abbr_hi: "मई" },
+        { max: 30, abbr: "06", name: "06", abbr_hi: "जून" },
+        { max: 31, abbr: "07", name: "07", abbr_hi: "जुलाई" },
+        { max: 31, abbr: "08", name: "08", abbr_hi: "अगस्त" },
+        { max: 30, abbr: "09", name: "09", abbr_hi: "सितं" },
+        { max: 31, abbr: "10", name: "10", abbr_hi: "अक्टू" },
+        { max: 30, abbr: "11", name: "11", abbr_hi: "नवं" },
+        { max: 31, abbr: "12", name: "12", abbr_hi: "दिसं" },
     ],
     pinCodeValidator = {
         "01": { startCode: 18, endCode: 19 },
@@ -18096,32 +18080,7 @@ if (
         .on("click keypress", ".switches span", function(e) {
             a11yClick(e) === !0 && handleFormToggles(this);
         })
-        .on("click", ".modal-trigger", function(e) {
-            e.preventDefault();
-            var t = $(this).data("modal");
-            DEBUG && console.log("Show modal '" + t + "'"),
-                $("#modals .modal-wrapper div").attr("aria-hidden", "true"),
-                $("#modals").fadeIn(250),
-                $('#modals div[data-modal="' + t + '"]').show(),
-                $('#modals div[data-modal="' + t + '"], #modals div[data-modal="' + t + '"] > div').attr("aria-hidden", "false"),
-                $("div:visible > .modal-close").focus();
-            var r = $("#modals .modal-wrapper").find("div:visible > .modal-close"),
-                n = r.first(),
-                a = r.last(),
-                i = $('#modals div[data-modal="' + t + '"]');
-            n.on("keydown", function(e) {
-                    var t = e.which || e.keyCode;
-                    9 == t && e.shiftKey && (e.preventDefault(), a.focus());
-                }),
-                a.on("keydown", function(e) {
-                    var t = e.which || e.keyCode;
-                    9 != t || e.shiftKey || (e.preventDefault(), n.focus());
-                }),
-                i.on("keydown", function(e) {
-                    var r = e.which || e.keyCode;
-                    (27 !== r && 13 !== r && 32 !== r) || ($("#modals, #modals .modal-wrapper > div").hide(), $('.modal-trigger[data-modal="' + t + '"]').focus());
-                });
-        })
+        
         .on("click", ".modal-close", function() {
             $("#modals, #modals .modal-wrapper > div").hide();
         })
@@ -19118,22 +19077,8 @@ if (
                     .attr("rel");
                 $("#" + h).addClass("is-active"), $(".flow-section-toggle[rel=" + h + "]").addClass("is-active");
             }
-            document.addEventListener(
-                    "contextmenu",
-                    function(e) {
-                        e.preventDefault();
-                    }, !1
-                ),
-                document.addEventListener(
-                    "keydown",
-                    function(e) {
-                        e.ctrlKey && e.shiftKey && 73 == e.keyCode && t(e),
-                            e.ctrlKey && e.shiftKey && 74 == e.keyCode && t(e),
-                            83 == e.keyCode && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey) && t(e),
-                            e.ctrlKey && 85 == e.keyCode && t(e),
-                            ("F12" != e.code && 123 != e.keyCode) || t(e);
-                    }, !1
-                ),
+         
+              
                 window.location.href.indexOf("/V3_Interstitial.page") > 0 && $("#checkbox-value").val($("#neverShowCheck").val()),
                 (window.location.href.indexOf("/login") > 0 || window.location.href.indexOf("/enroll") > 0) &&
                 void 0 !== reqpar["request-params"]["tl.TrustevV2"] &&
@@ -19495,9 +19440,7 @@ if (
 }
 if (
     ("false" === CCVD.queryString().print &&
-        $(document).on("keyup", "input:not([type=checkbox]),select,textarea", function(e) {
-            13 == e.keyCode && (e.target.classList.contains("flexdatalist-alias") ? typeAndSearch(e) : (edVerify($(this)), validateDisputeFields(e)));
-        }),
+       
         $("#enrollPayment").length > 0)
 ) {
     var offerId = reqpar["request-params"]["tl.offer-id"];
@@ -19752,17 +19695,7 @@ if (
             ("" != $("#enroll-Password").val() && "" != $("#help-Password1").val() && "" != $("#help-Password-Confirm1").val()) || $("#enroll-Password,#help-Password1,#help-Password-Confirm1").addClass("required");
         }),
         ($("#billBreakdown").length > 0 || $("#enrollPayment").length > 0) && billBreakdown(),
-        $(document).ready(function() {
-            $(window).keydown(function(e) {
-                    if (13 == e.keyCode && ($("#billBreakdown").length > 0 || $("#enrollPayment").length > 0)) return e.preventDefault(), ajaxCoupon(), !1;
-                }),
-                $(".applyDiscount").click(function() {
-                    $(".applyDiscount").toggleClass("show"), $(".applyDiscount").hasClass("show") && $(".discountInp").css("display", "block");
-                }),
-                $(".cancelDiscount").click(function() {
-                    changePromoColor(), $("#promoCode").val(""), $(".loadingDiv").show(), $('input[name="Action"]').val("GET_PAYMENT_OFFER_DETAILS"), $("form").submit();
-                });
-        }),
+       
         $(document).ready(function() {
             $(".showPopup").on("click", function(e) {
                 e.stopPropagation(), $(".popuptext").hasClass("show") && $(".popuptext").removeClass("show");
@@ -19777,13 +19710,7 @@ if (
                 e.includes("popuptext") || $(".popuptext").removeClass("show");
             }
         }),
-        $(document).ready(function() {
-            window.location.href.indexOf("/creditdisputereport.page") > 0 &&
-                (sessionStorage.setItem("SESSION_REAL_TIME_DISPUTE_SUMMARY_RELOAD", "false"),
-                    $(window).keydown(function(e) {
-                        if (13 == e.keyCode) return e.preventDefault(), !1;
-                    }));
-        }),
+      
         $(document).ready(function() {
             if (
                 (window.location.href.indexOf("/login") > 0 && $("#loginButton").removeAttr("disabled"),

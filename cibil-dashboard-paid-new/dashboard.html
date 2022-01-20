@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/slick.css">
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
-    <link type='text/css' rel='stylesheet' href='https://myscore.cibil.com/sites/CreditView/assets/stylesheets/CIBIL/dynamic.css' />
+    <link type='text/css' rel='stylesheet' href='dynamic.css' />
 
     <link rel="stylesheet" href="scss/custom.css">
 </head>
@@ -469,7 +469,7 @@
 
                         <script xmlns:ns2="com/truelink/schema/creditview/services/creditviewcorebusinessws" type="text/javascript">
                             // headerUtils.xsl
-                    
+
                             var isLoggedIn = true;
                             var apiKeys = {
                                 "ShowSimulator": "true",
@@ -514,15 +514,15 @@
                                     "LatestLoginDate": "2022-01-19+05:30",
                                     "loginCount": "40"
                                 },
-                    
+
                                 "loginInfo": {
                                     "UserName": "georgiomenezes17@gmail.com"
                                 },
-                    
+
                                 "loginHelpInfo": {},
                                 "partner": "CIBIL"
                             }
-                    
+
                             var locale = "en";
                             var CSRFtoken = "HZ5vDObLYpHpjm5xkzoE7FRozHlfA9bz7mrziGGVhvlxZ+ckbuCJyQ8Y0unIVkg+3858NzMXQBs0OQZzseEGXQv6L1fh+qN+0NzMvfwx6rk=";
                             var reqpar = {
@@ -610,7 +610,7 @@
                                     "tl.dbAddressType": "1"
                                 }
                             };
-                    
+
                             var catalog = {
                                 "CatalogItems": {
                                     "BillingBundleId": "",
@@ -636,7 +636,7 @@
                             var domain = (document.domain).split('.');
                             dL = (domain.length) - 1;
                             domain = domain[dL - 1] + '.' + domain[dL];
-                    
+
                             var analytics = {
                                 "loggedIn": "true",
                                 "enterprise": "CIBIL",
@@ -661,8 +661,8 @@
                                 "orderValue": "0"
                             };
                         </script>
-                    
-                    
+
+
                         <div style="width: 100%;" class="iw_component" id="c1426810538130">
                             <script xmlns:ns2="com/truelink/redirect/engine/schema" xmlns:ns1="com/truelink/cncr/service/schema" id="UserData" type="text/javascript">
                                 var ud = {
@@ -4067,37 +4067,62 @@
                                 };
                             </script>
                         </div>
-                    
-                    
-                        <main id="dashboard">
-                    
-                    
-                    
-                    
-                               
-                                    <div class="chart-score" id="chart-score" style="display: none;">
-                                    </div>
-                                    <script type="text/x-handlebars-template" id="tmpl_ScoreDetails">
-                                    </script>
-                    
-                        
-                    
-                            <div class="chart-widgets" id="creditHistory">
-                                <section class="credit-history relative">
-                                    <div class="no-scoretrending-history">
-                                        <div class="score-trend-refreshalert center">
-                                            <span class="credit-edu-link">Check out the <a class="education" href="/CreditView/creditEducation.page?enterprise=CIBIL"><span>Credit Education Center</span></a> to learn how to establish credit.</span>
+                        <div class="section-grid ">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="w-100 border-1 mt-3 bg-white rounded-border-1 overflow-hidden">
+                                        <div class="card-head bg-white px-20 px-md-30 border-bottom-1 pt-3 pb-2">
+                                            <div class="text-blue text-uppercase mb-05">
+                                                Unlock MORE features with a CIBIL subscription
+                                            </div>
+                                            <p class="para-intro-book-70 pb-0 mb-0">
+                                                Get everything you need to maintain or boost your CIBIL Score, all in one place.
+                                            </p>
                                         </div>
+                                        <div class="card-body px-20 px-md-30">
+                                            <div class="row">
+                                                <div class="col-md-9">
+                                                    <main id="dashboard">
+
+
+
+
+
+                                                        <div class="chart-score" id="chart-score" style="display: none;">
+                                                        </div>
+                                                        <script type="text/x-handlebars-template" id="tmpl_ScoreDetails">
+                                                        </script>
+
+
+
+                                                        <div class="chart-widgets" id="creditHistory">
+                                                            <section class="credit-history relative">
+                                                                <div class="no-scoretrending-history">
+                                                                    <div class="score-trend-refreshalert center">
+                                                                        <span class="credit-edu-link">Check out the <a class="education" href="/CreditView/creditEducation.page?enterprise=CIBIL"><span>Credit Education Center</span></a> to learn how to
+                                                                        establish credit.</span>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="chart-history" id="chart-history">
+
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                    </main>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
-                    
-                    
-                                    <div class="chart-history" id="chart-history">
-                                      
-                                    </div>
-                                </section>
+                                </div>
                             </div>
-                        </main>
-                    
+                        </div>
+
+
+
 
 
 
