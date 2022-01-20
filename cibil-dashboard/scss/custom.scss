@@ -2025,6 +2025,14 @@ input.orange-button {
 	color: #2c2c2c;
 }
 
+.main-dashboard{
+	.f-16-title{
+		font-weight: bold;
+		color: #2c2c2c;
+		letter-spacing: 0.02em;
+	}
+}
+
 .main-dashboard .link-16 {
 	font-family: "Intro", Regular;
 	line-height: 16px;
@@ -4458,10 +4466,12 @@ select {
 .cibil-link {
 	font-family: "Intro", Bold;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 22px;
 	line-height: 22px;
 	display: block;
+	color: #000 !important;
+	cursor: default !important;
 	/* identical to box height */
 
 	text-align: center;
@@ -4471,6 +4481,7 @@ select {
 	span {
 		color: #3ea3ce;
 		text-transform: uppercase;
+		font-weight: 700;
 	}
 }
 .start-to-end {
