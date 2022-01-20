@@ -479,6 +479,8 @@ $(".compare-button").on("click", function(){
     checkedBoxes.closest(".itemsBox").hide();
     $(this).hide();
     $(".clear-compare").css("display","flex");
+    var checkedBoxesValue = $('input.append-onclick:checked');
+    $(".numb").text(checkedBoxesValue.length);
 });
 
 $(".clear-compare").on("click", function(){
@@ -488,4 +490,6 @@ $(".clear-compare").on("click", function(){
     $(".compare-button").css("display","flex");
     $(".compare-grouped-position-absolute .filled").remove();
     $(".compare-message").css("display","none");
+    var len = $(".list .itemsBox");
+    $(".checkedValue").text(len.length);
 });
