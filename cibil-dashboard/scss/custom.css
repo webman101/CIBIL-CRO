@@ -3119,6 +3119,10 @@ input.orange-button {
 
 .offers-page .switching-tabs .benefits-outer {
   padding: 20px;
+  display: none;
+}
+.boxes .benefits-outer{
+  display: none;
 }
 
 .offers-page .switching-tabs .benefits-outer .row {
@@ -3397,20 +3401,24 @@ input.orange-button {
 .offers-page .checkbox-row a::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -5px;
   border: 1.6px solid #00a6ca;
   height: 7px;
   width: 7px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  top: -5px;
   bottom: 0;
   margin: auto;
   right: -20px;
   border-top: 0;
   border-left: 0;
 }
+.offers-page .checkbox-row a.reverse-arrow::after {
+  top: 1px;
+  -webkit-transform: rotate(225deg);
+      transform: rotate(225deg);
 
+}
 .offers-page .checkbox-row .form-group {
   display: block;
 }
@@ -3788,6 +3796,7 @@ input.orange-button {
 .compare-button.disabled {
   background-color: #ddd;
   border-color: #ddd;
+  pointer-events: none;
 }
 
 .compare-button.disabled span {
@@ -4951,4 +4960,5 @@ select {
     padding-left: 40px;
   }
 }
+
 /*# sourceMappingURL=custom.css.map */

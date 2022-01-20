@@ -566,6 +566,7 @@ $(".form-group").on("change", function(){
     if ( $('.compare-grouped-position-absolute').children().length == 0 ) {
         $(".compare-message").hide();
     }
+    
 });
 
 
@@ -580,24 +581,29 @@ $('.compare-grouped-position-absolute').on('click','.filled', function(){
     if(msgLength.length == 0) {
         $(".compare-message").hide();
     }
+    $('.benefits-outer').slideUp();
+    $(".offer-details").removeClass('reverse-arrow')
 });
 
 $(".compare-button").on("click", function(){
     var checkedBoxes = $('input.append-onclick:not(:checked)');
     checkedBoxes.closest(".compareList").hide();
-    $(this).hide();
     $(".clear-compare").css("display","flex");
     var checkedBoxesValue = $('input.append-onclick:checked');
     $(".checkedValue").text(checkedBoxesValue.length);
+    $('.benefits-outer').slideUp();
+    $(".offer-details").removeClass('reverse-arrow')
 });
 
-$(".clear-compare").on("click", function(){
-    $('input.append-onclick').prop('checked',false);
-    $(".compareList").show();
-    $(this).hide();
-    $(".compare-button").css("display","flex");
-    $(".compare-grouped-position-absolute .filled").remove();
-    $(".compare-message").css("display","none");
-    var len = $(".list .compareList");
-    $(".checkedValue").text(len.length);
-});
+// $(".clear-compare").on("click", function(){
+//     $('input.append-onclick').prop('checked',false);
+//     $(".compareList").show();
+//     $(this).hide();
+//     $(".compare-button").css("display","flex");
+//     $(".compare-grouped-position-absolute .filled").remove();
+//     $(".compare-message").css("display","none");
+//     var len = $(".list .compareList");
+//     $(".checkedValue").text(len.length);
+//     $('.benefits-outer').slideUp();
+//     $(".offer-details").removeClass('reverse-arrow')
+// });
