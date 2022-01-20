@@ -1779,7 +1779,6 @@ input.orange-button {
 
 .main-dashboard .para-intro-book-70 {
 	font-family: "Intro", Book;
-	font-size: 14px;
 	line-height: 24px;
 	letter-spacing: 0.02em;
 	color: #707070;
@@ -2078,10 +2077,13 @@ input.orange-button {
 }
 
 .main-dashboard .overlay-card h6 {
-	font-family: "Intro", Regular;
-	font-size: 24px;
-	line-height: 30px;
-	color: #2c2c2c;
+	
+    font-family: "Intro", Regular;
+    font-size: 24px;
+    line-height: 30px;
+    color: #2c2c2c;
+    max-width: 95%;
+
 }
 
 .main-dashboard .overlay-card p {
