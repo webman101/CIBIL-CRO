@@ -2949,12 +2949,13 @@ input.orange-button {
   color: #ffffff;
 }
 
-.offers-page .image-column {
-  width: 130px;
-  padding-right: 18px;
-  position: relative;
+@media(min-width: 768px){
+  .offers-page .image-column {
+    width: 130px;
+    padding-right: 18px;
+    position: relative;
+  }
 }
-
 .offers-page .image-column::before {
   content: "";
   position: absolute;
@@ -3446,7 +3447,12 @@ input.orange-button {
 
 @media screen and (max-width: 992px) {
   .offers-page .compare-message .offer-to-compare .compare-grouped {
-    height: 100px;
+    height: 110px;
+  }
+  .offers-page .compare-message .offer-to-compare{
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 10px;
   }
 }
 .offers-page .compare-grouped-position-absolute {
@@ -3494,7 +3500,22 @@ input.orange-button {
     height: 35px;
     object-fit: contain;
 }
-
+@media screen and (max-width: 992px) {
+  .offers-page .compare-grouped-position-absolute .filled{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .offers-page .compare-grouped-position-absolute .filled .filled-img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+  }
+  .closeComp{
+    position: absolute;
+    right: 10px;
+  }
+}
 @media screen and (max-width: 992px) {
   .offers-page .compare-grouped-position-absolute > div {
     flex-basis: 33%;
@@ -3538,11 +3559,7 @@ input.orange-button {
     border: 0 !important;
   }
 }
-@media(max-width: 767px){
-  .compare-button , .clear-compare{
-    display: none;
-  }
-}
+
 .clear-compare span{
   white-space: nowrap;
 }
@@ -3553,6 +3570,7 @@ input.orange-button {
 .compare-button.disabled span{
   color: #9c9c9c;
 }
+
 .offers-page .modalpopup {
   position: fixed;
   z-index: 10000;

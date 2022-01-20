@@ -442,9 +442,9 @@ if ($(window).width() < 480 || $(window).height() < 480) {
 $(".form-group").on("change", function(){
     if ($('input.append-onclick').is(':checked')) {
         $(".compare-message").show();
-        var dataSrc = $(this).parents('.itemsBox').find(".image-column img").attr("data-src");
+        var dataSrc = $(this).parents('.compareList').find(".image-column img").attr("data-src");
         var chkBankName = $(this).find("input.append-onclick").attr("data-bank");
-        var ammount =  $(this).parents('.itemsBox').find(".limit-column").text();
+        var ammount =  $(this).parents('.compareList').find(".limit-column").text();
         var elem = $("<div class='ms-0 filled' data-bank='"+ chkBankName +"'><img class='filled-img' width='32%' src='"+ dataSrc +"'/><p class='para-intro-regular-2c'>"+ ammount +"</p><img src='img/times.svg' class='closeComp'/></div>");
         $( ".compare-grouped-position-absolute" ).append(elem);
     }else{
@@ -476,20 +476,20 @@ $('.compare-grouped-position-absolute').on('click','.filled', function(){
 
 $(".compare-button").on("click", function(){
     var checkedBoxes = $('input.append-onclick:not(:checked)');
-    checkedBoxes.closest(".itemsBox").hide();
+    checkedBoxes.closest(".compareList").hide();
     $(this).hide();
     $(".clear-compare").css("display","flex");
     var checkedBoxesValue = $('input.append-onclick:checked');
-    $(".numb").text(checkedBoxesValue.length);
+    $(".checkedValue").text(checkedBoxesValue.length);
 });
 
 $(".clear-compare").on("click", function(){
     $('input.append-onclick').prop('checked',false);
-    $(".itemsBox").show();
+    $(".compareList").show();
     $(this).hide();
     $(".compare-button").css("display","flex");
     $(".compare-grouped-position-absolute .filled").remove();
     $(".compare-message").css("display","none");
-    var len = $(".list .itemsBox");
+    var len = $(".list .compareList");
     $(".checkedValue").text(len.length);
 });

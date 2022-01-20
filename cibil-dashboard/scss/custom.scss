@@ -2957,12 +2957,13 @@ input.orange-button {
 	color: #ffffff;
 }
 
-.offers-page .image-column {
-	width: 130px;
-	padding-right: 18px;
-	position: relative;
+@media(min-width: 768px){
+  .offers-page .image-column {
+    width: 130px;
+    padding-right: 18px;
+    position: relative;
+  }
 }
-
 .offers-page .image-column::before {
 	content: "";
 	position: absolute;
@@ -3460,6 +3461,11 @@ input.orange-button {
 	.offers-page .compare-message .offer-to-compare .compare-grouped {
 		height: 100px;
 	}
+  	.offers-page .compare-message .offer-to-compare{
+	    flex-direction: column;
+	    align-items: center;
+	    margin-bottom: 10px;
+  	}
 }
 @media(max-width: 767px){
   .compare-button , .clear-compare{
@@ -3500,7 +3506,22 @@ input.orange-button {
     height: 35px;
     object-fit: contain;
 }
-
+@media screen and (max-width: 992px) {
+  .offers-page .compare-grouped-position-absolute .filled{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .offers-page .compare-grouped-position-absolute .filled .filled-img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+  }
+  .closeComp{
+    position: absolute;
+    right: 10px;
+  }
+}
 @media screen and (max-width: 992px) {
 	.offers-page .compare-grouped-position-absolute {
 		width: 100%;
