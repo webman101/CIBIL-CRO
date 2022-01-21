@@ -1592,12 +1592,27 @@ input.orange-button {
   }
 }
 
+footer a p {
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #f16e00 !important;
+}
+
+footer > p {
+  margin-bottom: 12px;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1600px) {
   .ml-md-60 {
     margin-left: 60px !important;
   }
   .mr-md-60 {
     margin-right: 60px !important;
+  }
+  ul {
+    padding-bottom: 35px;
   }
 }
 
@@ -2560,6 +2575,12 @@ input.orange-button {
   min-height: 240px;
 }
 
+@media (max-width: 500px) {
+  .main-dashboard .multiple-items-2 .slick-list {
+    padding: 0 6% !important;
+  }
+}
+
 .offers-page a {
   outline: none !important;
 }
@@ -2701,6 +2722,10 @@ input.orange-button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+.offers-page .border-ac-section a:hover {
+  color: #f16e00 !important;
 }
 
 .offers-page .text-button {
@@ -3121,7 +3146,8 @@ input.orange-button {
   padding: 20px;
   display: none;
 }
-.boxes .benefits-outer{
+
+.boxes .benefits-outer {
   display: none;
 }
 
@@ -3406,19 +3432,20 @@ input.orange-button {
   height: 7px;
   width: 7px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   bottom: 0;
   margin: auto;
   right: -20px;
   border-top: 0;
   border-left: 0;
 }
+
 .offers-page .checkbox-row a.reverse-arrow::after {
   top: 1px;
   -webkit-transform: rotate(225deg);
-      transform: rotate(225deg);
-
+  transform: rotate(225deg);
 }
+
 .offers-page .checkbox-row .form-group {
   display: block;
 }
@@ -3658,6 +3685,22 @@ input.orange-button {
       -ms-flex: 1;
           flex: 1;
   border-right: 1px solid #dddddd;
+  position: relative;
+}
+
+.offers-page .largetabs #largetabs-nav li.active ::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00a6ca;
+  width: 100%;
+  height: 6px;
+}
+
+.offers-page .largetabs #largetabs-nav li.active .numb {
+  background: #00a6ca;
 }
 
 .offers-page .largetabs #largetabs-nav li p {
@@ -3731,6 +3774,9 @@ input.orange-button {
   padding: 10px 15px;
   padding-left: 15px;
   margin-top: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 }
 
 @media screen and (min-width: 992px) {
@@ -3776,8 +3822,6 @@ input.orange-button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    flex-direction: column;
-    align-items: center;
     margin-bottom: 10px;
   }
 }
@@ -3796,7 +3840,6 @@ input.orange-button {
 .compare-button.disabled {
   background-color: #ddd;
   border-color: #ddd;
-  pointer-events: none;
 }
 
 .compare-button.disabled span {
@@ -3824,8 +3867,6 @@ input.orange-button {
   -webkit-box-pack: justify !important;
       -ms-flex-pack: justify !important;
           justify-content: space-between !important;
-  display: flex;
-  justify-content: space-between !important;
   width: 100%;
 }
 
@@ -4961,4 +5002,8 @@ select {
   }
 }
 
+.offers-page .checkbox-row .form-group input.append-onclick:disabled + label {
+  border: 2px solid #9e9e9e;
+  pointer-events: none;
+}
 /*# sourceMappingURL=custom.css.map */

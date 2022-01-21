@@ -72,6 +72,7 @@ $(document).ready(function() {
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                arrows: false
             }
         }]
     });
@@ -591,14 +592,21 @@ $(".form-group").on("change", function(){
         $(this).parents(".right-column").find(".filled[data-bank='" + chkBankName2 + "']").remove();
     }
 
-    if ( $('.compare-grouped-position-absolute').children().length == 2 ) {
+    if ( $('.compare-grouped-position-absolute').children().length >= 2 ) {
         $(".compare-button").removeClass("disabled");
+        $("input.append-onclick").not(':checked').attr('disabled',false);
+    }
+    else{
+        $(".compare-button").addClass("disabled");
     }
 
     if ( $('.compare-grouped-position-absolute').children().length == 0 ) {
         $(".compare-message").hide();
     }
-    
+
+    if ( $('.compare-grouped-position-absolute').children().length == 3 ) {
+        $("input.append-onclick").not(':checked').attr('disabled',true);
+    }
 });
 
 
