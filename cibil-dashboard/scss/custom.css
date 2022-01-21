@@ -2796,6 +2796,10 @@ footer > p {
   font-weight: bold;
 }
 
+.offers-page .text-intro-bold:hover {
+  color: #f16e00;
+}
+
 .offers-page .text-red {
   color: #d74025 !important;
   font-family: "Intro", Regular;

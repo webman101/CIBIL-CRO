@@ -2595,6 +2595,9 @@ footer{
 .offers-page .text-intro-bold {
 	font-family: "Intro", Bold;
 	font-weight: bold;
+	&:hover{
+		color: #f16e00;
+	}
 }
 
 .offers-page .text-red {
