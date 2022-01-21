@@ -1,81 +1,3 @@
-function calculateColorSteps(e, t) {
-    for (var r, n = e[0].color, a = [colorAnimator.parseColor(n)], i = 1; i < e.length; ++i) {
-        var o = e[i];
-        if (o.value > t) break;
-        (r = o.color), (a = a.concat(colorAnimator.calculateSteps(n, r, stepsPerColor))), (n = r);
-    }
-    return a;
-}
-
-function getDescription(e, t) {
-    for (var r, n = e[0].description, a = 0; a < e.length; ++a) {
-        if (((r = e[a]), r.value > t)) return n;
-        n = r.description;
-    }
-    return n;
-}
-
-function NumberStack(e, t, r, n) {
-    (this.stackHeight = t.length), (this.stackOffset = r), (this.charStack = "");
-    for (var a = 0; a < t.length; ++a) this.charStack += t[a] + "\n";
-    this.e = e.text(0, 0, this.charStack).attr(n);
-    var i = this.e.getBBox();
-    (this.height = i.height), (this.width = i.width), (this.numberHeight = this.height / this.stackHeight), (this.numberFudgeFactor = 1);
-}
-
-function buildMask(e, t, r, n, a, i, o, s) {
-    var l = { fill: s, "stroke-width": 0, stroke: s },
-        d = i - o / 2,
-        c = i + o / 2;
-    e.rect(t, a, r - a, d - t).attr(l), e.rect(a, c, r - a, n - c).attr(l);
-}
-
-function ColorAnimator() {
-    function e(e) {
-        var t, r, n, a, i;
-        return (
-            (t = /#([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})/.exec(e)),
-            (r = /#([0-9a-fA-F])([0-9a-fA-F])([0-9a-fA-F])/.exec(e)),
-            (n = /rgb\(\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*\)/.exec(e)),
-            (a = /rgba\(\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9]{1,3})\s*,\s*([0-9\.]*)\s*\)/.exec(e)),
-            t ?
-            (i = [parseInt(t[1], 16), parseInt(t[2], 16), parseInt(t[3], 16), 1]) :
-            r ?
-            (i = [17 * parseInt(r[1], 16), 17 * parseInt(r[2], 16), 17 * parseInt(r[3], 16), 1]) :
-            n ?
-            (i = [parseInt(n[1], 10), parseInt(n[2], 10), parseInt(n[3], 10), 1]) :
-            a && (i = [parseInt(a[1], 10), parseInt(a[2], 10), parseInt(a[3], 10), parseFloat(a[4])]),
-            i
-        );
-    }
-
-    function t(e) {
-        var t = e.toString(16);
-        return 1 == t.length ? "0" + t : t;
-    }
-
-    function r(e, r, n) {
-        return "#" + t(e) + t(r) + t(n);
-    }
-    (this.parseColor = e),
-    (this.calculateSteps = function(t, r, n) {
-        for (var a = [], i = e(t), o = e(r), s = Math.ceil((o[0] - i[0]) / n), l = Math.ceil((o[1] - i[1]) / n), d = Math.ceil((o[2] - i[2]) / n), c = 0; c < n; c++) {
-            var u = Math.abs(i[0] + s * c),
-                p = Math.abs(i[1] + l * c),
-                h = Math.abs(i[2] + d * c);
-            u < 0 && (u = 0), u > 255 && (u = 255), p < 0 && (p = 0), p > 255 && (p = 255), h < 0 && (h = 0), h > 255 && (h = 255), a.push([u, p, h]);
-        }
-        return a;
-    }),
-    (this.doAnimate = function(e, t, n) {
-        var a = 0,
-            i = t / e.length,
-            o = setInterval(function() {
-                n(r(e[a][0], e[a][1], e[a][2])), a++, a == e.length && clearInterval(o);
-            }, i);
-    });
-}
-
 function localizedString(e, t) {
     var r;
     return (
@@ -96,127 +18,8 @@ function localizedString(e, t) {
     );
 }
 
-function showSessionData() {
-    $.ajax({
-        url: "assets/ajax/debug.page",
-        type: "GET",
-        dataType: "xml",
-        success: function(e) {
-            return console.log(e.children[0].innerHTML), !0;
-        },
-        error: function(e) {
-            return console.log(e.responseText), !1;
-        },
-    });
-}
-
-function scoreSimToken() {
-    if ($("#CreditReports").length > 0 && void 0 != reqpar["request-params"]["tl.productWebToken"] && "CIBIL" !== currentEnterprise()) {
-        (source = $("#tmpl_ScoreDetails_wt").html()), DEBUG && console.info("Compile: tmpl_ScoreDetails_wt ..."), (template = Handlebars.compile(source)), (html = template(data)), $(".credit-score #chart-score_wt").after(html);
-        var e = {
-                A: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#009900" : "#A9D161",
-                B: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#a9d161" : "#E7B92E",
-                C: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#e7b92e" : "#E5862E",
-                D: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#e5862e" : "#E15825",
-                F: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#e15825" : "#DF4025",
-            },
-            t = 105,
-            r = 0.1,
-            n = "transrisk" == data.model ? CCVD.gradeRanges[data.model].F.min : CCVD.gradeRanges[data.model].F.min,
-            a = "transrisk" == data.model ? CCVD.gradeRanges[data.model].A.max : CCVD.gradeRanges[data.model].A.max,
-            i = 25,
-            o = 20,
-            s = CCVD.gradeRanges[data.model].F.min,
-            l = CCVD.gradeRanges[data.model].A.max,
-            d = 0.9,
-            c = 25,
-            u = "#F0F0F0",
-            p = 80,
-            h = 440,
-            f =
-            ([
-                    { value: CCVD.gradeRanges[data.model].F.min, description: "", color: e.F },
-                    { value: CCVD.gradeRanges[data.model].D.min, description: "", color: e.D },
-                    { value: CCVD.gradeRanges[data.model].C.min, description: "", color: e.C },
-                    { value: CCVD.gradeRanges[data.model].B.min, description: "", color: e.B },
-                    { value: CCVD.gradeRanges[data.model].A.min, description: "", color: e.A },
-                ],
-                document.getElementById("chart-score_wt"));
-        (paperWidths = f.offsetWidth <= 0 ? 140 : f.offsetWidth), (paperHeights = f.offsetHeight <= 0 ? (f.offsetWidth <= 0 ? 140 : f.offsetWidth) : f.offsetHeight);
-        var m = paperWidths / 2,
-            g = paperHeights / 2,
-            v = Raphael(f, paperWidths, paperHeights),
-            y = Math.min(paperWidths, paperHeights),
-            b = y / h;
-        (t *= b), (i *= b), (p *= b), (o *= b), (c *= b), (r *= b);
-        var S = y * d * 0.5,
-            w = (-35 * Math.PI) / 180,
-            C = m + S * Math.cos(w),
-            _ = g - S * Math.sin(w);
-        if (scoreInNumeric <= 1) {
-            1 === scoreInNumeric ? paper.text(C, _, "N/H").attr({ "font-size": p }) : v.text(C, _, "N/A").attr({ "font-size": p });
-        }
-        var x = v.text(m + o, g + S, n).attr({ "font-size": i, "text-anchor": "start", fontFamily: "Roboto", fill: noScore ? "#CCC" : "#000" }),
-            P = x.getBBox().height;
-        0 === x.getBBox().height && ((P = 7), $("tspan", v.node).attr("dy", 2.5));
-        var A = P / 2;
-        v.text(m + S, g + A + o, a).attr({ "font-size": i, fill: noScore ? "#CCC" : "#000" }),
-            0 === x.getBBox().height && $("tspan", v.node).attr("dy", 2.5),
-            (v.customAttributes.arc = function(e, t, r, n, a) {
-                var i = (360 / a) * n,
-                    o = ((i + 90) * Math.PI) / 180,
-                    s = e + r * Math.cos(o),
-                    l = t + r * Math.sin(o);
-                return {
-                    path: [
-                        ["M", e, t + r],
-                        ["A", r, r, 0, +(i > 180), 1, s, l],
-                    ],
-                };
-            });
-        var D = (l - s) * (4 / 3);
-        v.path().attr({ stroke: u, "stroke-width": c, arc: [m, g, S, 75, 100] });
-        (arcs = v.path().attr({ stroke: "#fff", "stroke-width": c, arc: [m, g, S, 0, D] })),
-        (colorAnimator = new ColorAnimator()),
-        screen.width <= 360 && (t = 40),
-            noScore ?
-            1 === data.score ?
-            $(f).append('<div class="scoreChartNumbers" style="color:#F0F0F0;height:60px;width:' + S + "px;top:" + (g - S / 4) + "px;left:" + (m - 0.45 * S) + "px;font-size:" + t + "px;line-height:" + t + 'px;">NH</div>') :
-            0 === data.score &&
-            $(f).append('<div class="scoreChartNumbers" style="color:#F0F0F0;height:60px;width:' + S + "px;top:" + (g - S / 4) + "px;left:" + (m - 0.45 * S) + "px;font-size:" + t + "px;line-height:" + t + 'px;">NA</div>') :
-            $(f).append(
-                '<div class="scoreChartNumbers" style="height:60px;width:' +
-                S +
-                "px;top:" +
-                (g - S / 4) +
-                "px;left:" +
-                (m - 0.45 * S) +
-                "px;font-size:" +
-                t +
-                "px;line-height:" +
-                t +
-                'px;"><div class="scoreHundreds" aria-hidden="true"><div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div></div><div class="scoreTens" aria-hidden="true"><div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div></div><div class="scoreOnes" aria-hidden="true"><div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div></div></div>'
-            ),
-            buildScoreCharts(data.score, f, m, g, S);
-    }
-}
 
 
-function findElementJson(e, t, r) {
-    for (var n = 0; n < e.length; n++)
-        if (e[n][t] === r) return !0;
-    return !1;
-}
-
-function findElementExpDate(e, t, r) {
-    for (var n = 0; n < e.length; n++) {
-        var a = e[n].ExpireDate,
-            i = a.substring(0, 22),
-            o = new Date(i);
-        if (e[n][t] === r && o > today) return !0;
-    }
-    return !1;
-}
 
 function findElementRefreshDate(e, t, r) {
     for (var n = 0; n < e.length; n++) {
@@ -282,52 +85,7 @@ function submitAsync(e, t, r) {
     });
 }
 
-function buildScoreChart(e, t) {
-    if (noScore) gradeLabel.attr("text", "");
-    else {
-        var r = Math.floor(e / 100),
-            n = Math.floor((e % 100) / 10),
-            a = Math.floor(e % 10);
-        arc.animate({ arc: [halfWidth, halfHeight, circleRadius, e - minScore, maxArcValue], easing: animationEasing }, animationDuration);
-        var i = calculateColorSteps(scoreColors, e);
-        colorAnimator.doAnimate(i, animationDuration, function(e) {
-                "transrisk" !== data.model && gradeLabel.attr("fill", e), $(".scoreChartNumber", t).css({ color: e }), arc.attr("stroke", e);
-            }),
-            "transrisk" == data.model ? gradeLabel.attr("text", "") : gradeLabel.attr("text", getDescription(scoreColors, e)),
-            0 == r && (r = 10),
-            0 == n && (n = 10),
-            0 == a && (a = 10);
-        var o = 60 * r,
-            s = 60 * n,
-            l = 60 * a;
-        $(".scoreChartNumber .scoreHundreds", t).animate({ top: "-=" + o }, 3e3), $(".scoreChartNumber .scoreTens", t).animate({ top: "-=" + s }, 3e3), $(".scoreChartNumber .scoreOnes").animate({ top: "-=" + l }, 3e3);
-    }
-    $('#modals div[data-modal="credit-score"] p').each(function() {
-        $(this).data("scoremodel") !== data.model && $(this).remove();
-    });
-}
 
-function buildScoreCharts(e, t, r, n, a) {
-    if (noScore) gradeLabel.attr("text", "");
-    else {
-        var i = Math.floor(e / 100),
-            o = Math.floor((e % 100) / 10),
-            s = Math.floor(e % 10);
-        arcs.animate({ arc: [r, n, a, e - minScore, maxArcValue], easing: animationEasing }, animationDuration);
-        var l = calculateColorSteps(scoreColors, e);
-        colorAnimator.doAnimate(l, animationDuration, function(e) {
-                "transrisk" !== data.model && gradeLabel.attr("fill", e), $(".scoreChartNumbers", t).css({ color: e }), arcs.attr("stroke", e);
-            }),
-            "transrisk" == data.model ? gradeLabel.attr("text", "") : gradeLabel.attr("text", getDescription(scoreColors, e)),
-            0 == i && (i = 10),
-            0 == o && (o = 10),
-            0 == s && (s = 10);
-        var d = 60 * i,
-            c = 60 * o,
-            u = 60 * s;
-        $(".scoreChartNumbers .scoreHundreds", t).animate({ top: "-=" + d }, 3e3), $(".scoreChartNumbers .scoreTens", t).animate({ top: "-=" + c }, 3e3), $(".scoreChartNumbers .scoreOnes").animate({ top: "-=" + u }, 3e3);
-    }
-}
 
 function getPercentage(e, t) {
     function r(e) {
@@ -566,7 +324,7 @@ function buildHistoryChart(e) {
                     (ie += "<dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd>" : 1 === h[i][j].score ? "<dd>NH</dd>" : "<dd>/" + h[i][j].score + "</dd>");
                 (ie += "</dl>"), $("#chart-history svg").after(ie);
             }
-    } else $(".no-scoretrending-history").show(), $("#chart-history svg").css("display", "none");
+    }
     $(document)
         .on("mouseover", "circle", function() {
             var e = this.className.baseVal.split(/\s+/);
@@ -717,587 +475,6 @@ function hasElement(e) {
     return $(e).length > 0;
 }
 
-function edVerify(e) {
-    var t = e.attr("name"),
-        r = e.attr("type"),
-        n = e.val() ? e.val().replace(/^\s*|\s*$/gm, "") : "",
-        a = "" == n;
-    if (e.is("select")) {
-        if (e.hasClass("selectbox")) var o = e;
-        else var o = e.parent();
-        var s = $(o).siblings(".helper");
-    } else var s = e.siblings(".helper");
-    if (
-        ("tl.curr-state" == t &&
-            (s =
-                0 === $("#consolidatedEnroll").length && 0 === $("#enrollShortAdd").length && 0 === $("#additionalInfo").length && 0 === $("#enrollQuickAdd").length && 0 === $("#enrollOfferAdd").length ?
-                e.parent().siblings(".helper") :
-                $("#stateId").next(".helper")),
-            "tl.dbRegionCodeAU" == t &&
-            (s =
-                0 === $("#consolidatedEnroll").length && 0 === $("#enrollShortAdd").length && 0 === $("#additionalInfo").length && 0 === $("#enrollQuickAdd").length && 0 === $("#enrollOfferAdd").length ?
-                e.parent().siblings(".helper") :
-                $("#stateId").next(".helper")),
-            "tl.prev-state" == t && (s = $('input[name="tl.prev-zip-code"]').siblings(".helper")),
-            "duMonth" == t && (s = $('input[name="tl.accDateUsed"]').siblings(".helper")),
-            "duDay" == t && (s = $('input[name="tl.accDateUsed"]').siblings(".helper")),
-            void 0 !== typeof r && "hidden" != r)
-    ) {
-        if (
-            ($(s).html("").removeClass().addClass("helper"),
-                e.removeClass("error").removeClass("ok"),
-                e.attr("data-error", ""),
-                a || "undefined" == typeof CCVD.rules[t] || new RegExp(CCVD.rules[t].regex).test(n) || throwError(t, s, "format", "Invalid Characters"),
-                e.hasClass("required") &&
-                a &&
-                "OTP_AccountDetails_Queue" !== $("#qName").val() &&
-                ("input" == r || "number" == r || "password" == r || "Email" == r || "tel" == r ?
-                    throwError(t, s, "required", "Field is blank") :
-                    "text" != r ?
-                    throwError(t, s, "required", "No Option Selected") :
-                    throwError(t, s, "required", "Field is blank")),
-                e.hasClass("required") && ("radio" == r || "checkbox" == r) && !e.is(":checked"))
-        ) {
-            var l = e.siblings('input[type="radio"]'),
-                d = !1;
-            for (i = 0; i < l.length; i++) $(l[i]).is(":checked") && (d = !0);
-            d || throwError(t, s, "required", "No Answer Selected");
-        }
-        if (
-            ("$0.00" == e.attr("placeholder") && 0 == parseFloat(e.val()) && throwError(t, s, "format", "Invalid"),
-                $("#enrollAboutYou").length > 0 ||
-                $("#consolidatedEnroll").length > 0 ||
-                $("#enrollShort").length > 0 ||
-                $("#enrollShortAdd").length > 0 ||
-                $("#additionalInfo").length > 0 ||
-                $("#enrollQuick").length > 0 ||
-                $("#enrollQuickAdd").length > 0 ||
-                $("#enrollOffer").length > 0 ||
-                $("#enrollOfferAdd").length > 0)
-        ) {
-            var c = $("#enroll-IdentifierID").val(),
-                u = $("#enroll-Identity-Current").val();
-            switch (u) {
-                case "TaxId":
-                    var p = new RegExp(/[A-Z]{3}[phPH]{1}[A-Z]{1}[0-9]{4}[A-Z]{1}/);
-                    $(".proofNumber-class .helper").html(""),
-                        $("#enroll-IdentifierID").removeClass("helper"),
-                        $("#enroll-IdentifierID").attr("data-error", ""),
-                        10 == c.length ?
-                        c.match(p) ||
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Invalid") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Invalid"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("panRegexValid"))
-                            .addClass("error")) :
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Required") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Required"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("panValid"))
-                            .addClass("error"));
-                    break;
-                case "PassportId":
-                    var p = new RegExp(/[A-Z]{1}[0-9]{7}/);
-                    $(".proofNumber-class .helper").html(""),
-                        $("#enroll-IdentifierID").removeClass("helper"),
-                        $("#enroll-IdentifierID").attr("data-error", ""),
-                        c.length >= 7 && c.length <= 10 ?
-                        c.match(p) ||
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Invalid") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Invalid"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("passportRegexValid"))
-                            .addClass("error")) :
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Required") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Required"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("passportValid"))
-                            .addClass("error"));
-                    break;
-                case "VoterId":
-                    var p = new RegExp(/^[A-Z]{2,3}[0-9]{6,}$/);
-                    $(".proofNumber-class .helper").html(""),
-                        $("#enroll-IdentifierID").removeClass("helper"),
-                        $("#enroll-IdentifierID").attr("data-error", ""),
-                        c.length >= 9 ?
-                        c.match(p) ||
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Invalid") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Invalid"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("voterRegexValid"))
-                            .addClass("error")) :
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Required") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Required"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("voterValid"))
-                            .addClass("error"));
-                    break;
-                case "UniversalId":
-                    var p = new RegExp(/[0-9]{12}/);
-                    $(".proofNumber-class .helper").html(""),
-                        $("#enroll-IdentifierID").removeClass("helper"),
-                        $("#enroll-IdentifierID").attr("data-error", ""),
-                        c.length >= 9 && c.length <= 12 ?
-                        c.match(p) ||
-                        ($("#enroll-IdentifierIDr").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Invalid") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Invalid"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("aadharRegexValid"))
-                            .addClass("error")) :
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Required") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Required"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("aadharValid"))
-                            .addClass("error"));
-                    break;
-                case "DriversLicenseId":
-                    var p = new RegExp(/^[A-Z0-9 ]+$/);
-                    $(".proofNumber-class .helper").html(""),
-                        $("#enroll-IdentifierID").removeClass("helper"),
-                        $("#enroll-IdentifierID").attr("data-error", ""),
-                        c.length > 0 ?
-                        c.match(p) ||
-                        ($("#enroll-IdentifierIDr").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Invalid") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Invalid"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("licenseRegexValid"))
-                            .addClass("error")) :
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Required") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Required"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("licenseValid"))
-                            .addClass("error"));
-                    break;
-                case "RationCardId":
-                    var p = new RegExp(/^[A-Z0-9 ]+$/);
-                    $(".proofNumber-class .helper").html(""),
-                        $("#enroll-IdentifierID").removeClass("helper"),
-                        $("#enroll-IdentifierID").attr("data-error", ""),
-                        c.length > 0 ?
-                        c.match(p) ||
-                        ($("#enroll-IdentifierIDr").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Invalid") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Invalid"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("rationRegexValid"))
-                            .addClass("error")) :
-                        ($("#enroll-IdentifierID").addClass("helper"),
-                            window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                            $('input[name="tl.dbIdentifierIdAU"]').addClass("error").attr("data-error", "Required") :
-                            $('input[name="tl.identifierId"]').addClass("error").attr("data-error", "Required"),
-                            $(".proofNumber-class .helper")
-                            .html("<span/>" + localizedString("rationValid"))
-                            .addClass("error"));
-            }
-            if (!e.is("select") && $("#enrollShort").length <= 0 && $("#enrollQuick").length <= 0 && $("#enrollOffer").length <= 0) {
-                var h = $("#enroll-State-Current").val(),
-                    f = $("#enroll-Pin-Current").val(),
-                    m = parseInt(f.substring(0, 2)),
-                    g = parseInt(f.substring(3, 6));
-                if ("" !== h) {
-                    var v = pinCodeValidator[h].startCode,
-                        y = pinCodeValidator[h].endCode;
-                    (m >= v && m <= y && (0 !== g || 90 === m || 91 === m || 92 === m || 93 === m || 94 === m || 95 === m || 96 === m || 97 === m || 98 === m || 99 === m)) || checkStateCode();
-                }
-            }
-            "undefined" != typeof t &&
-                n.length < 3 &&
-                n.length > 0 &&
-                ("tl.curr-street1" == t || "tl.curr-street2" == t || "tl.curr-street3" == t || "tl.dbAddressAU1" == t || "tl.dbAddressAU2" == t || "tl.dbAddressAU3" == t) &&
-                throwError(t, s, "minlength", "Minimum Length");
-        }
-        if ("undefined" != typeof t && t.match(/^tl\.dob/)) {
-            $(".dob").removeClass("error").addClass("ok"),
-                ($(s).removeClass("error").innerText = ""),
-                ($("#enrollShort").length > 0 ||
-                    $("#enrollQuick").length > 0 ||
-                    $("#enrollShortAdd").length > 0 ||
-                    $("#enrollQuickAdd").length > 0 ||
-                    $("#additionalInfo").length > 0 ||
-                    $("#enroll1").length > 0 ||
-                    $("#enrollOffer").length > 0 ||
-                    $("#enrollOfferAdd").length > 0 ||
-                    $("#help1").length > 0) &&
-                (s = $("#vMid").next(".helper")),
-                "enroll-DateOfBirth" == $(e)[0].id && e.hasClass("error") && s.text("Please enter date of birth.").addClass("error").removeClass("ok");
-            var b = window.location.href.indexOf("/additionalInfo.page") > 0 ? parseInt($('input[name="tl.dobMonthAU"]').val()) : parseInt($('input[name="tl.dobMonth"]').val()),
-                S = window.location.href.indexOf("/additionalInfo.page") > 0 ? parseInt($('input[name="tl.dobDayAU"]').val()) : parseInt($('input[name="tl.dobDay"]').val()),
-                w = window.location.href.indexOf("/additionalInfo.page") > 0 ? parseInt($('input[name="tl.dobYearAU"]').val()) : parseInt($('input[name="tl.dobYear"]').val());
-            b > 0 && S > 0 && w > 0 ?
-                (b > 12 ?
-                    window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                    throwError("tl.dobMonthAU", s, "invalid", "Invalid") :
-                    throwError("tl.dobMonth", s, "invalid", "Invalid") :
-                    ((4 == b || 6 == b || 9 == b || 11 == b) && S > 30) || (2 == b && S > 29) ?
-                    window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                    throwError("tl.dobDayAU", s, "invalid", "Invalid") :
-                    throwError("tl.dobDay", s, "invalid", "Invalid") :
-                    (1 == b || 3 == b || 5 == b || 7 == b || 8 == b || 10 == b || 12 == b) &&
-                    S > 31 &&
-                    (window.location.href.indexOf("/additionalInfo.page") > 0 ? throwError("tl.dobDayAU", s, "invalid", "Invalid") : throwError("tl.dobDay", s, "invalid", "Invalid")),
-                    w >= thisYear - 15 ?
-                    window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                    throwError("tl.dobYearAU", s, "underage", "Underage") :
-                    throwError("tl.dobYear", s, "underage", "Underage") :
-                    w == thisYear - 16 && b > parseInt(thisMonth) ?
-                    window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                    throwError("tl.dobYearAU", s, "underage", "Underage") :
-                    throwError("tl.dobYear", s, "underage", "Underage") :
-                    w == thisYear - 16 &&
-                    b == parseInt(thisMonth) &&
-                    S > parseInt(thisDay) &&
-                    (window.location.href.indexOf("/additionalInfo.page") > 0 ? throwError("tl.dobYearAU", s, "underage", "Underage") : throwError("tl.dobYear", s, "underage", "Underage")),
-                    "enroll-DateOfBirth-Year" == e.attr("id") &&
-                    ($("#enroll-DateOfBirth-Day").hasClass("error") ||
-                        $("#enroll-DateOfBirth-Month").hasClass("error") ||
-                        ($("#enroll-DateOfBirth-Year").hasClass("error") && "" !== $("#enroll-DateOfBirth-Year")[0].dataset.error) ||
-                        ($(".dob").removeClass("error"), ($(s).removeClass("error").innerText = ""))),
-                    S <= 9 ? $("#enroll-DateOfBirth-Day").val("0" + S) : $("#enroll-DateOfBirth-Day").val(S),
-                    b <= 9 ? $("#enroll-DateOfBirth-Month").val("0" + b) : $("#enroll-DateOfBirth-Month").val(b)) :
-                ($(document).ready(function() {
-                        function e() {
-                            setTimeout(function() {
-                                1 == o && 0 == r && ($(".dob").addClass("error"), throwError(t, s, "required", "Field is blank")), 1 == i && 0 == a && (throwError(t, s, "required", "Field is blank"), (l = 0), $(".dob").addClass("error"));
-                            }, 1e3);
-                        }
-                        var r = 0,
-                            n = 0,
-                            a = 0,
-                            i = 0,
-                            o = 0,
-                            l = 0;
-                        $("#enroll-DateOfBirth-Day").focus(function() {
-                                n = 1;
-                            }),
-                            $("#enroll-DateOfBirth-Month").focus(function() {
-                                (r = 1), (o = 0);
-                            }),
-                            $("#enroll-DateOfBirth-Year").focus(function() {
-                                (a = 1), (o = 0), (i = 0);
-                            }),
-                            $("#enroll-DateOfBirth-Month").blur(function() {
-                                (r = 0), (i = 1);
-                            }),
-                            $("#enroll-DateOfBirth-Day").blur(function() {
-                                (n = 0), (o = 1);
-                            }),
-                            $("#enroll-DateOfBirth-Year").blur(function() {
-                                (a = 0), (l = 1);
-                            }),
-                            e();
-                    }),
-                    "enroll-DateOfBirth-Month" == e.attr("id") &&
-                    isNaN(S) &&
-                    (window.location.href.indexOf("/additionalInfo.page") > 0 ? throwError("tl.dobYearAU", s, "required", "Required") : throwError("tl.dobYear", s, "required", "Required"), e.addClass("error")),
-                    "enroll-DateOfBirth-Year" == e.attr("id"),
-                    (isNaN(b) && "" !== $('input[name="tl.dobMonth"]').val()) ||
-                    (isNaN(b) && "" !== $('input[name="tl.dobMonthAU"]').val()) ||
-                    (isNaN(S) && "" !== $('input[name="tl.dobDay"]').val()) ||
-                    (isNaN(S) && "" !== $('input[name="tl.dobDayAU"]').val()) ||
-                    (isNaN(w) && "" !== $('input[name="tl.dobYear"]').val()) ||
-                    (isNaN(w) && "" !== $('input[name="tl.dobYear"]').val()) ?
-                    (window.location.href.indexOf("/additionalInfo.page") > 0 ? throwError("tl.dobYearAU", s, "format", "Invalid Character") : throwError("tl.dobYear", s, "format", "Invalid Character"),
-                        e.removeClass("ok"),
-                        $(".dob").addClass("error")) :
-                    $("#enroll-DateOfBirth-Year").val().length < 4 && ("" !== $('input[name="tl.dobYear"]').val() || "" !== $('input[name="tl.dobYearAU"]').val()) ?
-                    window.location.href.indexOf("/additionalInfo.page") > 0 ?
-                    throwError("tl.dobYearAU", s, "notfull", "Not enough Digit") :
-                    throwError("tl.dobYear", s, "notfull", "Not enough Digit") :
-                    ("" != $('input[name="tl.dobMonth"]').val() &&
-                        "" != $('input[name="tl.dobMonthAU"]').val() &&
-                        "" != $('input[name="tl.dobDay"]').val() &&
-                        "" != $('input[name="tl.dobDayAU"]').val() &&
-                        "" != $('input[name="tl.dobYear"]').val()) ||
-                    (window.location.href.indexOf("/additionalInfo.page") > 0 ? throwError("tl.dobYearAU", s, "required", "Required") : throwError("tl.dobYear", s, "required", "Required"),
-                        e.removeClass("ok"),
-                        $(".dob").addClass("error"))),
-                w <= 1900 && (window.location.href.indexOf("/additionalInfo.page") > 0 ? throwError("tl.dobYearAU", s, "overage", "Overage") : throwError("tl.dobYear", s, "overage", "Overage")),
-                e.hasClass("error") && $(".dob").addClass("error"),
-                "CIBIL" != currentEnterprise() && window.location.href.indexOf("/enrollShort.page") > 0 ?
-                $(".dob").hasClass("error") ?
-                $("#vMid").css("border-bottom", "solid 1px red") :
-                $("#vMid").css("border-bottom", "solid 1px #999999") :
-                $(".dob").hasClass("error") ?
-                $("#vMid").css("border", "solid 1px red") :
-                $("#vMid").css("border", "solid 1px #999999");
-        }
-        if ((($("#help1").length > 0 || $("#login").length > 0) && localStorage.setItem("userName", $('input[name="tl.username"]').val()), "tl.newPassword" == t && n.length > 0)) {
-            if ($("#help3").length > 0) var C = localStorage.getItem("userName");
-            else var C = $('input[name="tl.username"]').val();
-            var _ = $('input[name="tl.newPassword"]').val().length;
-            "" !== C && $('input[name="tl.newPassword"]').val().indexOf(C) > -1 ? throwError(t, s, "username", "Contains Username") : _ > 0 && _ < 8 && throwError(t, s, "minlength", " Minimum Length");
-        }
-        if (
-            ($("#help3 button").click(function(e) {
-                    localStorage.removeItem(userName);
-                }),
-                $("#login").length > 0 ?
-                "tl.username" == t && n.length < 1 && e.hasClass("required") && throwError(t, s, "minlength", "Minimum Length") :
-                "tl.username" == t && n.length < 5 && e.hasClass("required") && throwError(t, s, "minlength", "Minimum Length"),
-                "tl.username" == t && "" == n && e.hasClass("required") && throwError(t, s, "required", "Required"),
-                ("tl.phoneNumber" == t || "tl.phoneNumberAU" == t) && n.length < 10 && e.hasClass("required") && throwError(t, s, "minlength", "Minimum Length"),
-                ("tl.phoneNumber" != t && "tl.phoneNumberAU" != t) || "" != n || !e.hasClass("required") || throwError(t, s, "required", "Required"),
-                "tl.activationCodeId" == t && n.length < 12 && e.hasClass("required") && throwError(t, s, "minlength", "Minimum Length"),
-                "t1.sin" == t && "000000000" == $("#enroll-SIN").val() && throwError(t, s, "format", "All Zeroes"),
-                ($("#enrollAboutYou").length > 0 || $(".SSO-enroll").length > 0) && $('input[name="tl.language"]').val(locale + "CA"),
-                $("#enroll-PostalCode-Previous").length > 0)
-        ) {
-            var x = $('input[name="tl.prev-zip-code"]').val();
-            x.indexOf(" ") >= 0 && $('input[name="tl.prev-zip-code"]').val(x.replace(/\s+/g, ""));
-        }
-        if ($("#enroll-PostalCode-Current").length > 0) {
-            var x = window.location.href.indexOf("/additionalInfo.page") > 0 ? $('input[name="tl.dbPostalCodeAU"]').val() : $('input[name="tl.curr-zip-code"]').val();
-            x.indexOf(" ") >= 0 && (window.location.href.indexOf("/additionalInfo.page") > 0 ? $('input[name="tl.dbPostalCodeAU"]').val(x.replace(/\s+/g, "")) : $('input[name="tl.curr-zip-code"]').val(x.replace(/\s+/g, "")));
-        }
-        if ("tl.password" == t && !hasElement("#LoginLogout")) {
-            var C = $('input[name="tl.username"]').val(),
-                _ = $('input[name="tl.password"]').val().length;
-            "" !== C && n.indexOf(C) > -1 ? throwError(t, s, "username", "Contains Username") : _ > 0 && _ < 8 && throwError(t, s, "minlength", " Minimum Length");
-        }
-        if ("tl.password2" == t) {
-            var P = $('input[name="tl.password"]').val();
-            "" !== P && P !== n && throwError(t, s, "match", "Does Not Match");
-        }
-        if ("tl.newPassword2" == t) {
-            var P = $('input[name="tl.newPassword"]').val() || $('input[name="tl.password"]').val();
-            "" !== P && P !== n && "undefined" != typeof P && throwError(t, s, "match", "Does Not Match");
-        }
-        if ("confirm-password" == t) {
-            var P = $('input[name="tl.newPassword"]').val();
-            "" !== P && P !== n && throwError(t, s, "match", "Does Not Match");
-        }
-        if ("tl.secret-answer" == t) {
-            var P = $('input[name="tl.password"]').val();
-            n.indexOf(P) > -1 && "" !== P && throwError(t, s, "password", "Contains Password"), delete P;
-        }
-        if ("tl.newSecret-answer" == t) {
-            var A = $('input[name="tl.newPassword"]').val();
-            n.indexOf(A) > -1 && "" !== A && throwError(t, s, "password", "Contains Password"), delete A;
-        }
-        if ("tl.first-name" == t || "tl.middle-name" == t || "tl.last-name" == t) {
-            var D = $('input[name="tl.first-name"]').val().toLowerCase(),
-                I = void 0 !== $('input[name="tl.middle-name"]').val() ? $('input[name="tl.middle-name"]').val().toLowerCase() : "",
-                E = $('input[name="tl.last-name"]').val().toLowerCase(),
-                p = new RegExp(/(\b\w+\b)(?=.*\b\1\b)/);
-            "" !== I && "tl.middle-name" == t ?
-                D === I || p.test(D.concat(" " + I)) || p.test(E.concat(" " + I)) ?
-                throwError(t, s, "duplicate", "duplicated within or between names") :
-                p.test(I) && throwError(t, s, "duplicate", "duplicated within or between names") :
-                "" !== E && "tl.last-name" == t ?
-                D === E || p.test(D.concat(" " + E)) || p.test(E.concat(" " + I)) ?
-                throwError(t, s, "duplicate", "duplicated within or between names") :
-                p.test(E) && throwError(t, s, "duplicate", "duplicated within or between names") :
-                "tl.first-name" == t && (p.test(D) || p.test(D.concat(" " + E)) || p.test(D.concat(" " + I))) && throwError(t, s, "duplicate", "duplicated within or between names"),
-                delete D;
-        }
-        if ("tl.dbFNameAU" == t || "tl.dbMNameAU" == t || "tl.dbLNameAU" == t) {
-            var D = $('input[name="tl.dbFNameAU"]').val().toLowerCase(),
-                I = void 0 !== $('input[name="tl.dbMNameAU"]').val() ? $('input[name="tl.dbMNameAU"]').val().toLowerCase() : "",
-                E = $('input[name="tl.dbLNameAU"]').val().toLowerCase(),
-                p = new RegExp(/(\b\w+\b)(?=.*\b\1\b)/);
-            "" !== I && "tl.dbMNameAU" == t ?
-                D === I || p.test(D.concat(" " + I)) || p.test(E.concat(" " + I)) ?
-                throwError(t, s, "duplicate", "duplicated within or between names") :
-                p.test(I) && throwError(t, s, "duplicate", "duplicated within or between names") :
-                "" !== E && "tl.dbLNameAU" == t ?
-                D === E || p.test(D.concat(" " + E)) || p.test(E.concat(" " + I)) ?
-                throwError(t, s, "duplicate", "duplicated within or between names") :
-                p.test(E) && throwError(t, s, "duplicate", "duplicated within or between names") :
-                "tl.dbFNameAU" == t && (p.test(D) || p.test(D.concat(" " + E)) || p.test(D.concat(" " + I))) && throwError(t, s, "duplicate", "duplicated within or between names"),
-                delete D;
-        }
-        if (
-            ("tl.activationCodeId" == t && ((n = n.toUpperCase()), $("input[name='tl.activationCodeId']").val(n)),
-                "" != $(s).html() || a || ($(s).html("<span/>").addClass("ok"), e.addClass("ok")),
-                "undefined" != typeof t &&
-                t.match(/^dob/) &&
-                ("" == $('input[name="tl.dobMonth"]').val() && throwError("dobMonth", s, "required", "Field is blank"),
-                    "" == $('input[name="tl.dobMonthAU"]').val() && throwError("dobMonthAU", s, "required", "Field is blank"),
-                    "" == $('input[name="tl.dobDay"]').val() && throwError("dobDay", s, "required", "Field is blank"),
-                    "" == $('input[name="tl.dobDayAU"]').val() && throwError("dobDayAU", s, "required", "Field is blank"),
-                    "" == $('input[name="tl.dobYear"]').val() && throwError("dobYear", s, "required", "Field is blank"),
-                    "" == $('input[name="tl.dobYearAU"]').val() && throwError("dobYearAU", s, "required", "Field is blank")),
-                "tl.gender" === t)
-        )
-            if (0 === $("#consolidatedEnroll").length && 0 === $("#enrollShortAdd").length && 0 === $("#additionalInfo").length && 0 === $("#enrollQuickAdd").length && 0 === $(".SSO-enroll1").length && 0 === $("#enrollOfferAdd").length) {
-                var B = $("#enroll-Gender-Male").parent().closest("div");
-                $('[name="tl.gender"]').is(":checked") ?
-                    (B.find("p.helper").removeClass("gender-error"), B.find("p.helper").hide()) :
-                    0 === B.find("p.helper").length &&
-                    ("hi" === sessionStorage.getItem("userLangPref") ?
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>कृपया अपना लिंग चुनें </p>") :
-                        "ta" === sessionStorage.getItem("userLangPref") ?
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>உங்கள் பாலினத்தை தேர்வு செய்யுங்கள்</p>") :
-                        "te" === sessionStorage.getItem("userLangPref") ?
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>మీ లింగాన్ని ఎంచుకోండి</p>") :
-                        "be" === sessionStorage.getItem("userLangPref") ?
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>অনুগ্রহ করে আপনার লিঙ্গ নির্বাচন করুন</p>") :
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>Please select your gender </p>"),
-                        window.dataLayer.push({
-                            event: "EventTracking",
-                            eventCategory: "Form Event Field Missing/Skipped Step About You - Atlas Registration Form",
-                            eventAction: $(this).attr("name") || "enroll-Gender",
-                            eventLabel: $(this).attr("data-error") || "No Option Selected",
-                        }));
-            } else
-                ($("#consolidatedEnroll").length > 0 || $("#enrollShortAdd").length > 0 || $("#additionalInfo").length > 0 || $("#enrollQuickAdd").length > 0 || $(".SSO-enroll1").length > 0 || $("#enrollOfferAdd").length > 0) &&
-                ($("#gender").next(".helper").removeClass("error"),
-                    ($("#gender").next(".helper").innerText = ""),
-                    "" === n &&
-                    ($("#gender").next(".helper").addClass("error"),
-                        "hi" === sessionStorage.getItem("userLangPref") ?
-                        $("#gender").next(".helper").append("कृपया अपना लिंग चुनें ") :
-                        "ta" === sessionStorage.getItem("userLangPref") ?
-                        $("#gender").next(".helper").append("உங்கள் பாலினத்தை தேர்வு செய்யுங்கள்") :
-                        "te" === sessionStorage.getItem("userLangPref") ?
-                        $("#gender").next(".helper").append("మీ లింగాన్ని ఎంచుకోండి") :
-                        "be" === sessionStorage.getItem("userLangPref") ?
-                        $("#gender").next(".helper").append("অনুগ্রহ করে আপনার লিঙ্গ নির্বাচন করুন") :
-                        $("#gender").next(".helper").append("Please select your gender")));
-        if ("tl.dbGenderAU" === t)
-            if (0 === $("#consolidatedEnroll").length && 0 === $("#enrollShortAdd").length && 0 === $("#additionalInfo").length && 0 === $("#enrollQuickAdd").length && 0 === $(".SSO-enroll1").length && 0 === $("#enrollOfferAdd").length) {
-                var B = $("#enroll-Gender-Male").parent().closest("div");
-                $('[name="tl.dbGenderAU"]').is(":checked") ?
-                    (B.find("p.helper").removeClass("gender-error"), B.find("p.helper").hide()) :
-                    0 === B.find("p.helper").length &&
-                    ("hi" === sessionStorage.getItem("userLangPref") ?
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>कृपया अपना लिंग चुनें </p>") :
-                        "ta" === sessionStorage.getItem("userLangPref") ?
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>உங்கள் பாலினத்தை தேர்வு செய்யுங்கள்</p>") :
-                        "te" === sessionStorage.getItem("userLangPref") ?
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>మీ లింగాన్ని ఎంచుకోండి</p>") :
-                        "be" === sessionStorage.getItem("userLangPref") ?
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>অনুগ্রহ করে আপনার লিঙ্গ নির্বাচন করুন</p>") :
-                        $("#enroll-Gender-Male").parent().closest("div").append("<p class='helper gender-error'>Please select your gender </p>"),
-                        window.dataLayer.push({
-                            event: "EventTracking",
-                            eventCategory: "Form Event Field Missing/Skipped Step About You - Atlas Registration Form",
-                            eventAction: $(this).attr("name") || "enroll-Gender",
-                            eventLabel: $(this).attr("data-error") || "No Option Selected",
-                        }));
-            } else
-                ($("#consolidatedEnroll").length > 0 || $("#enrollShortAdd").length > 0 || $("#additionalInfo").length > 0 || $("#enrollQuickAdd").length > 0 || $(".SSO-enroll1").length > 0 || $("#enrollOfferAdd").length > 0) &&
-                ($("#gender").next(".helper").removeClass("error"),
-                    ($("#gender").next(".helper").innerText = ""),
-                    "" === n &&
-                    ($("#gender").next(".helper").addClass("error"),
-                        "hi" === sessionStorage.getItem("userLangPref") ?
-                        $("#gender").next(".helper").append("कृपया अपना लिंग चुनें ") :
-                        "ta" === sessionStorage.getItem("userLangPref") ?
-                        $("#gender").next(".helper").append("உங்கள் பாலினத்தை தேர்வு செய்யுங்கள்") :
-                        "te" === sessionStorage.getItem("userLangPref") ?
-                        $("#gender").next(".helper").append("మీ లింగాన్ని ఎంచుకోండి") :
-                        "be" === sessionStorage.getItem("userLangPref") ?
-                        $("#gender").next(".helper").append("অনুগ্রহ করে আপনার লিঙ্গ নির্বাচন করুন") :
-                        $("#gender").next(".helper").append("Please select your gender")));
-        $("#enroll-EmailAddress").hasClass("error") ? $(".userName_hint").hide() : $(".userName_hint").show(), $("#enroll-Password").hasClass("error") ? $(".password_hint").hide() : $(".password_hint").show();
-    }
-    callenrollVerifyIdentityValidation(e), ("tl.deSalary" !== t && "tl.deUpdateSalary" !== t) || (n.length > 3 && ($(e).val(CCVD.formatInrCurrency(n)), $(e).removeClass("error").removeAttr("data-error")));
-}
-
-function formAbandonment(e, t, r) {
-    dataLayer.push({ event: "EventTracking", eventCategory: "Form Event " + e + " Step Create Account - Atlas Registration Form", eventAction: t, eventLabel: r });
-}
-
-function gtmTrackingValidator() {
-    var e, t, r;
-    if ($(".required.error").length > 1) {
-        (e = "Form Abandonment"), (r = "Form Abandonment");
-        var n = [];
-        $(".required.error").each(function() {
-                n.push($(this).attr("name")), (t = n.join(", "));
-            }),
-            formAbandonment(e, r, t);
-    } else if (1 == $(".required.error").length)(e = $(".required.error").is("select") ? "Dropdown Missing/Skipped" : "Field Missing/Skipped"), (t = "Form Abandonment"), (r = $(".required.error").attr("name")), formAbandonment(e, r, t);
-    else {
-        var n = [];
-        $(".required").each(function() {
-                ("" !== $(this).val() && null !== $(this).val()) || (n.push($(this).attr("name")), (t = n.join(", ")));
-            }),
-            n.length == $(".required").length && ((e = "Form Abandonment"), (r = "Form Abandonment"), formAbandonment(e, r, t));
-    }
-}
-
-function regexAbandonment(e) {
-    var t, r;
-    $(e).hasClass("error") &&
-        ((t = e.siblings(".helper").text()), (r = e.attr("name")), dataLayer.push({ event: "EventTracking", eventCategory: "Form Event Field Error Step Create Account - Atlas Registration Form", eventAction: r, eventLabel: t }));
-}
-
-function showLoading() {
-    $(".loadingDiv,.loadingDiv span").show();
-    var e = $("body").height() + 200;
-    $(".loadingDiv").css("height", e + "px");
-}
-
-function getScoreText() {
-    if (void 0 != apiKeys.ShowV3ScoreContent && "true" == apiKeys.ShowV3ScoreContent)
-        if ("hi" === sessionStorage.getItem("userLangPref")) {
-            var e =
-                '<p class=\'pageTextSmall\'>यह अनुभाग आपका CIBIL स्कोर दिखाता है, जिसका उपयोग विस्तृत रूप से ऋण प्रदाताओं द्वारा ऋण के आवेदनों का मूल्यांकन करने के लिए किया जाता है. आपका स्कोर 300 और 900 के बीच होता है और इसकी गणना आपकी CIBIL रिपोर्ट के "खाते" और "पूछताछ" अनुभाग में उपलब्ध जानकारी के आधार पर की जाती है. आपका स्कोर 900 के जितना नज़दीक होगा, ऋण का पुनर्भुगतान करने की आपकी क्षमता पर ऋणदाता का विश्वास उतना ही अधिक होगा. आपका स्कोर जितना अधिक होता है, आपके आवेदन के स्वीकृत होने की उतनी ही ज़्यादा संभावनाएं होती हैं.</p>';
-            (e += '<p class="pageTextSmall">कृपया नोट करें कि कुछ मामलों में आपको "NH” का CIBIL स्कोर दिखाई दे सकता है, जो नीचे दी गई 3 बातों में से किसी एक को इंगित करता है:</p>'),
-            (e += '<ol><li class="pageTextSmall">आपके पास एक क्रेडिट कार्ड या ऋण खाता है लेकिन पिछले तीन वर्षों में आपकी कोई भी क्रेडिट गतिविधि नहीं है.</li>'),
-            (e += '<li class="pageTextSmall">हो सकता है कि ऋणदाताओं ने पूछताछ की हो, लेकिन आपके पास कोई भी क्रेडिट गतिविधि नहीं है.</li>'),
-            (e += '<li class="pageTextSmall">आपके पास सिर्फ़ एड-ऑन क्रेडिट कार्ड हैं और आपका कोई भी क्रेडिट एक्सपोज़र नहीं है.</li></ol>');
-        } else if ("ta" === sessionStorage.getItem("userLangPref")) {
-        var e =
-            '<p class=\'pageTextSmall\'>இந்த பிரிவு உங்கள் CIBIL மதிப்பெண்ணைப் பிரதிபலிக்கிறது, இது பரவலாகக் கடன் வழங்குபவர்கள் கடன் விண்ணப்பங்களை மதிப்பீடு செய்ய பயன்படுத்தப்படுகிறது. உங்கள் மதிப்பெண் 300 முதல் 900 வரை இருக்கும், மேலும் இது உங்கள் CIBIL அறிக்கையில் "அக்கவுண்ட்கள்" மற்றும் "விசாரணை" பிரிவில் கிடைக்கும் தகவல்களின் அடிப்படையில் கணக்கிடப்படுகிறது. உங்கள் மதிப்பெண் 900 க்கு நெருக்கமாக இருந்தால், கடன் வழங்குபவருக்கு நீங்கள் கடனைத் திருப்பிச் செலுத்தும் உங்கள் திறனில் அதிக நம்பிக்கை இருக்கும். உங்கள் மதிப்பெண் அதிகமாக இருந்தால், உங்கள் விண்ணப்பம் அங்கீகரிக்கப்படுவதற்கு சிறந்த வாய்ப்புகள் இருக்கும்.</p>';
-        (e += '<p class="pageTextSmall">தயவுசெய்து கவனிக்கவும், சில சந்தர்ப்பங்களில் நீங்கள் பின்வரும் 3 விஷயங்களில் ஒன்றைக் குறிக்கும் "NH" இன் CIBIL மதிப்பெண் காண்பிக்கப்படலாம் என்பதை நினைவில் கொள்ளவும்:</p>'),
-        (e += '<ol><li class="pageTextSmall">உங்களிடம் கிரெடிட் கார்டு அல்லது லோன் அக்கவுண்ட் உள்ளது, ஆனால் கடந்த மூன்று ஆண்டுகளில் கடன் செயல்பாடுகள் எதுவும் இல்லை.</li>'),
-        (e += '<li class="pageTextSmall">கடன் வழங்குபவர்கள் விசாரணை செய்திருக்கலாம், ஆனால் உங்களிடம் கடன் செயல்பாடுகள் எதுவும் இல்லை.</li>'),
-        (e += '<li class="pageTextSmall">உங்களிடம் கூடுதல் ஆட்-ஆன் கிரெடிட் கார்டுகள் மட்டுமே உள்ளன, கடன் வெளிப்பாடு இல்லை.</li></ol>');
-    } else if ("te" === sessionStorage.getItem("userLangPref")) {
-        var e =
-            '<p class=\'pageTextSmall\'>ఈ విభాగం మీ CIBIL స్కోరుని తెలుపుతుంది, దీన్ని ఋణాలిచ్చే సంస్థలు ఋణ దరఖాస్తులపై ఒక అంచనాకు రావడానికి విస్తృతంగా ఉపయోగిస్తాయి. మీ స్కోరు 300 నుండి 900 మధ్య ఉంది, మరియు ఇది మీ CIBIL రిపోర్ట్ విభాగంలోని "ఖాతాలు" మరియు "వచారణలు" విభాగంలో ఉన్న సమాచారం ఆధారంగా లెక్కించబడింది. మీ స్కోరు 900 కు ఎంత దగ్గరగా ఉంటే ఋణాన్ని తిరిగి చెల్లించగలిగే మీ సామర్ధ్యంపై ఋణాలిచ్చే సంస్థలకు అంత బలమైన నమ్మకం కలుగుతుంది. మీ స్కోరు ఎంత అధికంగా ఉంటే, మీ దరఖాస్తు ఆమోదించబడే అవకాశాలు అంత మెరుగ్గా ఉంటాయి.</p>';
-        (e += '<p class="pageTextSmall">కొన్ని సందర్భాల్లో మీ CIBIL స్కోరు "NH" గా కనిపిస్తుంది, ఇది ఈ క్రింది 3 అంశాలలో ఒకదానిని సూచిస్తుంది:</p>'),
-        (e += '<ol><li class="pageTextSmall">మీకు ఒక క్రెడిట్ కార్డు లేదా ఋణ ఖాతా ఉంది, కానీ గత మూడేళ్లలో ఎటువంటి ఋణ కలాపాన్ని కలిగి లేరు.</li>'),
-        (e += '<li class="pageTextSmall">ఋణాలిచ్చే సంస్థలు విచారణ చేసి ఉండవచ్చు, కానీ మీరు ఎటువంటి ఋణ కార్యకలాపాన్ని కలిగి లేరు.</li>'),
-        (e += '<li class="pageTextSmall">మీరు యాడ్-ఆన్ క్రెడిట్ కార్డులు మాత్రమే కలిగి ఉన్నారు మరియు మీరు ఋణం పొందే ప్రక్రియకు బహిర్గతం కాలేదు.</li></ol>');
-    } else if ("be" === sessionStorage.getItem("userLangPref")) {
-        var e =
-            '<p class=\'pageTextSmall\'>এই বিভাগটি আপনার CIBIL স্কোর প্রতিফলিত করে, যা ঋণ প্রদানকারীদের দ্বারা ঋণের আবেদনগুলির মূল্যায়ন করতে ব্যাপকভাবে ব্যবহার করা হয়। আপনার স্কোরের পরিসর 300-900 এবং CIBIL রিপোর্টের "অ্যাকাউন্টস" ও "অনুসন্ধান" বিভাগের প্রাপ্য তথ্যের ভিত্তিতে গণনা করা হয়। স্কোর 900\'র যত কাছাকাছি যাবে, ঋণদাতার ততই আপনার ঋণ পরিশোধ করার সক্ষমতার উপর আস্থা তৈরি হবে। আপনার স্কোর যত বেশি হবে, আপনার আবেদনপত্র মঞ্জুর হওয়ার সম্ভাবনাও তত বাড়বে।</p>';
-        (e += '<p class="pageTextSmall">অনুগ্রহ করে লক্ষ্য করুন যে কিছু ক্ষেত্রে আপনার কাছে CIBIL স্কোর "NH” প্রদর্শিত হতে পারে যা নিম্নলিখিত 3টি জিনিসের একটির ইঙ্গিত দেয়:</p>'),
-        (e += '<ol><li class="pageTextSmall">আপনার একটি ক্রেডিট কার্ড বা ঋণের অ্যাকাউন্ট রয়েছে, তবে গত তিন বছরে কোনও ক্রেডিট কার্যকলাপ নেই।</li>'),
-        (e += '<li class="pageTextSmall">ঋণদাতারা অনুসন্ধান করে থাকতে পারেন, তবে আপনার কোনও ক্রেডিট কার্যকলাপ নেই।</li>'),
-        (e += '<li class="pageTextSmall">আপনার শুধু অ্যাড-অন ক্রেডিট কার্ড রয়েছে, ক্রেডিটের সঙ্গে কোনও সম্পর্ক নেই।</li></ol>');
-    } else {
-        var e =
-            '<p class=\'pageTextSmall\'>This section reflects your CIBIL Score, which is widely used by loan providers to evaluate loan applications. Your score ranges between 300 and 900, and is calculated based on the information available in the "Accounts" and "Enquiry"section of your CIBIL Report. The closer your score is to 900, the more confidence the lender will have in your ability to repay the loan. Higher your score, the better chances of your application getting approved. </p>';
-        (e += '<p class="pageTextSmall">Please note in some cases you might be displayed a CIBIL Score of "NH” which indicates one of the following 3 things:</p>'),
-        (e += '<ol><li class="pageTextSmall">You have a credit card or loan account, but no credit activity in the last three years.</li>'),
-        (e += '<li class="pageTextSmall">Lenders may have made enquiries, but you do not have any credit activity.</li>'),
-        (e += '<li class="pageTextSmall">You only have add-on credit cards, and no credit exposure.</li></ol>');
-    } else {
-        var e =
-            '<p class=\'pageTextSmall\'>This section reflects your credit score, which is widely used by loan providers to evaluate loan applications. An individual\'s CIBIL Score ranges between 300-900, and is calculated basis the information in the "Accounts" and "Enquiry"section of the CIBIL report. The closer the score to 900, the more confidence the loan provider will have in your ability to repay the loan and hence, the better chances of your application getting approved. </p>';
-        (e += '<p class="pageTextSmall">Please note in some cases you might be displayed a CIBIL Score of either "NA" or "NH which indicates one of the following 3 things:</p>'),
-        (e += '<ol><li class="pageTextSmall">You do not have a credit history or you do not have enough credit history to be scored, i.e. you are new to the credit system. </li>'),
-        (e += '<li class="pageTextSmall">You have no credit activity in the last couple of years.</li>'),
-        (e += '<li class="pageTextSmall">You have all add-on credit cards and have no credit exposure.</li></ol>');
-    }
-    return e;
-}
 
 function prettify(e) {
     var t = {
@@ -1354,89 +531,6 @@ function checkStateCode() {
         .addClass("error");
 }
 
-function callenrollVerifyIdentityValidation(e) {
-    var t = $("#qName").val(),
-        r =
-        "" !== $('input[name="tl.user-input-answer1"].required').val() && void 0 !== $('input[name="tl.user-input-answer1"].required').val() ?
-        $('input[name="tl.user-input-answer1"].required')
-        .val()
-        .replace(/^\s*|\s*$/gm, "") :
-        $('input[name="tl.user-input-answer1"].required').val(),
-        n =
-        "" !== $('input[name="tl.user-input-answer2"].required').val() && void 0 !== $('input[name="tl.user-input-answer2"].required').val() ?
-        $('input[name="tl.user-input-answer2"].required')
-        .val()
-        .replace(/^\s*|\s*$/gm, "") :
-        $('input[name="tl.user-input-answer2"].required').val(),
-        a =
-        "" !== $('input[name="tl.user-input-answer3"].required').val() && void 0 !== $('input[name="tl.user-input-answer3"].required').val() ?
-        $('input[name="tl.user-input-answer3"].required')
-        .val()
-        .replace(/^\s*|\s*$/gm, "") :
-        $('input[name="tl.user-input-answer3"].required').val();
-    if ("" === r || "" === n || "" === a) {
-        if ("OTP_AccountDetails_Queue" !== t && "AccountDetail_Queue" !== t) {
-            if (($(".helper").show(), "OTP_IDM_Email_Queue" === t)) var i = localizedString("otpValidation");
-            if ("OTP_IDM_AlternateEmail_Queue" === t || "OTP_IDM_Mobile_Queue" === t) var i = localizedString("numericValidation");
-            return $(".helper").text(i), void $(".helper").addClass("error");
-        }
-        if ("AccountDetail_Queue" === t) {
-            var i = localizedString("AccountValidation");
-            return $(".helper").text(i), void $(".required.error").siblings(".helper").addClass("error").show();
-        }
-    }
-    if ("OTP_AccountDetails_Queue" === t) {
-        var o = localizedString("AccountDetailValidation"),
-            s = !1,
-            l = new RegExp(/^.{4,}$/),
-            d = l.test(r),
-            c = l.test(n),
-            u = l.test(a);
-        if (
-            (($("#answer1").next("p")[0].innerText = ""),
-                $("#answer1").next("p").removeClass("error"),
-                $("#answer1").removeClass("error"),
-                "" === r && "" === n && "" === a ?
-                ($("#answer1").next("p").show(), $("#answer1").next("p").text(o), $("#answer1").next("p").addClass("error"), $("#answer1").addClass("error"), (s = !0)) :
-                (d || "" === r || ($("#answer1").next("p").show(), $("#answer1").next("p").text(o), $("#answer1").next("p").addClass("error"), $("#answer1").addClass("error"), (s = !0)),
-                    c || "" === n || ($("#answer2").next("p").show(), $("#answer2").next("p").text(o), $("#answer2").next("p").addClass("error"), $("#answer2").addClass("error"), (s = !0)),
-                    u || "" === a || ($("#answer3").next("p").show(), $("#answer3").next("p").text(o), $("#answer3").next("p").addClass("error"), $("#answer3").addClass("error"), (s = !0))),
-                s)
-        )
-            return;
-    }
-    if ("IDM_KBA_Queue" === t || "IDM_QnA_AGLib__KBA" === t) {
-        var o = localizedString("KBAvalidation"),
-            s = !1;
-        $(".helper").show(),
-            $(".helper").text(o),
-            $(".helper").addClass("error"),
-            $('input[name="tl.answer-key-1"]:checked').val() ? $(".answerkey1").hide() : ($(".answerkey1").show(), (s = !0)),
-            $('input[name="tl.answer-key-2"]:checked').val() ? $(".answerkey2").hide() : ($(".answerkey2").show(), (s = !0)),
-            $('input[name="tl.answer-key-3"]:checked').val() ? $(".answerkey3").hide() : ($(".answerkey3").show(), (s = !0)),
-            $('input[name="tl.answer-key-4"]:checked').val() ? $(".answerkey4").hide() : ($(".answerkey4").show(), (s = !0)),
-            $('input[name="tl.answer-key-5"]:checked').val() ? $(".answerkey5").hide() : ($(".answerkey5").show(), (s = !0));
-    }
-    switch (
-        ("IDM_PairDeviceQueue" === t &&
-            ($('input[name^="tl.user-input-answer"]').is(":checked") ?
-                ($(".answerkey1 .helper").removeClass("error").text(""), $(".answerkey1").hide()) :
-                ($(".answerkey1 .helper").addClass("error").text(localizedString("creditReport_SelectOption")), $(".answerkey1").show())),
-            t)
-    ) {
-        case "OTP_IDM_Mobile_Queue":
-            otpValidation(r);
-            break;
-        case "OTP_IDM_Email_Queue":
-            otpValidation(r);
-            break;
-        case "OTP_MOBILE_Entry_Queue":
-            otpValidation(r);
-            break;
-        case "OTP_IDM_AlternateEmail_Queue":
-            otpValidation(r);
-    }
-}
 
 function otpValidation(e) {
     var t = new RegExp(/^[0-9]\d{5}$/),
@@ -1512,9 +606,6 @@ function buildRefreshCenter() {
                 c = f.substring(0, 4),
                 u = l + "/" + d + "/" + c,
                 m = ud.reportstu.OfferHistoryData;
-            findElementJson(m, "OfferStatus", "PrePurchased") === !0 ?
-                "PrePurchased" === ud.reportstu.OfferHistoryData[n].OfferStatus && $(".subscription-date").text(ud.reportstu.OfferHistoryData[n].OfferEndDate) :
-                void 0 !== ud.reportstu.ComponentDetail[n] && $(".subscription-date").text(u);
         }
     }
 }
@@ -1604,393 +695,6 @@ function showErrorMessage(e) {
     $(a).hasClass("errorTrigger") ? (t.show(), r.attr("disabled", "disabled"), $(a).find(n).addClass("showError")) : ($(a).find(n).removeClass("showError"), t.hide(), r.removeAttr("disabled"));
 }
 
-function customerDisputeAction(e) {
-    var t = !0;
-    if ("undefined" != $(".helper").length && $(".helper").length > 0)
-        for (var r = 0; r < $(".helper").length; r++)
-            if ($(".helper")[r].classList.contains("error")) {
-                t = !1;
-                var n = document.getElementsByClassName("helper")[r].parentNode;
-                n.scrollIntoView();
-                break;
-            }
-    if (t) {
-        var a = {},
-            i = {};
-        (i.channel = "ATLAS"), (a.header = i);
-        var o = {},
-            s =
-            (ud.reportstu.Name.CIBIL,
-                ud.reportstu.DOB.CIBIL,
-                ud.reportstu.Gender.CIBIL,
-                ud.reportstu.Occupation.CIBIL,
-                ud.reportstu.Income.CIBIL,
-                ud.reportstu.Frequency.CIBIL,
-                ud.reportstu.IncomeIndicator.CIBIL,
-                "undefined" != typeof reqpar["request-params"]["tl.dbFName"] ? reqpar["request-params"]["tl.dbFName"] : "");
-        o.firstName = s.split(" ")[0].replace(/[^a-zA-Z ]/g, "");
-        var l = "undefined" != typeof reqpar["request-params"]["tl.dbMName"] ? reqpar["request-params"]["tl.dbMName"] : "";
-        o.middleName = l;
-        var d = "undefined" != typeof reqpar["request-params"]["tl.dbLName"] ? reqpar["request-params"]["tl.dbLName"] : "";
-        (o.lastName = d.replace(/[^a-zA-Z ]/g, "")),
-        (o.addressLine1 = "undefined" != typeof reqpar["request-params"]["tl.dbAddress1"] ? reqpar["request-params"]["tl.dbAddress1"] : ""),
-        (o.addressLine2 = "undefined" != typeof reqpar["request-params"]["tl.dbAddress2"] ? reqpar["request-params"]["tl.dbAddress2"] : ""),
-        (o.addressLine3 = "undefined" != typeof reqpar["request-params"]["tl.dbAddress3"] ? reqpar["request-params"]["tl.dbAddress3"] : ""),
-        (o.stateCode = "undefined" != typeof reqpar["request-params"]["tl.dbRegionCode"] ? ("25" == reqpar["request-params"]["tl.dbRegionCode"] ? "26" : reqpar["request-params"]["tl.dbRegionCode"]) : ""),
-        (o.cityName = "undefined" != typeof reqpar["request-params"]["tl.dbCity"] ? reqpar["request-params"]["tl.dbCity"] : ""),
-        (o.pincode = "undefined" != typeof reqpar["request-params"]["tl.dbPostalCode"] ? reqpar["request-params"]["tl.dbPostalCode"] : "");
-        var c = "undefined" != typeof reqpar["request-params"]["tl.dbDob"] ? reqpar["request-params"]["tl.dbDob"] : "",
-            u = c.slice(0, 10).split("-"),
-            p = "" + u[2] + "-" + u[1] + "-" + u[0];
-        (o.dateofBirth = p),
-        (o.email = "undefined" != typeof reqpar["request-params"]["tl.dbEmail"] ? reqpar["request-params"]["tl.dbEmail"] : ""),
-        (o.ecn = "undefined" != typeof reqpar["request-params"]["tl.ecn"] ? reqpar["request-params"]["tl.ecn"] : ""),
-        (o.telephoneNumber = "undefined" != typeof reqpar["request-params"]["tl.dbMobileNumber"] ? reqpar["request-params"]["tl.dbMobileNumber"] : ""),
-        (o.mobileNumber = "undefined" != typeof reqpar["request-params"]["tl.dbMobileNumber"] ? reqpar["request-params"]["tl.dbMobileNumber"] : "");
-        var h = "undefined" != typeof reqpar["request-params"]["tl.dbGender"] ? reqpar["request-params"]["tl.dbGender"] : "";
-        "FEMALE" == h || "Female" == h ? (o.gender = "1") : "MALE" == h || "Male" == h ? (o.gender = "2") : (o.gender = "2");
-        var f = [],
-            m = [],
-            g = {};
-        g.idNumber = "undefined" != typeof reqpar["request-params"]["tl.dbIdentifierId"] ? reqpar["request-params"]["tl.dbIdentifierId"] : "";
-        var v = reqpar["request-params"]["tl.dbidentifierName"];
-        "DriversLicenseId" == v
-            ?
-            (g.idType = "4") :
-            "SocialId" == v ?
-            (g.idType = "7") :
-            "PassportId" == v ?
-            (g.idType = "2") :
-            "TaxId" == v ?
-            (g.idType = "1") :
-            "UniversalId" == v ?
-            (g.idType = "6") :
-            "VoterId" == v ?
-            (g.idType = "3") :
-            (g.idType = "5"),
-            f.push(g),
-            (o.identifications = f);
-        var y = {};
-        (y.consumer = o), (y.disputedField = m);
-        var b = [];
-        Array.prototype.containsSubString = function(e) {
-            for (var t in this)
-                if (this[t].toString().indexOf(e) != -1) return t;
-            return -1;
-        };
-        var S = {};
-        (S.account = []), (S.enquiry = []);
-        for (var w = 0; w < selectedIdenArray.length; w++) {
-            var C = "",
-                _ = $("#" + selectedIdenArray[w]).attr("data-membername"),
-                x = $("#" + selectedIdenArray[w]).attr("data-accountnumber"),
-                P = $("#" + selectedIdenArray[w]).attr("data-inqmemberName"),
-                A = $("#" + selectedIdenArray[w]).attr("data-dbp");
-            C = void 0 != A && A.length < 7 ? "0" + A : A;
-            var D = $("#" + selectedIdenArray[w]).attr("data-dateofEnq"),
-                I = ud.reportstu.AccountType.CIBIL,
-                E = ud.reportstu.DateReported.CIBIL,
-                B = $("#" + selectedIdenArray[w]).attr("data-addrserialNumber"),
-                O = $("#" + selectedIdenArray[w]).attr("data-phonetypeserialNumber"),
-                k = $("#" + selectedIdenArray[w]).attr("data-emailAddressserialNumber"),
-                L = $("#" + selectedIdenArray[w]).attr("data-identificationserialNumber"),
-                T = $("#" + selectedIdenArray[w]).attr("data-enqcontrolnumber"),
-                R = document.getElementById(selectedIdenArray[w]).defaultValue.toLowerCase(),
-                N = document.getElementById(selectedIdenArray[w]).value.toLowerCase(),
-                q = $("#" + selectedIdenArray[w]).attr("data-enqAmount"),
-                M = $("#" + selectedIdenArray[w]).attr("data-enqPurpose"),
-                F = $("#" + selectedIdenArray[w]).attr("data-accType");
-            if (
-                (selectedIdenArray[w].indexOf("inquiries_check") >= 0 && S.enquiry.push({ field: "ENQUIRY_OWNERSHIP", value: "Never Applied", memberName: P, dateOfEnq: GetTuDateFormate(D), enqECN: T, enqAmount: q, enqPurpose: M }),
-                    selectedIdenArray[w].indexOf("notBelongAccountCheck") >= 0)
-            ) {
-                var U = selectedIdenArray[w].split("_"),
-                    H = document.getElementById("sanctionedAmount_" + U[1]).value && "undefined" !== document.getElementById("sanctionedAmount_" + U[1]).value ? document.getElementById("sanctionedAmount_" + U[1]).value : "",
-                    z = document.getElementById("creditLimit_" + U[1]).value && "undefined" !== document.getElementById("creditLimit_" + U[1]).value ? document.getElementById("creditLimit_" + U[1]).value : "";
-                S.account.push({ field: "ACCOUNT_OWNERSHIP", value: "Account does not belong to me", memberName: _, accountNumber: x, accountType: F, accountAmount: H, accountCredit: z });
-            }
-            if (selectedIdenArray[w].indexOf("disputeName") >= 0 && R !== N) b.push({ field: "NAME", value: document.getElementById(selectedIdenArray[w]).value });
-            else if ("disputedob" == selectedIdenArray[w] && R !== N) b.push({ field: "DOB", value: document.getElementById(selectedIdenArray[w]).value.replace(/-/g, "") });
-            else if (selectedIdenArray[w].indexOf("disputegender") >= 0 && R !== N) {
-                var V = document.getElementById(selectedIdenArray[w]).value;
-                (V = "Female" == V ? "1" : "Male" == V ? "2" : "3"), b.push({ field: "GENDER", value: V });
-            } else if (selectedIdenArray[w].indexOf("disputeidentification") >= 0 && R !== N) b.push({ field: "IDENTIFICATION_NUMBER", value: document.getElementById(selectedIdenArray[w]).value, serialNumber: L });
-            else if (selectedIdenArray[w].indexOf("disputeAddress") >= 0 && R !== N) b.push({ field: "ADDRESS", value: document.getElementById(selectedIdenArray[w]).value, serialNumber: B });
-            else if (selectedIdenArray[w].indexOf("dispute_address_dropdown") >= 0 && R !== N) {
-                var j = document.getElementById(selectedIdenArray[w]).value;
-                "Permanent Address" == j ? (j = "01") : "Residence Address" == j ? (j = "02") : "Office Address" == j ? (j = "03") : "Not Categorized" == j && (j = "04"), b.push({ field: "ADDRESS_CATEGORY", value: j, serialNumber: B });
-            } else if (selectedIdenArray[w].indexOf("dispute_addressstatus_dropdown") >= 0 && R !== N) {
-                var G = document.getElementById(selectedIdenArray[w]).value;
-                "Owned" == G ? (G = "01") : "Rented" == G && (G = "02"), b.push({ field: "RESIDENCE_CODE", value: G, serialNumber: B });
-            } else if (selectedIdenArray[w].indexOf("disputemobileNumber") >= 0 && R !== N) b.push({ field: "PHONE_NUMBER", value: document.getElementById(selectedIdenArray[w]).value, serialNumber: O });
-            else if (selectedIdenArray[w].indexOf("disputeEmailAddress") >= 0 && R !== N) b.push({ field: "EMAIL_ID", value: document.getElementById(selectedIdenArray[w]).value, serialNumber: k });
-            else if (selectedIdenArray[w].indexOf("Occupation") >= 0 && R !== N) {
-                var W = document.getElementById(selectedIdenArray[w]).value;
-                "Salaried" == W ? (W = "01") : "Self Employed Professional" == W ? (W = "02") : "Self Employed" == W ? (W = "03") : "Others" == W && (W = "04"),
-                    b.push({ field: "OCCUPATION_CODE", value: W, accountType: I, dateReported: GetTuDateFormate(E) });
-            } else if ("Income_0" == selectedIdenArray[w] && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var Y = document.getElementById(selectedIdenArray[w]).value,
-                    K = Y.replace(/,/g, "");
-                b.push({ field: "INCOME", value: K, accountType: I, dateReported: GetTuDateFormate(E) });
-            } else if ("IncomeIndicator_0" == selectedIdenArray[w] && R !== N) {
-                var Q = document.getElementById(selectedIdenArray[w]).value;
-                "Net Income" == Q ? (Q = "N") : "Gross Income" == Q && (Q = "G"), b.push({ field: "NET_GROSS_INCOME_INDICATOR", value: Q, accountType: I, dateReported: GetTuDateFormate(E) });
-            } else if ("Frequency_0" == selectedIdenArray[w] && R !== N) {
-                var Z = document.getElementById(selectedIdenArray[w]).value;
-                "Monthly" == Z ? (Z = "M") : "Annual" == Z && (Z = "A"), b.push({ field: "MONTHLY_ANNUAL_INCOME_INDICATOR", value: Z, accountType: I, dateReported: GetTuDateFormate(E) });
-            } else if (selectedIdenArray[w].indexOf("disputeAccountType") >= 0 && R !== N) {
-                var J = document.getElementById(selectedIdenArray[w]).value;
-                "Auto Loan Personal" == J
-                    ?
-                    (J = "01") :
-                    "Housing Loan" == J ?
-                    (J = "02") :
-                    "Property Loan" == J ?
-                    (J = "03") :
-                    "Loan Against Shares or Securities" == J ?
-                    (J = "04") :
-                    "Personal Loan" == J ?
-                    (J = "05") :
-                    "Consumer Loan" == J ?
-                    (J = "06") :
-                    "Gold Loan" == J ?
-                    (J = "07") :
-                    "Education Loan" == J ?
-                    (J = "08") :
-                    "Loan to Professional" == J ?
-                    (J = "09") :
-                    "Credit Card" == J ?
-                    (J = "10") :
-                    "Leasing" == J ?
-                    (J = "11") :
-                    "Overdraft" == J ?
-                    (J = "12") :
-                    "Two-wheeler Loan" == J ?
-                    (J = "13") :
-                    "Non-Funded Credit Facility" == J ?
-                    (J = "14") :
-                    "Loan Against Bank Deposits" == J ?
-                    (J = "15") :
-                    "Fleet Card" == J ?
-                    (J = "16") :
-                    "Commercial Vehicle Loan" == J ?
-                    (J = "17") :
-                    "Telco – Wireless" == J ?
-                    (J = "18") :
-                    "Telco – Broadband" == J ?
-                    (J = "19") :
-                    "Telco – Landline" == J ?
-                    (J = "20") :
-                    "Secured Credit Card" == J ?
-                    (J = "31") :
-                    "Used Car Loan" == J ?
-                    (J = "32") :
-                    "Construction Equipment Loan" == J ?
-                    (J = "33") :
-                    "Tractor Loan" == J ?
-                    (J = "34") :
-                    "Corporate Credit Card" == J ?
-                    (J = "35") :
-                    "Kisan Credit Card" == J ?
-                    (J = "36") :
-                    "Loan on Credit Card" == J ?
-                    (J = "37") :
-                    "Prime Minister Jaan Dhan Yojana - Overdraft" == J ?
-                    (J = "38") :
-                    "Microfinance – Business Loan" == J ?
-                    (J = "40") :
-                    "Microfinance – Personal Loan" == J ?
-                    (J = "41") :
-                    "Microfinance – Housing Loan" == J ?
-                    (J = "42") :
-                    "Microfinance – Other" == J ?
-                    (J = "43") :
-                    "Business Loan - Secured" == J ?
-                    (J = "50") :
-                    "Business Loan – General" == J ?
-                    (J = "51") :
-                    "Business Loan – Priority Sector – Small Business" == J ?
-                    (J = "52") :
-                    "Business Loan – Priority Sector – Agriculture" == J ?
-                    (J = "53") :
-                    "Business Loan – Priority Sector – Others" == J ?
-                    (J = "54") :
-                    "Business Non-Funded Credit Facility – General" == J ?
-                    (J = "55") :
-                    "Business Non-Funded Credit Facility – Priority Sector – Small Business" == J ?
-                    (J = "56") :
-                    "Business Non-Funded Credit Facility – Priority Sector – Agriculture" == J ?
-                    (J = "57") :
-                    "Business Non-Funded Credit Facility – Priority Sector-Others" == J ?
-                    (J = "58") :
-                    "Business Loan Against Bank Deposits" == J ?
-                    (J = "59") :
-                    "Business Loan - Director Search" == J ?
-                    (J = "60") :
-                    "Business Loan - Unsecured" == J ?
-                    (J = "61") :
-                    "Other" == J && (J = "00"),
-                    b.push({ field: "ACCOUNT_TYPE", value: J, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("disputeOwnerShip") >= 0 && R !== N) {
-                var X = document.getElementById(selectedIdenArray[w]).value;
-                "Individual" == X ? (X = "1") : "Authorised User" == X ? (X = "2") : "Guarantor" == X ? (X = "3") : "Joint" == X && (X = "4"), b.push({ field: "OWNERSHIP_INDICATOR", value: X, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("creditLimit") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var ee = document.getElementById(selectedIdenArray[w]).value,
-                    te = ee.replace(/,/g, "");
-                b.push({ field: "CREDIT_LIMIT", value: te, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("sanctionedAmount") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var re = document.getElementById(selectedIdenArray[w]).value,
-                    ne = re.replace(/,/g, "");
-                b.push({ field: "HIGH_CREDIT_SANCTIONED_AMOUNT", value: ne, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("currentbalance") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var ae = document.getElementById(selectedIdenArray[w]).value,
-                    ie = ae.replace(/,/g, "");
-                b.push({ field: "CURRENT_BALANCE", value: ie, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("cashLimit") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var oe = document.getElementById(selectedIdenArray[w]).value,
-                    se = oe.replace(/,/g, "");
-                b.push({ field: "CASH_LIMIT", value: se, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("amountOverdue") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var le = document.getElementById(selectedIdenArray[w]).value,
-                    de = le.replace(/,/g, "");
-                b.push({ field: "AMOUNT_OVERDUE", value: de, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("rateOfInterest") >= 0 && R !== N) {
-                var ce = document.getElementById(selectedIdenArray[w]).value;
-                b.push({ field: "RATE_OF_INTEREST", value: ce, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("repaymentTenure") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var ue = document.getElementById(selectedIdenArray[w]).value,
-                    pe = ue.replace(/,/g, "");
-                b.push({ field: "REPAYMENT_TENURE", value: pe, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("emiAmount") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var he = document.getElementById(selectedIdenArray[w]).value,
-                    fe = he.replace(/,/g, "");
-                b.push({ field: "EMI_AMOUNT", value: fe, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("actualPaymentAmount") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var me = document.getElementById(selectedIdenArray[w]).value,
-                    ge = me.replace(/,/g, "");
-                b.push({ field: "ACTUAL_PAYMENT_AMOUNT", value: ge, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("valueOfColleteral") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var ve = document.getElementById(selectedIdenArray[w]).value,
-                    ye = ve.replace(/,/g, "");
-                b.push({ field: "VALUE_OF_COLLATERAL", value: ye, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("writtenOffAmountTotal") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var be = document.getElementById(selectedIdenArray[w]).value,
-                    Se = be.replace(/,/g, "");
-                b.push({ field: "WRITTEN_OFF_AMOUNT_TOTAL", value: Se, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("writtenOffAmountPrincipal") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var we = document.getElementById(selectedIdenArray[w]).value,
-                    Ce = we.replace(/,/g, "");
-                b.push({ field: "WRITTEN_OFF_AMOUNT_PRINCIPAL", value: Ce, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("settlementAmount") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, ""))
-                b.push({ field: "SETTLEMENT_AMOUNT", value: document.getElementById(selectedIdenArray[w]).value.replace(/,/g, ""), memberName: _, accountNumber: x });
-            else if (selectedIdenArray[w].indexOf("paymentFrequency") >= 0 && R !== N) {
-                var _e = document.getElementById(selectedIdenArray[w]).value;
-                "Weekly" == _e ? (_e = "01") : "Fortnightly" == _e ? (_e = "02") : "Monthly" == _e ? (_e = "03") : "Quarterly" == _e && (_e = "04"), b.push({ field: "PAYMENT_FREQUENCY", value: _e, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("typeOfColleteral") >= 0 && R !== N) {
-                var xe = document.getElementById(selectedIdenArray[w]).value;
-                "No Collateral" == xe ? (xe = "00") : "Property" == xe ? (xe = "01") : "Gold" == xe ? (xe = "02") : "Shares" == xe ? (xe = "03") : "Saving Account and Fixed Deposit" == xe && (xe = "04"),
-                    b.push({ field: "TYPE_OF_COLLATERAL", value: xe, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("writtenOffStatus") >= 0 && R !== N) {
-                var Pe = document.getElementById(selectedIdenArray[w]).value;
-                "Restructured Loan" == Pe
-                    ?
-                    (Pe = "00") :
-                    "Restructured Loan (Govt. Mandated)" == Pe ?
-                    (Pe = "01") :
-                    "Written-off" == Pe ?
-                    (Pe = "02") :
-                    "Settled" == Pe ?
-                    (Pe = "03") :
-                    "Post (WO) Settled" == Pe ?
-                    (Pe = "04") :
-                    "Account Sold" == Pe ?
-                    (Pe = "05") :
-                    "Written Off and Account Sold" == Pe ?
-                    (Pe = "06") :
-                    "Account Purchased" == Pe ?
-                    (Pe = "07") :
-                    "Account Purchased and Written Off" == Pe ?
-                    (Pe = "08") :
-                    "Account Purchased and Settled" == Pe ?
-                    (Pe = "09") :
-                    "Account Purchased and Restructured" == Pe ?
-                    (Pe = "10") :
-                    "Restructured due to Natural Calamity" == Pe ?
-                    (Pe = "11") :
-                    "Moratorium(Regulatory Measure)" == Pe || "Restructured due to COVID-19" == Pe ?
-                    (Pe = "12") :
-                    "Clear existing status" == Pe && (Pe = "99"),
-                    b.push({ field: "WRITTEN_OFF_AND_SETTLED_STATUS", value: Pe, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("suitFiles") >= 0 && R !== N) {
-                var Ae = document.getElementById(selectedIdenArray[w]).value;
-                "No Suit Filed" == Ae ? (Ae = "00") : "Suit filed" == Ae ? (Ae = "01") : "Wilful default" == Ae ? (Ae = "02") : "Suit filed-Wilful default" == Ae && (Ae = "03"),
-                    b.push({ field: "SUIT_FILED_WILFUL_DEFAULT", value: Ae, memberName: _, accountNumber: x });
-            } else if (selectedIdenArray[w].indexOf("dateOpened") >= 0 && R !== N) b.push({ field: "DATE_OPENED_DISBURSED", value: document.getElementById(selectedIdenArray[w]).value.replace(/-/g, ""), memberName: _, accountNumber: x });
-            else if (selectedIdenArray[w].indexOf("dateClosed") >= 0 && R !== N) b.push({ field: "DATE_CLOSED", value: document.getElementById(selectedIdenArray[w]).value.replace(/-/g, ""), memberName: _, accountNumber: x });
-            else if (selectedIdenArray[w].indexOf("dateOFLastPayment") >= 0 && R !== N)
-                b.push({ field: "DATE_OF_LAST_PAYMENT", value: document.getElementById(selectedIdenArray[w]).value.replace(/-/g, ""), memberName: _, accountNumber: x });
-            else if (selectedIdenArray[w].indexOf("inquiresDisputedAmt_") >= 0 && R.replace(/,/g, "") !== N.replace(/,/g, "")) {
-                var $e = document.getElementById(selectedIdenArray[w]).value,
-                    De = $e.replace(/,/g, "");
-                b.push({ field: "ENQUIRY_AMOUNT", value: De, memberName: P, dateOfEnq: GetTuDateFormate(D), enqECN: T });
-            } else
-                selectedIdenArray[w].indexOf("inquiries_check") >= 0 ?
-                b.push({ field: "ENQUIRY_OWNERSHIP", value: "Never Applied", memberName: P, dateOfEnq: GetTuDateFormate(D), enqECN: T }) :
-                "notBelongAccountCheck_0" == selectedIdenArray[w] ?
-                b.push({ field: "ACCOUNT_OWNERSHIP", value: "Account does not belong to me", memberName: _, accountNumber: x }) :
-                "refelctAccountCheck_0" == selectedIdenArray[w] ?
-                b.push({ field: "ACCOUNT_MULTIPLE_TIMES", value: "Account reflects multiple times", memberName: _, accountNumber: x }) :
-                selectedIdenArray[w].indexOf("notBelongAccountCheck") >= 0 ?
-                b.push({ field: "ACCOUNT_OWNERSHIP", value: "Account does not belong to me", memberName: _, accountNumber: x }) :
-                selectedIdenArray[w].indexOf("refelctAccountCheck") >= 0 ?
-                b.push({ field: "ACCOUNT_MULTIPLE_TIMES", value: "Account reflects multiple times", memberName: _, accountNumber: x }) :
-                selectedIdenArray[w].indexOf("paymentStatus") >= 0 && R !== N ?
-                b.push({ field: "PAYMENT_HISTORY", value: document.getElementById(selectedIdenArray[w]).value, memberName: _, accountNumber: x, dpdMonth: C.replace(/-/g, "") }) :
-                selectedIdenArray[w].indexOf("disputecity") >= 0 && R !== N ?
-                b.push({ field: "CITY_LOAN_ORIGINATED_IN", value: document.querySelector("#city option[value='" + $("#" + selectedIdenArray[w]).val() + "']").dataset.value, memberName: _, accountNumber: x }) :
-                selectedIdenArray[w].indexOf("inquiresSbiCity") >= 0 &&
-                R !== N &&
-                b.push({
-                    field: "CITY_LOAN_APPLIED",
-                    value: document.querySelector("#inquiresSbiCity option[value='" + $("#" + selectedIdenArray[w]).val() + "']").dataset.value,
-                    memberName: P,
-                    dateOfEnq: GetTuDateFormate(D),
-                    enqECN: T,
-                });
-        }
-        for (var Ie = 0; Ie < b.length; Ie++) m.push(b[Ie]);
-        (a.data = y), sessionStorage.setItem("SESSION_REAL_TIME_DISPUTE", JSON.stringify(S));
-        for (var Ee = JSON.stringify(a), Be = !1, Ie = 0; Ie < a.data.disputedField.length; Ie++)
-            if ("CITY_LOAN_ORIGINATED_IN" !== a.data.disputedField[Ie].field) {
-                Be = !0;
-                break;
-            }
-        if (!Be)
-            for (var w = 0; w < selectedIdenArray.length; w++) {
-                var R = document.getElementById(selectedIdenArray[w]).defaultValue.toLowerCase(),
-                    N = document.getElementById(selectedIdenArray[w]).value.toLowerCase();
-                if (selectedIdenArray[w].indexOf("disputecity") >= 0 && R !== N) {
-                    $("#" + selectedIdenArray[w])
-                        .nextAll()[2]
-                        .append("Please raise dispute against a field under SBI."),
-                        $("#" + selectedIdenArray[w])
-                        .nextAll()[2]
-                        .classList.add("error"),
-                        $("#" + selectedIdenArray[w])
-                        .next()
-                        .focus();
-                    break;
-                }
-            }
-        a.data.disputedField.length > 0 && Be ?
-            (showLoading(), $('input[name="Action"]').val("CUSTOMER_DISPUTE"), $("<input>").attr("type", "hidden").attr("name", "tl.disputeRequest").attr("value", Ee).appendTo("form")) :
-            (e.preventDefault(), e.stopPropagation());
-    } else e.preventDefault(), e.stopPropagation();
-}
-
-function disputeAgreementPopup() {
-    $("#modals").css("display", "block"), $("#dispute_modal").show();
-}
 
 function realTimeDisputeSummary(e, t, r, n) {
     var a = sessionStorage.getItem("SESSION_REAL_TIME_DISPUTE_SUMMARY"),
@@ -2004,128 +708,6 @@ function realTimeDisputeSummary(e, t, r, n) {
         n && (o = !0),
         o
     );
-}
-
-function sectionTableSuccess(e, t, r, n) {
-    var a = !1,
-        i = document.createElement("table"),
-        o = i.insertRow(-1),
-        s = document.createElement("th");
-    "Account Information" == t ? (s.innerHTML = "Member Name and Account Number") : "Enquiry Information" == t ? (s.innerHTML = "Member Name and Date of Enquiry") : (s.innerHTML = "Field Name"),
-        o.appendChild(s),
-        (s = document.createElement("th")),
-        (s.innerHTML = "Details of Dispute"),
-        o.appendChild(s),
-        (s = document.createElement("th")),
-        (s.innerHTML = "Status of Dispute"),
-        o.appendChild(s);
-    for (var l = 0; l < n.data.disputedField.length; l++) {
-        var d = n.data.disputedField[l].status;
-        if ("SUCCESS" == d) {
-            var c = n.data.disputedField[l].field;
-            c = c
-                .replace(new RegExp("\\_", "g"), " ")
-                .toLowerCase()
-                .split(" ")
-                .map(function(e) {
-                    return e[0].toUpperCase() + e.substr(1);
-                })
-                .join(" ");
-            var u,
-                p = n.data.disputedField[l].value,
-                h = " to be changed to ";
-            if ("PAYMENT_HISTORY" == n.data.disputedField[l].field) {
-                var f = "Days past due for ",
-                    m = n.data.disputedField[l].dpdMonth;
-                u = f + m + h + p;
-            } else
-                u =
-                "ACCOUNT_OWNERSHIP" == n.data.disputedField[l].field || "ACCOUNT_MULTIPLE_TIMES" == n.data.disputedField[l].field || "ENQUIRY_OWNERSHIP" == n.data.disputedField[l].field ?
-                p :
-                "CREDIT_FACILITY_STATUS" == n.data.disputedField[l].field || "WRITTEN_OFF_AND_SETTLED_STATUS" == n.data.disputedField[l].field ?
-                "Moratorium(Regulatory Measure)" == n.data.disputedField[l].value || "Restructured due to COVID-19" == n.data.disputedField[l].value ?
-                "Credit Facility Status " + h + " Restructured due to COVID-19" :
-                "Credit Facility Status " + h + p :
-                c + h + p;
-            var g = n.data.disputedField[l].message,
-                v = "Written-off and Settled Status";
-            if (g.indexOf(v) >= 0) var g = g.replace(/Written-off and Settled Status/g, "Credit Facility Status");
-            var y = sessionStorage.getItem("SESSION_REAL_TIME_DISPUTE_SUMMARY_RELOAD");
-            if ("Account Information" == t && "undefined" != typeof n.data.disputedField[l].memberName && "undefined" != typeof n.data.disputedField[l].accountNumber)
-                if (((c = n.data.disputedField[l].memberName + " #" + n.data.disputedField[l].accountNumber), "undefined" != typeof apiKeys && "" !== apiKeys && "true" == apiKeys.ShowRealDispute)) {
-                    var b = "undefined" == typeof n.data.disputedField[l].decision || "RIGHTMERGE" !== n.data.disputedField[l].decision;
-                    if ("true" == y && realTimeDisputeSummary("account", "accountNumber", n.data.disputedField[l].accountNumber, b)) {
-                        (a = !0), (o = i.insertRow(-1));
-                        var S = o.insertCell(-1);
-                        S.innerHTML = c;
-                        var S = o.insertCell(-1);
-                        S.innerHTML = u;
-                        var S = o.insertCell(-1);
-                        (S.innerHTML = g), o.setAttribute("data-hj-suppress", "");
-                    }
-                    if ("false" == y) {
-                        (a = !0), (o = i.insertRow(-1));
-                        var S = o.insertCell(-1);
-                        S.innerHTML = c;
-                        var S = o.insertCell(-1);
-                        S.innerHTML = u;
-                        var S = o.insertCell(-1);
-                        (S.innerHTML = g), o.setAttribute("data-hj-suppress", "");
-                    }
-                } else {
-                    (a = !0), (o = i.insertRow(-1));
-                    var S = o.insertCell(-1);
-                    S.innerHTML = c;
-                    var S = o.insertCell(-1);
-                    S.innerHTML = u;
-                    var S = o.insertCell(-1);
-                    (S.innerHTML = g), o.setAttribute("data-hj-suppress", "");
-                }
-            else if ("Enquiry Information" == t && "undefined" != typeof n.data.disputedField[l].dateOfEnq && "undefined" != typeof n.data.disputedField[l].enqECN) {
-                var w = n.data.disputedField[l].dateOfEnq.slice(6, 8) + "-" + n.data.disputedField[l].dateOfEnq.slice(4, 6) + "-" + n.data.disputedField[l].dateOfEnq.slice(0, 4);
-                if (((c = n.data.disputedField[l].memberName + "(" + w + ")"), "undefined" != typeof apiKeys && "" !== apiKeys && "true" == apiKeys.ShowRealDispute)) {
-                    var b = "undefined" == typeof n.data.disputedField[l].decision || "RIGHTMERGE" !== n.data.disputedField[l].decision;
-                    if ("true" == y && realTimeDisputeSummary("enquiry", "enqECN", n.data.disputedField[l].enqECN, b)) {
-                        (a = !0), (o = i.insertRow(-1));
-                        var S = o.insertCell(-1);
-                        S.innerHTML = c;
-                        var S = o.insertCell(-1);
-                        S.innerHTML = u;
-                        var S = o.insertCell(-1);
-                        (S.innerHTML = g), o.setAttribute("data-hj-suppress", "");
-                    }
-                    if ("false" == y) {
-                        (a = !0), (o = i.insertRow(-1));
-                        var S = o.insertCell(-1);
-                        S.innerHTML = c;
-                        var S = o.insertCell(-1);
-                        S.innerHTML = u;
-                        var S = o.insertCell(-1);
-                        (S.innerHTML = g), o.setAttribute("data-hj-suppress", "");
-                    }
-                } else {
-                    (a = !0), (o = i.insertRow(-1));
-                    var S = o.insertCell(-1);
-                    S.innerHTML = c;
-                    var S = o.insertCell(-1);
-                    S.innerHTML = u;
-                    var S = o.insertCell(-1);
-                    (S.innerHTML = g), o.setAttribute("data-hj-suppress", "");
-                }
-            } else if (r.indexOf(n.data.disputedField[l].field) > -1) {
-                (a = !0), (o = i.insertRow(-1));
-                var S = o.insertCell(-1);
-                S.innerHTML = c;
-                var S = o.insertCell(-1);
-                S.innerHTML = u;
-                var S = o.insertCell(-1);
-                (S.innerHTML = g), o.setAttribute("data-hj-suppress", "");
-            }
-        }
-    }
-    var C = document.getElementById(e + "Head"),
-        _ = document.getElementById(e);
-    a ? ((C.innerHTML = t), (_.innerHTML = ""), _.appendChild(i)) : (_.innerHTML = "");
 }
 
 function sectionTableFailure(e, t, r, n) {
@@ -3340,465 +1922,6 @@ function dateConvertorForDatePicker(e) {
     return "";
 }
 
-function typeAndSearch(e) {
-    var t = e.target.id.indexOf("-flexdatalist") > -1 ? e.target.id.replace("-flexdatalist", "") : e.target.id;
-    if (void 0 == $("#" + t).attr("readonly")) {
-        var r = e.target.value;
-        if (
-            (($("#" + t).nextAll()[2].innerText = ""),
-                $("#" + t)
-                .removeClass("error")
-                .addClass("ok"),
-                $("#" + t)
-                .nextAll()[2]
-                .classList.remove("error"),
-                t.indexOf("disputegender") >= 0)
-        ) {
-            var n = new RegExp(/^(MALE|FEMALE|Male|Female)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Gender")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Gender")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("paymentFrequency_") >= 0) {
-            var n = new RegExp(/^(Weekly|Fortnightly|Monthly|Quarterly)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Payment")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Payment")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("dispute_address_dropdown_") >= 0) {
-            var n = new RegExp(/^(PERMANENT ADDRESS|RESIDENCE ADDRESS|OFFICE ADDRESS|NOT CATEGORIZED|Permanent Address|Residence Address|Office Address|Not Categorized)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Category")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Category")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("dispute_addressstatus_dropdown_") >= 0) {
-            var n = new RegExp(/^(OWNED|RENTED|Owned|Rented)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Residence")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Residence")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("Occupation_") >= 0) {
-            var n = new RegExp(/^(SALARIED|SELF EMPLOYED PROFESSIONAL|SELF EMPLOYED|OTHERS|Salaried|Self Employed Professional|Self Employed|Others)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Occupation")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Occupation")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("Frequency_") >= 0) {
-            var n = new RegExp(/^(MONTHLY|ANNUAL|Monthly|Annual)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Frequency")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Frequency")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("IncomeIndicator_") >= 0) {
-            var n = new RegExp(/^(NET|GROSS|Net|Gross|Gross Income|Net Income)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_IncomeIndicator")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_IncomeIndicator")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("disputeAccountType_") >= 0) {
-            var n = new RegExp(
-                /^(Auto Loan Personal|Housing Loan|Property Loan|Loan Against Shares or Securities|Personal Loan|Consumer Loan|Gold Loan|Education Loan|Loan to Professional|Credit Card|Leasing|Overdraft|Two-wheeler Loan|Non-Funded Credit Facility|Loan Against Bank Deposits|Fleet Card|Commercial Vehicle Loan|Telco – Wireless|Telco – Broadband|Telco – Landline|Seller Financing|GECL Loan Secured|GECL Loan Unsecured|Secured Credit Card|Used Car Loan|Construction Equipment Loan|Tractor Loan|Corporate Credit Card|Kisan Credit Card|Loan on Credit Card|Prime Minister Jaan Dhan Yojana - Overdraft|Mudra Loans – Shishu \/\ Kishor \/\ Tarun|Microfinance – Business Loan|Microfinance – Personal Loan|Microfinance – Housing Loan|Microfinance – Other|Pradhan Mantri Awas Yojana - Credit Link Subsidy Scheme MAY CLSS|P2P Personal Loan|P2P Auto Loan|P2P Education Loan|Business Loan - Secured|Business Loan – General|Business Loan – Priority Sector – Small Business|Business Loan – Priority Sector – Agriculture|Business Loan – Priority Sector – Others|Business Non-Funded Credit Facility – General|Business Non-Funded Credit Facility – Priority Sector – Small Business|Business Non-Funded Credit Facility – Priority Sector – Agriculture|Business Non-Funded Credit Facility – Priority Sector-Others|Business Loan Against Bank Deposits|Business Loan - Unsecured|Other)$/
-            );
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Account")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Account")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("disputeOwnerShip_") >= 0) {
-            var n = new RegExp(/^(Individual|Authorised User|Guarantor|Joint)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Ownership")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Ownership")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("typeOfColleteral_") >= 0) {
-            var n = new RegExp(/^(No Collateral|Property|Gold|Shares|Saving Account and Fixed Deposit)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_CollateralType")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_CollateralType")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("suitFiles_") >= 0) {
-            var n = new RegExp(/^(No Suit Filed|Suit filed|Wilful default|Suit filed-Wilful default)$/);
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Suitfiled")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_Suitfiled")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        } else if (t.indexOf("writtenOffStatus_") >= 0) {
-            var n = new RegExp(
-                /^(Restructured Loan|Restructured Loan \(Govt. Mandated\)|Written-off|Settled|Post \(WO\) Settled|Account Sold|Written Off and Account Sold|Account Purchased|Account Purchased and Written Off|Account Purchased and Settled|Account Purchased and Restructured|Restructured due to Natural Calamity|Restructured due to COVID-19|Moratorium\(Regulatory Measure\)|Clear existing status)$/
-            );
-            r.length > 0 ?
-                n.test(r) ||
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_WrittenOffStatus")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                ($("#" + t)
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_WrittenOffStatus")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error"),
-                    $("#" + t)
-                    .nextAll()[2]
-                    .classList.add("error"));
-        }
-        if ("undefined" !== $("#" + t)[0].dataset.membername && "SBI" === $("#" + t)[0].dataset.membername) {
-            iCountSplit = t.split("_");
-            var n = new RegExp(
-                /^(ANDAMAN & NICOBAR ISLANDS|ANDHRA PRADESH|ARUNACHAL PRADESH|ASSAM|BIHAR|CHANDIGARH|CHHATTISGARH|DADRA AND NAGAR HAVELI AND DAMAN AND DIU|LADAKH|DELHI|GOA|GUJARAT|HARYANA|HIMACHAL PRADESH|JAMMU & KASHMIR|JHARKHAND|KARNATAKA|KERALA|LAKSHADWEEP|MADHYA PRADESH|MAHARASHTRA|MANIPUR|MEGHALAYA|MIZORAM|NAGALAND|ORISSA|PONDICHERRY|PUNJAB|RAJASTHAN|SIKKIM|TAMIL NADU|TELANGANA|TRIPURA|UTTAR PRADESH|UTTARANCHAL|WEST BENGAL)$/
-            );
-            ($("#disputecity_" + iCountSplit[1]).nextAll()[2].innerText = ""),
-            $("#disputecity_" + iCountSplit[1])
-                .nextAll()[2]
-                .classList.contains("error") ?
-                $("#disputecity_" + iCountSplit[1])
-                .nextAll()[2]
-                .classList.remove("error") :
-                "",
-                checkForSBIDispute(e, iCountSplit[1]) && "" == $("#disputecity_" + iCountSplit[1]).val() ?
-                ($("#disputecity_" + iCountSplit[1])
-                    .nextAll()[2]
-                    .append(localizedString("Dispute_State")),
-                    $("#disputecity_" + iCountSplit[1])
-                    .nextAll()[2]
-                    .classList.add("error")) :
-                "" !== $("#disputecity_" + iCountSplit[1]).val() &&
-                (n.test(
-                        $("#disputecity_" + iCountSplit[1])
-                        .val()
-                        .toUpperCase()
-                    ) ?
-                    checkForSBIDispute(e, iCountSplit[1]) ||
-                    ($("#disputecity_" + iCountSplit[1])
-                        .nextAll()[2]
-                        .append(localizedString("Dispute_StateSBI")),
-                        $("#disputecity_" + iCountSplit[1])
-                        .nextAll()[2]
-                        .classList.add("error")) :
-                    ($("#disputecity_" + iCountSplit[1])
-                        .nextAll()[2]
-                        .append(localizedString("Dispute_StateValid")),
-                        $("#disputecity_" + iCountSplit[1])
-                        .nextAll()[2]
-                        .classList.add("error")));
-        }
-        if (r.toUpperCase() !== $("#" + t)[0].defaultValue.toUpperCase())
-            if (
-                $("#" + t)
-                .nextAll(".helper")
-                .hasClass("error")
-            ) {
-                $("#" + t)
-                    .next()
-                    .removeClass("change")
-                    .addClass("error");
-                for (var a = 0; a < $(".helper").length; a++) $(".helper")[a].classList.contains("error") && $(".helper")[a].closest(".wrapperSection").classList.add("errorTrigger");
-            } else
-                $("#" + t)
-                .next()
-                .removeClass("error")
-                .addClass("change"),
-                $("#" + t)
-                .closest(".wrapperSection")
-                .removeClass("errorTrigger");
-        else if ("undefined" != $(".helper").length && $(".helper").length > 0)
-            for (var a = 0; a < $(".helper").length; a++)
-                $(".helper")[a].classList.contains("error") ?
-                $(".helper")[a].closest(".wrapperSection").classList.add("errorTrigger") :
-                ($("#" + t)
-                    .next()
-                    .removeClass("change error")
-                    .addClass("noChange"),
-                    $("input.noChange").parents(".wrapperSection").removeClass("errorTrigger"));
-        showErrorMessage(t);
-    }
-}
-
-function deTypeAndSearchValitaion(e) {
-    var t = e.attr("id").indexOf("-flexdatalist") > -1 ? e.attr("id").replace("-flexdatalist", "") : e.attr("id"),
-        r = e.val();
-    if (
-        (($("#" + t).nextAll()[1].innerText = ""),
-            $("#" + t)
-            .nextAll()[1]
-            .classList.remove("error"),
-            $("#" + t)
-            .removeClass("error")
-            .addClass("ok"),
-            $("#" + t).removeAttr("data-error"),
-            $("#" + t + "-flexdatalist")
-            .removeClass("error")
-            .addClass("ok"),
-            $("#" + t + "-flexdatalist").removeAttr("data-error"),
-            $("#" + t + "-flexdatalist-results").css("border", "1px solid #ccc"),
-            t.indexOf("deEmployment") >= 0 || t.indexOf("editEmployment") >= 0)
-    ) {
-        var n = new RegExp(/^(salaried|self-employed)$/);
-        r.length > 0 ?
-            n.test(r.toLowerCase()) ||
-            ($("#" + t)
-                .nextAll()[1]
-                .append(localizedString("DE_validIncome")),
-                $("#" + t)
-                .removeClass("ok")
-                .addClass("error")
-                .attr("data-error", "Invalid-Employment"),
-                $("#" + t)
-                .nextAll()[1]
-                .classList.add("error"),
-                $("#" + t + "-flexdatalist")
-                .removeClass("ok")
-                .addClass("error")
-                .attr("data-error", "Invalid-Employment"),
-                $("#" + t + "-flexdatalist")
-                .nextAll()[1]
-                .classList.add("error")) :
-            ($("#" + t)
-                .nextAll()[1]
-                .append(localizedString("DE_validIncome")),
-                $("#" + t)
-                .removeClass("ok")
-                .addClass("error")
-                .attr("data-error", "Required"),
-                $("#" + t)
-                .nextAll()[1]
-                .classList.add("error"),
-                $("#" + t + "-flexdatalist")
-                .removeClass("ok")
-                .addClass("error")
-                .attr("data-error", "Required"));
-    } else if (t.indexOf("deCity") >= 0 || t.indexOf("editCity") >= 0)
-        if (r.length > 0) {
-            var a = "";
-            for (var i in cities) {
-                if (
-                    (($("#" + t).nextAll()[1].innerText = ""),
-                        $("#" + t)
-                        .nextAll()[1]
-                        .classList.remove("error"),
-                        $("#" + t)
-                        .removeClass("error")
-                        .addClass("ok"),
-                        $("#" + t).removeAttr("data-error"),
-                        $("#" + t + "-flexdatalist")
-                        .removeClass("error")
-                        .addClass("ok"),
-                        $("#" + t + "-flexdatalist").removeAttr("data-error"),
-                        (a = cities[i].name),
-                        a.toLowerCase() == r.toLowerCase())
-                )
-                    break;
-                $("#" + t)
-                    .nextAll()[1]
-                    .append(localizedString("DE_validCity")),
-                    $("#" + t)
-                    .removeClass("ok")
-                    .addClass("error")
-                    .attr("data-error", "Invalid-City"),
-                    $("#" + t)
-                    .nextAll()[1]
-                    .classList.add("error"),
-                    $("#" + t + "-flexdatalist")
-                    .removeClass("ok")
-                    .addClass("error")
-                    .attr("data-error", "Invalid-City");
-            }
-        } else
-            $("#" + t)
-            .nextAll()[1]
-            .append(localizedString("DE_validCity")),
-            $("#" + t)
-            .removeClass("ok")
-            .addClass("error")
-            .attr("data-error", "Required"),
-            $("#" + t)
-            .nextAll()[1]
-            .classList.add("error"),
-            $("#" + t + "-flexdatalist")
-            .removeClass("ok")
-            .addClass("error")
-            .attr("data-error", "Required");
-}
 
 function scoreSimLogOut() {
     void 0 == sessionStorage.clickcount && (sessionStorage.clickcount = 0);
@@ -4875,36 +2998,6 @@ function submitPromoPaymentProceed(e, t) {
             ($('input[name="Action"]').val("FULFILL_UPSELL_ORDER"), $("form").submit()));
 }
 
-function onChangeDefault(e) {
-    $("#pr-input-" + e).removeClass("error success"),
-        $("#pr-msg-" + e)
-        .removeClass("error success")
-        .text("");
-}
-
-function resetDefautForSubscription(e) {
-    var t = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-    t.forEach(function(t, r) {
-        t != e ?
-            ($("#pr-input-" + t)
-                .val("")
-                .removeClass("success error"),
-                $("#pr-msg-" + t)
-                .removeClass("success error")
-                .text(""),
-                $("#pr-tol-amt-" + t).css("text-decoration", "none"),
-                $("#pr-re-" + t).hide(),
-                "undefined" != typeof $(".collapsible")[r] && $(".collapsible").addClass("active"),
-                $(".pr-promo-" + t).show(),
-                $("#pr-dis-amt-" + t).html(""),
-                $("#pr-content-" + t).hide()) :
-            $("[data-ref=" + t + "]").removeClass("active");
-    });
-}
-
-function promoCodePopDetails() {
-    $("#modals, #promoCodeDetails").show();
-}
 
 function renewalDateTimer() {
     var e = (renewalTodayTime = renewalTimeLeft = renewalHours = renewalMinutes = renewalSec = renewalDay = "");
@@ -15374,32 +13467,6 @@ function renewalDateTimer() {
         "object" == typeof exports && (module.exports = r),
         r
     );
-}),
-(NumberStack.prototype.setPosition = function(e, t) {
-    (this.xOffset = e), (this.yOffset = t);
-}),
-(NumberStack.prototype.getYOffsetForStack = function(e) {
-    e *= this.numberFudgeFactor;
-    var t = e + this.stackOffset,
-        r = t * this.numberHeight,
-        n = r - this.height / 2,
-        a = n + this.numberHeight / 2;
-    return -a;
-}),
-(NumberStack.prototype.transform = function(e) {
-    return void 0 != e ? ["t", this.xOffset, this.getYOffsetForStack(e) + this.yOffset] : ["t", this.xOffset, this.height / 2 - this.numberHeight / 2 + this.yOffset];
-}),
-(NumberStack.prototype.reset = function() {
-    this.e.transform(this.transform());
-}),
-(NumberStack.prototype.animate = function(e, t, r) {
-    this.reset(), this.e.animate({ transform: this.transform(e), easing: r }, t);
-}),
-(NumberStack.prototype.setColor = function(e) {
-    this.e.attr("fill", e);
-}),
-(NumberStack.prototype.setNumberHeightFactor = function(e) {
-    this.numberHeightFactor = e;
 });
 var tStrings;
 (tStrings = {
@@ -16679,9 +14746,6 @@ var msInOneYear = 31536e6,
     thisYear = today.getFullYear(),
     thisDay = today.getDate(),
     isLeapYear = thisYear % 4 == 0;
-$(document).ready(function() {
-    $(".copyRightYr").text(thisYear);
-});
 var locale = locale || "en";
 $("body").addClass("lang-" + locale);
 var month = [
@@ -16738,235 +14802,6 @@ var month = [
         38: { startCode: 18, endCode: 19 },
         99: { startCode: 90, endCode: 99 },
     };
-$(document).ready(function() {
-        if (window.location.href.indexOf("/duplicate_user_name.page") > 0 && "undefined" != typeof failureInfo && "SAME_USERNAME_PASSWORD" == failureInfo.reason) {
-            var e = $("#error .form-fields #enroll-username"),
-                t = $("#error .form-fields #enroll-username").attr("name"),
-                r = $("#error .form-fields p.helper");
-            "undefined" != typeof t && "tl.username" == t && e.hasClass("required") && throwError(t, r, "password", "Same Password");
-        }
-        if (
-            (($("#education").length > 0 ||
-                    $("#support").length > 0 ||
-                    $("#profile").length > 0 ||
-                    $("#loanoffers").length > 0 ||
-                    $("#id-protection").length > 0 ||
-                    $("#creditAlertsPage").length > 0 ||
-                    $("#scoreSimulator").length > 0 ||
-                    $("#simulatorUpgrade").length > 0 ||
-                    $("#CreditReports").length > 0 ||
-                    $("#error").length > 0 ||
-                    $(".page-credit-report").length > 0 ||
-                    $("#alerts").length > 0 ||
-                    $("#disputeStatus").length > 0) &&
-                ($("#education").length > 0 && $(".menu-links a.education").addClass("active").siblings("a").removeClass("active"),
-                    $("#id-protection").length > 0 && $(".menu-links a.protection").addClass("active").siblings("a").removeClass("active"),
-                    $("#CreditReports").length > 0 && $(".menu-links a.report").addClass("active").siblings("a").removeClass("active"),
-                    $("#loanoffers").length > 0 && $(".menu-links a.loanoffers").addClass("active").siblings("a").removeClass("active"),
-                    $("#creditAlertsPage").length > 0 && $(".menu-links a.creditAlerts").addClass("active").siblings("a").removeClass("active"),
-                    ($("#scoreSimulator").length > 0 || $("#simulatorUpgrade").length > 0) && $(".menu-links a.scoresimulator").addClass("active").siblings("a").removeClass("active"),
-                    $("#error").length > 0 && void 0 != reqpar["request-params"]["tl.productWebToken"] && $(".menu-links a").remove(),
-                    $("#alerts").length > 0 && $(".menu-links a.alerts").addClass("active").siblings("a").removeClass("active"),
-                    $(".accordion-tabs").on("click", "article > a", function(e) {
-                        if ($(this).hasClass("is-active")) e.preventDefault();
-                        else {
-                            e.preventDefault();
-                            var t = $(this).closest(".accordion-tabs");
-                            t.find(".is-open").removeClass("is-open").hide(),
-                                $(this).next().toggleClass("is-open").toggle(),
-                                t.find(".is-active").removeClass("is-active"),
-                                $(this).addClass("is-active"),
-                                $(".is-open article:visible").length < 1 && ($(".is-open article:first-of-type").addClass("showMe"), $(".tab-content .subnav li:first-of-type a").addClass("active"));
-                        }
-                    }),
-                    $(".tab-content .subnav li:first-of-type a").addClass("active"),
-                    $(".tab-content article:first-of-type").addClass("showMe"),
-                    $(".tab-content").on("click", ".subnav a", function() {
-                        $(".is-open article").parent().find(".active").removeClass("active"),
-                            $(this).addClass("active"),
-                            $(".is-open article").parent().find(".showMe").removeClass("showMe"),
-                            $(".is-open article." + $(this).attr("rel")).addClass("showMe");
-                    })),
-                window.location.href.indexOf("/creditreport.page") > 0 && (void 0 == localStorage.getItem("repeatDisputeFlag") || "false" == localStorage.getItem("repeatDisputeFlag")) && $(".disputeCenterTab").hide(),
-                window.location.href.indexOf("/creditreport.page") > 0 &&
-                "true" == localStorage.getItem("repeatDisputeFlag") &&
-                (localStorage.setItem("repeatDisputeFlag", "false"),
-                    $('.-main[rel="TU-Report"]').removeClass("is-active"),
-                    $("#TU-Report").removeClass("is-active"),
-                    $(".disputeCenterTab .-main").addClass("is-active"),
-                    $("#Dispute-Centre").addClass("is-active")),
-                void 0 != apiKeys &&
-                "" != apiKeys &&
-                ("false" == apiKeys.ShowAlert ? ($(".menu-links a.creditAlerts").remove(), $(".alertsFaq").remove()) : ($(".showflagon_alert").show(), $(".menu-links a.creditAlerts").css("display", "inline-flex")),
-                    "false" == apiKeys.ShowSimulator ?
-                    ($(".menu-links a.scoresimulator").remove(), $(".scoreSimulatorFaq").remove()) :
-                    ($(".menu-links a.scoresimulator").css("display", "inline-flex"), $(".showflagon_scoreSim").show(), $(".hideFlagOn").remove(), $(".showFlagOn").show()),
-                    (void 0 !== apiKeys.closeIconEnable && "false" !== apiKeys.closeIconEnable) || $(".offerForm-close").remove(),
-                    (void 0 !== apiKeys.disputePopup && "false" !== apiKeys.disputePopup) || $(".CibilVideo").remove()),
-                "undefined" != typeof ud &&
-                "undefined" != typeof ud.reportstu &&
-                findElementJson(ud.reportstu.ComponentDetail, "Component", "CibilScoreSimulator") === !1 &&
-                "CIBIL" !== currentEnterprise() &&
-                $(".menu-links a.scoresimulator").hide(),
-                "undefined" != typeof ud &&
-                "undefined" != typeof ud.reportstu &&
-                findElementJson(ud.reportstu.ComponentDetail, "Component", "TransUnionMonitoring") === !1 &&
-                "CIBIL" !== currentEnterprise() &&
-                $(".menu-links a.creditAlerts").remove(),
-                "false" === reqpar["request-params"]["tl.is_interstitial_user"] && "undefined" != typeof ud && "undefined" != typeof ud.reportstu && findElementJson(ud.reportstu.ComponentDetail, "Component", "TransUnionMonitoring") === !1)
-        )
-            for (var n = 0; n < ud.reportstu.ComponentDetail.length; n++) {
-                var a = ud.reportstu.ComponentDetail[n].ExpireDate,
-                    i = a.substring(8, 10),
-                    o = a.substring(5, 7),
-                    s = a.substring(0, 4),
-                    l = i + "/" + o + "/" + s;
-                if (today < convertDate(l)) {
-                    $(".menu-links a.creditAlerts").remove();
-                    break;
-                }
-            }
-        if (
-            void 0 !== reqpar["request-params"]["tl.isCovidDiscEnable"] &&
-            "true" === reqpar["request-params"]["tl.isCovidDiscEnable"] &&
-            ($(".oldBanner,.noncovidText").hide(), $(".covidText").show(), void 0 !== apiKeys.covidDiscountDetails && "" !== apiKeys.covidDiscountDetails)
-        ) {
-            if (window.location.href.indexOf("/dashboard.page") > 0 && void 0 !== apiKeys.dashboardDiscountDetails && "" !== apiKeys.dashboardDiscountDetails) var d = apiKeys.dashboardDiscountDetails.split(",");
-            else if (window.location.href.indexOf("/creditAlerts.page") > 0 && void 0 !== apiKeys.alertDiscountDetails && "" !== apiKeys.alertDiscountDetails) var d = apiKeys.alertDiscountDetails.split(",");
-            else if (window.location.href.indexOf("/scoreSimulatorUpgrade.page") > 0 && void 0 !== apiKeys.scoreSimDiscountDetails && "" !== apiKeys.scoreSimDiscountDetails) var d = apiKeys.scoreSimDiscountDetails.split(",");
-            else if (window.location.href.indexOf("/enrollOffer.page") > 0 && void 0 !== apiKeys.enrollOfferDiscountDetails && "" !== apiKeys.enrollOfferDiscountDetails) var d = apiKeys.enrollOfferDiscountDetails.split(",");
-            else if (window.location.href.indexOf("/upgradeSubscription.page") > 0 && void 0 !== apiKeys.upgradeDiscountDetails && "" !== apiKeys.upgradeDiscountDetails) var d = apiKeys.upgradeDiscountDetails.split(",");
-            else var d = apiKeys.covidDiscountDetails.split(",");
-            var c = d[0];
-            "ta" === sessionStorage.getItem("userLangPref") ?
-                (c = d[0].replace("OFF", "தள்ளுபடி ")) :
-                "te" === sessionStorage.getItem("userLangPref") ?
-                (c = d[0].replace("OFF", "తగ్గింపు ")) :
-                "hi" === sessionStorage.getItem("userLangPref") ?
-                (c = d[0].replace("OFF", "बंद ")) :
-                "be" === sessionStorage.getItem("userLangPref") && (c = d[0].replace("OFF", "ছাড়ে")),
-                $(".CovidDisOff").html(c),
-                $(".CovidDisCode").html(d[1]),
-                $(".CovidDiscDate").html(d[2]);
-        }
-        "false" === analytics.loggedIn ?
-            ($("header .tactical-links a").hide(),
-                $("header .menu-links a").remove(),
-                (window.location.href.indexOf("/enrollOffer.page") > 0 || window.location.href.indexOf("/enrollOfferAdd.page") > 0) && "CIBIL" === currentEnterprise() ?
-                $("header .menu-links").append(
-                    '<a href="/CreditView/login.page?enterprise=' +
-                    currentEnterprise() +
-                    '" class="member-link"><span>' +
-                    localizedString("MemberLogin") +
-                    '</span></a><a href="/CreditView/creditEducation.page?enterprise=' +
-                    currentEnterprise() +
-                    '" class="member-link"><span>' +
-                    localizedString("CreditEducation") +
-                    "</span></a>"
-                ) :
-                $("header .menu-links").append(
-                    "CIBIL" === currentEnterprise() ?
-                    '<a href="https://www.cibil.com/select-plan" class="member-link"><span>' +
-                    localizedString("GetyourCIBILScore") +
-                    '</span></a><a href="/CreditView/login.page?enterprise=' +
-                    currentEnterprise() +
-                    '" class="member-link"><span>' +
-                    localizedString("MemberLogin") +
-                    "</span></a>" :
-                    '<a href="/CreditView/login.page?enterprise=' + currentEnterprise() + '" class="member-link"><span>' + localizedString("MemberLogin") + "</span></a>"
-                )) :
-            "true" === analytics.loggedIn &&
-            window.location.href.indexOf("acceptTerms") == -1 &&
-            (offer_Id.indexOf("T1D0R") >= 0 || (analytics.offer.indexOf("T1D0R") >= 0 && ("" === analytics.PaymentState || "Open" === analytics.PaymentState)) ?
-                ($("header .menu-links a").remove(),
-                    $("header .menu-links").append(
-                        '<a href="/CreditView/upgradeSubscription.page?enterprise=' +
-                        currentEnterprise() +
-                        '" class="member-link"><span>' +
-                        localizedString("Home") +
-                        '</span></a> <a href="/CreditView/creditEducation.page?enterprise=' +
-                        currentEnterprise() +
-                        '" class="member-link"><span>' +
-                        localizedString("CreditEducation") +
-                        "</span></a>"
-                    )) :
-                window.location.href.indexOf("/duplicate_user_name.page") > 0 || window.location.href.indexOf("/ssn_exists_active_online.page") > 0 ?
-                ($("header .tactical-links a").hide(), $("header .menu-links a").remove(), $("header nav .nav-links a.menu").css("display", "none")) :
-                ("IdentityVerificationRequired" !== analytics.CustomerState && "ActiveEnrollment" !== analytics.CustomerState && "Locked" !== analytics.CustomerState) ||
-                "" === analytics.PaymentState ||
-                "Complete" === analytics.PaymentState ||
-                "enrolled" === reqpar["request-params"]["tl.user_enrolled_status"] ?
-                "IdentityVerificationRequired" === analytics.CustomerState ?
-                ($("header .menu-links a").remove(), $("header .tactical-links a").first().hide(), $("header nav .nav-links a.menu").css("display", "none")) :
-                window.location.href.indexOf("/enrollPayment.page") > 0 ||
-                window.location.href.indexOf("/identityVerify.page") > 0 ||
-                window.location.href.indexOf("/interstitialLoanOffers.page") > 0 ||
-                window.location.href.indexOf("/paymentSuccess.page") > 0 ||
-                (window.location.href.indexOf("/enrollConfirmation.page") > 0 && "ATLASSSO" !== currentEnterprise() && "DIGILOCKER" !== currentEnterprise() && "ICICIBANK" !== currentEnterprise()) ||
-                ("undefined" != typeof ud && "undefined" == typeof ud.reportstu) ?
-                ($("header .menu-links a").remove(), $("header .tactical-links a").first().hide(), $("header nav .nav-links a.menu").css("display", "none")) :
-                "ALD01" === offer_Id &&
-                "NoActiveEnrollment" === analytics.CustomerState &&
-                ($("header .tactical-links a").hide(),
-                    $("header .menu-links a").remove(),
-                    $("header .menu-links").append('<a href="/CreditView/login.page?enterprise=' + currentEnterprise() + '" class="member-link"><span>' + localizedString("MemberLogin") + "</span></a>")) :
-                ($("header .menu-links a").remove(), $("header .tactical-links a").first().hide(), $("header nav .nav-links a.menu").css("display", "none"))),
-            "Locked" === analytics.CustomerState && ($(".menu-links").hide(), $("header .tactical-links a").first().hide()),
-            window.location.href.indexOf("/webtokenLogin.page") > 0 &&
-            $(".webtokenLogin").length > 0 &&
-            ($(".nav-links .cibil-logo").addClass("webtokenLoginLogo"),
-                $(".nav-links .cibil-logo").attr("src", "/sites/CreditView/assets/images/CIBIL-Logo.png"),
-                $(".nav-links").append('<p class="webtokenLoginHeader">One time access to your <br>CIBIL Score & Report</p>'),
-                $("<input>").attr("type", "hidden").attr("name", "tl.partnerCustomerCode").attr("value", urlParam("pcc")).appendTo("form"),
-                $("<input>").attr("type", "hidden").attr("name", "tl.productWebToken").attr("value", urlParam("webtoken")).appendTo("form")),
-            "PHONEPE" == currentEnterprise() && $(".print-account, .print-account.webtokenPrint").remove(),
-            "true" != CCVD.queryString().print &&
-            "undefined" != typeof apiKeys &&
-            "" !== apiKeys &&
-            void 0 !== apiKeys.amazonBackButton &&
-            "true" == apiKeys.amazonBackButton &&
-            "AmazonPay" == currentEnterprise() &&
-            $(".webTokenBackBtn").removeClass("hideme");
-    }),
-    $(document).ready(function() {
-        if (
-            (window.location.href.indexOf("/dashboard.page") > 0 || window.location.href.indexOf("/loanOffers.page") > 0) &&
-            ($(".carousel").slick({ slidesToShow: 1, dots: !0, centerMode: !0, variableWidth: !0, infinite: !1 }),
-                $(".slick-arrow, .slick-dots").click(function() {
-                    window.dataLayer.push({
-                        event: "EventTracking",
-                        eventCategory: "Post Login – " + (window.location.href.indexOf("/dashboard.page") > 0 ? "Dasboard" : "Loan") + " Section",
-                        eventAction: "Post Login – " + (window.location.href.indexOf("/dashboard.page") > 0 ? "Dasboard" : "Loan") + " Section - Debt Settlement Offers",
-                        eventLabel: "Post Login – " + (window.location.href.indexOf("/dashboard.page") > 0 ? "Dasboard" : "Loan") + " Section - See Additional Accounts Click",
-                    });
-                }),
-                (null !== reqpar["request-params"]["tl.legalCopyRedirectUrl"] || void 0 !== reqpar["request-params"]["tl.legalCopyRedirectUrl"] || "" !== reqpar["request-params"]["tl.legalCopyRedirectUrl"]) &&
-                "LEGAL_COPY_ACCEPTANCE" == reqpar["request-params"].Action &&
-                "true" == sessionStorage.getItem("redirectPartner"))
-        ) {
-            document.getElementById("DE-chart-model").scrollIntoView();
-            var e = reqpar["request-params"]["tl.legalCopyRedirectUrl"];
-            window.open(e, "_blank"), sessionStorage.setItem("redirectPartner", "false");
-        }
-        (window.location.href.indexOf("/dashboard.page") > 0 || window.location.href.indexOf("/loanOffers.page") > 0 || window.location.href.indexOf("/interstitialLoanOffers.page") > 0) &&
-        ($(".incomeDrop").flexdatalist({ searchDisabled: 1, minLength: 0 }),
-            $("#upgrade-WS").click(function() {
-                generalGATracking("Atlas Post Login", "Atlas Post Login Upgrade Clicks", "Atlas Credit Where You Stand Section Upgrade Click"), (window.location.href = "/CreditView/upgradeSubscription.page?enterprise=CIBIL");
-            }),
-            $("#upgrade-RC").click(function() {
-                generalGATracking("Atlas Post Login", "Atlas Post Login Upgrade Clicks", "Atlas Credit Refresh Section Upgrade Click"), (window.location.href = "/CreditView/upgradeSubscription.page?enterprise=CIBIL");
-            }),
-            $("#upgrade-CS").click(function() {
-                generalGATracking("Atlas Post Login", "Atlas Post Login Upgrade Clicks", "Atlas Credit Summary Section Upgrade Click"), (window.location.href = "/CreditView/upgradeSubscription.page?enterprise=CIBIL");
-            }),
-            $("#upgrade-SH").click(function() {
-                generalGATracking("Atlas Post Login", "Atlas Post Login Upgrade Clicks", "Atlas Score History Section Upgrade Click"), (window.location.href = "/CreditView/upgradeSubscription.page?enterprise=CIBIL");
-            }),
-            $("#upgrade-SA").click(function() {
-                generalGATracking("Atlas Post Login", "Atlas Post Login Upgrade Clicks", "Atlas Score Analysis Section Upgrade Click"), (window.location.href = "/CreditView/upgradeSubscription.page?enterprise=CIBIL");
-            }),
-            $(".incomeDrop").attr("readonly", !0).css("background-color", "#ffff"));
-    });
 var CCVD = {
         queryString: function() {
             var e = {};
@@ -17905,16 +15740,16 @@ var CCVD = {
         },
     },
     DEBUG = !!CCVD.queryString().DEBUG;
-    DEBUG && console.warn("Debug mode enabled."),
+DEBUG && console.warn("Debug mode enabled."),
     window.Handlebars.registerHelper("select", function(e, t) {
         var r = $("<select />").html(t.fn(this));
         return r.find("[value=" + e + "]").attr({ selected: "selected" }), r.html();
     });
-    var modelToUse = "creditvision",
+var modelToUse = "creditvision",
     modelForSimulator = "creditvision",
     nameOfSimulator = "TransUnion CIBIL Score",
     nameOfSimulator_fr = "pointage de crédit";
-    if ("undefined" != typeof ud && "undefined" != typeof ud.report.balances)
+if ("undefined" != typeof ud && "undefined" != typeof ud.report.balances)
     var data = {
         reqpar: reqpar["request-params"] || {},
         model: modelToUse,
@@ -17937,954 +15772,681 @@ var CCVD = {
         currbalance: CCVD.formatCurrency(ud.report.balances, !1),
         scoreModel: ud.scores[modelToUse].creditScoreModel || "",
     };
-    else var data = { model: "transrisk" };
-    var hasSB7 = analytics.offer && analytics.offer.indexOf("SB7") !== -1,
+else var data = { model: "transrisk" };
+var hasSB7 = analytics.offer && analytics.offer.indexOf("SB7") !== -1,
     noScore = data.score < CCVD.gradeRanges[data.model].F.min,
     scoreInNumeric = 1 * data.score;
-    if ($("#dashboard").length > 0 || $("#scorefactors").length > 0 || $("#scoreSimulator").length > 0 || ($("#CreditReports").length > 0 && void 0 != reqpar["request-params"]["tl.productWebToken"])) {
-     var scoreColorConst = {
-            A: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#009900" : "#A9D161",
-            B: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#a9d161" : "#E7B92E",
-            C: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#e7b92e" : "#E5862E",
-            D: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#e5862e" : "#E15825",
-            F: "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ? "#e15825" : "#DF4025",
-        },
-        scoreFontSize = 105,
-        kerningFrac = 0.1,
-        animationDuration = 3e3,
-        minScoreText = "transrisk" == data.model ? CCVD.gradeRanges[data.model].F.min : CCVD.gradeRanges[data.model].F.min,
-        maxScoreText = "transrisk" == data.model ? CCVD.gradeRanges[data.model].A.max : CCVD.gradeRanges[data.model].A.max,
-        minMaxFontSize = 25,
-        minMaxOffset = 20,
-        minScore = CCVD.gradeRanges[data.model].F.min,
-        maxScore = CCVD.gradeRanges[data.model].A.max,
-        circleFraction = 0.9,
-        circleWidth = 25,
-        circleBackground = "#F0F0F0",
-        gradeFontSize = 80,
-        animationEasing = "<>",
-        baseScale = 440,
-        stepsPerColor = 5,
-        scoreColors = [
-            { value: CCVD.gradeRanges[data.model].F.min, description: "", color: scoreColorConst.F },
-            { value: CCVD.gradeRanges[data.model].D.min, description: "", color: scoreColorConst.D },
-            { value: CCVD.gradeRanges[data.model].C.min, description: "", color: scoreColorConst.C },
-            { value: CCVD.gradeRanges[data.model].B.min, description: "", color: scoreColorConst.B },
-            { value: CCVD.gradeRanges[data.model].A.min, description: "", color: scoreColorConst.A },
-        ],
-        e = document.getElementById("chart-score"),
-        paperWidth = e.offsetWidth,
-        arcs,
-        paperWidths,
-        paperHeights;
-        if (e.offsetHeight <= 0) var paperHeight = e.offsetWidth;
-        else var paperHeight = e.offsetHeight;
-        var halfWidth = paperWidth / 2,
-        halfHeight = paperHeight / 2,
-        paper = Raphael(e, paperWidth, paperHeight),
-        minDim = Math.min(paperWidth, paperHeight),
-        sizeScale = minDim / baseScale;
-        (scoreFontSize *= sizeScale), (minMaxFontSize *= sizeScale), (gradeFontSize *= sizeScale), (minMaxOffset *= sizeScale), (circleWidth *= sizeScale), (kerningFrac *= sizeScale);
-        var scoreNumbers = "01234567890123456789",
-        scoreAttrs = { "font-size": scoreFontSize },
-        circleRadius = minDim * circleFraction * 0.5,
-        gradeAngle = (-35 * Math.PI) / 180,
-        gradeX = halfWidth + circleRadius * Math.cos(gradeAngle),
-        gradeY = halfHeight - circleRadius * Math.sin(gradeAngle),
-        gradeLabel = 1 === scoreInNumeric ? paper.text(gradeX, gradeY, "N/H").attr({ "font-size": gradeFontSize }) : paper.text(gradeX, gradeY, "N/A").attr({ "font-size": gradeFontSize }),
-        minLabel = paper.text(halfWidth + minMaxOffset, halfHeight + circleRadius, minScoreText).attr({ "font-size": minMaxFontSize, "text-anchor": "start", fontFamily: "Roboto", fill: noScore ? "#CCC" : "#000" }),
-        minMaxHalfHeight = minLabel.getBBox().height / 2;
-        paper.text(halfWidth + circleRadius, halfHeight + minMaxHalfHeight + minMaxOffset, maxScoreText).attr({ "font-size": minMaxFontSize, fill: noScore ? "#CCC" : "#000" }),
-        (paper.customAttributes.arc = function(e, t, r, n, a) {
-            var i = (360 / a) * n,
-                o = ((i + 90) * Math.PI) / 180,
-                s = e + r * Math.cos(o),
-                l = t + r * Math.sin(o);
-            return {
-                path: [
-                    ["M", e, t + r],
-                    ["A", r, r, 0, +(i > 180), 1, s, l],
-                ],
-            };
+
+
+
+$(document).ready(function() {
+    function e(e, t, r) {
+        for (var n = 0; n < e.length; n++)
+            if (e[n][t] === r) return !0;
+        return !1;
+    }
+
+    function t(e) {
+        var r = "";
+        for (var n in e)
+            "object" == typeof e[n] ?
+            ((r +=
+                    '<div class="alertType"><div class="alertHeader">' +
+                    e[n].type.replace(/([A-Z])/g, " $1").trim() +
+                    "<span data-hj-suppress>" +
+                    ("undefined" != typeof e[n].Date ? e[n].Date : "") +
+                    '</span></div><div class="alertsWrapper">'),
+                delete e[n].type,
+                (r += t(e[n])),
+                (r += "</div></div>")) :
+            (r +=
+                "Bureau" !== n.replace(/([A-Z])/g, " $1").trim() && "Date" !== n.replace(/([A-Z])/g, " $1").trim() && "undefined" != typeof e[n] && "" !== e[n] ?
+                '<div class="alertItem"><span>' + n + "</span><span data-hj-suppress>" + e[n] + "</span></div>" :
+                "");
+        return r;
+    }
+
+    function r() {
+        $(".maskedValue").each(function() {
+            var e = /\d/g;
+            $(this).text().match(/@/) ||
+                e.test($(this).text()) ||
+                ($(".maskedValue").text().match(/\*/) ?
+                    $(this).parent('div[id^="question"').remove() :
+                    ($(this).siblings('input[type="radio"]').attr("type", "hidden"), $(this).find("br").remove(), $(this).find('input[name^="tl.user-input-answer"]').attr("type", "text").addClass("required")));
         });
-    var maxArcValue = (maxScore - minScore) * (4 / 3),
-        grayArc = paper.path().attr({ stroke: circleBackground, "stroke-width": circleWidth, arc: [halfWidth, halfHeight, circleRadius, 75, 100] }),
-        arc = paper.path().attr({ stroke: "#fff", "stroke-width": circleWidth, arc: [halfWidth, halfHeight, circleRadius, 0, maxArcValue] }),
-        colorAnimator = new ColorAnimator();
-    screen.width <= 360 && (scoreFontSize = 40),
-        noScore ?
-        1 === data.score ?
-        $(e).append(
-            '<div class="scoreChartNumber" style="color:#F0F0F0;height:60px;width:' +
-            circleRadius +
-            "px;top:" +
-            (halfHeight - circleRadius / 4) +
-            "px;left:" +
-            (halfWidth - 0.45 * circleRadius) +
-            "px;font-size:" +
-            scoreFontSize +
-            "px;line-height:" +
-            scoreFontSize +
-            'px;">NH</div>'
-        ) :
-        0 === data.score &&
-        $(e).append(
-            '<div class="scoreChartNumber" style="color:#F0F0F0;height:60px;width:' +
-            circleRadius +
-            "px;top:" +
-            (halfHeight - circleRadius / 4) +
-            "px;left:" +
-            (halfWidth - 0.45 * circleRadius) +
-            "px;font-size:" +
-            scoreFontSize +
-            "px;line-height:" +
-            scoreFontSize +
-            'px;">NA</div>'
-        ) :
-        document.location.href.indexOf("print=true") > 0 && $("#CreditReports").length > 0 && void 0 != reqpar["request-params"]["tl.productWebToken"] ?
-        $(e).append(
-            '<div class="scoreChartNumber" style="height:60px;width:' +
-            circleRadius +
-            "px;top:" +
-            (halfHeight - circleRadius / 4) +
-            "px;left:" +
-            (halfWidth - 0.45 * circleRadius) +
-            "px;font-size:" +
-            scoreFontSize +
-            "px;line-height:" +
-            scoreFontSize +
-            'px;"><div>' +
-            data.score +
-            "</div></div>"
-        ) :
-        $(e).append(
-            '<div class="scoreChartNumber" style="height:60px;width:' +
-            circleRadius +
-            "px;top:" +
-            (halfHeight - circleRadius / 4) +
-            "px;left:" +
-            (halfWidth - 0.45 * circleRadius) +
-            "px;font-size:" +
-            scoreFontSize +
-            "px;line-height:" +
-            scoreFontSize +
-            'px;"><div class="scoreHundreds" aria-hidden="true"><div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div></div><div class="scoreTens" aria-hidden="true"><div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div></div><div class="scoreOnes" aria-hidden="true"><div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>0</div></div></div>'
-        ),
-        buildScoreChart(data.score, e),
-        sessionStorage.setItem("ScoreSimWebToken", "false"),
-        scoreSimToken();
-}
-var noShowSim = ["TUCI1"];
-if (
-    ($(document)
-        .on("click keypress", ".switches span", function(e) {
-            a11yClick(e) === !0 && handleFormToggles(this);
-        })
-        
-        .on("click", ".modal-close", function() {
-            $("#modals, #modals .modal-wrapper > div").hide();
-        })
-        .on("click", ".score-simulator a.glyphicons-restart", function(e) {
-            e.preventDefault(),
-                $(".score-simulator .form-fields").each(function() {
-                    var e = $("select", this);
-                    $('input[type="text"]', this).val(""),
-                        $('input[type="number"]', this).val(""),
-                        $('input[name="tl.creditInquiries"]', this).val(0).trigger("change"),
-                        $('input[name="tl.OnTimeCreditHistory"]', this).val(0).trigger("change"),
-                        $("option", e).removeAttr("selected"),
-                        $("option", e).eq(0).attr("selected", !0),
-                        e.prop("selectedIndex", 0),
-                        $(".selectbox", this).removeClass("active"),
-                        $('.switches span[data-toggle="false"]', this).trigger("click"),
-                        $(".simulated").html("---");
-                });
-        })
-        .on("change", "select", function() {
-            var e = $("option:selected", this).val(),
-                t = $(this).parent(".selectbox");
-            "" == e ? $(t).removeClass("active") : $(t).addClass("active");
-        })
-        .on("change", "input[type='range']", function() {
-            $(this).next(".value").text($(this).val());
+    }
+
+    function n() {
+        ($("body").hasClass("lang-ta") || $("body").hasClass("lang-te")) && $("#enrollSteps").addClass("longerSteps");
+        var e = "true" === catalog.CatalogItems.ssoOffer,
+            t = "true" === catalog.CatalogItems.ivRequires,
+            r = "true" === catalog.CatalogItems.PaymentRequires,
+            n = "true" === reqpar["request-params"]["tl.is_active_order_payment_required"];
+        (t || r) && ($(".steps .glyphicons-keys").css("display", "inline-block"), $("ul.steps").css("display", "flex")),
+        t && ($(".steps .glyphicons-shield").css("display", "inline-block"), $("ul.steps").css("display", "flex")),
+            isLoggedIn === !1 && r ?
+            ($(".steps .glyphicons-credit-card").css("display", "inline-block"), $("ul.steps").css("display", "flex")) :
+            (isLoggedIn === !0 && r && (n || e)) || window.location.href.indexOf("/enrollPayment.page") > 0 ?
+            ($(".steps .glyphicons-credit-card").css("display", "inline-block"), $("ul.steps").css("display", "flex")) :
+            $(".steps .glyphicons-credit-card").remove();
+    }
+    $("#modal-wrapper").hide();
+    var a = 0;
+    today - new Date(data.refreshdatetime) > 864e5 && (a = Math.ceil((today - new Date(data.refreshdatetime)) / 864e5)),
+        $(".days-old").text(a),
+        $(".refresh").show(),
+        $(document).on("click", "#confirmRefresh", function() {
+            $("#confirmRefreshButton").prop("disabled", !this.checked);
+            var e = window.location.pathname,
+                t = e.split("/").pop().replace(".page", ""),
+                r =
+                t.charAt(0).toUpperCase() +
+                t
+                .slice(1)
+                .replace(/([A-Z]+)/g, " $1")
+                .replace(/([A-Z][a-z])/g, " $1");
+            "Creditreport" === r && (r = "Credit Report"),
+                $(this).is(":checked") &&
+                generalGATracking("Post Login - " + r + " Section", "Post Login - " + r + " Section - Refresh Center Subsection", "Post Login - " + r + " Section - Refresh Center Subsection - Agree Terms Refresh Click");
         }),
-        $("#enroll-FullSSN").length > 0 &&
-        $("input").on("blur", function() {
-            $("#enroll-SSN").val($("#enroll-SSN-1").val() + $("#enroll-SSN-2").val() + $("#enroll-SSN-3").val());
-        }),
-        $("#profile").length > 0 &&
-        $('input[name="tl.newPassword"]').on("blur", function() {
-            $(this).val() && $('input[name="tl.old-password"]').addClass("required");
-        }),
-        $("#support").length > 0 &&
-        $("input").on("blur", function() {
-            hasElement('input[name="tl.accDateUsed"]') && $('input[name="tl.accDateUsed"]').val($('input[name="duYear"]').val() + "-" + $('select[name="duMonth"]').val() + "-" + $('select[name="duDay"]').val());
-        }),
-        $("#support").length > 0 && $(".enterprise").html(siteInfo.DisplayName),
-        ($("#enrollAboutYou").length > 0 ||
-            $("#consolidatedEnroll").length > 0 ||
-            $("#enrollShort").length > 0 ||
-            $("#enrollShortAdd").length > 0 ||
-            $("#additionalInfo").length > 0 ||
-            $("#enrollOffer").length > 0 ||
-            $("#enrollOfferAdd").length > 0 ||
-            $("#enrollQuick").length > 0 ||
-            $("#enrollQuickAdd").length > 0) &&
         "undefined" != typeof siteInfo &&
-        "undefined" != typeof siteInfo.DisplayName)
-) {
-    var DisplayNameSpace = siteInfo.DisplayName.split(".").join("");
-    $(".enterprise").append(DisplayNameSpace);
-}
-$('input[name="tl.accResponseChannel"]').change(function() {
-    var e = $(this).val();
-    (e = "MAIL" == e ? "byMail" : "EMAIL" == e ? "byEmail" : "byPhone"),
-    $(".responseFields div").hide(),
-        $(".responseFields input, .responseFields select").removeClass("required"),
-        $(".responseFields div").each(function() {
-            $(this).hasClass(e) && ($(this).show(), $(this).children("input,select").addClass("required"));
-        });
-});
-var flagBlur = 0,
-    count = 1;
-$(document).on("blur", "input:not([type=radio]),select,textarea", function() {
-        event.target.classList.contains("flexdatalist-alias") && "false" === CCVD.queryString().print ?
-            typeAndSearch(event) :
-            $(this).hasClass("flexdatalist-alias") && void 0 === CCVD.queryString().print ?
-            deTypeAndSearchValitaion($(this)) :
-            (edVerify($(this)), validateScore($(this)), regexAbandonment($(this)));
-    }),
-    $(document).on("change", "input:not([type=radio]),select,textarea", function() {
-        $(this).hasClass("flexdatalist-alias") && void 0 === CCVD.queryString().print ? deTypeAndSearchValitaion($(this)) : (edVerify($(this)), validateScore($(this)));
-    }),
-    $(".passConvert").length > 0 &&
-    $(".passConvert .eyeIcon").click(function() {
-        $(this).toggleClass("glyphicon-eye-open glyphicon-eye-close");
-        var e = $(this).siblings("input");
-        "password" == e.attr("type") ? e.attr("type", "text") : e.attr("type", "password");
-    }),
-    $(".gtmTrackingValidator").length > 0 &&
-    (window.addEventListener("beforeunload", function(e) {
-            gtmTrackingValidator();
-        }),
-        $("#enroll-Submit").click(function() {
-            var e,
-                t = [];
-            $(".required").each(function() {
-                    ("" !== $(this).val() && null !== $(this).val()) || (t.push($(this).attr("name")), (e = t.join(", ")));
-                }),
-                dataLayer.push({ event: "EventTracking", eventCategory: "Form Event Field Missing/Skipped Step Create Account - Atlas Registration Form", eventAction: e, eventLabel: "Blank Field" });
-        })),
-    $(document).on("click", 'input[type="submit"],button[type="submit"]', function(e) {
-        e.preventDefault(),
-            "Previous Address and Unit Number" == $('input[name="tl.prev-street"]').val() && $('input[name="tl.prev-street"]').val(""),
-            "City" == $('input[name="tl.prev-city"]').val() && $('input[name="tl.prev-city"]').val(""),
-            "Postal Code" == $('input[name="tl.prev-zip-code"]').val() && $('input[name="tl.prev-zip-code"]').val("");
-        var t = !0;
-        ($("#enrollOffer").length > 0 || $("#enrollOfferAdd").length > 0) && (t = !$(".subscriptionUnselect").is(":visible")),
-        $("#help-FullSSN").val($("#help-SSN1A").val() + $("#help-SSN1B").val() + $("#help-SSN1C").val()),
-            $("#help-Confirm-FullSSN").val($("#help-SSN2A").val() + $("#help-SSN2B").val() + $("#help-SSN2C").val()),
-            $('input:not([type=hidden]),select,textarea,input[name="tl.gender"]').each(function() {
-                edVerify($(this)), validateScore($(this)), ($(this).hasClass("flexdatalist-alias") || $(this).hasClass("flexdatalist")) && void 0 === CCVD.queryString().print && deTypeAndSearchValitaion($(this));
-                var e = $(this).parent().closest("div");
-                ($(this).siblings(".helper").hasClass("error") || $(this).hasClass("error") || e.find("p.helper").hasClass("gender-error")) && (t = !1);
+        ("en" != locale && (siteInfo.SupportHours = "" != localizedString(siteInfo.SiteName + "_SupportHours") ? localizedString(siteInfo.SiteName + "_SupportHours") : siteInfo.SupportHours),
+            $(".contactPhone").html(siteInfo.CreditDataPhone),
+            $(".siteInfo_CreditDataPhone").html(siteInfo.CreditDataPhone),
+            $(".siteInfo_DisplayName").html(siteInfo.DisplayName),
+            $(".siteInfo_SupportHours").html(siteInfo.SupportHours),
+            $(".siteInfo_SupportPhone").html(siteInfo.SupportPhone),
+            $(".siteInfo_WebDomain").html(siteInfo.WebDomain),
+            sessionStorage.setItem("siteInfoWebDomain", siteInfo.WebDomain));
+    var i = document.title,
+        o = "" != localizedString(i) ? localizedString(i) : i;
+    if (
+        (i != o && (document.title = o),
+            void 0 != reqpar["request-params"]["tl.productWebToken"] && window.location.href.indexOf("/creditreport.page") > 0 && (document.title = "CIBIL Report"),
+            $(document).on("click", "a.menu", function(e) {
+                e.preventDefault(), $(".menu-links").toggle();
             }),
-            $('input:not([type=hidden]),select,textarea,input[name="tl.dbGenderAU"]').each(function() {
-                edVerify($(this)), validateScore($(this)), ($(this).hasClass("flexdatalist-alias") || $(this).hasClass("flexdatalist")) && void 0 === CCVD.queryString().print && deTypeAndSearchValitaion($(this));
-                var e = $(this).parent().closest("div");
-                ($(this).siblings(".helper").hasClass("error") || $(this).hasClass("error") || e.find("p.helper").hasClass("gender-error")) && (t = !1);
+            isLoggedIn || $("#login").length ? $(".tactical-links .logged-out").remove() : $(".tactical-links .logged-in").remove(),
+            isLoggedIn || ($("#support .loggedIn").remove(), $("#education .loggedIn").remove()),
+            $(".alerts").length > 0 && catalog.CatalogItems.hasBureauMonitoring && ($(".nav-links .alerts").removeClass("-hide"), $(".nav-links .alert-count").removeClass("-hide")),
+            $("#id-protection-content").length > 0 && $("footer .byline nav").remove(),
+            ($("#dashboard").length > 0 || $("#scorefactors").length > 0 || $("#scoreSimulator").length > 0 || ($("#CreditReports").length > 0 && void 0 != reqpar["request-params"]["tl.productWebToken"])) && renderDashboard(),
+            $("#login").length > 0 && localStorage.removeItem("firstVisit"),
+            $("*[data-language='" + locale + "']").addClass("on"),
+            $("#help2").length > 0 && "undefined" != typeof ui.loginHelpInfo)
+    )
+        switch (($("#UserName").val(ui.loginHelpInfo.UserName), $("#SecretQuestion").val(ui.loginHelpInfo.SecretQuestion), ui.loginHelpInfo.SecretQuestion)) {
+            case "GrandfatherFirstName":
+                $("#secretQuestionDisplay").html("What is your grandfather's first name (on your father's side)?");
+                break;
+            case "GrandmotherFirstName":
+                $("#secretQuestionDisplay").html("What is your grandmother's first name (on your mother's side)?");
+                break;
+            case "BirthCity":
+                $("#secretQuestionDisplay").html("What city were you born in?");
+                break;
+            case "FatherMiddleName":
+                $("#secretQuestionDisplay").html("What is your father's middle name?");
+                break;
+            case "MotherMiddleName":
+                $("#secretQuestionDisplay").html("What is your mother's middle name?");
+                break;
+            case "FirstCar":
+                $("#secretQuestionDisplay").html("What was the make and model of your first car?");
+                break;
+            case "TeacherLastName":
+                $("#secretQuestionDisplay").html("What was your first grade teacher's last name?");
+                break;
+            case "SchoolMascot":
+                $("#secretQuestionDisplay").html("What was your high school mascot?");
+                break;
+            default:
+                $("#secretQuestionDisplay").html("");
+        }
+    if (
+        ($("#help3").length > 0 && "undefined" != typeof ui.loginHelpInfo && ($("#UserName").val(reqpar["request-params"]["tl.username"]), $("#UserNameDisplay").html(reqpar["request-params"]["tl.username"])),
+            $("#enroll").length > 0 &&
+            $(document).on("change", 'input[name="residency"]', function() {
+                $(".previous-address").toggle();
             }),
-            t ?
-            ("" == $('input[name="tl.prev-street"]').val() && $('input[name="tl.prev-street"]').val("+"),
-                "" == $('input[name="tl.prev-city"]').val() && $('input[name="tl.prev-city"]').val("+"),
-                "" == $('input[name="tl.prev-zip-code"]').val() && $('input[name="tl.prev-zip-code"]').val("+"),
-                "" == $('input[name="tl.email-address"]').val() && $('input[name="tl.email-address"]').val("+"),
-                "" == $('input[name="tl.dbEmailAU"]').val() && $('input[name="tl.dbEmailAU"]').val("+"),
-                $(this).attr("disabled", "disabled"),
-                showLoading(),
-                window.location.href.indexOf("dashboard.page") > -1 && showDeOffers(),
-                window.location.href.indexOf("scoreSimulator.page") && "showSimulateScore" === $(this).attr("id") && simulateScore(),
-                $("#profile").length > 0 && $("input[name=Action]").val(e.target.dataset.action), !window.location.href.indexOf("billBreakdown.page") ||
-                ("" !== $("#promoCode").val() && "undefined" !== $("#promoCode").val()) ||
-                generalGATracking("Form Event Field Skipped Step Payment- Upgrade", "Discount Code", "No Discount Code"),
-                window.location.href.indexOf("/interstitialLoanOffers.page") > 0 &&
-                generalGATracking("Post Login - Dashboard Section", "Post Login - Dashboard Section - Offers Interstitial", "Post Login - Dashboard Section - Offers Interstitial Get Offers CTA Click"),
-                (window.location.href.indexOf("/enroll") > 0 || window.location.href.indexOf("re_enroll") > 0) &&
-                "CIBIL" === currentEnterprise() &&
-                (null !== sessionStorage.getItem("userLangPref") ?
-                    $("<input>").attr("type", "hidden").attr("name", "tl.language").attr("value", sessionStorage.getItem("userLangPref")).appendTo("form") :
-                    $("<input>").attr("type", "hidden").attr("name", "tl.language").attr("value", "en").appendTo("form")),
-                $("form").submit()) :
-            e.preventDefault();
-    }),
-    $(document).ready(function() {
-        function e(e, t, r) {
-            for (var n = 0; n < e.length; n++)
-                if (e[n][t] === r) return !0;
-            return !1;
-        }
-
-        function t(e) {
-            var r = "";
-            for (var n in e)
-                "object" == typeof e[n] ?
-                ((r +=
-                        '<div class="alertType"><div class="alertHeader">' +
-                        e[n].type.replace(/([A-Z])/g, " $1").trim() +
-                        "<span data-hj-suppress>" +
-                        ("undefined" != typeof e[n].Date ? e[n].Date : "") +
-                        '</span></div><div class="alertsWrapper">'),
-                    delete e[n].type,
-                    (r += t(e[n])),
-                    (r += "</div></div>")) :
-                (r +=
-                    "Bureau" !== n.replace(/([A-Z])/g, " $1").trim() && "Date" !== n.replace(/([A-Z])/g, " $1").trim() && "undefined" != typeof e[n] && "" !== e[n] ?
-                    '<div class="alertItem"><span>' + n + "</span><span data-hj-suppress>" + e[n] + "</span></div>" :
-                    "");
-            return r;
-        }
-
-        function r() {
-            $(".maskedValue").each(function() {
-                var e = /\d/g;
-                $(this).text().match(/@/) ||
-                    e.test($(this).text()) ||
-                    ($(".maskedValue").text().match(/\*/) ?
-                        $(this).parent('div[id^="question"').remove() :
-                        ($(this).siblings('input[type="radio"]').attr("type", "hidden"), $(this).find("br").remove(), $(this).find('input[name^="tl.user-input-answer"]').attr("type", "text").addClass("required")));
-            });
-        }
-
-        function n() {
-            ($("body").hasClass("lang-ta") || $("body").hasClass("lang-te")) && $("#enrollSteps").addClass("longerSteps");
-            var e = "true" === catalog.CatalogItems.ssoOffer,
-                t = "true" === catalog.CatalogItems.ivRequires,
-                r = "true" === catalog.CatalogItems.PaymentRequires,
-                n = "true" === reqpar["request-params"]["tl.is_active_order_payment_required"];
-            (t || r) && ($(".steps .glyphicons-keys").css("display", "inline-block"), $("ul.steps").css("display", "flex")),
-            t && ($(".steps .glyphicons-shield").css("display", "inline-block"), $("ul.steps").css("display", "flex")),
-                isLoggedIn === !1 && r ?
-                ($(".steps .glyphicons-credit-card").css("display", "inline-block"), $("ul.steps").css("display", "flex")) :
-                (isLoggedIn === !0 && r && (n || e)) || window.location.href.indexOf("/enrollPayment.page") > 0 ?
-                ($(".steps .glyphicons-credit-card").css("display", "inline-block"), $("ul.steps").css("display", "flex")) :
-                $(".steps .glyphicons-credit-card").remove();
-        }
-        $("#modal-wrapper").hide();
-        var a = 0;
-        today - new Date(data.refreshdatetime) > 864e5 && (a = Math.ceil((today - new Date(data.refreshdatetime)) / 864e5)),
-            $(".days-old").text(a),
-            $(".refresh").show(),
-            $(document).on("click", "#confirmRefresh", function() {
-                $("#confirmRefreshButton").prop("disabled", !this.checked);
-                var e = window.location.pathname,
-                    t = e.split("/").pop().replace(".page", ""),
-                    r =
-                    t.charAt(0).toUpperCase() +
-                    t
-                    .slice(1)
-                    .replace(/([A-Z]+)/g, " $1")
-                    .replace(/([A-Z][a-z])/g, " $1");
-                "Creditreport" === r && (r = "Credit Report"),
-                    $(this).is(":checked") &&
-                    generalGATracking("Post Login - " + r + " Section", "Post Login - " + r + " Section - Refresh Center Subsection", "Post Login - " + r + " Section - Refresh Center Subsection - Agree Terms Refresh Click");
+            $("#enrollAboutYou").length > 0 &&
+            $(document).on("change", 'input[name="residency"]', function() {
+                $(".previous-address").toggle(),
+                    $(".previous-address input, .previous-address select").toggleClass("required").val(""),
+                    $(".previous-address input.error, .previous-address select.error").removeClass("error"),
+                    $(".previous-address .helper").removeClass("error").html("");
             }),
-            "undefined" != typeof siteInfo &&
-            ("en" != locale && (siteInfo.SupportHours = "" != localizedString(siteInfo.SiteName + "_SupportHours") ? localizedString(siteInfo.SiteName + "_SupportHours") : siteInfo.SupportHours),
-                $(".contactPhone").html(siteInfo.CreditDataPhone),
-                $(".siteInfo_CreditDataPhone").html(siteInfo.CreditDataPhone),
-                $(".siteInfo_DisplayName").html(siteInfo.DisplayName),
-                $(".siteInfo_SupportHours").html(siteInfo.SupportHours),
-                $(".siteInfo_SupportPhone").html(siteInfo.SupportPhone),
-                $(".siteInfo_WebDomain").html(siteInfo.WebDomain),
-                sessionStorage.setItem("siteInfoWebDomain", siteInfo.WebDomain));
-        var i = document.title,
-            o = "" != localizedString(i) ? localizedString(i) : i;
-        if (
-            (i != o && (document.title = o),
-                void 0 != reqpar["request-params"]["tl.productWebToken"] && window.location.href.indexOf("/creditreport.page") > 0 && (document.title = "CIBIL Report"),
-                $(document).on("click", "a.menu", function(e) {
-                    e.preventDefault(), $(".menu-links").toggle();
-                }),
-                isLoggedIn || $("#login").length ? $(".tactical-links .logged-out").remove() : $(".tactical-links .logged-in").remove(),
-                isLoggedIn || ($("#support .loggedIn").remove(), $("#education .loggedIn").remove()),
-                $(".alerts").length > 0 && catalog.CatalogItems.hasBureauMonitoring && ($(".nav-links .alerts").removeClass("-hide"), $(".nav-links .alert-count").removeClass("-hide")),
-                $("#id-protection-content").length > 0 && $("footer .byline nav").remove(),
-                ($("#dashboard").length > 0 || $("#scorefactors").length > 0 || $("#scoreSimulator").length > 0 || ($("#CreditReports").length > 0 && void 0 != reqpar["request-params"]["tl.productWebToken"])) && renderDashboard(),
-                $("#login").length > 0 && localStorage.removeItem("firstVisit"),
-                $("*[data-language='" + locale + "']").addClass("on"),
-                $("#help2").length > 0 && "undefined" != typeof ui.loginHelpInfo)
-        )
-            switch (($("#UserName").val(ui.loginHelpInfo.UserName), $("#SecretQuestion").val(ui.loginHelpInfo.SecretQuestion), ui.loginHelpInfo.SecretQuestion)) {
-                case "GrandfatherFirstName":
-                    $("#secretQuestionDisplay").html("What is your grandfather's first name (on your father's side)?");
-                    break;
-                case "GrandmotherFirstName":
-                    $("#secretQuestionDisplay").html("What is your grandmother's first name (on your mother's side)?");
-                    break;
-                case "BirthCity":
-                    $("#secretQuestionDisplay").html("What city were you born in?");
-                    break;
-                case "FatherMiddleName":
-                    $("#secretQuestionDisplay").html("What is your father's middle name?");
-                    break;
-                case "MotherMiddleName":
-                    $("#secretQuestionDisplay").html("What is your mother's middle name?");
-                    break;
-                case "FirstCar":
-                    $("#secretQuestionDisplay").html("What was the make and model of your first car?");
-                    break;
-                case "TeacherLastName":
-                    $("#secretQuestionDisplay").html("What was your first grade teacher's last name?");
-                    break;
-                case "SchoolMascot":
-                    $("#secretQuestionDisplay").html("What was your high school mascot?");
-                    break;
-                default:
-                    $("#secretQuestionDisplay").html("");
-            }
-        if (
-            ($("#help3").length > 0 && "undefined" != typeof ui.loginHelpInfo && ($("#UserName").val(reqpar["request-params"]["tl.username"]), $("#UserNameDisplay").html(reqpar["request-params"]["tl.username"])),
-                $("#enroll").length > 0 &&
-                $(document).on("change", 'input[name="residency"]', function() {
-                    $(".previous-address").toggle();
-                }),
-                $("#enrollAboutYou").length > 0 &&
-                $(document).on("change", 'input[name="residency"]', function() {
-                    $(".previous-address").toggle(),
-                        $(".previous-address input, .previous-address select").toggleClass("required").val(""),
-                        $(".previous-address input.error, .previous-address select.error").removeClass("error"),
-                        $(".previous-address .helper").removeClass("error").html("");
-                }),
-                $("#enrollVerifyIdentity").length > 0 && "undefined" != typeof ui && $("#enrollVerifyIdentity h3 span").html(ui.userInfo.FirstName),
-                $("#enroll-FullSSN").length > 0 &&
-                $(".notes a").on("click", function(e) {
-                    e.preventDefault(), $(".notes p").toggle();
-                    var t = $(this).text();
-                    $(this).text("[ - ]" == t ? "[ + ]" : "[ - ]");
-                }),
-                "undefined" != typeof catalog && "undefined" != typeof catalog.CatalogItems && $("#education").length > 0 && (catalog.CatalogItems.hasEnrichedAcademy || $('a[rel="enriched-academy"]').parent().hide()),
-                $("#scorefactors").length > 0 && $(".intro .username").html(ud.reportstu.Name.CIBIL),
-                ($("#login").length > 0 || $("#webLogin ").length > 0) &&
-                ((CCVD.rules["tl.username"].regex = ""),
-                    "hi" === sessionStorage.getItem("userLangPref") ?
-                    ((CCVD.rules["tl.username"].minlength = "Oops, your username must be at least 1 character."), (CCVD.rules["tl.username"].required = "कृपया अपने खाते में उपयोगकर्ता नाम दर्ज करें।")) :
-                    "ta" === sessionStorage.getItem("userLangPref") ?
-                    (CCVD.rules["tl.username"].required = "அடடா, உங்கள் யூசர்நேம்மை குறைந்தது 1 எழுத்தாக இருக்க வேண்டும்.") :
-                    "te" === sessionStorage.getItem("userLangPref") ?
-                    (CCVD.rules["tl.username"].required = "దయచేసి మీ ఖాతాలో వినియోగదారు పేరును నమోదు చేయండి.") :
-                    "be" === sessionStorage.getItem("userLangPref") ?
-                    (CCVD.rules["tl.username"].required = "এই যাঃ, আপনার ইউজারনেম অন্তত 1টি ক্যারেক্টারের হওয়া আবশ্যক।") :
-                    ((CCVD.rules["tl.username"].minlength = "Oops, your username must be at least 1 character."), (CCVD.rules["tl.username"].required = "Please enter the username on your account.")),
-                    "undefined" != typeof failureInfo &&
-                    "undefined" != typeof failureInfo.reason &&
-                    ((failureInfo.reason.indexOf("PARTNER_CUST_CODE_NOT_FOUND") > -1 || failureInfo.reason.indexOf("CUSTOMER_NOT_FOUND") > -1) &&
-                        ("hi" === sessionStorage.getItem("userLangPref") ?
-                            $("#login .colWrapper").after('<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">क्षमा करें, हम आपका उपयोगकर्ता नाम या पासवर्ड नहीं पहचानते. कृपया दोबारा कोशिश करें.</p></div>') :
-                            "ta" === sessionStorage.getItem("userLangPref") ?
-                            $("#login .colWrapper").after(
-                                '<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">மன்னிக்கவும், எங்களால் உங்கள் யூசர்நேம் அல்லது பாஸ்வேர்டை அடையாளம் காண முடியவில்லை. தயவுசெய்து மீண்டும் முயற்சி செய்யுங்கள்.</p></div>'
-                            ) :
-                            "te" === sessionStorage.getItem("userLangPref") ?
-                            $("#login .colWrapper").after(
-                                '<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">దోష సందేశం:  మన్నించండి, మేము మీ యూజర్నేమ్ లేదా పాస్వర్డ్ను గుర్తించలేకపోతున్నాం. దయచేసి తిరిగి ప్రయత్నించండి.</p></div>'
-                            ) :
-                            "be" === sessionStorage.getItem("userLangPref") ?
-                            $("#login .colWrapper").after('<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">দুঃখিত, আমরা আপনার ইউজারনেম বা পাসওয়ার্ড চিনতে পারছি না। অনুগ্রহ করে আবার চেষ্টা করুন।</p></div>') :
-                            $("#login .colWrapper").after('<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">Sorry, we don\'t recognize your username or password. Please try again.</p></div>')),
-                        failureInfo.reason.indexOf("INVALID_TEMP_PASSWORD") > -1 &&
-                        $(".webtokenLogin").length > 0 &&
-                        $("#webLogin .colWrapper").after('<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">Sorry, the password is incorrect. Please refer to the email for valid combination.</p></div>'))),
-                $("#help1").length > 0 &&
+            $("#enrollVerifyIdentity").length > 0 && "undefined" != typeof ui && $("#enrollVerifyIdentity h3 span").html(ui.userInfo.FirstName),
+            $("#enroll-FullSSN").length > 0 &&
+            $(".notes a").on("click", function(e) {
+                e.preventDefault(), $(".notes p").toggle();
+                var t = $(this).text();
+                $(this).text("[ - ]" == t ? "[ + ]" : "[ - ]");
+            }),
+            "undefined" != typeof catalog && "undefined" != typeof catalog.CatalogItems && $("#education").length > 0 && (catalog.CatalogItems.hasEnrichedAcademy || $('a[rel="enriched-academy"]').parent().hide()),
+            $("#scorefactors").length > 0 && $(".intro .username").html(ud.reportstu.Name.CIBIL),
+            ($("#login").length > 0 || $("#webLogin ").length > 0) &&
+            ((CCVD.rules["tl.username"].regex = ""),
+                "hi" === sessionStorage.getItem("userLangPref") ?
+                ((CCVD.rules["tl.username"].minlength = "Oops, your username must be at least 1 character."), (CCVD.rules["tl.username"].required = "कृपया अपने खाते में उपयोगकर्ता नाम दर्ज करें।")) :
+                "ta" === sessionStorage.getItem("userLangPref") ?
+                (CCVD.rules["tl.username"].required = "அடடா, உங்கள் யூசர்நேம்மை குறைந்தது 1 எழுத்தாக இருக்க வேண்டும்.") :
+                "te" === sessionStorage.getItem("userLangPref") ?
+                (CCVD.rules["tl.username"].required = "దయచేసి మీ ఖాతాలో వినియోగదారు పేరును నమోదు చేయండి.") :
+                "be" === sessionStorage.getItem("userLangPref") ?
+                (CCVD.rules["tl.username"].required = "এই যাঃ, আপনার ইউজারনেম অন্তত 1টি ক্যারেক্টারের হওয়া আবশ্যক।") :
+                ((CCVD.rules["tl.username"].minlength = "Oops, your username must be at least 1 character."), (CCVD.rules["tl.username"].required = "Please enter the username on your account.")),
                 "undefined" != typeof failureInfo &&
                 "undefined" != typeof failureInfo.reason &&
-                failureInfo.reason.indexOf("CUSTOMER_NOT_FOUND") > -1 &&
-                $("#help1 .error_iv_message").append('<div class="error-box"><p class="glyphicons-circle-exclamation-mark">Please check your email for the temporary password. If you don\'t receive an email please try again.</p></div>'),
-                $("#help3").length > 0 &&
-                "undefined" != typeof failureInfo &&
-                "undefined" != typeof failureInfo.reason &&
-                (failureInfo.reason.indexOf("INVALID_TEMP_PASSWORD") > -1 ?
-                    ((el = "tl.password"), (helper = $("#enroll-Password").siblings(".helper")), throwError(el, helper, "invalidCurrPass", "Invalid Current Password")) :
-                    failureInfo.reason.indexOf("CUSTOMER_NOT_FOUND") > -1 && ((el = "tl.password"), (helper = $("#enroll-Password").siblings(".helper")), throwError(el, helper, "invalidCurrPass", "Invalid Username and Password"))),
-                $("#profile").length > 0 &&
-                ("undefined" != typeof failureInfo && "undefined" != typeof failureInfo.reason && failureInfo.reason.indexOf("INVALID_OLD_PASSWORD") > -1 ?
-                    ($("#profile-Password-Old").addClass("required"), edVerify($("#profile-Password-Old"))) :
-                    "undefined" != typeof failureInfo && "undefined" != typeof failureInfo.reason && failureInfo.reason.indexOf("INVALID_NEW_PASSWORD") > -1 ?
-                    ($("#profile-Password-New").addClass("required"), edVerify($("#profile-Password-New"))) :
-                    "undefined" != typeof reqpar["request-params"]["tl.oldPasswordFlag"] && "true" === reqpar["request-params"]["tl.oldPasswordFlag"] ?
-                    ($(".updatedMsg").show(), $("#profile .form-left h2 .error-box").css("display", "none")) :
-                    "undefined" != typeof reqpar["request-params"]["tl.OptInAlertsSaveFlag"] &&
-                    "true" === reqpar["request-params"]["tl.OptInAlertsSaveFlag"] &&
-                    ($("#Profile-AlertsPreference-Sel").click(), $("#profile-Phone").attr("type", "tel"), $(".updatedPreferenceMsg").show(), $("#profile .form-left h2 .error-box").css("display", "none"))),
-                $("#Profile-AlertsPreference-Sel").click(function() {
-                    0 !== $("#Profile-ChangePassword").find(".error").length && ($("#profile-Password-Old,#profile-Password-New,#profile-Password-Confirm").val(""), $("#Profile-ChangePassword .error").removeClass("error")),
-                        $("#Profile-ChangePassword .required").removeClass("required"),
-                        $("#profile-Phone").attr("type", "tel"),
-                        $("input[name=Action]").val("UPDATE_CUSTOMER");
-                }),
-                $("#Profile-ChangePassword-Sel").click(function() {
-                    0 !== $("#Profile-AlertsPreference").find(".error").length && $("#Profile-AlertsPreference .error").removeClass("error"), $("input[name=Action]").val("UPDATE_CUSTOMER_LOGIN"), $("#profile-Phone").attr("type", "hidden");
-                }),
-                $("#alerts").length > 0 &&
-                ($(document).on("click", "#instantAlertsMsg .close", function() {
-                        $("#instantAlertsMsg").remove();
-                    }),
-                    $(document).on("click", "tr.toggle", function() {
-                        $(this).toggleClass("active"),
-                            $(this).hasClass("active") ?
-                            ($(".date", this).removeClass("glyphicons-chevron-right"), $(".date", this).addClass("glyphicons-chevron-down")) :
-                            ($(".date", this).removeClass("glyphicons-chevron-down"), $(".date", this).addClass("glyphicons-chevron-right")),
-                            $(this).next("tr").children("td.expanded").toggle();
-                    })),
-                $("#creditAlertsPage").length > 0)
-        ) {
-            var s = $(".hasAlerts"),
-                l = $(".freeMembership"),
-                d = $(".oneMonthMembership");
-            if (findElementExpDate(ud.reportstu.ComponentDetail, "Component", "TransUnionMonitoring") === !0)
-                if (e(ud.reportstu.BenefitsBundle, "Benefit", "ALERT_TAB_DETAILS") === !0) {
-                    s.removeClass("hide").siblings().remove();
-                    var c = Object.keys(ud.alerts).length;
-                    if (0 !== c) {
-                        $(".no-alerts").hide();
-                        var u = ud.alerts;
-                        document.getElementById("alertsListWrapper").innerHTML = t(u);
-                    }
-                    var p = $(".alertHeader"),
-                        h = ".alertsWrapper";
-                    p.click(function() {
-                            $(this).toggleClass("upArrow"), $(this).siblings(h).toggleClass("expanded");
-                        }),
-                        onLoadGATracking("NormalAlertsContentPage");
-                } else
-                    e(ud.reportstu.BenefitsBundle, "Benefit", "ALERT_TAB_REFRESH") === !0 ?
-                    (d.removeClass("hide").siblings().remove(), buildRefreshCenter(), onLoadGATracking("RefreshAlertsContentPage")) :
-                    (l.removeClass("hide").siblings().remove(), onLoadGATracking("UpgradeAlertsContentPage"));
-            else l.removeClass("hide").siblings().remove(), onLoadGATracking("UpgradeAlertsContentPage");
-        }
-        if (
-            ($("#refreshId").click(function() {
-                    generalGATracking("Atlas Post Login", "Atlas Post Login - Alerts Section - Refresh Center Subsection", "Atlas Post Login - Alerts Section - Refresh Center Subsection  - " + A + " - Refresh My Report Click");
-                }),
-                "undefined" != typeof ui && "undefined" != typeof ui.userInfo && (ui.userInfo.isCreditLocked ? ($(".unlock-wrapper").show(), $(".lock-wrapper").hide()) : ($(".unlock-wrapper").hide(), $(".lock-wrapper").show())),
-                $(document).on("click touchstart", "#lock-credit", function(e) {
-                    e.preventDefault(), $('input[name="Action"]').val("CHANGE_CREDIT_LOCK"), $("<input>").attr("type", "hidden").attr("name", "tl.lock").attr("value", !0).appendTo("form"), $("form").submit();
-                }),
-                $(document).on("click touchstart", "#unlock-credit", function(e) {
-                    e.preventDefault(), $('input[name="Action"]').val("CHANGE_CREDIT_LOCK"), $("<input>").attr("type", "hidden").attr("name", "tl.lock").attr("value", !1).appendTo("form"), $("form").submit();
-                }),
-                $("#profile").length > 0)
-        ) {
-            var f = ui.loginInfo.UserName || "";
-            if (($('input[name="tl.username"]').val(f), "undefined" != typeof ui && (document.getElementById("profile-Username").value = ui.loginInfo.UserName || ""), $("#Profile-AlertsPreference").length > 0)) {
-                var m = reqpar["request-params"]["tl.dbMobileNumber"] || "";
-                $('input[name="tl.phoneNumber"]').val(m), "undefined" != typeof ui && (document.getElementById("profile-Phone").value = reqpar["request-params"]["tl.dbMobileNumber"] || "");
-                var g = reqpar["request-params"]["tl.OptInSMSNotification"];
-                (void 0 != g && "true" != g) || ($('input[name="tl.OptInSMS"]').prop("checked", !0), $('input[name="tl.OptInSMSNotification"]').val("true")),
-                $('input[name="tl.OptInSMS"]').click(function() {
-                    var e = $('input[name="tl.OptInSMS"]').is(":checked");
-                    $('input[name="tl.OptInSMSNotification"]').val(e);
-                });
-                var v = ui.userInfo.EmailAddress || "";
-                $('input[name="tl.email"]').val(v);
-                var y = reqpar["request-params"]["tl.OptInEmailNotification"];
-                (void 0 != y && "true" != y) || ($('input[name="tl.OptInEmail"]').prop("checked", !0), $('input[name="tl.OptInEmailNotification"]').val("true")),
-                $('input[name="tl.OptInEmail"]').click(function() {
-                    var e = $('input[name="tl.OptInEmail"]').is(":checked");
-                    $('input[name="tl.OptInEmailNotification"]').val(e);
-                });
-                var b = reqpar["request-params"]["tl.OptInAlertsEnabled"];
-                void 0 != b && "true" == b && $("#Profile-AlertsPreference-Sel").css("display", "block"), $(".profile-sms-fields").hide();
-                var S = reqpar["request-params"]["tl.OptInSMSNotificationEnabled"];
-                void 0 != S && "true" == S && $(".profile-sms-fields").show();
-            }
-        }
-        if ($(".SSO-enroll1").length > 0) {
-            "undefined" != typeof reqpar &&
-                ((reqpar["request-params"]["tl.curr-street1"] = "Default" == reqpar["request-params"]["tl.curr-street1"] ? "" : reqpar["request-params"]["tl.curr-street1"]),
-                    (reqpar["request-params"]["tl.curr-street2"] = "Default" == reqpar["request-params"]["tl.curr-street2"] ? "" : reqpar["request-params"]["tl.curr-street2"]),
-                    (reqpar["request-params"]["tl.curr-street3"] = "Default" == reqpar["request-params"]["tl.curr-street3"] ? "" : reqpar["request-params"]["tl.curr-street3"]),
-                    (reqpar["request-params"]["tl.curr-city"] = "Default" == reqpar["request-params"]["tl.curr-city"] ? "" : reqpar["request-params"]["tl.curr-city"]),
-                    (reqpar["request-params"]["tl.curr-state"] = "27" == reqpar["request-params"]["tl.curr-state"] ? "" : reqpar["request-params"]["tl.curr-state"]),
-                    (reqpar["request-params"]["tl.curr-zip-code"] = "400001" == reqpar["request-params"]["tl.curr-zip-code"] ? "" : reqpar["request-params"]["tl.curr-zip-code"]),
-                    (document.getElementById("enroll-FirstName").value = reqpar["request-params"]["tl.first-name"] || ""),
-                    (document.getElementById("enroll-LastName").value = reqpar["request-params"]["tl.last-name"] || ""),
-                    (document.getElementById("enroll-DateOfBirth-Month").value = reqpar["request-params"]["tl.dobMonth"] || ""),
-                    (document.getElementById("enroll-DateOfBirth-Day").value = reqpar["request-params"]["tl.dobDay"] || ""),
-                    (document.getElementById("enroll-DateOfBirth-Year").value = reqpar["request-params"]["tl.dobYear"] || ""),
-                    (document.getElementById("enroll-EmailAddress").value = reqpar["request-params"]["tl.email-address"] || ""),
-                    (document.getElementById("enroll-Address-Current").value = reqpar["request-params"]["tl.curr-street1"] || ""),
-                    (document.getElementById("enroll-Address-Current2").value = reqpar["request-params"]["tl.curr-street2"] || ""),
-                    (document.getElementById("enroll-Address-Current3").value = reqpar["request-params"]["tl.curr-street3"] || ""),
-                    (document.getElementById("enroll-City-Current").value = reqpar["request-params"]["tl.curr-city"] || ""),
-                    (document.getElementById("enroll-Pin-Current").value = reqpar["request-params"]["tl.curr-zip-code"] || ""),
-                    (document.getElementById("enroll-Gender").value = reqpar["request-params"]["tl.gender"] || ""),
-                    (document.getElementById("enroll-State-Current").value = reqpar["request-params"]["tl.curr-state"] || ""),
-                    (document.getElementById("enroll-IdentifierID").value = reqpar["request-params"]["tl.identifierId"] || ""),
-                    (document.getElementById("enroll-Identity-Current").value = reqpar["request-params"]["tl.identifierName"] || ""),
-                    (document.getElementById("enroll-MobileTelephone").value = reqpar["request-params"]["tl.phoneNumber"] || ""));
-            var w = ["enroll-FirstName", "enroll-LastName", "enroll-IdentifierID", "enroll-Identity-Current", "enroll-DateOfBirth-Day", "enroll-DateOfBirth-Month", "enroll-DateOfBirth-Year", "enroll-MobileTelephone", "enroll-EmailAddress"];
-            for (var C in w)
-                "" != $("#" + w[C]).val() &&
-                $("#" + w[C])
-                .attr("disabled", "true")
-                .css("background-color", "#EBEBE4");
-            var _ = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.phoneNumberAU"] : reqpar["request-params"]["tl.phoneNumber"],
-                x = window.location.href.indexOf("/additionalInfo.page") > 0 ? CCVD.rules["tl.phoneNumberAU"].regex : CCVD.rules["tl.phoneNumber"].regex;
-            _.match(x) || $("#enroll-MobileTelephone").removeAttr("disabled").css("background-color", "white");
-        }
-        if (
-            ($("#scorefactors").on("click", ".column h2", function() {
-                    $("#scorefactors .column").toggleClass("selected");
-                }),
-                $("#scorefactors").length > 0)
-        ) {
-            for ($("main section.credit-score p.score-details").appendTo("#mobilescore"), $("#mobilescore .scorebox .mobilescore").html(ud.scores[modelToUse].score), C = 0; C < scoreColors.length - 1; C++)
-                ud.scores[modelToUse].score > scoreColors[C].value && $("#mobilescore .scorebox").css("background-color", scoreColors[C].color);
-            if (
-                ($.each(CCVD.gradeRanges[modelToUse], function(e, t) {
-                        ud.scores[modelToUse].score > t.min && $("#mobilescore .scorebox .mobilerank").html(t.copy);
-                    }),
-                    "creditvision" !== modelToUse && ($(".factorcolumns").removeClass("creditvision"), $(".factorcolumns").addClass(modelToUse)),
-                    $(".has-score-analysis").show(),
-                    $(".no-score-analysis").hide(),
-                    data.factors.negative.length > 0)
-            ) {
-                if (
-                    ("en" !== sessionStorage.getItem("userLangPref") ?
-                        ($(".intro").append(reasonCodeJson.intro[sessionStorage.getItem("userLangPref")]),
-                            $.each(data.factors.negative, function(e) {
-                                for (var t in reasonCodeJson[sessionStorage.getItem("userLangPref")])
-                                    if (reasonCodeJson[sessionStorage.getItem("userLangPref")][t].bureaucode === data.factors.negative[e].bureaucode) {
-                                        (this.factor = reasonCodeJson[sessionStorage.getItem("userLangPref")][t].factor), (this.explanation = reasonCodeJson[sessionStorage.getItem("userLangPref")][t].explain);
-                                        break;
-                                    }
-                            })) :
-                        ($(".intro").append("The factors impacting your score are listed below."),
-                            $.each(data.factors.negative, function(e) {
-                                (this.factor = this.factor.replace("explain: ", "")), (this.explanation = this.explanation.replace("factor: ", ""));
-                            })),
-                        (negativeFactorsSource = $("#negative-factors-template").html()),
-                        DEBUG && console.info("Compile: negative-factors-template ..."),
-                        (negativeFactorsTemplate = Handlebars.compile(negativeFactorsSource)),
-                        (negativeFactorsHtml = negativeFactorsTemplate(data.factors)),
-                        "undefined" !== negativeFactorsHtml && "" !== negativeFactorsHtml)
-                ) {
-                    var P = negativeFactorsHtml.split("<div ");
-                    if (P.length > 3) {
-                        negativeFactorsHtml = "<div " + P[1] + "<div " + P[2];
-                        for (var C = 3; C < P.length; C++) negativeFactorsHtml.includes(P[C]) || (negativeFactorsHtml = negativeFactorsHtml + "<div " + P[C]);
-                    }
-                }
-                $(".factorcolumns .negative").html(negativeFactorsHtml);
-            }
-        }
-        $("#resendNow").click(function() {
-                $('input[name="tl.user-input-answer1"]').val(" "),
-                    $('input[name="tl.resendSelected"]').val("true"),
-                    $("form").submit(),
-                    showResendPoupup(),
-                    window.dataLayer.push({ event: "EventTracking", eventCategory: "Form Event FieldSelected Step Verify Identity - " + $("#qName").val() + " Form", eventAction: "ResendNow", eventLabel: "Resend OPT Selected" });
-            }),
-            $("#skipQuestion").click(function() {
-                $('input[name="tl.answer-key-1"]').length > 0 ? $('input[name="tl.answer-key-1"]').css("border", "1px solid gray").prop("checked", !0) : $('input[name="tl.answer-key-2"]').prop("checked", !0),
-                    $('input[name^="tl.answer-key-"').each(function() {
-                        $(this).is('input[name="tl.answer-key-1"') || $(this).attr("value", " ");
-                    }),
-                    $('input[name^="tl.user-input-answer"').each(function() {
-                        $(this).is('input[name="tl.user-input-answer1"') || $(this).attr("value", " ");
-                    }),
-                    $('input[name^="tl.question-key-"').each(function() {
-                        $(this).is('input[name^="tl.question-key-1"') || $(this).attr("value", " ");
-                    }),
-                    showLoading(),
-                    $('input[name="tl.skipSelected"]').val("true"),
-                    $("form").submit(),
-                    window.dataLayer.push({ event: "EventTracking", eventCategory: "Form Event FieldSelected Step Verify Identity - " + $("#qName").val() + " Form", eventAction: "SkipQuestion", eventLabel: "Skip Question Selected" });
-            }),
-            $("#offerCode").text("" !== reqpar["request-params"]["tl.offerDesc"] && "undefined" !== reqpar["request-params"]["tl.offerDesc"] ? reqpar["request-params"]["tl.offerDesc"] : analytics.offerCode),
-            $("#offerAmount").text(reqpar["request-params"]["tl.offerPrice"]),
-            $("#invoiceId").text(analytics.invoiceId);
-        var A = reqpar["request-params"]["tl.offer-id"];
-        if (window.location.href.indexOf("/enrollVerifyIdentity.page") > 0) {
-            if (
-                ($("#enrollVerifyIdentity")
-                    .find(".pageHeadingText")
-                    .before(
-                        '<p class="hide setRegister pTitle">Set up new registration</p><ul class="steps" id="enrollSteps"><li class="glyphicons-keys"><span class="stepDetail">' +
-                        localizedString("CreateAccount") +
-                        '</span><span class="transform"></span></li><li class="glyphicons-shield active"><span class="stepDetail">' +
-                        localizedString("VerifyIdentity") +
-                        '</span></li><li class="glyphicons-credit-card"><span class="stepDetail">' +
-                        localizedString("Payment") +
-                        "</span></li></ul>"
-                    ),
-                    $("#question1").length > 0)
-            ) {
-                var D = $("#question1, #question2, #question3, #question4, #question5, #question6, #question7, #question8, label, input");
-                D.attr("data-hj-suppress", "");
-            }
-            "IDM_KBA_Queue" === $("#qName").val() || "IDM_QnA_AGLib__KBA" === $("#qName").val() ? ($(".KBAText").show(), $(".alternativeEmailLabel").length > 0 && $(".alternativeEmailLabel").remove()) : $(".KBAText").hide();
-        }
-        if (
-            (window.location.href.indexOf("/identityVerify.page") > 0 &&
-                (("OTP_AlternateEmail_Entry_Queue" !== document.getElementById("qName").value &&
-                        "IDM_PairDeviceQueue" !== document.getElementById("qName").value &&
-                        "IDM_KBA_Queue" !== document.getElementById("qName").value &&
-                        "IDM_QnA_AGLib__KBA" !== document.getElementById("qName").value &&
-                        "false" != $("#resendDiv").attr("value")) ||
-                    $("#resendDiv").remove(),
-                    $("#skipDiv").length > 0 && "OTP_AlternateEmail_Entry_Queue" !== document.getElementById("qName").value && $("#skipDiv").remove(),
-                    ("IDM_KBA_Queue" !== document.getElementById("qName").value && "IDM_QnA_AGLib__KBA" !== document.getElementById("qName").value) ||
+                ((failureInfo.reason.indexOf("PARTNER_CUST_CODE_NOT_FOUND") > -1 || failureInfo.reason.indexOf("CUSTOMER_NOT_FOUND") > -1) &&
                     ("hi" === sessionStorage.getItem("userLangPref") ?
-                        $(".identityHeader").html(
-                            '<p class="pageHeadingText">पहचान सत्यापन प्रक्रिया पूरी करने के लिए हमें आपसे बस कुछ और जानकारी की ज़रूरत है.</p><p class="pageText">कृपया नीचे दिए गए सभी प्रश्नों के उत्तर दें और आगे बढ़ने के लिए “जारी रखें” दबाएँ</p>'
-                        ) :
+                        $("#login .colWrapper").after('<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">क्षमा करें, हम आपका उपयोगकर्ता नाम या पासवर्ड नहीं पहचानते. कृपया दोबारा कोशिश करें.</p></div>') :
                         "ta" === sessionStorage.getItem("userLangPref") ?
-                        $(".identityHeader").html(
-                            '<p class="pageHeadingText">அடையாள சரிபார்ப்பு செயல்பாட்டை முடிப்பதற்கு எங்களுக்கு உங்களிடமிருந்து சில கூடுதல் தகவல்கள் தேவைப்படுகின்றன.</p><p class="pageText">தொடர்வதற்கு தயவுசெய்து கீழே உள்ள அனைத்துக் கேள்விகளுக்கும் பதிலளித்துவிட்டு "தொடரவும்"-ஐத் தட்டவும்.</p>'
+                        $("#login .colWrapper").after(
+                            '<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">மன்னிக்கவும், எங்களால் உங்கள் யூசர்நேம் அல்லது பாஸ்வேர்டை அடையாளம் காண முடியவில்லை. தயவுசெய்து மீண்டும் முயற்சி செய்யுங்கள்.</p></div>'
                         ) :
                         "te" === sessionStorage.getItem("userLangPref") ?
-                        $(".identityHeader").html(
-                            '<p class="pageHeadingText">గుర్తింపు నిర్ధారణ ప్రక్రియను పూర్తిచేసేందుకు మాకు మీనుండి కొంత అదనపు సమాచారం అవసరం.</p><p class="pageText">దయచేసి కింద ఇచ్చిన అన్నిప్రశ్నలకు సమాధానాలు ఇచ్చి, కొనసాగేందుకు .</p>'
+                        $("#login .colWrapper").after(
+                            '<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">దోష సందేశం:  మన్నించండి, మేము మీ యూజర్నేమ్ లేదా పాస్వర్డ్ను గుర్తించలేకపోతున్నాం. దయచేసి తిరిగి ప్రయత్నించండి.</p></div>'
                         ) :
                         "be" === sessionStorage.getItem("userLangPref") ?
-                        $(".identityHeader").html(
-                            '<p class="pageHeadingText">পরিচয় যাচাই প্রক্রিয়াটি সম্পূর্ণ করতে আমাদের কেবল আপনার কাছ থেকে কিছু অতিরিক্ত তথ্য লাগবে। অনুগ্রহ করে নীচের </p><p class="pageText">যাবতীয় প্রশ্নের উত্তর দিন এবং অগ্রসর হতে "চালিয়ে যান" টিপুন।</p>'
-                        ) :
-                        $(".identityHeader").html(
-                            '<p class="pageHeadingText">We just need some additional information from you to complete the identity verification process</p><p class="pageText">Please answer all the questions below and hit "Continue" to proceed.</p>'
-                        ),
-                        $(".alternativeEmailLabel").length > 0 && $(".alternativeEmailLabel").remove())),
-                "CIBIL" != currentEnterprise() && window.location.href.indexOf("/enrollVerifyIdentity.page") > 0 && ($(".register-content, .setRegister").show(), $("main section.enroll").css("padding-top", "30px")),
-                window.location.href.indexOf("/enrollVerifyIdentity.page") > 0 || window.location.href.indexOf("/identityVerify.page") > 0)
+                        $("#login .colWrapper").after('<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">দুঃখিত, আমরা আপনার ইউজারনেম বা পাসওয়ার্ড চিনতে পারছি না। অনুগ্রহ করে আবার চেষ্টা করুন।</p></div>') :
+                        $("#login .colWrapper").after('<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">Sorry, we don\'t recognize your username or password. Please try again.</p></div>')),
+                    failureInfo.reason.indexOf("INVALID_TEMP_PASSWORD") > -1 &&
+                    $(".webtokenLogin").length > 0 &&
+                    $("#webLogin .colWrapper").after('<div class="error-box"><p class="glyphicons-circle-exclamation-mark margin0">Sorry, the password is incorrect. Please refer to the email for valid combination.</p></div>'))),
+            $("#help1").length > 0 &&
+            "undefined" != typeof failureInfo &&
+            "undefined" != typeof failureInfo.reason &&
+            failureInfo.reason.indexOf("CUSTOMER_NOT_FOUND") > -1 &&
+            $("#help1 .error_iv_message").append('<div class="error-box"><p class="glyphicons-circle-exclamation-mark">Please check your email for the temporary password. If you don\'t receive an email please try again.</p></div>'),
+            $("#help3").length > 0 &&
+            "undefined" != typeof failureInfo &&
+            "undefined" != typeof failureInfo.reason &&
+            (failureInfo.reason.indexOf("INVALID_TEMP_PASSWORD") > -1 ?
+                ((el = "tl.password"), (helper = $("#enroll-Password").siblings(".helper")), throwError(el, helper, "invalidCurrPass", "Invalid Current Password")) :
+                failureInfo.reason.indexOf("CUSTOMER_NOT_FOUND") > -1 && ((el = "tl.password"), (helper = $("#enroll-Password").siblings(".helper")), throwError(el, helper, "invalidCurrPass", "Invalid Username and Password"))),
+            $("#profile").length > 0 &&
+            ("undefined" != typeof failureInfo && "undefined" != typeof failureInfo.reason && failureInfo.reason.indexOf("INVALID_OLD_PASSWORD") > -1 ?
+                ($("#profile-Password-Old").addClass("required"), edVerify($("#profile-Password-Old"))) :
+                "undefined" != typeof failureInfo && "undefined" != typeof failureInfo.reason && failureInfo.reason.indexOf("INVALID_NEW_PASSWORD") > -1 ?
+                ($("#profile-Password-New").addClass("required"), edVerify($("#profile-Password-New"))) :
+                "undefined" != typeof reqpar["request-params"]["tl.oldPasswordFlag"] && "true" === reqpar["request-params"]["tl.oldPasswordFlag"] ?
+                ($(".updatedMsg").show(), $("#profile .form-left h2 .error-box").css("display", "none")) :
+                "undefined" != typeof reqpar["request-params"]["tl.OptInAlertsSaveFlag"] &&
+                "true" === reqpar["request-params"]["tl.OptInAlertsSaveFlag"] &&
+                ($("#Profile-AlertsPreference-Sel").click(), $("#profile-Phone").attr("type", "tel"), $(".updatedPreferenceMsg").show(), $("#profile .form-left h2 .error-box").css("display", "none"))),
+            $("#Profile-AlertsPreference-Sel").click(function() {
+                0 !== $("#Profile-ChangePassword").find(".error").length && ($("#profile-Password-Old,#profile-Password-New,#profile-Password-Confirm").val(""), $("#Profile-ChangePassword .error").removeClass("error")),
+                    $("#Profile-ChangePassword .required").removeClass("required"),
+                    $("#profile-Phone").attr("type", "tel"),
+                    $("input[name=Action]").val("UPDATE_CUSTOMER");
+            }),
+            $("#Profile-ChangePassword-Sel").click(function() {
+                0 !== $("#Profile-AlertsPreference").find(".error").length && $("#Profile-AlertsPreference .error").removeClass("error"), $("input[name=Action]").val("UPDATE_CUSTOMER_LOGIN"), $("#profile-Phone").attr("type", "hidden");
+            }),
+            $("#alerts").length > 0 &&
+            ($(document).on("click", "#instantAlertsMsg .close", function() {
+                    $("#instantAlertsMsg").remove();
+                }),
+                $(document).on("click", "tr.toggle", function() {
+                    $(this).toggleClass("active"),
+                        $(this).hasClass("active") ?
+                        ($(".date", this).removeClass("glyphicons-chevron-right"), $(".date", this).addClass("glyphicons-chevron-down")) :
+                        ($(".date", this).removeClass("glyphicons-chevron-down"), $(".date", this).addClass("glyphicons-chevron-right")),
+                        $(this).next("tr").children("td.expanded").toggle();
+                })),
+            $("#creditAlertsPage").length > 0)
+    ) {
+        var s = $(".hasAlerts"),
+            l = $(".freeMembership"),
+            d = $(".oneMonthMembership");
+        if (findElementExpDate(ud.reportstu.ComponentDetail, "Component", "TransUnionMonitoring") === !0)
+            if (e(ud.reportstu.BenefitsBundle, "Benefit", "ALERT_TAB_DETAILS") === !0) {
+                s.removeClass("hide").siblings().remove();
+                var c = Object.keys(ud.alerts).length;
+                if (0 !== c) {
+                    $(".no-alerts").hide();
+                    var u = ud.alerts;
+                    document.getElementById("alertsListWrapper").innerHTML = t(u);
+                }
+                var p = $(".alertHeader"),
+                    h = ".alertsWrapper";
+                p.click(function() {
+                        $(this).toggleClass("upArrow"), $(this).siblings(h).toggleClass("expanded");
+                    }),
+                    onLoadGATracking("NormalAlertsContentPage");
+            } else
+                e(ud.reportstu.BenefitsBundle, "Benefit", "ALERT_TAB_REFRESH") === !0 ?
+                (d.removeClass("hide").siblings().remove(), buildRefreshCenter(), onLoadGATracking("RefreshAlertsContentPage")) :
+                (l.removeClass("hide").siblings().remove(), onLoadGATracking("UpgradeAlertsContentPage"));
+        else l.removeClass("hide").siblings().remove(), onLoadGATracking("UpgradeAlertsContentPage");
+    }
+    if (
+        ($("#refreshId").click(function() {
+                generalGATracking("Atlas Post Login", "Atlas Post Login - Alerts Section - Refresh Center Subsection", "Atlas Post Login - Alerts Section - Refresh Center Subsection  - " + A + " - Refresh My Report Click");
+            }),
+            "undefined" != typeof ui && "undefined" != typeof ui.userInfo && (ui.userInfo.isCreditLocked ? ($(".unlock-wrapper").show(), $(".lock-wrapper").hide()) : ($(".unlock-wrapper").hide(), $(".lock-wrapper").show())),
+            $(document).on("click touchstart", "#lock-credit", function(e) {
+                e.preventDefault(), $('input[name="Action"]').val("CHANGE_CREDIT_LOCK"), $("<input>").attr("type", "hidden").attr("name", "tl.lock").attr("value", !0).appendTo("form"), $("form").submit();
+            }),
+            $(document).on("click touchstart", "#unlock-credit", function(e) {
+                e.preventDefault(), $('input[name="Action"]').val("CHANGE_CREDIT_LOCK"), $("<input>").attr("type", "hidden").attr("name", "tl.lock").attr("value", !1).appendTo("form"), $("form").submit();
+            }),
+            $("#profile").length > 0)
+    ) {
+        var f = ui.loginInfo.UserName || "";
+        if (($('input[name="tl.username"]').val(f), "undefined" != typeof ui && (document.getElementById("profile-Username").value = ui.loginInfo.UserName || ""), $("#Profile-AlertsPreference").length > 0)) {
+            var m = reqpar["request-params"]["tl.dbMobileNumber"] || "";
+            $('input[name="tl.phoneNumber"]').val(m), "undefined" != typeof ui && (document.getElementById("profile-Phone").value = reqpar["request-params"]["tl.dbMobileNumber"] || "");
+            var g = reqpar["request-params"]["tl.OptInSMSNotification"];
+            (void 0 != g && "true" != g) || ($('input[name="tl.OptInSMS"]').prop("checked", !0), $('input[name="tl.OptInSMSNotification"]').val("true")),
+            $('input[name="tl.OptInSMS"]').click(function() {
+                var e = $('input[name="tl.OptInSMS"]').is(":checked");
+                $('input[name="tl.OptInSMSNotification"]').val(e);
+            });
+            var v = ui.userInfo.EmailAddress || "";
+            $('input[name="tl.email"]').val(v);
+            var y = reqpar["request-params"]["tl.OptInEmailNotification"];
+            (void 0 != y && "true" != y) || ($('input[name="tl.OptInEmail"]').prop("checked", !0), $('input[name="tl.OptInEmailNotification"]').val("true")),
+            $('input[name="tl.OptInEmail"]').click(function() {
+                var e = $('input[name="tl.OptInEmail"]').is(":checked");
+                $('input[name="tl.OptInEmailNotification"]').val(e);
+            });
+            var b = reqpar["request-params"]["tl.OptInAlertsEnabled"];
+            void 0 != b && "true" == b && $("#Profile-AlertsPreference-Sel").css("display", "block"), $(".profile-sms-fields").hide();
+            var S = reqpar["request-params"]["tl.OptInSMSNotificationEnabled"];
+            void 0 != S && "true" == S && $(".profile-sms-fields").show();
+        }
+    }
+    if ($(".SSO-enroll1").length > 0) {
+        "undefined" != typeof reqpar &&
+            ((reqpar["request-params"]["tl.curr-street1"] = "Default" == reqpar["request-params"]["tl.curr-street1"] ? "" : reqpar["request-params"]["tl.curr-street1"]),
+                (reqpar["request-params"]["tl.curr-street2"] = "Default" == reqpar["request-params"]["tl.curr-street2"] ? "" : reqpar["request-params"]["tl.curr-street2"]),
+                (reqpar["request-params"]["tl.curr-street3"] = "Default" == reqpar["request-params"]["tl.curr-street3"] ? "" : reqpar["request-params"]["tl.curr-street3"]),
+                (reqpar["request-params"]["tl.curr-city"] = "Default" == reqpar["request-params"]["tl.curr-city"] ? "" : reqpar["request-params"]["tl.curr-city"]),
+                (reqpar["request-params"]["tl.curr-state"] = "27" == reqpar["request-params"]["tl.curr-state"] ? "" : reqpar["request-params"]["tl.curr-state"]),
+                (reqpar["request-params"]["tl.curr-zip-code"] = "400001" == reqpar["request-params"]["tl.curr-zip-code"] ? "" : reqpar["request-params"]["tl.curr-zip-code"]),
+                (document.getElementById("enroll-FirstName").value = reqpar["request-params"]["tl.first-name"] || ""),
+                (document.getElementById("enroll-LastName").value = reqpar["request-params"]["tl.last-name"] || ""),
+                (document.getElementById("enroll-DateOfBirth-Month").value = reqpar["request-params"]["tl.dobMonth"] || ""),
+                (document.getElementById("enroll-DateOfBirth-Day").value = reqpar["request-params"]["tl.dobDay"] || ""),
+                (document.getElementById("enroll-DateOfBirth-Year").value = reqpar["request-params"]["tl.dobYear"] || ""),
+                (document.getElementById("enroll-EmailAddress").value = reqpar["request-params"]["tl.email-address"] || ""),
+                (document.getElementById("enroll-Address-Current").value = reqpar["request-params"]["tl.curr-street1"] || ""),
+                (document.getElementById("enroll-Address-Current2").value = reqpar["request-params"]["tl.curr-street2"] || ""),
+                (document.getElementById("enroll-Address-Current3").value = reqpar["request-params"]["tl.curr-street3"] || ""),
+                (document.getElementById("enroll-City-Current").value = reqpar["request-params"]["tl.curr-city"] || ""),
+                (document.getElementById("enroll-Pin-Current").value = reqpar["request-params"]["tl.curr-zip-code"] || ""),
+                (document.getElementById("enroll-Gender").value = reqpar["request-params"]["tl.gender"] || ""),
+                (document.getElementById("enroll-State-Current").value = reqpar["request-params"]["tl.curr-state"] || ""),
+                (document.getElementById("enroll-IdentifierID").value = reqpar["request-params"]["tl.identifierId"] || ""),
+                (document.getElementById("enroll-Identity-Current").value = reqpar["request-params"]["tl.identifierName"] || ""),
+                (document.getElementById("enroll-MobileTelephone").value = reqpar["request-params"]["tl.phoneNumber"] || ""));
+        var w = ["enroll-FirstName", "enroll-LastName", "enroll-IdentifierID", "enroll-Identity-Current", "enroll-DateOfBirth-Day", "enroll-DateOfBirth-Month", "enroll-DateOfBirth-Year", "enroll-MobileTelephone", "enroll-EmailAddress"];
+        for (var C in w)
+            "" != $("#" + w[C]).val() &&
+            $("#" + w[C])
+            .attr("disabled", "true")
+            .css("background-color", "#EBEBE4");
+        var _ = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.phoneNumberAU"] : reqpar["request-params"]["tl.phoneNumber"],
+            x = window.location.href.indexOf("/additionalInfo.page") > 0 ? CCVD.rules["tl.phoneNumberAU"].regex : CCVD.rules["tl.phoneNumber"].regex;
+        _.match(x) || $("#enroll-MobileTelephone").removeAttr("disabled").css("background-color", "white");
+    }
+    if (
+        ($("#scorefactors").on("click", ".column h2", function() {
+                $("#scorefactors .column").toggleClass("selected");
+            }),
+            $("#scorefactors").length > 0)
+    ) {
+        for ($("main section.credit-score p.score-details").appendTo("#mobilescore"), $("#mobilescore .scorebox .mobilescore").html(ud.scores[modelToUse].score), C = 0; C < scoreColors.length - 1; C++)
+            ud.scores[modelToUse].score > scoreColors[C].value && $("#mobilescore .scorebox").css("background-color", scoreColors[C].color);
+        if (
+            ($.each(CCVD.gradeRanges[modelToUse], function(e, t) {
+                    ud.scores[modelToUse].score > t.min && $("#mobilescore .scorebox .mobilerank").html(t.copy);
+                }),
+                "creditvision" !== modelToUse && ($(".factorcolumns").removeClass("creditvision"), $(".factorcolumns").addClass(modelToUse)),
+                $(".has-score-analysis").show(),
+                $(".no-score-analysis").hide(),
+                data.factors.negative.length > 0)
         ) {
             if (
-                (("OTP_IDM_Mobile_Queue" !== document.getElementById("qName").value && "OTP_IDM_Email_Queue" !== document.getElementById("qName").value && "OTP_IDM_AlternateEmail_Queue" !== document.getElementById("qName").value) ||
-                    (!$("#resendDiv").length > 0 && $("form").append('<input value="false" name="tl.resendSelected" type="hidden">')),
-                    "OTP_AlternateEmail_Entry_Queue" === document.getElementById("qName").value &&
-                    (r(),
-                        $(".maskedValue").each(function() {
-                            $(this).text().match(/@/) ? $(this).addClass("emailAddress") : $(this).addClass("mobileNumber");
-                        }),
-                        $(".maskedValue").text().match(/\*/) ?
-                        ($(".questionTitle").remove(),
-                            $('div[id^="question"')
-                            .last()
-                            .after('<br><p class="bold emailLabel">' + localizedString("creditReport_CI_EmailAddresses") + ":</p>"),
-                            $("#question1").length > 0 ?
-                            $("#question1").before('<br><p class="bold cellLabel">' + localizedString("creditReport_CI_CellPhone") + ":</p>") :
-                            $("#question2").before('<br><p class="bold cellLabel">' + localizedString("creditReport_CI_CellPhone") + ":</p>"),
-                            $(".emailAddress").parent("div").insertAfter($(".emailLabel")),
-                            $(".emailAddress").length <= 0 ? $(".emailLabel").remove() : "",
-                            $(".mobileNumber").length <= 0 ? $(".cellLabel").remove() : "",
-                            $('input[name^="tl.answer-key-"]').click(function() {
-                                $(this).is(":checked") && ($('input[name^="tl.answer-key-"]').removeClass("error"), $(".answerkey3").hide(), $('input[name^="tl.answer-key-"]').not(this).prop("checked", !1));
-                            }),
-                            $("#enroll-Submit").click(function() {
-                                $('input[name^="tl.answer-key-"]').is(":checked") ?
-                                    ($("#answerkey3").hide(),
-                                        $('input[name^="tl.answer-key-"').each(function() {
-                                            $(this).is(":checked") ?
-                                                ($(this).removeClass("error required"),
-                                                    $(this).siblings("input").addClass("selected"),
-                                                    $(this).is($('input[name="tl.answer-key-1"')) ||
-                                                    ($('input[name="tl.answer-key-1"').val(" ").addClass("selected"),
-                                                        $('input[name="tl.question-key-1"').val(" ").addClass("selected"),
-                                                        $('input[name="tl.user-input-answer1"').val(" ").addClass("selected"),
-                                                        $('input[name="tl.answer-key-1"').css("border", "1px solid gray").prop("checked", !0))) :
-                                                $(this).removeClass("required error");
-                                        }),
-                                        $('input[name^="tl.user-input-answer"').each(function() {
-                                            $(this).hasClass("selected") || $(this).remove();
-                                        }),
-                                        $('input[name^="tl.question-key-"').each(function() {
-                                            $(this).hasClass("selected") || $(this).remove();
-                                        })) :
-                                    ($(".answerkey3 .helper").addClass("error").text(localizedString("creditReport_SelectOption")), $(".answerkey3").show());
-                            })) :
-                        ($(".alternativeEmailLabel").remove(), $(".questionTitle").show())),
-                    "AccountDetail_Queue" === document.getElementById("qName").value)
+                ("en" !== sessionStorage.getItem("userLangPref") ?
+                    ($(".intro").append(reasonCodeJson.intro[sessionStorage.getItem("userLangPref")]),
+                        $.each(data.factors.negative, function(e) {
+                            for (var t in reasonCodeJson[sessionStorage.getItem("userLangPref")])
+                                if (reasonCodeJson[sessionStorage.getItem("userLangPref")][t].bureaucode === data.factors.negative[e].bureaucode) {
+                                    (this.factor = reasonCodeJson[sessionStorage.getItem("userLangPref")][t].factor), (this.explanation = reasonCodeJson[sessionStorage.getItem("userLangPref")][t].explain);
+                                    break;
+                                }
+                        })) :
+                    ($(".intro").append("The factors impacting your score are listed below."),
+                        $.each(data.factors.negative, function(e) {
+                            (this.factor = this.factor.replace("explain: ", "")), (this.explanation = this.explanation.replace("factor: ", ""));
+                        })),
+                    (negativeFactorsSource = $("#negative-factors-template").html()),
+                    DEBUG && console.info("Compile: negative-factors-template ..."),
+                    (negativeFactorsTemplate = Handlebars.compile(negativeFactorsSource)),
+                    (negativeFactorsHtml = negativeFactorsTemplate(data.factors)),
+                    "undefined" !== negativeFactorsHtml && "" !== negativeFactorsHtml)
             ) {
-                $("#question1").append('<input value="false" name="tl.skipSelected" type="hidden">'), $("#question3 input.required").removeClass("required");
-                $('input[name^="tl.user-input-answer"').blur(function() {
-                    var e = $(this).val(),
-                        t = $(this).attr("id"),
-                        r = $(this);
-                    !(e.length >= 4) &&
-                    e.length > 0 &&
-                        ($(this).addClass("error"),
-                            $(this).siblings(".helper").text(localizedString("creditReport_validAccount")),
-                            $("input.error").siblings(".helper").addClass("error").show(),
-                            (document.getElementById("enroll-Submit").style.pointerEvents = "none")),
-                        e.length >= 4 &&
-                        $("input[name^='tl.user-input-answer']").each(function() {
-                            if (t !== this.id && e.toLowerCase() == this.value.toLowerCase()) {
-                                var n = localizedString("creditReport_MultipleAccount");
-                                r.addClass("error"), r.siblings(".helper").text(n), $("input.error").siblings(".helper").addClass("error").show(), (document.getElementById("enroll-Submit").style.pointerEvents = "none");
-                            }
+                var P = negativeFactorsHtml.split("<div ");
+                if (P.length > 3) {
+                    negativeFactorsHtml = "<div " + P[1] + "<div " + P[2];
+                    for (var C = 3; C < P.length; C++) negativeFactorsHtml.includes(P[C]) || (negativeFactorsHtml = negativeFactorsHtml + "<div " + P[C]);
+                }
+            }
+            $(".factorcolumns .negative").html(negativeFactorsHtml);
+        }
+    }
+    $("#resendNow").click(function() {
+            $('input[name="tl.user-input-answer1"]').val(" "),
+                $('input[name="tl.resendSelected"]').val("true"),
+                $("form").submit(),
+                showResendPoupup(),
+                window.dataLayer.push({ event: "EventTracking", eventCategory: "Form Event FieldSelected Step Verify Identity - " + $("#qName").val() + " Form", eventAction: "ResendNow", eventLabel: "Resend OPT Selected" });
+        }),
+        $("#skipQuestion").click(function() {
+            $('input[name="tl.answer-key-1"]').length > 0 ? $('input[name="tl.answer-key-1"]').css("border", "1px solid gray").prop("checked", !0) : $('input[name="tl.answer-key-2"]').prop("checked", !0),
+                $('input[name^="tl.answer-key-"').each(function() {
+                    $(this).is('input[name="tl.answer-key-1"') || $(this).attr("value", " ");
+                }),
+                $('input[name^="tl.user-input-answer"').each(function() {
+                    $(this).is('input[name="tl.user-input-answer1"') || $(this).attr("value", " ");
+                }),
+                $('input[name^="tl.question-key-"').each(function() {
+                    $(this).is('input[name^="tl.question-key-1"') || $(this).attr("value", " ");
+                }),
+                showLoading(),
+                $('input[name="tl.skipSelected"]').val("true"),
+                $("form").submit(),
+                window.dataLayer.push({ event: "EventTracking", eventCategory: "Form Event FieldSelected Step Verify Identity - " + $("#qName").val() + " Form", eventAction: "SkipQuestion", eventLabel: "Skip Question Selected" });
+        }),
+        $("#offerCode").text("" !== reqpar["request-params"]["tl.offerDesc"] && "undefined" !== reqpar["request-params"]["tl.offerDesc"] ? reqpar["request-params"]["tl.offerDesc"] : analytics.offerCode),
+        $("#offerAmount").text(reqpar["request-params"]["tl.offerPrice"]),
+        $("#invoiceId").text(analytics.invoiceId);
+    var A = reqpar["request-params"]["tl.offer-id"];
+    if (window.location.href.indexOf("/enrollVerifyIdentity.page") > 0) {
+        if (
+            ($("#enrollVerifyIdentity")
+                .find(".pageHeadingText")
+                .before(
+                    '<p class="hide setRegister pTitle">Set up new registration</p><ul class="steps" id="enrollSteps"><li class="glyphicons-keys"><span class="stepDetail">' +
+                    localizedString("CreateAccount") +
+                    '</span><span class="transform"></span></li><li class="glyphicons-shield active"><span class="stepDetail">' +
+                    localizedString("VerifyIdentity") +
+                    '</span></li><li class="glyphicons-credit-card"><span class="stepDetail">' +
+                    localizedString("Payment") +
+                    "</span></li></ul>"
+                ),
+                $("#question1").length > 0)
+        ) {
+            var D = $("#question1, #question2, #question3, #question4, #question5, #question6, #question7, #question8, label, input");
+            D.attr("data-hj-suppress", "");
+        }
+        "IDM_KBA_Queue" === $("#qName").val() || "IDM_QnA_AGLib__KBA" === $("#qName").val() ? ($(".KBAText").show(), $(".alternativeEmailLabel").length > 0 && $(".alternativeEmailLabel").remove()) : $(".KBAText").hide();
+    }
+    if (
+        (window.location.href.indexOf("/identityVerify.page") > 0 &&
+            (("OTP_AlternateEmail_Entry_Queue" !== document.getElementById("qName").value &&
+                    "IDM_PairDeviceQueue" !== document.getElementById("qName").value &&
+                    "IDM_KBA_Queue" !== document.getElementById("qName").value &&
+                    "IDM_QnA_AGLib__KBA" !== document.getElementById("qName").value &&
+                    "false" != $("#resendDiv").attr("value")) ||
+                $("#resendDiv").remove(),
+                $("#skipDiv").length > 0 && "OTP_AlternateEmail_Entry_Queue" !== document.getElementById("qName").value && $("#skipDiv").remove(),
+                ("IDM_KBA_Queue" !== document.getElementById("qName").value && "IDM_QnA_AGLib__KBA" !== document.getElementById("qName").value) ||
+                ("hi" === sessionStorage.getItem("userLangPref") ?
+                    $(".identityHeader").html(
+                        '<p class="pageHeadingText">पहचान सत्यापन प्रक्रिया पूरी करने के लिए हमें आपसे बस कुछ और जानकारी की ज़रूरत है.</p><p class="pageText">कृपया नीचे दिए गए सभी प्रश्नों के उत्तर दें और आगे बढ़ने के लिए “जारी रखें” दबाएँ</p>'
+                    ) :
+                    "ta" === sessionStorage.getItem("userLangPref") ?
+                    $(".identityHeader").html(
+                        '<p class="pageHeadingText">அடையாள சரிபார்ப்பு செயல்பாட்டை முடிப்பதற்கு எங்களுக்கு உங்களிடமிருந்து சில கூடுதல் தகவல்கள் தேவைப்படுகின்றன.</p><p class="pageText">தொடர்வதற்கு தயவுசெய்து கீழே உள்ள அனைத்துக் கேள்விகளுக்கும் பதிலளித்துவிட்டு "தொடரவும்"-ஐத் தட்டவும்.</p>'
+                    ) :
+                    "te" === sessionStorage.getItem("userLangPref") ?
+                    $(".identityHeader").html(
+                        '<p class="pageHeadingText">గుర్తింపు నిర్ధారణ ప్రక్రియను పూర్తిచేసేందుకు మాకు మీనుండి కొంత అదనపు సమాచారం అవసరం.</p><p class="pageText">దయచేసి కింద ఇచ్చిన అన్నిప్రశ్నలకు సమాధానాలు ఇచ్చి, కొనసాగేందుకు .</p>'
+                    ) :
+                    "be" === sessionStorage.getItem("userLangPref") ?
+                    $(".identityHeader").html(
+                        '<p class="pageHeadingText">পরিচয় যাচাই প্রক্রিয়াটি সম্পূর্ণ করতে আমাদের কেবল আপনার কাছ থেকে কিছু অতিরিক্ত তথ্য লাগবে। অনুগ্রহ করে নীচের </p><p class="pageText">যাবতীয় প্রশ্নের উত্তর দিন এবং অগ্রসর হতে "চালিয়ে যান" টিপুন।</p>'
+                    ) :
+                    $(".identityHeader").html(
+                        '<p class="pageHeadingText">We just need some additional information from you to complete the identity verification process</p><p class="pageText">Please answer all the questions below and hit "Continue" to proceed.</p>'
+                    ),
+                    $(".alternativeEmailLabel").length > 0 && $(".alternativeEmailLabel").remove())),
+            "CIBIL" != currentEnterprise() && window.location.href.indexOf("/enrollVerifyIdentity.page") > 0 && ($(".register-content, .setRegister").show(), $("main section.enroll").css("padding-top", "30px")),
+            window.location.href.indexOf("/enrollVerifyIdentity.page") > 0 || window.location.href.indexOf("/identityVerify.page") > 0)
+    ) {
+        if (
+            (("OTP_IDM_Mobile_Queue" !== document.getElementById("qName").value && "OTP_IDM_Email_Queue" !== document.getElementById("qName").value && "OTP_IDM_AlternateEmail_Queue" !== document.getElementById("qName").value) ||
+                (!$("#resendDiv").length > 0 && $("form").append('<input value="false" name="tl.resendSelected" type="hidden">')),
+                "OTP_AlternateEmail_Entry_Queue" === document.getElementById("qName").value &&
+                (r(),
+                    $(".maskedValue").each(function() {
+                        $(this).text().match(/@/) ? $(this).addClass("emailAddress") : $(this).addClass("mobileNumber");
+                    }),
+                    $(".maskedValue").text().match(/\*/) ?
+                    ($(".questionTitle").remove(),
+                        $('div[id^="question"')
+                        .last()
+                        .after('<br><p class="bold emailLabel">' + localizedString("creditReport_CI_EmailAddresses") + ":</p>"),
+                        $("#question1").length > 0 ?
+                        $("#question1").before('<br><p class="bold cellLabel">' + localizedString("creditReport_CI_CellPhone") + ":</p>") :
+                        $("#question2").before('<br><p class="bold cellLabel">' + localizedString("creditReport_CI_CellPhone") + ":</p>"),
+                        $(".emailAddress").parent("div").insertAfter($(".emailLabel")),
+                        $(".emailAddress").length <= 0 ? $(".emailLabel").remove() : "",
+                        $(".mobileNumber").length <= 0 ? $(".cellLabel").remove() : "",
+                        $('input[name^="tl.answer-key-"]').click(function() {
+                            $(this).is(":checked") && ($('input[name^="tl.answer-key-"]').removeClass("error"), $(".answerkey3").hide(), $('input[name^="tl.answer-key-"]').not(this).prop("checked", !1));
                         }),
-                        $(".required").hasClass("error") || (document.getElementById("enroll-Submit").style.pointerEvents = "auto");
-                });
-            }
-            if ("OTP_IDM_AlternateEmail_Queue" === document.getElementById("qName").value) {
-                var I = [],
-                    E = [],
-                    B = [];
-                findKeyNewArray(reqpar["request-params"], "user-input", I), findKeyNewArray(reqpar["request-params"], "question-key", E), findKeyNewArray(reqpar["request-params"], "answer-key", B);
-                for (var C = 0; C < I.length; C++) "tl.user-input-answer1" !== I[C] && $(".form-fields").append('<input type="hidden" name="' + I[C] + '" value=" ">');
-                for (var C = 0; C < E.length; C++) "tl.question-key-1" !== I[C] && $(".form-fields").append('<input type="hidden" name="' + E[C] + '" value=" ">');
-                for (var C = 0; C < B.length; C++) "tl.answer-key-1" !== I[C] && $(".form-fields").append('<input type="hidden" name="' + B[C] + '" value=" ">');
-            }
-            $('input[name^="tl.user-input-answer"').length > 0 && "AccountDetail_Queue" !== document.getElementById("qName").value && $('input[name^="tl.user-input-answer"').attr("onkeypress", "return isNumberKey(event);");
-        }
-        if (($("#enrollSteps").length > 0 && n(), "undefined" != typeof CCVD.queryString().print)) {
-            $(".flow-section-toggle").hide(),
-                $(".flow-section-container").css("padding-left", "0%"),
-                $("#TU-Report").show(),
-                $("#CR-Personal").show(),
-                $("#CR-Contact").show(),
-                $("#CR-Employment").show(),
-                $("#CR-Accounts").show(),
-                $("#CR-Enquiries").show(),
-                $("#CR-Dispute").show(),
-                $("#TU-Reportone").show(),
-                $(".creditReportSinglePage").show(),
-                "true" == CCVD.queryString().print && $(".frow.data-row").addClass("is-active"),
-                $(".payment-status-wrapper").show(),
-                $(".flow-page-toggle").hide(),
-                $(".controlNo").hide();
-            new Date();
-            $(".flow-section-inner")
-                .first()
-                .prepend(
-                    '<div class="sp-score-content"><div class="section-title-blue">' +
-                    localizedString("CIBILScore") +
-                    '</div><div class="sp-score-wrapper"><div class="sp-score">' +
-                    (0 == scoreInNumeric ? "NA" : 1 == scoreInNumeric ? "NH" : ud.scores.creditvision.score) +
-                    '</div><div class="sp-score-txt"></div></div></div>'
-                ),
-                $("#CreditReports:not(.disputeWrapper) .flow-section-inner")
-                .first()
-                .prepend("<div class='pageTextSmall webTokenhide'>" + localizedString("Date") + ud.scores.creditvision.date + " </div>"),
-                $("#CreditReports:not(.disputeWrapper) .flow-section-inner")
-                .first()
-                .prepend("<div class='pageTextSmall webTokenhide'>" + localizedString("ControlNumber") + Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en") + " </div>"),
-                $("#CreditReports:not(.disputeWrapper).flow-section-inner")
-                .first()
-                .prepend(
-                    "false" !== CCVD.queryString().print ?
-                    "<div class='pageTextSmall'>" +
-                    localizedString("ControlNumber") +
-                    Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en") +
-                    "<div class='sp-con-num'>" +
-                    localizedString("Superscript-Desc") +
-                    "</div></div>" :
-                    "<div class='pageTextSmall'>" + localizedString("ControlNumber") + Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en") + "</div>"
-                ),
-                $("#disputeHeaderInstructions").prepend("<div class='pageTextSmall'>" + localizedString("Date") + ud.scores.creditvision.date + " </div>"),
-                $("#disputeHeaderInstructions").prepend(
-                    "false" !== CCVD.queryString().print ?
-                    "<div class='pageTextSmall'>" + localizedString("ControlNumber") + Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en") + "<div class='sp-con-num'>" + localizedString("Superscript-Desc") + "</div></div>" :
-                    "<div class='pageTextSmall'>" + localizedString("ControlNumber") + Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en")
-                ),
-                $(".superscript-desc").hide(),
-                $("#CreditReports:not(.disputeWrapper) .flow-section-inner")
-                .first()
-                .prepend("<h2 class='webTokenhide'>" + localizedString("CIBILScoreReport") + "</h2>"),
-                $("#disputeHeaderInstructions").prepend("<h2>" + localizedString("CIBILScoreReport") + " </h2>"),
-                $(".printLink").hide(),
-                $(".refreshalert").hide(),
-                $(".CibilVideo").parent().hide(),
-                $(".flow-section-inner").css("min-height", "0"),
-                $(".payment-status-table").show(),
-                "true" === CCVD.queryString().print ? $("#CR-Accounts-CreditRevolving").css("border", "solid 1.5px #EAEAEA") : $("#CR-Accounts-CreditRevolving").css("border", "none"),
-                $(".flow-section-container").css("min-height", "0"),
-                $(".flow-section-inner").css("border-left", "none"),
-                $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css("border-bottom", "solid 2px #EAEAEA"),
-                $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css("margin-left", "20px"),
-                $(".flow-section-inner").css("padding", "0px"),
-                $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css("margin-right", "33px"),
-                $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css("padding-bottom", "33px"),
-                $("#flow-section-inner-div").removeClass("flow-section-inner"),
-                $("#flow-section-inner-div").addClass("flow-section-inne-sp"),
-                $("#flow-section-inner").last().css("border-bottom", "none"),
-                "true" === CCVD.queryString().print ? $(".report-cell-inner").css("border", "none") : $(".report-cell-inner").css({ border: "solid 1.5px #EAEAEA", "margin-bottom": "20px" }),
-                $(".tfoot").css("text-align", "left"),
-                $(".tfoot").css("margin-right", "20%"),
-                $("#TU-Report").css("border-top", "none"),
-                $(".account-data-selectors").hide(),
-                $(".tactical-links").hide(),
-                $(".menu-links").hide(),
-                $(".support").hide(),
-                $(".byline").hide(),
-                $(".nav-links").css("box-shadow", "none"),
-                $(".nav-links").css("margin", "0"),
-                void 0 != reqpar["request-params"]["tl.productWebToken"] ?
-                ($("body, footer").css({ "background-color": "#ffffff" }),
-                    $("#CR-Employment .report .report-table .thead").prepend('<p class="pTitle webTokenShow">Employment Data</p>'),
-                    $("#CR-Accounts .report").prepend('<p class="pTitle webTokenShow">Accounts</p>'),
-                    $("#CR-Enquiries .report").prepend('<p class="pTitle webTokenShow">Enquiry Summary</p>'),
-                    $("#CR-Dispute .dispute").prepend('<p class="pTitle webTokenShow">Dispute Summary</p>'),
-                    $(".webTokenShow").show(),
-                    $("#CreditReports:not(.disputeWrapper) .section-title").css({ "font-weight": "300", "font-size": "24px", "padding-left": "15px" }),
-                    $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css({ "margin-top": "30px", "border-bottom": "none" }),
-                    $("#CreditReports:not(.disputeWrapper) .flow-section-inne-sp").css({ "border-bottom": "none" }),
-                    $(".inquiries-table").css({ "padding-left": "15px" }),
-                    $(".flow-section-container").css("border-bottom", "solid 5px #EAEAEA"),
-                    $(".report-table,.report-account-table .fcell, .report-account-table .fhcell, .report-table .fcell, .report-table .fhcell").css({ border: "none" }),
-                    $(".report-table .tbody").css({ border: "1px solid #efefef" }),
-                    $(".report-table .thead").css({ "margin-bottom": "15px" }),
-                    $(".report-account-table .account-row .fcell, .report-account-table .account-row .fhcell, .report-table .report-row:nth-child(odd)").css({ background: "#f5f5f5" }),
-                    $(".superscript-desc-google,.sp-copyright").hide(),
-                    $(".superscript-desc-webtoken,.sp-copyright-webtoken").show(),
-                    $(".prsnalInfoTitle").parent().addClass("personalDetails"),
-                    $(".fhnoborder-table").css({ "padding-top": "0" }),
-                    $(".modal-trigger,.report-account-table .account-row .fcell:first-child>div,.report-account-table .account-row .fhcell:first-child>div").addClass("removeModal"),
-                    $("#modals").remove(),
-                    $("main .chart-widgets").css({ margin: "0" }),
-                    $(".pr-report").css({ "margin-top": "0" }),
-                    $("#CR-Dispute").css({ "border-bottom": "none" }),
-                    $(".alertmessage").addClass("disputePending"),
-                    $(".alertmessage .inner-section-alert").text("Dispute pending"),
-                    $(".alertmessage .inner-section-alert").next("br").remove()) :
-                ($("#CreditReports:not(.disputeWrapper) .section-title").css({ color: "#5cbae9", "font-weight": "500" }), $(".sp-copyright").show()),
-                $("account-row").css("cursor", "auto"),
-                $(".nav-links .menu").hide();
-            var O = getScoreText();
-            $(".sp-score-txt").html(O),
-                (reqpar["request-params"]["tl.dbGender"] = ud.reportstu.Gender.CIBIL),
-                "true" === CCVD.queryString().print && void 0 == reqpar["request-params"]["tl.productWebToken"] ? $(".sp-score-content").css("display", "block") : $(".sp-score-content").css("display", "none"),
-                "false" === CCVD.queryString().print ?
-                $(".sp-copyright").prepend(
-                    '<div class="button-section"><span> <button type="button" class="button" id="dispButton" onclick="disputeAgreementPopup();">' +
-                    localizedString("Dispute_DisputeSubmit") +
-                    '</button> <span></span><div id="reset"><a href="javascript:window.location.reload();"><span class="link">' +
-                    localizedString("Dispute_DisputeReset") +
-                    '</span></a></div><span class="backToReport"><a href="/CreditView/creditreport.page?enterprise=' +
-                    reqpar["request-params"]["tl.partner"] +
-                    '"><span class="link">' +
-                    localizedString("Dispute_DisputeBack") +
-                    "</span></a></span></div>"
-                ) :
-                "";
-        }
-        var k = $("#deCityList");
-        if ((k.empty(), window.location.href.indexOf("dashboard.page") > -1 || window.location.href.indexOf("loanOffers.page") > -1 || window.location.href.indexOf("/interstitialLoanOffers.page") > -1))
-            for (var L in cities) k.append('<option value="' + cities[L].name + '"></option>');
-        if (($(".tab-content-mobile").find("div.tab-pane").addClass("active"), $(".creditReportSinglePage").length > 0 && $(".img-header").show(), window.location.href.indexOf("support.page") > -1 && "HDFCBANK" === currentEnterprise())) {
-            var T = urlParam("noOffers");
-            "true" === T &&
-                ($("div[rel=credit-basics]").addClass("is-active").siblings(".flow-section-toggle").removeClass("is-active"), $("#credit-basics").addClass("is-active").siblings(".flow-section-container").removeClass("is-active"));
-        }
-        var R = "";
-        (R = "undefined" != typeof siteInfo ? siteInfo.WebDomain : sessionStorage.getItem("siteInfoWebDomain")),
-        "" !== R &&
-            null !== R &&
-            "HDFCBANK" === currentEnterprise() &&
-            $("div.nav-links img").click(function(e) {
-                window.open(R, "_blank");
+                        $("#enroll-Submit").click(function() {
+                            $('input[name^="tl.answer-key-"]').is(":checked") ?
+                                ($("#answerkey3").hide(),
+                                    $('input[name^="tl.answer-key-"').each(function() {
+                                        $(this).is(":checked") ?
+                                            ($(this).removeClass("error required"),
+                                                $(this).siblings("input").addClass("selected"),
+                                                $(this).is($('input[name="tl.answer-key-1"')) ||
+                                                ($('input[name="tl.answer-key-1"').val(" ").addClass("selected"),
+                                                    $('input[name="tl.question-key-1"').val(" ").addClass("selected"),
+                                                    $('input[name="tl.user-input-answer1"').val(" ").addClass("selected"),
+                                                    $('input[name="tl.answer-key-1"').css("border", "1px solid gray").prop("checked", !0))) :
+                                            $(this).removeClass("required error");
+                                    }),
+                                    $('input[name^="tl.user-input-answer"').each(function() {
+                                        $(this).hasClass("selected") || $(this).remove();
+                                    }),
+                                    $('input[name^="tl.question-key-"').each(function() {
+                                        $(this).hasClass("selected") || $(this).remove();
+                                    })) :
+                                ($(".answerkey3 .helper").addClass("error").text(localizedString("creditReport_SelectOption")), $(".answerkey3").show());
+                        })) :
+                    ($(".alternativeEmailLabel").remove(), $(".questionTitle").show())),
+                "AccountDetail_Queue" === document.getElementById("qName").value)
+        ) {
+            $("#question1").append('<input value="false" name="tl.skipSelected" type="hidden">'), $("#question3 input.required").removeClass("required");
+            $('input[name^="tl.user-input-answer"').blur(function() {
+                var e = $(this).val(),
+                    t = $(this).attr("id"),
+                    r = $(this);
+                !(e.length >= 4) &&
+                e.length > 0 &&
+                    ($(this).addClass("error"),
+                        $(this).siblings(".helper").text(localizedString("creditReport_validAccount")),
+                        $("input.error").siblings(".helper").addClass("error").show(),
+                        (document.getElementById("enroll-Submit").style.pointerEvents = "none")),
+                    e.length >= 4 &&
+                    $("input[name^='tl.user-input-answer']").each(function() {
+                        if (t !== this.id && e.toLowerCase() == this.value.toLowerCase()) {
+                            var n = localizedString("creditReport_MultipleAccount");
+                            r.addClass("error"), r.siblings(".helper").text(n), $("input.error").siblings(".helper").addClass("error").show(), (document.getElementById("enroll-Submit").style.pointerEvents = "none");
+                        }
+                    }),
+                    $(".required").hasClass("error") || (document.getElementById("enroll-Submit").style.pointerEvents = "auto");
             });
-    });
+        }
+        if ("OTP_IDM_AlternateEmail_Queue" === document.getElementById("qName").value) {
+            var I = [],
+                E = [],
+                B = [];
+            findKeyNewArray(reqpar["request-params"], "user-input", I), findKeyNewArray(reqpar["request-params"], "question-key", E), findKeyNewArray(reqpar["request-params"], "answer-key", B);
+            for (var C = 0; C < I.length; C++) "tl.user-input-answer1" !== I[C] && $(".form-fields").append('<input type="hidden" name="' + I[C] + '" value=" ">');
+            for (var C = 0; C < E.length; C++) "tl.question-key-1" !== I[C] && $(".form-fields").append('<input type="hidden" name="' + E[C] + '" value=" ">');
+            for (var C = 0; C < B.length; C++) "tl.answer-key-1" !== I[C] && $(".form-fields").append('<input type="hidden" name="' + B[C] + '" value=" ">');
+        }
+        $('input[name^="tl.user-input-answer"').length > 0 && "AccountDetail_Queue" !== document.getElementById("qName").value && $('input[name^="tl.user-input-answer"').attr("onkeypress", "return isNumberKey(event);");
+    }
+    if (($("#enrollSteps").length > 0 && n(), "undefined" != typeof CCVD.queryString().print)) {
+        $(".flow-section-toggle").hide(),
+            $(".flow-section-container").css("padding-left", "0%"),
+            $("#TU-Report").show(),
+            $("#CR-Personal").show(),
+            $("#CR-Contact").show(),
+            $("#CR-Employment").show(),
+            $("#CR-Accounts").show(),
+            $("#CR-Enquiries").show(),
+            $("#CR-Dispute").show(),
+            $("#TU-Reportone").show(),
+            $(".creditReportSinglePage").show(),
+            "true" == CCVD.queryString().print && $(".frow.data-row").addClass("is-active"),
+            $(".payment-status-wrapper").show(),
+            $(".flow-page-toggle").hide(),
+            $(".controlNo").hide();
+        new Date();
+        $(".flow-section-inner")
+            .first()
+            .prepend(
+                '<div class="sp-score-content"><div class="section-title-blue">' +
+                localizedString("CIBILScore") +
+                '</div><div class="sp-score-wrapper"><div class="sp-score">' +
+                (0 == scoreInNumeric ? "NA" : 1 == scoreInNumeric ? "NH" : ud.scores.creditvision.score) +
+                '</div><div class="sp-score-txt"></div></div></div>'
+            ),
+            $("#CreditReports:not(.disputeWrapper) .flow-section-inner")
+            .first()
+            .prepend("<div class='pageTextSmall webTokenhide'>" + localizedString("Date") + ud.scores.creditvision.date + " </div>"),
+            $("#CreditReports:not(.disputeWrapper) .flow-section-inner")
+            .first()
+            .prepend("<div class='pageTextSmall webTokenhide'>" + localizedString("ControlNumber") + Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en") + " </div>"),
+            $("#CreditReports:not(.disputeWrapper).flow-section-inner")
+            .first()
+            .prepend(
+                "false" !== CCVD.queryString().print ?
+                "<div class='pageTextSmall'>" +
+                localizedString("ControlNumber") +
+                Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en") +
+                "<div class='sp-con-num'>" +
+                localizedString("Superscript-Desc") +
+                "</div></div>" :
+                "<div class='pageTextSmall'>" + localizedString("ControlNumber") + Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en") + "</div>"
+            ),
+            $("#disputeHeaderInstructions").prepend("<div class='pageTextSmall'>" + localizedString("Date") + ud.scores.creditvision.date + " </div>"),
+            $("#disputeHeaderInstructions").prepend(
+                "false" !== CCVD.queryString().print ?
+                "<div class='pageTextSmall'>" + localizedString("ControlNumber") + Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en") + "<div class='sp-con-num'>" + localizedString("Superscript-Desc") + "</div></div>" :
+                "<div class='pageTextSmall'>" + localizedString("ControlNumber") + Number(ud.reportstu.ReferenceKey.CIBIL).toLocaleString("en")
+            ),
+            $(".superscript-desc").hide(),
+            $("#CreditReports:not(.disputeWrapper) .flow-section-inner")
+            .first()
+            .prepend("<h2 class='webTokenhide'>" + localizedString("CIBILScoreReport") + "</h2>"),
+            $("#disputeHeaderInstructions").prepend("<h2>" + localizedString("CIBILScoreReport") + " </h2>"),
+            $(".printLink").hide(),
+            $(".refreshalert").hide(),
+            $(".CibilVideo").parent().hide(),
+            $(".flow-section-inner").css("min-height", "0"),
+            $(".payment-status-table").show(),
+            "true" === CCVD.queryString().print ? $("#CR-Accounts-CreditRevolving").css("border", "solid 1.5px #EAEAEA") : $("#CR-Accounts-CreditRevolving").css("border", "none"),
+            $(".flow-section-container").css("min-height", "0"),
+            $(".flow-section-inner").css("border-left", "none"),
+            $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css("border-bottom", "solid 2px #EAEAEA"),
+            $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css("margin-left", "20px"),
+            $(".flow-section-inner").css("padding", "0px"),
+            $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css("margin-right", "33px"),
+            $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css("padding-bottom", "33px"),
+            $("#flow-section-inner-div").removeClass("flow-section-inner"),
+            $("#flow-section-inner-div").addClass("flow-section-inne-sp"),
+            $("#flow-section-inner").last().css("border-bottom", "none"),
+            "true" === CCVD.queryString().print ? $(".report-cell-inner").css("border", "none") : $(".report-cell-inner").css({ border: "solid 1.5px #EAEAEA", "margin-bottom": "20px" }),
+            $(".tfoot").css("text-align", "left"),
+            $(".tfoot").css("margin-right", "20%"),
+            $("#TU-Report").css("border-top", "none"),
+            $(".account-data-selectors").hide(),
+            $(".tactical-links").hide(),
+            $(".menu-links").hide(),
+            $(".support").hide(),
+            $(".byline").hide(),
+            $(".nav-links").css("box-shadow", "none"),
+            $(".nav-links").css("margin", "0"),
+            void 0 != reqpar["request-params"]["tl.productWebToken"] ?
+            ($("body, footer").css({ "background-color": "#ffffff" }),
+                $("#CR-Employment .report .report-table .thead").prepend('<p class="pTitle webTokenShow">Employment Data</p>'),
+                $("#CR-Accounts .report").prepend('<p class="pTitle webTokenShow">Accounts</p>'),
+                $("#CR-Enquiries .report").prepend('<p class="pTitle webTokenShow">Enquiry Summary</p>'),
+                $("#CR-Dispute .dispute").prepend('<p class="pTitle webTokenShow">Dispute Summary</p>'),
+                $(".webTokenShow").show(),
+                $("#CreditReports:not(.disputeWrapper) .section-title").css({ "font-weight": "300", "font-size": "24px", "padding-left": "15px" }),
+                $("#CreditReports:not(.disputeWrapper) .flow-section-inner").css({ "margin-top": "30px", "border-bottom": "none" }),
+                $("#CreditReports:not(.disputeWrapper) .flow-section-inne-sp").css({ "border-bottom": "none" }),
+                $(".inquiries-table").css({ "padding-left": "15px" }),
+                $(".flow-section-container").css("border-bottom", "solid 5px #EAEAEA"),
+                $(".report-table,.report-account-table .fcell, .report-account-table .fhcell, .report-table .fcell, .report-table .fhcell").css({ border: "none" }),
+                $(".report-table .tbody").css({ border: "1px solid #efefef" }),
+                $(".report-table .thead").css({ "margin-bottom": "15px" }),
+                $(".report-account-table .account-row .fcell, .report-account-table .account-row .fhcell, .report-table .report-row:nth-child(odd)").css({ background: "#f5f5f5" }),
+                $(".superscript-desc-google,.sp-copyright").hide(),
+                $(".superscript-desc-webtoken,.sp-copyright-webtoken").show(),
+                $(".prsnalInfoTitle").parent().addClass("personalDetails"),
+                $(".fhnoborder-table").css({ "padding-top": "0" }),
+                $(".modal-trigger,.report-account-table .account-row .fcell:first-child>div,.report-account-table .account-row .fhcell:first-child>div").addClass("removeModal"),
+                $("#modals").remove(),
+                $("main .chart-widgets").css({ margin: "0" }),
+                $(".pr-report").css({ "margin-top": "0" }),
+                $("#CR-Dispute").css({ "border-bottom": "none" }),
+                $(".alertmessage").addClass("disputePending"),
+                $(".alertmessage .inner-section-alert").text("Dispute pending"),
+                $(".alertmessage .inner-section-alert").next("br").remove()) :
+            ($("#CreditReports:not(.disputeWrapper) .section-title").css({ color: "#5cbae9", "font-weight": "500" }), $(".sp-copyright").show()),
+            $("account-row").css("cursor", "auto"),
+            $(".nav-links .menu").hide();
+        var O = getScoreText();
+        $(".sp-score-txt").html(O),
+            (reqpar["request-params"]["tl.dbGender"] = ud.reportstu.Gender.CIBIL),
+            "true" === CCVD.queryString().print && void 0 == reqpar["request-params"]["tl.productWebToken"] ? $(".sp-score-content").css("display", "block") : $(".sp-score-content").css("display", "none"),
+            "false" === CCVD.queryString().print ?
+            $(".sp-copyright").prepend(
+                '<div class="button-section"><span> <button type="button" class="button" id="dispButton" onclick="disputeAgreementPopup();">' +
+                localizedString("Dispute_DisputeSubmit") +
+                '</button> <span></span><div id="reset"><a href="javascript:window.location.reload();"><span class="link">' +
+                localizedString("Dispute_DisputeReset") +
+                '</span></a></div><span class="backToReport"><a href="/CreditView/creditreport.page?enterprise=' +
+                reqpar["request-params"]["tl.partner"] +
+                '"><span class="link">' +
+                localizedString("Dispute_DisputeBack") +
+                "</span></a></span></div>"
+            ) :
+            "";
+    }
+    var k = $("#deCityList");
+    if ((k.empty(), window.location.href.indexOf("dashboard.page") > -1 || window.location.href.indexOf("loanOffers.page") > -1 || window.location.href.indexOf("/interstitialLoanOffers.page") > -1))
+        for (var L in cities) k.append('<option value="' + cities[L].name + '"></option>');
+    if (($(".tab-content-mobile").find("div.tab-pane").addClass("active"), $(".creditReportSinglePage").length > 0 && $(".img-header").show(), window.location.href.indexOf("support.page") > -1 && "HDFCBANK" === currentEnterprise())) {
+        var T = urlParam("noOffers");
+        "true" === T &&
+            ($("div[rel=credit-basics]").addClass("is-active").siblings(".flow-section-toggle").removeClass("is-active"), $("#credit-basics").addClass("is-active").siblings(".flow-section-container").removeClass("is-active"));
+    }
+    var R = "";
+    (R = "undefined" != typeof siteInfo ? siteInfo.WebDomain : sessionStorage.getItem("siteInfoWebDomain")),
+    "" !== R &&
+        null !== R &&
+        "HDFCBANK" === currentEnterprise() &&
+        $("div.nav-links img").click(function(e) {
+            window.open(R, "_blank");
+        });
+});
 var dontShowIDInsuranceTab = ["SB1", "SB1A", "SB1B", "SB3", "SB3A", "SB5", "SB5A", "SB5B"];
 if (
     ("undefined" != typeof analytics.offer && dontShowIDInsuranceTab.indexOf(analytics.offer) > -1 && $("#theft-insurance-content").hide(),
@@ -18900,3239 +16462,5 @@ if (
 ($.urlParam = function(e) {
     var t = new RegExp("[?&]" + e + "=([^&#]*)").exec(window.location.href);
     return null == t ? null : decodeURI(t[1]) || 0;
-}),
-$(document).on("click", ".flow-page-toggle", function(e) {
-    var t = $(e.currentTarget),
-        r = t.attr("rel"),
-        n = t.hasClass("mobile-toggled-off");
-    if (
-        ($(".mobile-toggled-off").removeClass("mobile-toggled-off"),
-            t.hasClass("is-active") && !n && (t.addClass("mobile-toggled-off"), $("#" + r).addClass("mobile-toggled-off")),
-            $(".flow-page-container").removeClass("is-active"),
-            $("#" + r).addClass("is-active"),
-            $("#" + r + ".flow-section-toggle:first-of-type").click(),
-            $(".flow-page-toggle").removeClass("is-active"),
-            $('.flow-page-toggle[rel="' + r + '"]').addClass("is-active"),
-            $("#support").length > 0)
-    ) {
-        $("#" + r)
-            .find(".flow-section-toggle")
-            .removeClass("is-active");
-        var a =
-            "undefined" != typeof CCVD.queryString().subtab && "legal" === r ?
-            CCVD.queryString().subtab :
-            $("#" + r)
-            .find(".flow-section-toggle")
-            .first()
-            .attr("rel");
-        $("#" + a).addClass("is-active"), $(".flow-section-toggle[rel=" + a + "]").addClass("is-active");
-    }
-    $("#CreditReports").length > 0 &&
-        "CR-Summary" == r &&
-        generalGATracking(
-            "Post Login - Credit Report Section",
-            "Post Login - Credit Report Section - Credit Report Subsection - Summary Report SubSection",
-            "Post Login - Credit Report Section - Credit Report Subsection - Summary Report SubSection - Summary Report Tab Click"
-        );
-});
-var pageDefault = $(".flow-page-toggle.is-active").attr("rel") || "",
-    largs = new RegExp("[?&]page=([^&#]*)").exec(window.location.href) || [],
-    page = largs[1] || pageDefault;
-if (
-    ($('.flow-page-toggle[rel="' + page + '"]')
-        .first()
-        .click(),
-        $(".flow-page-container").on("click keydown", ".flow-section-toggle", function(e) {
-            var t = $(e.currentTarget),
-                r = t.closest(".flow-section-toggle"),
-                n = r.hasClass("mobile-toggled-off");
-            $(".flow-page-container .mobile-toggled-off").removeClass("mobile-toggled-off"),
-                r.hasClass("is-active") && !n && (r.addClass("mobile-toggled-off"), $("#" + t.attr("rel")).addClass("mobile-toggled-off")),
-                $(e.target).closest(".flow-page-container").find(".flow-section-container, .flow-section-toggle").removeClass("is-active"),
-                t.closest(".flow-section-toggle").addClass("is-active"),
-                $("#" + t.attr("rel")).addClass("is-active"),
-                $(".frow.data-row").removeClass("is-active"),
-                $(".account-row").removeClass("is-active"),
-                $(".data-row").hide();
-        }),
-        $(".flow-section-toggle.is-active").click(),
-        $(".flow-page-toggle.is-active").click(),
-        "undefined" != typeof CCVD.queryString().tab)
-) {
-    var tabClass = CCVD.queryString().tab;
-    $(".flow-page-toggle[rel=" + tabClass + "]").addClass("is-active"), $("#" + tabClass).addClass("is-active");
-    var subTabClass = "undefined" != typeof CCVD.queryString().subtab ? CCVD.queryString().subtab : $("#legal").find(".flow-section-toggle").first().attr("rel");
-    $("#" + subTabClass).addClass("is-active"), $(".flow-section-toggle[rel=" + subTabClass + "]").addClass("is-active");
-}
+})
 var offer_Id = "";
-if (
-    ("undefined" != typeof reqpar["request-params"]["tl.offer-id"] ?
-        (offer_Id = "" !== reqpar["request-params"]["tl.offer-id"] ? reqpar["request-params"]["tl.offer-id"] : reqpar["request-params"].offer) :
-        "undefined" != typeof analytics.offer && (offer_Id = analytics.offer),
-        (window.onload = function(e) {
-            function t(e) {
-                return e.stopPropagation ? e.stopPropagation() : window.event && (window.event.cancelBubble = !0), e.preventDefault(), !1;
-            }
-            if (
-                (e.preventDefault(),
-                    isLoggedIn &&
-                    !$("#dashboard").length &&
-                    "undefined" != typeof reqpar["request-params"]["tl.isMobileNumberTuefValid"] &&
-                    "false" == reqpar["request-params"]["tl.isMobileNumberTuefValid"] &&
-                    (window.location.href.indexOf("/V3_Interstitial.page") > 0 ||
-                        window.location.href.indexOf("/changePassword.page") > 0 ||
-                        window.location.href.indexOf("/interstitialLoanOffers.page") > 0 ||
-                        window.location.href.indexOf("/changePasswordSuccess.page") > 0 ||
-                        (window.location.href = "/CreditView/dashboard.page?enterprise=" + currentEnterprise())),
-                    window.location.href.indexOf("/dashboard.page") > 0 && (null == sessionStorage.getItem("sentGA") || "false" === sessionStorage.getItem("sentGA")))
-            ) {
-                var r = reqpar["request-params"]["tl.coupon_number"] || reqpar["request-params"]["tl.promoCode"],
-                    n = void 0 !== ud.reportstu.OfferHistoryData[1] ? ud.reportstu.OfferHistoryData[1].OfferCode : "N/A",
-                    a = analytics.loggedIn,
-                    i = window.grade,
-                    o = reqpar["request-params"]["tl.partner"],
-                    s = reqpar["request-params"]["tl.orderId"],
-                    l = void 0 === r ? "N/A" : r,
-                    d = today < expDate ? ud.reportstu.OfferHistoryData[0].OfferCode : "N/A",
-                    c = today >= expDate ? ud.reportstu.OfferHistoryData[0].OfferCode : n;
-                dataLayer.push({ logged: a, liveProduct: d, expiredProduct: c, ScoreRange: i, userID: s, SignupCode: l, enterprise: o }),
-                    sessionStorage.setItem("sentGA", "true"),
-                    sessionStorage.setItem("SESSION_REAL_TIME_DISPUTE_SUMMARY_RELOAD", "false");
-            }
-            if (
-                (window.location.href.indexOf("/login.page") > 0 &&
-                    (sessionStorage.setItem("sentGA", "false"),
-                        null !== localStorage.getItem("visitedFieldCheck") && localStorage.removeItem("visitedFieldCheck"),
-                        null !== localStorage.getItem("disputedFieldCheck") && localStorage.removeItem("disputedFieldCheck"),
-                        null !== localStorage.getItem("repeatDisputeFlag") && localStorage.removeItem("repeatDisputeFlag"),
-                        null !== localStorage.getItem("refreshAvail") && localStorage.removeItem("refreshAvail"),
-                        null !== localStorage.getItem("freeReportAvail") && localStorage.removeItem("freeReportAvail"),
-                        $("#login .forgotUsernameLink").click(function() {
-                            generalGATracking("Login Flow Actions", "Login Flow Actions -  Login Page Actions", "Login Flow Actions -  Login Page Actions - Forgot Username Click");
-                        }),
-                        $("#login .forgotPasswordLink").click(function() {
-                            generalGATracking("Login Flow Actions", "Login Flow Actions -  Login Page Actions", "Login Flow Actions -  Login Page Actions - Forgot Password Click");
-                        }),
-                        $("#login button").click(function() {
-                            generalGATracking("Login Flow Actions", "Login Flow Actions -  Login Page Actions", "Login Flow Actions -  Login Page Actions - Enter Login Click");
-                        }),
-                        sessionStorage.removeItem("SESSION_REAL_TIME_DISPUTE"),
-                        sessionStorage.removeItem("SESSION_REAL_TIME_DISPUTE_SUMMARY"),
-                        sessionStorage.setItem("SESSION_REAL_TIME_DISPUTE_SUMMARY_RELOAD", "false"),
-                        sessionStorage.setItem("SESSION_PROMO_CODE_ID", 0),
-                        sessionStorage.setItem("popupVisit", 0)),
-                    window.location.href.indexOf("/webtokenLogin.page") > 0 || (void 0 != reqpar["request-params"]["tl.productWebToken"] && window.location.href.indexOf("/creditreport.page") > 0))
-            ) {
-                var a = analytics.loggedIn;
-                (window.dataLayer = window.dataLayer || []), dataLayer.push({ logged: a, enterprise: reqpar["request-params"]["tl.partner"] });
-            }
-            $("#webLogin button").click(function() {
-                    generalGATracking("CCS Consumer Tracking", "CCS Consumer Tracking - CCS CR Login Page", "CCS Consumer Tracking - CCS CR Login Page - Click on Enter");
-                }),
-                $(".webPrintLink").click(function() {
-                    generalGATracking("CCS Consumer Tracking", "CCS Consumer Tracking - CCS CR Credit Report Page", "CCS Consumer Tracking - CCS CR Credit Report Page – Print Report Click");
-                }),
-                window.location.href.indexOf("acceptTerms") == -1 &&
-                void 0 != reqpar["request-params"]["tl.user_flow"] &&
-                "22" == reqpar["request-params"]["tl.legal_response_id"] &&
-                "NEW_TERMS_PAGE" == reqpar["request-params"]["tl.user_flow"] &&
-                (window.location.href = "/CreditView/acceptTerms.page?enterprise=" + currentEnterprise()),
-                (window.location.href.indexOf("/acceptTerms.page") > 0 || window.location.href.indexOf("/V3_Interstitial.page") > 0) &&
-                (window.matchMedia("(max-width: 768px)").matches ? $("header nav .nav-links a.menu").css("display", "none") : "",
-                    $("footer .byline nav").remove(),
-                    $("header .menu-links a").remove(),
-                    $("header .tactical-links a").first().hide()),
-                window.location.href.indexOf("/identityVerificationFailed.page") > 0 && $("header .tactical-links a").hide(), !(window.location.href.indexOf("/enrollShort.page") > 0 || window.location.href.indexOf("/enrollQuick.page") > 0) || ("CIBIL" !== currentEnterprise() && "ATLASPAY" !== currentEnterprise()) ?
-                "CIBIL" !== currentEnterprise() &&
-                "HDFCBANK" !== currentEnterprise() &&
-                (window.location.href.indexOf("/.page") > 0 || window.location.href.indexOf("/CreditView/?enterprise") > 0 ?
-                    (window.location.href = "/CreditView/login.page?enterprise=" + currentEnterprise()) :
-                    window.location.href.indexOf("/enroll") > 0 && "" === catalog.CatalogItems.BillingBundleId && (window.location.href = "/CreditView/Cond_InvalidOffer_Error.page?enterprise=" + currentEnterprise())) :
-                "" === catalog.CatalogItems.BillingBundleId && (window.location.href = "https://www.cibil.com/select-plan");
-            var u = $(".nav-links a.scoresimulator");
-            if (
-                ("undefined" != typeof ud &&
-                    "undefined" != typeof ud.reportstu &&
-                    (findElementExpDate(ud.reportstu.ComponentDetail, "Component", "CibilScoreSimulator") === !1 ? u.attr("href", "/CreditView/scoreSimulatorUpgrade.page?enterprise=" + currentEnterprise()) : ""),
-                    void 0 != apiKeys &&
-                    "" != apiKeys &&
-                    (isLoggedIn ?
-                        "undefined" != typeof ud && "undefined" != typeof ud.scores.creditvision.creditScoreModel && "CIBILTUSC3" === ud.scores.creditvision.creditScoreModel ?
-                        ($(".showV1score_content").remove(), $(".showV3refresh_content").remove()) :
-                        ($(".showV3score_content").remove(), $(".showV1refresh_content").remove()) :
-                        void 0 != apiKeys.ShowV3ScoreContent && "true" == apiKeys.ShowV3ScoreContent ?
-                        $(".showV1score_content").remove() :
-                        $(".showV3score_content").remove()),
-                    window.location.href.indexOf("/support.page") > 0 && "CIBIL" !== currentEnterprise() && "ATLASPAY" !== currentEnterprise() && $(".alertsFaq").remove(),
-                    "undefined" != typeof CCVD.queryString().tab)
-            ) {
-                var p = CCVD.queryString().tab;
-                $(".flow-page-toggle[rel=" + p + "]").addClass("is-active"), $("#" + p).addClass("is-active");
-                var h =
-                    "undefined" != typeof CCVD.queryString().subtab ?
-                    CCVD.queryString().subtab :
-                    $("#" + p)
-                    .find(".flow-section-toggle")
-                    .first()
-                    .attr("rel");
-                $("#" + h).addClass("is-active"), $(".flow-section-toggle[rel=" + h + "]").addClass("is-active");
-            }
-         
-              
-                window.location.href.indexOf("/V3_Interstitial.page") > 0 && $("#checkbox-value").val($("#neverShowCheck").val()),
-                (window.location.href.indexOf("/login") > 0 || window.location.href.indexOf("/enroll") > 0) &&
-                void 0 !== reqpar["request-params"]["tl.TrustevV2"] &&
-                "" !== reqpar["request-params"]["tl.TrustevV2"] &&
-                TrustevV2.Init(
-                    reqpar["request-params"]["tl.TrustevV2"],
-                    function(e) {
-                        $("#deviceVerificationToken").length > 0 && $("#deviceVerificationToken").val(e),
-                            window.location.href.indexOf("/login") > 0 &&
-                            $(document).on("click", "button", function(e) {
-                                $(".required").hasClass("error") ||
-                                    "" === $(".required").val() ||
-                                    ($("button").removeAttr("type"), $("#iovationDeviceVerificationToken").val(window.IGLOO.getBlackbox().blackbox), console.log(window.IGLOO.getBlackbox().blackbox), $("form").submit());
-                            });
-                    },
-                    1
-                ),
-                window.location.href.indexOf("/interstitialFree") > 0 &&
-                void 0 !== reqpar["request-params"]["tl.currentOfferId"] &&
-                "" !== reqpar["request-params"]["tl.currentOfferId"] &&
-                "FACRAA" !== reqpar["request-params"]["tl.currentOfferId"] &&
-                (window.location.href = "/CreditView/logout.page");
-        }),
-        $(document).on("click", ".refresh-score", function(e) {
-            $(".fx-modal-refresh-pop").css("display", "block"), $("#modal-wrapper").css("display", "block"), $("#modal-wrapper").css("background-color", "#f8f8f8d9");
-        }),
-        $("#Refresh a .icon").click(function() {
-            $(".fx-modal-refresh-pop").css("display", "none"), $("#modal-wrapper").css("display", "none"), $("#modal-wrapper").css("background-color", "");
-        }),
-        $(".closeModal.modal-action-alt").click(function() {
-            $(".fx-modal-refresh-pop").css("display", "none"), $("#modal-wrapper").css("display", "none");
-        }),
-        $(".closeModal.modal-alt-btn").click(function(e) {
-            $("#modals, #modals .modal-wrapper > div").hide();
-        }),
-        offer_Id.indexOf("T1D0R") >= 0 || (analytics.offer.indexOf("T1D0R") >= 0 && ("" === analytics.PaymentState || "Open" === analytics.PaymentState)))
-)
-    $(".free_refresh_eligible").css("display", "block"),
-    $(".free_refresh_uneligible").css("display", "none"),
-    $(".unlimited_offer").css("display", "none"),
-    null === localStorage.getItem("freeReportAvail") && localStorage.setItem("freeReportAvail", "true");
-else if ("undefined" != typeof ud && "undefined" != typeof ud.reportstu) {
-    var expDate = "",
-        fulfillmentDate = "";
-    $(".annual_free_report").hide();
-    for (var i = 0; i < ud.reportstu.ComponentDetail.length; i++) {
-        var expiryDate = ud.reportstu.ComponentDetail[i].ExpireDate,
-            day = expiryDate.substring(8, 10),
-            monthExp = expiryDate.substring(5, 7),
-            year = expiryDate.substring(0, 4),
-            finalExpiryDate = day + "/" + monthExp + "/" + year;
-        if ("Reports" === ud.reportstu.ComponentDetail[i].Group && "Annual" !== ud.reportstu.ComponentDetail[i].TimePeriod && "Once" !== ud.reportstu.ComponentDetail[i].TimePeriod) {
-            if (((expDate = convertDate(finalExpiryDate)), $(".annual_free_report").show(), today > expDate))
-                for (var x = 0; x < ud.reportstu.OfferHistoryData.length; x++) {
-                    var offerFree = startsWith(ud.reportstu.OfferHistoryData[x].OfferCode, "FACR") === !0;
-                    if (offerFree) {
-                        var dt = convertDate(ud.reportstu.OfferHistoryData[x].OfferCreationDate);
-                        fulfillmentDate = new Date(dt.getFullYear() + 1, dt.getMonth(), dt.getDate()).toLocaleDateString();
-                        var nextActionTime = fulfillmentDate.split("/"),
-                            d = new Date(new Date().getFullYear(), 0, 1),
-                            todayDt = new Date(d.getFullYear(), d.getMonth(), d.getDate()).toLocaleDateString(),
-                            nextRefreshDate = todayDt.split("/"),
-                            currentYr = nextRefreshDate[2];
-                        currentYr.toString();
-                        var yearInNumber = parseInt(currentYr);
-                        today >= d && (yearInNumber += 1),
-                            today.getFullYear() > dt.getFullYear() ?
-                            ($(".free_refresh_eligible").css("display", "block"),
-                                $(".free_refresh_uneligible").css("display", "none"),
-                                $(".unlimited_offer").css("display", "none"),
-                                null === localStorage.getItem("freeReportAvail") && localStorage.setItem("freeReportAvail", "true")) :
-                            ($(".free_refresh_eligible").css("display", "none"),
-                                $(".free_refresh_uneligible").css("display", "block"),
-                                $(".unlimited_offer").css("display", "none"),
-                                $(".next-free-annual-report").text("01/01/" + yearInNumber));
-                        break;
-                    }
-                    $(".free_refresh_eligible").css("display", "block"),
-                        $(".free_refresh_uneligible").css("display", "none"),
-                        $(".unlimited_offer").css("display", "none"),
-                        null === localStorage.getItem("freeReportAvail") && localStorage.setItem("freeReportAvail", "true");
-                }
-            else $(".unlimited_offer").css("display", "block"), $(".free_refresh_eligible").css("display", "none"), $(".free_refresh_uneligible").css("display", "none");
-            break;
-        }
-        if ("Reports" === ud.reportstu.ComponentDetail[i].Group && "Annual" === ud.reportstu.ComponentDetail[i].TimePeriod) {
-            $(".annual_free_report").show(), (fulfillmentDate = convertDateFullFillmentDate(ud.reportstu.ComponentDetail[i].NextFulfillmentDate));
-            var queryString1 = ud.reportstu.ComponentDetail[i].NextFulfillmentDate,
-                queryStrRes = queryString1.substring(0, 22),
-                fullfillmentDt = new Date(queryStrRes);
-            today >= fullfillmentDt ?
-                ($(".free_refresh_eligible").css("display", "block"),
-                    $(".free_refresh_uneligible").css("display", "none"),
-                    $(".unlimited_offer").css("display", "none"),
-                    null === localStorage.getItem("freeReportAvail") && localStorage.setItem("freeReportAvail", "true")) :
-                ($(".free_refresh_uneligible").css("display", "block"), $(".unlimited_offer").css("display", "none"), $(".free_refresh_eligible").css("display", "none"), $(".next-free-annual-report").append(fulfillmentDate));
-            break;
-        }
-    }
-}
-if (("ATLASPAY" == currentEnterprise() && $(".annual_free_report").remove(), $("#CreditReports").length > 0)) {
-    var daysOld = Math.floor((today - convertDate(ud.scores.creditvision.date)) / 864e5),
-        numberOfDays = daysOld == -1 ? 0 : daysOld;
-    $(".refreshalert").hide();
-    for (var i = 0; i < ud.reportstu.ComponentDetail.length; i++) {
-        if ("Reports" === ud.reportstu.ComponentDetail[i].Group && "Annual" === ud.reportstu.ComponentDetail[i].TimePeriod) {
-            $(".refreshalert").show(),
-                numberOfDays > 1 ?
-                $(".refreshalert").append(
-                    '<span class ="inner-section-alert">' +
-                    localizedString("RefreshDate_Part1") +
-                    numberOfDays +
-                    localizedString("RefreshDate_Part2_Plur") +
-                    ' <a href="upgradeSubscription.page?enterprise=' +
-                    currentEnterprise() +
-                    '"><span class="-hide-small">' +
-                    localizedString("BuyCreditReports") +
-                    "</span></a></span>"
-                ) :
-                $(".refreshalert").append(
-                    '<span class ="inner-section-alert">' +
-                    localizedString("RefreshDate_Part1") +
-                    numberOfDays +
-                    localizedString("RefreshDate_Part2_Sing") +
-                    ' <a href="upgradeSubscription.page?enterprise=' +
-                    currentEnterprise() +
-                    '"><span class="-hide-small">' +
-                    localizedString("BuyCreditReports") +
-                    "</span></a></span>"
-                );
-            break;
-        }
-        if ("Reports" === ud.reportstu.ComponentDetail[i].Group && "Annual" !== ud.reportstu.ComponentDetail[i].TimePeriod && "Once" !== ud.reportstu.ComponentDetail[i].TimePeriod) {
-            $(".refreshalert").show();
-            var queryString1 = ud.reportstu.ComponentDetail[i].NextFulfillmentDate,
-                queryStrRes = queryString1.substring(0, 22),
-                fulfillmentDate = new Date(queryStrRes),
-                expiryDate = ud.reportstu.ComponentDetail[i].ExpireDate,
-                day = expiryDate.substring(8, 10),
-                monthExp = expiryDate.substring(5, 7),
-                year = expiryDate.substring(0, 4),
-                finalExpiryDate = day + "/" + monthExp + "/" + year;
-            today >= fulfillmentDate && today < convertDate(finalExpiryDate) ?
-                numberOfDays > 1 ?
-                $(".refreshalert").append(
-                    '<span class ="inner-section-alert">' +
-                    localizedString("RefreshDate_Part1") +
-                    numberOfDays +
-                    localizedString("RefreshDate_Part2_Plur") +
-                    ' <a href="#" data-selenium="trigger-creditreport-refresh-score" class="refresh-score"><span class="-hide-small">' +
-                    localizedString("RefreshNow") +
-                    "</span></a></span>"
-                ) :
-                $(".refreshalert").append(
-                    '<span class ="inner-section-alert">' +
-                    localizedString("RefreshDate_Part1") +
-                    numberOfDays +
-                    localizedString("RefreshDate_Part2_Sing") +
-                    ' <a href="#" data-selenium="trigger-creditreport-refresh-score" class="refresh-score"><span class="-hide-small">' +
-                    localizedString("RefreshNow") +
-                    "</span></a></span>"
-                ) :
-                today >= fulfillmentDate && today > convertDate(finalExpiryDate) ?
-                "TUCIBIL" === currentEnterprise() ?
-                $(".refreshalert").html(
-                    '<span class ="inner-section-alert">This offer to access your CIBIL Score and Report has ended. To continue the access, please visit <a href="https://www.cibil.com" target="_blank"><span class="-hide-small">www.cibil.com</span></a></span>'
-                ) :
-                numberOfDays > 1 ?
-                $(".refreshalert").append(
-                    '<span class ="inner-section-alert">' +
-                    localizedString("RefreshDate_Part1") +
-                    numberOfDays +
-                    localizedString("RefreshDate_Part2_Plur") +
-                    ' <a href="upgradeSubscription.page?enterprise=' +
-                    currentEnterprise() +
-                    '"><span class="-hide-small">' +
-                    localizedString("BuyCreditReports") +
-                    "</span></a></span>"
-                ) :
-                $(".refreshalert").append(
-                    '<span class ="inner-section-alert">' +
-                    localizedString("RefreshDate_Part1") +
-                    numberOfDays +
-                    localizedString("RefreshDate_Part2_Sing") +
-                    '  <a href="upgradeSubscription.page?enterprise=' +
-                    currentEnterprise() +
-                    '"><span class="-hide-small">' +
-                    localizedString("BuyCreditReports") +
-                    "</span></a></span>"
-                ) :
-                $(".refreshalert").append(
-                    '<span class ="inner-section-alert">' +
-                    localizedString("Refresh_0_Day_Part1") +
-                    ' <span class="next-refresh-date"> ' +
-                    convertDateFullFillmentDate(ud.reportstu.ComponentDetail[i].NextFulfillmentDate) +
-                    " </span>" +
-                    localizedString("Refresh_0_Day_Part2") +
-                    "<span>"
-                );
-            break;
-        }
-    }
-    $(".print-account").css("display", "block");
-}
-$("#enrollPayment").length > 0 &&
-    "ATLASPAY" != currentEnterprise() &&
-    ("undefined" == typeof reqpar["request-params"]["tl.user_flow"] ||
-        ("ENROLL_FLOW" !== reqpar["request-params"]["tl.user_flow"] && "LEGAL_SUCCESS" !== reqpar["request-params"]["tl.user_flow"]) ||
-        ("hi" === sessionStorage.getItem("userLangPref") ?
-            $("footer nav").prepend('<a href="javascript:void(0);" onclick="replaceOffer();">मेरा निःशुल्क वार्षिक CIBIL स्कोर और रिपोर्ट दें</a>') :
-            "ta" === sessionStorage.getItem("userLangPref") ?
-            $("footer nav").prepend('<a href="javascript:void(0);" onclick="replaceOffer();">என் இலவச வருடாந்திர CIBIL மதிப்பெண் மற்றும் அறிக்கையைப் பெறவும்</a>') :
-            "te" === sessionStorage.getItem("userLangPref") ?
-            $("footer nav").prepend('<a href="javascript:void(0);" onclick="replaceOffer();">నా ఉచిత వార్షిక CIBIL స్కోర్ & నివేదిక అందించండి</a>') :
-            "be" === sessionStorage.getItem("userLangPref") ?
-            $("footer nav").prepend('<a href="javascript:void(0);" onclick="replaceOffer();">আমার বিনামূল্যের বার্ষিক CIBIL স্কোর ও রিপোর্ট আনুন</a>') :
-            $("footer nav").prepend('<a href="javascript:void(0);" onclick="replaceOffer();">Get my Free Annual CIBIL Score & Report</a>'))),
-    $("#marketplaceForm").click(function() {
-        $("#ecn").val(ud.reportstu.ReferenceKey.CIBIL), $("#score").val(ud.scores.creditvision.score), $("form").attr("action", reqpar["request-params"]["tl.mrktUrl"]), $("form").attr("target", "_blank"), $("form").submit();
-    }),
-    setTimeout(function() {
-        $("#confirmRefreshButton").off(),
-            $("#confirmRefreshButton").click(function(e) {
-                captureConfirmRefreshClickAndReemit(e);
-            });
-    }, 4e3),
-    $("#enrollVerifyIdentity #enroll-Submit").click(function() {
-        if ("IDM_KBA_Queue" === $("#qName").val() || "IDM_QnA_AGLib__KBA" === $("#qName").val()) {
-            var e, t;
-            for (e = 1; e <= 5; e++)
-                (t = !1),
-                $('input[name="tl.answer-key-' + e + '"]:checked').val() && (t = !0),
-                t ||
-                window.dataLayer.push({
-                    event: "EventTracking",
-                    eventCategory: "Form Event Field Missing/Skipped Step Verify Identity - " + $("#qName").val() + " form",
-                    eventAction: "question-key-" + e,
-                    eventLabel: "No Option Selected",
-                });
-        }
-    });
-var GetTuDateFormate = function(e) {
-        if (null != e && void 0 != e) {
-            var t = e.split("/"),
-                r = "" + t[2] + t[1] + t[0];
-            return r;
-        }
-        return null;
-    },
-    selectedIdenArray = [],
-    disputeArray = [],
-    disputeDpdArray = [],
-    selectedPersonalId = [];
-if (
-    ($(".disputeCheck").on("click", function(e) {
-            e.preventDefault(), $("#modals").css("display", "none"), $("#dispute_modal").hide();
-        }),
-        window.location.href.indexOf("/disputesuccess.page") > 0)
-) {
-    for (
-        var personalInformationArray = ["NAME", "DOB", "GENDER", "IDENTIFICATION_NUMBER"],
-            contactInformationArray = ["PHONE_NUMBER", "PHONE__EXTENTION", "EMAIL_ID", "ADDRESS", "ADDRESS_CATEGORY", "RESIDENCE_CODE"],
-            employmentInformationArray = ["OCCUPATION_CODE", "INCOME", "MONTHLY_ANNUAL_INCOME_INDICATOR", "NET_GROSS_INCOME_INDICATOR"],
-            accountInformationArray = [
-                "ACCOUNT_OWNERSHIP",
-                "ACCOUNT_MULTIPLE_TIMES",
-                "ACCOUNT_TYPE",
-                "OWNERSHIP_INDICATOR",
-                "CREDIT_LIMIT",
-                "HIGH_CREDIT_SANCTIONED_AMOUNT",
-                "CURRENT_BALANCE",
-                "CASH_LIMIT",
-                "AMOUNT_OVERDUE",
-                "RATE_OF_INTEREST",
-                "REPAYMENT_TENURE",
-                "EMI_AMOUNT",
-                "PAYMENT_FREQUENCY",
-                "ACTUAL_PAYMENT_AMOUNT",
-                "DATE_OPENED_DISBURSED",
-                "DATE_CLOSED",
-                "DATE_OF_LAST_PAYMENT",
-                "PAYMENT_HISTORY",
-                "VALUE_OF_COLLATERAL",
-                "TYPE_OF_COLLATERAL",
-                "SUIT_FILED_WILFUL_DEFAULT",
-                "WRITTEN_OFF_AMOUNT_TOTAL",
-                "SETTLEMENT_AMOUNT",
-                "WRITTEN_OFF_AND_SETTLED_STATUS",
-                "CREDIT_FACILITY_STATUS",
-                "WRITTEN_OFF_AMOUNT_PRINCIPAL",
-                "CITY_LOAN_ORIGINATED_IN",
-            ],
-            enquiryInformationArray = ["ENQUIRY_OWNERSHIP", "ENQUIRY_PURPOSE", "ENQUIRY_AMOUNT"],
-            jsonResponse = reqpar["request-params"]["tl.disputeResponse"],
-            decodedResponse = JSON.parse(jsonResponse.replace(/&quot;/g, '"')),
-            code = decodedResponse.data.disputeCode,
-            disputeSuccess = !1,
-            i = 0; i < decodedResponse.data.disputedField.length; i++
-    ) {
-        var status = decodedResponse.data.disputedField[i].status;
-        if ("SUCCESS" == status) {
-            disputeSuccess = !0;
-            break;
-        }
-    }
-    disputeSuccess && $("#disputeSuccess").html("Dispute submitted successfully via " + code);
-    for (var failureHead = !1, i = 0; i < decodedResponse.data.disputedField.length; i++) {
-        var status = decodedResponse.data.disputedField[i].status;
-        if ("FAILURE" == status) {
-            failureHead = !0;
-            break;
-        }
-    }
-    if (failureHead) {
-        var divHeadContainer = document.getElementById("failureHead");
-        divHeadContainer.innerHTML = "Unable to Submit Dispute for:";
-    }
-    sectionTableSuccess("personalInfoSuccess", "Personal Information", personalInformationArray, decodedResponse),
-        sectionTableSuccess("contactInfoSuccess", "Contact Information", contactInformationArray, decodedResponse),
-        sectionTableSuccess("employmentInfoSuccess", "Employment Information", employmentInformationArray, decodedResponse),
-        sectionTableSuccess("accountInfoSuccess", "Account Information", accountInformationArray, decodedResponse),
-        sectionTableSuccess("inquiryInfoSuccess", "Enquiry Information", enquiryInformationArray, decodedResponse),
-        sectionTableFailure("personalInfoFailure", "Personal Information", personalInformationArray, decodedResponse),
-        sectionTableFailure("contactInfoFailure", "Contact Information", contactInformationArray, decodedResponse),
-        sectionTableFailure("employmentInfoFailure", "Employment Information", employmentInformationArray, decodedResponse),
-        sectionTableFailure("accountInfoFailure", "Account Information", accountInformationArray, decodedResponse),
-        sectionTableFailure("inquiryInfoFailure", "Enquiry Information", enquiryInformationArray, decodedResponse);
-    var date = new Date(),
-        month = date.getMonth() + 1;
-    $("#statusMessage").first().append('<div class="datesum"><center><u>Dispute Summary</u></center><br></div>'),
-        $("#statusMessage")
-        .first()
-        .prepend("<div class='datetest'>Date : " + date.getDate() + "/" + month + "/" + date.getFullYear() + " </div><br>"),
-        $("#statusMessage").append("<div>We suggest printing this page for your records. You will also receive an email confirmation.</div><div><br> <hr /></div>").css("font-size", "15px");
-    var url = new URL(window.location.href),
-        enterpriseName = url.searchParams.get("enterprise");
-    $("a#btn-dispute-cr").attr("href", "/CreditView/creditreport.page?enterprise=" + enterpriseName);
-}
-var iCountSplit, hiddenState;
-if (
-    ("undefined" != typeof document.hidden ? (hiddenState = "hidden") : "undefined" != typeof document.msHidden ? (hiddenState = "msHidden") : "undefined" != typeof document.webkitHidden && (hiddenState = "webkitHidden"),
-        "undefined" != typeof ud)
-) {
-    var idleTimeoutSeconds = 3e3,
-        idleTimeoutPromptSeconds = 600,
-        notIdleTimeoutPromptSeconds = 540,
-        idleSecondsCounter = 0,
-        notIdleSecondsCounter = 0,
-        sessionIdleTimeoutInSeconds = 900,
-        sessionIdleSecondCounter = 0,
-        enterpriseName = currentEnterprise();
-    $(document).on("click mousemove keypress touchstart", function() {
-            notIdleSecondsCounter >= notIdleTimeoutPromptSeconds && (showSessionData(), (notIdleSecondsCounter = 0)), (sessionIdleSecondCounter = 0), (idleSecondsCounter = 0);
-        }),
-        window.setInterval(startIdleTimer, 1e3),
-        setInterval(function() {
-            document[hiddenState] && ((sessionIdleSecondCounter = 0), (idleSecondsCounter = 0));
-        }, 1e3);
-}
-if (
-    ("false" === CCVD.queryString().print &&
-       
-        $("#enrollPayment").length > 0)
-) {
-    var offerId = reqpar["request-params"]["tl.offer-id"];
-    $("body").append('<div id="offerId" class="hideme">' + offerId + "</div>"),
-        $("#enroll-Submit").click(function() {
-            dataLayer.push({ event: "EventTracking", eventCategory: "Form Event - Payment Page", eventAction: "Click on Proceed To Payment Button", eventLabel: "Proceed To Payment Button - " + offerId });
-        });
-}
-var offersObj = void 0 !== reqpar["request-params"]["tl.deOffers"] && "" !== reqpar["request-params"]["tl.deOffers"] ? JSON.parse(reqpar["request-params"]["tl.deOffers"].replace(/&quot;/g, '"').replace(/\\/g, "\\\\")) : {},
-    productName = "CreditCard";
-if ("true" === reqpar["request-params"]["tl.targetedOffersEnabled"])
-    if (
-        (window.location.href.indexOf("dashboard.page") > -1 || window.location.href.indexOf("loanOffers.page") > -1) &&
-        "undefined" != typeof ud &&
-        "undefined" != typeof ud.reportstu &&
-        "INDIA_DE_ADS" === ud.reportstu.BenefitsBundle[0].Benefit
-    )
-        if (
-            ($("#DE-chart-model").css("display", "block"),
-                void 0 !== reqpar["request-params"]["tl.deCity"] || (void 0 !== reqpar["request-params"]["tl.deOffers"] && "" !== reqpar["request-params"]["tl.deOffers"] && !$.isEmptyObject(offersObj.Offers)))
-        ) {
-            if (void 0 !== reqpar["request-params"]["tl.deOffers"] && $.isEmptyObject(offersObj.Offers) && void 0 !== reqpar["request-params"]["tl.deCity"])
-                window.matchMedia("(max-width: 600px)").matches ? $(".noOffersDisplay").css("display", "inline-block") : $(".noOffersDisplay").css("display", "block"),
-                $(".deHeaderLinks").removeClass("deLinksshow"),
-                $(".offers-form").css("display", "none"),
-                $("#exTab3").css("display", "none");
-            else if (!$.isEmptyObject(offersObj.Offers)) {
-                $(".noOffersDisplay").css("display", "none"),
-                    $(".deHeaderLinks").removeClass("deLinksshow"),
-                    $(".offers-form").css("display", "none"),
-                    $("#exTab3").css("display", "block"),
-                    $("#mySelect").on("change", function(e) {
-                        var t = $("option:selected", this);
-                        t.tab("show");
-                    }),
-                    $(".dropdown img.flag").addClass("flagvisibility"),
-                    $(".dropdown dt a").click(function() {
-                        $(".options-div").toggle();
-                    }),
-                    $(".mobilesel-options div").click(function() {
-                        if ($(this).parents().hasClass("noOffers")) $(this).find("a").attr("href", "javascript:void(0);");
-                        else {
-                            var e = $(this).find("a").html(),
-                                t = $(this).next("div").html();
-                            $(".dropdown dt a span").html(e), $(".mobilesel .selnum").html(t), $(".options-div").toggle();
-                            var r = getSelectedValue("sample");
-                            (productName = getSelectedValue("sample")),
-                            $("#offersTableBodyMobile").html(""),
-                                $(".sortOptions").css("display", "none"),
-                                offersObj.Offers.forEach(function(e) {
-                                    $("#offersTableBodyMobile").append(populateMobileData(e, r));
-                                }),
-                                $(".tab-content-mobile").find("div.tab-pane").addClass("active"),
-                                void 0 !== $(".mobilesel").find(".value")[0].innerText && $(".mobilesel").removeClass().addClass("mobilesel").addClass($(".mobilesel").find(".value")[0].innerText);
-                        }
-                    }),
-                    $(document).bind("click", function(e) {
-                        var t = $(e.target);
-                        t.parents().hasClass("dropdown") || $(".dropdown dd ul").hide(), $(".options-div").is(":visible") ? $(".glyphicon.glyphicon-filter").hide() : $(".glyphicon.glyphicon-filter").show();
-                    }),
-                    $(".dropdown img.flag").toggleClass("flagvisibility"),
-                    setSelectedValue(),
-                    $("#sortDropDown").click(function() {
-                        $(".sort-select").trigger("click");
-                    });
-                var countCC = 0,
-                    countPC = 0,
-                    countBC = 0,
-                    countHC = 0,
-                    countLAC = 0,
-                    countAL = 0,
-                    countGL = 0;
-                for (var prop in offersObj.Offers) {
-                    if ("CreditCard" === offersObj.Offers[prop].Product) var displayCol = ["PartnerName", "A3", "A4", "A2"];
-                    else var displayCol = ["PartnerName", "A3", "A4", "InterestType", "A2"];
-                    "CreditCard" === offersObj.Offers[prop].Product && ($("#offersTableBody").append(populateTable(offersObj.Offers[prop])), (countCC += 1)),
-                        "PersonalLoan" === offersObj.Offers[prop].Product && ($("#personalOffersTableBody").append(populateTable(offersObj.Offers[prop])), (countPC += 1)),
-                        "BusinessLoan" === offersObj.Offers[prop].Product && ($("#businessOffersTableBody").append(populateTable(offersObj.Offers[prop])), (countBC += 1)),
-                        "HomeLoan" === offersObj.Offers[prop].Product && ($("#homeOffersTableBody").append(populateTable(offersObj.Offers[prop])), (countHC += 1)),
-                        "LoanAgainstProperty" === offersObj.Offers[prop].Product && ($("#loanAganistPropertyOffersTableBody").append(populateTable(offersObj.Offers[prop])), (countLAC += 1)),
-                        "AutoLoan" === offersObj.Offers[prop].Product && ($("#autoOffersTableBody").append(populateTable(offersObj.Offers[prop])), (countAL += 1)),
-                        "GoldLoan" === offersObj.Offers[prop].Product && ($("#goldOffersTableBody").append(populateTable(offersObj.Offers[prop])), (countGL += 1)),
-                        $("#offersTableBodyMobile").append(populateMobileData(offersObj.Offers[prop], "CreditCard")),
-                        $(".tab-content-mobile").find("div.tab-pane").addClass("active");
-                }
-                $(".creditCount").text(countCC),
-                    $(".personalCount").text(countPC),
-                    $(".businessCount").text(countBC),
-                    $(".homeCount").text(countHC),
-                    $(".loanAganistcount").text(countLAC),
-                    $(".autoCount").text(countAL),
-                    $(".goldCount").text(countGL),
-                    $(function() {
-                        $(".cardTable").dataTable({ bPaginate: !1, bLengthChange: !1, bFilter: !0, bInfo: !1, bAutoWidth: !1, searching: !1, order: [], columnDefs: [{ targets: [1], orderSequence: ["desc", "asc"] }] });
-                    }),
-                    $(".mobilesel-options").hover(
-                        function() {
-                            $(this).find("div.select-style").css("background", "#deded7");
-                        },
-                        function() {
-                            $(this).find("div.select-style").css("background", "#ffff");
-                        }
-                    ),
-                    $(".mobileSort").click(function() {
-                        1 == count ?
-                            ("CreditCard" == productName ?
-                                ($("#changeContent1").html(localizedString("DE_Tentativecreditlimitoffered")),
-                                    $("#changeContent2").html(localizedString("DE_Monthlyinterestrate")),
-                                    $("#changeContent3").html(localizedString("DE_Annualfees")),
-                                    $("#changeContent4").css("display", "none")) :
-                                ($("#changeContent1").html(localizedString("DE_Loanupto")),
-                                    $("#changeContent2").html(localizedString("DE_Interestrate")),
-                                    $("#changeContent4").css("display", "block"),
-                                    $("#changeContent3").html(localizedString("DE_Monthlyinterestrate"))),
-                                $(".sortOptions").css("display", "block"),
-                                count--) :
-                            ($(".sortOptions").css("display", "none"), count++);
-                    }),
-                    $("#closeBtn").click(function() {
-                        $(".sortOptions").toggle();
-                    }),
-                    "CreditCard" === $(".mobilesel").find(".value")[0].innerText && $(".mobilesel").addClass("CreditCard"),
-                    window.dataLayer.push({
-                        event: "EventTracking",
-                        eventCategory: "Post Login – " + (window.location.href.indexOf("/dashboard.page") > 0 ? "Dasboard" : "Loan") + " Section",
-                        eventAction: "Post Login – " + (window.location.href.indexOf("/dashboard.page") > 0 ? "Dasboard" : "Loan") + " - Offers SubSection",
-                        eventLabel: "Offers Displayed CC – " +
-                            $(".nav .creditCount").text().split(" ")[0] +
-                            ", PL – " +
-                            $(".nav .personalCount").text().split(" ")[0] +
-                            ", BL – " +
-                            $(".nav .businessCount").text().split(" ")[0] +
-                            ", HL – " +
-                            $(".nav .homeCount").text().split(" ")[0] +
-                            ", LAP – " +
-                            $(".nav .loanAganistcount").text().split(" ")[0] +
-                            ", CL – " +
-                            $(".nav .autoCount").text().split(" ")[0] +
-                            ", GL - " +
-                            $(".nav .goldCount").text().split(" ")[0],
-                    });
-            }
-        } else $(".noOffersDisplay").css("display", "none"), $(".offers-form").css("display", "block"), $("#exTab3").css("display", "none");
-else
-    "undefined" != typeof ud &&
-    "undefined" != typeof ud.reportstu &&
-    findElementJson(ud.reportstu.BenefitsBundle, "Benefit", "INDIA_DFP_ADS") &&
-    ($("#enableDFP").css("display", "block"), $(".lender-banks").css("display", "block"), $(".lender-section").css("display", "block"));
-else
-    (("false" === reqpar["request-params"]["tl.targetedOffersEnabled"] && "CIBIL" === reqpar["request-params"]["tl.partner"]) ||
-        "HDFCLtd" === reqpar["request-params"]["tl.partner"] ||
-        "HDFCBANK" === reqpar["request-params"]["tl.partner"] ||
-        "RBL" === reqpar["request-params"]["tl.partner"] ||
-        "SBICARD" === reqpar["request-params"]["tl.partner"] ||
-        "DIGILOCKER" === reqpar["request-params"]["tl.partner"]) &&
-    ($("#enableDFP").css("display", "block"), $(".lender-banks").css("display", "block"), $(".lender-section").css("display", "block"));
-if (
-    void 0 !== apiKeys.debtOffers &&
-    "true" === apiKeys.debtOffers &&
-    "undefined" != typeof ud &&
-    "undefined" != typeof ud.reportstu &&
-    findElementJson(ud.reportstu.BenefitsBundle, "Benefit", "DEBT_SETTLEMENT_OFFERS") &&
-    !$.isEmptyObject(offersObj.DebtSettlements)
-) {
-    $(".debtSection").removeClass("hideme");
-    var debtOfferContent = "",
-        debtOffers = offersObj.DebtSettlements;
-    $(".debtOptions").html(debtOffers.length + "<span> " + localizedString("debtoptions") + "</span>"), (debtOfferContent += '<div class="carousel Site">');
-    for (var i = 0; i < debtOffers.length; i++)
-        debtOfferContent +=
-        '<div class="debtDetails"><div class="lenderInfo"><div class="lenderName"><p>' +
-        localizedString("Lender") +
-        " <br /><span>" +
-        debtOffers[i].PartnerName +
-        '</span></p></div><div><img class="debtAcctImg lenderImg"  src="' +
-        debtOffers[i].OfferLogoId +
-        '"></div></div><div>' +
-        localizedString("AccountNumber") +
-        " <br/> <span>" +
-        debtOffers[i].Accountnumber +
-        '</span></div><div class="acctStatus">' +
-        localizedString("Status") +
-        " <br/><span> " +
-        debtOffers[i].InterestType +
-        '</span></div><div class="statusCol"><div class="statusInfo"><div><img src="/sites/CreditView/assets/images/TU_Error.png" class="error-img" alt="Error"></div><div>' +
-        localizedString("debtNegative") +
-        '</div></div><div class="buttonCol" onclick="showMoreDebtDetails(this)" data-tuiUrl="' +
-        debtOffers[i].TUIURL +
-        '" data-partnerName="' +
-        debtOffers[i].PartnerName +
-        '" data-product="' +
-        debtOffers[i].Product +
-        '"><button type="submit" class="button modal-trigger" id="settleDebt" data-modal="settle-debt">' +
-        localizedString("SettleDEBT") +
-        "</button></div></div></div>";
-    (debtOfferContent += "</div>"), $("#debtSettlAccounts").html(debtOfferContent);
-}
-"CIBIL" == reqpar["request-params"].enterprise ||
-    "CIBIL" == reqpar["request-params"]["tl.partner"] ||
-    "DIGILOCKER" == reqpar["request-params"].enterprise ||
-    "DIGILOCKER" == reqpar["request-params"]["tl.partner"] ||
-    "SIDBI" == reqpar["request-params"].enterprise ||
-    "SIDBI" == reqpar["request-params"]["tl.partner"] ?
-    $("#exTab3 ul li h3").each(function(e) {
-        0 == $(this).text().split(" ")[0] && ($(this).parents("li").addClass("noOffers").removeClass("active"), $(".noOffers a").attr("href", "#"));
-    }) :
-    $("#exTab3 ul li .scvdLabelCount").each(function(e) {
-        0 == $(this).text().split(" ")[0] && ($(this).parents("li").addClass("noOffers").removeClass("active"), $(".noOffers a").attr("href", "#")), $(this).text().split(" ")[0].length > 1 && $(this).css("padding", "5px 3px");
-    }),
-    $("li").hasClass("scvdLi") ? $('li:not([class]),li[class=""],li[class="active"],li[class="scvdLi"]').first().addClass("active") : $('li:not([class]),li[class=""],li[class="active"]').first().addClass("active"),
-    $(".tab-pane").hasClass("active") &&
-    ($(".tab-pane").removeClass("active"), $("li").hasClass("scvdLi") ? $($('li[class ="scvdLi active"] a').attr("href")).addClass("active") : $($('li[class ="active"] a').attr("href")).addClass("active"));
-for (var loanList = $(".options-div .mobilesel-options h3"), i = 0; i < loanList.length; i++)
-    "0" === loanList[i].innerText.split(" ")[0] && ($(loanList[i]).parents('div[class="mobilesel-options"]').addClass("noOffers"), $(".noOffers a").attr("href", "#"));
-for (var i = 0; i < loanList.length; i++)
-    if ("0" != loanList[i].innerText.split(" ")[0] && "" != loanList[i].innerText.split(" ")[0]) {
-        $(".options-div").toggle(), $(loanList[i]).parents('div[class="mobilesel-options"]')[0].firstElementChild.click();
-        break;
-    }
-if (
-    ($("li.noOffers").click(function() {
-            return !1;
-        }),
-        $("#exTab3 li:not(.noOffers)").click(function() {
-            event.preventDefault(), event.stopPropagation(), $(this).addClass("active").siblings().removeClass("active");
-            var e = $(this).find("a").attr("href");
-            $(e).addClass("active").siblings().removeClass("active");
-        }),
-        $(".cityFocus,#deCity-flexdatalist").on("click", function() {
-            var e = $("#deCity").val();
-            $("#deCity-flexdatalist").val("").val(e).keyup(), window.location.href.indexOf("/interstitialLoanOffers.page") > 0 && $("#deCity-flexdatalist-results").css("max-height", "185px");
-        }),
-        $(".updateCityFocus,#editCity-flexdatalist").on("click", function() {
-            var e = $("#editCity-flexdatalist").val();
-            $("#editCity-flexdatalist").val("").val(e).keyup();
-        }),
-        $(".empFocus").click(function() {
-            var e = $("#deEmployment").val();
-            $("#deEmployment").val(""), $("#deEmployment-flexdatalist").focus(), $("#deEmployment").val(e);
-        }),
-        $(".updateEmpFocus").click(function() {
-            var e = $("#editEmployment").val();
-            $("#editEmployment").val(""), $("#editEmployment-flexdatalist").focus(), $("#editEmployment").val(e);
-        }),
-        $(".incomeNum").keypress(function(e) {
-            (event.which < 48 || event.which > 57) && event.preventDefault();
-        }),
-        $("#Profile-ChangePassword button").click(function(e) {
-            ("" != $("#profile-Password-Old").val() && "" != $("#profile-Password-New").val() && "" != $("#profile-Password-Confirm").val()) || $("#profile-Password-Old,#profile-Password-New,#profile-Password-Confirm").addClass("required");
-        }),
-        $("#help3 button").click(function(e) {
-            ("" != $("#enroll-Password").val() && "" != $("#help-Password1").val() && "" != $("#help-Password-Confirm1").val()) || $("#enroll-Password,#help-Password1,#help-Password-Confirm1").addClass("required");
-        }),
-        ($("#billBreakdown").length > 0 || $("#enrollPayment").length > 0) && billBreakdown(),
-       
-        $(document).ready(function() {
-            $(".showPopup").on("click", function(e) {
-                e.stopPropagation(), $(".popuptext").hasClass("show") && $(".popuptext").removeClass("show");
-                var t = $(this).parent().next().attr("id"),
-                    r = document.getElementById(t);
-                r.classList.toggle("show");
-            });
-        }),
-        $("body").click(function() {
-            if ($(".popuptext").hasClass("show")) {
-                var e = event.target.offsetParent.className;
-                e.includes("popuptext") || $(".popuptext").removeClass("show");
-            }
-        }),
-      
-        $(document).ready(function() {
-            if (
-                (window.location.href.indexOf("/login") > 0 && $("#loginButton").removeAttr("disabled"),
-                    (window.location.href.indexOf("/enrollShort.page") > 0 ||
-                        window.location.href.indexOf("/enrollQuick.page") > 0 ||
-                        window.location.href.indexOf("/enrollShortAdd.page") > 0 ||
-                        window.location.href.indexOf("/enrollQuickAdd.page") > 0 ||
-                        window.location.href.indexOf("/additionalInfo.page") > 0 ||
-                        window.location.href.indexOf("/enrollOffer.page") > 0 ||
-                        window.location.href.indexOf("/enrollOfferAdd.page") > 0 ||
-                        window.location.href.indexOf("/enrollConsolidated.page") > 0 ||
-                        window.location.href.indexOf("/forgotUsername.page") > 0) &&
-                    ($("#vMid input").on("keyup", function(e) {
-                            $(this).val().length == $(this).attr("maxlength") && $(this).nextAll(".dob:first").focus();
-                        }),
-                        "undefined" != typeof failureInfo && "undefined" != typeof failureInfo.reason && "INVALID_PINCODE" === failureInfo.reason))
-            ) {
-                $("#enroll-Pin-Current").removeClass("ok").addClass("error").attr("data-error", "Invalid-Pincode"), $("#enroll-Pin-Current").nextAll().addClass("error").append(localizedString("ValidPincode"));
-                const e = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dbEmailAU"] : reqpar["request-params"]["tl.email-address"];
-                $("#enroll-EmailAddress").val(e);
-                const t = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dobYearAU"] : reqpar["request-params"]["tl.dobYear"];
-                $("#enroll-DateOfBirth-Year").val(t);
-                const r = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dobDayAU"] : reqpar["request-params"]["tl.dobDay"];
-                $("#enroll-DateOfBirth-Day").val(r);
-                const n = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dobMonthAU"] : reqpar["request-params"]["tl.dobMonth"];
-                $("#enroll-DateOfBirth-Month").val(n);
-                const a = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dbidentifierNameAU"] : reqpar["request-params"]["tl.identifierName"];
-                $("#enroll-Identity-Current").val(a);
-                const i = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dbIdentifierIdAU"] : reqpar["request-params"]["tl.identifierId"];
-                $("#enroll-IdentifierID").val(i);
-                const o = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.phoneNumberAU"] : reqpar["request-params"]["tl.phoneNumber"];
-                $("#enroll-MobileTelephone").val(o);
-                const s = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dbFNameAU"] : reqpar["request-params"]["tl.first-name"];
-                $("#enroll-FirstName").val(s);
-                const l = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dbLNameAU"] : reqpar["request-params"]["tl.last-name"];
-                $("#enroll-LastName").val(l), $("#enroll-Password").val(reqpar["request-params"]["tl.pvalue"]);
-                const d = window.location.href.indexOf("/additionalInfo.page") > 0 ? reqpar["request-params"]["tl.dbPostalCodeAU"] : reqpar["request-params"]["tl.curr-zip-code"];
-                $("#enroll-Pin-Current").val(d);
-            }
-            if ("HDFCBANK" === currentEnterprise() && ("HDFCBANK01" === offer_Id || "HDFCBANK02" === offer_Id) && (window.location.href.indexOf("/enrollConsolidated.page") > 0 || window.location.href.indexOf("/enroll.page") > 0)) {
-                var c = window.location.pathname,
-                    u = c.split("/").pop().replace(".page", "");
-                window.location.href = "/CreditView/" + u + ".page?enterprise=HDFCBANK&offer=HDFCBANK03";
-            }
-            if ("RBL" === currentEnterprise() && "RBL03" != offer_Id && (window.location.href.indexOf("/enrollConsolidated.page") > 0 || window.location.href.indexOf("/enroll.page") > 0)) {
-                var c = window.location.pathname,
-                    u = c.split("/").pop().replace(".page", "");
-                window.location.href = "/CreditView/" + u + ".page?enterprise=RBL&offer=RBL03";
-            }
-            if ("SBICARD" === currentEnterprise() && "SBICARD02" != offer_Id && (window.location.href.indexOf("/enrollConsolidated.page") > 0 || window.location.href.indexOf("/enroll.page") > 0)) {
-                var c = window.location.pathname,
-                    u = c.split("/").pop().replace(".page", "");
-                window.location.href = "/CreditView/" + u + ".page?enterprise=SBICARD&offer=SBICARD02";
-            }
-            if (
-                (window.location.href.indexOf("enterprise") > 0 &&
-                    void 0 !== reqpar["request-params"].enterprise &&
-                    isLoggedIn &&
-                    reqpar["request-params"].enterprise.toUpperCase() !== urlParam("enterprise").toUpperCase() &&
-                    (scoreSimLogOut(),
-                        "true" === reqpar["request-params"]["tl.sso_offer"] ?
-                        (document.location.href = "/CreditView/ssologout.page?enterprise=" + reqpar["request-params"].enterprise + "&session=false") :
-                        (document.location.href = "/CreditView/logout.page?enterprise=" + reqpar["request-params"].enterprise + "&session=false")),
-                    void 0 != reqpar["request-params"]["tl.productWebToken"] && ("undefined" != typeof CCVD.queryString().print ? $(".webtokenNH").remove() : $(".webtokenPrintNH").remove()),
-                    "CIBIL" != currentEnterprise() &&
-                    $("#profile").length > 0 &&
-                    "undefined" != typeof ud &&
-                    "undefined" != typeof ud.reportstu &&
-                    (findElementJson(ud.reportstu.ComponentDetail, "Component", "TransUnionMonitoring") === !0 ?
-                        ($(".nonAlertAcctUpdate").remove(), $(".flow-tab-wrapper .flow-page-toggle.-main.is-active").css("background-color", "#fff"), $("#profile section").css("padding", "0 0 0 30%"), $(".alertAcctUpdate").show()) :
-                        ($(".alertAcctUpdate").remove(), $(".nonAlertAcctUpdate").show())),
-                    "CIBIL" !== currentEnterprise())
-            ) {
-                var p = "/sites/CreditView/assets/images/DEIcon/" + currentEnterprise() + "/View.png",
-                    h = "/sites/CreditView/assets/images/DEIcon/" + currentEnterprise() + "/right-arrow-icon.png",
-                    f = "/sites/CreditView/assets/images/DEIcon/" + currentEnterprise() + "/Compare.png",
-                    m = "/sites/CreditView/assets/images/DEIcon/" + currentEnterprise() + "/Apply.png";
-                $("#imgView").attr("src", p), $(".imgArrow").attr("src", h), $("#imgCompare").attr("src", f), $("#imgApply").attr("src", m);
-            }
-            if (
-                ((("CIBIL" === currentEnterprise() && $("#enrollShort").length > 0) || ("CIBIL" === currentEnterprise() && $("#enrollQuick").length > 0)) &&
-                    (startsWith(reqpar["request-params"]["tl.offer-id"], "FACR") ? $(".freeOffHeaderTxt").show() : $(".othrOffHeaderTxt").show(),
-                        window.matchMedia("(max-width: 480px)").matches || startsWith(reqpar["request-params"]["tl.offer-id"], "FACR") ?
-                        $(".enrollBanner").remove() :
-                        reqpar["request-params"]["tl.offer-id"].includes("1Y") || reqpar["request-params"]["tl.offer-id"].includes("6M") || reqpar["request-params"]["tl.offer-id"].includes("1M") ?
-                        "hi" === sessionStorage.getItem("userLangPref") ?
-                        $(".enrollBanner aside").html("<img class='' src=/sites/CreditView/assets/images/LandingBanner/CIBIL_hi_" + reqpar["request-params"]["tl.offer-id"] + "_Offer.jpg alt='CIBIL Offer Banner' />") :
-                        $(".enrollBanner aside").html("<img class='' src=/sites/CreditView/assets/images/LandingBanner/CIBIL_" + reqpar["request-params"]["tl.offer-id"] + "_Offer.jpg alt='CIBIL Offer Banner' />") :
-                        $(".enrollBanner").remove()),
-                    window.location.href.indexOf("/creditdisputereport.page") < 0 && void 0 !== reqpar["request-params"]["tl.languageToggle"] && "hindi_true" === reqpar["request-params"]["tl.languageToggle"].split(",")[0])
-            ) {
-                var g = "",
-                    v = "";
-                void 0 !== reqpar["request-params"]["tl.language"] ?
-                    "hi" == reqpar["request-params"]["tl.language"] || "hiIN" == reqpar["request-params"]["tl.language"] ?
-                    ("hi" == reqpar["request-params"]["tl.language"], (v = "Hindi")) :
-                    "ta" == reqpar["request-params"]["tl.language"] || "taIN" == reqpar["request-params"]["tl.language"] ?
-                    ("ta" == reqpar["request-params"]["tl.language"], (v = "Tamil")) :
-                    "te" == reqpar["request-params"]["tl.language"] || "teIN" == reqpar["request-params"]["tl.language"] ?
-                    ("te" == reqpar["request-params"]["tl.language"], (v = "Telugu")) :
-                    "be" == reqpar["request-params"]["tl.language"] || "beIN" == reqpar["request-params"]["tl.language"] ?
-                    ("be" == reqpar["request-params"]["tl.language"], (v = "Bengali")) :
-                    ("en" != reqpar["request-params"]["tl.language"] && "enUS" != reqpar["request-params"]["tl.language"]) || ("en" == reqpar["request-params"]["tl.language"], (v = "English")) :
-                    (v = null !== sessionStorage.getItem("userLang") ? sessionStorage.getItem("userLang") : "English"),
-                    (g = '<ul class="list-unstyled"><li class="init glyphicons-globe"><u>' + v + '</u></li><li class="checklang" data-value="en">English (English)</li><li data-value="hi">हिन्दी (Hindi)</li>'),
-                    "tamil_true" === reqpar["request-params"]["tl.languageToggle"].split(",")[1] && (g += '<li data-value="ta">தமிழ் (Tamil)</li>'),
-                    "telugu_true" === reqpar["request-params"]["tl.languageToggle"].split(",")[2] && (g += '<li data-value="te">తెలుగు (Telugu)</li>'),
-                    "bengali_true" === reqpar["request-params"]["tl.languageToggle"].split(",")[3] && (g += '<li data-value="be">বাংলা (Bengali)</li>'),
-                    (g += "</ul>"),
-                    $(".tactical-links").prepend(g),
-                    $("ul").on("click", ".init", function() {
-                        $(this).closest("ul").children("li:not(.init)").toggle();
-                    });
-                var y = $(".tactical-links ul").children("li:not(.init)");
-                $("ul.list-unstyled").on("click", "li:not(.init)", function() {
-                        y.removeClass("selected"), $(this).addClass("selected");
-                        var e = $(this).html().split(" ")[1].replace(/[()]/g, ""),
-                            t = $(this).attr("data-value");
-                        if (
-                            (sessionStorage.setItem("userLang", e),
-                                sessionStorage.setItem("userLangPref", t),
-                                $("ul")
-                                .children(".init")
-                                .html("<u>" + e + "</u>"),
-                                y.toggle(),
-                                $("<input>").attr("type", "hidden").attr("name", "tl.language").attr("value", t).appendTo("form"),
-                                "true" !== analytics.loggedIn || $("#education").length > 0)
-                        ) {
-                            event.preventDefault();
-                            var r = changeUrlParam(t);
-                            window.location.href = r;
-                        } else $('input[name="Action"]').val("UPDATE_CUSTOMER"), $("<input>").attr("type", "hidden").attr("name", "locale").attr("value", t).appendTo("form"), $("form").submit();
-                    }),
-                    $(document).on("click", function(e) {
-                        var t = $(".tactical-links ul");
-                        t === e.target || t.has(e.target).length || y.hide();
-                    });
-            }
-            if (
-                (window.location.href.indexOf("/cond_customer_locked.page") > 0 && void 0 !== reqpar["request-params"]["tl.isUnlockEnabled"] && "true" === reqpar["request-params"]["tl.isUnlockEnabled"] ?
-                    ($(".enable_unlock").css("display", "inline-block"), $(".disable_unlock").css("display", "none")) :
-                    ($(".enable_unlock").css("display", "none"), $(".disable_unlock").css("display", "inline-block")),
-                    window.location.href.indexOf("/forgotPasswordUsername.page") > 0)
-            ) {
-                var b = "Login Flow Actions",
-                    S = b + " - Forgot Password Page Actions",
-                    w = S + " - Continue with Details Click";
-                formSubmissionGA("button", b, S, w);
-            }
-            if (window.location.href.indexOf("/changePassword.page") > 0) {
-                var b = "Login Flow Actions",
-                    S = b + " - Forgot Password Page Actions",
-                    w = S + " - Set new Password Page Click";
-                formSubmissionGA("button", b, S, w);
-            }
-            if (window.location.href.indexOf("/changePasswordSuccess.page") > 0) {
-                var b = "Login Flow Actions",
-                    S = b + " - Forgot Password Page Actions",
-                    w = S + " - Return To Login Page Click";
-                formSubmissionGA("button", b, S, w);
-            }
-            if (window.location.href.indexOf("/forgotPasswordConfirmation.page") > 0) {
-                var b = "Login Flow Actions",
-                    S = b + " - Forgot Password Page Actions",
-                    w = S + " - Return To Login Page Click";
-                formSubmissionGA(".button", b, S, w);
-            }
-            if (window.location.href.indexOf("/forgotUsername.page") > 0) {
-                var b = "Login Flow Actions",
-                    S = b + " - Forgot Username Page Actions",
-                    w = S + " - Continue with Details Click";
-                formSubmissionGA("button", b, S, w);
-            }
-            if (window.location.href.indexOf("/forgotUsernameConfirmation.page") > 0) {
-                var b = "Login Flow Actions",
-                    S = b + " - Forgot Username Page Actions",
-                    w = S + " - Return To Login Page Click";
-                formSubmissionGA(".button", b, S, w);
-            }
-        }),
-        $("#neverShowCheck").on("change", function() {
-            $(this).is(":checked") ? $(this).attr("value", "true") : $(this).attr("value", "false"), $("#checkbox-value").val($("#neverShowCheck").val());
-        }),
-        "CIBIL" === currentEnterprise() &&
-        window.location.href.indexOf("/creditreport.page") > 0 &&
-        ($(".dispute-link a").click(function() {
-                generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Credit Report Subsection", "Post Login - Credit Report Section - Credit Report Subsection - Raise a Dispute Click");
-            }),
-            $(".refresh-score").click(function() {
-                "CR-Summary" == $(this).closest("section").attr("id") ?
-                    generalGATracking(
-                        "Post Login - Credit Report Section",
-                        "Post Login - Credit Report Section - Credit Report Subsection - Summary Report SubSection",
-                        "Post Login - Credit Report Section - Credit Report Subsection - Summary Report SubSection - refresh Now Click"
-                    ) :
-                    generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Refresh Center Subsection", "Post Login - Credit Report Section - Refresh Center Subsection - refresh Now Click");
-            }),
-            $("#CR-Summary .upgrade-report").click(function() {
-                generalGATracking(
-                    "Post Login - Credit Report Section",
-                    "Post Login - Credit Report Section - Credit Report Subsection - Summary Report SubSection",
-                    "Post Login - Credit Report Section - Credit Report Subsection - Summary Report SubSection - Buy Credit Report Click"
-                );
-            }),
-            $("#disputeUpgrade").click(function() {
-                generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Upgrade Subscription PopUp", "Post Login - Credit Report Section - Upgrade Subscription PopUp - Subscribe Now Click");
-            }),
-            $(".modal-close").click(function() {
-                $('#modals div[data-modal="dispute-refresh-expired"]').is(":visible") &&
-                    generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Upgrade Subscription PopUp", "Post Login - Credit Report Section - Upgrade Subscription PopUp - Close PopUp Click");
-            })),
-        "CIBIL" === currentEnterprise() &&
-        window.location.href.indexOf("/creditdisputereport.page") > 0 &&
-        ($("#disputeRefresh").click(function() {
-                generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Dispute Center Subsection - PopUp", "Post Login - Credit Report Section - Dispute Center Subsection - PopUp - Refresh Now Click");
-            }),
-            $("#disputeRefSkip").click(function() {
-                generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Dispute Center Subsection - PopUp", "Post Login - Credit Report Section - Dispute Center Subsection - PopUp - Skip to Dispute Click");
-            })),
-        $(".upselInterstitial select").each(function() {
-            var e = $(this),
-                t = $(this).children("option").length;
-            e.addClass("hide"), e.wrap('<div class="select"></div>'), e.after('<div class="styledSelect"></div>');
-            var r = e.next("div.styledSelect");
-            r.text(e.children("option").eq(0).text());
-            for (var n = $("<ul />", { class: "options" }).insertAfter(r), a = 0; a < t; a++) $("<li />", { text: e.children("option").eq(a).text(), rel: e.children("option").eq(a).val() }).appendTo(n);
-            var i = n.children("li");
-            r.click(function(e) {
-                    e.stopPropagation(),
-                        $("div.styledSelect.active").each(function() {
-                            $(this).removeClass("active").next("ul.options").hide();
-                        }),
-                        $(this).toggleClass("active").next("ul.options").toggle(),
-                        $(".styledSelect").toggleClass("active");
-                }),
-                i.click(function(t) {
-                    t.stopPropagation(), r.text($(this).text()).removeClass("active"), e.val($(this).attr("rel")), n.hide();
-                }),
-                $(document).click(function() {
-                    r.removeClass("active"), n.hide();
-                });
-        }),
-        "CIBIL" === currentEnterprise() &&
-        $("#InterstitialUpsell").length > 0 &&
-        ($(".offerReplaceWrapper #offer-Submit").click(function() {
-                var e = $("#membershipOffer").val();
-                $("<input>").attr("type", "hidden").attr("name", "tl.offer-id").attr("value", e).appendTo("form"),
-                    $("<input>").attr("type", "hidden").attr("name", "tl.skipPaymentCheck").attr("value", "true").appendTo("form"),
-                    showLoading(),
-                    $("form").submit();
-            }),
-            $(".no-thanks-link").click(function() {
-                $("<input>").attr("type", "hidden").attr("name", "tl.offer-id").attr("value", "FACRA").appendTo("form"), showLoading(), $("form").submit();
-            })),
-        $("#dashboard").length > 0)
-) {
-    var mobileToggle = $(".mobileToggle"),
-        featureList = ".featureList";
-    mobileToggle.click(function() {
-        $(this).toggleClass("collapse").siblings(featureList).toggleClass("expanded"),
-            $(this).text(function(e, t) {
-                return "View Features" === t ? "Hide Features" : "View Features";
-            });
-    });
-}
-if (
-    ($(".upgrade-Unlock p.button").click(function() {
-            if ($(this).hasClass("yearly")) var e = "1Y1200RM";
-            else if ($(this).hasClass("6month")) var e = "6M800RM";
-            else if ($(this).hasClass("monthly")) var e = "1M550RM";
-            $("<input>").attr("type", "hidden").attr("name", "tl.offer-id").attr("value", e).appendTo("form"), $('input[name="Action"]').val("FULFILL_UPSELL_ORDER"), $("form").submit();
-        }),
-        window.location.href.indexOf("/interstitialLoanOffers.page") > 0 &&
-        $(".offerForm-close").click(function() {
-            generalGATracking("Post Login - Dashboard Section", "Post Login - Dashboard Section - Offers Interstitial", "Post Login - Dashboard Section - Offers Interstitial Close Interstitial Click"),
-                $('input[name="Action"]').val("GET_TARGETED_OFFER_TOKEN"),
-                $("form").submit();
-        }),
-        $(".showMoreEnquiry").click(function() {
-            $(".showMoreEnquiry").toggleClass("show"),
-                $("html, body").animate({ scrollTop: $("#containerEnquiry").offset().top }, "slow"),
-                $(".showMoreEnquiry").hasClass("show") ?
-                ($(".threeYrsOld_Enquiry").css("display", "flex"), $(".showMoreEnquiry").text(localizedString("enquiryHide"))) :
-                ($(".threeYrsOld_Enquiry").css("display", "none"), $(".showMoreEnquiry").text(localizedString("enquiryShow")));
-        }),
-        $(".showMoreAccount").click(function() {
-            $(".showMoreAccount").toggleClass("show"),
-                $(".showMoreAccount").hasClass("show") ?
-                ($(".CR-Accounts-close").css("display", "block"), $(".showMoreAccount").text(localizedString("accountsHide"))) :
-                ($(".CR-Accounts-close").css("display", "none"), $(".showMoreAccount").text(localizedString("accountsShow")));
-        }),
-        $(".showMoreDispute").click(function() {
-            $("#CR-Accounts-close .personal-table").toggleClass("hide show"),
-                $("#CR-Accounts-close .personal-table").hasClass("show") ?
-                ($(this).text(localizedString("accountsHide")),
-                    generalGATracking(
-                        "Post Login - Credit Report Section",
-                        "Post Login - Credit Report Section - Dispute Center Subsection",
-                        "Post Login - Credit Report Section - Dispute Center Subsection - Open and Closed Disputes SubSection - Closed Disputes Subsection - Show Closed Disputes Click"
-                    ),
-                    $("#CR-Accounts-CreditRevolving-Closed .personal-table").removeClass("hide"),
-                    $(".showMoreDispute").text(localizedString("disputesHide"))) :
-                ($(this).text(localizedString("accountsShow")),
-                    generalGATracking(
-                        "Post Login - Credit Report Section",
-                        "Post Login - Credit Report Section - Dispute Center Subsection",
-                        "Post Login - Credit Report Section - Dispute Center Subsection - Open and Closed Disputes SubSection - Closed Disputes Subsection - Hide Closed Disputes Click"
-                    ),
-                    $("#CR-Accounts-CreditRevolving-Closed .personal-table").addClass("hide"),
-                    $(".showMoreDispute").text(localizedString("disputesShow")));
-        }),
-        void 0 != apiKeys &&
-        "" != apiKeys &&
-        "true" == apiKeys.ShowBioCatch &&
-        (window.location.href.indexOf("/enrollShort.page") > 0 ||
-            window.location.href.indexOf("/enrollQuick.page") > 0 ||
-            window.location.href.indexOf("/enrollShortAdd.page") > 0 ||
-            window.location.href.indexOf("/enrollQuickAdd.page") > 0 ||
-            window.location.href.indexOf("/additionalInfo.page") > 0 ||
-            window.location.href.indexOf("/enrollOffer.page") > 0 ||
-            window.location.href.indexOf("/enrollOfferAdd.page") > 0 ||
-            window.location.href.indexOf("/enrollConsolidated.page") > 0 ||
-            window.location.href.indexOf("/enrollQuick.page") > 0))
-) {
-    if ("" == sessionStorage.getItem("bioCusId") || null == sessionStorage.getItem("bioCusId")) {
-        var customerId = guidGenerator();
-        sessionStorage.setItem("bioCusId", customerId);
-    }
-    var path = window.location.pathname,
-        pageName = path.split("/").pop(),
-        scriptBio = document.createElement("script");
-    (scriptBio.src = "https://bcdn-god.we-stats.com/scripts/37a1000c/c6b4eb71.js"),
-    (scriptBio.type = "text/javascript"),
-    (scriptBio.onload = function() {
-        var e = document.createElement("script");
-        (e.innerHTML = 'cdApi.setCustomerSessionId(sessionStorage.getItem("bioCusId",customerId));cdApi.changeContext(pageName);'), document.head.appendChild(e);
-    }),
-    (scriptBio.src = "https://bcdn-god.we-stats.com/scripts/37a1000c/c6b4eb71.js"),
-    document.head.appendChild(scriptBio);
-}
-if (
-    ($('.disputeCenterTab a[rel="Dispute-Centre"],.dispute-link a[rel="Dispute-Centre"]').click(function() {
-            generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Dispute Center Subsection", "Post Login - Credit Report Section - Dispute Center Subsection Click"),
-                localStorage.setItem("repeatDisputeFlag", "true"),
-                showLoading(),
-                $("<input>").attr("type", "hidden").attr("name", "tl.ecn").attr("value", ud.reportstu.ReferenceKey.CIBIL).appendTo("form"),
-                $('input[name="Action"]').val("GET_DISPUTE_STATUS"),
-                $("form").submit();
-        }),
-        $("#Dispute-Centre .flow-section-toggle").click(function() {
-            var e = $(this).attr("rel");
-            "raiseDispute" === e &&
-                generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Dispute Center Subsection", "Post Login - Credit Report Section - Dispute Center Subsection - Raise a Dispute SubSection Click"),
-                "openClose-disputes" === e &&
-                generalGATracking(
-                    "Post Login - Credit Report Section",
-                    "Post Login - Credit Report Section - Dispute Center Subsection",
-                    "Post Login - Credit Report Section - Dispute Center Subsection - Open and Closed Disputes SubSection Click"
-                ),
-                "faq-dispute" === e &&
-                generalGATracking("Post Login - Credit Report Section", "Post Login - Credit Report Section - Dispute Center Subsection", "Post Login - Credit Report Section - Dispute Center Subsection - FAQ Disputes SubSection Click");
-        }),
-        $(".faqHeader").click(function() {
-            $(this).toggleClass("upArrow"), $(".faQuestion").toggleClass("hide");
-        }),
-        $(document).ready(function() {
-            if ("disputesuccess.page" == page) {
-                var e = reqpar["request-params"]["tl.disputeResponse"],
-                    t = JSON.parse(e.replace(/&quot;/g, '"')),
-                    r = "";
-                if (((r = t), "undefined" != typeof apiKeys && "" !== apiKeys && "true" == apiKeys.ShowRealDispute && "undefined" != typeof e && null !== e && r && r.data && r.data.disputedField && r.data.disputedField.length > 0)) {
-                    var n = r.data.disputedField.reduce(function(e, t) {
-                        return ("ACCOUNT_OWNERSHIP" !== t.field && "ENQUIRY_OWNERSHIP" !== t.field) || "RIGHTMERGE" !== t.decision ? e : (e += 1);
-                    }, 0);
-                    if (n > 0) {
-                        var a = sessionStorage.getItem("SESSION_REAL_TIME_DISPUTE_SUMMARY_RELOAD");
-                        "false" == a && realTimeDisputePop();
-                    }
-                }
-            }
-            if ($("#CreditReports").length > 0 && void 0 !== apiKeys.creditSummary && "true" === apiKeys.creditSummary && document.location.href.indexOf("print=true") === -1) {
-                $(".creditSummary, #CR-Summary").removeClass("hideme");
-                for (var i = 0; i < ud.reportstu.ComponentDetail.length; i++) {
-                    var o = ud.reportstu.ComponentDetail[i].ExpireDate,
-                        s = o.substring(8, 10),
-                        l = o.substring(5, 7),
-                        d = o.substring(0, 4),
-                        c = s + "/" + l + "/" + d;
-                    if ("SummaryReport" === ud.reportstu.ComponentDetail[i].Component && today < convertDate(c)) {
-                        $("#upgrade-SummaryReport").remove(),
-                            $("#CR-SummaryReport").show(),
-                            "A" === localStorage.getItem("scoreGrade") ?
-                            $(".scoreSection").addClass("gradeA") :
-                            "B" === localStorage.getItem("scoreGrade") ?
-                            $(".scoreSection").addClass("gradeB") :
-                            "C" === localStorage.getItem("scoreGrade") ?
-                            $(".scoreSection").addClass("gradeC") :
-                            "D" === localStorage.getItem("scoreGrade") ?
-                            $(".scoreSection").addClass("gradeD") :
-                            "F" === localStorage.getItem("scoreGrade") && $(".scoreSection").addClass("gradeF");
-                        break;
-                    }
-                    $("#CR-SummaryReport").hide(),
-                        $("#upgrade-SummaryReport").show(),
-                        $("#upgradeMessageSummary .mainMssg").html(localizedString("creditReport_SI_UpgradeMessage")),
-                        $("#upgradeMessageSummary .dayMssg").html(numberOfDays),
-                        $("#ctaMessage").html(localizedString("creditReport_SI_CTAMessage")),
-                        $("#sumUpgradeBttn").html(localizedString("creditReport_SI_CTA")),
-                        numberOfDays > 1 ? $("#upgradeMessageSummary .dayWordMssg").html(localizedString("creditReport_SI_Days")) : $("#upgradeMessageSummary .dayWordMssg").html(localizedString("creditReport_SI_Day"));
-                }
-            } else document.location.href.indexOf("print=true") === -1 ? ($(".creditSummary, #CR-Summary").remove(), $(".creditPersonalInfo, #CR-Personal").addClass("is-active")) : document.location.href.indexOf("print=true") > 0 && $("#CR-Summary").removeClass("hideme");
-        }),
-        window.location.href.indexOf("/creditreport.page") > 0)
-) {
-    if (
-        (void 0 !== apiKeys.disputeStatus &&
-            "false" === apiKeys.disputeStatus &&
-            ($('#Dispute-Centre .flow-section-toggle[rel="openClose-disputes"], #Dispute-Centre #openClose-disputes').addClass("hide"),
-                $('#Dispute-Centre .flow-section-toggle[rel="faq-dispute"], #Dispute-Centre #faq-dispute').addClass("hide")),
-            void 0 !== reqpar["request-params"]["tl.listDisputesResponse"] && "" !== reqpar["request-params"]["tl.listDisputesResponse"])
-    )
-        var fixPar = reqpar["request-params"]["tl.listDisputesResponse"].replace(new RegExp("&quot;", "g"), '"'),
-            disputeStatusPar = JSON.parse(fixPar),
-            disputeStatusLength = Object.keys(disputeStatusPar).length;
-    else var fixPar = void 0;
-    if (void 0 !== fixPar && 0 !== disputeStatusLength) {
-        var preObj = disputeStatusPar.dispute,
-            obj = preObj.sort(function(e, t) {
-                var r = convertDate(e.disputeDate),
-                    n = convertDate(t.disputeDate);
-                return r > n ? -1 : r == n ? 0 : 1;
-            }),
-            mainVal =
-            '<div class="personal-table report-table" data-selenium="section-creditreport-personal" data-module="ReportTable"><div class="thead"><div class="frow"><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_DisputeID") +
-            '</strong></div><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_DateInit") +
-            '</strong></div><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_Status") +
-            '</strong></div></div><div class="tbody">',
-            mainVal1 =
-            '<div class="personal-table report-table" data-selenium="section-creditreport-personal" data-module="ReportTable"><div class="thead"><div class="frow"><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_DisputeID") +
-            '</strong></div><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_DateInit") +
-            '</strong></div><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_Status") +
-            '</strong></div><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_DateClosed") +
-            '</strong></div></div><div class="tbody">';
-        findElementJson(obj, "disputeStatus", "New") === !0 ?
-            (document.getElementById("CR-Accounts-open").innerHTML = showOpenDisputes(obj)) :
-            (document.getElementById("CR-Accounts-open").innerHTML = '<p class="pText">' + localizedString("disputeStatus_noRecords") + "</p>"),
-            findElementJson(obj, "disputeStatus", "closed") === !0 ?
-            (document.getElementById("CR-Accounts-close").innerHTML = showCloseDisputes(obj)) :
-            ((document.getElementById("CR-Accounts-close").innerHTML = '<p class="pText">' + localizedString("disputeStatus_noRecords") + "</p>"), $(".moreDispute").remove()),
-            $("#CR-Accounts-close .personal-table").addClass("hide");
-    } else
-        (document.getElementById("CR-Accounts-open").innerHTML = '<p class="pText">' + localizedString("disputeStatus_noRecords") + "</p>"),
-        (document.getElementById("CR-Accounts-close").innerHTML = '<p class="pText">' + localizedString("disputeStatus_noRecords") + "</p>"),
-        $(".moreDispute").remove();
-    if (
-        ($('span[class^="showMore"]').click(function() {
-                var e = $(this).attr("data-ga");
-                "open" === e &&
-                    generalGATracking(
-                        "Post Login - Credit Report Section",
-                        "Post Login - Credit Report Section - Dispute Center Subsection",
-                        "Post Login - Credit Report Section - Dispute Center Subsection - Open and Closed Disputes SubSection - Open Disputes Subsection - View Dispute Details Click"
-                    ),
-                    "closed" === e &&
-                    generalGATracking(
-                        "Post Login - Credit Report Section",
-                        "Post Login - Credit Report Section - Dispute Center Subsection",
-                        "Post Login - Credit Report Section - Dispute Center Subsection - Open and Closed Disputes SubSection - Closed Disputes Subsection - View Dispute Details Click"
-                    );
-                var t = $(this).attr("class"),
-                    r = t.replace(/\D/g, ""),
-                    n = disputeStatusPar.dispute[r].disputeCode;
-                sessionStorage.setItem("showDisputeDetails", "true"),
-                    sessionStorage.setItem("showDisputeDete", disputeStatusPar.dispute[r].disputeDate),
-                    $('input[name="Action"]').val("DISPUTE_STATUS_ENQUIRY"),
-                    $("<input>").attr("type", "hidden").attr("name", "tl.disputeCode").attr("value", n).appendTo("form"),
-                    $("form").submit();
-            }),
-            "true" === sessionStorage.getItem("showDisputeDetails") && void 0 !== reqpar["request-params"]["tl.disputeStatusEnquiryResponse"] && "" !== reqpar["request-params"]["tl.disputeStatusEnquiryResponse"])
-    ) {
-        $(".disputeCenterTab a[rel=Dispute-Centre], #disputes, #Dispute-Centre, #openClose-disputes").addClass("is-active"),
-            $('#TU-Report, .-main[rel="TU-Report"], .flow-section-toggle[rel="raiseDispute"], #raiseDispute').removeClass("is-active");
-        var detailsPar = reqpar["request-params"]["tl.disputeStatusEnquiryResponse"].replace(new RegExp("&quot;", "g"), '"'),
-            disputeDetailsPar = JSON.parse(detailsPar),
-            obj = disputeDetailsPar.dispute[0].disputeDetails,
-            mainVal =
-            '<div class="personal-table report-table" data-selenium="section-creditreport-personal" data-module="ReportTable"><div class="thead"><div class="frow"><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_Section") +
-            '</strong></div><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_fieldName") +
-            '</strong></div><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_Description") +
-            '</strong></div><div class="fhcell"><strong class="fhheader">' +
-            localizedString("disputeStatus_Status") +
-            '</strong></div></div><div class="tbody">';
-        $("#popupId").text(disputeDetailsPar.dispute[0].disputeCode),
-            $("#popupDate").text(sessionStorage.getItem("showDisputeDete")),
-            (document.getElementById("disputeDetailTable").innerHTML = showDisputesDetails(obj)),
-            $("#modals, #popupDispute").show(),
-            $("#modals .modal-wrapper").css({ "max-width": "80%", height: "400px" }),
-            $("#modals .modal-close").addClass("popupClose"),
-            $("#modals #popupDispute .button").click(function() {
-                generalGATracking(
-                        "Post Login - Credit Report Section",
-                        "Post Login - Credit Report Section - Dispute Center Subsection",
-                        "Post Login - Credit Report Section - Dispute Center Subsection - Open and Closed Disputes SubSection - Closed Disputes SubSection - Dispute Details Subsection - Close CTA Click"
-                    ),
-                    $("#modals").hide();
-            }),
-            $("#modals .modal-close.popupClose").click(function() {
-                generalGATracking(
-                    "Post Login - Credit Report Section",
-                    "Post Login - Credit Report Section - Dispute Center Subsection",
-                    "Post Login - Credit Report Section - Dispute Center Subsection - Open and Closed Disputes SubSection - Closed Disputes SubSection - Dispute Details Subsection - Close Cross Click"
-                );
-            }),
-            sessionStorage.setItem("showDisputeDetails", "false");
-    }
-}
-$(document).ready(function() {
-        (window.location.href.indexOf("/scoreSimulatorUpgrade.page") > 0 ||
-            window.location.href.indexOf("/upgradeSubscription.page") > 0 ||
-            window.location.href.indexOf("/creditAlerts.page") > 0 ||
-            window.location.href.indexOf("/dashboard.page") > 0 ||
-            window.location.href.indexOf("/prepurchaseSubscription.page") > 0) &&
-        ("0" !== sessionStorage.getItem("SESSION_PROMO_CODE_ID") &&
-            "undefined" != typeof reqpar["request-params"]["tl.promocode"] &&
-            "" !== reqpar["request-params"]["tl.promocode"] &&
-            showPromoDetails(sessionStorage.getItem("SESSION_PROMO_CODE_ID")),
-            "undefined" != typeof sessionStorage.getItem("SESSION_PROMO_CODE_REMOVE") &&
-            "0" === sessionStorage.getItem("SESSION_PROMO_CODE_REMOVE") &&
-            (window.location.href.indexOf("/dashboard.page") > 0 ?
-                $("html, body").animate({ scrollTop: $("#upgradeUnlock").offset().top }, 2e3) :
-                window.location.href.indexOf("/upgradeSubscription.page") > 0 ?
-                $("html, body").animate({ scrollTop: $(".priceColumnWrapper").offset().top }, 2e3) :
-                window.location.href.indexOf("/creditAlerts.page") > 0 ?
-                $("html, body").animate({ scrollTop: $(".column").offset().top }, 2e3) :
-                window.location.href.indexOf("/scoreSimulatorUpgrade.page") > 0 ?
-                $("html, body").animate({ scrollTop: $(".column").offset().top }, 2e3) :
-                window.location.href.indexOf("/prepurchaseSubscription.page") > 0 && $("html, body").animate({ scrollTop: $(".priceColumnWrapper").offset().top }, 2e3),
-                sessionStorage.removeItem("SESSION_PROMO_CODE_REMOVE")));
-        var e,
-            t = document.getElementsByClassName("collapsible");
-        for (e = 0; e < t.length; e++)
-            t[e].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var e = this.nextElementSibling;
-                "block" === e.style.display ?
-                    (e.style.display = "none") :
-                    ((e.style.display = "block"),
-                        resetDefautForSubscription($(this).attr("data-ref")),
-                        window.location.href.indexOf("/upgradeSubscription.page") > 0 ?
-                        generalGATracking("Atlas Post Login", "Post Login Atlas Upgrade Section Product Selection", "Atlas Upgrade Section Product Selection " + $(this).attr("data-duration")) :
-                        window.location.href.indexOf("/scoreSimulatorUpgrade.page") > 0 ?
-                        generalGATracking("Post Login Atlas Score Simulator", "Post Login Atlas Upgrade Section Product Selection", "Atlas Upgrade Section Product Selection " + $(this).attr("data-duration")) :
-                        window.location.href.indexOf("/creditAlerts.page") > 0 ?
-                        generalGATracking("Post Login Atlas Credit Alerts", "Post Login Atlas Upgrade Section Product Selection", "Atlas Upgrade Section Product Selection " + $(this).attr("data-duration")) :
-                        window.location.href.indexOf("/prepurchaseSubscription.page") > 0 &&
-                        generalGATracking("Atlas Post Login", "Post Login Atlas Upgrade Section Product Selection", "Atlas Upgrade Section Product Selection " + $(this).attr("data-duration")));
-            });
-    }),
-    $(".prePurchasePopup1-button").click(function() {
-        generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Pop Up 1 - Plain Pop Up Refresh Now Click");
-    }),
-    $(".prePurchasePopup2-button").click(function() {
-        generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Pop Up 2 - Suit Man Pop Up Renew Now Click");
-    }),
-    $(".prePurchasePopup3-button").click(function() {
-        generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Pop Up 3 - Lady Clock Pop Up Renew Now Click");
-    }),
-    $(".prePurchaseScoreBanner-button").click(function() {
-        generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Score Simulator Section", "PrePurchase Upsell - Score Simulator Section - Renew Now Click");
-    }),
-    $(".prePurchaseBanner-button").click(function() {
-        generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Banner 1 Plain - Renew Now Click");
-    }),
-    $(".prePurchaseAlertsBanner-button").click(function() {
-        generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Banner 2 DigiClock - Renew Now Click");
-    }),
-    $("#modals #promoCodeDetails .button").click(function() {
-        $("#modals").hide();
-    }),
-    "true" === apiKeys.prePurchaseFeature ? $("#Profile-Subscriptions-Sel").show() : $("#Profile-Subscriptions-Sel").hide(),
-    $(document).ready(function() {
-        function e(e) {
-            var t = "";
-            for (var r in e)
-                ("Active" != e[r].OfferStatus && "PrePurchased" != e[r].OfferStatus) ||
-                (t +=
-                    '<div class="frow report-row tu-row" data-hj-suppress=""><div class="fhcell editable"><div id="disputeName">' +
-                    e[r].OfferDisplayName +
-                    '</div></div><div class="fcell tu-cell editable"><div id="disputeName">' +
-                    e[r].OfferStatus.replace(/PrePurchased/g, "Upcoming") +
-                    '</div></div><div class="fcell tu-cell editable"><div id="datepicker">' +
-                    e[r].OfferCreationDate +
-                    '</div></div><div class="fcell tu-cell editable"><div id="datepicker">' +
-                    e[r].OfferEndDate +
-                    "</div></div></div>");
-            return a + t;
-        }
-
-        function t(e) {
-            var t = "";
-            for (var r in e)
-                "Active" == e[r].OfferStatus &&
-                (t +=
-                    '<div class="frow report-row tu-row" data-hj-suppress=""><div class="fhcell editable"><div id="disputeName">' +
-                    e[r].OfferDisplayName +
-                    '</div></div><div class="fcell tu-cell editable"><div id="disputeNameExpired">' +
-                    e[r].OfferStatus.replace(/Active/g, "Expired") +
-                    '</div></div><div class="fcell tu-cell editable"><div id="datepicker">' +
-                    e[r].OfferCreationDate +
-                    '</div></div><div class="fcell tu-cell editable"><div id="datepicker">' +
-                    e[r].OfferEndDate +
-                    "</div></div></div>");
-            return i + t;
-        }
-
-        function r(e) {
-            var t = "";
-            for (var r in e)
-                "Replaced" == e[r].OfferStatus &&
-                (t +=
-                    '<div class="frow report-row tu-row" data-hj-suppress=""><div class="fhcell editable"><div id="disputeName">' +
-                    e[r].OfferDisplayName +
-                    '</div></div><div class="fcell tu-cell editable"><div id="disputeNameExpired">Expired</div></div><div class="fcell tu-cell editable"><div id="datepicker">' +
-                    e[r].OfferCreationDate +
-                    '</div></div><div class="fcell tu-cell editable"><div id="datepicker">' +
-                    e[r].OfferEndDate +
-                    "</div></div></div>");
-            return o + t;
-        }
-        if (
-            ($(".headerNewLabel").hide(),
-                window.location.href.indexOf("/myaccount.page") > 0 &&
-                "CIBIL" == currentEnterprise() &&
-                ($("#active-upcoming-subscription-list").hide(),
-                    $("#expired-subscription-list").hide(),
-                    $(".annual_free_report_prePurchase").hide(),
-                    $(".paid_user_prePurchase").hide(),
-                    $(".expired_user_prePurchase").hide(),
-                    $(".free_user_prePurchase").hide(),
-                    $("#prePurchaseBannerSubscriptions").hide(),
-                    $(".prePurchaseBannerSubscriptionsText").hide(),
-                    ud.reportstu.OfferHistoryData.length > 0))
-        ) {
-            var n = ud.reportstu.OfferHistoryData,
-                a =
-                '<div class="personal-table report-table" data-selenium="section-creditreport-personal" data-module="ReportTable"><div class="thead"><div class="frow"><div class="fhcell"><strong class="fhheader">Subscription</strong></div><div class="fhcell"><strong class="fhheader">Offer Status</strong></div><div class="fhcell"><strong class="fhheader">Start Date</strong></div><div class="fhcell"><strong class="fhheader">End Date</strong></div></div><div class="tbody">',
-                i =
-                '<div class="personal-table report-table" data-selenium="section-creditreport-personal" data-module="ReportTable"><div class="thead"><div class="frow"><div class="fhcell"><strong class="fhheader">Subscription</strong></div><div class="fhcell"><strong class="fhheader">Offer Status</strong></div><div class="fhcell"><strong class="fhheader">Start Date</strong></div><div class="fhcell"><strong class="fhheader">End Date</strong></div></div><div class="tbody">';
-            (findElementJson(n, "OfferStatus", "Active") !== !0 && findElementJson(n, "OfferStatus", "PrePurchased") !== !0) || (document.getElementById("active-upcoming-subscription-list").innerHTML = e(n));
-            var o =
-                '<div class="personal-table report-table" data-selenium="section-creditreport-personal" data-module="ReportTable"><div class="thead"><div class="frow"><div class="fhcell"><strong class="fhheader">Subscription</strong></div><div class="fhcell"><strong class="fhheader">Offer Status</strong></div><div class="fhcell"><strong class="fhheader">Start Date</strong></div><div class="fhcell"><strong class="fhheader">End Date</strong></div></div><div class="tbody">';
-            if (findElementJson(n, "OfferStatus", "Active") === !0)
-                for (var s = 0; s < ud.reportstu.OfferHistoryData.length; s++) {
-                    var l = convertDate(ud.reportstu.OfferHistoryData[s].OfferEndDate);
-                    "Active" == ud.reportstu.OfferHistoryData[s].OfferStatus && today > l ?
-                        (document.getElementById("expired-subscription-list").innerHTML = t(n)) :
-                        (document.getElementById("active-upcoming-subscription-list").innerHTML = e(n));
-                }
-            if (findElementJson(n, "OfferStatus", "Replaced") === !0)
-                for (var s = 0; s < ud.reportstu.OfferHistoryData.length; s++) {
-                    var l = convertDate(ud.reportstu.OfferHistoryData[s].OfferEndDate);
-                    "Active" == ud.reportstu.OfferHistoryData[s].OfferStatus && today > l ? (document.getElementById("expired-subscription-list").innerHTML = t(n)) : (document.getElementById("expired-subscription-list").innerHTML = r(n));
-                }
-            var d = new Date(new Date().getFullYear(), 0, 1),
-                c = new Date(d.getFullYear(), d.getMonth(), d.getDate()).toLocaleDateString(),
-                u = c.split("/"),
-                p = u[2];
-            p.toString();
-            var h = parseInt(p);
-            today >= d && (h += 1);
-            for (var s = 0; s < ud.reportstu.ComponentDetail.length; s++) {
-                var f = ud.reportstu.ComponentDetail[s].ExpireDate,
-                    m = f.substring(8, 10),
-                    g = f.substring(5, 7),
-                    v = f.substring(0, 4),
-                    y = m + "/" + g + "/" + v,
-                    b = y.toString().split("/"),
-                    S = b[2];
-                if (today < convertDate(y) && "9999" !== S) $("#active-upcoming-subscription-list").show(), $(".paid_user_prePurchase").show();
-                else {
-                    if (today > convertDate(y) && "9999" !== S) {
-                        $(".annual_free_report_prePurchase").css({ "padding-top": "130px" }),
-                            $("#disputeNameExpired").css({ color: "red" }),
-                            $(".report-table .report-row").css({ background: "lightpink" }),
-                            $("#expired-subscription-list").show(),
-                            $("#prePurchaseBannerSubscriptions").show(),
-                            $(".prePurchaseBannerSubscriptionsText").show(),
-                            $(".expired_user_prePurchase").show(),
-                            $(".next-free-annual-report").text("01/01/" + h);
-                        break;
-                    }
-                    $(".free_user_prePurchase").show();
-                }
-            }
-        }
-    }),
-    window.location.href.indexOf("/dashboard.page") > 0 &&
-    ($(".prePurchasePopup1-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Pop Up 1 - Plain Pop Up Refresh Now Click");
-        }),
-        $(".prePurchasePopup2-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Pop Up 2 - Suit Man Pop Up Renew Now Click");
-        }),
-        $(".prePurchasePopup3-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Pop Up 3 - Lady Clock Pop Up Renew Now Click");
-        }),
-        $(".prePurchaseBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Banner 1 Plain - Renew Now Click");
-        }),
-        $(".prePurchaseAlertsBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Banner 2 DigiClock - Renew Now Click");
-        }),
-        $(".prePurchaseScoreBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Dashboard Section", "PrePurchase Upsell - Dashboard Section - Renew Banner 3 - Renew Now Click");
-        })),
-    window.location.href.indexOf("/scoreSimulator.page") > 0 &&
-    ($(".prePurchaseBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Score Simulator Section", "PrePurchase Upsell - Score Simulator Section - Analog Clock Renew Now Click");
-        }),
-        $(".prePurchaseAlertsBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Score Simulator Section", "PrePurchase Upsell - Score Simulator Section - Digi Clock Renew Now Click");
-        }),
-        $(".prePurchaseScoreBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Score Simulator Section", "PrePurchase Upsell - Score Simulator Section - Renew Now Click");
-        })),
-    window.location.href.indexOf("/creditAlerts.page") > 0 &&
-    ($(".prePurchaseBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Alerts Section", "PrePurchase Upsell - Alerts Section - Analog Clock Renew Now Click");
-        }),
-        $(".prePurchaseAlertsBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Alerts Section", "PrePurchase Upsell - Alerts Section - Digi Clock Renew Now Click");
-        }),
-        $(".prePurchaseScoreBanner-button").click(function() {
-            generalGATracking("PrePurchase Upsell", "PrePurchase Upsell - Alerts Section", "PrePurchase Upsell - Alerts Section - Renew Now Click");
-        })),
-    $(document).ready(function() {
-        setInterval(function() {
-            renewalDateTimer();
-        }, 1e3);
-        if (
-            ($("#prePurchaseBanner").hide(),
-                $(".prePurchaseBannerText").hide(),
-                $("#prePurchaseAlertsBanner").hide(),
-                $(".prePurchaseAlertsBannerText").hide(),
-                $("#prePurchaseScoreBanner").hide(),
-                $(".prePurchaseScoreBannerText").hide(),
-                $("#modals").hide(),
-                $("#prePurchasePopup1").hide(),
-                $("#prePurchasePopup2").hide(),
-                $("#prePurchasePopup3").hide(),
-                window.location.href.indexOf("/dashboard.page") > 0 || window.location.href.indexOf("/creditAlerts.page") > 0 || window.location.href.indexOf("/scoreSimulator.page") > 0)
-        ) {
-            var e = apiKeys.oneMonth_Banner_daysBeforeExpiry,
-                t = apiKeys.sixMonth_Banner_daysBeforeExpiry,
-                r = apiKeys.twelveMonth_Banner_daysBeforeExpiry,
-                n = apiKeys.oneMonth_Banner_Dashboard.split("|"),
-                a = n[0],
-                i = n[1],
-                o = n[2],
-                s = a.split(","),
-                l = i.split(","),
-                d = o.split(","),
-                c = s[0],
-                u = (s[1], s[2]),
-                p = s[3],
-                h = l[0],
-                f = (l[1], l[2]),
-                m = l[3],
-                g = d[0],
-                v = (d[1], d[2]),
-                y = d[3],
-                b = apiKeys.sixMonth_Banner_Dashboard.split("|"),
-                S = b[0],
-                w = b[1],
-                C = b[2],
-                _ = S.split(","),
-                x = w.split(","),
-                P = C.split(","),
-                A = _[0],
-                D = (_[1], _[2]),
-                I = _[3],
-                E = x[0],
-                B = (x[1], x[2]),
-                O = x[3],
-                k = P[0],
-                L = (P[1], P[2]),
-                T = P[3],
-                R = apiKeys.twelveMonth_Banner_Dashboard.split("|"),
-                N = R[0],
-                q = R[1],
-                M = R[2],
-                F = N.split(","),
-                U = q.split(","),
-                H = M.split(","),
-                z = F[0],
-                V = (F[1], F[2]),
-                j = F[3],
-                G = U[0],
-                W = (U[1], U[2]),
-                Y = U[3],
-                K = H[0],
-                Q = (H[1], H[2]),
-                Z = H[3],
-                J = apiKeys.oneMonth_Banner_Alerts.split("|"),
-                X = J[0],
-                ee = J[1],
-                te = J[2],
-                re = X.split(","),
-                ne = ee.split(","),
-                ae = te.split(","),
-                ie = re[0],
-                oe = (re[1], re[2]),
-                se = re[3],
-                le = ne[0],
-                de = (ne[1], ne[2]),
-                ce = ne[3],
-                ue = ae[0],
-                pe = (ae[1], ae[2]),
-                he = ae[3],
-                fe = apiKeys.sixMonth_Banner_Alerts.split("|"),
-                me = fe[0],
-                ge = fe[1],
-                ve = fe[2],
-                ye = me.split(","),
-                be = ge.split(","),
-                Se = ve.split(","),
-                we = ye[0],
-                Ce = (ye[1], ye[2]),
-                _e = ye[3],
-                xe = be[0],
-                Pe = (be[1], be[2]),
-                Ae = be[3],
-                $e = Se[0],
-                De = (Se[1], Se[2]),
-                Ie = Se[3],
-                Ee = apiKeys.twelveMonth_Banner_Alerts.split("|"),
-                Be = Ee[0],
-                Oe = Ee[1],
-                ke = Ee[2],
-                Le = Be.split(","),
-                Te = Oe.split(","),
-                Re = ke.split(","),
-                Ne = Le[0],
-                qe = (Le[1], Le[2]),
-                Me = Le[3],
-                Fe = Te[0],
-                Ue = (Te[1], Te[2]),
-                He = Te[3],
-                ze = Re[0],
-                Ve = (Re[1], Re[2]),
-                je = Re[3],
-                Ge = apiKeys.oneMonth_Banner_ScoreSim.split("|"),
-                We = Ge[0],
-                Ye = Ge[1],
-                Ke = Ge[2],
-                Qe = We.split(","),
-                Ze = Ye.split(","),
-                Je = Ke.split(","),
-                Xe = Qe[0],
-                et = (Qe[1], Qe[2]),
-                tt = Qe[3],
-                rt = Ze[0],
-                nt = (Ze[1], Ze[2]),
-                at = Ze[3],
-                it = Je[0],
-                ot = (Je[1], Je[2]),
-                st = Je[3],
-                lt = apiKeys.sixMonth_Banner_ScoreSim.split("|"),
-                dt = lt[0],
-                ct = lt[1],
-                ut = lt[2],
-                pt = dt.split(","),
-                ht = ct.split(","),
-                ft = ut.split(","),
-                mt = pt[0],
-                gt = (pt[1], pt[2]),
-                vt = pt[3],
-                yt = ht[0],
-                bt = (ht[1], ht[2]),
-                St = ht[3],
-                wt = ft[0],
-                Ct = (ft[1], ft[2]),
-                _t = ft[3],
-                xt = apiKeys.twelveMonth_Banner_ScoreSim.split("|"),
-                Pt = xt[0],
-                At = xt[1],
-                $t = xt[2],
-                Dt = Pt.split(","),
-                It = At.split(","),
-                Et = $t.split(","),
-                Bt = Dt[0],
-                Ot = (Dt[1], Dt[2]),
-                kt = Dt[3],
-                Lt = It[0],
-                Tt = (It[1], It[2]),
-                Rt = It[3],
-                Nt = Et[0],
-                qt = (Et[1], Et[2]),
-                Mt = Et[3];
-            if ("true" === apiKeys.prePurchaseFeature) {
-                for (var Ft = 0; Ft < ud.reportstu.ComponentDetail.length; Ft++) {
-                    var Ut = ud.reportstu.ComponentDetail[Ft].ExpireDate,
-                        Ht = Ut.substring(8, 10),
-                        zt = Ut.substring(5, 7),
-                        Vt = Ut.substring(0, 4),
-                        jt = Ht + "/" + zt + "/" + Vt,
-                        Gt = new Date(convertDate(jt)),
-                        Wt = (renewalTodayTime = renewalTimeLeft = renewalHours = renewalMinutes = renewalSec = renewalDay = "");
-                    (Wt = Gt),
-                    (Wt = Date.parse(Wt) / 1e3),
-                    (renewalTodayTime = new Date()),
-                    (renewalTodayTime = Date.parse(renewalTodayTime) / 1e3),
-                    (renewalTimeLeft = Wt - renewalTodayTime),
-                    (renewalDay = Math.floor(renewalTimeLeft / 86400));
-                    var Yt = jt.toString().split("/"),
-                        Kt = Yt[2],
-                        Qt = convertDate(jt);
-                }
-                if (today <= Qt && "9999" !== Kt && "true" === reqpar["request-params"]["tl.isMobileNumberTuefValid"]) {
-                    var Zt = ud.reportstu.OfferHistoryData;
-                    for (var Jt in Zt)
-                        if (
-                            "Active" != Zt[Jt].OfferStatus ||
-                            ("1M550RM" != Zt[Jt].OfferCode &&
-                                "1M550RUM" != Zt[Jt].OfferCode &&
-                                "1M550RA" != Zt[Jt].OfferCode &&
-                                "1M550RUA" != Zt[Jt].OfferCode &&
-                                "A1M550RA" != Zt[Jt].OfferCode &&
-                                "A1M550RM" != Zt[Jt].OfferCode &&
-                                "A1M550RUA" != Zt[Jt].OfferCode &&
-                                "I1M550RM" != Zt[Jt].OfferCode &&
-                                "I1M550RUM" != Zt[Jt].OfferCode &&
-                                "A1M550RUM" != Zt[Jt].OfferCode)
-                        )
-                            if (
-                                "Active" != Zt[Jt].OfferStatus ||
-                                ("6M800RM" != Zt[Jt].OfferCode &&
-                                    "6M800RUM" != Zt[Jt].OfferCode &&
-                                    "6M800RA" != Zt[Jt].OfferCode &&
-                                    "6M800RUA" != Zt[Jt].OfferCode &&
-                                    "A6M800RA" != Zt[Jt].OfferCode &&
-                                    "A6M800RM" != Zt[Jt].OfferCode &&
-                                    "A6M800RUA" != Zt[Jt].OfferCode &&
-                                    "I6M800RM" != Zt[Jt].OfferCode &&
-                                    "I6M800RUM" != Zt[Jt].OfferCode &&
-                                    "A6M800RUM" != Zt[Jt].OfferCode)
-                            ) {
-                                if (
-                                    "Active" == Zt[Jt].OfferStatus &&
-                                    ("1Y1200RM" == Zt[Jt].OfferCode ||
-                                        "1Y1200RUM" == Zt[Jt].OfferCode ||
-                                        "1Y1200RA" == Zt[Jt].OfferCode ||
-                                        "1Y1200RUA" == Zt[Jt].OfferCode ||
-                                        "A1Y1200RA" == Zt[Jt].OfferCode ||
-                                        "A1Y1200RM" == Zt[Jt].OfferCode ||
-                                        "A1Y1200RUA" == Zt[Jt].OfferCode ||
-                                        "I1Y1200RM" == Zt[Jt].OfferCode ||
-                                        "I1Y1200RUM" == Zt[Jt].OfferCode ||
-                                        "A1Y1200RUM" == Zt[Jt].OfferCode)
-                                ) {
-                                    var Xt = new Date(Qt);
-                                    Xt.setDate(Xt.getDate() - r);
-                                    var er = new Date(Qt);
-                                    er.setDate(er.getDate() - z);
-                                    var tr = new Date(Qt);
-                                    tr.setDate(tr.getDate() - V);
-                                    var rr = new Date(Qt);
-                                    rr.setDate(rr.getDate() - G);
-                                    var nr = new Date(Qt);
-                                    nr.setDate(nr.getDate() - W);
-                                    var ar = new Date(Qt);
-                                    ar.setDate(ar.getDate() - K);
-                                    var ir = new Date(Qt);
-                                    ir.setDate(ir.getDate() - Q);
-                                    var or = new Date(Qt);
-                                    or.setDate(or.getDate() - Ne);
-                                    var sr = new Date(Qt);
-                                    sr.setDate(sr.getDate() - qe);
-                                    var lr = new Date(Qt);
-                                    lr.setDate(lr.getDate() - Fe);
-                                    var dr = new Date(Qt);
-                                    dr.setDate(dr.getDate() - Ue);
-                                    var cr = new Date(Qt);
-                                    cr.setDate(cr.getDate() - ze);
-                                    var ur = new Date(Qt);
-                                    ur.setDate(ur.getDate() - Ve);
-                                    var pr = new Date(Qt);
-                                    pr.setDate(pr.getDate() - Bt);
-                                    var hr = new Date(Qt);
-                                    hr.setDate(hr.getDate() - Ot);
-                                    var fr = new Date(Qt);
-                                    fr.setDate(fr.getDate() - Lt);
-                                    var mr = new Date(Qt);
-                                    mr.setDate(mr.getDate() - Tt);
-                                    var gr = new Date(Qt);
-                                    gr.setDate(gr.getDate() - Nt);
-                                    var vr = new Date(Qt);
-                                    vr.setDate(vr.getDate() - qt),
-                                        void 0 !== apiKeys.twelveMonth_Banner_daysBeforeExpiry && "" !== apiKeys.twelveMonth_Banner_daysBeforeExpiry ?
-                                        today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "1" === apiKeys.dashboardPurchaseBanner ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "2" === apiKeys.dashboardPurchaseBanner ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "3" === apiKeys.dashboardPurchaseBanner ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "1" === apiKeys.creditAlertsPurchaseBanner ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "2" === apiKeys.creditAlertsPurchaseBanner ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "3" === apiKeys.creditAlertsPurchaseBanner ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= Xt && window.location.href.indexOf("/scoreSimulator.page") > 0 && "1" === apiKeys.scoresimulatorPurchaseBanner ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= Xt && window.location.href.indexOf("/scoreSimulator.page") > 0 && "2" === apiKeys.scoresimulatorPurchaseBanner ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= Xt &&
-                                        window.location.href.indexOf("/scoreSimulator.page") > 0 &&
-                                        "3" === apiKeys.scoresimulatorPurchaseBanner &&
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === j ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === j ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === j ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === Y ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === Y ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === Y ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === Z ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === Z ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === Z ?
-                                        (generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                                "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === Me ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === Me ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === Me ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === He ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === He ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === He ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === je ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === je ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === je ?
-                                        (generalGATracking(
-                                                "Post Login - Alerts Section",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                                "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === kt ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === kt ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner3" === kt ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === Rt ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === Rt ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner3" === Rt ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show()) :
-                                        today >= gr && today <= vr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === Mt ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseBanner").show(),
-                                            $(".prePurchaseBannerText").show()) :
-                                        today >= gr && today <= vr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === Mt ?
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseAlertsBanner").show(),
-                                            $(".prePurchaseAlertsBannerText").show()) :
-                                        today >= gr &&
-                                        today <= vr &&
-                                        window.location.href.indexOf("/scoreSimulator.page") > 0 &&
-                                        "Banner3" === Mt &&
-                                        (generalGATracking(
-                                                "Post Login - Score Simulator Section",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                                "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                            ),
-                                            $("#prePurchaseScoreBanner").show(),
-                                            $(".prePurchaseScoreBannerText").show());
-                                }
-                            } else {
-                                var Xt = new Date(Qt);
-                                Xt.setDate(Xt.getDate() - t);
-                                var er = new Date(Qt);
-                                er.setDate(er.getDate() - A);
-                                var tr = new Date(Qt);
-                                tr.setDate(tr.getDate() - D);
-                                var rr = new Date(Qt);
-                                rr.setDate(rr.getDate() - E);
-                                var nr = new Date(Qt);
-                                nr.setDate(nr.getDate() - B);
-                                var ar = new Date(Qt);
-                                ar.setDate(ar.getDate() - k);
-                                var ir = new Date(Qt);
-                                ir.setDate(ir.getDate() - L);
-                                var or = new Date(Qt);
-                                or.setDate(or.getDate() - we);
-                                var sr = new Date(Qt);
-                                sr.setDate(sr.getDate() - Ce);
-                                var lr = new Date(Qt);
-                                lr.setDate(lr.getDate() - xe);
-                                var dr = new Date(Qt);
-                                dr.setDate(dr.getDate() - Pe);
-                                var cr = new Date(Qt);
-                                cr.setDate(cr.getDate() - $e);
-                                var ur = new Date(Qt);
-                                ur.setDate(ur.getDate() - De);
-                                var pr = new Date(Qt);
-                                pr.setDate(pr.getDate() - mt);
-                                var hr = new Date(Qt);
-                                hr.setDate(hr.getDate() - gt);
-                                var fr = new Date(Qt);
-                                fr.setDate(fr.getDate() - yt);
-                                var mr = new Date(Qt);
-                                mr.setDate(mr.getDate() - bt);
-                                var gr = new Date(Qt);
-                                gr.setDate(gr.getDate() - wt);
-                                var vr = new Date(Qt);
-                                vr.setDate(vr.getDate() - Ct),
-                                    void 0 !== apiKeys.sixMonth_Banner_daysBeforeExpiry && "" !== apiKeys.sixMonth_Banner_daysBeforeExpiry ?
-                                    today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "1" === apiKeys.dashboardPurchaseBanner ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "2" === apiKeys.dashboardPurchaseBanner ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "3" === apiKeys.dashboardPurchaseBanner ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "1" === apiKeys.creditAlertsPurchaseBanner ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "2" === apiKeys.creditAlertsPurchaseBanner ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "3" === apiKeys.creditAlertsPurchaseBanner ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= Xt && window.location.href.indexOf("/scoreSimulator.page") > 0 && "1" === apiKeys.scoresimulatorPurchaseBanner ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= Xt && window.location.href.indexOf("/scoreSimulator.page") > 0 && "2" === apiKeys.scoresimulatorPurchaseBanner ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= Xt &&
-                                    window.location.href.indexOf("/scoreSimulator.page") > 0 &&
-                                    "3" === apiKeys.scoresimulatorPurchaseBanner &&
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === I ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === I ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === I ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === O ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === O ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === O ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === T ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === T ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === T ?
-                                    (generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                            "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === _e ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === _e ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === _e ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === Ae ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === Ae ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === Ae ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === Ie ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === Ie ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === Ie ?
-                                    (generalGATracking(
-                                            "Post Login - Alerts Section",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                            "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === vt ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === vt ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner3" === vt ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === St ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === St ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner3" === St ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show()) :
-                                    today >= gr && today <= vr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === _t ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseBanner").show(),
-                                        $(".prePurchaseBannerText").show()) :
-                                    today >= gr && today <= vr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === _t ?
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseAlertsBanner").show(),
-                                        $(".prePurchaseAlertsBannerText").show()) :
-                                    today >= gr &&
-                                    today <= vr &&
-                                    window.location.href.indexOf("/scoreSimulator.page") > 0 &&
-                                    "Banner3" === _t &&
-                                    (generalGATracking(
-                                            "Post Login - Score Simulator Section",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                            "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                        ),
-                                        $("#prePurchaseScoreBanner").show(),
-                                        $(".prePurchaseScoreBannerText").show());
-                            }
-                    else {
-                        var Xt = new Date(Qt);
-                        Xt.setDate(Xt.getDate() - e);
-                        var er = new Date(Qt);
-                        er.setDate(er.getDate() - c);
-                        var tr = new Date(Qt);
-                        tr.setDate(tr.getDate() - u);
-                        var rr = new Date(Qt);
-                        rr.setDate(rr.getDate() - h);
-                        var nr = new Date(Qt);
-                        nr.setDate(nr.getDate() - f);
-                        var ar = new Date(Qt);
-                        ar.setDate(ar.getDate() - g);
-                        var ir = new Date(Qt);
-                        ir.setDate(ir.getDate() - v);
-                        var or = new Date(Qt);
-                        or.setDate(or.getDate() - ie);
-                        var sr = new Date(Qt);
-                        sr.setDate(sr.getDate() - oe);
-                        var lr = new Date(Qt);
-                        lr.setDate(lr.getDate() - le);
-                        var dr = new Date(Qt);
-                        dr.setDate(dr.getDate() - de);
-                        var cr = new Date(Qt);
-                        cr.setDate(cr.getDate() - ue);
-                        var ur = new Date(Qt);
-                        ur.setDate(ur.getDate() - pe);
-                        var pr = new Date(Qt);
-                        pr.setDate(pr.getDate() - Xe);
-                        var hr = new Date(Qt);
-                        hr.setDate(hr.getDate() - et);
-                        var fr = new Date(Qt);
-                        fr.setDate(fr.getDate() - rt);
-                        var mr = new Date(Qt);
-                        mr.setDate(mr.getDate() - nt);
-                        var gr = new Date(Qt);
-                        gr.setDate(gr.getDate() - it);
-                        var vr = new Date(Qt);
-                        vr.setDate(vr.getDate() - ot),
-                            void 0 !== apiKeys.oneMonth_Banner_daysBeforeExpiry && "" !== apiKeys.oneMonth_Banner_daysBeforeExpiry ?
-                            today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "1" === apiKeys.dashboardPurchaseBanner ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "2" === apiKeys.dashboardPurchaseBanner ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= Xt && window.location.href.indexOf("/dashboard.page") > 0 && "3" === apiKeys.dashboardPurchaseBanner ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "1" === apiKeys.creditAlertsPurchaseBanner ?
-                            (generalGATracking(
-                                    "Post Login - Alerts Section",
-                                    "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                    "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "2" === apiKeys.creditAlertsPurchaseBanner ?
-                            (generalGATracking(
-                                    "Post Login - Alerts Section",
-                                    "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                    "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= Xt && window.location.href.indexOf("/creditAlerts.page") > 0 && "3" === apiKeys.creditAlertsPurchaseBanner ?
-                            (generalGATracking(
-                                    "Post Login - Alerts Section",
-                                    "Post Login - Alerts Section - PrePurchase Banner Shown",
-                                    "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= Xt && window.location.href.indexOf("/scoreSimulator.page") > 0 && "1" === apiKeys.scoresimulatorPurchaseBanner ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= Xt && window.location.href.indexOf("/scoreSimulator.page") > 0 && "2" === apiKeys.scoresimulatorPurchaseBanner ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= Xt &&
-                            window.location.href.indexOf("/scoreSimulator.page") > 0 &&
-                            "3" === apiKeys.scoresimulatorPurchaseBanner &&
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === p ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === p ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= er && today <= tr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === p ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === m ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === m ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= rr && today <= nr && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === m ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner1" === y ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner2" === y ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= ar && today <= ir && window.location.href.indexOf("/dashboard.page") > 0 && "Banner3" === y ?
-                            (generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown",
-                                    "Post Login - Dashboard Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === se ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === se ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= or && today <= sr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === se ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === ce ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === ce ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= lr && today <= dr && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === ce ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner1" === he ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner2" === he ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= cr && today <= ur && window.location.href.indexOf("/creditAlerts.page") > 0 && "Banner3" === he ?
-                            (generalGATracking("Post Login - Alerts Section", "Post Login - Alerts Section - PrePurchase Banner Shown", "Post Login - Alerts Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === tt ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === tt ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= pr && today <= hr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner3" === tt ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === at ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === at ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= fr && today <= mr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner3" === at ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show()) :
-                            today >= gr && today <= vr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner1" === st ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner1 - " + renewalDay
-                                ),
-                                $("#prePurchaseBanner").show(),
-                                $(".prePurchaseBannerText").show()) :
-                            today >= gr && today <= vr && window.location.href.indexOf("/scoreSimulator.page") > 0 && "Banner2" === st ?
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner2 - " + renewalDay
-                                ),
-                                $("#prePurchaseAlertsBanner").show(),
-                                $(".prePurchaseAlertsBannerText").show()) :
-                            today >= gr &&
-                            today <= vr &&
-                            window.location.href.indexOf("/scoreSimulator.page") > 0 &&
-                            "Banner3" === st &&
-                            (generalGATracking(
-                                    "Post Login - Score Simulator Section",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown",
-                                    "Post Login - Score Simulator Section - PrePurchase Banner Shown - Banner Banner3 - " + renewalDay
-                                ),
-                                $("#prePurchaseScoreBanner").show(),
-                                $(".prePurchaseScoreBannerText").show());
-                    }
-                }
-            }
-        }
-    }),
-    $(document).ready(function() {
-        setInterval(function() {
-            renewalDateTimer();
-        }, 1e3);
-        if (window.location.href.indexOf("/dashboard.page") > 0) {
-            var e = apiKeys.oneMonth_Creative_daysBeforeExpiry,
-                t = apiKeys.sixMonth_Creative_daysBeforeExpiry,
-                r = apiKeys.twelveMonth_Creative_daysBeforeExpiry,
-                n = apiKeys.oneMonth_Creative.split(","),
-                a = n[0],
-                i = (n[1], n[2]),
-                o = n[3],
-                s = apiKeys.sixMonth_Creative.split(","),
-                l = s[0],
-                d = (s[1], s[2]),
-                c = s[3],
-                u = apiKeys.twelveMonth_Creative.split(","),
-                p = u[0],
-                h = (u[1], u[2]),
-                f = u[3];
-            if ("true" === apiKeys.prePurchaseFeature) {
-                for (var m = 0; m < ud.reportstu.ComponentDetail.length; m++) {
-                    var g = ud.reportstu.ComponentDetail[m].ExpireDate,
-                        v = g.substring(8, 10),
-                        y = g.substring(5, 7),
-                        b = g.substring(0, 4),
-                        S = v + "/" + y + "/" + b,
-                        w = new Date(convertDate(S)),
-                        C = (renewalTodayTime = renewalTimeLeft = renewalHours = renewalMinutes = renewalSec = renewalDay = "");
-                    (C = w), (C = Date.parse(C) / 1e3), (renewalTodayTime = new Date()), (renewalTodayTime = Date.parse(renewalTodayTime) / 1e3), (renewalTimeLeft = C - renewalTodayTime), (renewalDay = Math.floor(renewalTimeLeft / 86400));
-                    var _ = S.toString().split("/"),
-                        x = _[2],
-                        P = convertDate(S);
-                }
-                if (today <= P && "9999" !== x && "true" === reqpar["request-params"]["tl.isMobileNumberTuefValid"]) {
-                    var A = ud.reportstu.OfferHistoryData;
-                    for (var D in A)
-                        if (
-                            "Active" != A[D].OfferStatus ||
-                            ("1M550RM" != A[D].OfferCode &&
-                                "1M550RUM" != A[D].OfferCode &&
-                                "1M550RA" != A[D].OfferCode &&
-                                "1M550RUA" != A[D].OfferCode &&
-                                "A1M550RA" != A[D].OfferCode &&
-                                "A1M550RM" != A[D].OfferCode &&
-                                "A1M550RUA" != A[D].OfferCode &&
-                                "I1M550RM" != A[D].OfferCode &&
-                                "I1M550RUM" != A[D].OfferCode &&
-                                "A1M550RUM" != A[D].OfferCode)
-                        )
-                            if (
-                                "Active" != A[D].OfferStatus ||
-                                ("6M800RM" != A[D].OfferCode &&
-                                    "6M800RUM" != A[D].OfferCode &&
-                                    "6M800RA" != A[D].OfferCode &&
-                                    "6M800RUA" != A[D].OfferCode &&
-                                    "A6M800RA" != A[D].OfferCode &&
-                                    "A6M800RM" != A[D].OfferCode &&
-                                    "A6M800RUA" != A[D].OfferCode &&
-                                    "I6M800RM" != A[D].OfferCode &&
-                                    "I6M800RUM" != A[D].OfferCode &&
-                                    "A6M800RUM" != A[D].OfferCode)
-                            ) {
-                                if (
-                                    "Active" == A[D].OfferStatus &&
-                                    ("1Y1200RM" == A[D].OfferCode ||
-                                        "1Y1200RUM" == A[D].OfferCode ||
-                                        "1Y1200RA" == A[D].OfferCode ||
-                                        "1Y1200RUA" == A[D].OfferCode ||
-                                        "A1Y1200RA" == A[D].OfferCode ||
-                                        "A1Y1200RM" == A[D].OfferCode ||
-                                        "A1Y1200RUA" == A[D].OfferCode ||
-                                        "I1Y1200RM" == A[D].OfferCode ||
-                                        "I1Y1200RUM" == A[D].OfferCode ||
-                                        "A1Y1200RUM" == A[D].OfferCode)
-                                ) {
-                                    var I = new Date(P);
-                                    I.setDate(I.getDate() - r);
-                                    var E = new Date(P);
-                                    E.setDate(E.getDate() - p);
-                                    var B = new Date(P);
-                                    B.setDate(B.getDate() - h),
-                                        void 0 !== apiKeys.twelveMonth_Creative_daysBeforeExpiry && "" !== apiKeys.twelveMonth_Creative_daysBeforeExpiry ?
-                                        today >= I && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative1" === apiKeys.DashboardUpsellInterstitial ?
-                                        ($("#modals").show(),
-                                            $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                            $("#modals .modal-wrapper").css({ height: "350px", padding: "0px" }),
-                                            $(".popup1Text1").html("Your subscription plan is expiring in " + renewalDay + " days"),
-                                            $("#prePurchasePopup1").show(),
-                                            generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative1 - " + renewalDay
-                                            ),
-                                            sessionStorage.setItem("popupVisit", "1")) :
-                                        today >= I && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative2" === apiKeys.DashboardUpsellInterstitial ?
-                                        ($("#modals").show(),
-                                            $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                            $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                            $("#prePurchasePopup2").show(),
-                                            generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative2 - " + renewalDay
-                                            ),
-                                            sessionStorage.setItem("popupVisit", "1")) :
-                                        today >= I &&
-                                        window.location.href.indexOf("/dashboard.page") > 0 &&
-                                        "1" !== sessionStorage.getItem("popupVisit") &&
-                                        "Creative3" === apiKeys.DashboardUpsellInterstitial &&
-                                        ($("#modals").show(),
-                                            $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                            $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                            $("#prePurchasePopup3").show(),
-                                            generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative3 - " + renewalDay
-                                            ),
-                                            sessionStorage.setItem("popupVisit", "1")) :
-                                        today >= E && today <= B && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative1" === f ?
-                                        ($("#modals").show(),
-                                            $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                            $("#modals .modal-wrapper").css({ height: "350px", padding: "0px" }),
-                                            $(".popup1Text1").html("Your subscription plan is expiring in " + renewalDay + " days"),
-                                            $("#prePurchasePopup1").show(),
-                                            generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative1 - " + renewalDay
-                                            ),
-                                            sessionStorage.setItem("popupVisit", "1")) :
-                                        today >= E && today <= B && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative2" === f ?
-                                        ($("#modals").show(),
-                                            $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                            $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                            $("#prePurchasePopup2").show(),
-                                            generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative2 - " + renewalDay
-                                            ),
-                                            sessionStorage.setItem("popupVisit", "1")) :
-                                        today >= E &&
-                                        today <= B &&
-                                        window.location.href.indexOf("/dashboard.page") > 0 &&
-                                        "1" !== sessionStorage.getItem("popupVisit") &&
-                                        "Creative3" === f &&
-                                        ($("#modals").show(),
-                                            $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                            $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                            $("#prePurchasePopup3").show(),
-                                            generalGATracking(
-                                                "Post Login - Dashboard Section",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                                "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative3 - " + renewalDay
-                                            ),
-                                            sessionStorage.setItem("popupVisit", "1"));
-                                }
-                            } else {
-                                var I = new Date(P);
-                                I.setDate(I.getDate() - t);
-                                var E = new Date(P);
-                                E.setDate(E.getDate() - l);
-                                var B = new Date(P);
-                                B.setDate(B.getDate() - d),
-                                    void 0 !== apiKeys.sixMonth_Creative_daysBeforeExpiry && "" !== apiKeys.sixMonth_Creative_daysBeforeExpiry ?
-                                    today >= I && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative1" === apiKeys.DashboardUpsellInterstitial ?
-                                    ($("#modals").show(),
-                                        $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                        $("#modals .modal-wrapper").css({ height: "350px", padding: "0px" }),
-                                        $(".popup1Text1").html("Your subscription plan is expiring in " + renewalDay + " days"),
-                                        $("#prePurchasePopup1").show(),
-                                        generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative1 - " + renewalDay
-                                        ),
-                                        sessionStorage.setItem("popupVisit", "1")) :
-                                    today >= I && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative2" === apiKeys.DashboardUpsellInterstitial ?
-                                    ($("#modals").show(),
-                                        $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                        $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                        $("#prePurchasePopup2").show(),
-                                        generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative2 - " + renewalDay
-                                        ),
-                                        sessionStorage.setItem("popupVisit", "1")) :
-                                    today >= I &&
-                                    window.location.href.indexOf("/dashboard.page") > 0 &&
-                                    "1" !== sessionStorage.getItem("popupVisit") &&
-                                    "Creative3" === apiKeys.DashboardUpsellInterstitial &&
-                                    ($("#modals").show(),
-                                        $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                        $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                        $("#prePurchasePopup3").show(),
-                                        generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative3 - " + renewalDay
-                                        ),
-                                        sessionStorage.setItem("popupVisit", "1")) :
-                                    today >= E && today <= B && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative1" === c ?
-                                    ($("#modals").show(),
-                                        $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                        $("#modals .modal-wrapper").css({ height: "350px", padding: "0px" }),
-                                        $(".popup1Text1").html("Your subscription plan is expiring in " + renewalDay + " days"),
-                                        $("#prePurchasePopup1").show(),
-                                        generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative1 - " + renewalDay
-                                        ),
-                                        sessionStorage.setItem("popupVisit", "1")) :
-                                    today >= E && today <= B && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative2" === c ?
-                                    ($("#modals").show(),
-                                        $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                        $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                        $("#prePurchasePopup2").show(),
-                                        generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative2 - " + renewalDay
-                                        ),
-                                        sessionStorage.setItem("popupVisit", "1")) :
-                                    today >= E &&
-                                    today <= B &&
-                                    window.location.href.indexOf("/dashboard.page") > 0 &&
-                                    "1" !== sessionStorage.getItem("popupVisit") &&
-                                    "Creative3" === c &&
-                                    ($("#modals").show(),
-                                        $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                        $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                        $("#prePurchasePopup3").show(),
-                                        generalGATracking(
-                                            "Post Login - Dashboard Section",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                            "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative3 - " + renewalDay
-                                        ),
-                                        sessionStorage.setItem("popupVisit", "1"));
-                            }
-                    else {
-                        var I = new Date(P);
-                        I.setDate(I.getDate() - e);
-                        var E = new Date(P);
-                        E.setDate(E.getDate() - a);
-                        var B = new Date(P);
-                        B.setDate(B.getDate() - i),
-                            void 0 !== apiKeys.oneMonth_Creative_daysBeforeExpiry && "" !== apiKeys.oneMonth_Creative_daysBeforeExpiry ?
-                            today >= I && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative1" === apiKeys.DashboardUpsellInterstitial ?
-                            ($("#modals").show(),
-                                $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                $("#modals .modal-wrapper").css({ height: "350px", padding: "0px" }),
-                                $(".popup1Text1").html("Your subscription plan is expiring in " + renewalDay + " days"),
-                                $("#prePurchasePopup1").show(),
-                                generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative1 - " + renewalDay
-                                ),
-                                sessionStorage.setItem("popupVisit", "1")) :
-                            today >= I && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative2" === apiKeys.DashboardUpsellInterstitial ?
-                            ($("#modals").show(),
-                                $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                $("#prePurchasePopup2").show(),
-                                generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative2 - " + renewalDay
-                                ),
-                                sessionStorage.setItem("popupVisit", "1")) :
-                            today >= I &&
-                            window.location.href.indexOf("/dashboard.page") > 0 &&
-                            "1" !== sessionStorage.getItem("popupVisit") &&
-                            "Creative3" === apiKeys.DashboardUpsellInterstitial &&
-                            ($("#modals").show(),
-                                $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                $("#prePurchasePopup3").show(),
-                                generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative3 - " + renewalDay
-                                ),
-                                sessionStorage.setItem("popupVisit", "1")) :
-                            today >= E && today <= B && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative1" === o ?
-                            ($("#modals").show(),
-                                $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                $("#modals .modal-wrapper").css({ height: "350px", padding: "0px" }),
-                                $(".popup1Text1").html("Your subscription plan is expiring in " + renewalDay + " days"),
-                                $("#prePurchasePopup1").show(),
-                                generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative1 - " + renewalDay
-                                ),
-                                sessionStorage.setItem("popupVisit", "1")) :
-                            today >= E && today <= B && window.location.href.indexOf("/dashboard.page") > 0 && "1" !== sessionStorage.getItem("popupVisit") && "Creative2" === o ?
-                            ($("#modals").show(),
-                                $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                $("#prePurchasePopup2").show(),
-                                generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative2 - " + renewalDay
-                                ),
-                                sessionStorage.setItem("popupVisit", "1")) :
-                            today >= E &&
-                            today <= B &&
-                            window.location.href.indexOf("/dashboard.page") > 0 &&
-                            "1" !== sessionStorage.getItem("popupVisit") &&
-                            "Creative3" === o &&
-                            ($("#modals").show(),
-                                $(".modal-close.glyphicons-remove-2").css({ color: "black" }),
-                                $("#modals .modal-wrapper").css({ padding: "0px", border: "none" }),
-                                $("#prePurchasePopup3").show(),
-                                generalGATracking(
-                                    "Post Login - Dashboard Section",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown",
-                                    "Post Login - Dashboard Section - PrePurchase PopUp Shown - PopUp Creative3 - " + renewalDay
-                                ),
-                                sessionStorage.setItem("popupVisit", "1"));
-                    }
-                }
-            }
-        }
-    }),
-    $(".modal-close").click(function() {
-        $("#modals .modal-wrapper").css({ border: "solid 3px #00a6ca" });
-    }),
-    $(document).ready(function() {
-        "ApplePay" === reqpar["request-params"]["tl.paymentProcessor"] &&
-            window.location.href.indexOf("/enrollPayment.page") > 0 &&
-            ($("#modals, #ecosystemPopup").show(), $(".modal-close").remove(), $(".btline").css({ "padding-top": "20px" }));
-    }),
-    (window.location.href.indexOf("/enrollPayment.page") > 0 || window.location.href.indexOf("/cond_login_no_hit.page") > 0) &&
-    ($("#subscribe").click(function() {
-            window.location.href = "https://www.cibil.com/select-plan";
-        }),
-        $("#returnHome").click(function() {
-            window.location.href = "https://www.cibil.com/select-plan";
-        })),
-    $(document).ready(function() {
-        window.location.href.indexOf("/dashboard.page") > 0 &&
-            "CIBIL" == currentEnterprise() &&
-            ("undefined" != typeof reqpar["request-params"]["tl.isMobileNumberTuefValid"] && "false" == reqpar["request-params"]["tl.isMobileNumberTuefValid"] ? validateIfUserNotMeetTUEF() : $("#tuef-mobile-number").attr("type", "hidden"));
-    }),
-    $(document).ready(function() {
-        if (window.location.href.indexOf("/cond_login_no_hit.page") > 0) {
-            var e = (reqpar["request-params"]["tl.offer-id"], reqpar["request-params"]["tl.referenceId"]);
-            $(".transactionId").html(e),
-                "undefined" != typeof reqpar["request-params"]["tl.displayReference"] && "true" == reqpar["request-params"]["tl.displayReference"] ?
-                ($(".apologyFree").hide(), $(".apologyPaid").show()) :
-                ($(".apologyFree").show(), $(".apologyPaid").hide());
-        }
-    }),
-    window.location.href.indexOf("/cond_login_no_hit.page") > 0 &&
-    ($("#subscribe").click(function() {
-            generalGATracking("Post CAAS Subject Not Found", "Post CAAS Subject Not Found - No Record Found Page", "Post CAAS Subject Not Found - No Record Found Page - Return To Homepage Click");
-        }),
-        $("#returnHome").click(function() {
-            generalGATracking("Post CAAS Subject Not Found", "Post CAAS Subject Not Found - No Record Found Page", "Post CAAS Subject Not Found - No Record Found Page - See Subscription Options Click");
-        })),
-    $(document).ready(function() {
-        (window.location.href.indexOf("/enrollShort.page") > 0 ||
-            window.location.href.indexOf("/enrollShortAdd.page") > 0 ||
-            window.location.href.indexOf("/login.page") > 0 ||
-            window.location.href.indexOf("/forgotPasswordUsername.page") > 0) &&
-        $("#cyberSecurity").hide();
-    }),
-    window.location.href.indexOf("/enrollPayment.page") > 0 &&
-    $("#enroll-Submit").click(function() {
-        ("undefined" != typeof reqpar["request-params"]["tl.promocode"] && "" !== reqpar["request-params"]["tl.promocode"]) || $("<input>").attr("type", "hidden").attr("name", "tl.promocode").attr("value", "").appendTo("form"),
-            $('input[name="Action"]').val("GET_INVOICE_AND_PAYMENT"),
-            $("form").submit();
-    }),
-    $(document).ready(function() {
-        window.location.href.indexOf("/creditdisputereport.page") > 0 &&
-            "en" === sessionStorage.getItem("userLangPref") &&
-            ($("#disputeEnquiryInfo").html('Credit Application History (Enquiries) <span class="messageError">You have an error in this section.</span>'),
-                $(".showMoreEnquiry").html("+ Show Credit Application History (Enquiries) older than 3 years"));
-    }),
-    $(document).ready(function() {
-        window.location.href.indexOf("/enrollVerifyIdentity.page") > 0 &&
-            "CIBIL" == currentEnterprise() &&
-            "OTP_AlternateEmail_Entry_Queue" === document.getElementById("qName").value &&
-            ($(".maskedValue").text().match(/\*/) ||
-                ($(".maskedValue.mobileNumber").hide(),
-                    $("#skipDiv").css({ width: "50%", float: "left", "margin-top": "4px" }),
-                    $(".iv-details").css({ padding: "0px" }),
-                    $("#enroll-Submit").hide(),
-                    $(".questionTitle").html("No Data Available. Please skip this Question.")));
-    }),
-    $(document).ready(function() {
-        (window.location.href.indexOf("/enrollShort.page") > 0 || window.location.href.indexOf("/enrollQuick.page") > 0) &&
-        "CIBIL" == currentEnterprise() &&
-            ($("#stateId").css({ width: "100%", "margin-top": "30px" }),
-                $("#enroll-Submit").on("click", function() {
-                    if ($("#enroll-Pin-Current").hasClass("error")) return !1;
-                }),
-                $("#stateIdContainer").on("change keyup", function() {
-                    var e = $("#enroll-State-Current").val(),
-                        t = $("#enroll-Pin-Current").val(),
-                        r = parseInt(t.substring(0, 2)),
-                        n = parseInt(t.substring(3, 6));
-                    if ((t && $("#enroll-Pin-Current").trigger("blur"), "" !== e)) {
-                        var a = pinCodeValidator[e].startCode,
-                            i = pinCodeValidator[e].endCode;
-                        (r >= a && r <= i && (0 !== n || 90 === r || 91 === r || 92 === r || 93 === r || 94 === r || 95 === r || 96 === r || 97 === r || 98 === r || 99 === r)) || checkStateCode();
-                    }
-                }),
-                $("#enroll-Pin-Current").on("change keyup", function() {
-                    var e = $("#enroll-Pin-Current").val(),
-                        t = parseInt(e.substring(0, 2)),
-                        r = parseInt(e.substring(3, 6)),
-                        n = [
-                            { stateCode: "01", startCode: 18, endCode: 19 },
-                            { stateCode: "02", startCode: 17, endCode: 17 },
-                            { stateCode: "03", startCode: 14, endCode: 16 },
-                            { stateCode: "04", startCode: 14, endCode: 16 },
-                            { stateCode: "05", startCode: 24, endCode: 26 },
-                            { stateCode: "06", startCode: 12, endCode: 13 },
-                            { stateCode: "07", startCode: 11, endCode: 11 },
-                            { stateCode: "08", startCode: 30, endCode: 34 },
-                            { stateCode: "09", startCode: 20, endCode: 28 },
-                            { stateCode: "10", startCode: 80, endCode: 85 },
-                            { stateCode: "11", startCode: 73, endCode: 73 },
-                            { stateCode: "12", startCode: 78, endCode: 79 },
-                            { stateCode: "13", startCode: 78, endCode: 79 },
-                            { stateCode: "14", startCode: 78, endCode: 79 },
-                            { stateCode: "15", startCode: 78, endCode: 79 },
-                            { stateCode: "16", startCode: 72, endCode: 79 },
-                            { stateCode: "17", startCode: 79, endCode: 79 },
-                            { stateCode: "18", startCode: 78, endCode: 79 },
-                            { stateCode: "19", startCode: 70, endCode: 74 },
-                            { stateCode: "20", startCode: 81, endCode: 83 },
-                            { stateCode: "21", startCode: 75, endCode: 77 },
-                            { stateCode: "22", startCode: 46, endCode: 49 },
-                            { stateCode: "23", startCode: 45, endCode: 48 },
-                            { stateCode: "24", startCode: 36, endCode: 39 },
-                            { stateCode: "26", startCode: 36, endCode: 39 },
-                            { stateCode: "27", startCode: 40, endCode: 44 },
-                            { stateCode: "28", startCode: 50, endCode: 56 },
-                            { stateCode: "29", startCode: 53, endCode: 59 },
-                            { stateCode: "30", startCode: 40, endCode: 40 },
-                            { stateCode: "31", startCode: 67, endCode: 68 },
-                            { stateCode: "32", startCode: 67, endCode: 69 },
-                            { stateCode: "33", startCode: 53, endCode: 66 },
-                            { stateCode: "34", startCode: 53, endCode: 67 },
-                            { stateCode: "35", startCode: 74, endCode: 74 },
-                            { stateCode: "36", startCode: 50, endCode: 56 },
-                            { stateCode: "38", startCode: 18, endCode: 19 },
-                            { stateCode: "99", startCode: 90, endCode: 99 },
-                        ],
-                        a = n.filter(function(e) {
-                            return (t >= e.startCode && t <= e.endCode && 0 !== r) || (0 === r && 90 !== t && 91 !== t && 92 !== t && 93 !== t && 94 !== t && 95 !== t && 96 !== t && 97 !== t && 98 !== t && 99 !== t);
-                        });
-                    if (($("#stateIdContainer").removeClass("hideme").addClass("hideme"), "" !== e))
-                        if (1 === a.length) {
-                            var i = pinCodeValidator[a[0].stateCode].startCode,
-                                o = pinCodeValidator[a[0].stateCode].endCode;
-                            t >= i && t <= o && (0 !== r || 90 === t || 91 === t || 92 === t || 93 === t || 94 === t || 95 === t || 96 === t || 97 === t || 98 === t || 99 === t) ?
-                                $("#enroll-State-Current").val(a[0].stateCode) :
-                                checkStateCode();
-                        } else
-                            $("#stateIdContainer").removeClass("hideme"),
-                            $("#enroll-State-Current").val(""),
-                            $("#enroll-Pin-Current").addClass("helper"),
-                            $('input[name="tl.curr-pin-code"],select[name="tl.curr-pin-code"]').addClass("error").attr("data-error", "check"),
-                            $(".pincode-class .helper")
-                            .html("<span/>" + localizedString("StatePincode"))
-                            .addClass("error");
-                }));
-    }),
-    $(document).ready(function() {
-        window.location.href.indexOf("/creditreport.page") > 0 && "CIBIL" == currentEnterprise() && $(".derogatorySection .twoCol div").css({ display: "flex", "align-items": "baseline" });
-    }),
-    $(document).ready(function() {
-        (window.location.href.indexOf("/additionalInfo.page") > 0 || window.location.href.indexOf("/cond_login_no_hit.page") > 0) &&
-        "CIBIL" == currentEnterprise() &&
-            ($("header .menu-links a").remove(), $("header .tactical-links a").hide(), $("header nav .nav-links a.menu").css("display", "none"));
-    });
