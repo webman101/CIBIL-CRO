@@ -519,12 +519,16 @@ $(".form-group").on("change", function(){
 
     if ( $('.compare-grouped-position-absolute').children().length == 2 ) {
         $(".compare-button").removeClass("disabled");
+        $("input.append-onclick").not(':checked').attr('disabled',false);
     }
 
     if ( $('.compare-grouped-position-absolute').children().length == 0 ) {
         $(".compare-message").hide();
     }
-    
+
+    if ( $('.compare-grouped-position-absolute').children().length == 3 ) {
+        $("input.append-onclick").not(':checked').attr('disabled',true);
+    }
 });
 
 

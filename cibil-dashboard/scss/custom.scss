@@ -4553,3 +4553,7 @@ select {
 		padding-left: 40px;
 	}
 }
+.offers-page .checkbox-row .form-group input.append-onclick:disabled+label{
+  border: 2px solid #9e9e9e;
+  pointer-events: none;
+}
