@@ -17,84 +17,39 @@ $(function() {
     });
 });
 
+// $(document).ready(function() {
+//     $('.multiple-items-2').slick({
+//         infinite: true,
+
+//         arrows: false,
+//         dots: true,
+//         cellpadding: 20,
+//         arrows: true,
+//         responsive: [{
+//                 breakpoint: 3000,
+//                 settings: {
+//                     slidesToShow: 2,
+//                     slidesToScroll: 2,
+//                 }
+//             }, {
+//                 breakpoint: 600,
+//                 settings: {
+//                     slidesToShow: 1,
+//                     slidesToScroll: 1
+//                 }
+//             }, {
+//                 breakpoint: 480,
+//                 settings: {
+//                     slidesToShow: 1,
+//                     slidesToScroll: 1
+//                 }
+//             }
+
+//         ]
+//     });
+// });
 
 
-
-$(document).ready(function() {
-
-    var opts = {
-        angle: -0.02, // The span of the gauge arc
-        lineWidth: 0.15, // The line thickness
-        radiusScale: 1, // Relative radius
-        color: '#6FADCF',
-        pointer: {
-            length: 0.4, // // Relative to gauge radius
-            strokeWidth: 0.035, // The thickness
-            color: '#000000' // Fill color
-        },
-        limitMax: false, // If false, max value increases automatically if value > maxValue
-        limitMin: false, // If true, the min value of the gauge will be fixed
-        colorStart: '#B16B1E',
-        colorStop: '#4BB806', // just experiment with them
-        strokeColor: '#E0E0E0', // to see which ones work best for you
-        generateGradient: true,
-        highDpiSupport: true, // High resolution support
-        percentColors: [
-            [0.0, "#B16B1E"],
-            [0.20, "#B16B1E"],
-            [0.50, "#B16B1E"],
-            [0.80, "#4BB806"],
-            [1.0, "#4BB806"]
-        ],
-
-    };
-
-    var target = document.getElementById('canvas-preview'); // your canvas element
-    var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
-    gauge.maxValue = 900; // set max gauge value
-    gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
-    gauge.animationSpeed = 32; // set animation speed (32 is default value)
-    gauge.set(702); // set actual value
-
-});
-$(document).ready(function() {
-
-
-    var opts = {
-        angle: -0.02, // The span of the gauge arc
-        lineWidth: 0.15, // The line thickness
-        radiusScale: 1, // Relative radius
-        color: '#6FADCF',
-        pointer: {
-            length: 0.4, // // Relative to gauge radius
-            strokeWidth: 0.035, // The thickness
-            color: '#000000' // Fill color
-        },
-        limitMax: false, // If false, max value increases automatically if value > maxValue
-        limitMin: false, // If true, the min value of the gauge will be fixed
-        colorStart: '#B16B1E',
-        colorStop: '#4BB806', // just experiment with them
-        strokeColor: '#E0E0E0', // to see which ones work best for you
-        generateGradient: true,
-        highDpiSupport: true, // High resolution support
-        percentColors: [
-            [0.0, "#B16B1E"],
-            [0.20, "#B16B1E"],
-            [0.50, "#B16B1E"],
-            [0.80, "#4BB806"],
-            [1.0, "#4BB806"]
-        ],
-
-    };
-
-    var target = document.getElementById('canvas-preview1'); // your canvas element
-    var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
-    gauge.maxValue = 900; // set max gauge value
-    gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
-    gauge.animationSpeed = 32; // set animation speed (32 is default value)
-    gauge.set(702); // set actual value
-
-});
 
 $(document).ready(function() {
     $('.multiple-items').slick({
@@ -133,9 +88,12 @@ $(document).ready(function() {
     
 });
 
+
+
+
 $(document).ready(function() {
     // Show the first tab and hide the rest
-    $('#largetabs-nav li:first-arrowToggle').addClass('active');
+    $('#largetabs-nav li:first-child').addClass('active');
     $('.tab-content:first').show();
 
     // Click function
@@ -607,3 +565,79 @@ $(".compare-button").on("click", function(){
 //     $('.benefits-outer').slideUp();
 //     $(".offer-details").removeClass('reverse-arrow')
 // });
+
+$(document).ready(function() {
+
+    var opts = {
+        angle: -0.02, // The span of the gauge arc
+        lineWidth: 0.15, // The line thickness
+        radiusScale: 1, // Relative radius
+        color: '#6FADCF',
+        pointer: {
+            length: 0.4, // // Relative to gauge radius
+            strokeWidth: 0.035, // The thickness
+            color: '#000000' // Fill color
+        },
+        limitMax: false, // If false, max value increases automatically if value > maxValue
+        limitMin: false, // If true, the min value of the gauge will be fixed
+        colorStart: '#B16B1E',
+        colorStop: '#4BB806', // just experiment with them
+        strokeColor: '#E0E0E0', // to see which ones work best for you
+        generateGradient: true,
+        highDpiSupport: true, // High resolution support
+        percentColors: [
+            [0.0, "#B16B1E"],
+            [0.20, "#B16B1E"],
+            [0.50, "#B16B1E"],
+            [0.80, "#4BB806"],
+            [1.0, "#4BB806"]
+        ],
+
+    };
+
+    var target = document.getElementById('canvas-preview'); // your canvas element
+    var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+    gauge.maxValue = 900; // set max gauge value
+    gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
+    gauge.animationSpeed = 32; // set animation speed (32 is default value)
+    gauge.set(702); // set actual value
+
+});
+$(document).ready(function() {
+
+
+    var opts = {
+        angle: -0.02, // The span of the gauge arc
+        lineWidth: 0.15, // The line thickness
+        radiusScale: 1, // Relative radius
+        color: '#6FADCF',
+        pointer: {
+            length: 0.4, // // Relative to gauge radius
+            strokeWidth: 0.035, // The thickness
+            color: '#000000' // Fill color
+        },
+        limitMax: false, // If false, max value increases automatically if value > maxValue
+        limitMin: false, // If true, the min value of the gauge will be fixed
+        colorStart: '#B16B1E',
+        colorStop: '#4BB806', // just experiment with them
+        strokeColor: '#E0E0E0', // to see which ones work best for you
+        generateGradient: true,
+        highDpiSupport: true, // High resolution support
+        percentColors: [
+            [0.0, "#B16B1E"],
+            [0.20, "#B16B1E"],
+            [0.50, "#B16B1E"],
+            [0.80, "#4BB806"],
+            [1.0, "#4BB806"]
+        ],
+
+    };
+
+    var target = document.getElementById('canvas-preview1'); // your canvas element
+    var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
+    gauge.maxValue = 900; // set max gauge value
+    gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
+    gauge.animationSpeed = 32; // set animation speed (32 is default value)
+    gauge.set(702); // set actual value
+
+});
