@@ -1463,12 +1463,30 @@ input.orange-button {
 	}
 }
 
+footer{
+	a{
+		p{
+			text-decoration: underline;
+		}
+		
+	}
+	a:hover{
+		color: #f16e00 !important;
+	}
+	& > p{
+		margin-bottom: 12px;
+	}
+}
+
 @media screen and (min-width: 992px) and (max-width: 1600px) {
 	.ml-md-60 {
 		margin-left: 60px !important;
 	}
 	.mr-md-60 {
 		margin-right: 60px !important;
+	}
+	ul{
+		padding-bottom: 35px;
 	}
 }
 
@@ -2371,6 +2389,11 @@ input.orange-button {
 	.icon-column-box {
 		min-height: 240px;
 	}
+	@media(max-width: 500px){
+		.slick-list {
+			padding: 0 6% !important;
+		}
+	}
 }
 
 .offers-page a {
@@ -2506,6 +2529,9 @@ input.orange-button {
 	align-items: center;
 	display: flex;
 	flex-grow: 1;
+}
+.offers-page .border-ac-section a:hover{
+	color: #f16e00 !important;
 }
 
 .offers-page .text-button {
@@ -3382,6 +3408,29 @@ input.orange-button {
 	padding-top: 14px;
 	flex: 1;
 	border-right: 1px solid #dddddd;
+	position: relative;
+}
+
+.offers-page{
+	.largetabs{
+		#largetabs-nav{
+			li.active{
+				::before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: #00a6ca;
+					width: 100%;
+					height: 6px;
+				}
+				.numb{
+					background: #00a6ca;
+				}
+			}
+		}
+	}
 }
 
 .offers-page .largetabs #largetabs-nav li p {
@@ -3450,6 +3499,8 @@ input.orange-button {
 	padding: 10px 15px;
 	padding-left: 15px;
 	margin-top: 20px;
+	position: sticky;
+	bottom: 0; 
 }
 
 @media screen and (min-width: 992px) {
