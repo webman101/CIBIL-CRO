@@ -189,6 +189,7 @@ $('.modal-toggle1').on('click', function(e) {
     e.preventDefault();
     $('.modal1').toggleClass('is-visible');
     $('body').toggleClass('overflow-hidden');
+    console.log(' modal clicked')
 });
 $('.close-modal').on('click', function(e) {
     e.preventDefault();
@@ -203,6 +204,7 @@ $('.modal-toggle2').on('click', function(e) {
     e.preventDefault();
     $('.modal2').toggleClass('is-visible');
     $('body').removeClass('overflow-hidden');
+    console.log(' modal 2 clicked')
 });
 $('.close-modal').on('click', function(e) {
     e.preventDefault();

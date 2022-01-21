@@ -18,6 +18,10 @@ a {
   color: #2c2c2c;
 }
 
+bold {
+  font-weight: 600;
+}
+
 a:hover {
   color: #f16e00;
 }
@@ -1201,6 +1205,16 @@ input:disabled {
 .border-right-0 {
   border-right: 0;
   border-right: 0;
+}
+
+.content-container > div {
+  max-width: 1245px;
+  margin: auto;
+}
+
+.max-container {
+  max-width: 1300px;
+  margin: auto;
 }
 
 .nav {
@@ -3199,7 +3213,7 @@ footer > p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 12px;
+  padding-left: 20px;
 }
 
 .offers-page .dropdown {
@@ -3282,6 +3296,24 @@ footer > p {
 
 .offers-page .compare-row .button-row {
   margin-left: auto;
+}
+
+div.offers-page .blue-dropdown-groups-section .sort:first-child {
+  width: 130px;
+  margin: 0 !important;
+}
+
+div.offers-page .blue-dropdown-groups-section .sort:nth-child(2), div.offers-page .blue-dropdown-groups-section .sort:nth-child(3) {
+  width: 230px;
+  margin: 0 !important;
+  width: 25%;
+  padding-left: 20px;
+}
+
+div.offers-page .blue-dropdown-groups-section .sort:last-child {
+  max-width: 150px;
+  width: 25%;
+  padding-left: 20px;
 }
 
 @media screen and (min-width: 992px) {
@@ -3375,6 +3407,16 @@ footer > p {
   padding-left: 20px;
   position: relative;
   width: 230px;
+}
+
+@media (max-width: 767px) {
+  .offers-page .limit-column {
+    padding-left: 0;
+    width: auto;
+  }
+  .offers-page .limit-column::before {
+    opacity: 0;
+  }
 }
 
 .offers-page .limit-column::before {
@@ -4115,6 +4157,11 @@ footer > p {
   position: relative;
 }
 
+.modalpopup.is-visible .modal-overlay, .modalpopup.is-visible .modal-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+
 .offers-page .blue-dropdown-groups-section .sort::before {
   content: "";
   position: absolute;
@@ -4124,7 +4171,7 @@ footer > p {
   top: 0;
   bottom: 0;
   margin: auto;
-  right: -25px;
+  right: 0 !important;
 }
 
 .offers-page .blue-dropdown-groups-section .sort:last-child::before {
@@ -4137,14 +4184,6 @@ footer > p {
 
 .offers-page .blue-dropdown-groups-section .percent::before {
   right: -70px;
-}
-
-.offers-page .blue-dropdown-groups-section .name:after {
-  right: -12px !important;
-}
-
-.offers-page .blue-dropdown-groups-section .name.asc:after {
-  right: -12px !important;
 }
 
 .offers-page .blue-dropdown-groups-section .sort:after {
@@ -4167,9 +4206,9 @@ footer > p {
   border-right: 5px solid transparent;
   border-top: 5px solid #fff;
   content: "";
-  position: relative;
-  top: 4px;
-  right: -45px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
 }
 
 .offers-page .mobile-filter {
