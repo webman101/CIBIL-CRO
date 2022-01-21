@@ -1,3 +1,7 @@
+
+
+
+
 function localizedString(e, t) {
     var r;
     return (
@@ -321,7 +325,7 @@ function buildHistoryChart(e) {
                 ae.node.setAttribute("class", "inner data" + i), re.push(ne, ae), (re.tui_dataset = "data" + i);
                 var ie = "<dl class='data" + i + "' style='top:" + (f[i] + 15) + "px;left:" + (V - 80) + "px'>";
                 for (j = 0; j < h[i].length; j++)
-                    (ie += "<dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd>" : 1 === h[i][j].score ? "<dd>NH</dd>" : "<dd>/" + h[i][j].score + "</dd>");
+                    (ie += "<div class='graphdata'><dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd>" : 1 === h[i][j].score ? "<dd>NH</dd>" : "<dd>" + h[i][j].score + "</dd> </div>");
                 (ie += "</dl>"), $("#chart-history svg").after(ie);
             }
     }
@@ -331,19 +335,16 @@ function buildHistoryChart(e) {
             for (i = 0; i < e.length; i++)
                 if (e[i].match(/^data/)) var t = e[i];
             $("circle.outer." + t).attr({ r: 23 }), $("circle.inner." + t).attr({ r: 14, "stroke-width": 9 });
-        })
-        .on("mouseout", "circle", function() {
+        }).on("mouseout", "circle", function() {
             var e = this.className.baseVal.split(/\s+/);
             for (i = 0; i < e.length; i++)
                 if (e[i].match(/^data/)) var t = e[i];
             $("circle.outer." + t).attr({ r: 15 }), $("circle.inner." + t).attr({ r: 8, "stroke-width": 5 });
-        })
-        .off("click", "circle")
-        .on("click", "circle", function() {
+        }).off("click", "circle").on("click", "circle", function() {
             var e = this.className.baseVal.split(/\s+/);
             for (i = 0; i < e.length; i++)
                 if (e[i].match(/^data/)) var t = e[i];
-            $("dl." + t).toggle();
+            $("dl." + t).show().siblings('dl').hide();;
         });
 }
 
@@ -14750,18 +14751,18 @@ var locale = locale || "en";
 $("body").addClass("lang-" + locale);
 var month = [
         {},
-        { max: 31, abbr: "01", name: "01", abbr_hi: "जन" },
-        { max: isLeapYear ? 29 : 28, abbr: "02", name: "02", abbr_hi: "फ़र" },
-        { max: 31, abbr: "03", name: "03", abbr_hi: "मार्च" },
-        { max: 30, abbr: "04", name: "04", abbr_hi: "अप्रैल" },
-        { max: 31, abbr: "05", name: "05", abbr_hi: "मई" },
-        { max: 30, abbr: "06", name: "06", abbr_hi: "जून" },
-        { max: 31, abbr: "07", name: "07", abbr_hi: "जुलाई" },
-        { max: 31, abbr: "08", name: "08", abbr_hi: "अगस्त" },
-        { max: 30, abbr: "09", name: "09", abbr_hi: "सितं" },
-        { max: 31, abbr: "10", name: "10", abbr_hi: "अक्टू" },
-        { max: 30, abbr: "11", name: "11", abbr_hi: "नवं" },
-        { max: 31, abbr: "12", name: "12", abbr_hi: "दिसं" },
+        { max: 31, abbr: "Jul", name: "Jul", abbr_hi: "जन" },
+        { max: isLeapYear ? 29 : 28, abbr: "Aug", name: "Aug", abbr_hi: "फ़र" },
+        { max: 31, abbr: "Sept", name: "01", abbr_hi: "मार्च" },
+        { max: 30, abbr: "Oct", name: "Oct", abbr_hi: "अप्रैल" },
+        { max: 31, abbr: "Nov", name: "Nov", abbr_hi: "मई" },
+        { max: 30, abbr: "Dec", name: "Dec", abbr_hi: "जून" },
+        { max: 31, abbr: "Jan", name: "Jan", abbr_hi: "जुलाई" },
+        { max: 31, abbr: "Feb", name: "Feb", abbr_hi: "अगस्त" },
+        { max: 30, abbr: "Mar", name: "Mar", abbr_hi: "सितं" },
+        { max: 31, abbr: "Apr", name: "Apr", abbr_hi: "अक्टू" },
+        { max: 30, abbr: "May", name: "May", abbr_hi: "नवं" },
+        { max: 31, abbr: "June", name: "June", abbr_hi: "दिसं" },
     ],
     pinCodeValidator = {
         "01": { startCode: 18, endCode: 19 },
@@ -16464,3 +16465,6 @@ if (
     return null == t ? null : decodeURI(t[1]) || 0;
 })
 var offer_Id = "";
+$('.x-axis-label').hide();
+
+

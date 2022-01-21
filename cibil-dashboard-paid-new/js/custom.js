@@ -1,3 +1,5 @@
+
+$('.graphdata').addClass('fcuk');
 $(function() {
 
     var activeIndex = $('.active-tab').index(),
@@ -363,3 +365,6 @@ if ($(window).width() < 480 || $(window).height() < 480) {
     });
 
 }
+
+
+
