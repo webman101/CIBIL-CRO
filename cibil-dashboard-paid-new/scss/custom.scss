@@ -242,6 +242,12 @@ h6 {
     .dashboard .left-column {
         display: none;
     }
+    .m-text-center{
+		text-align: center;
+	}
+    .m-mb-20{
+        margin-bottom: 20px;;
+    }
 }
 
 .dashboard .right-column {
@@ -2525,6 +2531,9 @@ input {
         background-color: #00a6ca;
         border-top: 1px solid #00a6ca;
     }
+    .dhide {
+		display: none !important;
+	}
 }
 
 .upgrade-page footer a {
@@ -2585,7 +2594,9 @@ input {
 }
 
 .report-page {
-    padding-bottom: 60px;
+    @media screen and (min-width: 992px) {
+        padding-bottom: 60px;
+    }
 }
 
 .report-page a {
@@ -2712,6 +2723,9 @@ input {
 @media screen and (min-width: 992px) {
     .report-page .common-type-tabs-section .nav li {
         max-width: 200px;
+    }
+    .pl-d-10{
+        padding-left: 10px !important;
     }
 }
 
@@ -3022,6 +3036,7 @@ input {
 .report-page .toggle-arrow {
     transition: all 0.1s ease-in-out;
     transform: rotate(180deg);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {
@@ -3054,7 +3069,7 @@ input {
 
 .report-page #reporttabs {
     padding-top: 20px;
-    cursor: pointer;
+    // cursor: pointer;
     position: relative;
     z-index: 5;
 }
@@ -3086,11 +3101,13 @@ input {
     color: #2c2c2c;
     margin-left: 20px;
     padding-bottom: 7px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {
     .report-page .reporttab {
         padding: 20px;
+        margin-left: 0;
     }
 }
 
@@ -5303,3 +5320,40 @@ h6 {
     margin-top: 30px;
 }
 
+.report-page-wrap{
+	@media (min-width:992px){
+		padding: 0 60px;
+	}
+}
+.my-accounts .report-page .common-type-tabs-section {
+    padding-left: 0 !important;
+}
+.account-details-wrap > .accordionItem:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.rotate-180{
+	transform: rotate(180deg);
+    transition: 0.25s;
+}
+
+@media (max-width: 992px){
+    ul.m-tab-selection{
+        background: #00a6ca;
+        & > li:nth-child(2){
+            border-radius: 6px 6px 0 0;
+            margin-top: 8px !important;
+        }
+        li.active{
+            border-radius: 6px;
+        }
+        li.selected p, li.init p{
+            font-weight: 700;
+            color: #2c2c2c;
+        }
+    }
+}

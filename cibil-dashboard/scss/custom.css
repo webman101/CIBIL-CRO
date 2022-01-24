@@ -887,7 +887,7 @@ input:disabled {
 .interstial-container .save::before {
   content: "";
   position: absolute;
-  width: 102%;
+  width: 100%;
   height: 101%;
   left: -2px;
   top: 0;
@@ -896,9 +896,9 @@ input:disabled {
   transform: translateY(0px);
   content: "";
   position: absolute;
-  width: 102%;
+  width: 100%;
   height: 101%;
-  left: -2px;
+  left: 0px;
   top: 0;
   background: #fcd800;
   bottom: 0;
@@ -1384,7 +1384,7 @@ input.orange-button {
     border-top: none;
     padding-left: 20px;
     border-top: none;
-    padding-left: 20px;
+    padding-left: 0px;
   }
 
   .common-type-tabs-section .nav li {
@@ -1518,6 +1518,9 @@ input.orange-button {
     flex-direction: column-reverse;
     padding: 20px;
   }
+  .m-text-center {
+    text-align: center;
+  }
 }
 footer a p {
   text-decoration: underline;
@@ -1527,6 +1530,22 @@ footer a:hover {
 }
 footer > p {
   margin-bottom: 12px;
+}
+
+@media (min-width: 992px) {
+  footer .f-links {
+    padding-bottom: 35px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  footer .copyright {
+    padding-top: 25px;
+    margin-bottom: 10px;
+  }
+  footer .f-links {
+    margin-top: 10px !important;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1600px) {
@@ -2595,6 +2614,10 @@ footer > p {
   color: #f16e00;
 }
 
+.main-dashboard a.text-intro-bold:hover {
+  color: #f16e00;
+}
+
 .offers-page .text-red {
   color: #d74025 !important;
   font-family: "Intro", Regular;
@@ -2777,7 +2800,7 @@ footer > p {
   border-top: 3px solid #dddddd;
   background: #fafafa;
   border-radius: 4px;
-  padding: 16px;
+  padding: 20px;
 }
 
 @media screen and (max-width: 992px) {
@@ -2789,7 +2812,7 @@ footer > p {
 }
 @media screen and (min-width: 992px) {
   .offers-page .icon-column-box {
-    padding: 30px 23px;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -3065,7 +3088,6 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
 @media screen and (min-width: 992px) {
   .offers-page .input-lists {
     display: flex;
-    padding-left: 20px;
   }
 }
 .offers-page .input-lists > div {
@@ -3151,6 +3173,20 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
   .offers-page .limit-column::before {
     opacity: 0;
   }
+}
+
+.offers-page .input-lists input.price {
+  padding-left: 30px;
+}
+
+#myInputautocomplete-list {
+  position: absolute;
+  width: 100%;
+  overflow-y: scroll;
+  height: 78px;
+  background: #fff;
+  z-index: 2;
+  padding-left: 16px;
 }
 
 .offers-page .limit-column::before {
@@ -4042,7 +4078,17 @@ select {
 
 .toggle-arrow {
   transition: all 0.1s ease-in-out;
+<<<<<<< Updated upstream
   transform: rotate(180deg);
+=======
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.my-accounts .report-page .common-type-tabs-section {
+  padding-left: 0 !important;
+>>>>>>> Stashed changes
 }
 
 @media screen and (max-width: 992px) {
@@ -4074,7 +4120,6 @@ select {
 
 #reporttabs {
   padding-top: 20px;
-  cursor: pointer;
   position: relative;
   z-index: 5;
 }
@@ -4111,6 +4156,7 @@ select {
   color: #2c2c2c;
   margin-left: 20px;
   padding-bottom: 7px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {
@@ -4445,6 +4491,12 @@ select {
   .input-lists > div {
     margin-right: 0 !important;
   }
+  .m-mb-20 {
+    margin-bottom: 20px !important;
+  }
+  .reporttab {
+    margin-left: 0;
+  }
 }
 #exampleModal {
   background: #141414d1;
@@ -4609,12 +4661,16 @@ select {
   .pl-md-40 {
     padding-left: 40px;
   }
+  .pl-d-10 {
+    padding-left: 10px !important;
+  }
 }
 .offers-page .checkbox-row .form-group input.append-onclick:disabled + label {
   border: 2px solid #9e9e9e;
   pointer-events: none;
 }
 
+<<<<<<< Updated upstream
 .my-accounts .common-type-tabs-section {
   border-top: 1px solid #ddd;
 }
@@ -4644,3 +4700,138 @@ select {
   border-radius: 6px;
   padding: 20px;
 }/*# sourceMappingURL=custom.css.map */
+=======
+@media (min-width: 992px) {
+  .report-page-wrap {
+    padding: 0 60px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .report-page .alerts-text-block .alerts-icon-text {
+    margin-bottom: 44px;
+  }
+}
+
+.report-page .password-active.active .password-tab {
+  background-image: url(../cibil-report/iconblue6.svg);
+}
+
+.report-page .notification-active.active .notification-tab {
+  background-image: url(../cibil-report/iconblue1.svg);
+}
+
+.report-page .subscription-active.active .subscription-tab {
+  background-image: url(../cibil-report/iconblue2.svg);
+}
+
+.report-page .password-tab {
+  background-image: url(../cibil-report/iconrepot6.svg);
+}
+
+.report-page .notification-tab {
+  background-image: url(../cibil-report/iconrepot1.svg);
+}
+
+.report-page .subscription-tab {
+  background-image: url(../cibil-report/iconrepot2.svg);
+}
+
+.report-page .employment .password-tab {
+  background-image: url(../cibil-report/iconrepot3.svg);
+}
+
+.report-page .employment.password-active.active .password-tab {
+  background-image: url(../cibil-report/iconblue3.svg);
+}
+
+.report-page .accounttab .notification-tab {
+  background-image: url(../cibil-report/iconrepot5.svg);
+  background-position: top;
+}
+
+.report-page .inquirytab .subscription-tab {
+  background-image: url(../cibil-report/iconrepot5.svg);
+}
+
+.report-page .inquirytab.subscription-active.active .subscription-tab {
+  background-image: url(../cibil-report/iconblue5.svg);
+}
+
+.account-details-wrap > .accordionItem:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .report-page {
+    padding-bottom: 60px;
+  }
+  .report-page .interstial-container {
+    padding-bottom: 78px !important;
+  }
+}
+
+.report-page .accounttab .notification-tab {
+  background-image: url(../cibil-report/iconrepot4.svg);
+  background-position: top;
+}
+
+.notification-active.accounttab.active .notification-tab {
+  background-image: url(../cibil-report/iconblue4.svg);
+}
+
+@media screen and (max-width: 992px) {
+  .report-page .notification-tab {
+    background-image: url(../cibil-report/iconblue1.svg);
+  }
+  .report-page .subscription-tab {
+    background-image: url(../cibil-report/iconblue2.svg);
+  }
+  .report-page .password-tab {
+    background-image: url(../cibil-report/iconblue6.svg);
+  }
+  .report-page .employment .password-tab {
+    background-image: url(../cibil-report/iconblue3.svg);
+  }
+  .report-page .accounttab .notification-tab {
+    background-image: url(../cibil-report/iconblue4.svg);
+    background-position: center;
+  }
+  .report-page .inquirytab .subscription-tab {
+    background-image: url(../cibil-report/iconblue5.svg);
+  }
+}
+
+.base-plan {
+  border-top-left-radius: 6px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+@media (max-width: 992px) {
+  ul.m-tab-selection {
+    background: #00a6ca;
+  }
+  ul.m-tab-selection > li:nth-child(2) {
+    border-radius: 6px 6px 0 0;
+    margin-top: 8px;
+  }
+  ul.m-tab-selection li.active {
+    border-radius: 6px;
+  }
+  ul.m-tab-selection li.selected p, ul.m-tab-selection li.init p {
+    font-weight: 700;
+    color: #2c2c2c;
+  }
+}
+/*# sourceMappingURL=custom.css.map */
+>>>>>>> Stashed changes

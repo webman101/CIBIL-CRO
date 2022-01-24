@@ -293,10 +293,19 @@ var tabContent; // блок содержащий контент вкладки
 window.onload = function() {
     tabContent = document.getElementsByClassName('reporttabContent');
     tab = document.getElementsByClassName('reporttab');
-    hideTabsContent(1);
+    // hideTabsContent(1);
 }
 
-document.getElementById('reporttabs').onclick = function(event) {
+$('.accordionItemHeading').click(function(event){
+    let par = $(this).parent('.accordionItem');
+    let cName = event.target.className;
+    if(!$(par).hasClass('close') && cName.indexOf('reporttab') == -1){
+        console.log("I had class ", event.target.className)
+        $(par).find('.reporttab')[0].click()
+    }
+})
+
+$('.reporttabs').on("click", function(event) {
     var target = event.target;
     if (target.className == 'reporttab') {
         for (var i = 0; i < tab.length; i++) {
@@ -306,7 +315,7 @@ document.getElementById('reporttabs').onclick = function(event) {
             }
         }
     }
-}
+});
 
 function hideTabsContent(a) {
     for (var i = a; i < tabContent.length; i++) {
@@ -324,6 +333,18 @@ function showTabsContent(b) {
         tabContent[b].classList.add('show');
     }
 }
+
+$(".enquiry-toggle").click(function(){
+    $('.enquiry-box').toggleClass("hide");
+    let text = $(this).find('span').text()
+    if(text.indexOf('All') != -1){
+        $(this).find('span').text('Show Less Enquiries')
+    }
+    else{
+        $(this).find('span').text('Show All Enquiries')
+    }
+    $(this).find('img').toggleClass('rotate-180')
+})
 
 
 $('.tabgroup > div').hide();
