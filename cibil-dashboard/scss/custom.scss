@@ -4664,3 +4664,42 @@ select {
   border: 2px solid #9e9e9e;
   pointer-events: none;
 }
+///////////////// Accounts page css
+.my-accounts {
+
+	
+	.common-type-tabs-section {
+		border-top: 1px solid #ddd;
+		
+		.tab-content {
+			input {
+				height: 50px;
+				max-width: 580px;
+				margin-top: 5px;
+				padding-left: 15px;
+				border: 1px solid #acacac;
+			}
+			input.disabled {
+				pointer-events: none;
+				background: #f9f9f9;
+				box-sizing: border-box;
+			}
+			.message {
+				font-size: 14px;
+			}
+		}
+		form {
+			padding: 30px 20px;
+			background-color: #fff;
+		}
+	}
+	
+	
+	.notification {
+		background: #fff;
+		border: 1px solid #acacac;
+		box-sizing: border-box;
+		border-radius: 6px;
+		padding: 20px;
+	}
+}
