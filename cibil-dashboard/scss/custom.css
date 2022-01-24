@@ -4078,9 +4078,7 @@ select {
 
 .toggle-arrow {
   transition: all 0.1s ease-in-out;
-<<<<<<< Updated upstream
   transform: rotate(180deg);
-=======
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   cursor: pointer;
@@ -4088,7 +4086,6 @@ select {
 
 .my-accounts .report-page .common-type-tabs-section {
   padding-left: 0 !important;
->>>>>>> Stashed changes
 }
 
 @media screen and (max-width: 992px) {
@@ -4670,7 +4667,6 @@ select {
   pointer-events: none;
 }
 
-<<<<<<< Updated upstream
 .my-accounts .common-type-tabs-section {
   border-top: 1px solid #ddd;
 }
@@ -4700,7 +4696,6 @@ select {
   border-radius: 6px;
   padding: 20px;
 }/*# sourceMappingURL=custom.css.map */
-=======
 @media (min-width: 992px) {
   .report-page-wrap {
     padding: 0 60px;
@@ -4834,4 +4829,3 @@ select {
   }
 }
 /*# sourceMappingURL=custom.css.map */
->>>>>>> Stashed changes
