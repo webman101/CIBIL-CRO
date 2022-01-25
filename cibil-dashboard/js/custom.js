@@ -699,4 +699,5 @@ $(".compClear").click(function(){
     console.log('clear')
     $(".closeComp").click()
     $(".mobile-grid.compareList").show();
+    $("input.append-onclick").removeAttr('disabled');
 })
