@@ -3965,6 +3965,7 @@ input.price {
 .compare-button.disabled {
   background-color: #ddd;
   border-color: #ddd;
+  pointer-events: none;
 }
 
 .compare-button.disabled span {
