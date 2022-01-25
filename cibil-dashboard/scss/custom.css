@@ -1309,7 +1309,6 @@ input:disabled {
 }
 
 .nav li.base-plan {
-  border-right: 0;
   border-left: 1px solid #ddd;
 }
 
@@ -1706,7 +1705,7 @@ footer > p {
 
 @media screen and (max-width: 600px) {
   .interstial-container {
-    padding: 10px;
+    padding: 15px;
   }
   .nav li h3 {
     font-size: 14px;
@@ -5322,6 +5321,17 @@ select {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
+  .m-mb-20 {
+    margin-bottom: 20px;
+  }
+  .message {
+    text-align: center;
+  }
+  .compare-group-box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .enquiry-toggle {
@@ -5329,5 +5339,73 @@ select {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
+}
+
+@media (min-width: 993px) {
+  .messagebox {
+    padding-top: 20px !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .messagebox .message {
+    width: 125px;
+    min-width: 125px;
+    font-size: 14px;
+    margin: 0 !important;
+    margin-right: 40px !important;
+  }
+  .messagebox .offer-to-compare {
+    width: 100%;
+  }
+  .messagebox .compare-group-box {
+    position: relative !important;
+  }
+  .messagebox .compare-group-box .filled {
+    -ms-flex-preferred-size: 32% !important;
+        flex-basis: 32% !important;
+    min-width: 112px !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70%;
+    height: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 10px;
+  }
+  .messagebox .compare-group-box .filled p {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .messagebox .compare-group-box .filled .closeComp {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
+}
+
+.compBtngroup {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.compClear {
+  font-size: 14px;
+  text-decoration: underline;
+  width: 58px;
+  font-weight: 600;
+  margin-left: 20px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=custom.css.map */

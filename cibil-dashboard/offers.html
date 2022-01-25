@@ -1652,14 +1652,14 @@
                                                     <div class="col-6">
                                                         <div class="form-element">
 
-                                                            <input type=radio id="rdo1" class="radio-input" name="radio-group1" data-sort="price:asc" checked>
+                                                            <input type=radio id="rdo1" class="radio-input" name="radio-group1" data-sort="price:asc">
                                                             <label for="rdo1" class="radio-label">Low to High </label>
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="form-element">
 
-                                                            <input type=radio id="rdo2" class="radio-input" name="radio-group1" data-sort="price:desc">
+                                                            <input type=radio id="rdo2" class="radio-input" name="radio-group1" data-sort="price:desc" checked>
                                                             <label for="rdo2" class="radio-label">High to Low </label>
                                                         </div>
                                                     </div>
@@ -2597,19 +2597,20 @@
                             </li>
                         </ul>
 
-                        <div class="compare-message" style="display:none;">
+                        <div class="compare-message messagebox" style="display:none;">
 
-                            <div class="para-intro-regular-2c mb-1">
-                                Please add minimum of 2 offers to compare
+                            <div class="para-intro-regular-2c mb-1 message">
+                                Select 2 to 3 items to compare
                             </div>
                             <div class="offer-to-compare">
 
                                 <div class="compare-grouped">
-                                    <div class="compare-grouped-position-absolute">
+                                    <div class="compare-grouped-position-absolute compare-group-box">
                                      
                                     </div>
                                 </div>
-                                <div class="btn-group">
+                                <div class="btn-group compBtngroup">
+                                    <span class="compClear" id="compClear">Clear all</span>
                                     <a href="javascript:void(0)" class="button-icon ml-20 compare-button disabled">
 
                                         <span>Compare</span>
