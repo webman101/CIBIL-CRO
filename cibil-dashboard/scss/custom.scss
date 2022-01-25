@@ -3116,6 +3116,9 @@ div.offers-page .blue-dropdown-groups-section{
 	flex: 1;
 	margin-right: 20px;
 }
+.offers-page .input-lists > div:last-child{
+	margin-right: 0;
+}
 
 @media screen and (max-width: 992px) {
 	.offers-page .input-lists > div {
@@ -3135,20 +3138,26 @@ div.offers-page .blue-dropdown-groups-section{
 .offers-page .input-lists .autocomplete {
 	position: relative;
 	@media screen and (min-width: 992px) {
-		width: 300px;
+		// width: 300px;
+		width: 100%;
 	}
 }
 
 .offers-page .input-lists .autocomplete:after {
 	content: "";
 	position: absolute;
-	top: 39%;
+	top: 18px;
 	right: 15px;
-	transform: rotateZ(-45deg);
-	width: 6px;
-	height: 6px;
-	border-left: 1px solid #8a8a8a;
-	border-bottom: 1px solid #8a8a8a;
+	// transform: rotateZ(-45deg);
+	width: 16px;
+	height: 16px;
+    background-image: url(/img/search.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+	// border-left: 1px solid #8a8a8a;
+	// border-bottom: 1px solid #8a8a8a;
+
 }
 
 .offers-page .input-lists input {
@@ -3208,6 +3217,15 @@ div.offers-page .blue-dropdown-groups-section{
 	background: #fff;
     z-index: 2;
     padding-left: 16px;
+	border: 1px solid #acacac;
+	box-shadow: 0 2px 5px #00000054;
+
+	&:empty{
+		display: none;
+	}
+}
+input.price{
+	border-radius: 0 !important;
 }
 
 .offers-page .limit-column::before {
@@ -3427,7 +3445,7 @@ div.offers-page .blue-dropdown-groups-section{
 
 .offers-page .sort-tab {
 	background: #707070;
-	padding: 20px 0;
+	padding: 20px 20px;
 	text-align: center;
 }
 
@@ -3533,6 +3551,11 @@ div.offers-page .blue-dropdown-groups-section{
 			}
 		}
 	}
+}
+
+.offers-page .sort-tab.reversearrow span:after{
+	transform: rotate(225deg);
+	top: 0;
 }
 
 .offers-page .largetabs #largetabs-nav li p {

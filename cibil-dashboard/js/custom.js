@@ -378,7 +378,7 @@ $('#clearFiterButton').click(function(e){
     e.preventDefault();
     console.log("clear clickied")
     $('.offers-page .mobile-filter .form-element input[type=radio]').removeAttr("checked");
-    $('#rdo1').click();
+    $('#rdo2').click();
 })
 
 
@@ -677,7 +677,7 @@ $(".compare-button").on("click", function(){
     checkedBoxes.closest(".compareList").hide();
     $(".clear-compare").css("display","flex");
     var checkedBoxesValue = $('input.append-onclick:checked');
-    $(".checkedValue").text(checkedBoxesValue.length);
+    // $(".checkedValue").text(checkedBoxesValue.length);
     $('.benefits-outer').slideUp();
     $(".offer-details").removeClass('reverse-arrow')
 });
@@ -700,4 +700,14 @@ $(".compClear").click(function(){
     $(".closeComp").click()
     $(".mobile-grid.compareList").show();
     $("input.append-onclick").removeAttr('disabled');
+})
+
+$('.offers-page .largetabs #largetabs-nav li').click(function(){
+    $('.compClear').click();
+})
+
+$('input[name=radio-group]').change(function(){
+    let sortText = $('input[name=radio-group]:checked').closest('.sorttoggle1').find('.sorttitle').text()
+    // console.log(sortText)
+    $('.sort-tab span').text("Sorted By: "+sortText);
 })

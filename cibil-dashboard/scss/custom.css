@@ -3369,6 +3369,10 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
   margin-right: 20px;
 }
 
+.offers-page .input-lists > div:last-child {
+  margin-right: 0;
+}
+
 @media screen and (max-width: 992px) {
   .offers-page .input-lists > div {
     margin-bottom: 20px;
@@ -3391,21 +3395,21 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
 
 @media screen and (min-width: 992px) {
   .offers-page .input-lists .autocomplete {
-    width: 300px;
+    width: 100%;
   }
 }
 
 .offers-page .input-lists .autocomplete:after {
   content: "";
   position: absolute;
-  top: 39%;
+  top: 18px;
   right: 15px;
-  -webkit-transform: rotateZ(-45deg);
-          transform: rotateZ(-45deg);
-  width: 6px;
-  height: 6px;
-  border-left: 1px solid #8a8a8a;
-  border-bottom: 1px solid #8a8a8a;
+  width: 16px;
+  height: 16px;
+  background-image: url(/img/search.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .offers-page .input-lists input {
@@ -3467,6 +3471,17 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
   background: #fff;
   z-index: 2;
   padding-left: 16px;
+  border: 1px solid #acacac;
+  -webkit-box-shadow: 0 2px 5px #00000054;
+          box-shadow: 0 2px 5px #00000054;
+}
+
+#myInputautocomplete-list:empty {
+  display: none;
+}
+
+input.price {
+  border-radius: 0 !important;
 }
 
 .offers-page .limit-column::before {
@@ -3688,7 +3703,7 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
 
 .offers-page .sort-tab {
   background: #707070;
-  padding: 20px 0;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -3800,6 +3815,12 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
 
 .offers-page .largetabs #largetabs-nav li.active .numb {
   background: #00a6ca;
+}
+
+.offers-page .sort-tab.reversearrow span:after {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  top: 0;
 }
 
 .offers-page .largetabs #largetabs-nav li p {
