@@ -666,6 +666,9 @@ $('.compare-grouped-position-absolute').on('click','.filled', function(){
     if(msgLength.length <= 1) {
         $(".compare-button").addClass("disabled");
     }
+    else{
+        $("input.append-onclick").removeAttr('disabled');
+    }
     if(msgLength.length == 0) {
         $(".compare-message").hide();
         $(".itemsBox").removeClass('hide-it');
