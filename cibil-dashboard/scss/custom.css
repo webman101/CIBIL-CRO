@@ -3480,6 +3480,10 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
   display: none;
 }
 
+#myInputautocomplete-list > div {
+  cursor: pointer;
+}
+
 input.price {
   border-radius: 0 !important;
 }
@@ -4691,6 +4695,7 @@ select {
   }
   .interstial-container .tab-content .feature p {
     margin-bottom: 0;
+    text-align: left;
   }
 }
 

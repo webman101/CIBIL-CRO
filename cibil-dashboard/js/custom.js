@@ -658,10 +658,14 @@ $('.compare-grouped-position-absolute').on('click','.filled', function(){
     var tempName = $(this).attr("data-bank");
     $('body').find("[data-bank='" + tempName + "']").prop('checked',false);
     $(this).remove();
-    if ($(this).length == 1 ) {
+    // if ($(this).length == 1 ) {
+    //     $(".compare-button").addClass("disabled");
+    //     console.log("bug")
+    // }
+    let msgLength = $(".compare-grouped-position-absolute .filled");
+    if(msgLength.length <= 1) {
         $(".compare-button").addClass("disabled");
     }
-    let msgLength = $(".compare-grouped-position-absolute .filled");
     if(msgLength.length == 0) {
         $(".compare-message").hide();
         $(".itemsBox").removeClass('hide-it');
@@ -705,6 +709,11 @@ $(".compClear").click(function(){
 $('.offers-page .largetabs #largetabs-nav li').click(function(){
     $('.compClear').click();
 })
+
+$('#mobile-tab-selector').change(function(){
+    $('.compClear').click();
+})
+
 
 $('input[name=radio-group]').change(function(){
     let sortText = $('input[name=radio-group]:checked').closest('.sorttoggle1').find('.sorttitle').text()

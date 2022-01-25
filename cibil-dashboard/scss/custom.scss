@@ -3223,6 +3223,10 @@ div.offers-page .blue-dropdown-groups-section{
 	&:empty{
 		display: none;
 	}
+
+	& > div {
+		cursor: pointer;
+	}
 }
 input.price{
 	border-radius: 0 !important;
@@ -4344,6 +4348,7 @@ select {
 	}
 	.interstial-container .tab-content .feature p {
 		margin-bottom: 0;
+		text-align: left;
 	}
 }
 
