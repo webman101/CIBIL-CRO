@@ -5357,3 +5357,33 @@ h6 {
         }
     }
 }
+
+footer{
+	a{
+		p{
+			text-decoration: underline;
+		}
+		
+	}
+	a:hover{
+		color: #f16e00 !important;
+	}
+	& > p{
+		margin-bottom: 12px;
+	}
+	@media (min-width: 992px){
+		.f-links{
+			padding-bottom: 35px !important;
+		}
+	}
+	@media (max-width: 992px){
+		.copyright {
+			padding-top: 25px;
+			margin-bottom: 10px;
+		}
+		.f-links{
+			margin-top: 10px !important;
+			padding-left: 0;
+		}
+	}
+}

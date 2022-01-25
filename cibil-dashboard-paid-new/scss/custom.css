@@ -5968,4 +5968,33 @@ h6 {
     color: #2c2c2c;
   }
 }
+
+footer a p {
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #f16e00 !important;
+}
+
+footer > p {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 992px) {
+  footer .f-links {
+    padding-bottom: 35px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  footer .copyright {
+    padding-top: 25px;
+    margin-bottom: 10px;
+  }
+  footer .f-links {
+    margin-top: 10px !important;
+    padding-left: 0;
+  }
+}
 /*# sourceMappingURL=custom.css.map */
