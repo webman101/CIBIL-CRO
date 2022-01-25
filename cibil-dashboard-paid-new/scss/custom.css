@@ -5997,4 +5997,11 @@ footer > p {
     padding-left: 0;
   }
 }
+
+.enquiry-toggle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
 /*# sourceMappingURL=custom.css.map */

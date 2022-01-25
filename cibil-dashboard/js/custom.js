@@ -368,8 +368,18 @@ $('.sort-tab').click(function(e) {
 });
 
 
+$("#mobile-tab-selector").change(function(){
+    let slectedTab = $(this).val();
+    $('.m-box-tab').hide();
+    $("#"+slectedTab).show();
+})
 
-
+$('#clearFiterButton').click(function(e){
+    e.preventDefault();
+    console.log("clear clickied")
+    $('.offers-page .mobile-filter .form-element input[type=radio]').removeAttr("checked");
+    $('#rdo1').click();
+})
 
 
 // $(document).on("click", ".radio-input", function() {

@@ -62,7 +62,7 @@
                                         <div class="position-relative">
                                             <p>Monthly Income</p>
                                             <div class="position-relative">
-                                                <input type="text" class="price">
+                                                <input type="number" class="price">
                                                 <span>₹</span>
                                             </div>
                                         </div>
@@ -511,13 +511,13 @@
                                             </li>
                                             <li>
                                                 <a href="#tab2">
-                                                    <div class="numb">1</div>
+                                                    <div class="numb">5</div>
                                                     <p class="text-color-70">Personal <br> Loan</p>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#tab3">
-                                                    <div class="numb">2</div>
+                                                    <div class="numb">3</div>
                                                     <p class="text-color-70">Business <br> Loan</p>
                                                 </a>
                                             </li>
@@ -529,13 +529,13 @@
                                             </li>
                                             <li>
                                                 <a href="#tab2">
-                                                    <div class="numb">1</div>
+                                                    <div class="numb">5</div>
                                                     <p class="text-color-70">Loan Against <br> Property</p>
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="#tab3">
-                                                    <div class="numb">1</div>
+                                                    <div class="numb">3</div>
                                                     <p class="text-color-70">Auto <br> Loan</p>
                                                 </a>
                                             </li>
@@ -1630,13 +1630,14 @@
                                         <div class="mobile-switch-container">
 
                                             <div class="dropdown-container">
-                                                <select name="" id="" class="dd-button bg-white text-black">
-                                                    <option value="">Personal Loan </option>
-                                                    <option value="">Business Loan</option>
-                                                    <option value="">Home Loan</option>
-                                                    <option value="">Loan Against Property</option>
-                                                    <option value="">Auto Loan</option>
-                                                    <option value="">Financial Products</option>
+                                                <select name="" id="mobile-tab-selector" class="dd-button bg-white text-black">
+                                                    <option value="box1">Credit Card (4)</option>
+                                                    <option value="box2">Personal Loan (5)</option>
+                                                    <option value="box3">Business Loan (3)</option>
+                                                    <option value="" disabled>Home Loan (0)</option>
+                                                    <option value="box2">Loan Against Property (5)</option>
+                                                    <option value="box3">Auto Loan (3)</option>
+                                                    <option value="box1">Financial Products (4)</option>
                                                 </select>
                                             </div>
                                            
@@ -1644,21 +1645,21 @@
                                                 <span class="fw-700"> Sort</span>
                                             </div>
                                         </div>
-                                        <div class="form-group bg-white p-2 mobile-filter sorttoggle">
+                                        <div class="form-group bg-white p-2 mobile-filter sorttoggle" style="display: none;">
                                             <div class="sorttoggle1">
                                                 <p class="mt-0 sorttitle">Tentative Credit Limit Offered</p>
                                                 <div class="row b-select">
                                                     <div class="col-6">
                                                         <div class="form-element">
 
-                                                            <input type=radio id="rdo1" class="radio-input" name="radio-group" data-sort="price:asc">
+                                                            <input type=radio id="rdo1" class="radio-input" name="radio-group1" data-sort="price:asc" checked>
                                                             <label for="rdo1" class="radio-label">Low to High </label>
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="form-element">
 
-                                                            <input type=radio id="rdo2" class="radio-input" name="radio-group" data-sort="price:desc">
+                                                            <input type=radio id="rdo2" class="radio-input" name="radio-group1" data-sort="price:desc">
                                                             <label for="rdo2" class="radio-label">High to Low </label>
                                                         </div>
                                                     </div>
@@ -1670,14 +1671,14 @@
                                                     <div class="col-6">
                                                         <div class="form-element">
 
-                                                            <input type=radio id="rdo3" class="radio-input" name="radio-group" data-sort="length:asc">
+                                                            <input type=radio id="rdo3" class="radio-input" name="radio-group2" data-sort="length:asc">
                                                             <label for="rdo3" class="radio-label">Low to High </label>
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="form-element">
 
-                                                            <input type=radio id="rdo4" class="radio-input" name="radio-group" data-sort="length:desc">
+                                                            <input type=radio id="rdo4" class="radio-input" name="radio-group2" data-sort="length:desc">
                                                             <label for="rdo4" class="radio-label">High to Low </label>
                                                         </div>
                                                     </div>
@@ -1689,26 +1690,26 @@
                                                     <div class="col-6">
                                                         <div class="form-element">
 
-                                                            <input type=radio id="rdo5" class="radio-input" name="radio-group" data-sort="fees:asc">
+                                                            <input type=radio id="rdo5" class="radio-input" name="radio-group3" data-sort="fees:asc" >
                                                             <label for="rdo5" class="radio-label">Low to High </label>
                                                         </div>
                                                     </div>
                                                     <div class="col-6">
                                                         <div class="form-element">
 
-                                                            <input type=radio id="rdo6" class="radio-input" name="radio-group" data-sort="fees:desc">
+                                                            <input type=radio id="rdo6" class="radio-input" name="radio-group3" data-sort="fees:desc">
                                                             <label for="rdo6" class="radio-label">High to Low </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="button-row d-inline-block mt-3">
-                                                <a href="" class="button-icon mx-auto button-icon-outline">
+                                                <a href="" id="clearFiterButton" class="button-icon mx-auto button-icon-outline">
                                                     <span>Clear Filters</span>
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="boxes p-2">
+                                        <div class="boxes p-2 m-box-tab" id="box1">
                                             <div class="d-block w-100">
                                                 <div class="mobile-grid compareList bg-white" data-fees="1" data-length="1" data-price="1">
                                                     <div class="d-flex justify-content-between align-items-center p-15">
@@ -1740,8 +1741,8 @@
 
                                                             <form>
                                                                 <div class="form-group">
-                                                                    <input type="checkbox" id="5" class="append-onclick" data-bank="bank1" bank="Aditya">
-                                                                    <label for="5"></label>
+                                                                    <input type="checkbox" id="12" class="append-onclick" data-bank="bank1" bank="Aditya">
+                                                                    <label for="12"></label>
                                                                 </div>
 
                                                             </form>
@@ -1775,14 +1776,14 @@
                                                             </div>
                                                             <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
                                                             <div class="d-flex align-items-center">
-                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <img src="img/pdf.svg" alt="">
                                                                 <div class="ml-2 ">Offer Terms and Conditions</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="d-block w-100">
+                                            <div class="d-block w-100 mt-2">
                                                 <div class=" mobile-grid compareList bg-white" data-fees="2" data-length="2" data-price="2">
                                                     <div class="d-flex justify-content-between align-items-center p-15">
                                                         <div class="image-column">
@@ -1813,8 +1814,8 @@
 
                                                             <form>
                                                                 <div class="form-group">
-                                                                    <input type="checkbox" id="6" class="append-onclick" bank="hdfc" data-bank="bank2">
-                                                                    <label for="6"></label>
+                                                                    <input type="checkbox" id="13" class="append-onclick" bank="hdfc" data-bank="bank2">
+                                                                    <label for="13"></label>
                                                                 </div>
 
                                                             </form>
@@ -1848,15 +1849,15 @@
                                                             </div>
                                                             <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
                                                             <div class="d-flex align-items-center">
-                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <img src="img/pdf.svg" alt="">
                                                                 <div class="ml-2 ">Offer Terms and Conditions</div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="d-block w-100">
-                                                <div class=" mobile-grid compareList bg-white mt-2" data-fees="3" data-length="3" data-price="3">
+                                            <div class="d-block w-100 mt-2">
+                                                <div class=" mobile-grid compareList bg-white" data-fees="3" data-length="3" data-price="3">
                                                     <div class="d-flex justify-content-between align-items-center p-15">
                                                         <div class="image-column">
                                                             <img src="img/aditya.svg" data-src="img/aditya.svg" alt="">
@@ -1886,8 +1887,8 @@
 
                                                             <form>
                                                                 <div class="form-group">
-                                                                    <input type="checkbox" id="7" class="append-onclick" data-bank="bank3" bank="Aditya">
-                                                                    <label for="7"></label>
+                                                                    <input type="checkbox" id="14" class="append-onclick" data-bank="bank3" bank="Aditya">
+                                                                    <label for="14"></label>
                                                                 </div>
 
                                                             </form>
@@ -1921,7 +1922,668 @@
                                                             </div>
                                                             <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
                                                             <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-block w-100 mt-2">
+                                                <div class=" mobile-grid compareList bg-white" data-fees="2" data-length="2" data-price="2">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/hdfc.svg" data-src="img/hdfc.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column">₹9,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">5.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">₹499 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="15" class="append-onclick" bank="hdfc" data-bank="bank2">
+                                                                    <label for="15"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                    Offer Details
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
                                                                 <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="boxes p-2 m-box-tab" id="box2" style="display: none;">
+                                            <div class="d-block w-100">
+                                                <div class="mobile-grid compareList bg-white" data-fees="1" data-length="1" data-price="1">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/bajajmobile.svg" data-src="img/bajajmobile.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column" id='tentative-amt'>₹8,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c interest">3.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c annualfees">₹499 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="16" class="append-onclick" data-bank="bank1" bank="Aditya">
+                                                                    <label for="16"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                        Offer Details
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-block w-100 mt-2">
+                                                <div class=" mobile-grid compareList bg-white" data-fees="2" data-length="2" data-price="2">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/hdfc.svg" data-src="img/hdfc.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column">₹9,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">5.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">₹499 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="17" class="append-onclick" bank="hdfc" data-bank="bank2">
+                                                                    <label for="17"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                    Offer Details
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-block w-100 mt-2">
+                                                <div class=" mobile-grid compareList bg-white" data-fees="2" data-length="2" data-price="2">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/hdfc.svg" data-src="img/hdfc.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column">₹9,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">5.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">₹499 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="18" class="append-onclick" bank="hdfc" data-bank="bank2">
+                                                                    <label for="18"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                    Offer Details
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-block w-100 mt-2">
+                                                <div class=" mobile-grid compareList bg-white" data-fees="3" data-length="3" data-price="3">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/aditya.svg" data-src="img/aditya.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column">₹10,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">5.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">₹699 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="19" class="append-onclick" data-bank="bank3" bank="Aditya">
+                                                                    <label for="19"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                    Offer Details
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-block w-100 mt-2">
+                                                <div class=" mobile-grid compareList bg-white" data-fees="2" data-length="2" data-price="2">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/hdfc.svg" data-src="img/hdfc.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column">₹9,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">5.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">₹499 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="20" class="append-onclick" bank="hdfc" data-bank="bank2">
+                                                                    <label for="20"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                    Offer Details
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="boxes p-2 m-box-tab" id="box3" style="display: none;">
+                                            <div class="d-block w-100">
+                                                <div class="mobile-grid compareList bg-white" data-fees="1" data-length="1" data-price="1">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/bajajmobile.svg" data-src="img/bajajmobile.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column" id='tentative-amt'>₹8,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c interest">3.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c annualfees">₹499 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="21" class="append-onclick" data-bank="bank1" bank="Aditya">
+                                                                    <label for="21"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                        Offer Details
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-block w-100 mt-2">
+                                                <div class=" mobile-grid compareList bg-white" data-fees="2" data-length="2" data-price="2">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/hdfc.svg" data-src="img/hdfc.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column">₹9,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">5.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">₹499 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="22" class="append-onclick" bank="hdfc" data-bank="bank2">
+                                                                    <label for="22"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                    Offer Details
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
+                                                                <div class="ml-2 ">Offer Terms and Conditions</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-block w-100 mt-2">
+                                                <div class=" mobile-grid compareList bg-white" data-fees="3" data-length="3" data-price="3">
+                                                    <div class="d-flex justify-content-between align-items-center p-15">
+                                                        <div class="image-column">
+                                                            <img src="img/aditya.svg" data-src="img/aditya.svg" alt="">
+                                                        </div>
+                                                        <div class="button-row d-inline-block modal-toggle2">
+                                                            <a href="" class="button-icon mx-auto ">
+                                                                <span>Apply Now</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="three-column">
+                                                        <div>
+                                                            <div class="para-intro-regular-2c limit-column">₹10,00,000</div>
+                                                            <p>Tentative <br> Credit Limit </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">5.35%</div>
+                                                            <p>Monthly <br> Interest Rate </p>
+                                                        </div>
+                                                        <div>
+                                                            <div class="para-intro-regular-2c">₹699 + GST</div>
+                                                            <p>Annual Fees</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="checkbox-row d-flex align-items-center justify-content-between border-bottom-0" style="padding: 10px 35px 10px 15px;border-top: 1px solid #DDDDDD;">
+                                                        <div class="d-flex align-items-center">
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="checkbox" id="23" class="append-onclick" data-bank="bank3" bank="Aditya">
+                                                                    <label for="23"></label>
+                                                                </div>
+
+                                                            </form>
+
+
+                                                            <p class="para-intro-regular-2c font-14 d-inline-block mb-0 ml-1" style="line-height: unset;    transform: translateY(2px);">Add to Compare</p>
+                                                        </div>
+                                                        <a class="para-intro-regular-2c text-blue text-capitalize offer-details">
+                                                    Offer Details
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                                <div class="benefits-outer bg-white">
+                                                    <div class="row p-2">
+                                                        <div class="col-md-6">
+                                                            <div class="benefits">
+                                                                <h6 class="para-intro-regular-2c">Benefits</h6>
+                                                                <ul class="benefits-list">
+                                                                    <li>Get a welcome e-gift voucher worth ₹500 from Amazon.</li>
+                                                                    <li>Earn 10X rewards on online spends with exclusive partners. </li>
+                                                                    <li>E-voucher worth ₹8,00,000 on annual online spends of ₹2 Lakhs.</li>
+                                                                    <li>Spends ₹1 Lakh and get annual fee of ₹499 reversed for your SimplyCLICK SBI card in the subsequent year. </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mt-3">
+                                                            <h6 class="para-intro-regular-2c mb-15 ">Required documents</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdfnotavailable.svg" alt="">
+                                                                <div class="ml-2 text-light-grey">Not Available</div>
+                                                            </div>
+                                                            <h6 class="para-intro-regular-2c mb-15 mt-4">Downloads</h6>
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/pdf.svg" alt="">
                                                                 <div class="ml-2 ">Offer Terms and Conditions</div>
                                                             </div>
                                                         </div>

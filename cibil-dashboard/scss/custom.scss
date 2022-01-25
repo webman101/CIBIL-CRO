@@ -551,8 +551,8 @@ input:disabled {
 }
 
 .button:hover {
-	background-color: #db6402;
-	background-color: #db6402;
+	// background-color: #db6402;
+	// background-color: #db6402;
 }
 
 .button-outline-yellow {
@@ -922,7 +922,7 @@ input:disabled {
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 	line-height: 30px;
-	height: 30px;
+	height: auto;
 	background: #f9f9f9;
 	display: flex;
 	align-items: center;
@@ -951,7 +951,7 @@ input:disabled {
 	position: relative;
 	z-index: 2;
 	width: 100%;
-	height: 30px;
+	height: auto;
 	bottom: -1px;
 	display: flex;
 	align-items: center;
@@ -1001,6 +1001,7 @@ input:disabled {
 	bottom: 0;
 	left: 0;
 	width: 100%;
+	position: absolute;
 }
 
 .features-mobile-section .top-head {
@@ -1249,8 +1250,9 @@ footer a {
 	text-align: right;
 	letter-spacing: 0.02em;
 	text-decoration-line: underline;
-	margin: 0 0.5em;
+	// margin: 0 0.5em;
 	color: #2c2c2c;
+	text-align: center;
 }
 
 input.orange-button {
@@ -1507,6 +1509,7 @@ footer{
 		.f-links{
 			margin-top: 10px !important;
 			padding-left: 0;
+			justify-content: space-around !important;
 		}
 	}
 }
@@ -2535,7 +2538,7 @@ footer{
 }
 
 .offers-page .ml-2 {
-	margin-left: 20px;
+	margin-left: 20px !important;
 }
 
 .offers-page .ml-15 {
@@ -2593,6 +2596,7 @@ footer{
 	line-height: 24px;
 	letter-spacing: 0.02em;
 	color: #2c2c2c;
+	font-weight: 600;
 }
 
 .offers-page .para-intro-book-70 {
@@ -2952,7 +2956,7 @@ footer{
 }
 
 .offers-page .switching-tabs .benefits-outer {
-	padding: 20px;
+	padding: 0 20px 20px;
 	display: none;
 }
 .boxes .benefits-outer{
@@ -2997,7 +3001,7 @@ footer{
 	height: 60px;
 	display: flex;
 	align-items: center;
-	padding-left: 20px;
+	padding-left: 30px;
 }
 
 .offers-page .dropdown {
@@ -3069,7 +3073,7 @@ footer{
 	align-items: center;
 	letter-spacing: 0.02em;
 	color: #2c2c2c;
-	padding: 20px;
+	padding: 20px 30px;
 	padding-bottom: 10px;
 	display: grid !important;
     grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr;
@@ -3086,7 +3090,7 @@ div.offers-page .blue-dropdown-groups-section .sort:first-child{
 
 div.offers-page .blue-dropdown-groups-section{
 	display: grid !important;
-	padding-right: 20px;
+	padding-right: 30px;
     grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr;
 	.sort{
 		&:nth-child(2), &:nth-child(3){
@@ -3244,8 +3248,9 @@ div.offers-page .blue-dropdown-groups-section{
 
 .offers-page .checkbox-row {
 	padding: 0 20px;
+	padding-left: 30px;
 	padding-right: 55px;
-	border-bottom: 1px solid #dddddd;
+	// border-bottom: 1px solid #dddddd;
 	padding-bottom: 20px;
 }
 
@@ -3369,11 +3374,20 @@ div.offers-page .blue-dropdown-groups-section{
 
 .offers-page .mobile-grid {
 	background: #ffffff;
-	border: 1px solid #dde0ef;
+	// border: 1px solid #dde0ef;
 	box-sizing: border-box;
-	border-radius: 8px;
-	margin-top: 20px;
+	border-radius: 8px 8px 0 0;
+	// margin-top: 20px;
 	width: 100%;
+	border-bottom: 0;
+}
+
+.offers-page .boxes.p-2 > div.d-block{
+	@media (max-width:992px){
+		border: 1px solid #dde0ef;
+		border-radius: 8px;
+		overflow: hidden;
+	}
 }
 
 .offers-page .mobile-switch-container .dropdown-container {
@@ -3393,6 +3407,7 @@ div.offers-page .blue-dropdown-groups-section{
 	line-height: 140%;
 	padding-left: 20px;
 	color: #ffffff;
+	font-weight: 700;
 }
 
 .offers-page .mobile-switch-container .dd-button:after {
@@ -3846,6 +3861,10 @@ div.offers-page .blue-dropdown-groups-section{
 
 .offers-page .list {
 	font-family: sans-serif;
+
+	& > div:not(:last-child){
+		border-bottom: 1px solid #dddddd;
+	}
 }
 
 .offers-page input {
@@ -3855,7 +3874,7 @@ div.offers-page .blue-dropdown-groups-section{
 }
 
 .offers-page .blue-dropdown-groups-section {
-	cursor: pointer;
+	// cursor: pointer;
 }
 
 .offers-page .blue-dropdown-groups-section .sort {
@@ -3865,6 +3884,10 @@ div.offers-page .blue-dropdown-groups-section{
 	color: #fff;
 	text-decoration: none;
 	position: relative;
+	height: 100%;
+    display: flex;
+    align-items: center;
+	cursor: pointer;
 }
 
 .modalpopup.is-visible{
@@ -3927,7 +3950,9 @@ div.offers-page .blue-dropdown-groups-section{
 	border-top: 5px solid #fff;
 	content: "";
 	position: absolute;
-	top: 8px;
+	// top: 8px;
+	top: 50%;
+	transform: translateY(-50%);
 	right: 10px;
 }
 
@@ -4895,4 +4920,33 @@ select {
 			color: #2c2c2c;
 		}
 	}
+
+	.offers-page .mobile-filter .form-element input[type=radio] {
+		-webkit-appearance: none;
+		width: 14px;
+		height: 14px;
+		padding: 0;
+		display: block;
+		border-radius: 50%;
+		border: 1px solid #00a6ca;
+		position: relative;
+
+		&:checked:after{
+			content: '';
+			background: #00a6ca;
+			width: 66%;
+			height: 66%;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+		}
+	}
+}
+
+.enquiry-toggle {
+    width: fit-content;
+    margin: auto;
 }

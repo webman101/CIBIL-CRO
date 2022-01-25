@@ -597,11 +597,6 @@ input:disabled {
   text-decoration: none !important;
 }
 
-.button:hover {
-  background-color: #db6402;
-  background-color: #db6402;
-}
-
 .button-outline-yellow {
   background: #ffffff !important;
   border: 1px solid #f16e00 !important;
@@ -1020,7 +1015,7 @@ input:disabled {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   line-height: 30px;
-  height: 30px;
+  height: auto;
   background: #f9f9f9;
   display: flex;
   align-items: center;
@@ -1055,7 +1050,7 @@ input:disabled {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 30px;
+  height: auto;
   bottom: -1px;
   display: flex;
   align-items: center;
@@ -1106,6 +1101,7 @@ input:disabled {
   bottom: 0;
   left: 0;
   width: 100%;
+  position: absolute;
 }
 
 .features-mobile-section .top-head {
@@ -1370,8 +1366,8 @@ footer a {
   letter-spacing: 0.02em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  margin: 0 0.5em;
   color: #2c2c2c;
+  text-align: center;
 }
 
 input.orange-button {
@@ -1636,6 +1632,8 @@ footer > p {
   footer .f-links {
     margin-top: 10px !important;
     padding-left: 0;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
   }
 }
 
@@ -2722,7 +2720,7 @@ footer > p {
 }
 
 .offers-page .ml-2 {
-  margin-left: 20px;
+  margin-left: 20px !important;
 }
 
 .offers-page .ml-15 {
@@ -2794,6 +2792,7 @@ footer > p {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+  font-weight: 600;
 }
 
 .offers-page .para-intro-book-70 {
@@ -3186,7 +3185,7 @@ footer > p {
 }
 
 .offers-page .switching-tabs .benefits-outer {
-  padding: 20px;
+  padding: 0 20px 20px;
   display: none;
 }
 
@@ -3242,7 +3241,7 @@ footer > p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .offers-page .dropdown {
@@ -3319,7 +3318,7 @@ footer > p {
           align-items: center;
   letter-spacing: 0.02em;
   color: #2c2c2c;
-  padding: 20px;
+  padding: 20px 30px;
   padding-bottom: 10px;
   display: -ms-grid !important;
   display: grid !important;
@@ -3339,7 +3338,7 @@ div.offers-page .blue-dropdown-groups-section .sort:first-child {
 div.offers-page .blue-dropdown-groups-section {
   display: -ms-grid !important;
   display: grid !important;
-  padding-right: 20px;
+  padding-right: 30px;
   -ms-grid-columns: 0.3fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr;
 }
@@ -3508,8 +3507,8 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
 
 .offers-page .checkbox-row {
   padding: 0 20px;
+  padding-left: 30px;
   padding-right: 55px;
-  border-bottom: 1px solid #dddddd;
   padding-bottom: 20px;
 }
 
@@ -3637,12 +3636,19 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
 
 .offers-page .mobile-grid {
   background: #ffffff;
-  border: 1px solid #dde0ef;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 8px;
-  margin-top: 20px;
+  border-radius: 8px 8px 0 0;
   width: 100%;
+  border-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .offers-page .boxes.p-2 > div.d-block {
+    border: 1px solid #dde0ef;
+    border-radius: 8px;
+    overflow: hidden;
+  }
 }
 
 .offers-page .mobile-switch-container .dropdown-container {
@@ -3662,6 +3668,7 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
   line-height: 140%;
   padding-left: 20px;
   color: #ffffff;
+  font-weight: 700;
 }
 
 .offers-page .mobile-switch-container .dd-button:after {
@@ -4189,14 +4196,14 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
   font-family: sans-serif;
 }
 
+.offers-page .list > div:not(:last-child) {
+  border-bottom: 1px solid #dddddd;
+}
+
 .offers-page input {
   border-radius: 5px;
   padding: 7px 14px;
   margin-bottom: 10px;
-}
-
-.offers-page .blue-dropdown-groups-section {
-  cursor: pointer;
 }
 
 .offers-page .blue-dropdown-groups-section .sort {
@@ -4206,6 +4213,14 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
   color: #fff;
   text-decoration: none;
   position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 
 .modalpopup.is-visible .modal-overlay, .modalpopup.is-visible .modal-wrapper {
@@ -4258,7 +4273,9 @@ div.offers-page .blue-dropdown-groups-section .sort:last-child {
   border-top: 5px solid #fff;
   content: "";
   position: absolute;
-  top: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 10px;
 }
 
@@ -5283,5 +5300,34 @@ select {
     font-weight: 700;
     color: #2c2c2c;
   }
+  .offers-page .mobile-filter .form-element input[type=radio] {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #00a6ca;
+    position: relative;
+  }
+  .offers-page .mobile-filter .form-element input[type=radio]:checked:after {
+    content: '';
+    background: #00a6ca;
+    width: 66%;
+    height: 66%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.enquiry-toggle {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 /*# sourceMappingURL=custom.css.map */
