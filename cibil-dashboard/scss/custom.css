@@ -670,6 +670,7 @@ input:disabled {
           justify-content: space-between;
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 .interstial-container .top-head {
@@ -5215,6 +5216,10 @@ select {
   .report-page .interstial-container {
     padding-bottom: 78px !important;
   }
+}
+
+.report-page-wrap .common-type-tabs-section {
+  border-top: none;
 }
 
 .report-page .accounttab .notification-tab {

@@ -616,6 +616,7 @@ input:disabled {
 	justify-content: space-between;
 	display: flex;
 	justify-content: space-between;
+	height: 100%;
 }
 
 .interstial-container .top-head {
@@ -4047,6 +4048,7 @@ select {
 	max-width: unset !important;
 }
 
+
 @media screen and (max-width: 992px) {
 	.report-page .alerts-text-block .alerts-icon-text {
 		margin-bottom: 44px;
@@ -4825,6 +4827,13 @@ select {
 			padding-bottom: 78px !important;
 		}
     }
+}
+
+.report-page-wrap{
+	.common-type-tabs-section{
+		border-top: none;
+	}
+
 }
 
 .report-page .accounttab .notification-tab {
