@@ -2110,6 +2110,35 @@ footer{
 
 .main-dashboard .for-overlay {
 	position: relative;
+	@media (min-width:768px){
+		display: flex;
+		flex-grow: 1;
+		height: 100%;
+
+		& .card-inner{
+			padding-bottom: 111px;
+		}
+
+		& .button-icon{
+			position: absolute;
+			bottom: 16px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		
+		& hr{
+			position: absolute;
+			left: 50%;
+			bottom: 80px;
+			width: calc( 100% - 40px);
+			transform: translateX(-50%);
+		}
+		& .overlay-card{
+			height: 95.5% !important;
+			top: unset !important;
+			bottom: 0;
+		}
+	}
 }
 
 .main-dashboard .for-overlay .closeovelay {
@@ -2146,6 +2175,7 @@ footer{
     line-height: 30px;
     color: #2c2c2c;
     max-width: 95%;
+	font-weight: 600;
 
 }
 
@@ -2163,6 +2193,10 @@ footer{
 }
 .main-dashboard .multiple-items-slider {
 	margin-top: 30px;
+	.slick-dots{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 @media screen and (min-width: 992px) {
 	.main-dashboard .multiple-items-slider {
@@ -2282,6 +2316,7 @@ footer{
 	font-size: 14px;
 	line-height: 24px;
 	color: #707070;
+	font-weight: 600;
 }
 
 .main-dashboard .banner-adds {
@@ -4605,7 +4640,9 @@ select {
 		width: 175px !important;
 
 		@media screen and (max-width: 992px) {
-			max-width: 165px !important;
+			// max-width: 165px !important;
+			max-width: 100%;
+    		height: auto !important;
 		}
 	}
 	#preview-textfield {
@@ -4635,7 +4672,12 @@ select {
 			width: 100%;
 			margin-top: 10px;
 
-			margin-bottom: 15px;
+			margin-bottom: 10px;
+		}
+		@media (max-width:992px){
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 }
@@ -4682,6 +4724,7 @@ select {
 		background: #dddddd;
 		border-radius: 4px;
 		margin: 20px 5px;
+		cursor: pointer;
 		&.slick-active {
 			background: #00a6ca;
 		}
@@ -4711,6 +4754,14 @@ select {
 		font-weight: 700;
 	}
 }
+.sm-cibil-link{
+	@media(max-width:767px){
+		font-size: 16px;
+		line-height: 20px;
+    	margin-top: 0;
+	}
+}
+
 .start-to-end {
 	display: flex;
 	justify-content: space-between;
@@ -5054,4 +5105,19 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
 }
 input[type=number] {
 	-moz-appearance: textfield;
+}
+
+.subcriptionSection{
+	@media (min-width:768px) and (max-width:992px){
+		.icon-column-box {
+			height: calc( 100% - 20px);
+		}
+	}
+}
+
+.float-middle-img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

@@ -80,11 +80,11 @@ $(document).ready(function() {
 
     $('.get-my-score').click(function(e) {
         e.preventDefault();
-        $(this).closest('.for-overlay').children('.overlay-card').removeClass('d-none');
+        $(this).closest('.for-overlay').children('.overlay-card').show(250);
     });
     $('.for-overlay .closeovelay').click(function(e) {
         e.preventDefault();
-        $(this).closest('.for-overlay').children('.overlay-card').addClass('d-none');
+        $(this).closest('.for-overlay').children('.overlay-card').hide(250);
     });
     
 });
