@@ -2093,6 +2093,11 @@ footer > p {
   }
 }
 
+.greyScale {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
 @media screen and (min-width: 992px) {
   .main-dashboard .f-md-24 {
     font-size: 24px;
@@ -2361,7 +2366,7 @@ footer > p {
   .main-dashboard .for-overlay .card-inner {
     padding-bottom: 111px;
   }
-  .main-dashboard .for-overlay .button-icon {
+  .main-dashboard .for-overlay .card-inner .button-icon {
     position: absolute;
     bottom: 16px;
     left: 50%;
@@ -2386,7 +2391,7 @@ footer > p {
 .main-dashboard .for-overlay .closeovelay {
   position: absolute;
   right: 4.17%;
-  top: 3.2%;
+  top: 3%;
   cursor: pointer;
 }
 
@@ -2404,11 +2409,18 @@ footer > p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 30px;
+  padding-top: 60px;
   border-radius: 16px;
   height: 625px;
   background-position: bottom right;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+  .main-dashboard .overlay-card {
+    padding-top: 45px;
+  }
 }
 
 .main-dashboard .overlay-card h6 {
@@ -2418,6 +2430,12 @@ footer > p {
   color: #2c2c2c;
   max-width: 95%;
   font-weight: 600;
+}
+
+@media (max-width: 992px) {
+  .main-dashboard .overlay-card h6 {
+    font-size: 16px;
+  }
 }
 
 .main-dashboard .overlay-card p {

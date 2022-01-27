@@ -1948,6 +1948,10 @@ footer{
 	}
 }
 
+.greyScale{
+	filter: grayscale(100%);
+}
+
 @media screen and (min-width: 992px) {
 	.main-dashboard .f-md-24 {
 		font-size: 24px;
@@ -2191,13 +2195,13 @@ footer{
 
 		& .card-inner{
 			padding-bottom: 111px;
-		}
 
-		& .button-icon{
-			position: absolute;
-			bottom: 16px;
-			left: 50%;
-			transform: translateX(-50%);
+			& .button-icon{
+				position: absolute;
+				bottom: 16px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
 		}
 		
 		& hr{
@@ -2218,7 +2222,7 @@ footer{
 .main-dashboard .for-overlay .closeovelay {
 	position: absolute;
 	right: 4.17%;
-	top: 3.2%;
+	top: 3%;
 	cursor: pointer;
 }
 
@@ -2235,11 +2239,15 @@ footer{
 	border: 1px solid #dde0ef;
 	box-sizing: border-box;
 	padding: 30px;
+	padding-top: 60px;
 	border-radius: 16px;
 	height: 625px;
 	background-position: bottom right;
 	background-size: contain;
 	background-repeat: no-repeat;
+	@media (max-width:992px){
+		padding-top: 45px;
+	}
 }
 
 .main-dashboard .overlay-card h6 {
@@ -2250,6 +2258,10 @@ footer{
     color: #2c2c2c;
     max-width: 95%;
 	font-weight: 600;
+
+	@media (max-width:992px){
+		font-size: 16px;
+	}
 
 }
 
