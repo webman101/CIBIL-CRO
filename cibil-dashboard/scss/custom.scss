@@ -1943,6 +1943,9 @@ footer{
 	line-height: 30px;
 	text-align: center;
 	color: #242424;
+	@media (max-width:992px){
+		font-weight: 700 !important;
+	}
 }
 
 @media screen and (min-width: 992px) {
