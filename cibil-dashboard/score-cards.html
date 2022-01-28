@@ -454,10 +454,11 @@
                     highDpiSupport: true, // High resolution support
                     percentColors: [
                         [0.0, "#E15825"],
-                        [0.20, "#B16B1E"],
-                        [0.42, "#F18200"],
-                        [0.63, "#FCD800"],
-                        [0.83, "#A9D161"],
+                        [0.69, "#E15825"],
+                        [0.70, "#F18200"],
+                        [0.75, "#FCD800"],
+                        [0.775, "#A9D161"],
+                        [0.80, "#009900"],
                         [1.0, "#009900"]
                     ],
 
@@ -487,7 +488,7 @@
                 gauge.animationSpeed = 32; // set animation speed (32 is default value)
                 gauge.set(800); // set actual value
 
-                //first card
+                //fourth card
                 var target = document.getElementById('canvas-preview4'); // your canvas element
                 var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
                 gauge.maxValue = 900; // set max gauge value
