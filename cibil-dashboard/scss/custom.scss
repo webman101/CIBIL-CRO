@@ -244,6 +244,22 @@ h6 {
 	}
 }
 
+.tooltips-left{
+	@media (min-width: 768px){
+		.tootltip-content{
+			left: unset;
+			right: calc(100% + 10px);
+		}
+		&::after {
+			left: unset;
+			right: 100%;
+			margin-left: 0;
+			margin-right: -9px;
+			border-color: transparent transparent transparent #f9f9f9;
+		}
+	}
+}
+
 .para-intro-regular-2c {
 	font-family: Intro, Regular;
 	font-weight: 400;
@@ -5370,5 +5386,33 @@ input[type=number] {
 		text-align: center;
 		width: 230px;
 		text-decoration: none;
+	}
+}
+
+.popHead {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #00A6CA;
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid #DDE0EF;
+}
+
+.popBody {
+    padding: 0 30px 30px;
+	color: #2c2c2c;
+
+	button{
+		&:disabled{
+			background: #707070;
+			color: #fff !important;
+		}
+	}
+	#agree-policy{
+		cursor: pointer;
 	}
 }

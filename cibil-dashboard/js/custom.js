@@ -161,17 +161,18 @@ $(document).ready(function() {
         },
         limitMax: false, // If false, max value increases automatically if value > maxValue
         limitMin: false, // If true, the min value of the gauge will be fixed
-        colorStart: '#B16B1E',
-        colorStop: '#4BB806', // just experiment with them
+        colorStart: '#E15825',
+        colorStop: '#009900', // just experiment with them
         strokeColor: '#E0E0E0', // to see which ones work best for you
         generateGradient: true,
         highDpiSupport: true, // High resolution support
         percentColors: [
-            [0.0, "#B16B1E"],
+            [0.0, "#E15825"],
             [0.20, "#B16B1E"],
-            [0.50, "#B16B1E"],
-            [0.80, "#4BB806"],
-            [1.0, "#4BB806"]
+            [0.42, "#F18200"],
+            [0.63, "#FCD800"],
+            [0.83, "#A9D161"],
+            [1.0, "#009900"]
         ],
 
     };
