@@ -5790,12 +5790,29 @@ input[type=number] {
   cursor: pointer;
 }
 
+.closeUpgardeCard {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
 .score-up .score-point-status .ar-up, .score-down .score-point-status .ar-down {
   display: inline;
 }
 
 .no-change .score-point-status {
   display: none;
+}
+
+.float-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .updateCard .updateDays {
