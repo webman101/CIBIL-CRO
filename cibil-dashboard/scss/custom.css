@@ -5258,6 +5258,7 @@ select {
   display: block;
   color: #000 !important;
   cursor: default !important;
+  position: relative;
   /* identical to box height */
   text-align: center;
   text-decoration: none;
@@ -5666,5 +5667,145 @@ input[type=number] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.score-card {
+  max-width: 375px;
+  margin: auto;
+}
+
+.score-card .f-16-title {
+  text-align: center;
+}
+
+.score-card canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.score-card .no-refresh {
+  max-width: 50%;
+  text-align: right;
+  color: #000;
+  font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  .score-card .no-refresh {
+    font-size: 13px;
+  }
+}
+
+.score-card .score-point-status {
+  position: absolute;
+  top: -2px;
+  right: 22px;
+}
+
+.score-card .score-point-status img {
+  display: none;
+}
+
+.score-card .score-point-status span {
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: #707070;
+  opacity: 0.7;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.score-card .blankCard {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12px 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.score-card .blankCard img {
+  width: 59%;
+  margin-bottom: 22px;
+}
+
+.blank-score-card .blankCardContent {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  background: #F9F9F9;
+  -webkit-box-shadow: 0px 0px 48px rgba(1, 83, 101, 0.3);
+          box-shadow: 0px 0px 48px rgba(1, 83, 101, 0.3);
+  border-radius: 8px;
+  z-index: 1;
+  overflow-y: scroll;
+  cursor: default;
+  /* width */
+}
+
+.blank-score-card .blankCardContent::-webkit-scrollbar {
+  width: 7px;
+}
+
+.blank-score-card .blankCardContent::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.blank-score-card .blankCardContent::-webkit-scrollbar-thumb {
+  background: #ACACAC;
+  border-radius: 8px;
+}
+
+.blank-score-card .blankCardContent .closeblankCardContent {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.score-up .score-point-status .ar-up, .score-down .score-point-status .ar-down {
+  display: inline;
+}
+
+.no-change .score-point-status {
+  display: none;
+}
+
+.updateCard .updateDays {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #00A6CA;
+  margin: 10px 0 8px;
+}
+
+.updateCard .subhead {
+  width: 56%;
+  min-width: 201px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 17px;
+}
+
+.updateCard .foot-text {
+  margin-bottom: 30px;
+  text-align: center;
+  width: 230px;
+  text-decoration: none;
 }
 /*# sourceMappingURL=custom.css.map */
