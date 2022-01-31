@@ -123,17 +123,19 @@ $(document).ready(function() {
         },
         limitMax: false, // If false, max value increases automatically if value > maxValue
         limitMin: false, // If true, the min value of the gauge will be fixed
-        colorStart: '#B16B1E',
-        colorStop: '#4BB806', // just experiment with them
+        colorStart: '#E15825;',
+        colorStop: '#009900', // just experiment with them
         strokeColor: '#E0E0E0', // to see which ones work best for you
         generateGradient: true,
         highDpiSupport: true, // High resolution support
         percentColors: [
-            [0.0, "#B16B1E"],
-            [0.20, "#B16B1E"],
-            [0.50, "#B16B1E"],
-            [0.80, "#4BB806"],
-            [1.0, "#4BB806"]
+            [0.0, "#E15825"],
+            [0.69, "#E15825"],
+            [0.70, "#F18200"],
+            [0.75, "#FCD800"],
+            [0.775, "#A9D161"],
+            [0.80, "#009900"],
+            [1.0, "#009900"]
         ],
 
     };
@@ -141,8 +143,8 @@ $(document).ready(function() {
     var target = document.getElementById('canvas-preview'); // your canvas element
     var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
     gauge.maxValue = 900; // set max gauge value
-    gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
-    gauge.animationSpeed = 32; // set animation speed (32 is default value)
+    gauge.setMinValue(300); // Prefer setter over gauge.minValue = 0
+    gauge.animationSpeed = 150; // set animation speed (32 is default value)
     gauge.set(702); // set actual value
 
 });
@@ -161,7 +163,7 @@ $(document).ready(function() {
         },
         limitMax: false, // If false, max value increases automatically if value > maxValue
         limitMin: false, // If true, the min value of the gauge will be fixed
-        colorStart: '#E15825',
+        colorStart: '#E15825;',
         colorStop: '#009900', // just experiment with them
         strokeColor: '#E0E0E0', // to see which ones work best for you
         generateGradient: true,
@@ -181,8 +183,8 @@ $(document).ready(function() {
     var target = document.getElementById('canvas-preview1'); // your canvas element
     var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
     gauge.maxValue = 900; // set max gauge value
-    gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
-    gauge.animationSpeed = 32; // set animation speed (32 is default value)
+    gauge.setMinValue(300); // Prefer setter over gauge.minValue = 0
+    gauge.animationSpeed = 150; // set animation speed (32 is default value)
     gauge.set(702); // set actual value
 
 });
