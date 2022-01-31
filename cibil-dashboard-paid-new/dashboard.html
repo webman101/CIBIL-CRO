@@ -52,7 +52,20 @@
                                         <a href="" class="button-outline para-intro-bold-2c  fw-700 mb-0" style="padding: 9px 32px;text-decoration: none;">Refresh Now</a>
                                     </div>
 
-                                    <img src="img/greyquestionmark.svg" alt="" class="greyquestionmark">
+                                    <span class="greyquestionmark tooltips">
+                                        <img src="img/greyquestionmark.svg" alt=""/>
+                                        <span class="tootltip-content">
+                                            <span>
+                                                This section reflects your CIBIL Score, which is widely used by loan providers to evaluate loan applications. Your score ranges between 300 and 900, and is calculated based on the information available in the “Accounts” and “Enquiry”; section of your CIBIL Report. The closer your score is to 900, the more confidence the lender will have in your ability to repay the loan. Higher your score, the better chances of your application getting approved.
+                                            </span>
+                                            <span class="d-block fw-600 mt-3 mb-1" >Still have questions?</span>
+                                            <span class="text-intro-bold">
+                                                <img src="img/black-play-btn.svg">
+                                                <a href="https://www.youtube.com/watch?v=Eyl3vDROmuY" class="text-intro-bold" style="margin-left: 6px;">Watch this video to know more</a>
+                                            </span>
+                                        </span>
+                                    </span>
+
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -113,19 +126,29 @@
                             <div class="col-md-6">
                                 <div class="for-overlay">
 
-                                    <div class="w-100 border-1 mt-3 rounded-border-1 overflow-hidden card-inner">
+                                    <div class="w-100 border-1 mt-3 rounded-border-1 card-inner float-inner">
                                         <div class="card-head bg-white py-25 px-20 px-md-30 border-bottom-1 pb-2">
                                             <div class="text-blue text-uppercase mb-10">
                                                 Score Simulator
                                             </div>
                                             <p class="para-intro-book-70 pb-0 mb-0 font-16">
-                                                Look into your credit future. Find out in advance how your credit actions affect your score.
+                                                Find out how your credit actions can impact your CIBIL Score.
                                             </p>
+                                            <span class="greyquestionmark tooltips ">
+                                                <img src="img/info.svg" alt=""/>
+                                                <span class="tootltip-content">
+                                                    <span>
+                                                        This section reflects your CIBIL Score, which is widely used by loan providers to evaluate loan applications. Your score ranges between 300 and 900, and is calculated based on the information available in the “Accounts” and “Enquiry”; section of your CIBIL Report. The closer your score is to 900, the more confidence the lender will have in your ability to repay the loan. Higher your score, the better chances of your application getting approved.
+                                                    </span>
+                                                    <span class="d-block fw-600 mt-3 mb-1" >Still have questions?</span>
+                                                    <span class="text-intro-bold">
+                                                        <img src="img/black-play-btn.svg">
+                                                        <a href="https://www.youtube.com/watch?v=Eyl3vDROmuY" class="text-intro-bold" style="margin-left: 6px;">Watch this video to know more</a>
+                                                    </span>
+                                                </span>
+                                            </span>
                                         </div>
                                         <div class="card-body px-20 px-md-30 bg-white">
-                                            <p class="para-intro-regular mt-md-19 f-md-24 max-width-350 mx-auto fw-400">
-                                                What will happen to my CIBIL Score if I take on a new loan or a credit card?
-                                            </p>
                                             <div class="d-flex align-items-center guage-2 justify-content-center">
                                                 <div class="filled-guage">
                                                     <canvas id="canvas-preview1" class="canvas-preview"></canvas>
@@ -134,8 +157,8 @@
                                                         <span>900</span>
                                                     </div>
                                                     <div id="preview-textfield">702</div>
-                                                    <div class="semicircle-center"></div>
-                                                    <a href="#" class="cibil-link"><span>CIBIL</span> Score</a>
+                                                    <div class="semicircle-center cibil-link sm-cibil-link">Current</div>
+                                                    <a href="#" class="cibil-link sm-cibil-link"><span>CIBIL</span> Score</a>
 
                                                 </div>
                                                 <div class="blank-guage">
@@ -145,48 +168,53 @@
                                                         <span>900</span>
                                                     </div>
                                                     <div id="preview-textfield">?</div>
-                                                    <div class="semicircle-center"></div>
-                                                    <a href="#" class="cibil-link"><span>CIBIL</span> Score</a>
+                                                    <div class="semicircle-center cibil-link sm-cibil-link">Simulated</div>
+                                                    <a href="#" class="cibil-link sm-cibil-link"><span>CIBIL</span> Score</a>
                                                 </div>
                                             </div>
+                                            <p class="para-intro-regular f-md-24 max-width-420 mx-auto fw-600 mt-30">
+                                                Score Simulator is a tool that allows you to choose from various credit-related scenarios.
+                                            </p>
                                             <hr class="mt-md-30">
-                                            <a href="" class="button-icon mx-auto mt-2 mb-1">
-                                                <img src="img/lock.svg" alt="">
-                                                <span>Get My Score</span>
+                                            <a href="score-simulator.html" class="button-icon mx-auto mt-2 mb-1">
+                                                <span>Simulate Now</span>
                                             </a>
                                         </div>
 
                                     </div>
-                                    <div class="overlay-card d-none " style="background-image: url(../img/overlaybg1.png);">
-                                        <img src="img/closeovelay.svg" class="closeovelay" alt="">
-                                        <h6>
-                                            Make the right decisions by predicting the right outcomes. Get a CIBIL subscription to use the Score Simulator.
-                                        </h6>
-                                        <p>Plans starting from as low as ₹100/month.</p>
-                                        <a href="" class="button-icon mt-2 mb-1">
-                                            <span>Upgrade Now</span>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 pl-40">
+                            <div class="col-md-6 pl-md-40">
                                 <div class="for-overlay paid-alerts-non-blurred">
 
-                                    <div class="w-100 border-1 mt-3 rounded-border-1 overflow-hidden card-inner">
+                                    <div class="w-100 border-1 mt-3 rounded-border-1 card-inner float-inner">
                                         <div class="card-head bg-white py-25 px-20 px-md-30 border-bottom-1 pb-2">
                                             <div class="text-blue text-uppercase mb-10">
                                                 CIBIL ALERTS
                                             </div>
                                             <p class="para-intro-book-70 pb-0 mb-0">
-                                                Always stay a step ahead and know how, when and why is your CIBIL Report affected.
+                                                Get instant alerts whenever there is any change in your credit profile.
                                             </p>
+                                            <span class="greyquestionmark tooltips tooltips-left">
+                                                <img src="img/info.svg" alt=""/>
+                                                <span class="tootltip-content">
+                                                    <span>
+                                                        This section reflects your CIBIL Score, which is widely used by loan providers to evaluate loan applications. Your score ranges between 300 and 900, and is calculated based on the information available in the “Accounts” and “Enquiry”; section of your CIBIL Report. The closer your score is to 900, the more confidence the lender will have in your ability to repay the loan. Higher your score, the better chances of your application getting approved.
+                                                    </span>
+                                                    <span class="d-block fw-600 mt-3 mb-1" >Still have questions?</span>
+                                                    <span class="text-intro-bold">
+                                                        <img src="img/black-play-btn.svg">
+                                                        <a href="https://www.youtube.com/watch?v=Eyl3vDROmuY" class="text-intro-bold" style="margin-left: 6px;">Watch this video to know more</a>
+                                                    </span>
+                                                </span>
+                                            </span>
                                         </div>
                                         <div class="card-body px-20 px-md-30 bg-white">
                                             <div class="alerts mb-2">
                                                 <span class="date"> Fri, 02:46 PM</span>
 
                                                 <div class="cibilalert">
-                                                    New Account**
+                                                    New Account
                                                 </div>
                                             </div>
                                             <div class="alerts mb-2">
@@ -194,7 +222,7 @@
                                                     <span class="date"> 21/06/2021, 11:23 PM</span>
 
                                                     <div class="cibilalert">
-                                                        Enquiry**
+                                                        Enquiry
                                                     </div>
                                                 </div>
                                             </div>
@@ -205,10 +233,10 @@
                                                         <span class="date"> 16/04/2021,  12:56 AM</span>
 
                                                         <div class="cibilalert">
-                                                            Change In Score****
+                                                            Change In Score
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center">
+                                                    <div class="d-flex align-items-center fw-600">
                                                         <img src="img/green-arrow.svg" alt="">
                                                         <p style="margin-bottom: 0;margin-left: 15px;font-family: 'Intro', Regular;font-size: 14px;line-height: 24px;color: #2C2C2C;">Increased</p>
                                                     </div>
@@ -217,13 +245,13 @@
                                             <div class="alerts">
                                                 <div class="d-flex justify-content-between align-items-end">
                                                     <div>
-                                                        <span class="date"> 16/04/2021,  12:56 AM</span>
+                                                        <span class="date"> 12/04/2021,  05:45 PM</span>
 
                                                         <div class="cibilalert">
-                                                            Change In Score****
+                                                            Change In Score
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center">
+                                                    <div class="d-flex align-items-center fw-600">
                                                         <img src="img/red-arrow.svg" alt="">
                                                         <p style="margin-bottom: 0;margin-left: 15px;font-family: 'Intro', Regular;font-size: 14px;line-height: 24px;color: #2C2C2C;">Decreased</p>
                                                     </div>
@@ -231,21 +259,10 @@
                                             </div>
                                             <hr style="margin-top: 21px;">
                                             <a href="" class="button-icon mx-auto mt-2 mb-1">
-                                                <img src="img/lock.svg" alt="">
-                                                <span>View My Alerts</span>
+                                                <span>View Alerts</span>
                                             </a>
                                         </div>
 
-                                    </div>
-                                    <div class="overlay-card d-none" style="background-image: url(../img/overlaybg2.png);background-size: 195px 265px;">
-                                        <img src="img/closeovelay.svg" class="closeovelay" alt="">
-                                        <h6>
-                                            Make the right decisions by predicting the right outcomes. Get a CIBIL subscription to use the Score Simulator.
-                                        </h6>
-                                        <p>Plans starting from as low as ₹100/month.</p>
-                                        <a href="" class="button-icon mt-2 mb-1">
-                                            <span>Upgrade Now</span>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -255,18 +272,31 @@
                             <div class="col-md-6 paid-alerts-non-blurred credit-summary">
                                 <div class="for-overlay">
 
-                                    <div class="w-100 border-1 mt-3 rounded-border-1 overflow-hidden card-inner credit-summary">
+                                    <div class="w-100 border-1 mt-3 rounded-border-1 card-inner credit-summary">
                                         <div class="card-head bg-white py-25 px-20 px-md-30 border-bottom-1 pb-2">
                                             <div class="text-blue text-uppercase mb-10">
                                                 Credit summary
                                             </div>
                                             <p class="para-intro-book-70 pb-0 mb-0 font-16" style="min-height: 48px;">
-                                                Bite-sized summary of your credit profile.
+                                                Brief summary of your credit profile.
                                             </p>
+                                            <span class="greyquestionmark tooltips ">
+                                                <img src="img/info.svg" alt=""/>
+                                                <span class="tootltip-content">
+                                                    <span>
+                                                        This section reflects your CIBIL Score, which is widely used by loan providers to evaluate loan applications. Your score ranges between 300 and 900, and is calculated based on the information available in the “Accounts” and “Enquiry”; section of your CIBIL Report. The closer your score is to 900, the more confidence the lender will have in your ability to repay the loan. Higher your score, the better chances of your application getting approved.
+                                                    </span>
+                                                    <span class="d-block fw-600 mt-3 mb-1" >Still have questions?</span>
+                                                    <span class="text-intro-bold">
+                                                        <img src="img/black-play-btn.svg">
+                                                        <a href="https://www.youtube.com/watch?v=Eyl3vDROmuY" class="text-intro-bold" style="margin-left: 6px;">Watch this video to know more</a>
+                                                    </span>
+                                                </span>
+                                            </span>
                                         </div>
                                         <div class="card-body px-20 px-md-30 bg-white">
                                             <div class="alerts mb-2 d-flex justify-content-between bg-white align-items-center" style="border: 1px solid #DDDDDD;border-radius: 6px;height: auto;">
-                                                <div>
+                                                <div class="col-6" style="padding-left: 0;">
                                                     <div class="cibilalert">
                                                         Current Balance
                                                     </div>
@@ -274,18 +304,18 @@
 
 
                                                 </div>
-                                                <div class="fw-600" style="font-family: 'Intro', Regular;font-size: 24px;line-height: 30px;color: #2C2C2C;">
+                                                <div class="col-6 fw-700" style="font-family: 'Intro', Regular;font-size: 24px;line-height: 30px;color: #2C2C2C;">
                                                     ₹99,000.00
                                                 </div>
                                             </div>
-                                            <div class="row">
+                                            <div class="row summary-tabs">
                                                 <div class="col-6">
                                                     <div class="alerts mb-2 d-flex justify-content-between">
                                                         <div>
                                                             <div class="cibilalert" style="font-family: 'Intro', Regular;font-size: 14px;">
                                                                 Late Payment
                                                             </div>
-                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;"> 0</span>
+                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;font-weight: 600;"> 0</span>
 
 
                                                         </div>
@@ -297,7 +327,7 @@
                                                             <div class="cibilalert" style="font-family: 'Intro', Regular;font-size: 14px;">
                                                                 Utilization
                                                             </div>
-                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;"> 0</span>
+                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;font-weight: 600;"> 0</span>
 
 
                                                         </div>
@@ -309,7 +339,7 @@
                                                             <div class="cibilalert" style="font-family: 'Intro', Regular;font-size: 14px;">
                                                                 Accounts Opened
                                                             </div>
-                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;">4</span>
+                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;font-weight: 600;">4</span>
 
 
                                                         </div>
@@ -321,7 +351,7 @@
                                                             <div class="cibilalert" style="font-family: 'Intro', Regular;font-size: 14px;">
                                                                 Enquires
                                                             </div>
-                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;">8</span>
+                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;font-weight: 600;">8</span>
 
 
                                                         </div>
@@ -333,7 +363,7 @@
                                                             <div class="cibilalert" style="font-family: 'Intro', Regular;font-size: 14px;">
                                                                 Depth of Credit
                                                             </div>
-                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;"> 1 Year</span>
+                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;font-weight: 600;"> 1 Year</span>
 
 
                                                         </div>
@@ -345,7 +375,7 @@
                                                             <div class="cibilalert" style="font-family: 'Intro', Regular;font-size: 14px;">
                                                                 Available Credit
                                                             </div>
-                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;">₹ 2,10,000</span>
+                                                            <span class="date" style="font-size: 24px;font-family: 'Intro', Regular;font-weight: 600;">₹ 2,10,000</span>
 
 
                                                         </div>
@@ -367,7 +397,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 pl-40 coloured-column">
+                            <div class="col-md-6 pl-md-40 coloured-column">
                                 <div class="for-overlay">
 
                                     <div class="w-100 border-1 mt-3 rounded-border-1 overflow-hidden card-inner">
@@ -4121,97 +4151,6 @@
                             </div>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <div class="section-grid ">
-                            <div class="row">
-
-                                <div class="col-md-12">
-                                    <div class="w-100 border-1 mt-3 bg-white rounded-border-1 overflow-hidden">
-                                        <div class="card-head bg-white px-20 px-md-30 border-bottom-1 pt-3 pb-2">
-                                            <div class="text-blue text-uppercase mb-05">
-                                                Unlock MORE features with a CIBIL subscription
-                                            </div>
-                                            <p class="para-intro-book-70 pb-0 mb-0">
-                                                Get everything you need to maintain or boost your CIBIL Score, all in one place.
-                                            </p>
-                                        </div>
-                                        <div class="card-body px-20 px-md-30">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <div class="icon-column-box">
-                                                        <img src="img/stand.svg" alt="">
-                                                        <div>
-                                                            <p>
-                                                                <bold class="fw-600">
-                                                                    Know Where you Stand
-
-                                                                </bold>
-                                                            </p>
-                                                            <p class="light">
-                                                                See how you perform compared to other CIBIL members.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="icon-column-box">
-                                                        <img src="img/stand3.svg" alt="">
-                                                        <div>
-                                                            <p>
-                                                                <bold class="fw-600">
-                                                                    CIBIL Report
-
-                                                                </bold>
-                                                            </p>
-                                                            <p class="light">
-                                                                Bite-sized summary of your <br> credit profile.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="icon-column-box">
-                                                        <img src="img/stand2.svg" alt="">
-                                                        <div>
-                                                            <p>
-                                                                <bold class="fw-600">
-                                                                    Score History
-
-                                                                </bold>
-                                                            </p>
-                                                            <p class="light">
-                                                                See how your CIBIL Score has performed over time.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="" class="button-icon mx-auto mt-2 mb-1">
-                                                <span>Unlock All Features</span>
-                                            </a>
-                                            <p class="text-light text-center mt-2">Starting at ₹100 Per Month* </p>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="section-grid column-slider">
                             <div class="row">
 
@@ -4222,7 +4161,7 @@
                                                 REPAYMENT OFFERS
                                             </div>
                                             <p class="para-intro-book-70 pb-0 mb-0">
-                                                This negative status factor into your credit score. Settling this debt, could resolve this status
+                                                This section enables you to access all your credit accounts at one place to ensure you never default on your payments.
                                             </p>
                                         </div>
                                         <div class="card-body px-20 px-md-30">
@@ -4360,20 +4299,33 @@
                             <div class="row">
 
                                 <div class="col-md-12">
-                                    <div class="w-100 border-1 mt-3 bg-white rounded-border-1 overflow-hidden">
+                                    <div class="w-100 border-1 mt-3 bg-white rounded-border-1">
                                         <div class="card-head bg-white px-20 px-md-30 border-bottom-1 pt-3 pb-2">
                                             <div class="text-blue text-uppercase mb-05">
                                                 Personalised offers
                                             </div>
                                             <p class="para-intro-regular-2c" style="color: #5E5E5E;">
 
-                                                We bring you the best offers based on your latest CIBIL score.
+                                                Get customized offers based on your latest CIBIL score.
 
                                             </p>
+                                            <span class="greyquestionmark tooltips tooltips-left">
+                                                <img src="img/info.svg" alt=""/>
+                                                <span class="tootltip-content">
+                                                    <span>
+                                                        This section reflects your CIBIL Score, which is widely used by loan providers to evaluate loan applications. Your score ranges between 300 and 900, and is calculated based on the information available in the “Accounts” and “Enquiry”; section of your CIBIL Report. The closer your score is to 900, the more confidence the lender will have in your ability to repay the loan. Higher your score, the better chances of your application getting approved.
+                                                    </span>
+                                                    <span class="d-block fw-600 mt-3 mb-1" >Still have questions?</span>
+                                                    <span class="text-intro-bold">
+                                                        <img src="img/black-play-btn.svg">
+                                                        <a href="https://www.youtube.com/watch?v=Eyl3vDROmuY" class="text-intro-bold" style="margin-left: 6px;">Watch this video to know more</a>
+                                                    </span>
+                                                </span>
+                                            </span>
                                         </div>
                                         <div class="card-body px-20 px-md-30">
-                                            <p class="para-intro-regular-2c  mb-20 p-20 fw-700 " style="border: 1px solid #ACACAC;border-radius: 6px;color: #2C2C2C;">
-                                                <img src="img/exclamation-mark-grey.svg" alt="" style="margin-right: 20px;"> We found <span class="bg-yellow text-bold">24 offers</span> for you in the following categories
+                                            <p class="para-intro-regular-2c  mb-20 p-20 fw-700 " style="border: 1px solid #ACACAC;border-radius: 6px;color: #2C2C2C;display: flex; align-items: center;">
+                                                <img src="img/exclamation-mark-grey.svg" alt="" style="margin-right: 20px;"> <span>We found <span class="bg-yellow text-bold">24 offers</span> for you in the following categories</span>
                                             </p>
 
                                             <div class=" d-md-flex show-col-6-flex px-0">
@@ -4435,7 +4387,7 @@
                                                 </div>
                                                 <div class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
                                                     <div class="d-flex w-100 justify-content-between">
-                                                        <img src="img/icon3.svg" alt="" class="mb-2" style="margin-top: 13px;">
+                                                        <img src="img/icon3.svg" alt="" class="mb-2 greyScale" style="margin-top: 13px;">
                                                         <div class="yellow-count-numb disabled">
                                                             0
                                                         </div>
@@ -4548,17 +4500,19 @@
             },
             limitMax: false, // If false, max value increases automatically if value > maxValue
             limitMin: false, // If true, the min value of the gauge will be fixed
-            colorStart: '#B16B1E',
-            colorStop: '#4BB806', // just experiment with them
+            colorStart: '#E15825;',
+            colorStop: '#009900', // just experiment with them
             strokeColor: '#E0E0E0', // to see which ones work best for you
             generateGradient: true,
             highDpiSupport: true, // High resolution support
             percentColors: [
-                [0.0, "#B16B1E"],
-                [0.20, "#B16B1E"],
-                [0.50, "#B16B1E"],
-                [0.80, "#4BB806"],
-                [1.0, "#4BB806"]
+                [0.0, "#E15825"],
+                [0.69, "#E15825"],
+                [0.70, "#F18200"],
+                [0.75, "#FCD800"],
+                [0.775, "#A9D161"],
+                [0.80, "#009900"],
+                [1.0, "#009900"]
             ],
 
         };
@@ -4566,8 +4520,8 @@
         var target = document.getElementById('canvas-preview'); // your canvas element
         var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
         gauge.maxValue = 900; // set max gauge value
-        gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
-        gauge.animationSpeed = 32; // set animation speed (32 is default value)
+        gauge.setMinValue(300); // Prefer setter over gauge.minValue = 0
+        gauge.animationSpeed = 150; // set animation speed (32 is default value)
         gauge.set(702); // set actual value
     </script>
     <script>
@@ -4583,17 +4537,19 @@
             },
             limitMax: false, // If false, max value increases automatically if value > maxValue
             limitMin: false, // If true, the min value of the gauge will be fixed
-            colorStart: '#B16B1E',
-            colorStop: '#4BB806', // just experiment with them
+            colorStart: '#E15825;',
+            colorStop: '#009900', // just experiment with them
             strokeColor: '#E0E0E0', // to see which ones work best for you
             generateGradient: true,
             highDpiSupport: true, // High resolution support
             percentColors: [
-                [0.0, "#B16B1E"],
-                [0.20, "#B16B1E"],
-                [0.50, "#B16B1E"],
-                [0.80, "#4BB806"],
-                [1.0, "#4BB806"]
+                [0.0, "#E15825"],
+                [0.69, "#E15825"],
+                [0.70, "#F18200"],
+                [0.75, "#FCD800"],
+                [0.775, "#A9D161"],
+                [0.80, "#009900"],
+                [1.0, "#009900"]
             ],
 
         };
@@ -4601,8 +4557,8 @@
         var target = document.getElementById('canvas-preview1'); // your canvas element
         var gauge = new Gauge(target).setOptions(opts); // create sexy gauge!
         gauge.maxValue = 900; // set max gauge value
-        gauge.setMinValue(0); // Prefer setter over gauge.minValue = 0
-        gauge.animationSpeed = 32; // set animation speed (32 is default value)
+        gauge.setMinValue(300); // Prefer setter over gauge.minValue = 0
+        gauge.animationSpeed = 150; // set animation speed (32 is default value)
         gauge.set(702); // set actual value
     </script>
     <script type="text/javascript">
@@ -4627,6 +4583,7 @@
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
+                        arrows: false
                     }
                 }]
             });

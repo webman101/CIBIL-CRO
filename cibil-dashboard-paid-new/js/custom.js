@@ -19,14 +19,14 @@ $(function() {
     });
 });
 
-$('.for-overlay .button-icon').click(function(e) {
-    e.preventDefault();
-    $(this).closest('.for-overlay').children('.overlay-card').removeClass('d-none');
-});
-$('.for-overlay .closeovelay').click(function(e) {
-    e.preventDefault();
-    $(this).closest('.for-overlay').children('.overlay-card').addClass('d-none');
-});
+// $('.for-overlay .button-icon').click(function(e) {
+//     e.preventDefault();
+//     $(this).closest('.for-overlay').children('.overlay-card').removeClass('d-none');
+// });
+// $('.for-overlay .closeovelay').click(function(e) {
+//     e.preventDefault();
+//     $(this).closest('.for-overlay').children('.overlay-card').addClass('d-none');
+// });
 
 
 $(document).ready(function() {
