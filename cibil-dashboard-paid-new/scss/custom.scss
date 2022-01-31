@@ -5409,7 +5409,8 @@ h6 {
                 top: 0;
                 bottom: 0;
                 margin: auto;
-                right: 70px;
+                // right: 70px;
+                right: 12%;
                 border: 8px solid #ffffff;
                 border-top: 0;
                 border-right: 0;
@@ -5449,9 +5450,15 @@ h6 {
         }
         &:nth-child(2) {
             background: #a9d161;
+            span{
+                color: #2c2c2c;
+            }
         }
         &:nth-child(3) {
             background: #fcd800;
+            span{
+                color: #2c2c2c;
+            }
         }
         &:nth-child(4) {
             background: #f18200;
@@ -5459,6 +5466,15 @@ h6 {
         &:nth-child(5) {
             background: #e15825;
             margin-bottom: 0;
+        }
+        .score-value{
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
         }
     }
 }
@@ -5607,6 +5623,9 @@ input[type=number] {
 .card-head{
     position: relative;
     border-radius: 16px 16px 0 0;
+}
+.card-body{
+    border-radius: 0 0 16px 16px;
 }
 
 @media (max-width: 767px){

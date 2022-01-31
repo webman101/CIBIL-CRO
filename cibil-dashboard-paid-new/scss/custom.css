@@ -6020,7 +6020,7 @@ h6 {
   top: 0;
   bottom: 0;
   margin: auto;
-  right: 70px;
+  right: 12%;
   border: 8px solid #ffffff;
   border-top: 0;
   border-right: 0;
@@ -6072,8 +6072,16 @@ h6 {
   background: #a9d161;
 }
 
+.coloured-column .coloured:nth-child(2) span {
+  color: #2c2c2c;
+}
+
 .coloured-column .coloured:nth-child(3) {
   background: #fcd800;
+}
+
+.coloured-column .coloured:nth-child(3) span {
+  color: #2c2c2c;
 }
 
 .coloured-column .coloured:nth-child(4) {
@@ -6083,6 +6091,17 @@ h6 {
 .coloured-column .coloured:nth-child(5) {
   background: #e15825;
   margin-bottom: 0;
+}
+
+.coloured-column .coloured .score-value {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
 }
 
 .credit-summary .alerts {
@@ -6242,6 +6261,10 @@ input[type=number] {
 .card-head {
   position: relative;
   border-radius: 16px 16px 0 0;
+}
+
+.card-body {
+  border-radius: 0 0 16px 16px;
 }
 
 @media (max-width: 767px) {
