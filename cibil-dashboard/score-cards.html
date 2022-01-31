@@ -459,7 +459,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
+            // setTimeout(function () {
                 var opts = {
                     angle: -0.02, // The span of the gauge arc
                     lineWidth: 0.15, // The line thickness
@@ -489,7 +489,7 @@
 
                 };
 
-                const animSpeed = 80;
+                const animSpeed = 150;
 
                 //first card
                 var target = document.getElementById('canvas-preview'); // your canvas element
@@ -522,7 +522,7 @@
                 gauge.setMinValue(300); // Prefer setter over gauge.minValue = 0
                 gauge.animationSpeed = animSpeed; // set animation speed (32 is default value)
                 gauge.set(720); // set actual value
-            }, 1000)
+            // }, 1000)
         }, false);
 
         $('.closeblankCardContent').click(function () {
