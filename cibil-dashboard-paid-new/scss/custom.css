@@ -6822,6 +6822,12 @@ main section.credit-history .chart-history dl::-webkit-scrollbar-thumb {
   main section.credit-history .chart-history text.y-axis-label {
     font-size: 11px;
   }
+  .pl-sm-10 {
+    padding-left: 10px !important;
+  }
+  .ipadGraph {
+    padding-left: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
