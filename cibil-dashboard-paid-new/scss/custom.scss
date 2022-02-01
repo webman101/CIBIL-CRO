@@ -4415,6 +4415,9 @@ h6 {
             height: 100%;
             padding-bottom: 55px;
             position: relative;
+            @media (max-width: 767px){
+                box-shadow: none;
+            }
             h6 {
                 font-family: Intro, Bold;
                 font-weight: 700;
@@ -6097,8 +6100,26 @@ main section.credit-history .chart-history dl{
     }
 }
 
-@media screen and (max-width: 480px){
-main section.credit-history .chart-history text.x-axis-label{
-    font-size: 9px;
+@media screen and (min-width: 992px){
+    main section.credit-history .chart-history dl {
+        transform: translateX(100%);
+        right: 0;
+        width: 34%;
+    }
 }
+
+
+@media screen and (max-width: 480px){
+    main section.credit-history .chart-history text.x-axis-label{
+        font-size: 9px;
+    }
+    main section.credit-history .chart-history text.y-axis-label{
+        font-size: 11px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px){
+    .ipadGraph{
+        width: 100%;
+    }
 }

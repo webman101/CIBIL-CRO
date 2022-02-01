@@ -2540,6 +2540,13 @@ footer > p {
   position: relative;
 }
 
+@media (max-width: 767px) {
+  .main-dashboard .multiple-items-slider .slider-item {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 .main-dashboard .multiple-items-slider .slider-item h6 {
   font-family: "Intro", Bold;
   font-weight: bold;
