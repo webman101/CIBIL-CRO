@@ -190,6 +190,7 @@ h6 {
           box-sizing: border-box;
   border-radius: 25px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .button-icon span {
@@ -218,6 +219,13 @@ h6 {
 
 .tooltips {
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .tooltips > img {
+    height: 22px;
+    width: 22px;
+  }
 }
 
 .tooltips:hover .tootltip-content, .tooltips:hover::after {
@@ -268,6 +276,7 @@ h6 {
   max-height: 500px;
   overflow-y: scroll;
   cursor: default;
+  color: #000000b3;
   /* width */
 }
 
@@ -282,6 +291,15 @@ h6 {
 
 .tooltips .tootltip-content::-webkit-scrollbar-thumb {
   background: #ACACAC;
+}
+
+.tooltips .tootltip-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tooltips .tootltip-content ul li {
+  list-style-type: disc;
 }
 
 @media (max-width: 767px) {
@@ -4407,6 +4425,7 @@ h6 {
   border: 1px solid #f16e00;
   box-sizing: border-box;
   border-radius: 25px;
+  text-transform: uppercase;
 }
 
 .blue-title {
@@ -4569,6 +4588,12 @@ h6 {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+
+@media (max-width: 767px) {
+  .main-dashboard .para-intro-regular-2c {
+    line-height: 22px;
+  }
 }
 
 .main-dashboard .para-intro-book-70 {
@@ -4871,6 +4896,9 @@ h6 {
   border-radius: 8px;
   padding: 30px;
   width: 100%;
+  height: 100%;
+  padding-bottom: 55px;
+  position: relative;
 }
 
 .main-dashboard .multiple-items-slider .slider-item h6 {
@@ -4899,6 +4927,14 @@ h6 {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #fff;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.main-dashboard .multiple-items-slider .slider-item img {
+  height: 40px;
+  width: 40px;
 }
 
 .main-dashboard .alerts {
@@ -4915,6 +4951,12 @@ h6 {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
+}
+
+@media (max-width: 767px) {
+  .main-dashboard .alerts .availableCred {
+    font-size: 22px !important;
+  }
 }
 
 .main-dashboard .alerts .cibilalert {
@@ -5454,6 +5496,8 @@ h6 {
   text-align: center;
   text-decoration: none;
   margin-top: 10px;
+  color: #000 !important;
+  cursor: default !important;
 }
 
 .cibil-link span {
@@ -5821,8 +5865,32 @@ h6 {
   }
 }
 
+@media (max-width: 767px) {
+  .main-dashboard .multiple-items-slider .slick-list {
+    padding: 0 6% !important;
+  }
+}
+
+.main-dashboard .multiple-items-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main-dashboard .multiple-items-slider .slick-slide {
   padding: 20px;
+  height: inherit;
+}
+
+@media (max-width: 767px) {
+  .main-dashboard .multiple-items-slider .slick-slide {
+    margin: 0 !important;
+    padding: 0;
+  }
+  .main-dashboard .multiple-items-slider .slick-slide:not(.slick-current) {
+    -webkit-transform: scale(0.94);
+            transform: scale(0.94);
+  }
 }
 
 .main-dashboard .multiple-items-slider .slick-dots {
@@ -5968,6 +6036,7 @@ h6 {
   background: #dddddd;
   border-radius: 4px;
   margin: 20px 5px;
+  cursor: pointer;
 }
 
 .slick-dots li.slick-active {
@@ -6104,9 +6173,21 @@ h6 {
   right: 0;
 }
 
+@media (max-width: 767px) {
+  .coloured-column .coloured .score-value {
+    margin: 0;
+  }
+}
+
 .credit-summary .alerts {
   min-height: 91px;
   padding-left: 20px;
+}
+
+@media (max-width: 767px) {
+  .credit-summary .alerts {
+    padding-left: 10px;
+  }
 }
 
 @-webkit-keyframes chartjs-render-animation {
@@ -6191,6 +6272,48 @@ h6 {
           transform: rotate(180deg);
   -webkit-transition: 0.25s;
   transition: 0.25s;
+}
+
+.modal .modal-dialog {
+  max-width: 1065px;
+}
+
+.modal .popuop {
+  padding: 20px;
+}
+
+.modal .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.modal .blue-title {
+  font-family: "Intro", Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  /* identical to box height, or 125% */
+  letter-spacing: 0.02em;
+  /* Primary Blue */
+  color: #00a6ca;
+  margin-left: 20px;
+}
+
+.modal p {
+  font-family: "Intro", Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  letter-spacing: 0.02em;
+  /* Accent Black */
+  color: #2c2c2c;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 992px) {
