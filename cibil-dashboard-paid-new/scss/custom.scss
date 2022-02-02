@@ -4481,6 +4481,7 @@ h6 {
         background: #fafafa;
         border-radius: 4px;
         padding: 16px;
+        text-decoration: none;
         img {
             margin-bottom: 28px;
         }
@@ -4942,6 +4943,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #2c2c2c;
 }
 
 .yellow-count-numb.disabled {
@@ -5066,6 +5068,7 @@ h6 {
             .icon-column-box {
                 position: relative;
                 height: 128px;
+                width: 150px;
                 .text {
                     height: 48px;
                     position: absolute;
@@ -6098,6 +6101,9 @@ main section.credit-history .chart-history dl{
         margin: 15px;
         width: -webkit-fill-available;
     }
+    .m-mb-20 {
+		margin-bottom: 20px !important;
+	}
 }
 
 @media screen and (min-width: 992px){
@@ -6128,4 +6134,9 @@ main section.credit-history .chart-history dl{
     .ipadGraph{
         width: 100%;
     }
+}
+
+.tnc-link{
+    color: inherit;
+    text-decoration: none;
 }

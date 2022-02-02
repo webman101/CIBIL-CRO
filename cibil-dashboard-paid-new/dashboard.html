@@ -270,7 +270,19 @@
                                                                 <b>Late Payments:</b> Count of late payments in the last 3 years across all accounts (A value of 'LSS', 'DBT', 'SUB', 'SMA' or any value greater than '0' under 'Payment History' will be considered as a late payment). Remember that delayed payments will negatively impact your CIBIL Score.
                                                             </li>
                                                             <li>
-                                                                <b>Credit Card Utilization:</b> Ratio of your total credit card balances to the total of values reported in the 'Credit Limit' fields for all active credit cards. High credit utilization can negatively impact your CIBIL Score, and it is recommended to limit your utilization to 30% of the credit limit. If a credit limit is not reported for any active credit cards, the account is excluded.
+                                                                <b>Credit Card Utilization:</b> Ratio of your total credit card balances to the total of values reported in the 'Credit Limit' fields for all active credit cards. High credit utilization can negatively impact your CIBIL Score, and it is recommended to limit your utilization to 30% of the credit limit. If a credit limit is not reported for any active credit cards, the account is excluded from the calculation and utilization will display as a hyphen (-).
+                                                            </li>
+                                                            <li>
+                                                                <b>Accounts Opened:</b> Count of new loan accounts and/or credit cards added to your CIBIL Report in the last 3 years.
+                                                            </li>
+                                                            <li>
+                                                                <b>Enquiries:</b> Count of enquiries added to your CIBIL Report in the last 3 years. Lenders pull your CIBIL Score and Report (called an enquiry) when evaluating a loan application. Too many enquiries within a short period can indicate sudden credit appetite.
+                                                            </li>
+                                                            <li>
+                                                                <b>Depth of Credit:</b> Duration of your available credit history, calculated from the date the oldest account was opened.
+                                                            </li>
+                                                            <li>
+                                                                <b>Available Credit:</b> Difference between total of values reported in 'Credit Limit' fields for all active credit cards and the total outstanding balances across all active credit cards. If the credit limit is not reported for any active credit cards, the account is excluded from the calculation and Available Credit will display as hyphen (-).
                                                             </li>
                                                         </ul>
                                                     </span>
@@ -283,7 +295,7 @@
                                                     <div class="cibilalert">
                                                         Current Balance
                                                     </div>
-                                                    <span class="date"> as of 09/08/2021</span>
+                                                    <span class="date" style="color: #707070;"> as of 09/08/2021</span>
 
 
                                                 </div>
@@ -4347,7 +4359,7 @@
                                             </p>
 
                                             <div class=" d-md-flex show-col-6-flex px-0">
-                                                <div class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
+                                                <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/offers.html#credit-card" class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
                                                     <div class="d-flex w-100 justify-content-between">
                                                         <img src="img/icon1.svg" alt="" class="mb-2 mt-1">
                                                         <div class="yellow-count-numb">
@@ -4364,9 +4376,9 @@
                                                             Cards
                                                         </p>
                                                     </div>
-                                                </div>
+                                                </a>
 
-                                                <div class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
+                                                <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/offers.html#personal-loan" class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
                                                     <div class="d-flex w-100 justify-content-between">
                                                         <img src="img/icon2.svg" alt="" class="mb-2" style="margin-top: 4px;">
                                                         <div class="yellow-count-numb">
@@ -4383,9 +4395,9 @@
                                                             Loan
                                                         </p>
                                                     </div>
-                                                </div>
+                                                </a>
 
-                                                <div class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
+                                                <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/offers.html#business-loan" class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
                                                     <div class="d-flex w-100 justify-content-between">
                                                         <img src="img/icon6.svg" alt="" class="mb-2" style="margin-top: 4px;">
                                                         <div class="yellow-count-numb">
@@ -4402,8 +4414,8 @@
                                                             Loan
                                                         </p>
                                                     </div>
-                                                </div>
-                                                <div class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
+                                                </a>
+                                                <a class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
                                                     <div class="d-flex w-100 justify-content-between">
                                                         <img src="img/icon3.svg" alt="" class="mb-2 greyScale" style="margin-top: 13px;">
                                                         <div class="yellow-count-numb disabled">
@@ -4420,9 +4432,9 @@
                                                             Loan
                                                         </p>
                                                     </div>
-                                                </div>
+                                                </a>
 
-                                                <div class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
+                                                <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/offers.html#financial-products" class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
                                                     <div class="d-flex w-100 justify-content-between">
                                                         <img src="img/icon7.svg" alt="" class="mb-2" style="margin-top: 5px;">
                                                         <div class="yellow-count-numb">
@@ -4440,9 +4452,9 @@
                                                         </p>
                                                     </div>
 
-                                                </div>
+                                                </a>
 
-                                                <div class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
+                                                <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/offers.html#property-loan" class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 mr-md-15 p-1 height-auto flex-1">
                                                     <div class="d-flex w-100 justify-content-between">
                                                         <img src="img/icon4.svg" alt="" class="mb-2" style="margin-top: 7px;">
                                                         <div class="yellow-count-numb">
@@ -4459,8 +4471,8 @@
                                                             Property
                                                         </p>
                                                     </div>
-                                                </div>
-                                                <div class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 p-1 height-auto flex-1">
+                                                </a>
+                                                <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/offers.html#home-loan" class="icon-column-box bg-white rounded-border border-top-1 position-relative rounded-border-1 p-1 height-auto flex-1">
                                                     <div class="d-flex w-100 justify-content-between">
                                                         <img src="img/icon5.svg" alt="" class="mb-2" style="margin-top: 8px;">
                                                         <div class="yellow-count-numb">
@@ -4477,7 +4489,7 @@
                                                             Loan
                                                         </p>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </div>
                                             <a href="https://ajency.github.io/CIBIL-CRO/cibil-dashboard/offers.html" class="button-icon mx-auto mt-2 mt-md-50 mb-1">
                                                 <span>Visit Offers Page</span>
@@ -4486,8 +4498,8 @@
 
 
                                     </div>
-                                    <p class="para-intro-book-70 text-center mt-3 mb-0">
-                                        *Terms & Conditions apply
+                                    <p class="para-intro-book-70 text-center mt-3 m-mb-20">
+                                        <a  class="tnc-link" href="https://www.transunioncibil.com/legal/terms-and-conditions?_ga=2.265425228.253347223.1640763858-1659703442.1628151246&_gac=1.15022532.1638160821.Cj0KCQiA7oyNBhDiARIsADtGRZaDi_hy4RJe4zltnBeDV2AH6HLeyCCxkxVqFgwabIKC4NssoBc5qNQaAlnoEALw_wcB">*Terms & Conditions apply</a>
                                     </p>
                                     <p class="para-intro-book-70 text-center mt-0 mb-md-20">
                                         **Data shown here is for visual for representation purposes only. Your actual data and score would be subject to your profile information.
@@ -4624,6 +4636,8 @@
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 6000,
                 arrows: false,
                 dots: true
             });

@@ -2490,6 +2490,7 @@ footer{
 	background: #fafafa;
 	border-radius: 4px;
 	padding: 16px;
+	text-decoration: none;
 }
 
 @media screen and (max-width: 992px) {
@@ -2549,6 +2550,7 @@ footer{
 	.main-dashboard .show-col-6-flex .icon-column-box {
 		position: relative;
 		height: 128px;
+		width: 150px;
 	}
 	.main-dashboard .show-col-6-flex .icon-column-box .text {
 		height: 48px;
@@ -5049,6 +5051,7 @@ select {
 	height: 20px;
 	width: 20px;
 	font-size: 14px;
+	color: #2c2c2c;
 	@media screen and (min-width: 992px) {
 		height: 30px;
 		width: 30px;
@@ -5635,4 +5638,9 @@ input[type=number] {
 		height: 100%;
 		overflow-y: scroll;
 	}
+}
+
+.tnc-link{
+    color: inherit;
+    text-decoration: none;
 }
