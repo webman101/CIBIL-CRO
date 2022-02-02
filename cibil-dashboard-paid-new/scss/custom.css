@@ -104,6 +104,10 @@ h6 {
   color: #2c2c2c;
 }
 
+.bd-f9 {
+  background: #f9f9f9;
+}
+
 .para-intro-regular-2c {
   font-family: "Intro", Regular;
   font-size: 16px;
@@ -6844,5 +6848,47 @@ main section.credit-history .chart-history dl::-webkit-scrollbar-thumb {
 
 .tnc-link {
   color: inherit;
+}
+
+.report-print .print-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.report-print .para {
+  color: #707070;
+}
+
+.report-print .title {
+  font-weight: 600;
+}
+
+.report-print .print-section {
+  padding: 30px 0 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.report-print .title-blue {
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #00a6ca;
+  font-weight: 600;
+}
+
+.report-print .red-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  border: 1px solid #D74025;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.report-print .border-right-1 {
+  border-right: 1px solid #ddd;
 }
 /*# sourceMappingURL=custom.css.map */
