@@ -91,6 +91,8 @@ h6 {
 	margin-bottom: 10px !important;
 }
 
+
+
 .ml-10 {
 	margin-left: 10px !important;
 }
@@ -131,6 +133,8 @@ h6 {
 	padding-right: 20px !important;
 }
 
+
+
 .mt-30 {
 	margin-top: 30px !important;
 }
@@ -151,6 +155,7 @@ h6 {
 	margin-left: 30px !important;
 }
 
+
 .mr-30 {
 	margin-right: 30px !important;
 }
@@ -158,6 +163,12 @@ h6 {
 .pl-40 {
 	padding-left: 40px !important;
 }
+
+.pl-6{
+	padding-left: 6px !important;
+}
+
+
 
 @media screen and (min-width: 992px) {
 	.pr-60 {
@@ -347,6 +358,46 @@ input:disabled {
 	top: 20px;
 	left: 50px;
 }
+
+.btn-square-md {
+	width: 100% !important;
+    height: 30px !important;
+	max-width: 100% !important;
+	max-height: 100% !important;
+	padding: 0px;
+	background-color: #EDEDED;
+	line-height: 100%;
+	position: relative;
+	display: grid;
+	place-content: center;
+	}
+
+.dot {
+	height: 53px;
+	width: 53px;
+   background: #EDEDED;
+  
+	line-height: 100%;
+	position: relative;
+	display: grid;
+	place-content: center;
+}
+
+.circle-yellow{
+	width: 182px;
+	height: 182px;
+	background: #FCD800;
+	line-height: 100%;
+	position: relative;
+	display: grid;
+	place-content: center;
+	p{
+font-size: 16px;
+
+color: #2C2C2C;
+	}
+  }
+  
 
 .dashboard {
 	position: relative;
@@ -1394,6 +1445,8 @@ input.orange-button {
 	padding-left: 8px !important;
 }
 
+
+
 @media screen and (min-width: 992px) {
 	.mb-md-0 {
 		margin-bottom: 0 !important;
@@ -1616,6 +1669,8 @@ footer{
 			padding-left: 0;
 			justify-content: space-around !important;
 		}
+
+		
 	}
 }
 
@@ -1716,6 +1771,17 @@ footer{
 }
 
 .alerts-text-block h3 {
+	font-family: "Intro", Bold;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	/* or 125% */
+	letter-spacing: 0.02em;
+	color: #2c2c2c;
+	margin-bottom: 30px;
+}
+
+.h3-block h3{
 	font-family: "Intro", Bold;
 	font-weight: bold;
 	font-size: 24px;
@@ -4300,6 +4366,7 @@ select {
 	background-position-y: center;
 }
 
+
 .numb {
 	width: 34px;
 	height: 34px;
@@ -4584,6 +4651,8 @@ select {
 	.mt-sm-20 {
 		margin-top: 20px;
 	}
+
+	
 	.ps-md-0 {
 		padding-left: 0;
 	}
