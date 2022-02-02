@@ -177,6 +177,13 @@ h6 {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  .tooltips > img {
+    height: 22px;
+    width: 22px;
+  }
+}
+
 .tooltips:hover .tootltip-content, .tooltips:hover::after {
   display: block;
 }
@@ -225,6 +232,7 @@ h6 {
   max-height: 500px;
   overflow-y: scroll;
   cursor: default;
+  color: #000000b3;
   /* width */
 }
 
@@ -239,6 +247,15 @@ h6 {
 
 .tooltips .tootltip-content::-webkit-scrollbar-thumb {
   background: #ACACAC;
+}
+
+.tooltips .tootltip-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tooltips .tootltip-content ul li {
+  list-style-type: disc;
 }
 
 @media (max-width: 767px) {
@@ -721,6 +738,7 @@ input:disabled {
   border: 1px solid #f16e00;
   box-sizing: border-box;
   border-radius: 25px;
+  text-transform: uppercase;
 }
 
 .blue-title {
@@ -2178,6 +2196,7 @@ footer > p {
           box-sizing: border-box;
   border-radius: 25px;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .main-dashboard .button-icon img {
@@ -2481,8 +2500,32 @@ footer > p {
   }
 }
 
+@media (max-width: 767px) {
+  .main-dashboard .multiple-items-slider .slick-list {
+    padding: 0 6% !important;
+  }
+}
+
+.main-dashboard .multiple-items-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main-dashboard .multiple-items-slider .slick-slide {
   padding: 20px;
+  height: inherit;
+}
+
+@media (max-width: 767px) {
+  .main-dashboard .multiple-items-slider .slick-slide {
+    margin: 0 !important;
+    padding: 0;
+  }
+  .main-dashboard .multiple-items-slider .slick-slide:not(.slick-current) {
+    -webkit-transform: scale(0.94);
+            transform: scale(0.94);
+  }
 }
 
 .main-dashboard .multiple-items-slider .slider-item {
@@ -2492,6 +2535,16 @@ footer > p {
   border-radius: 8px;
   padding: 30px;
   width: 100%;
+  height: 100%;
+  padding-bottom: 55px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .main-dashboard .multiple-items-slider .slider-item {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .main-dashboard .multiple-items-slider .slider-item h6 {
@@ -2520,6 +2573,14 @@ footer > p {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #ffffff;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.main-dashboard .multiple-items-slider .slider-item img {
+  height: 40px;
+  width: 40px;
 }
 
 .main-dashboard .alerts {

@@ -325,7 +325,7 @@ function buildHistoryChart(e) {
                 ae.node.setAttribute("class", "inner data" + i), re.push(ne, ae), (re.tui_dataset = "data" + i);
                 var ie = "<dl class='data" + i + "' style='top:" + (f[i] + 15) + "px;left:" + (V - 80) + "px'>";
                 for (j = 0; j < h[i].length; j++)
-                    (ie += "<div class='graphdata'><dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd>" : 1 === h[i][j].score ? "<dd>NH</dd>" : "<dd>" + h[i][j].score + "</dd> </div>");
+                    (console.log("hj",h[i][j])),(ie += "<div class='graphdata "+ (j == 0 ? (i == 0 ? "score-increment" : "score-decrement" ) : h[i][j].score > h[i][j-1].score ? "score-increment" : h[i][j].score == h[i][j-1].score ? "score-same" : "score-decrement") +"'><dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd></div>" : 1 === h[i][j].score ? "<dd>NH</dd></div>" : "<dd>" + h[i][j].score + "</dd> </div>");
                 (ie += "</dl>"), $("#chart-history svg").after(ie);
             }
     }
@@ -16467,4 +16467,26 @@ if (
 var offer_Id = "";
 $('.x-axis-label').hide();
 
-
+$(document).ready(function() {
+    setTimeout(function(){
+        $("circle.inner").click(function(){
+            $(this).siblings().removeAttr("big")
+            $(this).attr("big","true")
+            $(this).prev().attr("big","true")
+        });
+        $("circle.outer").click(function(){
+            $(this).siblings().removeAttr("big")
+            $(this).attr("big","true")
+            $(this).next().attr("big","true")
+        });
+        $('circle.inner.data5').click()
+        $('main section.credit-history .chart-history text.x-axis-label').each(function(){
+            let top = $(this).attr('y') - 30;
+            $(this).attr('y', top)
+        })
+        $('main section.credit-history .chart-history text.y-axis-label').each(function(){
+            let right = parseInt($(this).attr('x')) + 10;
+            $(this).attr('x', right)
+        })
+    },100)
+})
