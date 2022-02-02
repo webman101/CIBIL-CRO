@@ -531,43 +531,43 @@
 
                                     <div class="largetabs d-none d-md-block mt-2">
                                         <ul id="largetabs-nav">
-                                            <li class="">
+                                            <li data-tab="credit-card" class="">
                                                 <a href="#tab1">
                                                     <div class="numb checkedValue">4</div>
                                                     <p>Credit <br> Card</p>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li data-tab="personal-loan">
                                                 <a href="#tab2">
                                                     <div class="numb">5</div>
                                                     <p class="text-color-70">Personal <br> Loan</p>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li data-tab="business-loan">
                                                 <a href="#tab3">
                                                     <div class="numb">3</div>
                                                     <p class="text-color-70">Business <br> Loan</p>
                                                 </a>
                                             </li>
-                                            <li class="disabled">
+                                            <li data-tab="home-loan" class="disabled">
                                                 <a href="#tab1">
                                                     <div class="numb">0</div>
                                                     <p>Home <br> Loan</p>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li data-tab="property-loan">
                                                 <a href="#tab2">
                                                     <div class="numb">5</div>
                                                     <p class="text-color-70">Loan Against <br> Property</p>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li data-tab="auto-loan">
                                                 <a href="#tab3">
                                                     <div class="numb">3</div>
                                                     <p class="text-color-70">Auto <br> Loan</p>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li data-tab="financial-products">
                                                 <a href="#tab1">
                                                     <div class="numb">4</div>
                                                     <p class="text-color-70">Financial <br> Products</p>
@@ -1659,13 +1659,13 @@
 
                                             <div class="dropdown-container">
                                                 <select name="" id="mobile-tab-selector" class="dd-button bg-white text-black">
-                                                    <option value="box1">Credit Card (4)</option>
-                                                    <option value="box2">Personal Loan (5)</option>
-                                                    <option value="box3">Business Loan (3)</option>
-                                                    <option value="" disabled>Home Loan (0)</option>
-                                                    <option value="box2">Loan Against Property (5)</option>
-                                                    <option value="box3">Auto Loan (3)</option>
-                                                    <option value="box1">Financial Products (4)</option>
+                                                    <option select-tab="credit-card" value="box1">Credit Card (4)</option>
+                                                    <option select-tab="personal-loan" value="box2">Personal Loan (5)</option>
+                                                    <option select-tab="business-loan" value="box3">Business Loan (3)</option>
+                                                    <option select-tab="home-loan" value="" disabled>Home Loan (0)</option>
+                                                    <option select-tab="property-loan" value="box2">Loan Against Property (5)</option>
+                                                    <option select-tab="auto-loan" value="box3">Auto Loan (3)</option>
+                                                    <option select-tab="financial-products" value="box1">Financial Products (4)</option>
                                                 </select>
                                             </div>
                                            
@@ -2691,6 +2691,24 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event){
+        if(window.location.hash) {
+            let hasTab = window.location.hash;
+            hasTab = hasTab.replace("#","")
+            setTimeout(function(){
+                $('[data-tab='+hasTab+']').click();
+                $('#mobile-tab-selector option[select-tab='+hasTab+']').prop("selected",true)
+                $('#mobile-tab-selector').change()
+                $('html, body').animate({
+                    scrollTop: $(window).width() > 767 ? $("#largetabs-nav").offset().top : $("#mobile-tab-selector").offset().top
+                }, 500);
+            },500)
+        }
+    },false);
+    </script>
+
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/slick.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>

@@ -328,7 +328,7 @@ function buildHistoryChart(e) {
                 //     (console.log("hj",h[i][j])),(ie += "<div class='graphdata "+ (j == 0 ? (i == 0 ? "score-increment" : "score-decrement" ) : h[i][j].score > h[i][j-1].score ? "score-increment" : h[i][j].score == h[i][j-1].score ? "score-same" : "score-decrement") +"'><dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd></div>" : 1 === h[i][j].score ? "<dd>NH</dd></div>" : "<dd>" + h[i][j].score + "</dd> </div>");
                 // (ie += "</dl>"), $("#chart-history svg").after(ie);
                 for (j = h[i].length-1 ; j >= 0 ; j--)
-                    (console.log("hj",h[i][j])),(ie += "<div class='graphdata "+ (j == 0 ? (i == 0 ? "score-increment" : "score-decrement" ) : h[i][j].score > h[i][j-1].score ? "score-increment" : h[i][j].score == h[i][j-1].score ? "score-same" : "score-decrement") +"'><dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd></div>" : 1 === h[i][j].score ? "<dd>NH</dd></div>" : "<dd>" + h[i][j].score + "</dd> </div>");
+                    (ie += "<div class='graphdata "+ (j == 0 ? (i == 0 ? "score-increment" : "score-decrement" ) : h[i][j].score > h[i][j-1].score ? "score-increment" : h[i][j].score == h[i][j-1].score ? "score-same" : "score-decrement") +"'><dt class='" + (h[i][j].isHighestScore ? "active" : "") + "'>" + h[i][j].date + "</dt>"), (ie += 0 === h[i][j].score ? "<dd>NA</dd></div>" : 1 === h[i][j].score ? "<dd>NH</dd></div>" : "<dd>" + h[i][j].score + "</dd> </div>");
                 (ie += "</dl>"), $("#chart-history svg").after(ie);
             }
     }
