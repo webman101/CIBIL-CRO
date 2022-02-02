@@ -3486,6 +3486,10 @@ input {
   border-bottom: 1px solid #ddd;
 }
 
+.border-bottom-1-dd {
+  border-bottom: 1px solid #ddd;
+}
+
 .report-page #reporttabs {
   padding-top: 20px;
   position: relative;
@@ -6850,6 +6854,10 @@ main section.credit-history .chart-history dl::-webkit-scrollbar-thumb {
   color: inherit;
 }
 
+.report-print {
+  color: #2c2c2c;
+}
+
 .report-print .print-header {
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
@@ -6890,5 +6898,62 @@ main section.credit-history .chart-history dl::-webkit-scrollbar-thumb {
 
 .report-print .border-right-1 {
   border-right: 1px solid #ddd;
+}
+
+.report-print .accTabContent {
+  padding: 0 10px;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.report-print .standard-box {
+  padding: 20px;
+  padding-bottom: 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 10px 0;
+}
+
+.report-print .standard-box .key-value {
+  margin-right: 30px;
+  font-family: Intro Regular;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2c2c2c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.report-print .standard-box .key-value .key {
+  font-weight: 600;
+}
+
+.report-print .standard-box .key-value .value {
+  margin-left: 5px;
+}
+
+.report-print .historyTab {
+  padding: 40px 10px 0;
+}
+
+.report-print .historyTab .payHistContent {
+  width: 32%;
+  background: #ededed;
+}
+
+.report-print .historyTab .payHistContent > div {
+  padding: 10px 0;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c2c2c;
 }
 /*# sourceMappingURL=custom.css.map */
