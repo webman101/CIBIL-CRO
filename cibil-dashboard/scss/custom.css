@@ -6320,20 +6320,20 @@ input[type=number] {
 @media (max-width: 767px) {
   .repayment-box {
     width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .repayment-box .r-box-item, .repayment-box .r-box-head {
-    max-width: 400px;
-    text-align: center;
-  }
-  .repayment-box .r-box-item .content, .repayment-box .r-box-head .content {
-    text-align: left;
   }
   .repayment-box:last-of-type {
     border-top: 1px solid #DDDDDD;
     background-color: #f6f7fc;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .repayment-box:last-of-type .r-box-item, .repayment-box:last-of-type .r-box-head {
+    max-width: 400px;
+    text-align: center;
+  }
+  .repayment-box:last-of-type .r-box-item .content, .repayment-box:last-of-type .r-box-head .content {
+    text-align: left;
   }
 }
 
