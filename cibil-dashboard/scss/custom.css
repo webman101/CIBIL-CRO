@@ -6132,7 +6132,6 @@ input[type=number] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1005px;
 }
 
 .box-item-container .box-card {
@@ -6204,6 +6203,19 @@ input[type=number] {
   }
 }
 
+@media (min-width: 1300px) {
+  .box-item-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+  .box-item-container .box-card {
+    width: 100%;
+  }
+}
+
 @media (max-width: 992px) {
   .education-tabs li.active {
     border-top-color: #00a6ca;
@@ -6222,6 +6234,10 @@ input[type=number] {
   .m-mb-0 {
     margin-bottom: 0;
   }
+  .m-br-0 {
+    border-radius: 0 !important;
+    border: 0 !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -6232,5 +6248,158 @@ input[type=number] {
     padding-left: 60px;
     padding-right: 60px;
   }
+}
+
+.col-2-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 30px 0;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .col-2-wrap {
+    margin: 0;
+  }
+}
+
+.repayment-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 48%;
+  padding: 30px;
+  background: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.repayment-box .r-box-head {
+  font-size: 24px;
+  line-height: 30px;
+  color: #2C2C2C;
+  font-weight: 600;
+}
+
+.repayment-box .r-box-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.repayment-box .r-box-item .img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  margin-right: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .repayment-box {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .repayment-box .r-box-item, .repayment-box .r-box-head {
+    max-width: 400px;
+    text-align: center;
+  }
+  .repayment-box .r-box-item .content, .repayment-box .r-box-head .content {
+    text-align: left;
+  }
+  .repayment-box:last-of-type {
+    border-top: 1px solid #DDDDDD;
+    background-color: #f6f7fc;
+  }
+}
+
+.warning-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  margin: 0 -16px 20px !important;
+  background: #FFF7C9;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.warning-content img {
+  margin: 5px 10px 0 0 !important;
+}
+
+.warning-content span {
+  font-size: 14px;
+}
+
+@media (min-width: 992px) {
+  .warning-content {
+    margin: 0 -23px 20px !important;
+  }
+}
+
+.rp-slider .slick-dots {
+  padding: 20px 0 0;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .rp-slider .slick-slide.slick-active {
+    position: relative;
+  }
+  .rp-slider .slick-slide.slick-active::after, .rp-slider .slick-slide.slick-active::before {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.7;
+    top: 0;
+  }
+  .rp-slider .slick-slide.slick-active::after {
+    left: 101%;
+  }
+  .rp-slider .slick-slide.slick-active::before {
+    right: 101%;
+  }
+}
+
+.rp-text-section {
+  display: block;
+  padding: 30px;
+  margin: 30px 0 10px;
+  background: #FFFFFF;
+  border: 1px solid #DDE0EF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #707070;
 }
 /*# sourceMappingURL=custom.css.map */
