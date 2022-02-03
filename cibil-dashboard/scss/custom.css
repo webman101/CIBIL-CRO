@@ -6311,6 +6311,7 @@ input[type=number] {
   display: -ms-flexbox;
   display: flex;
   width: 40px;
+  min-width: 40px;
   margin-right: 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
