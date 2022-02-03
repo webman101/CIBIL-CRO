@@ -6402,4 +6402,116 @@ input[type=number] {
   line-height: 24px;
   color: #707070;
 }
+
+.rp-text-section > p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .rp-text-section {
+    margin: 20px;
+  }
+  .rp-text-section > p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.repayment-modal .close {
+  top: 20px;
+  right: 20px;
+}
+
+.repayment-modal .modal-items-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  margin-bottom: 10px;
+}
+
+.repayment-modal .modal-items-wrap .modal-item {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.repayment-modal .modal-items-wrap .modal-item p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.repayment-modal .modal-items-wrap .modal-item p img {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .repayment-modal .modal-items-wrap .modal-item {
+    width: 100%;
+  }
+}
+
+.repayment-modal .modal-sub-head {
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.thank-you-modal .modal-dialog {
+  max-width: 840px;
+  height: 71vh;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.thank-you-modal .popBody {
+  padding: 60px 45px;
+}
+
+.thank-you-modal .popBody .thankyou-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  max-width: 420px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.thank-you-modal .popBody .thankyou-content h4 {
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #2C2C2C;
+  margin: 40px 0 20px;
+  font-weight: 600;
+}
+
+.thank-you-modal .popBody .thankyou-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #707070;
+  font-weight: 600;
+}
 /*# sourceMappingURL=custom.css.map */
