@@ -481,6 +481,7 @@ color: #2C2C2C;
 .navigation-tabs > a.navigation-active-tab {
 	font-family: "Intro", Regular;
 	color: #2c2c2c;
+	font-weight: 600;
 }
 
 .navigation-tabs img {
@@ -503,6 +504,7 @@ color: #2C2C2C;
 	line-height: 50px;
 	color: #2c2c2c;
 	margin-left: 16px;
+	font-weight: 600;
 }
 
 .common-type-tabs-section {
@@ -1439,6 +1441,17 @@ input.orange-button {
 .password-active.active .password-tab {
 	background-repeat: no-repeat;
 	background-image: url(../img/password.svg);
+}
+
+.tab-img{
+	height: 30px;
+	background-repeat: no-repeat;
+	width: 32px;
+	filter: grayscale(1);
+}
+
+.active .tab-img{
+	filter: none;
 }
 
 .mobile-navtabs li {
@@ -5093,7 +5106,7 @@ select {
 
 	
 	.common-type-tabs-section {
-		border-top: 1px solid #ddd;
+		// border-top: 1px solid #ddd;
 		
 		.tab-content {
 			input {
@@ -5642,4 +5655,101 @@ input[type=number] {
 
 .tnc-link{
     color: inherit;
+}
+
+.box-item-container{
+	width: 100%;
+	display: flex;
+	flex-flow: wrap;
+	background: #fff;
+	padding: 30px 20px 10px;
+	justify-content: space-between;
+	max-width: 1005px;
+
+	.box-card {
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		background: #F9F9F9;
+		border: 1px solid #DDDDDD;
+		box-sizing: border-box;
+		border-radius: 4px;
+		width: 32%;
+		margin-bottom: 20px;
+		cursor: pointer;
+		text-decoration: none;
+
+		&.invisible-box{
+			visibility: hidden;
+		}
+
+		.box-img-warp {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		.text-head, .text-sub-head{
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.02em;
+			color: #2C2C2C;
+		}
+
+		.text-head{
+			font-weight: 600;
+		}
+
+		.text-sub-head{
+			margin-top: 10px;
+		}
+
+		@media (max-width:767px){
+			width: 48%;
+
+			.text-head{
+				max-width: 68%;
+				font-size: 14px;
+			}
+
+			.text-sub-head{
+				display: none;
+			}
+
+			&.invisible-box{
+				display: none;
+			}
+		}	
+	}
+}
+
+@media (max-width: 992px){
+	.education-tabs li.active {
+		border-top-color: #00a6ca;
+	}
+	.education-tabs li{
+		padding-bottom: 20px;
+
+		.image{
+			display: none;
+		}
+		p{
+			align-items: flex-start !important;
+		}
+	}
+	.m-mb-0{
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width:992px){
+	.pb-d-50{
+		padding-bottom: 50px;
+	}
+	.px-d-60{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
 }
