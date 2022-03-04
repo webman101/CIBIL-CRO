@@ -8,6 +8,14 @@
     line-height: 24px;
     letter-spacing: 0.02em;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    height: auto;
+}
+
 a{
     cursor: pointer;
     &:focus, &:active, &:focus{

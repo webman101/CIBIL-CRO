@@ -1,5 +1,10 @@
 
 $(document).ready(function () {
+    
+    function closeNav(){
+        $('.hamburger-slide-js').removeClass('active');
+        $('header .overlay').removeClass('visible');
+    }
 
     $('.hamburger').click(function() {
         $('.hamburger-slide-js').toggleClass('active');
@@ -7,8 +12,11 @@ $(document).ready(function () {
     })
 
     $( window ).resize(function() {
-        $('.hamburger-slide-js').removeClass('active');
-        $('header .overlay').removeClass('visible');
+        closeNav();
+    })
+
+    $('header .overlay, .list-link, .header-nav .primary-btn').click(function(){
+        closeNav();
     })
 
     $('.article-slider-js').slick({
