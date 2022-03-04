@@ -1,0 +1,122 @@
+.articles-section{
+    padding: 40px 0;
+    background: $background-section;
+    
+    .section-para{
+        color: $black;
+        margin-bottom: 19px;
+    }
+
+    .article-slider{
+        display: flex;
+        .artilce-card{
+            margin-right: 20px;
+            background: $white;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            max-width: 280px;
+            position: relative;
+            overflow: hidden;
+            height: inherit;
+            .article-wrap{
+                
+                .article-image{
+                    width: 100%;
+                    height: 173px;
+                    object-fit: cover;
+                }
+
+                .article-content{
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .article-title{
+                        font-family: 'Intro', Regular;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 23px;
+                        color: $black;
+                        min-height: 69px;
+                        margin-bottom: 15px;
+                    }
+                    .article-date{
+                        font-family: 'Intro', Regular;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: $accent-black;
+                        margin-bottom: 80px;
+                    }
+
+                    .btn-float{
+                        position: absolute;
+                        bottom: 20px;
+                        left: 20px;
+                    }
+                }
+            }
+        }
+
+        .slick-track{
+            display: flex;
+        }
+        .slick-list{
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                right: -5px;
+                top: 0;
+                height: 100%;
+                width: 12%;
+                background: linear-gradient(270deg, #F6F7FC 13.33%, rgba(246, 247, 252, 0) 100%);
+            }
+        }
+    }
+
+    @media(max-width:992px){
+        padding: 30px 0;
+
+        .section-para{
+            margin-bottom: 20px;
+        }
+
+        .section-heading{
+            font-size: 36px;
+            line-height: 40px;
+        }
+
+        .article-slider{
+            .artilce-card{
+                margin-right: 15px;
+                .article-wrap{   
+                    .article-content{    
+                        .article-title{
+                            font-size: 16px;
+                            line-height: 24px;
+                            min-height: 72px;
+                            margin-bottom: 20px;
+                        }
+                        .article-date{
+                            margin-bottom: 70px;
+                        }
+                    }
+                }
+            }
+    
+            .slick-track{
+                display: flex;
+            }
+            .slick-list{
+                padding-left: 0 !important;
+                &::after{
+                    width: 16%;
+                }
+            }
+        }
+    }
+}

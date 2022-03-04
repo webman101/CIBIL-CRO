@@ -11,9 +11,9 @@ $(document).ready(function () {
         $('header .overlay').removeClass('visible');
     })
 
-    $('#clients-slick').slick({
-        infinite: true,
-        slidesToShow: 3,
+    $('.article-slider-js').slick({
+        infinite: false,
+        slidesToShow: 2,
         slidesToScroll: 1,
         arrows: false,
         dots: false,

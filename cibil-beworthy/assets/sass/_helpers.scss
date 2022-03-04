@@ -48,6 +48,40 @@ a{
 .main{
     min-height: 70vh;
 }
+.section-heading{
+    font-family: 'Intro', Bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.01em;
+    color: $accent-black;
+    margin-bottom: 20px;
+}
+
+@media(max-width:992px){
+    .section-para{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+}
+
+.link-btn{
+    font-family: 'Intro', Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: $black;
+    text-transform: capitalize;
+
+    &:hover{
+        color: $secondary-orange;
+    }
+}
 
 @mixin footerFont {
     font-size: 14px;
