@@ -1,0 +1,165 @@
+header{
+    width: 100%;
+    padding: 20px 0px 25px;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+
+    .overlay {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(32, 32, 32, 0.82);
+        backdrop-filter: blur(4px);
+        z-index: -1;
+        transition: 0.5s;
+        opacity: 0;
+        display: none;
+
+        &.visible{
+            display: block;
+            opacity: 1;
+        }
+    }
+
+    .header-wrap{
+        display: flex;
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 30px;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        background: #fff;
+
+        .header-icon{
+            a{
+                display: inline-block;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: -30px;
+                    width: 2px;
+                    height: 100%;
+                    border-right: 2px solid $border-color;
+                }
+            }
+            .logo-img{
+                width: 112px;
+                height: auto;
+            }
+            .beWorthy{
+                font-size: 24px;
+                line-height: 30px;
+                color: $primary-blue;
+                padding-left: 15px;
+                margin-left: 27px;
+                vertical-align: middle;
+                // border-left: 2px solid $border-color;
+                font-weight: 700;
+            }
+        }
+
+        .header-nav{
+            display: flex;
+            justify-content: space-between;
+            .nav-list{
+                margin: 0;
+                display: flex;
+                align-items: center;
+                .list{
+                    margin: 0;
+                    margin-right: 35px;
+                        .list-link{
+                            font-family: "Intro", Regular;
+                            font-size: 18px;
+                            line-height: 30px;
+                            letter-spacing: 0.01em;
+                            color: $accent-black;
+                            font-weight: 600;
+                        }
+                }
+            }
+            .primary-btn{
+                @media (min-width: 1025px){
+                    margin-left: 25px;
+                }
+            }
+        }
+
+        .hamburger{
+            cursor: pointer;
+        }
+        
+    }
+
+
+    @media(max-width:992px){
+        padding: 0;
+        .header-wrap{
+            padding: 10px 20px;
+            .header-icon{
+                a{
+                    display: inline-block;
+                    position: relative;
+                    &::after {
+                        right: -14px;
+                        border-right: 1px solid $border-color-light;
+                    }
+                }
+                .logo-img{
+                    width: 73px;
+                    height: auto;
+                }
+                .beWorthy{
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: $primary-blue;
+                    padding-left: 10px;
+                    margin-left: 10px;
+                }
+            }
+    
+            .header-nav{
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                opacity: 0;
+                bottom: 0;
+                left: 0;
+                transform: translateY(-200%);
+                border-top: 1px solid $border-color-light;
+                padding: 0 20px 20px;
+                background: $white;
+                transition: 0.5s;
+                z-index: -1;
+                &.active{
+                    opacity: 1;
+                    transform: translateY(calc(100%));
+                }
+                .nav-list{
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .list{
+                        padding: 15px 0;
+                        margin: 0;
+                        margin-right: 0;
+                        width: 100%;
+    
+                        &:not(:last-child){
+                            border-bottom: 1px solid $border-color-light;
+                        }
+                    }
+                }
+                .primary-btn{
+                    max-width: 370px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
