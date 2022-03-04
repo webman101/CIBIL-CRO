@@ -15,8 +15,9 @@ $(document).ready(function () {
         infinite: false,
         slidesToShow: 2,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         dots: false,
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -28,11 +29,19 @@ $(document).ready(function () {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    centerMode: true,
-                    centerPadding: '50px',
+                    // centerMode: true,
+                    // centerPadding: '50px',
                 }
             }
         ]
+    })
+
+    $('#article-left').click(function(){
+        $('.article-slider-js').slick('slickPrev')
+    })
+
+    $('#article-right').click(function(){
+        $('.article-slider-js').slick('slickNext')
     })
 
     $('#process-slick').slick({

@@ -2,6 +2,10 @@
     padding: 40px 0;
     background: $background-section;
     
+    .section-heading{
+        margin-top: 36px;
+    }
+
     .section-para{
         color: $black;
         margin-bottom: 19px;
@@ -76,10 +80,55 @@
                 background: linear-gradient(270deg, #F6F7FC 13.33%, rgba(246, 247, 252, 0) 100%);
             }
         }
+
+        .slick-arrow{
+            display: none !important;
+        }
+    }
+
+    .slider-btn-wrap{
+        display: flex;
+        margin-top: 30px;
+        .slider-btn{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color:#707070;
+            border: 1.6px solid $secondary-orange;
+            box-sizing: border-box;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            &::after{
+                font-family: 'fontAwesome';
+                font-size: 25px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%)
+            }
+        }
+        #article-left{
+            margin-right: 20px;
+            &::after{
+                content: '\f104';
+                left: calc(50% - 1px)
+            }
+        }
+        #article-right{
+            &::after{
+                content: '\f105';
+                left: calc(50% + 1px)
+            }
+        }
+        @media(max-width: 992px){
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
     }
 
     @media(max-width:992px){
-        padding: 30px 0;
+        padding: 30px 5px;
 
         .section-para{
             margin-bottom: 20px;
@@ -88,6 +137,7 @@
         .section-heading{
             font-size: 36px;
             line-height: 40px;
+            margin-top: 0;
         }
 
         .article-slider{
