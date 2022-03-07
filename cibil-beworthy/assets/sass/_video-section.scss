@@ -26,7 +26,7 @@
                 z-index: 2;
             }
 
-            .video-thumb{
+            .video-thumb, iframe{
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -58,6 +58,133 @@
                     font-size: 48px;
                     line-height: 48px;
                     color: #F6F7FC;
+                }
+            }
+
+            &.play-video{
+                &::before, .video-thumb, .video-description{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .video-list-warp{
+        position: relative;
+        height: 100%;
+
+        .video-list-container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 20px;
+                margin-left: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $border-color-light;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #707070;
+            }
+
+            .video-list-item{
+                display: flex;
+                cursor: pointer;
+                position: relative;
+                border-radius: 4px;
+                overflow: hidden;
+                margin-bottom: 10px;
+                margin-right: 10px;
+
+                &::after{
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    left: 25px;
+                    top: 25px;
+                    background: url(../img/play-btn.png);
+                    background-size: contain;
+                    z-index: 2;
+                }
+
+                .item-img{
+                    width: 80px;
+                    height: 80px;
+                    object-fit: cover;
+                    position: relative;
+                }
+                .item-title{
+                    font-family: 'Intro', Book;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    color: $accent-black;
+                    padding: 16px 20px;
+                    margin: 0;
+                    width: 100%;
+                }
+                &.active{
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(21, 166, 215, 0.6);
+                        z-index: 1;
+                    }
+                    &::after{
+                        background: url(../img/play-btn-blue.png);
+                    }
+                    .item-title{
+                        font-family: 'Intro', Bold;
+                        font-weight: 700;
+                        color: $white;
+                        background: $primary-blue;
+                        z-index: 2;
+                    } 
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px){
+        .video-list-warp{
+            height: 290px;
+            margin-top: 10px;
+            .video-list-container{
+                &::-webkit-scrollbar-track {
+                    background: $primary-blue;
+                }
+    
+                &::-webkit-scrollbar-thumb {
+                    background: #006685;
+                }
+
+                .video-list-item{
+                    .item-title{
+                        font-family: 'Intro', Regular;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                    &.active{
+                        background: $primary-blue;
+                        .item-title{
+                            font-family: 'Intro', Regular;
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                    }
                 }
             }
         }
