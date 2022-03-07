@@ -24,6 +24,11 @@
                 overflow: hidden;
 
                 .quiz-card{
+                    background: url(../img/cardBg.png);
+                    background-size: contain;
+                    background-position: bottom right;
+                    background-repeat: no-repeat;
+
                     .card-head{
                         padding: 20px;
                         background: $primary-blue;
@@ -59,7 +64,7 @@
                     .card-body{
                         min-height: 360px;
                         padding: 20px;
-                        background: $accent-grey;
+                        // background: $accent-grey;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
