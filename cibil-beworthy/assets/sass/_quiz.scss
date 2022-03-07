@@ -68,6 +68,7 @@
                             display: flex;
                             flex-flow: wrap;
                             justify-content: space-between;
+                            width: 100%;
 
                             .option{
                                 padding: 7px;
@@ -137,8 +138,13 @@
                                 color: $accent-black;
                             }
                         }
-                        .proceed-netx{
+                        .proceed-next{
                             display: inline-block;
+                            &.disabled{
+                                pointer-events: none;
+                                background-color: $border-color-light;
+                                color: #707070;
+                            }
                         }
 
                     }
@@ -308,6 +314,7 @@
                         .card-body{
                             background: #DFF4F9;
                             align-items: center;
+                            min-height: unset;
     
                             .option-list{
                                 display: flex;

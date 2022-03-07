@@ -247,7 +247,39 @@
                                 <img src="./assets/img/start-card.png" alt="Start quiz" class="bgImage">
                                 <a href="" class="primary-btn strat-quiz-btn">Start Quiz</a>
                             </div>
-                            <div class="quiz-card">
+                            <div class="quiz-card" style="display: none;" data-card="1">
+                                <div class="card-head">
+                                    <span class="question-number">Question 1/5</span>
+                                    <p class="question">How many digits are in your CIBIL score?</p>
+                                </div>
+                                <span class="quiz-progress">
+                                    <span class="bar"></span>
+                                </span>
+                                <div class="card-body">
+                                    <div class="option-list">
+                                        <div class="option" data-value='a'>
+                                            <span class="option-number">a</span>
+                                            <span class="option-value">One</span>
+                                        </div>
+                                        <div class="option" data-value='b'>
+                                            <span class="option-number">b</span>
+                                            <span class="option-value">Two</span>
+                                        </div>
+                                        <div class="option" data-value='c'>
+                                            <span class="option-number">c</span>
+                                            <span class="option-value">Three</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-details "style="display: none;">
+                                        <img src="./assets/img/green-i.png" alt="" class="detail-icon">
+                                        <span class="detail-text" >
+                                            Your CIBIL score is a 3-digit number ranging between 300 and 900, which is a summary of a consumer's credit history and a reflection of the person's credit profile.
+                                        </span>
+                                    </div>
+                                    <a href="#" class="primary-btn proceed-next disabled">Proceed to next</a>
+                                </div>
+                            </div>
+                            <div class="quiz-card" style="display: none;" data-card="2">
                                 <div class="card-head">
                                     <span class="question-number">Question 1/5</span>
                                     <p class="question">Which of the following does a CIBIL score mainly indicate?</p>
@@ -257,33 +289,65 @@
                                 </span>
                                 <div class="card-body">
                                     <div class="option-list">
-                                        <div class="option">
+                                        <div class="option" data-value='a'>
                                             <span class="option-number">a</span>
                                             <span class="option-value">Knowledge of consumer credit</span>
                                         </div>
-                                        <div class="option">
+                                        <div class="option" data-value='b'>
                                             <span class="option-number">b</span>
-                                            <span class="option-value">Knowledge of consumer credit</span>
+                                            <span class="option-value">Reduce debt</span>
                                         </div>
-                                        <div class="option">
+                                        <div class="option" data-value='c'>
                                             <span class="option-number">c</span>
-                                            <span class="option-value">Knowledge of consumer credit</span>
+                                            <span class="option-value">Limit credit utilization</span>
                                         </div>
-                                        <div class="option">
+                                        <div class="option" data-value='d'>
                                             <span class="option-number">d</span>
-                                            <span class="option-value">Knowledge of consumer credit</span>
+                                            <span class="option-value">All of the above</span>
                                         </div>
                                     </div>
-                                    <div class="card-details">
+                                    <div class="card-details" style="display: none;">
                                         <img src="./assets/img/green-i.png" alt="" class="detail-icon">
-                                        <span class="detail-text">
+                                        <span class="detail-text" >
                                             Your CIBIL score is calculated on the basis of your past and ongoing credit activities. If someone has never used credit in their lives, they may not have a CIBIL score.
                                         </span>
                                     </div>
-                                    <a href="#" class="primary-btn proceed-netx">Proceed to next</a>
+                                    <a href="#" class="primary-btn proceed-next disabled">Proceed to next</a>
                                 </div>
                             </div>
-                            <div class="result-card">
+                            <div class="quiz-card" style="display: none;" data-card="3">
+                                <div class="card-head">
+                                    <span class="question-number">Question 1/5</span>
+                                    <p class="question">When did credit scores first become available to consumers in India?</p>
+                                </div>
+                                <span class="quiz-progress">
+                                    <span class="bar"></span>
+                                </span>
+                                <div class="card-body">
+                                    <div class="option-list">
+                                        <div class="option" data-value='a'>
+                                            <span class="option-number">a</span>
+                                            <span class="option-value">1996</span>
+                                        </div>
+                                        <div class="option" data-value='b'>
+                                            <span class="option-number">b</span>
+                                            <span class="option-value">2000</span>
+                                        </div>
+                                        <div class="option" data-value='c'>
+                                            <span class="option-number">c</span>
+                                            <span class="option-value">2005</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-details" style="display: none;">
+                                        <img src="./assets/img/green-i.png" alt="" class="detail-icon">
+                                        <span class="detail-text" >
+                                            CIBIL - Credit Information Bureau Limited or CIBIL was founded in the year 2000 and is the first Credit Information Company of India.
+                                        </span>
+                                    </div>
+                                    <a href="#" class="primary-btn proceed-next disabled">Proceed to next</a>
+                                </div>
+                            </div>
+                            <div class="result-card" style="display: none;" id="novice">
                                 <div class="result-card-wrap">
                                     <div class="result-img">
                                         <img src="./assets/img/novice.png" alt="novice " class="medal-img">
@@ -300,6 +364,75 @@
                                     <div class="result-text">
                                         <p class="result-head">Congratulations!</p>
                                         <p class="result-text-regular">It was a good attempt! Taking some time out to learn more about your CIBIL score can help you get on track.</p>
+                                        <p class="result-text-bold">Use the below coupon code to save on CIBIL premium subscription.</p>
+                                        <span class="coupon-code">CIBILSCORE10 </span>
+                                        <a href="" class="primary-btn subscribe-btn">SUBSCRIBE NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result-card" style="display: none;" id="scholar">
+                                <div class="result-card-wrap">
+                                    <div class="result-img">
+                                        <img src="./assets/img/scholar.png" alt="scholar " class="medal-img">
+                                        <div class="share">
+                                            <p>Share this quiz</p>
+                                            <div class="share-icon-list">
+                                                <img src="./assets/img/facebook.png" alt="facebook" class="icon">
+                                                <img src="./assets/img/twitter.png" alt="twitter" class="icon">
+                                                <img src="./assets/img/linkedIn.png" alt="linked In" class="icon">
+                                                <img src="./assets/img/link.png" alt="link" class="icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result-text">
+                                        <p class="result-head">Congratulations!</p>
+                                        <p class="result-text-regular">You’re on the right path, but you can learn more to help boost your knowledge about CIBIL score and related concepts. </p>
+                                        <p class="result-text-bold">Use the below coupon code to save on CIBIL premium subscription.</p>
+                                        <span class="coupon-code">CIBILSCORE10 </span>
+                                        <a href="" class="primary-btn subscribe-btn">SUBSCRIBE NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result-card" style="display: none;" id="rockstar">
+                                <div class="result-card-wrap">
+                                    <div class="result-img">
+                                        <img src="./assets/img/rockstar.png" alt="rockstar " class="medal-img">
+                                        <div class="share">
+                                            <p>Share this quiz</p>
+                                            <div class="share-icon-list">
+                                                <img src="./assets/img/facebook.png" alt="facebook" class="icon">
+                                                <img src="./assets/img/twitter.png" alt="twitter" class="icon">
+                                                <img src="./assets/img/linkedIn.png" alt="linked In" class="icon">
+                                                <img src="./assets/img/link.png" alt="link" class="icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result-text">
+                                        <p class="result-head">Congratulations!</p>
+                                        <p class="result-text-regular">You are on the right track and have most of the information. Now use this knowledge and improve your CIBIL score!</p>
+                                        <p class="result-text-bold">Use the below coupon code to save on CIBIL premium subscription.</p>
+                                        <span class="coupon-code">CIBILSCORE10 </span>
+                                        <a href="" class="primary-btn subscribe-btn">SUBSCRIBE NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result-card" style="display: none;" id="master">
+                                <div class="result-card-wrap">
+                                    <div class="result-img">
+                                        <img src="./assets/img/master.png" alt="rockstar " class="medal-img">
+                                        <div class="share">
+                                            <p>Share this quiz</p>
+                                            <div class="share-icon-list">
+                                                <img src="./assets/img/facebook.png" alt="facebook" class="icon">
+                                                <img src="./assets/img/twitter.png" alt="twitter" class="icon">
+                                                <img src="./assets/img/linkedIn.png" alt="linked In" class="icon">
+                                                <img src="./assets/img/link.png" alt="link" class="icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="result-text">
+                                        <p class="result-head">Congratulations!</p>
+                                        <p class="result-text-regular">You’ve got all the right information. Now put it to work to improve your CIBIL score!</p>
                                         <p class="result-text-bold">Use the below coupon code to save on CIBIL premium subscription.</p>
                                         <span class="coupon-code">CIBILSCORE10 </span>
                                         <a href="" class="primary-btn subscribe-btn">SUBSCRIBE NOW</a>
