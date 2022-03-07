@@ -1,0 +1,376 @@
+.quiz-section{
+    padding: 80px 0;
+
+    .section-heading{
+        margin-top: 20px;
+    }
+    
+    .section-para{
+        color: $black;
+    }
+    .quiz-section-wrap{
+        display: flex;
+
+        .quiz-text{
+            width: 28%
+        }
+        .quiz-container{
+            width: 68%;
+            margin-left: 50px;
+            .quiz-box{
+                // max-width: 770px;
+                // max-height: 487px;
+                border-radius: 8px;
+                overflow: hidden;
+
+                .quiz-card{
+                    .card-head{
+                        padding: 20px;
+                        background: $primary-blue;
+                        .question-number{
+                            font-family: 'Intro', Bold;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 24px;
+                            letter-spacing: 0.02em;
+                            color: $white;
+                            margin-bottom: 4px;
+                        }
+                        .question{
+                            font-family: 'Intro', Regular;
+                            font-weight: 600;
+                            font-size: 24px;
+                            line-height: 30px;
+                            min-height: 60px;
+                            color: $white;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .quiz-progress{
+                        width: 100%;
+                        background: #fff;
+                        .bar{
+                            display: block;
+                            height: 6px;
+                            width: 20%;
+                            background: $secondary-blue;
+                        }
+                    }
+                    .card-body{
+                        min-height: 360px;
+                        padding: 20px;
+                        background: $accent-grey;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+
+                        .option-list{
+                            display: flex;
+                            flex-flow: wrap;
+                            justify-content: space-between;
+
+                            .option{
+                                padding: 7px;
+                                background: $white;
+                                border: 1px solid $border-color-light;
+                                box-sizing: border-box;
+                                border-radius: 4px;
+                                display: flex;
+                                width: calc(50% - 5px);
+                                justify-content: flex-start;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                cursor: pointer;
+
+                                .option-number{
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    color: $accent-black;
+                                    background: #EDEDED;
+                                    padding: 7px 14px 6px;
+                                    border-radius: 50%;
+                                    margin-right: 20px;
+                                }
+                                .option-value{
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    color: $black;
+                                }
+
+                                &.wrong{
+                                    border: 1px solid $red;
+                                    .option-number{
+                                        background: $red;
+                                        color: $white;
+                                    }
+                                }
+
+                                &.correct{
+                                    border: 1px solid $light-green;
+                                    .option-number{
+                                        background: $light-green;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                        .card-details{
+                            border: 1px solid $light-green;
+                            box-sizing: border-box;
+                            border-radius: 4px;
+                            padding: 20px 15px 30px 7px;
+                            display: flex;
+                            width: 100%;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+                            margin-bottom: 20px;
+                            background: $white;
+
+                            .detail-icon{
+                                width: 37px;
+                                height: 37px;
+                                margin-right: 20px;
+                            }
+                            .detail-text{
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: $accent-black;
+                            }
+                        }
+                        .proceed-netx{
+                            display: inline-block;
+                        }
+
+                    }
+                }
+
+                .start-card{
+                    position: relative;
+                    width: 100%;
+                    .bgImage{
+                        width: 100%;
+                        height: auto;
+                    }
+                    .strat-quiz-btn{
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: 10%;
+                        color: $accent-black;
+                        background: $white;
+                        border: 1px solid $secondary-orange;
+                        min-width: 180px;
+                    }
+                }
+
+                .result-card{
+                    padding: 40px 40px 31px;
+                    background: $primary-blue;
+
+                    .result-card-wrap{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+
+                        .result-img{
+                            width: 48%;
+                            max-width: 300px;
+
+                            .medal-img{
+                                width: 100%;
+                                height: auto;
+                                max-width: 300px;
+                                margin-bottom: 20px;
+                            }
+                            .share{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                p{
+                                    font-family: 'Intro', Bold;
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    letter-spacing: 0.02em;
+                                    color: $white;
+                                    margin: 0;
+                                }
+                                .share-icon-list{
+                                    display: flex;
+                                    .icon{
+                                        width: 30px;
+                                        height: 30px;
+                                        object-fit: contain;
+                                        margin-left: 10px;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        .result-text{
+                            width: 50%;
+                            .result-head{
+                                font-family: 'Intro', Bold;
+                                font-weight: 700;
+                                font-size: 32px;
+                                line-height: 44px;
+                                letter-spacing: -0.01em;
+                                color: $white;
+                                margin-bottom: 20px;
+                            }
+                            .result-text-regular{
+                                font-family: 'Intro', Regular;
+                                font-weight: 600;
+                                font-size: 16px;
+                                line-height: 24px;
+                                letter-spacing: 0.02em;
+                                color: $white;
+                                margin-bottom: 20px;
+                            }
+                            .result-text-bold{
+                                font-family: 'Intro', Bold;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 24px;
+                                letter-spacing: 0.02em;
+                                color: $white;
+                                margin-bottom: 30px;
+                            }
+                            .coupon-code{
+                                width: 223px;
+                                height: 50px;
+                                background: url('../img/coupon-code.png');
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center ;
+                                display: grid;
+                                place-content: center;
+                                color: $secondary-orange;
+                                font-family: 'Intro', Bold;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 24px;
+                                letter-spacing: 0.02em;
+                                margin-bottom: 30px;
+                            }
+                            .subscribe-btn{
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:992px){
+        padding: 30px 5px 20px;
+
+        .section-heading{
+            margin-top: 0;
+            line-height: 52px;
+        }
+        .section-para{
+            margin-bottom: 20px;
+        }
+
+        .quiz-text{
+            & > .section-para:last-of-type{
+                display: none;
+            }
+        }
+
+        .quiz-section-wrap{ 
+            flex-flow: wrap;   
+            .quiz-text{
+                width: 100%
+            }
+            .quiz-container{
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width:768px){
+        .quiz-section-wrap{
+            .quiz-container{
+
+                .quiz-box{    
+                    .quiz-card{
+                        .card-head{
+                            padding: 20px 18px;
+                            .question{
+                                min-height: unset;
+                            }
+                        }
+                        .card-body{
+                            background: #DFF4F9;
+                            align-items: center;
+    
+                            .option-list{
+                                display: flex;
+                                flex-flow: wrap;
+                                justify-content: space-between;
+    
+                                .option{
+                                    padding: 7px 10px;
+                                    border: 0;
+                                    width: 100%;
+    
+                                    .option-number{
+                                        margin-right: 15px;
+                                    }
+
+                                    &.wrong{
+                                        border: 2px solid $red;
+                                    }
+    
+                                    &.correct{
+                                        border: 2px solid $light-green;
+                                    }
+                                }
+                            }
+                            .card-details{
+                                border: 2px solid $light-green;
+                                padding: 20px 14px 20px 10px;
+    
+                                .detail-icon{
+                                    margin-right: 17px;
+                                }
+                            }    
+                        }
+                    }
+
+                    .result-card{
+                        padding: 20px;
+                        .result-card-wrap{
+                            flex-flow: wrap;
+    
+                            .result-img{
+                                width: 100%;
+                                margin: 0 auto;
+
+                                .share{
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .result-text{
+                                width: 100%;
+                                text-align: center;
+                                .coupon-code{
+                                    margin: auto;
+                                    margin-bottom: 30px;
+                                }
+                                .subscribe-btn{
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
