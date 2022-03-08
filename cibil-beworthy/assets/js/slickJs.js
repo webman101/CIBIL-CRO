@@ -44,6 +44,29 @@ $(document).ready(function () {
         ]
     })
 
+    // $('.icon-list-js').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     mobileFirst: true,
+    //     arrows: false,
+    //     dots: false,
+    //     infinite: false,
+    //     responsive: [
+    //         {
+    //             breakpoint: 490,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 2
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 991,
+    //             settings: "unslick"
+    //         }
+    //     ]
+    // })
+
     $('#article-left').click(function(){
         $('.article-slider-js').slick('slickPrev')
     })
@@ -108,15 +131,13 @@ $(document).ready(function () {
         e.preventDefault();
         $('.quiz-card').hide()
         if(counterArray == (totalQuestion)){
-            let result = (correctCount/counterArray)*100;
+            // let result = (correctCount/counterArray)*100;
             // console.log('result',result)
-            if(result <= 20){
-                $('#novice').show()
-            }
-            else if(result <= 50){
+            console.log(correctCount)
+            if(correctCount <= 2){
                 $('#scholar').show()
             }
-            else if( result <= 90){
+            else if(correctCount <= 4){
                 $('#rockstar').show()
             }
             else{
