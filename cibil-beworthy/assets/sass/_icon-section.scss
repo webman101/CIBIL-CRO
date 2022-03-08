@@ -9,6 +9,9 @@
         color: $accent-black;
         margin-bottom: 40px;
         text-align: center;
+        br{
+            display: none;
+        }
     }
 
     .icon-list {
@@ -47,6 +50,13 @@
 
     @media (max-width: 991px){
         padding: 40px 0 10px;
+
+        .heading{
+            br{
+                display: block;
+            }
+        }
+
         .icon-list {
             .icon{
                 margin: 0px !important;

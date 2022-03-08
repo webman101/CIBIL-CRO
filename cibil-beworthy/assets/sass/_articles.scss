@@ -99,6 +99,8 @@
             display: block;
             position: relative;
             cursor: pointer;
+            background: $white;
+            
             &::after{
                 font-family: 'fontAwesome';
                 font-size: 25px;

@@ -24,6 +24,10 @@ footer{
                 .link{
                     @include footerFont;
                     text-decoration: underline;
+
+                    &:hover{
+                        color: $secondary-orange;
+                    }
                 }
                 &:not(:last-child){
                     margin-right: 40px;
