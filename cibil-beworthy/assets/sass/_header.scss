@@ -61,6 +61,14 @@ header{
                 vertical-align: middle;
                 // border-left: 2px solid $border-color;
                 font-weight: 700;
+                letter-spacing: 0;
+                b{
+                    color: $black;
+                    font-size: 24px;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    letter-spacing: 0;
+                }
             }
         }
 
@@ -121,6 +129,10 @@ header{
                     color: $primary-blue;
                     padding-left: 10px;
                     margin-left: 10px;
+                    b{
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
                 }
             }
     
@@ -152,6 +164,10 @@ header{
     
                         &:not(:last-child){
                             border-bottom: 1px solid $border-color-light;
+                        }
+
+                        .list-link{
+                            display: block;
                         }
                     }
                 }
