@@ -73,15 +73,22 @@ $(document).ready(function () {
 
     const valueJSON = {
         '1' : 'c',
-        '2' : 'd',
-        '3' : 'b'
+        '2' : 'b',
+        '3' : 'b',
+        '4' : 'a',
+        '5' : 'b',
+        '6' : 'a',
+        '7' : 'b',
+        '8' : 'e'
+
     }
 
     function randomSort(a, b) {  
         return 0.5 - Math.random();
     }
-    var numberArray = [1,2,3];
+    var numberArray = [1,2,3,4,5,6,7,8];
     var randomOrder = numberArray.sort(randomSort);
+    var totalQuestion = 5;
     // console.log(randomOrder)
     var counterArray = 0;
     var correctCount = 0;
@@ -89,9 +96,9 @@ $(document).ready(function () {
     $('.strat-quiz-btn').click(function(e){
         e.preventDefault();
         $('.start-card').hide()
-        let progress = ((counterArray+1)/(numberArray.length))*100;
+        let progress = ((counterArray+1)/(totalQuestion))*100;
         $('.quiz-progress .bar').css('width',progress+'%')
-        let questionText = 'Question '+(counterArray+1)+'/'+numberArray.length;
+        let questionText = 'Question '+(counterArray+1)+'/'+totalQuestion;
         $('[data-card='+randomOrder[counterArray]+'] .question-number').text(questionText)
         $('[data-card='+randomOrder[counterArray]+']').show()
         counterArray = counterArray+1 ;
@@ -100,8 +107,9 @@ $(document).ready(function () {
     $('.proceed-next').click(function(e){
         e.preventDefault();
         $('.quiz-card').hide()
-        if(counterArray == (numberArray.length)){
+        if(counterArray == (totalQuestion)){
             let result = (correctCount/counterArray)*100;
+            // console.log('result',result)
             if(result <= 20){
                 $('#novice').show()
             }
@@ -115,9 +123,9 @@ $(document).ready(function () {
                 $('#master').show()
             }
         }else{
-            let progress = ((counterArray+1)/(numberArray.length))*100;
+            let progress = ((counterArray+1)/(totalQuestion))*100;
             $('.quiz-progress .bar').css('width',progress+'%')
-            let questionText = 'Question '+(counterArray+1)+'/'+numberArray.length;
+            let questionText = 'Question '+(counterArray+1)+'/'+totalQuestion;
             $('[data-card='+randomOrder[counterArray]+'] .question-number').text(questionText)
             $('[data-card='+randomOrder[counterArray]+']').show()
             counterArray = counterArray+1;
