@@ -21,13 +21,14 @@
                 // max-width: 770px;
                 // max-height: 487px;
                 border-radius: 8px;
-                overflow: hidden;
+                // overflow: hidden;
 
                 .quiz-card{
                     background: url(../img/cardBg.png);
                     background-size: contain;
                     background-position: bottom right;
                     background-repeat: no-repeat;
+                    border-radius: 8px;
 
                     .card-head{
                         padding: 20px;
@@ -158,6 +159,7 @@
                 .start-card{
                     position: relative;
                     width: 100%;
+                    border-radius: 8px;
                     .bgImage{
                         width: 100%;
                         height: auto;
@@ -177,6 +179,7 @@
                 .result-card{
                     padding: 40px 40px 31px;
                     background: $primary-blue;
+                    border-radius: 8px;
 
                     .result-card-wrap{
                         display: flex;
@@ -215,6 +218,24 @@
                                         object-fit: contain;
                                         margin-left: 10px;
                                         cursor: pointer;
+                                    }
+                                    .shareLink{
+                                        position: relative;
+
+                                        .copyTooltip{
+                                            position: absolute;
+                                            display: none;
+                                            right: 0;
+                                            top: calc( 100% + 10px);
+                                            font-size: 14px;
+                                            font-weight: 600;
+                                            width: 160px;
+                                            background: #707070d9;
+                                            color: $white;
+                                            padding: 5px 10px;
+                                            border-radius: 8px;
+                                            text-align: center;
+                                        }
                                     }
                                 }
                             }

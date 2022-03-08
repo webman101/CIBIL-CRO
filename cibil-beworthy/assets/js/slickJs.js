@@ -150,4 +150,20 @@ $(document).ready(function () {
         parentCard.find('.card-details').show()
     })
 
+    var urlPath = window.location.href
+    let facebookPath = 'https://www.facebook.com/sharer/sharer.php?u='+urlPath+'%23quiz'
+    let twitterPath = 'https://twitter.com/intent/tweet?text='+urlPath+'%23quiz'
+    let linkedInPath = 'https://www.linkedin.com/shareArticle?mini=true&url='+urlPath+'%23quiz&title=&summary=&source='
+    let clipBoardPath = urlPath+'#quiz'
+    $('.shareLink.facebook').attr('href', facebookPath)
+    $('.shareLink.twitter').attr('href', twitterPath)
+    $('.shareLink.linkedIn').attr('href', linkedInPath)
+
+    $('.shareLink.clipboard').click(function(e){
+        e.preventDefault();
+        navigator.clipboard.writeText(clipBoardPath)
+        $(this).find('.copyTooltip').show()
+        setTimeout(function(){$('.copyTooltip').hide()},1000)
+    })
+
 });
