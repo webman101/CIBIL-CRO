@@ -313,11 +313,11 @@
             margin-bottom: 20px;
         }
 
-        .quiz-text{
-            & > .section-para:last-of-type{
-                display: none;
-            }
-        }
+        // .quiz-text{
+        //     & > .section-para:last-of-type{
+        //         display: none;
+        //     }
+        // }
 
         .quiz-section-wrap{ 
             flex-flow: wrap;   
