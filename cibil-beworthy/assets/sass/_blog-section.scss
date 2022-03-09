@@ -1,0 +1,165 @@
+.blog-section{
+    .blog-header{
+        max-width: 980px;
+        margin: 35px auto 0;
+
+        .blog-featured-img{
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+
+        .blog-title{
+            font-family: 'Intro', Regular;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 50px;
+            color: $black; 
+            margin-bottom: 30px;
+        }
+        .share{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+
+            .date{
+                font-size: 16px;
+                line-height: 1;
+                color: $breadcrumb-items;
+            }
+
+            .share-icon-list{
+                display: flex;
+                .icon{
+                    width: 30px;
+                    height: 30px;
+                    object-fit: contain;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+                .shareLink{
+                    position: relative;
+
+                    .copyTooltip{
+                        position: absolute;
+                        display: none;
+                        right: 0;
+                        top: calc( 100% + 10px);
+                        font-size: 14px;
+                        font-weight: 600;
+                        width: 160px;
+                        background: #707070d9;
+                        color: $white;
+                        padding: 5px 10px;
+                        border-radius: 8px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-content{
+        margin-bottom: 60px;
+        p,b,span,ul,li,ol{
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: $black;
+        }
+        p{
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+
+    .blog-footer{
+        margin-bottom: 100px;
+        .get-report{
+            background: $primary-blue;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+
+            .meter-img{
+                height: 60px;
+                width: auto;
+            }
+            .text{
+                font-family: 'Intro', Regular;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
+                color: $white;
+                max-width: 246px;
+                margin-bottom: 0;
+            }
+        }
+        .disclaimer{
+            font-size: 14px;
+            line-height: 24px;
+            color: $breadcrumb-items;
+            margin-bottom: 0;
+        }
+    }
+
+    @media(max-width: 768px){
+        padding: 0 5px;
+        .blog-header{
+            margin-top: 20px;
+    
+            .blog-featured-img{
+                margin-bottom: 30px;
+            }
+    
+            .blog-title{
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            .share{
+                margin-bottom: 40px;
+            }
+        }
+
+        .blog-content{
+            margin-bottom: 30px;
+        }
+
+        .blog-footer{
+            margin-bottom: 30px;
+            .get-report{
+                padding: 20px;
+                flex-direction: column;
+                margin-bottom: 30px;
+    
+                .meter-img{
+                    height: 120px;
+                    width: auto;
+                    margin-bottom: 40px;
+                }
+                .text{
+                    max-width: 315px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+            }
+            .disclaimer{
+                font-size: 14px;
+                line-height: 24px;
+                color: $breadcrumb-items;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+footer{
+    @media(max-width: 768px){
+        border-top: 1px solid $border-color-light;
+    }
+}

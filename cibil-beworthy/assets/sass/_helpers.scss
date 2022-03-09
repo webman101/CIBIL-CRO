@@ -91,6 +91,11 @@ a{
     }
 }
 
+.max-content{
+    max-width: 780px;
+    margin: auto;
+}
+
 @mixin footerFont {
     font-size: 14px;
     line-height: 24px;

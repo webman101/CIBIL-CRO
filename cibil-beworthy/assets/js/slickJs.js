@@ -172,10 +172,15 @@ $(document).ready(function () {
     })
 
     var urlPath = window.location.href
-    let facebookPath = 'https://www.facebook.com/sharer/sharer.php?u='+urlPath+'%23quiz'
-    let twitterPath = 'https://twitter.com/intent/tweet?text='+urlPath+'%23quiz'
-    let linkedInPath = 'https://www.linkedin.com/shareArticle?mini=true&url='+urlPath+'%23quiz&title=&summary=&source='
-    let clipBoardPath = urlPath+'#quiz'
+    let clipBoardPath = urlPath;
+    if ($('#quiz').length > 0){
+        clipBoardPath = clipBoardPath+'#quiz';
+        urlPath = urlPath+'%23quiz';
+    }
+    let facebookPath = 'https://www.facebook.com/sharer/sharer.php?u='+urlPath;
+    let twitterPath = 'https://twitter.com/intent/tweet?text='+urlPath;
+    let linkedInPath = 'https://www.linkedin.com/shareArticle?mini=true&url='+urlPath+'&title=&summary=&source=';
+    
     $('.shareLink.facebook').attr('href', facebookPath)
     $('.shareLink.twitter').attr('href', twitterPath)
     $('.shareLink.linkedIn').attr('href', linkedInPath)
