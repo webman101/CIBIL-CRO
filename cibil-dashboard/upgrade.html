@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/slick.css">
     <link rel="stylesheet" href="scss/custom.css">
+    <!-- <link rel="stylesheet" href="assets/css/custom.css"> -->
+
 
 </head>
 
@@ -247,13 +249,13 @@
                                                     </div>
                                                     <div class="col-md-6 equal-column mhide pe-0">
                                                         <div class="right-coulumn-section m-hidden">
-                                                            <div class="column-outer active">
+                                                            <div class="column-outer in-active">
                                                                 <div class="column-inner">
-                                                                    <div class="most-popular">
+                                                                    <!-- <div class="most-popular">
                                                                         <div>
                                                                             Most Popular
                                                                         </div>
-                                                                    </div>
+                                                                    </div> -->
                                                                     <div class="" style="height:30px;">
 
                                                                     </div>
@@ -291,7 +293,7 @@
                                                                             @ ₹550/month
                                                                     </span>
                                                                     </div>
-                                                                    <a href="#" class="button">Upgrade Now</a>
+                                                                    <a href="#" class="button button-outline">UPGRADE NOW</a>
 
                                                                 </div>
 
@@ -336,12 +338,17 @@
                                                                     </span>
                                                                     </div>
                                                                     <a href="#" class="button button-outline">Upgrade Now</a>
-                                                                    <a href="#" class="button button-outline button-outline-yellow" style="font-weight: 600;">Upgrade Now</a>
+                                                                    <a href="#" class="button button-outline button-outline-yellow" style="font-weight: 600;" data-toggle="modal" data-target="#upgradePopup">Upgrade Now</a>
                                                                 </div>
 
                                                             </div>
-                                                            <div class="column-outer in-active">
+                                                            <div class="column-outer active">
                                                                 <div class="column-inner">
+                                                                    <div class="most-popular">
+                                                                        <div>
+                                                                            Most Popular
+                                                                        </div>
+                                                                    </div>
                                                                     <div class="save">
                                                                         <span>Save 81%</span>
                                                                     </div>
@@ -380,7 +387,7 @@
                                                                     </span>
                                                                     </div>
                                                                     <a href="#" class="button button-outline">Upgrade Now</a>
-                                                                    <a href="#" class="button button-outline button-outline-yellow" style="font-weight: 600;">Upgrade Now</a>
+                                                                    <a href="#" class="button " style="font-weight: 600;">Upgrade Now</a>
                                                                 </div>
 
                                                             </div>
@@ -427,11 +434,80 @@
             </ul>
         </footer>
     </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade upgradePopup" id="upgradePopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="cibil-report/ttimes.svg" alt="" class="close" data-dismiss="modal" aria-label="Close">
+                   
+                       
+                      </button>
+                    <div class="popuop">
+                        <div class="d-flex align-items-center pop-head">
+                            <p class="plan-name">
+                                Standard
+                            </p>
+                            <div class="plantotal">
+                                <span class="period">6 Months</span>
+                                <span class="price"><span style="font-weight:400">₹</span>800</span>
+                            </div>
+                            <div class="discount-applied">
+                                <span>10% Discount Applied</span>
+                                <span>- <span style="font-weight:400">₹</span>80</span>
+                            </div>
+                            <div class="subtotal">
+                                <span>Subtotal</span>
+                                <span>₹800</span>
+                            </div>
+                        </div>
+                        <div class="coupon-container">
+                            <div class="input-container">
+                                <label for="couponcode">Enter Coupon Code</label>
+                                <input type="text" name="couponcode" id="couponcode">
+                                <span class="clearCoupon"><img src="./img/delete.png" alt=""></span>
+                            </div>
+                            <span class="invalid-popup">Coupon code is invalid</span>
+                            <a href="#" id="applyCode" class="button mb-20">Apply Code</a>
+                            <a href="#" class="button button-outline">Skip To Payment</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/slick.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
-    <script src="custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script type="text/javascript" defer="defer">
+        $('#applyCode').click(function(e){
+            e.preventDefault()
+            if($('#couponcode').val() != ''){
+                $('.clearCoupon').show()
+                $('.discount-applied').css('display','flex')
+                $('.invalid-popup').hide()
+                $(this).addClass('disabled')
+            }
+            else{
+                $('.invalid-popup').show()
+            }
+        })
+        $('.clearCoupon').click(function(){
+            $('#couponcode').val('');
+            $(this).hide()
+            $('.invalid-popup').hide()
+            $('.discount-applied').hide()
+            $('#applyCode').removeClass('disabled')
+        })
+    </script>
+ 
 </body>
 
 </html>
