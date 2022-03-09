@@ -67,6 +67,14 @@ $(document).ready(function () {
     //     ]
     // })
 
+    $('.home header .header-nav .list-link').click(function(e){
+        e.preventDefault();
+        let selector = $(this).attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(""+selector).offset().top - 100
+        }, 0,'swing');
+    })
+
     $('#article-left').click(function(){
         $('.article-slider-js').slick('slickPrev')
     })
