@@ -888,6 +888,7 @@ color: #2C2C2C;
 	margin: 10px 0 10px;
 	letter-spacing: 0.02em;
 	color: #2c2c2c;
+	text-align: center;
 }
 
 .interstial-container .column .coumn-head .plan-price {
@@ -1627,7 +1628,7 @@ input.orange-button {
 		border-top: 2px solid #00a6ca !important;
 		border-right: 2px solid #00a6ca;
 		border-left: 2px solid #00a6ca;
-
+		padding-top: 14px;
 		background: #ffffff;
 	}
 	.interstial-container .base-standard {
@@ -4634,6 +4635,10 @@ select {
 	.interstial-container .tab-content .tab-pane.active {
 		background-color: #fff;
 		border: 2px solid #00a6ca;
+		margin-top: -1px;
+	}
+	.nav li span{
+		margin-bottom: 0;
 	}
 	.interstial-container .tab-content .small-right {
 		width: 21px !important;

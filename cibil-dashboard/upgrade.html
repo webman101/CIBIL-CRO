@@ -84,12 +84,12 @@
                                                             <div class="margin-bottom-2 mt-20 mobiletabsection">
                                                                 <!-- Nav tabs -->
                                                                 <ul id="myTabs" class="nav mobile-navtabs nav-tabs" role="tablist">
-                                                                    <li class="base-plan-selected base-plan active" href=".home" data-toggle="tab">
-                                                                        <div class="most-popular tag-intabs">
+                                                                    <li class="base-plan-selected base-plan " href=".home" data-toggle="tab">
+                                                                        <!-- <div class="most-popular tag-intabs">
                                                                             <div>
                                                                                 Most Popular
                                                                             </div>
-                                                                        </div>
+                                                                        </div> -->
                                                                         <h6 class="plan-name">Basic</h6>
                                                                         <h3>1 Month</h3>
                                                                         <h4>₹550</h4>
@@ -104,7 +104,12 @@
                                                                         <h6>@ ₹133/month</h6>
                                                                         <span>Save 75%</span>
                                                                     </li>
-                                                                    <li class="base-premium" href=".message" data-toggle="tab">
+                                                                    <li class="base-premium active" href=".message" data-toggle="tab">
+                                                                        <div class="most-popular tag-intabs">
+                                                                            <div>
+                                                                                Most Popular
+                                                                            </div>
+                                                                        </div>
                                                                         <h6 class="plan-name">Premium</h6>
                                                                         <h3>12 Months</h3>
                                                                         <h4>₹1200</h4>
@@ -114,8 +119,8 @@
                                                                 </ul>
                                                                 <!-- Tab panes -->
                                                                 <div class="tab-content">
-                                                                    <div role="tabpanel" class="tab-pane active home" id="home">
-                                                                        <button class="button full-width-button button-orange">Upgrade Now</button>
+                                                                    <div role="tabpanel" class="tab-pane  home" id="home">
+                                                                        <button class="button full-width-button button-orange" data-toggle="modal" data-target="#upgradePopup">Upgrade Now</button>
 
                                                                         <div class="plan-title">Basic Plan Benefits:</div>
 
@@ -147,7 +152,7 @@
 
                                                                     </div>
                                                                     <div role="tabpanel" class="tab-pane  profile" id="profile">
-                                                                        <button class="button full-width-button button-orange">Upgrade Now</button>
+                                                                        <button class="button full-width-button button-orange" data-toggle="modal" data-target="#upgradePopup">Upgrade Now</button>
 
 
                                                                         <div class="plan-title">Standard Plan Benefits:</div>
@@ -177,8 +182,8 @@
 
 
                                                                     </div>
-                                                                    <div role="tabpanel" class="tab-pane  message" id="message">
-                                                                        <button class="button full-width-button button-orange">Upgrade Now</button>
+                                                                    <div role="tabpanel" class="tab-pane active  message" id="message">
+                                                                        <button class="button full-width-button button-orange" data-toggle="modal" data-target="#upgradePopup">Upgrade Now</button>
 
 
                                                                         <div class="plan-title">Premium Plan Benefits:</div>
@@ -293,7 +298,7 @@
                                                                             @ ₹550/month
                                                                     </span>
                                                                     </div>
-                                                                    <a href="#" class="button button-outline">UPGRADE NOW</a>
+                                                                    <a href="#" class="button button-outline" data-toggle="modal" data-target="#upgradePopup">UPGRADE NOW</a>
 
                                                                 </div>
 
@@ -387,7 +392,7 @@
                                                                     </span>
                                                                     </div>
                                                                     <a href="#" class="button button-outline">Upgrade Now</a>
-                                                                    <a href="#" class="button " style="font-weight: 600;">Upgrade Now</a>
+                                                                    <a href="#" class="button " style="font-weight: 600;" data-toggle="modal" data-target="#upgradePopup">Upgrade Now</a>
                                                                 </div>
 
                                                             </div>
@@ -437,7 +442,7 @@
 
 
     <!-- Modal -->
-    <div class="modal fade upgradePopup" id="upgradePopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade upgradePopup" id="upgradePopup" tabindex="-1" aria-labelledby="upgradePopuplabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
