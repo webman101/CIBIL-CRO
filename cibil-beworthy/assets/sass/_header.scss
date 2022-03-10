@@ -1,10 +1,12 @@
 header{
     width: 100%;
-    padding: 20px 0px 25px;
+    // padding: 20px 0px 25px;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     background: #fff;
     z-index: 10;
+    border-bottom: 4px solid $primary-yellow;
 
     .overlay {
         position: fixed;
@@ -42,14 +44,16 @@ header{
                     content: '';
                     position: absolute;
                     top: 0;
-                    right: -30px;
+                    // right: -30px;
+                    right: -15px;
                     width: 2px;
                     height: 100%;
-                    border-right: 2px solid $border-color;
+                    border-right: 1px solid $border-color;
                 }
             }
             .logo-img{
-                width: 112px;
+                // width: 112px;
+                width: 98px;
                 height: auto;
             }
             .beWorthy{
@@ -57,7 +61,8 @@ header{
                 line-height: 30px;
                 color: $primary-blue;
                 padding-left: 15px;
-                margin-left: 27px;
+                // margin-left: 27px;
+                margin-left: 10px;
                 vertical-align: middle;
                 // border-left: 2px solid $border-color;
                 font-weight: 700;
@@ -99,6 +104,7 @@ header{
                 }
             }
             .primary-btn{
+                padding: 14px 20px 10px;
                 @media (min-width: 1025px){
                     margin-left: 25px;
                 }
@@ -115,7 +121,8 @@ header{
     @media(max-width:992px){
         padding: 0;
         .header-wrap{
-            padding: 10px 20px;
+            // padding: 10px 20px;
+            padding: 8px 20px;
             .header-icon{
                 a{
                     display: inline-block;
@@ -126,7 +133,8 @@ header{
                     }
                 }
                 .logo-img{
-                    width: 73px;
+                    // width: 73px;
+                    width:65px;
                     height: auto;
                 }
                 .beWorthy{
