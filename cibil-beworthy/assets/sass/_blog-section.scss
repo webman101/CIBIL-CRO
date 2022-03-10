@@ -73,8 +73,12 @@
             display: block;
             margin-bottom: 30px;
         }
+        .mb-20{
+            margin-bottom: 20px;
+        }
         ul{
-            padding-left: 15px;
+            // padding-left: 15px;
+            padding-left: 35px;
             margin-bottom: 0;
             li{
                 list-style: disc;
@@ -83,6 +87,7 @@
         }
         ol{
             margin-bottom: 0;
+            padding-left: 25px;
             li{
                 margin-left: 15px;
                 margin-bottom: 20px;
