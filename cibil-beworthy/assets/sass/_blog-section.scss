@@ -73,6 +73,25 @@
             display: block;
             margin-bottom: 30px;
         }
+        ul{
+            padding-left: 15px;
+            margin-bottom: 0;
+            li{
+                list-style: disc;
+                margin-bottom: 20px;
+            }
+        }
+        ol{
+            margin-bottom: 0;
+            li{
+                margin-left: 15px;
+                margin-bottom: 20px;
+            }
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
     }
 
     .blog-footer{
