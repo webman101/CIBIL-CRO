@@ -144,12 +144,21 @@ $(document).ready(function () {
             console.log(correctCount)
             if(correctCount <= 2){
                 $('#scholar').show()
+                $('.shareLink:not(.clipboard)').each(function(){
+                  $(this).attr('href', $(this).attr('href')+'?medal=newbie%23quiz' )
+                })
             }
             else if(correctCount <= 4){
                 $('#rockstar').show()
+                $('.shareLink:not(.clipboard)').each(function(){
+                    $(this).attr('href', $(this).attr('href')+'?medal=bluff%23quiz' )
+                })
             }
             else{
                 $('#master').show()
+                $('.shareLink:not(.clipboard)').each(function(){
+                    $(this).attr('href', $(this).attr('href')+'?medal=rockstar%23quiz' )
+                })
             }
         }else{
             let progress = ((counterArray+1)/(totalQuestion))*100;
@@ -180,10 +189,13 @@ $(document).ready(function () {
     })
 
     var urlPath = window.location.href
+    console.log('before clip: ',urlPath)
+    urlPath = urlPath.replace(/html.*$/i, "") + "html";
+    console.log('after clip: ',urlPath)
     let clipBoardPath = urlPath;
     if ($('#quiz').length > 0){
         clipBoardPath = clipBoardPath+'#quiz';
-        urlPath = urlPath+'%23quiz';
+        // urlPath = urlPath+'%23quiz';
     }
     let facebookPath = 'https://www.facebook.com/sharer/sharer.php?u='+urlPath;
     let twitterPath = 'https://twitter.com/intent/tweet?text='+urlPath;
@@ -201,3 +213,21 @@ $(document).ready(function () {
     })
 
 });
+
+//Dynamic share
+const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+
+let value = params.medal;
+if(value!= null){
+    var metaImage = document.createElement('meta');
+    metaImage.setAttribute("property","og:image");
+    metaImage.content = `https://ajency.github.io/CIBIL-CRO/cibil-beworthy/assets/img/${value}.jpg`;
+    document.getElementsByTagName('head')[0].appendChild(metaImage);
+
+    var metaTweetImage = document.createElement('meta');
+    metaTweetImage.setAttribute("name","twitter:image");
+    metaTweetImage.content = `https://ajency.github.io/CIBIL-CRO/cibil-beworthy/assets/img/${value}.jpg`;
+    document.getElementsByTagName('head')[0].appendChild(metaTweetImage);
+}
