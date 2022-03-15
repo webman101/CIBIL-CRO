@@ -162,7 +162,7 @@ $(document).ready(function () {
                 $('#master').show()
                 $('.shareLink:not(.clipboard)').each(function(){
                   let newLink = $(this).attr('href');
-                  newLink = newLink.replace('medalname','Rockstart')
+                  newLink = newLink.replace('medalname','Rockstar')
                   $(this).attr('href', newLink+'?medal=rockstar%23quiz' )
                 })
             }
