@@ -67,7 +67,7 @@ $(document).ready(function () {
     //     ]
     // })
 
-    $('.home header .header-nav .list-link').click(function(e){
+    $('.home header .header-nav .list-link, .result-link').click(function(e){
         e.preventDefault();
         let selector = $(this).attr('href');
         $('html, body').stop().animate({
