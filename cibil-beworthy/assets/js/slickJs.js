@@ -215,19 +215,19 @@ $(document).ready(function () {
 });
 
 //Dynamic share
-const params = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop),
-  });
+// const params = new Proxy(new URLSearchParams(window.location.search), {
+//     get: (searchParams, prop) => searchParams.get(prop),
+//   });
 
-let value = params.medal;
-if(value!= null){
-    var metaImage = document.createElement('meta');
-    metaImage.setAttribute("property","og:image");
-    metaImage.content = `https://ajency.github.io/CIBIL-CRO/cibil-beworthy/assets/img/${value}.jpg`;
-    document.getElementsByTagName('head')[0].appendChild(metaImage);
+// let value = params.medal;
+// if(value!= null){
+//     var metaImage = document.createElement('meta');
+//     metaImage.setAttribute("property","og:image");
+//     metaImage.content = `https://ajency.github.io/CIBIL-CRO/cibil-beworthy/assets/img/${value}.jpg`;
+//     document.getElementsByTagName('head')[0].appendChild(metaImage);
 
-    var metaTweetImage = document.createElement('meta');
-    metaTweetImage.setAttribute("name","twitter:image");
-    metaTweetImage.content = `https://ajency.github.io/CIBIL-CRO/cibil-beworthy/assets/img/${value}.jpg`;
-    document.getElementsByTagName('head')[0].appendChild(metaTweetImage);
-}
+//     var metaTweetImage = document.createElement('meta');
+//     metaTweetImage.setAttribute("name","twitter:image");
+//     metaTweetImage.content = `https://ajency.github.io/CIBIL-CRO/cibil-beworthy/assets/img/${value}.jpg`;
+//     document.getElementsByTagName('head')[0].appendChild(metaTweetImage);
+// }
