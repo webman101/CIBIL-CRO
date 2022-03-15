@@ -145,19 +145,25 @@ $(document).ready(function () {
             if(correctCount <= 2){
                 $('#scholar').show()
                 $('.shareLink:not(.clipboard)').each(function(){
-                  $(this).attr('href', $(this).attr('href')+'?medal=newbie%23quiz' )
+                  let newLink = $(this).attr('href');
+                  newLink = newLink.replace('medalname','Newbie')
+                  $(this).attr('href', newLink+'?medal=newbie%23quiz' )
                 })
             }
             else if(correctCount <= 4){
                 $('#rockstar').show()
                 $('.shareLink:not(.clipboard)').each(function(){
-                    $(this).attr('href', $(this).attr('href')+'?medal=bluff%23quiz' )
+                  let newLink = $(this).attr('href');
+                  newLink = newLink.replace('medalname','Bluff')
+                  $(this).attr('href', newLink+'?medal=bluff%23quiz' )
                 })
             }
             else{
                 $('#master').show()
                 $('.shareLink:not(.clipboard)').each(function(){
-                    $(this).attr('href', $(this).attr('href')+'?medal=rockstar%23quiz' )
+                  let newLink = $(this).attr('href');
+                  newLink = newLink.replace('medalname','Rockstart')
+                  $(this).attr('href', newLink+'?medal=rockstar%23quiz' )
                 })
             }
         }else{
@@ -198,8 +204,8 @@ $(document).ready(function () {
         // urlPath = urlPath+'%23quiz';
     }
     let facebookPath = 'https://www.facebook.com/sharer/sharer.php?u='+urlPath;
-    let twitterPath = 'https://twitter.com/intent/tweet?text='+urlPath;
-    let linkedInPath = 'https://www.linkedin.com/shareArticle?mini=true&url='+urlPath+'&title=&summary=&source=';
+    let twitterPath = 'https://twitter.com/intent/tweet?text=I%20am%20a%20%E2%80%98CIBIL%20medalname%E2%80%99.%20Take%20the%20CIBIL%20Challenge%20to%20check%20your%20title%20now!%E2%80%A8%0A'+urlPath;
+    let linkedInPath = 'https://www.linkedin.com/sharing/share-offsite/?url='+urlPath+'';
     
     $('.shareLink.facebook').attr('href', facebookPath)
     $('.shareLink.twitter').attr('href', twitterPath)
