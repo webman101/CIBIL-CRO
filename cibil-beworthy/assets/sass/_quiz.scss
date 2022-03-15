@@ -178,7 +178,7 @@
                 }
 
                 .result-card{
-                    padding: 40px 40px 31px;
+                    padding: 60px 30px 60px 40px;
                     background: $primary-blue;
                     border-radius: 8px;
 
@@ -199,52 +199,62 @@
                                 width: 100%;
                                 height: auto;
                                 max-width: 300px;
-                                margin-bottom: 20px;
+                                margin-bottom: 0;
                             }
-                            .share{
+                        }
+
+                        .share{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 30px;
+                            margin-top: 30px;
+
+                            p{
+                                font-family: 'Intro', Bold;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 24px;
+                                letter-spacing: 0.02em;
+                                color: $white;
+                                margin: 0;
+                            }
+                            .share-icon-list{
                                 display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-
-                                p{
-                                    font-family: 'Intro', Bold;
-                                    font-weight: 700;
-                                    font-size: 16px;
-                                    line-height: 24px;
-                                    letter-spacing: 0.02em;
-                                    color: $white;
-                                    margin: 0;
+                                .icon{
+                                    width: 30px;
+                                    height: 30px;
+                                    object-fit: contain;
+                                    margin-right: 10px;
+                                    cursor: pointer;
                                 }
-                                .share-icon-list{
-                                    display: flex;
-                                    .icon{
-                                        width: 30px;
-                                        height: 30px;
-                                        object-fit: contain;
-                                        margin-left: 10px;
-                                        cursor: pointer;
-                                    }
-                                    .shareLink{
-                                        position: relative;
+                                .shareLink{
+                                    position: relative;
 
-                                        .copyTooltip{
-                                            position: absolute;
-                                            display: none;
-                                            right: 0;
-                                            top: calc( 100% + 10px);
-                                            font-size: 14px;
-                                            font-weight: 600;
-                                            width: 160px;
-                                            background: #707070d9;
-                                            color: $white;
-                                            padding: 5px 10px;
-                                            border-radius: 8px;
-                                            text-align: center;
+                                    .copyTooltip{
+                                        position: absolute;
+                                        display: none;
+                                        right: 0;
+                                        top: calc( 100% + 10px);
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        width: 160px;
+                                        background: #707070d9;
+                                        color: $white;
+                                        padding: 5px 10px;
+                                        border-radius: 8px;
+                                        text-align: center;
+                                    }
+
+                                    &:last-child{
+                                        .icon{
+                                            margin-right: 0;
                                         }
                                     }
                                 }
                             }
                         }
+
                         .result-text{
                             width: 50%;
                             .result-head{
@@ -264,6 +274,25 @@
                                 letter-spacing: 0.02em;
                                 color: $white;
                                 margin-bottom: 20px;
+
+                                a{
+                                    color: $primary-yellow;
+                                    text-decoration: underline;
+                                    font-weight: 600;
+                                }
+                            }
+                            .result-link{
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 24px;
+                                letter-spacing: 0.02em;
+                                color: $primary-yellow;
+                                text-decoration: underline;
+                                svg{
+                                    margin-left: 5px;
+                                    position: relative;
+                                    top: 2px;
+                                }
                             }
                             .result-text-bold{
                                 font-family: 'Intro', Bold;
@@ -383,7 +412,7 @@
                     }
 
                     .result-card{
-                        padding: 20px;
+                        padding: 20px 30px 57px;
                         .result-card-wrap{
                             flex-flow: wrap;
     
@@ -405,15 +434,15 @@
 
                                 .medal-img{
                                     max-width: 190px;
-                                    margin-bottom: 10px;
+                                    margin-bottom: 20px;
                                 }
 
-                                .share{
-                                    margin-bottom: 20px;
-                                    flex-direction: column;
-                                    p{
-                                        margin-bottom: 10px;
-                                    }
+                            }
+                            .share{
+                                margin-bottom: 20px;
+                                flex-direction: column;
+                                p{
+                                    margin-bottom: 10px;
                                 }
                             }
                             .result-text{
