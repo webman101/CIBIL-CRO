@@ -1094,6 +1094,9 @@
             }
             .nav li.base-standard{
                 border-left: 1px solid #ACACAC;
+                &.active{
+                    border: 2px solid #00A6CA;
+                }
             }
             .tab-content .tab-pane.active{
                 border-radius: 0;
