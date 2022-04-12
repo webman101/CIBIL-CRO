@@ -208,7 +208,7 @@ html{
         line-height: 30px;
         max-width: 526px;
         color: #2c2c2c;
-        margin: 30px 0 70px;
+        margin: 30px 0 40px;
     }
     .row {
         height: 100%;
@@ -435,7 +435,7 @@ html{
             align-items: center;
             justify-content: center;
             .plan-name {
-                font-family: "Intro", Regular;
+                font-family: "Intro", Book;
                 font-style: normal;
                 font-weight: 600;
                 font-size: 16px;
@@ -980,7 +980,7 @@ html{
         .alerts-list{
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             &:not(:last-child){
                 margin-bottom: 20px;
             }
@@ -991,7 +991,7 @@ html{
                 border: 1px solid #DDE0EF;
                 box-sizing: border-box;
                 border-radius: 8px;
-                padding: 20px 14px;
+                padding: 20px;
                 max-width: 313px;
                 .icon{
                     margin-right: 26px;
@@ -1013,6 +1013,9 @@ html{
             .alerts-list{
                .alert-item{
                    p{
+                    &.min-height4{
+                        min-height: 96px;
+                    }
                     &.min-height3{
                         min-height: 72px;
                     }
@@ -1044,6 +1047,7 @@ html{
                 .alert-item{
                     max-width: 100%;
                     width: 100%;
+                    padding: 20px 20px 20px 18px;
                     &:not(:last-child){
                         margin-bottom: 20px;
                     }
@@ -1066,6 +1070,7 @@ html{
             height: auto;
             p{
                 margin-bottom: 30px;
+                font-family: "Intro", Regular;
             }
         }
         .right-side, .left-side{
