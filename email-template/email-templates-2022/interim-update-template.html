@@ -115,6 +115,10 @@
             text-decoration-line: underline;
             color: #2C2C2C !important;
         }
+        .blue-link{
+            color:#006685 !important;
+            font-weight: 500;
+        }
         .section-heading{
             font-weight: 600;
             font-size: 16px;
@@ -208,6 +212,9 @@
         }
         .dispute-box .dispute-block .arrow-img{
             margin-top: 5px;
+        }
+        .dispute-timeline .timeline-block, .dispute-timeline .timeline-block .progress-status{
+            height: 100%;
         }
         .marker-rounded{
             width: 14px;
@@ -410,7 +417,7 @@
                     <tr>
                         <td style="text-align: left;font-weight: 400;font-size: 14px;line-height: 24px;letter-spacing: 0.02em;color: #707070; background-color: #ffffff; padding: 20px 20px 20px 40px;">
                             <ul style="list-style-type: none; padding: 0px; margin: 0px;">
-                                <li>*For details of disputes closed, please refer our response from noreply@transunion.com</li>
+                                <li>*For details of disputes closed, please refer our response from <a class="blue-link" href="mailto:noreply@transunion.com">noreply@transunion.com</a></li>
                                 <li>**Dispute resolution could take upto 30 days, subject to response from respective bank/ financial institution.</li>
                             </ul>
                         </td>
@@ -604,9 +611,9 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                            <table class="timeline-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
                                                                 <tr valign="top" class="progress-completed">
-                                                                    <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
                                                                         <div class="marker-rounded"></div>
                                                                         <div class="progress-line"></div>
                                                                     </td>
@@ -616,7 +623,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr valign="top">
-                                                                    <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
                                                                         <div class="marker-rounded"></div>
                                                                         <div class="progress-line"></div>
                                                                     </td>
@@ -634,7 +641,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr valign="top" class="progress-end">
-                                                                    <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
                                                                         <div class="marker-rounded"></div>
                                                                         <div class="progress-line"></div>
                                                                     </td>
@@ -780,9 +787,9 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                            <table class="timeline-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
                                                                 <tr valign="top" class="progress-completed">
-                                                                    <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
                                                                         <div class="marker-rounded"></div>
                                                                         <div class="progress-line"></div>
                                                                     </td>
@@ -792,7 +799,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr valign="top" class="progress-completed">
-                                                                    <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
                                                                         <div class="marker-rounded"></div>
                                                                         <div class="progress-line"></div>
                                                                     </td>
@@ -811,7 +818,7 @@
                                                                     </td>
                                                                 </tr>
                                                                 <tr valign="top">
-                                                                    <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
                                                                         <div class="marker-rounded"></div>
                                                                         <div class="progress-line"></div>
                                                                     </td>
