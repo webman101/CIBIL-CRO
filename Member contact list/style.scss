@@ -1,0 +1,69 @@
+/* colors */
+$light-blue: #F6F7FC;
+$black: #2C2C2C;
+$border-color: #DDE0EF;
+
+/* Global Elements */
+.main-heading{
+    font-family: "Intro", Regular;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.01em;
+    color: $black;
+    margin-bottom: 10px;
+}
+.paragraph{
+    font-family: "Intro", Book;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $black;
+    margin: 0px;
+}
+
+input{
+    height: 50px;
+    padding: 15px 20px;
+    background: #FFFFFF;
+    &.search-input{
+        width: 100%;
+        border:none;
+    }
+}
+
+button{
+    &.search {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: #fff;
+        padding-left: 20px;
+      }
+}
+
+/* Heading Section */
+.heading-section{
+    background-color: $light-blue;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.search-bar{
+    max-width: 680px;
+    margin: 30px auto 0px;
+    &__wraper{
+        background-color: #ffffff;
+        border: 1px solid $border-color;
+        box-sizing: border-box;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+}
