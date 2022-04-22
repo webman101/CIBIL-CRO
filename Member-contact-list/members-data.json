@@ -1,0 +1,52 @@
+[
+  {
+  "bankName": "Bank Of Maharashtra",
+  "members": [
+      {
+      "name": "Ram Sharma",
+      "designation": "Nodal Officer",
+      "contactNumber": "(+91) 22-6140-4300",
+      "emailId": "info@cibil.com",
+      "callDays": "Monday - Friday",
+      "callTime": "10am - 6pm"
+      },
+      {
+        "name": "Krishnamurthi Ayer",
+        "designation": "Nodal Officer",
+        "Contact Number": "(+91) 22-6140-4300",
+        "emailId": "info@cibil.com",
+        "callDays": "Monday - Friday",
+        "callTime": "10am - 6pm"
+      }
+    ]
+  },
+  {
+    "bankName": "Bank Of Baroda",
+    "members": [
+        {
+        "name": "Akash Chaudhari",
+        "designation": "Nodal Officer",
+        "contactNumber": "(+91) 22-6140-4300",
+        "emailId": "info@cibil.com",
+        "callDays": "Monday - Friday",
+        "callTime": "10am - 6pm"
+        },
+        {
+          "name": "Rakesh Subramanyam",
+          "designation": "Nodal Officer",
+          "Contact Number": "(+91) 22-6140-4300",
+          "emailId": "info@cibil.com",
+          "callDays": "Monday - Friday",
+          "callTime": "10am - 6pm"
+        },
+        {
+          "name": "Ramesh Verma",
+          "designation": "Nodal Officer",
+          "Contact Number": "(+91) 22-6140-4300",
+          "emailId": "info@cibil.com",
+          "callDays": "Monday - Friday",
+          "callTime": "10am - 6pm"
+        }
+      ]
+    }
+]
