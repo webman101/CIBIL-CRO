@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cibil-pvw.transunion.com/resources/css/tu-font-awesome.css">
+    <!-- <link rel="stylesheet" href="https://cibil-pvw.transunion.com/resources/css/tu-font-awesome.css"> -->
     <link rel="stylesheet" href="https://cibil-pvw.transunion.com/public/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,16 +22,37 @@
                 <p class="paragraph subheading">Search for the banks / financial institutions you would like to contact with respect to your dispute</p>
                 <div class="search-bar">
                     <div class="search-bar__wraper">
-                        <button class="search"><img src="images/search.svg" alt="search"></button>
-                        <input class="search-input" type="text" name="" id="" placeholder="Enter member name">
+                        <button class="search">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21L16.2779 16.2695M18.8947 9.94737C18.8947 12.3204 17.9521 14.5962 16.2741 16.2741C14.5962 17.9521 12.3204 18.8947 9.94737 18.8947C7.57438 18.8947 5.29858 17.9521 3.62062 16.2741C1.94267 14.5962 1 12.3204 1 9.94737C1 7.57438 1.94267 5.29858 3.62062 3.62062C5.29858 1.94267 7.57438 1 9.94737 1C12.3204 1 14.5962 1.94267 16.2741 3.62062C17.9521 5.29858 18.8947 7.57438 18.8947 9.94737Z" stroke="#ACACAC" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <input type="text" class="typeahead search-input" data-provide="typeahead" placeholder="E.g Bank of Baroda" />
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="default-section">
+            <div class="container text-center default-section__wraper">
+                <img src="images/search-default.svg" class="image" alt="search">
+                <p class="section-title">Instructions</p>
+                <ul class="paragraph list">
+                    <li>You can contact the respective Nodal officer in case you are not satisfied with the solution or response you have received for your dispute.</li>
+                    <li>When contacting the respective banks / financial institution,  please provide
+                        <ol>
+                            <li>Dispute ID or Service request number</li>
+                            <li>Account details</li>
+                        </ol>
+                    <li>To know more about dispute flow, <a class="link" href="#">click here.</a></li>
+                </ul>
             </div>
         </div>
     </div>
 
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
     <script src="member-search.js"></script>
 </body>
 
