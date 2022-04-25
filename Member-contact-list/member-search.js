@@ -77,6 +77,7 @@ function ErrorMessage(){
     $('.default-section').hide();
   } else{
     $('.error-section').hide();
+    $('.default-section').hide();
     $('.members-table-section').show();
   }
 }
