@@ -74,8 +74,10 @@ function ErrorMessage(){
   if ($("#members-table td").hasClass("dataTables_empty") ) {
     $('.members-table-section').hide();
     $('.error-section').show();
+    $('.default-section').hide();
   } else{
     $('.error-section').hide();
+    $('.members-table-section').show();
   }
 }
 
@@ -93,14 +95,6 @@ $('#search-input').keypress(function(){
   $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
 });
 
-$('#search-input').keyup(function(){
-  if($(this).val() == ""){
-    $('.members-table-section').hide();
-    $('.default-section').show();
-    $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
-  }
-});
-
 $('.typeahead').on('typeahead:selected', function(evt, item) {
   $('.dataTables_filter input[type=search]').val(item);
   $('.dataTables_filter input[type=search]').keyup();
@@ -110,6 +104,14 @@ $('.typeahead').on('typeahead:selected', function(evt, item) {
 $('#search-input').keyup(function() {
   $("#members-table tbody br").replaceWith("<div class='dot'></div>");
   ErrorMessage();
+});
+
+$('#search-input').keyup(function(){
+  if($(this).val() == ""){
+    $('.members-table-section').hide();
+    $('.default-section').show();
+    $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
+  }
 });
 
 });
