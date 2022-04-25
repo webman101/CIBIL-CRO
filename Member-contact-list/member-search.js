@@ -107,6 +107,10 @@ $('.typeahead').on('typeahead:selected', function(evt, item) {
   ErrorMessage();
 });
 
+$(".tt-menu .tt-suggestion").on('click touchstart', function (){
+  console.log("Clicked!");
+});
+
 $('#search-input').keyup(function() {
   $("#members-table tbody br").replaceWith("<div class='dot'></div>");
   ErrorMessage();

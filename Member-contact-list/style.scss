@@ -358,6 +358,8 @@ input{
                                 &:before{
                                     display: inline-flex;
                                     margin-right: 18px;
+                                    position: relative;
+                                    top: 5px;
                                 }
                                 &:nth-child(1){
                                     font-family: "Intro", Regular;
@@ -384,6 +386,7 @@ input{
                                 }
                                 &:nth-child(5){
                                     &:before{
+                                        top: 3px;
                                         content: url(images/time.svg);
                                     }
                                 }
