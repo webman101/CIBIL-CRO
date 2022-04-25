@@ -65,10 +65,10 @@ $.getJSON(banksApi, function(data){
       ]
   } );
 
- $('#search-input').keyup(function() {
-    $('.dataTables_filter input[type=search]').keyup();
-    $('.dataTables_filter input[type=search]').val($(this).val());
-});
+function emptyField(){
+  $('#search-input').val("");
+  $('.dataTables_filter input[type=search]').val("");
+}
 
 function ShowResult(){
   $('.default-section').hide();
@@ -97,7 +97,14 @@ $('.members-table-section .hide-column').css("display", "none");
 $('.members-table-section .dataTables_wrapper .row:first-child').css("display", "none");
 $('.members-table-section .dataTables_wrapper .row:last-child').css("display", "none");
 $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
+$('.close-btn').fadeOut(300);
 
+
+$('#search-input').keyup(function() {
+  $('.dataTables_filter input[type=search]').keyup();
+  $('.dataTables_filter input[type=search]').val($(this).val());
+  $('.close-btn').fadeIn(300);
+});
 
 $('.typeahead').on('typeahead:selected', function(evt, item) {
   $('.dataTables_filter input[type=search]').val(item);
@@ -117,6 +124,18 @@ $('#search-input').on('keypress',function(e) {
 
 $('#search-input').keyup(function(){
   if($(this).val() == ""){
+    $('.close-btn').fadeOut(300);
+    $('.members-table-section').hide();
+    $('.error-section').hide();
+    $('.default-section').show();
+  }
+});
+
+$('.close-btn').click( function(){
+  emptyField();
+  ShowResult();
+  if($('#search-input').val() == ""){
+    $('.close-btn').fadeOut(300);
     $('.members-table-section').hide();
     $('.error-section').hide();
     $('.default-section').show();
