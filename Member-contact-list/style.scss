@@ -93,7 +93,7 @@ $gray2: #F9F9F9;
 
 input{
     height: 50px;
-    padding: 16px 16px 16px 10px;
+    padding: 17px 16px 17px 10px;
     background: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
@@ -183,9 +183,9 @@ input{
     width: 100% !important;
 }
 .tt-menu{
-        width: calc(100% + 46px);
+        width: calc(100% + 37px);
         top: 54px !important;
-        left: -46px !important;
+        left: -35px !important;
         background: #FFFFFF;
         border: 1px solid $border-color1;
         box-sizing: border-box;
@@ -193,6 +193,7 @@ input{
         box-shadow: none;
         text-align: left;
         padding: 10px 0px;
+        overflow: hidden;
         .tt-dataset{
             margin: 0px;
             .tt-suggestion {
@@ -221,6 +222,19 @@ input{
                     }
                 }
               }
+        }
+        @media(max-width:768px){
+            width: calc(100% + 30px);
+            left: -29px !important;
+            padding: 0px;
+            .tt-dataset{
+                .tt-suggestion{
+                    padding: 20px 36px;
+                    &:not(:first-child){
+                        padding-top: 0px;
+                    }
+                }
+            }
         }
     }
 
