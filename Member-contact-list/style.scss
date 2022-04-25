@@ -8,6 +8,7 @@ $gray: #ACACAC;
 $border-color1:#EDEDED;
 $border-color2:#EBEBEB;
 $gray1: #707070;
+$gray2: #F9F9F9;
 
 /* Global Elements */
 .container{
@@ -178,7 +179,7 @@ input{
         border-radius: 4px;
         box-shadow: none;
         text-align: left;
-        padding: 20px 60px;
+        padding: 10px 0px;
         .tt-dataset{
             margin: 0px;
             .tt-suggestion {
@@ -188,18 +189,22 @@ input{
                 line-height: 24px;
                 letter-spacing: 0.02em;
                 color: #2C2C2C;
-                font-family: "Intro", Regular;
-                padding: 0px;
-                transition: border 0.3s ease-in-out;
+                font-family: "Intro", Book;
+                padding: 10px 60px 8px;
+                background-color: #ffffff;
+                transition: all 0.3s ease-in-out;
                 strong{
                     font-weight: 400;
-                }
-                &:not(:last-child){
-                    padding-bottom: 20px;
+                    transition: all 0.3s ease-in-out;
                 }
                 @media(min-width:769px){
                     &:hover, &:focus{
-                        color: $blue;
+                        font-family: "Intro", Regular;
+                        font-weight: 600;
+                        background-color: $gray2;
+                        strong{
+                            font-weight: 600;
+                        }
                     }
                 }
               }
