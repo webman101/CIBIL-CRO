@@ -68,6 +68,9 @@ $.getJSON(banksApi, function(data){
  $('#search-input').keyup(function() {
     $('.dataTables_filter input[type=search]').keyup();
     $('.dataTables_filter input[type=search]').val($(this).val());
+    $(".tt-menu .tt-suggestion").on('click touchstart', function (){
+      $('.dataTables_filter input[type=search]').val($(this).val());
+    });
 });
 
 function ErrorMessage(){
@@ -105,10 +108,6 @@ $('.typeahead').on('typeahead:selected', function(evt, item) {
   $('.dataTables_filter input[type=search]').val(item);
   $('.dataTables_filter input[type=search]').keyup();
   ErrorMessage();
-});
-
-$(".tt-menu .tt-suggestion").on('click touchstart', function (){
-  console.log("Clicked!");
 });
 
 $('#search-input').keyup(function() {
