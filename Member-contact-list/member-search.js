@@ -85,6 +85,11 @@ function ShowResult(){
   }
 }
 
+function closeKeyboard(){
+  $('.dataTables_filter input[type=search]').blur();
+  $('#search-input').blur();
+}
+
 /* hide */
 $('.members-table-section').css("display", "none");
 $('.error-section').css("display", "none");
@@ -98,12 +103,14 @@ $('.typeahead').on('typeahead:selected', function(evt, item) {
   $('.dataTables_filter input[type=search]').val(item);
   $('.dataTables_filter input[type=search]').keyup();
   ShowResult();
+  closeKeyboard();
 });
 
 $('#search-input').on('keypress',function(e) {
   if(e.which == 13) {
     ShowResult();
     $('.members-table-section').hide();
+    closeKeyboard();
     $('.error-section').show();
   }
 });
