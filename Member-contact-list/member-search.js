@@ -56,7 +56,7 @@ $.getJSON(banksApi, function(data){
   $('#members-table').DataTable( {
       "ajax": 'members.json',
       "columns": [
-        null,
+        { "searchable": false },
         { "searchable": false },
         { "searchable": false },
         { "searchable": false },
@@ -70,14 +70,17 @@ $.getJSON(banksApi, function(data){
     $('.dataTables_filter input[type=search]').val($(this).val());
 });
 
-function ErrorMessage(){
+function ShowResult(){
+  $('.default-section').hide();
+  $('.members-table-section').hide();
   if ($("#members-table td").hasClass("dataTables_empty") ) {
     $('.members-table-section').hide();
     $('.error-section').show();
-    $('.default-section').hide();
-  } else{
+  }
+  else{
     $('.error-section').hide();
-    $('.default-section').hide();
+    $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
+    $("#members-table tbody br").replaceWith("<div class='dot'></div>");
     $('.members-table-section').show();
   }
 }
@@ -90,28 +93,26 @@ $('.members-table-section .dataTables_wrapper .row:first-child').css("display", 
 $('.members-table-section .dataTables_wrapper .row:last-child').css("display", "none");
 $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
 
-$('#search-input').keypress(function(){
-  $('.default-section').hide();
-  $('.members-table-section').show();
-  $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
-});
 
 $('.typeahead').on('typeahead:selected', function(evt, item) {
   $('.dataTables_filter input[type=search]').val(item);
   $('.dataTables_filter input[type=search]').keyup();
-  ErrorMessage();
+  ShowResult();
 });
 
-$('#search-input').keyup(function() {
-  $("#members-table tbody br").replaceWith("<div class='dot'></div>");
-  ErrorMessage();
+$('#search-input').on('keypress',function(e) {
+  if(e.which == 13) {
+    ShowResult();
+    $('.members-table-section').hide();
+    $('.error-section').show();
+  }
 });
 
 $('#search-input').keyup(function(){
   if($(this).val() == ""){
     $('.members-table-section').hide();
+    $('.error-section').hide();
     $('.default-section').show();
-    $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
   }
 });
 

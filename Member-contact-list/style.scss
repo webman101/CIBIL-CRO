@@ -138,30 +138,17 @@ input{
         transition: border 0.3s ease-in-out;
         button{
             &.search {
+                pointer-events: none;
                 border: none !important;
                 outline: none !important;
                 box-shadow: none !important;
                 background-color: #fff;
                 padding-left: 20px;
                 display: flex;
-                svg{
-                    path{
-                        transition: all 0.3s ease-in-out;
-                    }
-                }
               }
         }
         &.focused{
                 border-color: $blue;
-                button{
-                    &.search{
-                        svg{
-                            path{
-                                stroke: $blue;
-                            }
-                        }
-                    }
-                }
         }
     }
 }
@@ -345,7 +332,7 @@ input{
                                         content: '';
                                         height: 4px;
                                         width: 4px;
-                                        background-color: black;
+                                        background-color: $black;
                                         display: block;
                                         border-radius: 5px;
                                     }
