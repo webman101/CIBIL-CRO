@@ -6,6 +6,7 @@ $blue: #00A6CA;
 $secondary-blue: #006685;
 $gray: #ACACAC;
 $border-color1:#EDEDED;
+$border-color2:#EBEBEB;
 $gray1: #707070;
 
 /* Global Elements */
@@ -224,7 +225,7 @@ input{
 .default-section{
     &__wraper{
         padding-top: 100px;
-        padding-bottom: 150px;
+        padding-bottom: 100px;
         .image{
             margin-bottom: 80px;
         }
@@ -239,8 +240,29 @@ input{
     @media(max-width:768px){
         &__wraper{
             padding-top: 80px;
+            padding-bottom: 80px;
             .image{
                 margin-bottom: 61px;
+            }
+        }
+    }
+}
+
+/* Empty state */
+.error-section{
+    &__wraper{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        .image{
+            margin-bottom: 44.2px;
+        }
+    }
+    @media(max-width:768px){
+        &__wraper{
+            padding-top: 80px;
+            padding-bottom: 80px;
+            .image{
+                margin-bottom: 20px;
             }
         }
     }
@@ -251,6 +273,7 @@ input{
 .members-table-section{
     &__wraper{
         padding-top: 44px;
+        padding-bottom: 44px;
         .dataTables_wrapper{
             table{
                 font-family: "Intro", Regular;
@@ -264,7 +287,33 @@ input{
                         padding: 20px 0;
                         border-bottom: 1px solid $gray1;
                     }
-                    @media(max-width:768px){
+                }
+                tbody{
+                    tr{
+                        td{
+                            border-collapse: separate;
+                            padding: 20px 0px;
+                            font-family: "Intro", Book;
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                        &:not(:last-child){
+                            td{
+                                border-bottom: 1px solid #DDDDDD;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        &__wraper{
+            padding-top: 20px;
+            padding-bottom: 60px;
+            .dataTables_wrapper{
+                table{
+                    thead{
                         border: none;
                         clip: rect(0 0 0 0);
                         height: 1px;
@@ -274,25 +323,70 @@ input{
                         position: absolute;
                         width: 1px;
                     }
-                }
-                tbody{
-                    tr{
-                        @media(max-width:768px){
+                    tbody{
+                        display: block;
+                        tr{
                             display: block;
-                        }
-                        td{
-                            border-collapse: separate;
-                            padding: 20px 0px;
-                            font-family: "Intro", Book;
-                            font-size: 16px;
-                            line-height: 24px;
-                            @media(max-width:768px){
-                                display: block;
+                            border: 1px solid $border-color2;
+                            border-radius: 6px;
+                            padding: 20px;
+                            overflow: hidden;
+                            &:not(:last-child){
+                                margin-bottom: 20px;
+                                td{
+                                    border-bottom: none;
+                                }
                             }
-                        }
-                        &:not(:last-child){
                             td{
-                                border-bottom: 1px solid #DDDDDD;
+                                .dot {
+                                    border-radius: 5px;
+                                    padding: 0px 8px;
+                                    &:before{
+                                        content: '';
+                                        height: 4px;
+                                        width: 4px;
+                                        background-color: black;
+                                        display: block;
+                                        border-radius: 5px;
+                                    }
+                                }
+                                display: block;
+                                padding: 0px;
+                                font-family: "Intro", Book;
+                                display: flex;
+                                align-items: center;
+                                &:before{
+                                    display: inline-flex;
+                                    margin-right: 18px;
+                                }
+                                &:nth-child(1){
+                                    font-family: "Intro", Regular;
+                                    font-weight: 600;
+                                }
+                                &:nth-child(2){
+                                    border-bottom: 1px solid $border-color1;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    padding-bottom: 10px;
+                                }
+                                &:nth-child(3){
+                                    padding-top: 20px;
+                                    padding-bottom: 10px;
+                                    &:before{
+                                        content: url(images/phone.svg);
+                                    }
+                                }
+                                &:nth-child(4){
+                                    padding-bottom: 10px;
+                                    &:before{
+                                        content: url(images/mail.svg);
+                                    }
+                                }
+                                &:nth-child(5){
+                                    &:before{
+                                        content: url(images/time.svg);
+                                    }
+                                }
                             }
                         }
                     }

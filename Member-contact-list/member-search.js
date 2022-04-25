@@ -32,7 +32,7 @@ $.getJSON(banksApi, function(data){
             }
           });
           
-          /* console.log('matches', matches); */
+         /*  console.log('matches', matches); */
       
           cb(matches);
         };
@@ -54,7 +54,15 @@ $.getJSON(banksApi, function(data){
 
 /* Table */
   $('#members-table').DataTable( {
-      "ajax": 'members.json'
+      "ajax": 'members.json',
+      "columns": [
+        null,
+        { "searchable": false },
+        { "searchable": false },
+        { "searchable": false },
+        { "searchable": false },
+        null
+      ]
   } );
 
  $('#search-input').keyup(function() {
@@ -62,12 +70,23 @@ $.getJSON(banksApi, function(data){
     $('.dataTables_filter input[type=search]').val($(this).val());
 });
 
+function ErrorMessage(){
+  if ($("#members-table td").hasClass("dataTables_empty") ) {
+    $('.members-table-section').hide();
+    $('.error-section').show();
+  } else{
+    $('.error-section').hide();
+  }
+}
+
 /* hide */
 $('.members-table-section').css("display", "none");
+$('.error-section').css("display", "none");
 $('.members-table-section .hide-column').css("display", "none");
 $('.members-table-section .dataTables_wrapper .row:first-child').css("display", "none");
 $('.members-table-section .dataTables_wrapper .row:last-child').css("display", "none");
 $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
+
 $('#search-input').keypress(function(){
   $('.default-section').hide();
   $('.members-table-section').show();
@@ -80,6 +99,17 @@ $('#search-input').keyup(function(){
     $('.default-section').show();
     $('.members-table-section #members-table tbody tr td:last-child').css("display", "none");
   }
+});
+
+$('.typeahead').on('typeahead:selected', function(evt, item) {
+  $('.dataTables_filter input[type=search]').val(item);
+  $('.dataTables_filter input[type=search]').keyup();
+  ErrorMessage();
+});
+
+$('#search-input').keyup(function() {
+  $("#members-table tbody br").replaceWith("<div class='dot'></div>");
+  ErrorMessage();
 });
 
 });
