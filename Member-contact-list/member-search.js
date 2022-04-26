@@ -40,12 +40,12 @@ $('.search-bar .typeahead').typeahead({
 },
 {
   name: 'banks',
-  display: 'bank_name',
+  display: 'value',
   limit: 10000,
   source: substringMatcher(banks),
   templates: {
     suggestion: function(data) {
-        return '<p>' + data.bank_name + '</p>';
+        return '<p>' + data.value + '</p>';
     }
   }
 });
