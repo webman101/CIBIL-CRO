@@ -13,7 +13,7 @@ $gray2: #F9F9F9;
 /* Global Elements */
 .container{
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 20px;    
 }
 .main-heading{
     font-family: "Intro", Regular;
@@ -425,6 +425,37 @@ input{
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+/* Footer Disclaimer */
+.footer-disclaimer{
+    &__wraper{
+        padding-bottom: 10px;
+        @media (min-width: 1200px){
+            width: 1205px;
+        }
+        .paragraph{
+            font-family: "Intro", Book;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: $gray1;
+        }
+    }
+    @media(max-width:768px){
+        &__wraper{
+            padding-left: 10px;
+            padding-right: 11px;
+            .paragraph{
+                font-size: 12px;
+                line-height: 140%;
             }
         }
     }
