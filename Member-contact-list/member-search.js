@@ -33,7 +33,7 @@ $.getJSON(banksApi, function(data){
       cb(matches);
     };
 };
-$('.typeahead').typeahead({
+$('.search-bar .typeahead').typeahead({
   hint: true,
   highlight: true,
   minLength: 1
@@ -41,6 +41,7 @@ $('.typeahead').typeahead({
 {
   name: 'banks',
   display: 'bank_name',
+  limit: 10000,
   source: substringMatcher(banks),
   templates: {
     suggestion: function(data) {
