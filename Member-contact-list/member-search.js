@@ -9,47 +9,45 @@ $(document).ready(function(){
 /* Search */
 var banksApi = "banks.json";
 $.getJSON(banksApi, function(data){
-    /* console.log(data); */
+    var banks = data;
+    /* console.log(banks); */
 
     var substringMatcher = function(strs) {
-        /* console.log('strs', strs); */
-        return function findMatches(q, cb) {
-          /* console.log('q', q); */
-          var matches, substringRegex;
-      
-          // an array that will be populated with substring matches
-          matches = [];
-         /*  console.log('matches', matches); */
-      
-          // regex used to determine if a string contains the substring `q`
-          substrRegex = new RegExp(q, 'i');
-      
-          // iterate through the pool of strings and for any string that
-          // contains the substring `q`, add it to the `matches` array
-          $.each(strs, function(i, str) {
-            if (substrRegex.test(str)) {
-              matches.push(str);
-            }
-          });
-          
-         /*  console.log('matches', matches); */
-      
-          cb(matches);
-        };
-      };
-      
-      var banks = data.banks;
-      
-      $('.search-bar .typeahead').typeahead({
-        hint: true,
-        highlight: true,
-        minLength: 1
-      },
-      {
-        name: 'banks',
-        limit: 5,
-        source: substringMatcher(banks)
+    return function findMatches(q, cb) {
+      var matches, substringRegex;
+
+      // an array that will be populated with substring matches
+      matches = [];
+
+      // regex used to determine if a string contains the substring `q`
+      substrRegex = new RegExp(q, 'i');
+
+      // iterate through the pool of strings and for any string that
+      // contains the substring `q`, add it to the `matches` array
+      $.each(strs, function(i, str) {
+        if (substrRegex.test(str.value)) {
+          matches.push(str);
+        }
       });
+
+      cb(matches);
+    };
+};
+$('.typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 1
+},
+{
+  name: 'banks',
+  display: 'bank_name',
+  source: substringMatcher(banks),
+  templates: {
+    suggestion: function(data) {
+        return '<p>' + data.bank_name + '</p>';
+    }
+  }
+});
 });
 
 /* Table */
@@ -107,7 +105,8 @@ $('#search-input').keyup(function() {
 });
 
 $('.typeahead').on('typeahead:selected', function(evt, item) {
-  $('.dataTables_filter input[type=search]').val(item);
+  /* console.log(item.bank_name); */
+  $('.dataTables_filter input[type=search]').val(item.bank_name);
   $('.dataTables_filter input[type=search]').keyup();
   ShowResult();
   closeKeyboard();
