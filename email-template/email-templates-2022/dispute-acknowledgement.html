@@ -330,6 +330,30 @@
             line-height: 18px;
             color: #707070;
         }
+        .process-block{
+            border-collapse: separate;
+            border: 1px solid #EDEDED;
+            box-sizing: border-box;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #2C2C2C;
+        }
+        .process-block.large, .process-block-path.large{
+            width: 324px !important;
+        }
+        .process-block.small{
+            padding: 30px 7px 18px 30px;
+            padding-left: 18px;
+            padding-right: 7px;
+            width: 260px !important;
+        }
+        .process-block-path .path-line{
+            margin: auto;
+        }
         .hide{
             display: none;
         }
@@ -346,7 +370,7 @@
             .banner-heading{
                 font-size: 25px !important;
             }
-            .section-heading, .dispute-box .dispute-block .title, .dispute-box .dispute-block .description, .dispute-box .dispute-block .status-text, .dispute-box .dispute-timeline .title{
+            .section-heading, .dispute-box .dispute-block .title, .dispute-box .dispute-block .description, .dispute-box .dispute-block .status-text, .dispute-box .dispute-timeline .title, .process-block{
                 font-size: 17px !important;
             }
         }
@@ -810,18 +834,85 @@
                 </tr>
                 </table>
                 <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
-                style="width: 100%; background-color: #ffffff; padding: 30px 20px 10px; border-collapse: separate;">
+                style="width: 100%; background-color: #ffffff; padding: 30px 20px 30px; border-collapse: separate;">
                     <tr>
                         <td>
-                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
-                style="width: 100%; background-color: #ffffff; border-collapse: separate; width: 324px;">
-                                <tr class="process-block">
-                                    <td class="icon" style="padding-right: 31px;"><img src="images/raised.png" width="34" alt="Dispute Raised"></td>
+                            <table class="process-block large" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
+                                <tr>
+                                    <td class="icon" style="padding-right: 31px;width: 78px;"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/raised.png" width="47" alt="Dispute Raised"></td>
                                     <td>Dispute is Raised</td>
                                 </tr>
+                            </table>
+                            <table class="process-block-path large" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
                                 <tr>
-                                    <td class="path">
-                                        <div class="path-line"></div>
+                                    <td style="text-align: center;">
+                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-vertical.png" alt="path" height="30">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="process-block large" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
+                                <tr>
+                                    <td class="icon" style="padding-right: 15.28px; width: 99px;"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/split.png" width="83.72" alt="Dispute split"></td>
+                                    <td>Dispute is split into tickets & assigned to respective Lenders for investigation</td>
+                                </tr>
+                            </table>
+                            <table class="process-block-path large" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
+                                <tr>
+                                    <td>
+                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-left.png" alt="path" height="30">
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-right.png" alt="path" height="30">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
+                                <tr>
+                                    <td>
+                                        <table class="process-block small" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;margin-left: 0;">
+                                            <tr>
+                                                <td class="icon" style="padding-right: 17px; width: 103px;"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/reject.png" width="86" alt="Dispute Reject"></td>
+                                                <td>Lender/CIBIL rejects change</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="process-block small" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;margin-right: 0;">
+                                            <tr>
+                                                <td class="icon" style="padding-right: 17px; width: 103px;"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/confirm.png" width="86" alt="Dispute Confirm"></td>
+                                                <td>Lender/CIBIL confirm changes</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="process-block-path large" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
+                                <tr>
+                                    <td>
+                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-vertical.png" alt="path" height="30">
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-vertical.png" alt="path" height="30">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
+                                <tr>
+                                    <td>
+                                        <table class="process-block small" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;margin-left: 0;padding-top: 9px;padding-bottom: 12.85px;">
+                                            <tr>
+                                                <td class="icon" style="padding-right: 20px; width: 102px;"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/nochanges.png" width="82" alt="No Changes"></td>
+                                                <td>No changes made in report</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table class="process-block small" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;margin-right: 0;padding-top: 9px;padding-bottom: 16.85px;">
+                                            <tr>
+                                                <td class="icon" style="padding-right: 18px; width: 100px;"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/corrections.png" width="82" alt="Dispute Corrections"></td>
+                                                <td>Corrections are made in report</td>
+                                            </tr>
+                                        </table>
                                     </td>
                                 </tr>
                             </table>
