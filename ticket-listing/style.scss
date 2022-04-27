@@ -1,0 +1,111 @@
+/* colors */
+$light-blue: #F6F7FC;
+$black: #2C2C2C;
+$gray: #ACACAC;
+
+
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    @media (min-width: 1200px){
+        width: 1020px;
+    }
+}
+
+a{
+    text-decoration: none;
+    outline: none !important;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+/* breadcrumb */
+.breadcrumb-bar{
+    background-color: $light-blue;
+    &__wraper{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        ul{
+            margin-bottom: 0px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $gray;
+            &.breadcrumb-menu{
+                li{
+                    display: inline;
+                    a{
+                        font-family: "Intro", Book;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 0.02em;
+                        color: $black;
+                    }
+                    &:not(:last-child){
+                        margin-right: 10px;
+                        a{
+                            &:after{
+                                content: url(images/arrow-right.svg);
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+                    &.active{
+                        a{
+                            color: $gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        &__wraper{
+            ul{
+                &.breadcrumb-menu{
+                    li{
+                        &:not(:last-child){
+                            margin-right: 6px;
+                            a{
+                                &:after{
+                                    margin-left: 4px;
+                                }
+                            }
+                        }
+                        a{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* page heading */
+.page-heading{
+    &__Wraper{
+        padding-top: 20px;
+        .link{
+            font-family: "Intro", Regular;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.02em;
+            text-decoration-line: underline;
+            text-underline-offset: 0.1rem;
+            text-decoration-thickness: 0.1rem;
+            color: $black;
+            .icon{
+                margin-right: 10px;
+            }
+        }
+    }
+}
