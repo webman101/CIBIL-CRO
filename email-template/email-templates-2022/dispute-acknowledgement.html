@@ -346,13 +346,31 @@
             width: 324px !important;
         }
         .process-block.small{
+            width: 260px !important;
+        }
+        .process-block.small{
             padding: 30px 7px 18px 30px;
             padding-left: 18px;
             padding-right: 7px;
-            width: 260px !important;
         }
         .process-block-path .path-line{
             margin: auto;
+            height: 30px;
+            width: 2px;
+            background-size: contain;
+        }
+        .process-block-path .path-line.vertical{
+            background-image: url(https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-vertical.png);
+        }
+        .process-block-path .path-line.left, .process-block-path .path-line.right{
+            width: 86px;
+            background-repeat: no-repeat;
+        }
+        .process-block-path .path-line.left{
+            background-image: url("https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-left.png");
+        }
+        .process-block-path .path-line.right{
+            background-image: url(https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-right.png);
         }
         .hide{
             display: none;
@@ -846,7 +864,7 @@
                             <table class="process-block-path large" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
                                 <tr>
                                     <td style="text-align: center;">
-                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-vertical.png" alt="path" height="30">
+                                        <div class="path-line vertical"></div>
                                     </td>
                                 </tr>
                             </table>
@@ -856,13 +874,13 @@
                                     <td>Dispute is split into tickets & assigned to respective Lenders for investigation</td>
                                 </tr>
                             </table>
-                            <table class="process-block-path large" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
+                            <table class="process-block-path small" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
                                 <tr>
-                                    <td>
-                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-left.png" alt="path" height="30">
+                                    <td style="padding-left: 39.2px;">
+                                        <div class="path-line left"></div>
                                     </td>
-                                    <td style="text-align: right;">
-                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-right.png" alt="path" height="30">
+                                    <td style="padding-right: 39.2px;">
+                                        <div class="path-line right"></div>
                                     </td>
                                 </tr>
                             </table>
@@ -886,13 +904,13 @@
                                     </td>
                                 </tr>
                             </table>
-                            <table class="process-block-path large" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
+                            <table class="process-block-path small" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;">
                                 <tr>
-                                    <td>
-                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-vertical.png" alt="path" height="30">
+                                    <td style="padding-right: 19.2px;">
+                                        <div class="path-line vertical"></div>
                                     </td>
-                                    <td style="text-align: right;">
-                                        <img class="path-line" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/path-vertical.png" alt="path" height="30">
+                                    <td style="padding-left: 19.2px;">
+                                        <div class="path-line vertical"></div>
                                     </td>
                                 </tr>
                             </table>
