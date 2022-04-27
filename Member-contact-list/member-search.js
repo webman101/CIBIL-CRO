@@ -41,7 +41,7 @@ $('.search-bar .typeahead').typeahead({
 {
   name: 'banks',
   display: 'value',
-  limit: 10000,
+  limit: 100,
   source: substringMatcher(banks),
   templates: {
     suggestion: function(data) {
