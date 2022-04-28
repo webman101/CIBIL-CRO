@@ -2,8 +2,7 @@
 $light-blue: #F6F7FC;
 $black: #2C2C2C;
 $gray: #ACACAC;
-
-
+$border-color2:#EBEBEB;
 
 .container {
     padding-left: 20px;
@@ -18,6 +17,18 @@ a{
     outline: none !important;
     &:hover{
         text-decoration: none;
+    }
+}
+
+.hide-mob{
+    @media(max-width:768px){
+        display: none;
+    }
+}
+
+.hide-desk{
+    @media(min-width:769px){
+        display: none;
     }
 }
 
@@ -105,6 +116,84 @@ a{
             color: $black;
             .icon{
                 margin-right: 10px;
+            }
+        }
+    }
+}
+
+/* dispute details */
+.dispute-details-section{
+    &__wraper{
+        padding-top: 30px;
+        padding-bottom: 40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        .tables{
+            padding: 20px;
+            border: 1px solid $border-color2;
+            border-radius: 6px;
+            display: flex;
+            table{
+                &:not(:last-child){
+                    margin-right: 80px;
+                }
+                .details-row{
+                    a{
+                        text-decoration-style: dashed;
+                        text-decoration-line: underline;
+                        text-decoration-thickness: 1.4px;
+                        text-underline-offset: 0.5rem;
+                        color: $black;
+                    }
+                    &:not(:last-child){
+                        .title, .content{
+                            padding-bottom: 20px;
+                        }
+                    }
+                    .title{
+                        font-family: "Intro", Book;
+                        color: $black;
+                        padding-right: 60px;
+                        font-weight: 400;
+                    }
+                    .content{
+                        font-family: "Intro", Regular;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        &__wraper{
+            padding-top: 20px;
+            padding-bottom: 30px;
+            .tables{
+                flex-direction: column;
+                border: none;
+                padding: 0px;
+                table{
+                    width: 100%;
+                    &:not(:last-child){
+                        margin-right: 0px;
+                        margin-bottom: 20px;
+                    }
+                    .details-row{
+                        display: flex;
+                        justify-content: space-between;
+                        .title, .content{
+                            display: block;
+                            padding-right: 0px !important;
+                        }
+                        &:not(:last-child){
+                            .title, .content{
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
