@@ -46,11 +46,11 @@
                     </table>
                     <table>
                         <tr class="details-row">
-                            <th class="title"><a href="">Tickets Resolved</a> :</th>
+                            <th class="title"><a data-toggle="modal" data-target="#ticketResolved">Tickets Resolved</a> :</th>
                             <td class="content">2/3</td>
                         </tr>
                         <tr class="details-row">
-                            <th class="title"><a href="">Dispute Status</a> :</th>
+                            <th class="title"><a>Dispute Status</a> :</th>
                             <td class="content">OPEN</td>
                         </tr>
                     </table>
@@ -60,6 +60,24 @@
         </div>
     </div>
     <!-- page content ends here -->
+
+    <!-- Ticket Resolved Modal start -->
+    <div class="modal fade" id="ticketResolved" tabindex="-1" role="dialog" aria-labelledby="ticketResolvedLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <p class="modal-title" id="ticketResolvedLabel">Tickets Resolved</p>
+            </div>
+            <div class="modal-body">
+            <p>These are the number of tickets that are marked as resolved. Each ticket is reviewed by the respective credit institution/bank. Once reviwed, the changes are either accepted or rejected and the ticket is marked as resolved.</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Ticket Resolved Modal end -->
 
 
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>

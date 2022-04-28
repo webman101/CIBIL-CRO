@@ -1,7 +1,9 @@
 /* colors */
+$blue: #00A6CA;
 $light-blue: #F6F7FC;
 $black: #2C2C2C;
 $gray: #ACACAC;
+$gray1: #707070;
 $border-color2:#EBEBEB;
 
 .container {
@@ -141,11 +143,16 @@ a{
                 }
                 .details-row{
                     a{
-                        text-decoration-style: dashed;
+                        /* text-decoration-style: dashed;
                         text-decoration-line: underline;
                         text-decoration-thickness: 1.4px;
-                        text-underline-offset: 0.5rem;
+                        text-underline-offset: 0.5rem; */
                         color: $black;
+                        cursor: pointer;
+                        background-image: linear-gradient(to right, $black 80%, rgba(255,255,255,0) 0%);
+                        background-position: bottom;
+                        background-size: 5px 1.4px;
+                        background-repeat: repeat-x;
                     }
                     &:not(:last-child){
                         .title, .content{
@@ -195,6 +202,69 @@ a{
                     }
                 }
             }
+        }
+    }
+}
+
+/* modal */
+.modal-backdrop{
+    &.in{
+        opacity: 60%;
+    }
+}
+.modal{
+    .modal-dialog{
+        max-width: 374px;
+        margin: 229px auto 30px;
+        .modal-content{
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            box-shadow: none;
+            border: none;
+            p{
+                margin-bottom: 0px;
+            }
+            .modal-header, .modal-footer{
+                border: none;
+            }
+            .modal-header{
+                padding: 20px;
+                padding-bottom: 0px;
+                .modal-title{
+                    font-family: "Intro", Bold;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    color: black;
+                }
+            }
+            .modal-body{
+                padding: 10px 20px;
+                font-family: "Intro", Book;
+                font-size: 16px;
+                line-height: 24px;
+                color: $gray1;
+                min-height: auto;
+            }
+            .modal-footer{
+                margin-top: 0px;
+                padding: 10px 20px 14px;
+                button{
+                    font-family: "Intro", Bold;
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    border: none;
+                    background: transparent;
+                    color: $blue;
+                }
+            }
+        }
+    }
+    @media(max-width:414px){
+        .modal-dialog{
+            max-width: calc(100% - 40px);
         }
     }
 }
