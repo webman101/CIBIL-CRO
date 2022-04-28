@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cibil-pvw.transunion.com/public/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -46,7 +46,7 @@
                     </table>
                     <table>
                         <tr class="details-row">
-                            <th class="title"><a data-toggle="modal" data-target="#ticketResolved">Tickets Resolved</a> :</th>
+                            <th class="title"><a data-bs-toggle="modal" data-bs-target="#ticketResolved">Tickets Resolved</a> :</th>
                             <td class="content">2/3</td>
                         </tr>
                         <tr class="details-row">
@@ -55,6 +55,55 @@
                         </tr>
                     </table>
                 </div>
+            </div>
+        </div>
+        <div class="tickets-section">
+            <div class="container tickets-section__wraper">
+                <div class="inner-container">
+                    <div class="filters">
+                        <p class="heading hide-mob">Here is a list of Tickets</p>
+                        <div class="dropdown hide-mob">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Filter by :<p class="dropdown-text">All Tickets</p>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li>
+                                <a class="dropdown-item">
+                                    <label class="dropdown-radio"><input type="radio" value="pills-all-tab" name="status" checked><i class="radio"></i>All Tickets</label>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item">
+                                    <label class="dropdown-radio"><input type="radio" value="pills-resolved-tab" name="status"><i class="radio"></i>Resolved Tickets</label>
+                                </a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item">
+                                    <label class="dropdown-radio"><input type="radio" value="pills-open-tab" name="status"><i class="radio"></i>Open Tickets</label>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        <ul class="nav nav-pills mb-3 hide-desk" id="pills-tab" role="tablist">
+                            <p class="title">filter by:</p>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-resolved-tab" data-bs-toggle="pill" data-bs-target="#pills-resolved" type="button" role="tab" aria-controls="pills-resolved" aria-selected="false">Resolved</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-open-tab" data-bs-toggle="pill" data-bs-target="#pills-open" type="button" role="tab" aria-controls="pills-open" aria-selected="false">Open</button>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="filter-content">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">All Tickets ..</div>
+                            <div class="tab-pane fade" id="pills-resolved" role="tabpanel" aria-labelledby="pills-resolved-tab">Resolved Tickets ..</div>
+                            <div class="tab-pane fade" id="pills-open" role="tabpanel" aria-labelledby="pills-open-tab">Open Tickets ..</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,26 +111,26 @@
     <!-- page content ends here -->
 
     <!-- Ticket Resolved Modal start -->
-    <div class="modal fade" id="ticketResolved" tabindex="-1" role="dialog" aria-labelledby="ticketResolvedLabel" aria-hidden="true">
+    <div class="modal fade" id="ticketResolved" tabindex="-1" aria-labelledby="ticketResolvedLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <p class="modal-title" id="ticketResolvedLabel">Tickets Resolved</p>
+            <div class="modal-content">
+                <div class="modal-header">
+                <p class="modal-title" id="ticketResolvedLabel">Tickets Resolved</p>
+                </div>
+                <div class="modal-body">
+                <p>These are the number of tickets that are marked as resolved. Each ticket is reviewed by the respective credit institution/bank. Once reviwed, the changes are either accepted or rejected and the ticket is marked as resolved.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" data-bs-dismiss="modal">Okay</button>
+                </div>
             </div>
-            <div class="modal-body">
-            <p>These are the number of tickets that are marked as resolved. Each ticket is reviewed by the respective credit institution/bank. Once reviwed, the changes are either accepted or rejected and the ticket is marked as resolved.</p>
-            </div>
-            <div class="modal-footer">
-            <button type="button" data-dismiss="modal">Okay</button>
-            </div>
-        </div>
         </div>
     </div>
     <!-- Ticket Resolved Modal end -->
 
 
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
-    <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
     <script src="ticket-listing.js"></script>
 </body>
 
