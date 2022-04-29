@@ -1,5 +1,6 @@
 /* colors */
 $blue: #00A6CA;
+$secondary-blue: #006685;
 $light-blue: #F6F7FC;
 $black: #2C2C2C;
 $gray: #ACACAC;
@@ -54,6 +55,15 @@ a{
     &:hover{
         color: #FFFFFF;
     }
+}
+
+.blue-link{
+    color: $secondary-blue !important;
+    text-decoration-line: underline;
+    font-family: $intro-bold;
+    font-weight: 700;
+    text-underline-offset: 0.1rem;
+    text-decoration-thickness: 0.5px;
 }
 
 .hide-mob{
@@ -304,7 +314,7 @@ a{
     }
 }
 
-/* Filters */
+/* Filters & tickets */
 .tickets-section{
     margin-bottom: 20px;
     &__wraper{
@@ -815,6 +825,53 @@ a{
                 .filter-content{
                     max-width: 100%;
                 }
+            }
+        }
+    }
+}
+
+/* contact */
+.link-cta-section{
+    padding-top: 10px;
+    padding-bottom: 60px;
+    &__wraper{
+        border: 1px solid $border-color2;
+        border-radius: 6px;
+        padding: 20px;
+        display: flex;
+        p{
+            margin-bottom: 0px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .right-panel{
+            padding-left: 20px;
+            .title{
+                font-family: $intro-regular;
+                font-weight: 600;
+                color: #000000;
+                line-height: 24px;
+                margin-bottom: 10px;
+            }
+            .description{
+                color: $black;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $intro-book;
+            }
+            .blue-link{
+                font-family: $intro-regular;
+                font-weight: 600;
+            }
+        }
+    }
+    @media(max-width:768px){
+        padding-top: 0px;
+        padding-bottom: 30px;
+        &__wraper{
+            .right-panel{
+                padding-left: 10px;
             }
         }
     }
