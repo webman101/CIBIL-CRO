@@ -7,6 +7,11 @@ $gray1: #707070;
 $gray2: #F9F9F9;
 $border-color1:#EDEDED;
 $border-color2:#EBEBEB;
+$border-color3:#DDDDDD;
+$inprogress-text: #F16E00;
+$inprogress-bg: #FCE2CC;
+$resolved-bg: #DDEDC0;
+$resolved-text: #3BB012;
 
 /* fonts */
 $intro-book : "Intro", Book;
@@ -26,6 +31,28 @@ a{
     outline: none !important;
     &:hover{
         text-decoration: none;
+    }
+}
+
+.blue-btn{
+    background-color: $blue;
+    padding: 6px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $intro-book;
+    color: #FFFFFF;
+    border: 1px solid $blue;
+    box-sizing: border-box;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon{
+        margin-left: 10px;
+    }
+    &:hover{
+        color: #FFFFFF;
     }
 }
 
@@ -279,6 +306,7 @@ a{
 
 /* Filters */
 .tickets-section{
+    margin-bottom: 20px;
     &__wraper{
         letter-spacing: 0.02em;
         font-weight: 400;
@@ -408,24 +436,140 @@ a{
                     font-weight: 400;
                     font-family: $intro-regular;
                     color: #2C2C2C;
+                    &:not(:last-child){
+                        margin-bottom: 30px;
+                    }
                     &__header {
                         background: #F1F6FF;
                         padding: 15px 20px;
                         display: flex;
                         align-items: center;
-                        .title{
-                            color: #000000;
-                            font-family: $intro-bold;
-                            font-weight: 700;
-                            margin-right: 20px;
-                        }
-                        .update-status{
-                            font-family: $intro-book;
-                            margin-right: 30px;
-                        }
-                        .status-details {
+                        justify-content: space-between;
+                        .left-panel{
                             display: flex;
                             align-items: center;
+                            .title{
+                                color: #000000;
+                                font-family: $intro-bold;
+                                font-weight: 700;
+                                margin-right: 20px;
+                            }
+                            .update-status{
+                                font-family: $intro-book;
+                                padding-left: 24px;
+                                margin-right: 30px;
+                                position: relative;
+                                &:before{
+                                    content: '';
+                                    height: 3px;
+                                    width: 3px;
+                                    background-color: $black;
+                                    position: absolute;
+                                    border-radius: 5px;
+                                    left: 11px;
+                                    top: 11px;
+                                }
+                            }
+                            .status-details {
+                                display: flex;
+                                align-items: center;
+                                .bank{
+                                    color: $gray1;
+                                    margin-left: 10px;
+                                    font-family: $intro-book;
+                                }
+                                .ticket-status {
+                                    padding: 2px 6px;
+                                    background-color: #fff;
+                                    border-radius: 4px;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    display: flex;
+                                    align-items: center;
+                                    .icon{
+                                        margin-right: 6px;
+                                        display: none;
+                                    }
+                                }
+                                &.inprogress{
+                                    .ticket-status{
+                                        background-color: $inprogress-bg;
+                                        color: $inprogress-text;
+                                    }
+                                }
+                                &.resolved{
+                                    .ticket-status{
+                                        background-color: $resolved-bg;
+                                        color: $resolved-text;
+                                        .icon{
+                                            display: flex;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &__body{
+                        position: relative;
+                        .details-block{
+                            &__header {
+                                background: #F9F9F9;
+                                padding: 10px 20px;
+                                .title{
+                                    text-transform: uppercase;
+                                    font-weight: 600;
+                                }
+                            }
+                            &__body{
+                                padding: 20px;
+                                .details-row{
+                                    padding-top: 20px;
+                                    padding-bottom: 20px;
+                                    &:first-child{
+                                        padding-top: 0px;
+                                    }
+                                    &:last-child{
+                                        padding-bottom: 0px;
+                                    }
+                                    &:not(:last-child){
+                                        border-bottom: 0.6px solid $border-color3;
+                                    }
+                                    .top-panel{
+                                        padding-bottom: 10px;
+                                        .title{
+                                            font-weight: 600;
+                                        }
+                                    }
+                                    .bottom-panel{
+                                        display: flex;
+                                        align-items: flex-start;
+                                        font-family: $intro-book;
+                                        .description{
+                                            font-size: 16px;
+                                            color: $gray1;
+                                            line-height: 24px;
+                                        }
+                                        .left-panel{
+                                            width: 50%;
+                                            min-width: 50%;
+                                            .description{
+                                                max-width: 350px;
+                                            }
+                                        }
+                                        .seperator{
+                                            img{
+                                                width: 19px;
+                                            }
+                                        }
+                                        .right-panel{
+                                            padding-left: 40px;
+                                            .description{
+                                                margin-top: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -506,6 +650,7 @@ a{
                                     margin-right: 10px;
                                 }
                                 .nav-link{
+                                    background-color: #ffffff;
                                     border: 0.6px solid $gray;
                                     box-sizing: border-box;
                                     border-radius: 32px;
@@ -528,8 +673,101 @@ a{
                     }
                 }
                 .filter-content{
-                    padding-left: 20px;
-                    padding-right: 20px;
+                    padding:30px 20px 10px;
+                    .ticket{
+                        &:not(:last-child){
+                            margin-bottom: 20px;
+                        }
+                        &__header{
+                            position: relative;
+                            padding: 20px 12px 14px;
+                            flex-wrap: wrap;
+                            .left-panel{
+                                flex-wrap: wrap;
+                                .title{
+                                    margin-right: 0px;
+                                }
+                                .update-status{
+                                    font-size: 14px;
+                                    margin-right: 0px;
+                                }
+                                .status-details{
+                                    font-size: 14px;
+                                    margin-top: 14px;
+                                    .ticket-status{
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                            .right-panel{
+                                .blue-btn{
+                                    width: 30px;
+                                    height: 30px;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 20px;
+                                    right: 12px;
+                                    padding: 9px 12px;
+                                    .icon{
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        &__body{
+                            .details-block{
+                                &__header{
+                                    padding: 8px 12px;
+                                    border-top: 0.6px solid $border-color3;
+                                    .title{
+                                        font-size: 12px;
+                                        color: $gray1;
+                                        font-family: $intro-bold;
+                                        font-weight: 700;
+                                    }
+                                }
+                                &__body{
+                                    padding: 10px 12px;
+                                    .details-row{
+                                        padding-bottom: 10px;
+                                        padding-top: 10px;
+                                        .top-panel{
+                                            padding-bottom: 10px;
+                                            .title{
+                                                font-size: 14px;
+                                            }
+                                        }
+                                        .bottom-panel{
+                                            .left-panel{
+                                                width: 41%;
+                                                min-width: 41%;
+                                                .description{
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                            .seperator{
+                                                img{
+                                                    width: 13px;
+                                                }
+                                            }
+                                            .right-panel{
+                                                padding-left: 16px;
+                                                .status{
+                                                    font-size: 14px;
+                                                    font-weight: 600;
+                                                }
+                                                .description{
+                                                    font-size: 12px;
+                                                    margin-top: 6px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
