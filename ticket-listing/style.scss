@@ -73,7 +73,7 @@ a{
 }
 
 .hide-desk{
-    @media(min-width:768px){
+    @media(min-width:769px){
         display: none;
     }
 }
@@ -213,6 +213,17 @@ a{
                     .content{
                         font-family: "Intro", Regular;
                         font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:992px){
+        &__wraper{
+            .tables{
+                table{
+                    &:not(:last-child){
+                        margin-right: auto;
                     }
                 }
             }
@@ -635,6 +646,33 @@ a{
             /* radio buttons ends */
         }
     }
+    @media(max-width:992px){
+        &__wraper{
+            .inner-container{
+                .filter-content{
+                    .ticket{
+                        &__header{
+                            position: relative;
+                            .left-panel{
+                                flex-wrap: wrap;
+                                .status-details{
+                                    margin-top: 14px;
+                                    width: 100%;
+                                }
+                            }
+                            .right-panel{
+                                .blue-btn{
+                                    position: absolute;
+                                    top: 20px;
+                                    right: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     @media(max-width:768px){
         &__wraper{
             padding-left: 0px;
@@ -704,6 +742,7 @@ a{
                                 .status-details{
                                     font-size: 14px;
                                     margin-top: 14px;
+                                    width: 100%;
                                     .ticket-status{
                                         font-size: 14px;
                                         font-weight: 600;
