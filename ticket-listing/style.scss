@@ -8,6 +8,11 @@ $gray2: #F9F9F9;
 $border-color1:#EDEDED;
 $border-color2:#EBEBEB;
 
+/* fonts */
+$intro-book : "Intro", Book;
+$intro-regular : "Intro", Regular;
+$intro-bold : "Intro", Bold;
+
 .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -393,6 +398,37 @@ a{
                 max-width: 100%;
                 padding: 40px;
                 border-top: 1px solid $border-color1;
+                .ticket {
+                    border: 1px solid $border-color2;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    font-weight: 400;
+                    font-family: $intro-regular;
+                    color: #2C2C2C;
+                    &__header {
+                        background: #F1F6FF;
+                        padding: 15px 20px;
+                        display: flex;
+                        align-items: center;
+                        .title{
+                            color: #000000;
+                            font-family: $intro-bold;
+                            font-weight: 700;
+                            margin-right: 20px;
+                        }
+                        .update-status{
+                            font-family: $intro-book;
+                            margin-right: 30px;
+                        }
+                        .status-details {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
             }
             /* radio buttons */
             input[type="radio"]:checked,
@@ -412,7 +448,7 @@ a{
                 position: absolute;
                 left: 0;
                 top: 2px;
-                width: 17px;
+                width: 16px;
                 height: 16px;
                 border: 1px solid $gray1;
                 border-radius: 100%;
