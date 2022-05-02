@@ -303,14 +303,19 @@ a{
                 line-height: 24px;
                 color: $gray1;
                 min-height: auto;
+                b{
+                    font-family: $intro-bold;
+                    font-weight: 700;
+                }
             }
             .modal-footer{
                 margin-top: 0px;
-                padding: 10px 20px 14px;
+                padding: 10px 20px 20px;
                 button{
                     font-family: "Intro", Bold;
                     font-weight: 700;
                     font-size: 16px;
+                    margin: 0px;
                     text-transform: uppercase;
                     border: none;
                     background: transparent;
@@ -488,7 +493,7 @@ a{
                                 &:active, &:hover{
                                     background-color: $gray2;
                                     label{
-                                        color: $black;
+                                        color: $gray1;
                                         font-family: "Intro", Regular;
                                         font-weight: 600;
                                     }
@@ -514,6 +519,7 @@ a{
                         line-height: 24px;
                         color: $gray1;
                         margin-right: 16px;
+                        text-transform: capitalize;
                     }
                 }
             }
@@ -749,8 +755,12 @@ a{
                                     margin-top: 14px;
                                     width: 100%;
                                     .ticket-status{
+                                        padding: 4px 6px 2px;
                                         font-size: 14px;
                                         font-weight: 600;
+                                        .icon{
+                                            margin-top: -3px;
+                                        }
                                     }
                                 }
                             }
@@ -794,19 +804,20 @@ a{
                                         }
                                         .bottom-panel{
                                             .left-panel{
-                                                width: 41%;
-                                                min-width: 41%;
+                                                width: 47%;
+                                                min-width: 47%;
                                                 .description{
                                                     font-size: 14px;
                                                 }
                                             }
                                             .seperator{
+                                                padding: 0 16px;
                                                 img{
                                                     width: 13px;
                                                 }
                                             }
                                             .right-panel{
-                                                padding-left: 16px;
+                                                padding-left: 0px;
                                                 .status{
                                                     font-size: 14px;
                                                     font-weight: 600;
@@ -814,6 +825,7 @@ a{
                                                 .description{
                                                     font-size: 12px;
                                                     margin-top: 6px;
+                                                    line-height: 18px;
                                                 }
                                             }
                                         }
