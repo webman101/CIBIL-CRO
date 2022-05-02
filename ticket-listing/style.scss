@@ -2,6 +2,7 @@
 $blue: #00A6CA;
 $secondary-blue: #006685;
 $light-blue: #F6F7FC;
+$light_blue2:#F1F6FF;
 $black: #2C2C2C;
 $gray: #ACACAC;
 $gray1: #707070;
@@ -12,7 +13,7 @@ $border-color3:#DDDDDD;
 $inprogress-text: #F16E00;
 $inprogress-bg: #FCE2CC;
 $resolved-bg: #DDEDC0;
-$resolved-text: #3BB012;
+$green: #3BB012;
 
 /* fonts */
 $intro-book : "Intro", Book;
@@ -327,7 +328,7 @@ a{
 
 /* Filters & tickets */
 .ticket__header {
-    background: #F1F6FF;
+    background: $light_blue2;
     padding: 15px 20px;
     display: flex;
     align-items: center;
@@ -389,7 +390,7 @@ a{
             &.resolved{
                 .ticket-status{
                     background-color: $resolved-bg;
-                    color: $resolved-text;
+                    color: $green;
                     .icon{
                         display: flex;
                     }
