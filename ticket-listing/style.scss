@@ -484,7 +484,7 @@ a{
                                 padding: 10px 20px;
                                 transition: all 0.3s ease;
                                 label{
-                                    color: $gray;
+                                    color: $gray1;
                                     transition: all 0.3s ease;
                                     display: flex;
                                     align-items: center;
@@ -493,7 +493,7 @@ a{
                                 &:active, &:hover{
                                     background-color: $gray2;
                                     label{
-                                        color: $gray1;
+                                        color: $black;
                                         font-family: "Intro", Regular;
                                         font-weight: 600;
                                     }
