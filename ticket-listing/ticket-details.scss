@@ -26,6 +26,10 @@ $intro-bold : "Intro", Bold;
                 content: none;
             }
         }
+        .status-details{
+            width: auto;
+            margin-top: 0px;
+        }
     }
     @media(max-width:768px){
         border-bottom: none;
