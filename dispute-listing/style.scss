@@ -1,1 +1,300 @@
 @import "scss/global";
+
+.page-content{
+    @media(max-width:768px){
+        background-color: $light-blue;
+    }
+}
+
+/* Page Heading */
+.page-heading{
+    &__wraper{
+        padding-top: 60px;
+        padding-bottom: 20px;
+
+        .heading{
+            font-family: $intro-bold;
+            font-weight:700;
+            font-size: 32px;
+            line-height: 44px;
+            letter-spacing: -0.01em;
+            color: $black;
+            margin-bottom: 20px;
+        }
+        .subheading{
+            font-family: $intro-book;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: $black;
+            margin-bottom: 0px;
+        }
+    }
+    @media(max-width:768px){
+        &__wraper{
+            padding-top: 20px;
+            border-top: 0.6px solid $border-color3;
+            .heading{
+                font-size: 24px;
+                line-height: 30px;
+                font-weight: 600;
+                font-family: $intro-regular;
+            }
+        }
+    }
+}
+
+/* Disputes Section */
+.disputes-section{
+    padding-bottom: 30px;
+    &__wraper{
+        .disputes{
+            &__header{
+                .nav{
+                    .nav-item{
+                        margin-bottom: 0px;
+                        .nav-link{
+                            font-family: $intro-bold;
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 24px;
+                            display: flex;
+                            align-items: center;
+                            text-transform: uppercase;
+                            color: $gray1;
+                            background-color: transparent;
+                            border: none;
+                            padding: 10px 33px;
+                            border-bottom: 4px solid transparent;
+                            transition: color .2s ease-in-out, border .2s ease-in-out;
+                            &.active{
+                                color:$blue;
+                                border-color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+            &__body{
+                .wraper{
+                    border: 1px solid $border-color1;
+                    padding: 30px;
+                    .dispute{
+                        &__wraper{
+                            border: 1px solid $border-color2;
+                            overflow: hidden;
+                            border-radius: 6px;
+                        }
+                        &__header, &__body{
+                            padding: 20px;
+                        }
+                        &__header{
+                            background-color: $light-blue;
+                            display: flex;
+                            justify-content: space-between;
+                            .left-panel{
+                                display: flex;
+                                flex-wrap: wrap;
+                                .dispute-id{
+                                    font-family: $intro-bold;
+                                    font-weight: 700;
+                                    font-size: 20px;
+                                    line-height: 30px;
+                                    margin-bottom: 7px;
+                                    color: $black;
+                                    width: 100%;
+                                }
+                                .dispute-status{
+                                    color: $inprogress-text;
+                                    font-family: $intro-bold;
+                                    font-weight: 700;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    text-transform: uppercase;
+                                    margin-right: 20px;
+                                    &.closed{
+                                        color: $light-green;
+                                    }
+                                }
+                                .dispute-update{
+                                    font-family: $intro-book;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    display: flex;
+                                    align-items: center;
+                                    letter-spacing: 0.02em;
+                                    color: $gray1;
+                                    margin-bottom: 0px;
+                                    .date{
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+                        }&__body{
+                            .dispute-details{
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 24px;
+                                letter-spacing: 0.02em;
+                                color: $black;
+                                th{
+                                    font-family: $intro-book;
+                                    font-weight: 400;
+                                    padding: 0px;
+                                    padding-bottom: 10px;
+                                    &:not(:last-child){
+                                        padding-right: 114px;
+                                    }
+                                }
+                                td{
+                                    font-family: $intro-regular;
+                                    font-weight: 600;
+                                    padding: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        padding-bottom: 20px;
+        &__wraper{
+            .disputes{
+                &__header{
+                    .nav{
+                        flex-wrap: nowrap;
+                        .nav-item{
+                            .nav-link{
+                                font-size: 14px;
+                                line-height: 24px;
+                                padding: 13px 23.5px;
+                            }
+                        }
+                    }
+                }
+                &__body{
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    .wraper{
+                        border: none;
+                        background-color: #fff;
+                        padding: 30px 20px 20px;
+                        .blue-btn {
+                            border-radius: 2px;
+                            height: 30px;
+                            width: 30px;
+                            padding: 0px;
+                            .icon{
+                                margin-left: 0px;
+                            }
+                        }
+                        .dispute{
+                            &__header{
+                                padding: 20px 12px 10px;
+                                .left-panel{
+                                    .dispute-id{
+                                        font-size: 16px;
+                                        margin-bottom: 5px;
+                                    }
+                                    .dispute-status, .dispute-update{
+                                        font-size: 14px;
+                                    }
+                                    .dispute-status{
+                                        margin-right: 0px;
+                                    }
+                                    .dispute-update{
+                                        position: relative;
+                                        padding-left: 24px;
+                                        &:before{
+                                            content: '';
+                                            height: 3px;
+                                            width: 3px;
+                                            background-color: $gray1;
+                                            position: absolute;
+                                            border-radius: 5px;
+                                            left: 11px;
+                                            top: 11px;
+                                        }
+                                    }
+                                }
+                                .right-panel{
+                                    .blue-btn{
+                                        align-self: center;
+                                    }
+                                }
+                            }
+                            &__body{
+                                padding-left: 12px;
+                                padding-right: 12px;
+                                .dispute-details{
+                                    width: 100%;
+                                    tbody{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        th, td{
+                                            padding-bottom: 0px;
+                                            &:not(:last-child){
+                                                padding-right: 0px;
+                                                padding-bottom: 10px;
+                                            }
+                                        }
+                                        tr, td, th{
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Disclaimers */
+.disclaimers{
+    padding-bottom: 60px;
+    padding-top: 30px;
+    &__wraper{
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+        .blue-link{
+            font-weight: 400;
+            font-family: $intro-book;
+        }
+        .title{
+            font-family: $intro-bold;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        p{
+            font-family: $intro-book;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            margin-bottom: 0px;
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media(max-width:768px){
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &__wraper{
+            font-size: 14px;
+            color: $gray1;
+            p{
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
