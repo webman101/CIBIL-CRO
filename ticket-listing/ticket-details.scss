@@ -26,10 +26,6 @@ $intro-bold : "Intro", Bold;
                 content: none;
             }
         }
-        .status-details{
-            width: auto;
-            margin-top: 0px;
-        }
     }
     @media(max-width:768px){
         border-bottom: none;
@@ -59,17 +55,15 @@ $intro-bold : "Intro", Bold;
             .filter-content{
                 .ticket__body{
                     .details-block{
-                        &__header{
-                            .title{
-                                font-family: $intro-bold;
-                                font-weight: 700;
-                            }
-                        }
                         &.timeline{
                             background-color: $light_blue2;
                             .details-block__header{
                                 background-color: $light-blue2;
                                 padding-top: 20px;
+                                    .title{
+                                        font-family: $intro-bold;
+                                        font-weight: 700;
+                                    }
                             }
                             .details-block__body{
                                 padding-top: 10px;
