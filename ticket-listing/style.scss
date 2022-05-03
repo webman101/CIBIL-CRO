@@ -29,6 +29,7 @@ $intro-bold : "Intro", Bold;
 }
 
 a{
+    cursor: pointer;
     text-decoration: none;
     outline: none !important;
     &:hover{
