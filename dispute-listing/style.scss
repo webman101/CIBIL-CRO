@@ -78,80 +78,86 @@
             }
             &__body{
                 .wraper{
-                    border: 1px solid $border-color1;
-                    padding: 30px;
-                    .dispute{
-                        &__wraper{
-                            border: 1px solid $border-color2;
-                            overflow: hidden;
-                            border-radius: 6px;
-                        }
-                        &__header, &__body{
-                            padding: 20px;
-                        }
-                        &__header{
-                            background-color: $light-blue;
-                            display: flex;
-                            justify-content: space-between;
-                            .left-panel{
+                    .tab-content{
+                        border: 1px solid $border-color1;
+                        padding: 30px;
+                        .dispute{
+                            &:not(:last-child){
+                                margin-bottom: 30px;
+                            }
+                            &__wraper{
+                                border: 1px solid $border-color2;
+                                overflow: hidden;
+                                border-radius: 6px;
+                            }
+                            &__header, &__body{
+                                padding: 20px;
+                            }
+                            &__header{
+                                background-color: $light-blue;
                                 display: flex;
-                                flex-wrap: wrap;
-                                .dispute-id{
-                                    font-family: $intro-bold;
-                                    font-weight: 700;
-                                    font-size: 20px;
-                                    line-height: 30px;
-                                    margin-bottom: 7px;
-                                    color: $black;
-                                    width: 100%;
-                                }
-                                .dispute-status{
-                                    color: $inprogress-text;
-                                    font-family: $intro-bold;
-                                    font-weight: 700;
-                                    font-size: 16px;
-                                    line-height: 24px;
-                                    text-transform: uppercase;
-                                    margin-right: 20px;
-                                    &.closed{
-                                        color: $light-green;
-                                    }
-                                }
-                                .dispute-update{
-                                    font-family: $intro-book;
-                                    font-weight: 400;
-                                    font-size: 16px;
-                                    line-height: 24px;
+                                justify-content: space-between;
+                                .left-panel{
                                     display: flex;
-                                    align-items: center;
-                                    letter-spacing: 0.02em;
-                                    color: $gray1;
-                                    margin-bottom: 0px;
-                                    .date{
-                                        margin-left: 10px;
+                                    flex-wrap: wrap;
+                                    .dispute-id{
+                                        font-family: $intro-bold;
+                                        font-weight: 700;
+                                        font-size: 20px;
+                                        line-height: 30px;
+                                        margin-bottom: 7px;
+                                        color: $black;
+                                        width: 100%;
+                                    }
+                                    .dispute-status{
+                                        color: $inprogress-text;
+                                        font-family: $intro-bold;
+                                        font-weight: 700;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        text-transform: uppercase;
+                                        margin-right: 20px;
+                                        &.closed{
+                                            color: $light-green;
+                                        }
+                                    }
+                                    .dispute-update{
+                                        font-family: $intro-book;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        line-height: 24px;
+                                        display: flex;
+                                        align-items: center;
+                                        letter-spacing: 0.02em;
+                                        color: $gray1;
+                                        margin-bottom: 0px;
+                                        .date{
+                                            margin-left: 10px;
+                                        }
                                     }
                                 }
                             }
-                        }&__body{
-                            .dispute-details{
-                                font-weight: 400;
-                                font-size: 16px;
-                                line-height: 24px;
-                                letter-spacing: 0.02em;
-                                color: $black;
-                                th{
-                                    font-family: $intro-book;
+                            &__body{
+                                .dispute-details{
                                     font-weight: 400;
-                                    padding: 0px;
-                                    padding-bottom: 10px;
-                                    &:not(:last-child){
-                                        padding-right: 114px;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    letter-spacing: 0.02em;
+                                    color: $black;
+                                    th{
+                                        font-family: $intro-book;
+                                        font-weight: 400;
+                                        padding: 0px;
+                                        padding-bottom: 10px;
+                                        &:not(:last-child){
+                                            padding-right: 114px;
+                                        }
                                     }
-                                }
-                                td{
-                                    font-family: $intro-regular;
-                                    font-weight: 600;
-                                    padding: 0px;
+                                    td{
+                                        font-family: $intro-regular;
+                                        font-weight: 600;
+                                        padding: 0px;
+                                    }
                                 }
                             }
                         }
@@ -177,76 +183,113 @@
                     }
                 }
                 &__body{
+                    background-color: #ffffff;
                     padding-left: 0px;
                     padding-right: 0px;
                     .wraper{
-                        border: none;
-                        background-color: #fff;
-                        padding: 30px 20px 20px;
-                        .blue-btn {
-                            border-radius: 2px;
-                            height: 30px;
-                            width: 30px;
-                            padding: 0px;
-                            .icon{
-                                margin-left: 0px;
+                        .tab-content{
+                            border: none;
+                            padding: 30px 0px 20px;
+                            .blue-btn {
+                                border-radius: 2px;
+                                height: 30px;
+                                width: 30px;
+                                padding: 0px;
+                                .icon{
+                                    margin-left: 0px;
+                                }
                             }
-                        }
-                        .dispute{
-                            &__header{
-                                padding: 20px 12px 10px;
-                                .left-panel{
-                                    .dispute-id{
-                                        font-size: 16px;
-                                        margin-bottom: 5px;
-                                    }
-                                    .dispute-status, .dispute-update{
-                                        font-size: 14px;
-                                    }
-                                    .dispute-status{
-                                        margin-right: 0px;
-                                    }
-                                    .dispute-update{
-                                        position: relative;
-                                        padding-left: 24px;
-                                        &:before{
-                                            content: '';
-                                            height: 3px;
-                                            width: 3px;
-                                            background-color: $gray1;
-                                            position: absolute;
-                                            border-radius: 5px;
-                                            left: 11px;
-                                            top: 11px;
+                            .dispute{
+                                &:not(:last-child){
+                                    margin-bottom: 20px;
+                                }
+                                &__header{
+                                    padding: 20px 12px 10px;
+                                    .left-panel{
+                                        .dispute-id{
+                                            font-size: 16px;
+                                            margin-bottom: 5px;
                                         }
-                                    }
-                                }
-                                .right-panel{
-                                    .blue-btn{
-                                        align-self: center;
-                                    }
-                                }
-                            }
-                            &__body{
-                                padding-left: 12px;
-                                padding-right: 12px;
-                                .dispute-details{
-                                    width: 100%;
-                                    tbody{
-                                        display: flex;
-                                        justify-content: space-between;
-                                        th, td{
-                                            padding-bottom: 0px;
-                                            &:not(:last-child){
-                                                padding-right: 0px;
-                                                padding-bottom: 10px;
+                                        .dispute-status, .dispute-update{
+                                            font-size: 14px;
+                                        }
+                                        .dispute-status{
+                                            margin-right: 0px;
+                                        }
+                                        .dispute-update{
+                                            position: relative;
+                                            padding-left: 24px;
+                                            &:before{
+                                                content: '';
+                                                height: 3px;
+                                                width: 3px;
+                                                background-color: $gray1;
+                                                position: absolute;
+                                                border-radius: 5px;
+                                                left: 11px;
+                                                top: 11px;
                                             }
                                         }
-                                        tr, td, th{
-                                            display: block;
+                                    }
+                                    .right-panel{
+                                        .blue-btn{
+                                            align-self: center;
                                         }
                                     }
                                 }
+                                &__body{
+                                    padding-left: 12px;
+                                    padding-right: 12px;
+                                    .dispute-details{
+                                        width: 100%;
+                                        tbody{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            th, td{
+                                                padding-bottom: 0px;
+                                                &:not(:last-child){
+                                                    padding-right: 0px;
+                                                    padding-bottom: 10px;
+                                                }
+                                            }
+                                            tr, td, th{
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:400px){
+        &__wraper{
+            .disputes{
+                &__header{
+                    .nav{
+                        .nav-item{
+                            .nav-link{
+                                padding-left: 20px;
+                                padding-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width:380px){
+        &__wraper{
+            .disputes{
+                &__header{
+                    .nav{
+                        .nav-item{
+                            .nav-link{
+                                padding-left: 17px;
+                                padding-right: 17px;
                             }
                         }
                     }

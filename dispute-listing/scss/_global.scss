@@ -57,6 +57,9 @@ a{
     &:hover{
         color: #FFFFFF;
     }
+    @media(min-width:768.48px){
+        min-width: 167px;
+    }
 }
 
 .blue-link{
@@ -75,7 +78,7 @@ a{
 }
 
 .hide-desk{
-    @media(min-width:769px){
+    @media(min-width:768.48px){
         display: none;
     }
 }
