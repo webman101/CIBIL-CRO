@@ -1188,7 +1188,7 @@ html{
 
 /* link box */
 .link-box-container{
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     text-align: center;
     .link-box{
         background: #FFFFFF;
@@ -1224,5 +1224,17 @@ html{
         .link-box{
             padding: 17px 20px 24px;
         }
+    }
+}
+
+@media(min-width:992px){
+    .stay-notify-section{
+        padding-bottom: 40px;
+    }
+    .interstial-container{
+        padding-top: 69px;
+    }
+    .interstial-container, .link-box-container{
+        background-color: #fff;
     }
 }
