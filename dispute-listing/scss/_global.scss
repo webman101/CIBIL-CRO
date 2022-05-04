@@ -99,6 +99,7 @@ a{
             &.breadcrumb-menu{
                 li{
                     display: inline;
+                    margin-bottom: 0px;
                     a{
                         font-family: "Intro", Book;
                         font-style: normal;
@@ -141,6 +142,11 @@ a{
                         }
                         a{
                             font-size: 14px;
+                        }
+                        &.active{
+                            a{
+                                color: $gray1;
+                            }
                         }
                     }
                 }
