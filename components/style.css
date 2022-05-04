@@ -1,0 +1,72 @@
+.container {
+  max-width: 1220px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: auto;
+}
+
+/* Heading Section css starts here */
+.heading-section {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.heading-section__wraper .top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.heading-section__wraper .top-panel .heading {
+  font-family: "Intro", Bold;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  margin: 0px;
+}
+
+.heading-section__wraper .top-panel .button-group {
+  display: flex;
+}
+
+.heading-section__wraper .top-panel .button-group button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  width: 88px;
+  height: 34px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #E3E3E3 52.11%, #9F9F9F 100%);
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  border-radius: 0px 0px 4px 4px;
+  font-size: 10px;
+  line-height: 10px;
+  font-family: "Intro", Bold;
+  font-weight: 700;
+  color: #2C2C2C;
+}
+
+.heading-section__wraper .top-panel .button-group button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.heading-section__wraper .top-panel .button-group button .icon {
+  margin-left: 5.25px;
+}
+
+.heading-section__wraper .bottom-panel p {
+  font-family: "Intro", Book;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  margin: 0px;
+  max-width: 617px;
+}
+
+/* Heading Section css ends here */
