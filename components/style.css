@@ -270,3 +270,16 @@
 }
 
 /* Dispute Section css ends here */
+/* Requirements section css starts here */
+.requirements {
+  margin-top: 37px;
+  margin-bottom: 42px;
+  font-family: "Intro", Book;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #707070;
+}
+
+/* Requirements section css ends here */
