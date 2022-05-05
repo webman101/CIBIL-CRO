@@ -273,7 +273,7 @@
 /* Requirements section css starts here */
 .requirements {
   margin-top: 37px;
-  margin-bottom: 42px;
+  padding-bottom: 42px;
   font-family: "Intro", Book;
   font-weight: 400;
   font-size: 12px;
