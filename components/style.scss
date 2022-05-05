@@ -274,3 +274,38 @@
     color: #707070;
 }
 /* Requirements section css ends here */
+
+
+@media(max-width:768px){
+    table{
+        tr, td{
+            display: block;
+        }
+        td{
+            padding-right: 0px;
+        }
+    }
+    .dispute-details__wraper .top-panel, .dispute-details__wraper .bottom-panel__wraper{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .dispute-details__wraper .top-panel .title, .dispute-details__wraper .top-panel .details-row:not(:last-child) td, .dispute-details__wraper .top-panel .details-row td:first-child{
+        padding-left: 0px;
+    }
+    .dispute-details__wraper .bottom-panel__wraper{
+        flex-direction: column;
+        .timeline{
+            width: 100%;
+            border: none;
+        }
+        .timeline, .email-reminders{
+            padding: 0px;
+        }
+        .email-reminders{
+            margin-top: 30px;
+            tr{
+                display: flex;
+            }
+        }
+    }
+}
