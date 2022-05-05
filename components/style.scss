@@ -92,6 +92,7 @@
             }
             .details-row{
                 td{
+                    padding-top: 20px;
                     &:first-child{
                         padding-left: 10px;
                     }
@@ -100,7 +101,6 @@
                     border-bottom: 1px solid #EDEDED;
                     td{
                         padding-bottom: 20px;
-                        padding-top: 20px;
                         padding-right: 80px;
                     }
                 }
@@ -230,6 +230,7 @@
                                     color: #2c2c2c;
                                     font-family: "Intro", Bold;
                                     font-weight: 700;
+                                    text-transform: none;
                                 }
                             }
                             &:not(:last-child){
