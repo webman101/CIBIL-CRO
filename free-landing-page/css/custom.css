@@ -20,13 +20,16 @@ body {
   outline: 0 !important;
   display: inline-block;
 }
+
 .free-landing-page a:hover {
   color: #2c2c2c;
 }
+
 .free-landing-page h1 {
   margin: 0;
   margin: 0;
 }
+
 .free-landing-page h2 {
   font-family: Intro, Bold;
   font-style: normal;
@@ -36,63 +39,83 @@ body {
   letter-spacing: -0.01em;
   color: #2c2c2c;
 }
+
 .free-landing-page h2 h3 {
   margin: 0;
 }
+
 .free-landing-page h4 {
   margin: 0;
 }
+
 .free-landing-page h5 {
   margin: 0;
 }
+
 .free-landing-page h6 {
   margin: 0;
 }
+
 .free-landing-page .f-12 {
   font-size: 12px !important;
 }
+
 .free-landing-page .f-14 {
   font-size: 14px !important;
 }
+
 .free-landing-page .f-15 {
   font-size: 15px !important;
 }
+
 .free-landing-page .f-16 {
   font-size: 16px !important;
 }
+
 .free-landing-page .f-17 {
   font-size: 17px !important;
 }
+
 .free-landing-page .f-18 {
   font-size: 18px !important;
 }
+
 .free-landing-page .f-19 {
   font-size: 19px !important;
 }
+
 .free-landing-page .f-20 {
   font-size: 20px !important;
 }
+
 .free-landing-page .f-22 {
   font-size: 22px !important;
 }
+
 .free-landing-page .f-24 {
   font-size: 24px !important;
 }
+
 .free-landing-page .mb-10 {
   margin-bottom: 10px !important;
 }
+
 .free-landing-page .mb-20 {
   margin-bottom: 20px !important;
 }
+
 .free-landing-page .mb-30 {
   margin-bottom: 30px !important;
 }
+
 .free-landing-page .mb-40 {
   margin-bottom: 40px !important;
 }
+
 .free-landing-page .bg-yellow {
   background-color: #fcd800;
 }
+
 .free-landing-page .section-title {
   font-family: Intro, Bold;
   font-style: normal;
@@ -103,9 +126,11 @@ body {
   letter-spacing: -0.01em;
   color: #2c2c2c;
 }
+
 .free-landing-page .text-blue {
   color: #00a6ca;
 }
+
 .free-landing-page p {
   font-family: Intro, Regular;
   font-weight: 600;
@@ -114,6 +139,7 @@ body {
   letter-spacing: 0.02em;
   color: #2c2c2c;
 }
+
 .free-landing-page .text-400 {
   font-family: Intro, Book;
   font-weight: 400;
@@ -121,15 +147,19 @@ body {
   letter-spacing: 0.02em;
   color: #2c2c2c;
 }
+
 .free-landing-page .row {
   display: flex;
 }
+
 .free-landing-page .align-items-center {
   align-items: center;
 }
+
 .free-landing-page .d-block {
   display: block;
 }
+
 .free-landing-page .text-grey {
   font-family: Intro, Regular;
   font-style: normal;
@@ -138,6 +168,7 @@ body {
   line-height: 140%;
   color: #707070;
 }
+
 .free-landing-page .button-orange {
   background: #f16e00;
   border-radius: 25px;
@@ -160,6 +191,7 @@ body {
   justify-content: center;
   max-width: 288px;
 }
+
 .free-landing-page .button-orange-outline {
   background: #fff;
   border: 1px solid #f16e00;
@@ -179,13 +211,16 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
+
 .free-landing-page .container {
   max-width: 1200px;
 }
+
 .free-landing-page .banner-main {
   background: #fff;
   display: flex;
 }
+
 .free-landing-page .banner-main .button-orange {
   padding: 0 53px;
   width: 100%;
@@ -195,6 +230,7 @@ body {
   justify-content: center;
   max-width: 288px;
 }
+
 .free-landing-page .banner-main p {
   font-family: Intro, Regular;
   font-style: normal;
@@ -202,6 +238,7 @@ body {
   color: #2c2c2c;
   max-width: 500px;
 }
+
 .free-landing-page .did-you-know {
   background: #fbf1c5;
   display: flex;
@@ -209,10 +246,12 @@ body {
   justify-content: center;
   padding: 16px 20px;
 }
+
 .free-landing-page .did-you-know p {
   margin-left: 14px !important;
   margin: 0;
 }
+
 .free-landing-page .did-you-know p span {
   font-family: Intro, Bold;
   font-style: normal;
@@ -222,9 +261,11 @@ body {
   letter-spacing: 0.02em;
   color: #006685;
 }
+
 .free-landing-page .did-you-know p span:last-child {
   font-weight: 400;
 }
+
 .free-landing-page .goals {
   min-height: 280px;
   background-color: #f9f9f9;
@@ -232,9 +273,11 @@ body {
   box-sizing: border-box;
   padding-bottom: 34px;
 }
+
 .free-landing-page .goals .title {
   font-size: 24px;
 }
+
 .free-landing-page .goals .plan-details {
   font-family: Intro, Regular;
   font-style: normal;
@@ -245,6 +288,7 @@ body {
   letter-spacing: 0.02em;
   color: #2c2c2c;
 }
+
 .free-landing-page .goals .goal {
   margin-top: 20px;
   border-radius: 6px;
@@ -252,14 +296,17 @@ body {
   background: #fff;
   padding-bottom: 0;
 }
+
 .free-landing-page .goals .goal .image {
   height: 60px;
   display: flex;
   align-items: flex-end;
 }
+
 .free-landing-page .goals .goal img {
   object-fit: contain;
 }
+
 .free-landing-page .goals .goal h6 {
   font-family: Intro, Bold;
   font-style: normal;
@@ -270,6 +317,7 @@ body {
   color: #2c2c2c;
   margin: 26px 0 14px;
 }
+
 .free-landing-page .goals .goal p {
   font-family: Intro, Book;
   font-style: normal;
@@ -279,6 +327,7 @@ body {
   letter-spacing: 0.02em;
   color: #000;
 }
+
 .free-landing-page .goals .button-orange {
   display: flex !important;
   margin: auto;
@@ -292,26 +341,30 @@ body {
 .subscriptionBenefits .modal {
   z-index: 999999;
 }
+
 .subscriptionBenefits .modal-dialog.w-700 {
   width: 100%;
   max-width: 720px;
 }
+
 .subscriptionBenefits #subscriptionModalLabel {
   margin: 0;
   padding: 11px 0 11px;
 }
+
 .subscriptionBenefits .block-option .price {
   font-size: 18px;
   font-weight: 600;
   line-height: 18px;
   color: #000;
 }
+
 .subscriptionBenefits .option-group {
   width: 100%;
   padding-left: 35px;
 }
+
 .subscriptionBenefits button.close {
-  -webkit-box-shadow: none;
   box-shadow: none;
   width: auto;
   position: absolute;
@@ -323,358 +376,465 @@ body {
   text-shadow: revert;
   font-size: 30px;
 }
+
 .subscriptionBenefits .text-center {
   text-align: center !important;
 }
+
 .subscriptionBenefits .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
+
 .subscriptionBenefits .f-28 {
   font-size: 28px;
 }
+
 .subscriptionBenefits .f-20 {
   font-size: 20px;
 }
+
 .subscriptionBenefits .pb-1 {
   padding-bottom: 10px;
 }
+
 .subscriptionBenefits .pb-2 {
   padding-bottom: 20px;
 }
+
 .subscriptionBenefits .pb-3 {
   padding-bottom: 30px;
 }
+
 .subscriptionBenefits .pb-4 {
   padding-bottom: 40px;
 }
+
 .subscriptionBenefits .m-0 {
   margin: 0;
 }
+
 .subscriptionBenefits .bg-white {
   background-color: #fff;
 }
+
 .subscriptionBenefits .light-grey-bg {
   background: #eee;
 }
+
 .subscriptionBenefits .light-blue-bg {
   background: #3ea3ce;
 }
+
 .subscriptionBenefits .light-white-bg {
   background: rgba(255, 255, 255, 0.15);
 }
-.subscriptionBenefits .light-blue-gradient {	
-  background: -webkit-gradient(linear, left top, left bottom, from(#3ea3ce), color-stop(27.33%, #3ea3ce), color-stop(149.5%, rgba(62, 163, 206, 0)));	
-  background: linear-gradient(180deg, #3ea3ce 0, #3ea3ce 27.33%, rgba(62, 163, 206, 0) 149.5%);	
+
+.subscriptionBenefits .light-blue-gradient {
+  background: linear-gradient(180deg, #3ea3ce 0, #3ea3ce 27.33%, rgba(62, 163, 206, 0) 149.5%);
 }
+
 .subscriptionBenefits .light-yellow-bg {
   background: rgba(252, 216, 51, 0.15);
 }
+
 .subscriptionBenefits .border-top_8 {
   border-top: 8px solid #fcd833;
 }
+
 .subscriptionBenefits .border-bottom-2 {
   border-bottom: 2px solid #fcd833;
 }
+
 .subscriptionBenefits .border-bottom-1 {
   border-bottom: 1px solid #fcd833;
 }
+
 .subscriptionBenefits .fw-300 {
   font-weight: 300 !important;
   font-family: Intro;
 }
+
 .subscriptionBenefits .fw-400 {
   font-weight: 400 !important;
   font-family: Intro;
 }
+
 .subscriptionBenefits .fw-600 {
   font-family: Intro !important;
   font-weight: 700 !important;
 }
+
 .subscriptionBenefits .fw-700 {
   font-weight: 600 !important;
   font-family: Intro;
 }
+
 .subscriptionBenefits .text-color-black {
   color: #000 !important;
 }
+
 .subscriptionBenefits .text-color-black-05 {
   color: rgba(0, 0, 0, 0.5);
 }
+
 .subscriptionBenefits .text-color-black-08 {
   color: rgba(0, 0, 0, 0.8);
 }
+
 .subscriptionBenefits .text-color-yellow {
   color: #fcd833;
 }
+
 .subscriptionBenefits .text-color-white {
   color: #fff !important;
 }
+
 .subscriptionBenefits .text-color-grey {
   color: #666;
 }
+
 .subscriptionBenefits .text-color-light-blue {
   color: #3ea3ce;
 }
+
 .subscriptionBenefits .d-block {
   display: block;
 }
+
 .subscriptionBenefits .d-inline-block {
   display: inline-block;
 }
+
 .subscriptionBenefits .d-inline {
   display: initial !important;
 }
+
 .subscriptionBenefits .letter-spacing-1 {
   letter-spacing: 1px;
 }
+
 .subscriptionBenefits .line-height-41 {
   line-height: 37px;
 }
+
 .subscriptionBenefits .m-b {
   margin-bottom: 0 !important;
 }
+
 .subscriptionBenefits .m-b10 {
   margin-bottom: 10px;
 }
+
 .subscriptionBenefits .padding-20 {
   padding: 20px;
 }
+
 .subscriptionBenefits .padding-15 {
   padding: 15px;
 }
+
 .subscriptionBenefits .padding-30 {
   padding: 30px;
 }
+
 .subscriptionBenefits .margin-top-0 {
   margin-top: 0;
 }
+
 .subscriptionBenefits .margin-top-1 {
   margin-top: 10px;
 }
+
 .subscriptionBenefits .margin-top-15 {
   margin-top: 15px;
 }
+
 .subscriptionBenefits .margin-top-2 {
   margin-top: 20px;
 }
+
 .subscriptionBenefits .margin-top-3 {
   margin-top: 30px;
 }
+
 .subscriptionBenefits .margin-top-4 {
   margin-top: 40px;
 }
+
 .subscriptionBenefits .margin-top-5 {
   margin-top: 50px;
 }
+
 .subscriptionBenefits .margin-top-6 {
   margin-top: 60px;
 }
+
 .subscriptionBenefits .margin-bottom-0 {
   margin-bottom: 0 !important;
 }
+
 .subscriptionBenefits .margin-bottom-05 {
   margin-bottom: 5px;
 }
+
 .subscriptionBenefits .margin-bottom-1 {
   margin-bottom: 10px;
 }
+
 .subscriptionBenefits .margin-bottom-15 {
   margin-bottom: 15px !important;
 }
+
 .subscriptionBenefits .margin-bottom-2 {
   margin-bottom: 20px;
 }
+
 .subscriptionBenefits .margin-bottom-3 {
   margin-bottom: 30px;
 }
+
 .subscriptionBenefits .margin-bottom-4 {
   margin-bottom: 40px !important;
 }
+
 .subscriptionBenefits .margin-bottom-5 {
   margin-bottom: 50px;
 }
+
 .subscriptionBenefits .margin-bottom-6 {
   margin-bottom: 60px;
 }
+
 .subscriptionBenefits .padding-top-04 {
   padding-top: 4px;
 }
+
 .subscriptionBenefits .padding-top-05 {
   padding-top: 5px;
 }
+
 .subscriptionBenefits .padding-top-0 {
   padding-top: 0;
 }
+
 .subscriptionBenefits .padding-top-1 {
   padding-top: 10px;
 }
+
 .subscriptionBenefits .padding-top-15 {
   padding-top: 15px;
 }
+
 .subscriptionBenefits .padding-top-2 {
   padding-top: 20px;
 }
+
 .subscriptionBenefits .padding-top-3 {
   padding-top: 30px;
 }
+
 .subscriptionBenefits .padding-top-4 {
   padding-top: 40px;
 }
+
 .subscriptionBenefits .padding-top-5 {
   padding-top: 50px !important;
 }
+
 .subscriptionBenefits .padding-top-6 {
   padding-top: 60px !important;
 }
+
 .subscriptionBenefits .padding-bottom-02 {
   padding-bottom: 2px;
 }
+
 .subscriptionBenefits .padding-bottom-03 {
   padding-bottom: 3px;
 }
+
 .subscriptionBenefits .padding-bottom-05 {
   padding-bottom: 5px;
 }
+
 .subscriptionBenefits .padding-bottom-0 {
   padding-bottom: 0;
 }
+
 .subscriptionBenefits .padding-bottom-1 {
   padding-bottom: 10px;
 }
+
 .subscriptionBenefits .padding-bottom-15 {
   padding-bottom: 15px;
 }
+
 .subscriptionBenefits .padding-bottom-2 {
   padding-bottom: 20px;
 }
+
 .subscriptionBenefits .padding-bottom-3 {
   padding-bottom: 30px;
 }
+
 .subscriptionBenefits .padding-bottom-4 {
   padding-bottom: 40px;
 }
+
 .subscriptionBenefits .padding-bottom-5 {
   padding-bottom: 50px;
 }
+
 .subscriptionBenefits .padding-bottom-6 {
   padding-bottom: 60px;
 }
+
 .subscriptionBenefits .padding-bottom-8 {
   padding-bottom: 80px;
 }
+
 .subscriptionBenefits .padding-bottom-120 {
   padding-bottom: 120px;
 }
+
 .subscriptionBenefits .padding-bottom-130 {
   padding-bottom: 130px;
 }
+
 .subscriptionBenefits .padding-right-05 {
   padding-right: 5px;
 }
+
 .subscriptionBenefits .padding-right-0 {
   padding-right: 0;
 }
+
 .subscriptionBenefits .padding-right-1 {
   padding-right: 10px;
 }
+
 .subscriptionBenefits .padding-right-2 {
   padding-right: 20px;
 }
+
 .subscriptionBenefits .padding-right-3 {
   padding-right: 30px;
 }
+
 .subscriptionBenefits .padding-right-4 {
   padding-right: 40px;
 }
+
 .subscriptionBenefits .padding-right-5 {
   padding-right: 50px;
 }
+
 .subscriptionBenefits .padding-right-6 {
   padding-right: 60px;
 }
+
 .subscriptionBenefits .padding-right-9 {
   padding-right: 90px;
 }
+
 .subscriptionBenefits .padding-left-05 {
   padding-left: 5px;
 }
+
 .subscriptionBenefits .padding-left-0 {
   padding-left: 0;
 }
+
 .subscriptionBenefits .padding-left-1 {
   padding-left: 10px;
 }
+
 .subscriptionBenefits .padding-left-14 {
   padding-left: 14px;
 }
+
 .subscriptionBenefits .padding-left-15 {
   padding-left: 15px;
 }
+
 .subscriptionBenefits .padding-left-2 {
   padding-left: 20px;
 }
+
 .subscriptionBenefits .padding-left-3 {
   padding-left: 30px;
 }
+
 .subscriptionBenefits .padding-left-4 {
   padding-left: 40px;
 }
+
 .subscriptionBenefits .padding-left-5 {
   padding-left: 50px;
 }
+
 .subscriptionBenefits .padding-left-6 {
   padding-left: 60px;
 }
+
 .subscriptionBenefits .padding-left-9 {
   padding-left: 90px;
 }
+
 .subscriptionBenefits .margin-left-0 {
   margin-left: 0 !important;
 }
+
 .subscriptionBenefits .margin-left-05 {
   margin-left: 5px !important;
 }
+
 .subscriptionBenefits .margin-left-1 {
   margin-left: 10px !important;
 }
+
 .subscriptionBenefits .margin-left-2 {
   margin-left: 20px !important;
 }
+
 .subscriptionBenefits .margin-left-3 {
   margin-left: 30px !important;
 }
+
 .subscriptionBenefits .margin-left-4 {
   margin-left: 40px !important;
 }
+
 .subscriptionBenefits .margin-left-5 {
   margin-left: 50px !important;
 }
+
 .subscriptionBenefits .margin-left-6 {
   margin-left: 60px !important;
 }
+
 .subscriptionBenefits .margin-right-05 {
   margin-right: 5px !important;
 }
+
 .subscriptionBenefits .f-16 {
   font-size: 16px !important;
 }
+
 .subscriptionBenefits .f-12 {
   font-size: 12px !important;
 }
+
 .subscriptionBenefits .bg-off-blue {
   background-color: #eff7fe;
 }
+
 .subscriptionBenefits .bg-yellow {
   background-color: #fcd833;
 }
+
 .subscriptionBenefits .yellow-badge {
   background: #fcd833;
   color: #000;
@@ -682,30 +842,34 @@ body {
   font-weight: 400;
   padding: 2px 5px;
 }
+
 .subscriptionBenefits .position-relative {
   position: relative;
 }
+
 .subscriptionBenefits .line-separator-white {
   height: 1px;
   width: calc(100% - 60px);
   background: rgba(255, 255, 255, 0.22);
   margin: 30px auto;
 }
+
 .subscriptionBenefits .line-separator-grey {
   height: 1px;
   width: 100%;
   background: #dcdddf;
   margin: 20px 0;
 }
+
 .subscriptionBenefits .line-separator-grey-1 {
   height: 1px;
   width: 100%;
   background: #c4c4c4;
   opacity: 0.4;
-  -webkit-box-shadow: inset 2px 4px 12px rgba(230, 230, 230, 0.25);
   box-shadow: inset 2px 4px 12px rgba(230, 230, 230, 0.25);
   margin: 7px 0;
 }
+
 .subscriptionBenefits .upgrade-card {
   background: #fff;
   border-radius: 8px;
@@ -715,30 +879,21 @@ body {
   margin-right: auto;
   width: 100%;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   margin-bottom: 25px;
 }
+
 .subscriptionBenefits .upgrade-card-row {
   margin-top: -75px;
 }
+
 .subscriptionBenefits .upgrade-card-badge {
   position: absolute;
   top: -12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   padding: 4px 20px;
   background: linear-gradient(94.65deg, #e5f7ff 67.6%, #b9dded 99.28%), #e5f7ff;
@@ -746,6 +901,7 @@ body {
   border-radius: 8px;
   min-width: 210px;
 }
+
 .subscriptionBenefits .upgrade-card-badge p {
   margin: 0;
   margin-left: 7px;
@@ -754,20 +910,21 @@ body {
   position: relative;
   top: 1px;
 }
+
 .subscriptionBenefits .upgrade-card-badge-i {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   min-width: 250px;
   top: -18px;
 }
+
 .subscriptionBenefits .upgrade-card-badge-i p {
   line-height: 1;
 }
+
 .subscriptionBenefits .bttn {
   font-size: 16px;
   font-family: Intro;
@@ -776,7 +933,6 @@ body {
   color: rgba(0, 0, 0, 0.8);
   border: 1px solid #969696;
   background: #fff;
-  -webkit-box-shadow: none;
   box-shadow: none;
   min-width: 140px;
   margin-bottom: 0;
@@ -788,95 +944,106 @@ body {
   text-align: center;
   display: inline-block;
 }
+
 .subscriptionBenefits .bttn-orange {
   color: #fff;
   background: #f16e33;
   border: 1px solid #f16e33;
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+
 .subscriptionBenefits .bttn-skip {
   font-size: 13px;
   letter-spacing: 0;
 }
+
 .subscriptionBenefits .bttn-upgrade {
   font-weight: 600;
 }
+
 .subscriptionBenefits .bttn-no-border {
   border: 1px solid transparent;
 }
+
 .subscriptionBenefits .sticky-footer {
   background: #fcfcfc;
-  -webkit-box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.17);
   box-shadow: 0 -3px 4px rgba(0, 0, 0, 0.17);
   padding: 20px 15px;
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
 }
+
 .subscriptionBenefits .sticky-footer .w-100 {
   width: 100%;
 }
+
 .subscriptionBenefits .border-radius-0 {
   border-radius: 0;
 }
+
 .subscriptionBenefits .border-radius-2 {
   border-radius: 2px;
 }
+
 .subscriptionBenefits .border-radius-8 {
   border-radius: 8px;
 }
+
 .subscriptionBenefits .card-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
+
 .subscriptionBenefits .card-row .tick {
   display: block;
 }
+
 .subscriptionBenefits .card-row .cross {
   display: none;
 }
+
 .subscriptionBenefits .crossed {
   display: none !important;
 }
+
 .subscriptionBenefits .card-row.crossed .tick {
   display: none;
 }
+
 .subscriptionBenefits .card-row.crossed .cross {
   display: block;
 }
+
 .subscriptionBenefits .card-row.crossed h5 {
   text-decoration: line-through;
   color: #b1b4b7 !important;
 }
+
 .subscriptionBenefits .card-row.crossed p {
   text-decoration: line-through;
   color: #b1b4b7 !important;
 }
+
 .subscriptionBenefits .plans-radio-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
+
 .subscriptionBenefits .plans-radio-col {
   width: 32%;
   position: relative;
   overflow: hidden;
 }
+
 .subscriptionBenefits .plans-radio-col label {
   background: #fff;
   border: 1px solid #e5e5e5;
-  -webkit-box-shadow: 0 0 10px rgba(80, 80, 80, 0.1);
   box-shadow: 0 0 10px rgba(80, 80, 80, 0.1);
   border-radius: 4px;
   padding: 10px;
   height: 100%;
   font-family: Intro, sans-serif;
 }
+
 .subscriptionBenefits .plans-radio-col input {
   position: absolute;
   opacity: 0;
@@ -887,20 +1054,23 @@ body {
   margin: 0;
   font-family: Intro, sans-serif;
 }
+
 .subscriptionBenefits .plans-radio-col input:checked ~ .checkmark {
   background-color: #2196f3;
   border: 1px solid #2196f3;
 }
+
 .subscriptionBenefits .plans-radio-col input:checked ~ .checkmark:after {
   display: block;
 }
+
 .subscriptionBenefits .plans-radio-col input:checked ~ label {
   background: #eaf1ff;
   border: 2px solid #3ea3ce;
-  -webkit-box-shadow: 0 0 10px rgba(80, 80, 80, 0.25);
   box-shadow: 0 0 10px rgba(80, 80, 80, 0.25);
   border-radius: 4px;
 }
+
 .subscriptionBenefits .plans-radio-col .checkmark {
   position: absolute;
   top: 12px;
@@ -911,6 +1081,7 @@ body {
   border: 1px solid #969696;
   border-radius: 50%;
 }
+
 .subscriptionBenefits .plans-radio-col .checkmark:after {
   left: 7px;
   top: 3px;
@@ -918,12 +1089,12 @@ body {
   height: 10px;
   border: solid #fff;
   border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   content: "";
   position: absolute;
   display: none;
 }
+
 .subscriptionBenefits .plans-radio-price {
   font-size: 16px;
   font-weight: 600;
@@ -931,6 +1102,7 @@ body {
   margin-bottom: 6px;
   font-family: Intro;
 }
+
 .subscriptionBenefits .plans-radio-title {
   font-size: 18px;
   font-family: Intro;
@@ -938,11 +1110,13 @@ body {
   color: #333;
   margin-bottom: 8px;
 }
+
 .subscriptionBenefits .plans-radio-sub-title {
   font-size: 14px;
   font-weight: 400;
   color: #333;
 }
+
 .subscriptionBenefits .plans-radio-offer-text {
   background-image: url(https://www.cibil.com/resources/cibil/img/popup/offer-text-bg-mb.svg);
   background-repeat: no-repeat;
@@ -953,13 +1127,16 @@ body {
   font-size: 12px;
   line-height: 1.2;
 }
+
 .subscriptionBenefits .plans-radio-offer-text.orange {
   background-image: url(https://www.cibil.com/resources/cibil/img/popup/offer-text-bg-mb-orange.svg);
 }
+
 .subscriptionBenefits .offer-text {
   position: relative;
   top: 15px;
 }
+
 .subscriptionBenefits .offer-text p {
   margin: 0;
   font-size: 14px;
@@ -968,39 +1145,34 @@ body {
   margin-left: 25px;
   line-height: 1;
 }
+
 .subscriptionBenefits .offer-icon {
   position: relative;
   top: -6px;
 }
+
 .subscriptionBenefits .upgrade-badge {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background: linear-gradient(93.98deg, #fff4bf 39.92%, #ffe87e 99.14%);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   padding: 5px 18px;
   position: absolute;
   top: -20px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   min-width: 260px;
 }
+
 .subscriptionBenefits .upgrade-badge img {
   width: 21px;
   height: 26px;
-  -o-object-fit: contain;
   object-fit: contain;
   margin-right: 18px;
 }
+
 .subscriptionBenefits .upgrade-badge p {
   color: #005365;
   font-size: 14px;
@@ -1008,40 +1180,32 @@ body {
   position: relative;
   top: 1px;
 }
+
 .subscriptionBenefits .upgrade-text {
   line-height: 1;
   padding: 7px 5px 5px 5px;
 }
+
 .subscriptionBenefits .image-text {
-  max-width: 200px;
-  margin: auto;
   margin-top: -35px;
 }
-.meter-image {
-  width: 300px;
-}
-@media screen and (min-width: 992px) {
-  .subscriptionBenefits .image-text {
-    max-width: 250px;
-  }
-  .meter-image {
-    width: 330px;
-  }
-}
+
 .subscriptionBenefits .w-100 {
   width: 100%;
 }
+
 .subscriptionBenefits .justify-space-between {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
+
 .subscriptionBenefits .f-14 {
   font-size: 14px;
 }
+
 .subscriptionBenefits .f-18 {
   font-size: 18px;
 }
+
 .subscriptionBenefits .section-title {
   font-size: 36px;
   font-weight: 600 !important;
@@ -1050,17 +1214,21 @@ body {
   color: #000;
   margin: 0;
 }
+
 .subscriptionBenefits .section-title-blue {
   color: #3ea3ce;
 }
+
 .subscriptionBenefits .offer-section {
   background-color: #005365;
   padding: 66px 0 66px 0;
 }
+
 .subscriptionBenefits .offer-section .section-title {
   margin-bottom: 80px;
   text-align: center;
 }
+
 .subscriptionBenefits .offer-badge {
   background: #3ea3ce;
   color: #fcd833;
@@ -1072,9 +1240,11 @@ body {
   margin-bottom: 38px;
   position: relative;
 }
+
 .subscriptionBenefits .offer-badge span {
   font-size: 22px;
 }
+
 .subscriptionBenefits .offer-badge::before {
   content: "";
   background: #3ea3ce;
@@ -1084,12 +1254,14 @@ body {
   width: 100%;
   left: -100%;
 }
+
 .subscriptionBenefits .offer-badge .right-img {
   position: absolute;
   top: -1px;
   right: -2px;
   height: 127px;
 }
+
 .subscriptionBenefits .offer-badge .left-img {
   position: absolute;
   top: -1px;
@@ -1097,17 +1269,15 @@ body {
   height: 127px;
   display: none;
 }
+
 .subscriptionBenefits .offer-code {
   color: #fff;
   font-size: 18px;
   line-height: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
+
 .subscriptionBenefits .offer-code span {
   padding: 6px;
   display: inline-block;
@@ -1115,9 +1285,11 @@ body {
   line-height: 32px;
   margin-left: 15px;
 }
+
 .subscriptionBenefits .plans-row {
   padding: 0 30px;
 }
+
 .subscriptionBenefits .plans-card {
   background: #fff;
   padding: 37px 10px 60px 10px;
@@ -1125,9 +1297,11 @@ body {
   width: 33.33%;
   position: relative;
 }
+
 .subscriptionBenefits .plans-card button {
   margin: 0 auto;
 }
+
 .subscriptionBenefits .plans-card-tag {
   position: absolute;
   top: -6px;
@@ -1138,9 +1312,11 @@ body {
   right: unset;
   opacity: 0;
 }
+
 .subscriptionBenefits .plans-card-tag .popular-tag {
   width: 97px;
 }
+
 .subscriptionBenefits .plans-card-badge {
   text-align: center;
   background: #1d79a0;
@@ -1155,12 +1331,14 @@ body {
   right: 0;
   left: 0;
 }
+
 .subscriptionBenefits .plans-card-title {
   font-size: 20px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.4);
   margin-bottom: 13px;
 }
+
 .subscriptionBenefits .plans-card-price {
   font-size: 24px;
   font-weight: 600;
@@ -1168,6 +1346,7 @@ body {
   color: #000;
   margin-bottom: 34px;
 }
+
 .subscriptionBenefits .plans-card-price span {
   display: block;
   font-size: 14px;
@@ -1177,6 +1356,7 @@ body {
   margin-top: 6px;
   font-style: italic;
 }
+
 .subscriptionBenefits .plans-card-mobile-text {
   position: relative;
   top: -20px;
@@ -1185,35 +1365,41 @@ body {
   color: rgba(0, 27, 56, 0.6);
   margin: 0;
 }
+
 .subscriptionBenefits .plans-card-button {
   position: absolute;
   bottom: 25px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
 .subscriptionBenefits .footer-section {
   background: #fff;
   border-top: 5px solid #fcd833;
   padding: 18px 0 80px 0;
 }
+
 .subscriptionBenefits .footer-right {
   text-align: right;
 }
+
 .subscriptionBenefits .footer-text h3 {
   margin: 0;
   margin-bottom: 10px;
   font-size: 20px;
   color: #000;
 }
+
 .subscriptionBenefits .footer-text p {
   font-size: 20px;
   margin: 0;
 }
+
 .subscriptionBenefits .features-mobile-section {
   padding: 30px 0;
   padding-bottom: 10px;
 }
+
 .subscriptionBenefits .features-mobile-section .section-title {
   text-align: center;
   font-size: 18px;
@@ -1221,12 +1407,14 @@ body {
   margin-bottom: 30px;
   color: #001b38;
 }
+
 .subscriptionBenefits .score-card {
   background: rgba(238, 238, 238, 0.3);
   border-left: 3px solid #aeaeae;
   padding: 11px;
   height: auto;
 }
+
 .subscriptionBenefits .score-card h3 {
   margin: 0;
   color: #000;
@@ -1234,42 +1422,39 @@ body {
   line-height: 20px;
   font-weight: 600;
 }
+
 .subscriptionBenefits .price-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 20px;
   background-color: #f5ffff;
   border-bottom: 1px solid #dcdddf;
 }
+
 .subscriptionBenefits .price-row .bttn {
   display: initial;
 }
+
 .subscriptionBenefits .price-row.bottom {
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   border-bottom: 0;
 }
+
 .subscriptionBenefits .sticky-modal-footer {
-  -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
-  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
   z-index: 10;
 }
+
 .subscriptionBenefits .popup-popular-tag {
   height: 18.36px;
   object-fit: contain;
   object-position: left;
   margin-top: 5px;
 }
+
 .subscriptionBenefits .justify-space-md-between {
   justify-content: space-between;
 }
@@ -1314,6 +1499,7 @@ body {
     margin: 20px 0 14px;
   }
 }
+
 @media screen and (max-width: 992px) {
   .free-landing-page .mhide {
     display: none;
@@ -1341,28 +1527,27 @@ body {
     max-width: 315px;
   }
   .free-landing-page .goals .goal {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
 }
+
 @media screen and (max-width: 385px) {
   .free-landing-page .did-you-know p span {
     font-size: 14px;
   }
 }
+
 @media (max-width: 767px) {
   .subscriptionBenefits .line-height-41 {
     line-height: 32px;
   }
   .subscriptionBenefits .mobile-full-width {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
     flex: 1;
   }
   .subscriptionBenefits .plans-radio-col {
     width: 32%;
   }
   .subscriptionBenefits .plans-radio-col label {
-    -webkit-box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
     box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
     padding: 8px;
     border: 2px solid #e5e5e5;
@@ -1401,6 +1586,7 @@ body {
     padding: 14px 10px;
   }
 }
+
 @media (max-width: 768px) {
   .subscriptionBenefits .padding-30.pb {
     padding-bottom: 20px;
@@ -1453,6 +1639,7 @@ body {
     line-height: 34px;
   }
 }
+
 @media (min-width: 992px) {
   .subscriptionBenefits .margin-bottom-md-6 {
     margin-bottom: 60px;
@@ -1464,17 +1651,14 @@ body {
     max-width: 530px;
   }
   .subscriptionBenefits .footer-section .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
   .subscriptionBenefits .features-mobile-section {
     display: none;
   }
 }
+
 @media (min-width: 769px) {
   .subscriptionBenefits .padding-left-9-md {
     padding-left: 90px;
@@ -1505,6 +1689,7 @@ body {
     display: none;
   }
 }
+
 @media (max-width: 480px) {
   .subscriptionBenefits .bttn {
     padding: 12px 30px;
@@ -1535,48 +1720,51 @@ body {
     margin-bottom: 2px;
   }
 }
+
 @media screen and (max-width: 480px) and (max-width: 992px) {
   .subscriptionBenefits .plans-radio-title {
     text-transform: uppercase;
   }
 }
+
 @media screen and (max-width: 480px) and (min-width: 992px) {
   .subscriptionBenefits .plans-radio-title {
     margin-bottom: 8px;
   }
 }
+
 @media (max-width: 480px) {
   .subscriptionBenefits .plans-radio-sub-title {
     font-size: 11px;
   }
-}
-@media (max-width: 480px) {
   .subscriptionBenefits .price-row .bttn {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .subscriptionBenefits .plans-radio-title {
     font-size: 16px;
   }
 }
+
 @media (max-width: 380px) {
   .subscriptionBenefits .upgrade-badge p {
     font-size: 12px;
   }
 }
+
 @media (min-width: 768px) {
   .subscriptionBenefits .text-md-center {
     text-align: center;
   }
   .subscriptionBenefits .plans-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding: 0;
   }
 }
+
 @media (max-width: 991px) {
   .subscriptionBenefits button.close {
     font-size: 40px;
@@ -1612,8 +1800,6 @@ body {
     padding: 15px 0;
     border-top: 1px solid #257795;
     border-bottom: 1px solid #257795;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 50px;
   }
@@ -1642,7 +1828,9 @@ body {
     display: none;
   }
 }
+
 .goal {
+  min-height: 280px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -1650,10 +1838,12 @@ body {
     min-height: 247px;
   }
 }
+
 .popop3 .popup-outer {
   background: rgba(81, 150, 200, 0.9);
   backdrop-filter: blur(10px);
 }
+
 .popop3 .blue-strip {
   position: relative;
   background: #006685;
@@ -1667,18 +1857,23 @@ body {
   text-align: center;
   color: #ffffff;
 }
+
 .popop3 .popup3 {
   background-color: #fff;
   margin: auto;
   max-width: 720px;
+  height: 100%;
 }
+
 .popop3 .popup3 .sticky-modal-footer {
   position: static;
 }
+
 .popop3 .popup3 .bg-yellow {
   background: #fcd800;
   padding: 0 3px;
 }
+
 .popop3 .popup3 .popup-title {
   font-family: "Intro", Bold;
   font-style: normal;
@@ -1689,6 +1884,7 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .popup-title {
     max-width: 374px;
@@ -1699,12 +1895,14 @@ body {
     padding: 0 20px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .popup-title {
     font-size: 24px;
     line-height: 30px;
   }
 }
+
 .popop3 .popup3 .icon-text {
   margin: 0 20px;
   border-radius: 6px;
@@ -1713,6 +1911,7 @@ body {
   padding-right: 10px;
   margin-bottom: 10px;
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .icon-text {
     align-items: center;
@@ -1720,24 +1919,29 @@ body {
     padding: 15px;
   }
 }
+
 .popop3 .popup3 .icon-text img {
   width: 40px;
   height: 40px;
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .icon-text img {
     width: 50px;
     height: 50px;
   }
 }
+
 .popop3 .popup3 .icon-text .text {
   margin-left: 10px;
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .icon-text .text {
     margin-left: 15px;
   }
 }
+
 .popop3 .popup3 .icon-text .text h6 {
   font-family: "Intro", Regular;
   font-style: normal;
@@ -1748,11 +1952,13 @@ body {
   color: #2c2c2c;
   margin-bottom: 0;
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .icon-text .text h6 {
     font-size: 16px;
   }
 }
+
 .popop3 .popup3 .icon-text .text p {
   font-family: "Intro", Book;
   font-style: normal;
@@ -1763,32 +1969,36 @@ body {
   color: #2c2c2c;
   margin-bottom: 0;
 }
+
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .icon-text .text {
     border-bottom: 1px solid #ededed;
     padding-bottom: 15px;
   }
 }
+
 .popop3 .popup3 .yellow-strip {
   background: #fcd800;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
+
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .yellow-strip {
     padding-left: 30px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .yellow-strip {
     justify-content: center;
     padding: 15px;
   }
 }
+
 .popop3 .popup3 .yellow-strip .inner-bold {
   font-family: "Intro", Bold;
   font-style: normal;
@@ -1800,11 +2010,13 @@ body {
   color: #006685;
   margin-left: 9px;
 }
+
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .yellow-strip .inner-bold {
     font-size: 16px;
   }
 }
+
 .popop3 .popup3 .yellow-strip .inner-light {
   font-family: "Intro", Book;
   font-style: normal;
@@ -1815,11 +2027,13 @@ body {
   letter-spacing: 0.02em;
   color: #006685;
 }
+
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .yellow-strip .inner-light {
     font-size: 14px;
   }
 }
+
 .popop3 .popup3 .yellow-strip .code {
   background: #ffffff;
   display: flex;
@@ -1829,25 +2043,30 @@ body {
   border-radius: 6px;
   padding: 4px 10px;
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .yellow-strip .code {
     margin: 0 10px;
   }
 }
+
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .yellow-strip .code {
     height: 30px;
     margin-left: 23px;
   }
 }
+
 .popop3 .popup3 .yellow-strip .code .inner-bold {
   margin-left: 5px;
 }
+
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .yellow-strip .code .inner-light {
     font-size: 14px;
   }
 }
+
 .popop3 .popup3 .plans-radio-col {
   background: #ffffff;
   border: 1px solid #acacac;
@@ -1855,27 +2074,25 @@ body {
   border-radius: 6px;
   padding-top: 25px;
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .plans-radio-col {
     padding-top: 36px;
   }
 }
+
 .popop3 .popup3 .plans-radio-col .checkmark {
-  left: 9px;
+  left: 10px;
+  right: unset;
 }
-@media screen and (min-width: 992px) {
-  .popop3 .popup3 .plans-radio-col .checkmark {
-    left: 11px;
-    right: unset;
-  }
-}
+
 .popop3 .popup3 .plans-radio-col input:checked ~ label {
   background: none;
   border: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0;
 }
+
 .popop3 .popup3 label {
   background: #ffffff;
   border: 0px;
@@ -1884,23 +2101,28 @@ body {
   padding: 5px 0 5px;
   height: 100%;
 }
+
 @media screen and (max-width: 600px) {
   .popop3 .popup3 label {
     padding-left: 4px;
   }
 }
+
 .popop3 .popup3 .checkmark {
   border-radius: 0;
   width: 16px;
   height: 16px;
 }
+
 .popop3 .popup3 .checkmark:after {
   left: 4px;
   top: 1px;
 }
+
 .popop3 .popup3 input {
   top: 0;
 }
+
 .popop3 .popup3 input:checked ~ .checkmark {
   background-color: #2c2c2c;
   border: 1px solid #2c2c2c;
@@ -1908,10 +2130,12 @@ body {
   box-sizing: border-box;
   border-radius: 2px;
 }
+
 .popop3 .popup3 .popup-popular-tag {
   height: 30px;
   margin-left: -10px;
 }
+
 .popop3 .popup3 .plans-radio-title {
   font-family: "Intro", Bold;
   font-style: normal;
@@ -1920,16 +2144,19 @@ body {
   letter-spacing: 0.02em;
   color: #2c2c2c;
 }
+
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .plans-radio-title {
     margin-bottom: 0;
   }
 }
+
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .plans-radio-title {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .plans-radio-title {
     font-size: 24px;
@@ -1937,6 +2164,7 @@ body {
     margin-bottom: 0;
   }
 }
+
 .popop3 .popup3 .plans-radio-price {
   font-family: "Intro", Bold;
   font-style: normal;
@@ -1947,21 +2175,25 @@ body {
   letter-spacing: 0.02em;
   color: #2c2c2c;
 }
+
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .plans-radio-price {
     margin-bottom: 0;
   }
 }
+
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .plans-radio-price {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .popup3 .plans-radio-price {
     font-size: 16px;
   }
 }
+
 .popop3 .popup3 .plans-radio-sub-title {
   font-family: "Intro", Book;
   font-style: normal;
@@ -1971,11 +2203,13 @@ body {
   letter-spacing: 0.02em;
   color: #707070;
 }
+
 @media screen and (min-width: 400px) {
   .popop3 .popup3 .plans-radio-sub-title {
     font-size: 14px;
   }
 }
+
 .popop3 .popup3 .sticky-modal-footer {
   box-shadow: none;
   bottom: 0;
@@ -1983,6 +2217,7 @@ body {
   padding: 20px;
   padding-top: 0;
 }
+
 .popop3 .popup3 .bttn-outline {
   display: flex;
   flex-direction: row;
@@ -2009,17 +2244,20 @@ body {
   /* Accent Black */
   color: #2c2c2c;
 }
+
 @media screen and (max-width: 992px) {
   .popop3 .popup3 .bttn-outline {
     padding: 0 !important;
   }
 }
+
 .popop3 .popup3 .d-flex {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
+
 .popop3 .popup3 .bttn-orange {
   display: flex;
   flex-direction: row;
@@ -2046,9 +2284,11 @@ body {
   /* Accent Black */
   color: #2c2c2c !important;
 }
+
 .popop3 .plans-radio-col {
   position: relative;
 }
+
 .popop3 .plans-radio-col::after {
   content: "";
   position: absolute;
@@ -2058,26 +2298,30 @@ body {
   height: 10px;
   border: solid white;
   border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .plans-radio-col::after {
     left: 17px;
   }
 }
+
 .popop3 .modal-content {
   border: 0;
 }
+
 .popop3 .modal {
   background: rgba(81, 150, 200, 0.9);
 }
+
 .popop3 .active {
   background: rgba(0, 166, 202, 0.1) !important;
   border: 1px solid #707070 !important;
   box-sizing: border-box !important;
   border-radius: 6px !important;
 }
+
 .popop3 .active .checkmark {
   background-color: #2c2c2c !important;
   border: 1px solid #2c2c2c !important;
@@ -2085,6 +2329,7 @@ body {
   box-sizing: border-box !important;
   border-radius: 2px !important;
 }
+
 .popop3 .active .checkmark::after {
   content: "";
   left: 7px;
@@ -2093,14 +2338,15 @@ body {
   height: 10px;
   border: solid white;
   border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 @media screen and (max-width: 992px) {
   .popop3 .d-none {
     display: none !important;
   }
 }
+
 @media screen and (min-width: 992px) {
   .popop3 .d-md-block {
     display: block;
@@ -2188,6 +2434,7 @@ body {
   text-decoration: none !important;
   margin-right: 0.5em;
 }
+
 @media screen and (min-width: 992px) {
   .btn-1 {
     width: 280px;
@@ -2214,6 +2461,7 @@ body {
   box-sizing: border-box;
   border-radius: 25px;
 }
+
 @media screen and (min-width: 992px) {
   .btn-2 {
     width: 280px;
@@ -2228,6 +2476,7 @@ body {
     opacity: 1 !important;
   }
 }
+
 @media screen and (min-width: 992px) {
   .popup3-close {
     position: absolute !important;
@@ -2247,12 +2496,12 @@ body {
     background: white;
     box-shadow: 0px -10px 20px rgba(22, 32, 35, 0.14);
   }
-
   .blue-strip {
     position: sticky !important;
     top: 0;
   }
 }
+
 .tooltip-show {
   font-family: "Intro", Book;
   font-style: normal;
@@ -2273,6 +2522,7 @@ body {
   right: 13px;
   top: -40px;
 }
+
 .tooltip-show::after {
   content: "";
   position: absolute;
@@ -2301,29 +2551,21 @@ body {
 }
 
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, 25%);
-  -ms-transform: translate(0, 25%);
-  -o-transform: translate(0, 25%);
   transform: translate(0, 25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -o-transform 0.3s ease-out;
 }
 
 .modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
   transform: translate(0, 0);
 }
+
 .no-coupon .yellow-strip {
   display: none !important;
 }
+
 @media screen and (max-width: 992px) {
   .no-coupon .modal::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -2332,6 +2574,7 @@ body {
     background-color: white;
   }
 }
+
 @media screen and (max-width: 992px) {
   .no-coupon .popop3,
   .no-coupon .popup-outer {
@@ -2350,19 +2593,158 @@ body {
     box-shadow: 0px -20px 20px rgba(22, 32, 35, 0.14);
   }
 }
+
 .no-coupon .popop3 .popup3 .sticky-modal-footer {
   padding-top: 30px;
-} /*# sourceMappingURL=custom.css.map */
+}
+
 @media screen and (max-width: 992px) {
-  .base-plan-coupon .sticky-modal-footer {
-    padding-top: 20px !important;
-  }
-  .base-plan-coupon .yellow-strip {
-    margin-bottom: 0 !important;
+  .fixed-height {
+    margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 992px) {
-  .base-plan-coupon .fixed-height {
-    margin-bottom: 30px;
-  }
+
+/* FAQ section */
+.free-landing-page .faq-section {
+  padding-top: 40px;
+}
+
+.free-landing-page .faq-section__wraper {
+  max-width: 980px;
+}
+
+.free-landing-page .faq-section__wraper .section-heading {
+  font-family: "Intro", Bold;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #2C2C2C;
+  margin-bottom: 29px;
+}
+
+.free-landing-page .faq-section__wraper .section-heading .highlight {
+  color: #00A6CA;
+}
+
+.free-landing-page .faq-section__wraper .nav {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #00A6CA;
+  flex-wrap: nowrap;
+}
+
+.free-landing-page .faq-section__wraper .nav .nav-item {
+  margin: 0px;
+}
+
+.free-landing-page .faq-section__wraper .nav .nav-item .nav-link {
+  border: none;
+  background-color: #fff;
+  padding: 18px 20px;
+  font-family: "Intro", Bold;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  position: relative;
+}
+
+.free-landing-page .faq-section__wraper .nav .nav-item .nav-link.active {
+  background-color: #F9F9F9;
+}
+
+.free-landing-page .faq-section__wraper .nav .nav-item .nav-link.active:after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #00A6CA;
+  position: absolute;
+}
+
+.free-landing-page .faq-section__wraper .nav .nav-item:not(:last-child) .nav-link {
+  border-right: 1px solid #DDDDDD;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: none;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item:not(:last-child) {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button {
+  padding: 0px 0px 5px;
+  box-shadow: none;
+  font-family: "Intro", Regular;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button:after {
+  content: none;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button .icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border: 1px solid #00A6CA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin-right: 13px;
+  position: relative;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button .icon:before, .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button .icon:after {
+  content: '';
+  height: 1.6px;
+  width: 12px;
+  background-color: #00A6CA;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button .icon:before {
+  left: calc(50% - 6px);
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button .icon:after {
+  transform: rotate(90deg);
+  top: calc(50%);
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) .icon:before {
+  opacity: 0;
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) .icon:after {
+  transform: rotate(0deg);
+  left: calc(50% - 6px);
+}
+
+.free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-collapse .accordion-body {
+  padding: 5px 35px 0px;
+  font-family: "Intro", Book;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #707070;
 }
