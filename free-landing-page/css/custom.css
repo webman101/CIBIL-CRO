@@ -2621,7 +2621,7 @@ body {
   text-align: center;
   letter-spacing: -0.01em;
   color: #2C2C2C;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
 }
 
 .free-landing-page .faq-section__wraper .section-heading .highlight {
@@ -2652,6 +2652,7 @@ body {
 }
 
 .free-landing-page .faq-section__wraper .nav .nav-item .nav-link.active {
+  color: #2C2C2C;
   background-color: #F9F9F9;
 }
 
@@ -2680,7 +2681,8 @@ body {
 }
 
 .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button {
-  padding: 0px 0px 5px;
+  align-items: flex-start;
+  padding: 0px;
   box-shadow: none;
   font-family: "Intro", Regular;
   font-weight: 600;
@@ -2739,7 +2741,7 @@ body {
 }
 
 .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-collapse .accordion-body {
-  padding: 5px 35px 0px;
+  padding: 10px 35px 0px;
   font-family: "Intro", Book;
   font-style: normal;
   font-weight: 400;
@@ -2747,4 +2749,30 @@ body {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #707070;
+}
+
+@media (max-width: 768px) {
+  .free-landing-page .faq-section {
+    padding-top: 30px;
+  }
+  .free-landing-page .faq-section__wraper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .free-landing-page .faq-section__wraper .nav {
+    /* flex-wrap: nowrap;
+					overflow: hidden;
+					overflow-x: hidden;
+					overflow-x: scroll;
+					white-space: nowrap; */
+    margin-bottom: 1px;
+  }
+  .free-landing-page .faq-section__wraper .nav .nav-item .nav-link {
+    font-size: 14px;
+    padding: 10px 7px 10px 6px;
+    color: #707070;
+  }
+  .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-collapse .accordion-body {
+    font-size: 14px;
+  }
 }
