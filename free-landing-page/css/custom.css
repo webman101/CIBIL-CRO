@@ -2630,7 +2630,7 @@ body {
 
 .free-landing-page .faq-section__wraper .nav {
   margin-bottom: 10px;
-  border-bottom: 1px solid #00A6CA;
+  box-shadow: 0 1px 0 #00A6CA;
   flex-wrap: nowrap;
 }
 
