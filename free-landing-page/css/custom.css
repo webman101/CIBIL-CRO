@@ -2754,17 +2754,15 @@ body {
 @media (max-width: 768px) {
   .free-landing-page .faq-section {
     padding-top: 30px;
+    padding-bottom: 20px;
   }
   .free-landing-page .faq-section__wraper {
     padding-left: 20px;
     padding-right: 20px;
   }
   .free-landing-page .faq-section__wraper .nav {
-    /* flex-wrap: nowrap;
-					overflow: hidden;
-					overflow-x: hidden;
-					overflow-x: scroll;
-					white-space: nowrap; */
+    /* white-space: nowrap;
+					overflow-x: scroll; */
     margin-bottom: 1px;
   }
   .free-landing-page .faq-section__wraper .nav .nav-item .nav-link {
@@ -2772,7 +2770,23 @@ body {
     padding: 10px 7px 10px 6px;
     color: #707070;
   }
+  .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button .icon {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    margin-right: 10px;
+  }
+  .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button .icon:before, .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button .icon:after {
+    width: 9.82px;
+    left: auto;
+    top: auto;
+  }
+  .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) .icon:after {
+    left: auto;
+  }
   .free-landing-page .faq-section__wraper .tab-content .tab-pane .accordion .accordion-item .accordion-collapse .accordion-body {
     font-size: 14px;
+    padding-left: 28px;
+    padding-right: 0px;
   }
 }
