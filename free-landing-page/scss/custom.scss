@@ -142,21 +142,21 @@ body {
 		font-family: Intro, Regular;
 		font-weight: 600;
 		font-size: 16px;
-		line-height: 24px;
+		line-height: 16px;
 		letter-spacing: 0.02em;
 		color: #2c2c2c;
 		text-decoration: none;
 		display: block;
 		height: 50px;
-		line-height: 51px;
 		text-align: center;
-		text-transform: capitalize;
+		text-transform: uppercase;
 		width: 100%;
 		padding: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		max-width: 288px;
+		min-width: 316px;
 	}
 	.button-orange-outline {
 		background: #fff;
@@ -179,6 +179,10 @@ body {
 	}
 	.container {
 		max-width: 1200px;
+		@media(max-width:768px){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 	}
 	.banner-main {
 		background: #fff;
@@ -206,19 +210,24 @@ body {
 		align-items: center;
 		justify-content: center;
 		padding: 16px 20px;
+		img{
+			margin-right: 10px;
+			width: 26px;
+		}
 		p {
-			margin-left: 14px !important;
-			margin: 0;
-			span {
-				font-family: Intro, Bold;
-				font-style: normal;
+			margin: 0px;
+			font-family: "Intro", Regular;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.02em;
+			color: #006685;
+			a{
+				font-family: "Intro", Bold;
 				font-weight: 700;
-				font-size: 16px;
-				line-height: 24px;
-				letter-spacing: 0.02em;
-				color: #006685;
-				&:last-child {
-					font-weight: 400;
+				color: #006685 !important;
+				&:hover, &:focus{
+					color: #006685 !important;
 				}
 			}
 		}
@@ -226,11 +235,14 @@ body {
 	.goals {
 		min-height: 280px;
 		background-color: #f9f9f9;
-		padding-top: 40px;
+		padding-top: 60px;
 		box-sizing: border-box;
 		padding-bottom: 34px;
 		.title {
 			font-size: 24px;
+		}
+		p{
+			margin-bottom: 0px;
 		}
 		.plan-details {
 			font-family: Intro, Regular;
@@ -245,9 +257,11 @@ body {
 		.goal {
 			margin-top: 20px;
 			border-radius: 6px;
-			padding: 20px;
 			background: #fff;
-			padding-bottom: 0;
+			padding: 0 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			.image {
 				height: 60px;
 				display: flex;
@@ -274,6 +288,7 @@ body {
 				line-height: 24px;
 				letter-spacing: 0.02em;
 				color: #000;
+				max-width: 334px;
 			}
 		}
 		.button-orange {
@@ -1289,14 +1304,21 @@ body {
 			display: none;
 		}
 		.banner-main {
-			padding-top: 20px;
+			padding-top: 18px;
 			p {
 				font-size: 24px;
 				line-height: 30px;
 			}
+			.heading{
+				margin-top: 0px;
+				margin-bottom: 20px;
+			}
 		}
 		.did-you-know {
-			padding: 8px 0;
+			padding: 8px 0 7px;
+			img{
+				width: 26px;
+			}
 		}
 		.mb-md-10 {
 			margin-bottom: 10px !important;
@@ -1310,11 +1332,9 @@ body {
 				margin-bottom: 17px;
 			}
 			.goal {
-				margin-top: 33px;
-
-				padding-top: 30px;
+				margin-top: 0px;
 				h6 {
-					margin: 20px 0 14px;
+					margin: 20px 0;
 				}
 			}
 		}
@@ -2417,11 +2437,101 @@ body {
 		margin-bottom: 20px;
 	}
 }
-
+@media(min-width:769px){
+	.free-landing-page{
+		.row{
+			.info-box{
+				padding: 0px;
+				&:not(:last-child){
+					padding-right: 10px !important;
+				}
+				&:not(:first-child){
+					padding-left: 10px !important;
+				}
+			}
+		}
+	}
+}
+.free-landing-page{
+	.banner-main{
+		.subheading{
+			margin-bottom: 50px;
+		}
+	}
+}
+.free-landing-page{
+	.banner-main{
+		p{
+			margin-bottom: 50px;
+		}
+	}
+	}
+@media(max-width:768px){
+	.free-landing-page{
+		.banner-main{
+			.banner-image-block{
+				margin-bottom: 19.91px;
+			}
+			h2{
+				margin-bottom: 10px !important;
+			}
+			p{
+				margin-bottom: 30px !important;
+			}
+			.button-orange{
+				margin-bottom: 40px;
+			}
+			.row{
+				margin: auto;
+				.text-bloxck{
+					padding: 0px;
+				}
+			}
+		}
+		.did-you-know{
+			align-items: flex-start;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			p{
+				font-size: 14px;
+				font-family: "Intro", Book;
+				a{
+					font-size: 16px;
+				}
+			}
+			img{
+				width: 35px;
+			}
+		}
+		.goals {
+			padding: 30px 0px 30px;
+			.plan-details{
+				margin-bottom: 10px !important;
+				max-width: 292px;
+				margin: auto;
+			}
+			.row{
+				margin: auto;
+				.info-box{
+					.goal{
+						min-height: 247px;
+						padding: 38px 20px 30px;
+						h6{
+							margin: 20px 0px;
+						}
+					}
+				}
+			}
+			.button-orange{
+				margin-top: 30px;
+			}
+		}
+	}
+}
 /* FAQ section css starts here */
 .free-landing-page{
 	.faq-section{
-		padding-top: 40px;
+		padding-top: 60px;
 		&__wraper{
 			max-width: 980px;
 			.section-heading{

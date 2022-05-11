@@ -175,21 +175,21 @@ body {
   font-family: Intro, Regular;
   font-weight: 600;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 16px;
   letter-spacing: 0.02em;
   color: #2c2c2c;
   text-decoration: none;
   display: block;
   height: 50px;
-  line-height: 51px;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
   width: 100%;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 288px;
+  min-width: 316px;
 }
 
 .free-landing-page .button-orange-outline {
@@ -214,6 +214,13 @@ body {
 
 .free-landing-page .container {
   max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .free-landing-page .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .free-landing-page .banner-main {
@@ -247,35 +254,45 @@ body {
   padding: 16px 20px;
 }
 
-.free-landing-page .did-you-know p {
-  margin-left: 14px !important;
-  margin: 0;
+.free-landing-page .did-you-know img {
+  margin-right: 10px;
+  width: 26px;
 }
 
-.free-landing-page .did-you-know p span {
-  font-family: Intro, Bold;
-  font-style: normal;
-  font-weight: 700;
+.free-landing-page .did-you-know p {
+  margin: 0px;
+  font-family: "Intro", Regular;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #006685;
 }
 
-.free-landing-page .did-you-know p span:last-child {
-  font-weight: 400;
+.free-landing-page .did-you-know p a {
+  font-family: "Intro", Bold;
+  font-weight: 700;
+  color: #006685 !important;
+}
+
+.free-landing-page .did-you-know p a:hover, .free-landing-page .did-you-know p a:focus {
+  color: #006685 !important;
 }
 
 .free-landing-page .goals {
   min-height: 280px;
   background-color: #f9f9f9;
-  padding-top: 40px;
+  padding-top: 60px;
   box-sizing: border-box;
   padding-bottom: 34px;
 }
 
 .free-landing-page .goals .title {
   font-size: 24px;
+}
+
+.free-landing-page .goals p {
+  margin-bottom: 0px;
 }
 
 .free-landing-page .goals .plan-details {
@@ -292,9 +309,11 @@ body {
 .free-landing-page .goals .goal {
   margin-top: 20px;
   border-radius: 6px;
-  padding: 20px;
   background: #fff;
-  padding-bottom: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .free-landing-page .goals .goal .image {
@@ -326,6 +345,7 @@ body {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #000;
+  max-width: 334px;
 }
 
 .free-landing-page .goals .button-orange {
@@ -1470,14 +1490,21 @@ body {
     display: none;
   }
   .free-landing-page .banner-main {
-    padding-top: 20px;
+    padding-top: 18px;
   }
   .free-landing-page .banner-main p {
     font-size: 24px;
     line-height: 30px;
   }
+  .free-landing-page .banner-main .heading {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
   .free-landing-page .did-you-know {
-    padding: 8px 0;
+    padding: 8px 0 7px;
+  }
+  .free-landing-page .did-you-know img {
+    width: 26px;
   }
   .free-landing-page .mb-md-10 {
     margin-bottom: 10px !important;
@@ -1492,11 +1519,10 @@ body {
     margin-bottom: 17px;
   }
   .free-landing-page .goals .goal {
-    margin-top: 33px;
-    padding-top: 30px;
+    margin-top: 0px;
   }
   .free-landing-page .goals .goal h6 {
-    margin: 20px 0 14px;
+    margin: 20px 0;
   }
 }
 
@@ -2608,9 +2634,86 @@ body {
   }
 }
 
+@media (min-width: 769px) {
+  .free-landing-page .row .info-box {
+    padding: 0px;
+  }
+  .free-landing-page .row .info-box:not(:last-child) {
+    padding-right: 10px !important;
+  }
+  .free-landing-page .row .info-box:not(:first-child) {
+    padding-left: 10px !important;
+  }
+}
+
+.free-landing-page .banner-main .subheading {
+  margin-bottom: 50px;
+}
+
+.free-landing-page .banner-main p {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .free-landing-page .banner-main .banner-image-block {
+    margin-bottom: 19.91px;
+  }
+  .free-landing-page .banner-main h2 {
+    margin-bottom: 10px !important;
+  }
+  .free-landing-page .banner-main p {
+    margin-bottom: 30px !important;
+  }
+  .free-landing-page .banner-main .button-orange {
+    margin-bottom: 40px;
+  }
+  .free-landing-page .banner-main .row {
+    margin: auto;
+  }
+  .free-landing-page .banner-main .row .text-bloxck {
+    padding: 0px;
+  }
+  .free-landing-page .did-you-know {
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .free-landing-page .did-you-know p {
+    font-size: 14px;
+    font-family: "Intro", Book;
+  }
+  .free-landing-page .did-you-know p a {
+    font-size: 16px;
+  }
+  .free-landing-page .did-you-know img {
+    width: 35px;
+  }
+  .free-landing-page .goals {
+    padding: 30px 0px 30px;
+  }
+  .free-landing-page .goals .plan-details {
+    margin-bottom: 10px !important;
+    max-width: 292px;
+    margin: auto;
+  }
+  .free-landing-page .goals .row {
+    margin: auto;
+  }
+  .free-landing-page .goals .row .info-box .goal {
+    min-height: 247px;
+    padding: 38px 20px 30px;
+  }
+  .free-landing-page .goals .row .info-box .goal h6 {
+    margin: 20px 0px;
+  }
+  .free-landing-page .goals .button-orange {
+    margin-top: 30px;
+  }
+}
+
 /* FAQ section css starts here */
 .free-landing-page .faq-section {
-  padding-top: 40px;
+  padding-top: 60px;
 }
 
 .free-landing-page .faq-section__wraper {
