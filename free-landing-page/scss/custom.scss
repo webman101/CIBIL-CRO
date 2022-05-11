@@ -1344,6 +1344,10 @@ body {
 			padding: 46px 8px 40px;
 			.row {
 				flex-direction: column;
+				.col-md-4{
+					width: 100%;
+					padding: 0px;
+				}
 			}
 			.title {
 				max-width: 315px;
@@ -2414,7 +2418,7 @@ body {
 	}
 }
 
-/* FAQ section */
+/* FAQ section css starts here */
 .free-landing-page{
 	.faq-section{
 		padding-top: 40px;
@@ -2614,3 +2618,4 @@ body {
 		}
 	}
 }
+/* FAQ section css ends here */

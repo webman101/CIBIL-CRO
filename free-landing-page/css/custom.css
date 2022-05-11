@@ -1523,6 +1523,10 @@ body {
   .free-landing-page .goals .row {
     flex-direction: column;
   }
+  .free-landing-page .goals .row .col-md-4 {
+    width: 100%;
+    padding: 0px;
+  }
   .free-landing-page .goals .title {
     max-width: 315px;
   }
@@ -2604,7 +2608,7 @@ body {
   }
 }
 
-/* FAQ section */
+/* FAQ section css starts here */
 .free-landing-page .faq-section {
   padding-top: 40px;
 }
@@ -2790,3 +2794,5 @@ body {
     padding-right: 0px;
   }
 }
+
+/* FAQ section css ends here */
