@@ -1,0 +1,353 @@
+.container{
+    max-width:1220px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+}
+
+/* Heading Section css starts here */
+.heading-section{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    &__wraper{
+        .top-panel{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            .heading{
+                font-family: "Intro", Bold;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 30px;
+                letter-spacing: 0.02em;
+                color: #2C2C2C;
+                margin: 0px;
+            }
+            .button-group {
+                display: flex;
+                button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 20px;
+                    width: 88px;
+                    height: 34px;
+                    background: linear-gradient(180deg, #FFFFFF 0%, #E3E3E3 52.11%, #9F9F9F 100%);
+                    border: 1px solid #DDDDDD;
+                    box-sizing: border-box;
+                    border-radius: 0px 0px 4px 4px;
+                    font-size: 10px;
+                    line-height: 10px;
+                    font-family: "Intro", Bold;
+                    font-weight: 700;
+                    color: #2C2C2C;
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                    .icon{
+                        margin-left: 5.25px;
+                    }
+                }
+            }
+        }
+        .bottom-panel{
+            p{
+                font-family: "Intro", Book;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                color: #2C2C2C;
+                margin: 0px;
+                max-width: 617px;
+            }
+        }
+    }
+}
+/* Heading Section css ends here */
+
+
+/* Dispute Section css starts here */
+.dispute-details{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    &__wraper{
+        border: 1px solid #DDDDDD;
+        border-radius: 8px;
+        overflow: hidden;
+        p{
+            margin: 0px;
+        }
+        .top-panel{
+            background: #F6F7FC;
+            padding: 30px 20px;
+            .title{
+                font-family: "Intro", Regular;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 30px;
+                color: #00A6CA;
+                padding-left: 10px;
+            }
+            .details-row{
+                td{
+                    padding-top: 20px;
+                    &:first-child{
+                        padding-left: 10px;
+                    }
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid #EDEDED;
+                    td{
+                        padding-bottom: 20px;
+                        padding-right: 80px;
+                    }
+                }
+                .heading{
+                    font-family: "Intro", Book;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    color: #707070;
+                    margin-bottom: 10px;
+                }
+                .description{
+                    font-family: "Intro", Regular;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    color: #2C2C2C;
+                }
+            }
+        }
+        .bottom-panel{
+            &__wraper{
+                padding: 30px;
+                display: flex;
+                padding-right: 21px;
+                .title{
+                    font-family: "Intro", Bold;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+                    .reminder-list{
+                        margin-top: 4px;
+                        font-family: "Intro", Book;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 0.02em;
+                        color: #2c2c2c;
+                        .total{
+                            padding-bottom: 3px;
+                        }
+                        tr{
+                            td{
+                                padding-top: 0px;
+                                padding-bottom: 0px;
+                                &:first-child{
+                                    padding-left: 20px;
+                                    position: relative;
+                                    margin-bottom: 0px;
+                                    line-height: 24px;
+                                    &:before{
+                                        content: '';
+                                        height: 3px;
+                                        width: 3px;
+                                        background-color: #707070;
+                                        position: absolute;
+                                        border-radius: 5px;
+                                        left: 10px;
+                                        top: 10px;
+                                    }
+                                }
+                            }
+                            .seperator{
+                                padding: 0px 15px;
+                            }
+                        }
+                    }
+                .timeline{
+                    border-right: 1px solid #DDDDDD;
+                    padding-right: 30px;
+                    width: 56.22%;
+                    &__header{
+                        padding-bottom: 10px;
+                    }
+                    &__body{
+                        padding-top: 10px;
+                        font-family: "Intro", Regular;
+                        font-weight: 600;
+                        .timeline-row{
+                            display: flex;
+                            tr{
+                                td{
+                                    &:first-child{
+                                        padding-left: 0px;
+                                        &::before{
+                                            content: none ;
+                                        }
+                                    }
+                                }
+                            }
+                            .progress-status{
+                                padding-right: 16px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                .dot {
+                                    height: 14px;
+                                    width: 14px;
+                                    min-height: 14px;
+                                    background-color: #ffffff;
+                                    border: 2px solid #ACACAC;
+                                    border-radius: 20px;
+                                }
+                                .line{
+                                    height: 100%;
+                                    width: 2px;
+                                    background-image: linear-gradient(#ACACAC 50%, rgba(255,255,255,0) 0%);
+                                    background-position: top center;
+                                    background-size: 2px 10px;
+                                    background-repeat: repeat-y;
+                                }
+                                &.resolved{
+                                    .dot{
+                                        background-color: #3BB012;
+                                        border-color: #3BB012;
+                                    }
+                                    .line{
+                                        background-image: linear-gradient(#3BB012 100%, rgba(255,255,255,0) 0%);
+                                    }
+                                }
+                            }
+                            .progress-details{
+                                p{
+                                    &:first-child{
+                                        margin-top: -4px;
+                                    }
+                                }
+                                .date{
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    color: #707070;
+                                    margin-top: 4px;
+                                    font-size: 14px;
+                                    font-family: "Intro", Book;
+                                    font-weight: 400;
+                                }
+                                .title{
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    letter-spacing: 0.02em;
+                                    color: #2c2c2c;
+                                    font-family: "Intro", Bold;
+                                    font-weight: 700;
+                                    text-transform: none;
+                                }
+                            }
+                            &:not(:last-child){
+                                .progress-details{
+                                    margin-bottom: 30px;
+                                }
+                            }
+                            &:last-child{
+                                .progress-status{
+                                    .line{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .email-reminders{
+                    width: calc(100% - 56.22%);
+                    padding-left: 30px;
+                    &__header{
+                        .title{
+                            margin-bottom: 20px;
+                        }
+                    }
+                    &__body{
+                        background: #F9F9F9;
+                        max-height: 260px;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        padding: 20px;
+                        .reminder-list{
+                            margin: 0px;
+                            tbody{
+                                td{
+                                    padding-top: 0px;
+                                    padding-bottom: 0px;
+                                }
+                                tr:nth-child(10){
+                                    td{
+                                        padding-bottom: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Dispute Section css ends here */
+
+
+/* Requirements section css starts here */
+.requirements{
+    margin-top: 37px;
+    padding-bottom: 42px;
+    font-family: "Intro", Book;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #707070;
+}
+/* Requirements section css ends here */
+
+
+@media(max-width:768px){
+    table{
+        tr, td{
+            display: block;
+        }
+        td{
+            padding-right: 0px;
+        }
+    }
+    .dispute-details__wraper .top-panel, .dispute-details__wraper .bottom-panel__wraper{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .dispute-details__wraper .top-panel .title, .dispute-details__wraper .top-panel .details-row:not(:last-child) td, .dispute-details__wraper .top-panel .details-row td:first-child{
+        padding-left: 0px;
+    }
+    .dispute-details__wraper .bottom-panel__wraper{
+        flex-direction: column;
+        .timeline, .email-reminders{
+            width: 100%;
+            border: none;
+        }
+        .timeline, .email-reminders{
+            padding: 0px;
+        }
+        .email-reminders{
+            margin-top: 30px;
+            &__body{
+                padding-left: 10px;
+            }
+            tr{
+                display: flex;
+            }
+        }
+    }
+}
