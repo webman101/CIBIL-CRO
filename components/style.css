@@ -139,6 +139,7 @@
 .dispute-details__wraper .bottom-panel__wraper {
   padding: 30px;
   display: flex;
+  padding-right: 21px;
 }
 
 .dispute-details__wraper .bottom-panel__wraper .title {
@@ -148,13 +149,22 @@
 }
 
 .dispute-details__wraper .bottom-panel__wraper .reminder-list {
-  margin-top: 8px;
+  margin-top: 4px;
   font-family: "Intro", Book;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: #707070;
+  color: #2c2c2c;
+}
+
+.dispute-details__wraper .bottom-panel__wraper .reminder-list .total {
+  padding-bottom: 3px;
+}
+
+.dispute-details__wraper .bottom-panel__wraper .reminder-list tr td {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .dispute-details__wraper .bottom-panel__wraper .reminder-list tr td:first-child {
@@ -199,6 +209,14 @@
   display: flex;
 }
 
+.dispute-details__wraper .bottom-panel__wraper .timeline__body .timeline-row tr td:first-child {
+  padding-left: 0px;
+}
+
+.dispute-details__wraper .bottom-panel__wraper .timeline__body .timeline-row tr td:first-child::before {
+  content: none;
+}
+
 .dispute-details__wraper .bottom-panel__wraper .timeline__body .timeline-row .progress-status {
   padding-right: 16px;
   display: flex;
@@ -241,8 +259,8 @@
   font-size: 14px;
   line-height: 24px;
   color: #707070;
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-top: 4px;
+  font-size: 14px;
   font-family: "Intro", Book;
   font-weight: 400;
 }
@@ -266,11 +284,33 @@
 }
 
 .dispute-details__wraper .bottom-panel__wraper .email-reminders {
+  width: calc(100% - 56.22%);
   padding-left: 30px;
 }
 
 .dispute-details__wraper .bottom-panel__wraper .email-reminders__header .title {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.dispute-details__wraper .bottom-panel__wraper .email-reminders__body {
+  background: #F9F9F9;
+  max-height: 260px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.dispute-details__wraper .bottom-panel__wraper .email-reminders__body .reminder-list {
+  margin: 0px;
+}
+
+.dispute-details__wraper .bottom-panel__wraper .email-reminders__body .reminder-list tbody td {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.dispute-details__wraper .bottom-panel__wraper .email-reminders__body .reminder-list tbody tr:nth-child(10) td {
+  padding-bottom: 20px;
 }
 
 /* Dispute Section css ends here */
@@ -304,7 +344,7 @@
   .dispute-details__wraper .bottom-panel__wraper {
     flex-direction: column;
   }
-  .dispute-details__wraper .bottom-panel__wraper .timeline {
+  .dispute-details__wraper .bottom-panel__wraper .timeline, .dispute-details__wraper .bottom-panel__wraper .email-reminders {
     width: 100%;
     border: none;
   }
@@ -313,6 +353,9 @@
   }
   .dispute-details__wraper .bottom-panel__wraper .email-reminders {
     margin-top: 30px;
+  }
+  .dispute-details__wraper .bottom-panel__wraper .email-reminders__body {
+    padding-left: 10px;
   }
   .dispute-details__wraper .bottom-panel__wraper .email-reminders tr {
     display: flex;

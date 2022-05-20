@@ -127,21 +127,27 @@
             &__wraper{
                 padding: 30px;
                 display: flex;
+                padding-right: 21px;
                 .title{
                     font-family: "Intro", Bold;
                     font-weight: 700;
                     text-transform: uppercase;
                 }
                     .reminder-list{
-                        margin-top: 8px;
+                        margin-top: 4px;
                         font-family: "Intro", Book;
                         font-weight: 400;
                         font-size: 16px;
                         line-height: 24px;
                         letter-spacing: 0.02em;
-                        color: #707070;
+                        color: #2c2c2c;
+                        .total{
+                            padding-bottom: 3px;
+                        }
                         tr{
                             td{
+                                padding-top: 0px;
+                                padding-bottom: 0px;
                                 &:first-child{
                                     padding-left: 20px;
                                     position: relative;
@@ -177,6 +183,16 @@
                         font-weight: 600;
                         .timeline-row{
                             display: flex;
+                            tr{
+                                td{
+                                    &:first-child{
+                                        padding-left: 0px;
+                                        &::before{
+                                            content: none ;
+                                        }
+                                    }
+                                }
+                            }
                             .progress-status{
                                 padding-right: 16px;
                                 display: flex;
@@ -218,8 +234,8 @@
                                     font-size: 14px;
                                     line-height: 24px;
                                     color: #707070;
-                                    margin-bottom: 10px;
-                                    font-size: 16px;
+                                    margin-top: 4px;
+                                    font-size: 14px;
                                     font-family: "Intro", Book;
                                     font-weight: 400;
                                 }
@@ -249,10 +265,32 @@
                     }
                 }
                 .email-reminders{
+                    width: calc(100% - 56.22%);
                     padding-left: 30px;
                     &__header{
                         .title{
-                            margin-bottom: 12px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    &__body{
+                        background: #F9F9F9;
+                        max-height: 260px;
+                        overflow-x: hidden;
+                        overflow-y: scroll;
+                        padding: 20px;
+                        .reminder-list{
+                            margin: 0px;
+                            tbody{
+                                td{
+                                    padding-top: 0px;
+                                    padding-bottom: 0px;
+                                }
+                                tr:nth-child(10){
+                                    td{
+                                        padding-bottom: 20px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -295,7 +333,7 @@
     }
     .dispute-details__wraper .bottom-panel__wraper{
         flex-direction: column;
-        .timeline{
+        .timeline, .email-reminders{
             width: 100%;
             border: none;
         }
@@ -304,6 +342,9 @@
         }
         .email-reminders{
             margin-top: 30px;
+            &__body{
+                padding-left: 10px;
+            }
             tr{
                 display: flex;
             }
