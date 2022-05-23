@@ -1,0 +1,281 @@
+.logout-page {
+  /* heading section start */
+  /* heading section end */
+  /* `Myths & facts section` AND `Stay in the know section` start */
+  /* `Myths & facts section` AND `Stay in the know section` end */
+}
+
+.logout-page .container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 1400px) {
+  .logout-page .container {
+    max-width: 1220px;
+  }
+}
+
+.logout-page .heading-section {
+  background-color: #F6F7FC;
+  margin-bottom: 30px;
+}
+
+.logout-page .heading-section__wraper {
+  padding-top: 28px;
+  padding-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout-page .heading-section__wraper .left-side {
+  display: flex;
+}
+
+.logout-page .heading-section__wraper .left-side .icon {
+  margin-right: 20px;
+}
+
+.logout-page .heading-section__wraper .left-side .logout-msg {
+  letter-spacing: 0.02em;
+}
+
+.logout-page .heading-section__wraper .left-side .logout-msg .title {
+  font-family: 'Intro', Bold;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2C2C2C;
+  margin-bottom: 10px;
+}
+
+.logout-page .heading-section__wraper .left-side .logout-msg .subtitle {
+  font-family: 'Intro', Regular;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #707070;
+  margin-bottom: 0px;
+}
+
+.logout-page .heading-section__wraper .right-side__wraper {
+  background-color: #FDFDFD;
+  padding: 16px 41px 16px 20px;
+  border-radius: 2px;
+  display: flex;
+}
+
+.logout-page .heading-section__wraper .right-side__wraper .follow-text {
+  font-family: 'Intro', Book;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  margin-bottom: 0px;
+  max-width: 276px;
+  margin-right: 30px;
+}
+
+.logout-page .heading-section__wraper .right-side__wraper .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.logout-page .heading-section__wraper .right-side__wraper .social-icons .social-icon:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .logout-page .heading-section {
+    margin-bottom: 60px;
+  }
+  .logout-page .heading-section__wraper {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+  .logout-page .heading-section__wraper .left-side {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+  .logout-page .heading-section__wraper .left-side .icon {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+  .logout-page .heading-section__wraper .left-side .icon img {
+    width: 28px;
+    height: 28px;
+  }
+  .logout-page .heading-section__wraper .left-side .logout-msg .title, .logout-page .heading-section__wraper .left-side .logout-msg .subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .logout-page .heading-section__wraper .left-side .logout-msg .subtitle {
+    font-family: 'Intro', Book;
+  }
+  .logout-page .heading-section__wraper .right-side {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .logout-page .heading-section__wraper .right-side__wraper {
+    flex-direction: column;
+    padding: 0px;
+    text-align: center;
+  }
+  .logout-page .heading-section__wraper .right-side__wraper .follow-text {
+    max-width: 100%;
+    font-size: 14px;
+    max-width: 242px;
+    margin: 20px auto 10px;
+  }
+  .logout-page .heading-section__wraper .right-side__wraper .social-icons {
+    justify-content: center;
+  }
+}
+
+.logout-page .slider-n-blogs {
+  margin-bottom: 46px;
+}
+
+@media (max-width: 768px) {
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .hide-mob {
+    display: none !important;
+  }
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .hide-desk {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .hide-desk {
+    display: block;
+  }
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .section-title {
+  font-family: 'Intro', Bold;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #00A6CA;
+  margin-bottom: 0px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .section-subtitle {
+  font-family: 'Intro', Book;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  margin-bottom: 10px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide {
+  background: #F9F9F9;
+  border: 1px solid #EDEDED;
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 30px 20px 19px 30px;
+  position: relative;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide__wraper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide__wraper .cibil-btn {
+  background: #F16E00;
+  border-radius: 25px;
+  display: inline-flex;
+  justify-content: center;
+  height: 40px;
+  padding: 9px 29.86px 7px 29.14px;
+  font-family: 'Intro', Regular;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  color: #2c2c2c !important;
+  text-decoration: none;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide__wraper .cibil-btn.hide-mob {
+  margin-bottom: 27px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide__wraper .left-side .slide-title {
+  font-family: 'Intro', Regular;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #2C2C2C;
+  margin-bottom: 20px;
+  max-width: 264px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide__wraper .left-side .slide-text {
+  font-family: 'Intro', Book;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  margin-bottom: 30px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide__wraper .left-side .slide-text .highlight {
+  font-weight: 700;
+  background: #FCD800;
+  border-radius: 1px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 2px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide__wraper .bottom-side {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .section-subtitle {
+    margin-bottom: 20px;
+  }
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide {
+    border: none;
+    padding: 16px 16.83px 20px 16px;
+  }
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide .left-side {
+    width: 50%;
+  }
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide .left-side .slide-title {
+    font-size: 16px;
+    margin-bottom: 24px;
+    font-family: 'Intro', Book;
+    font-weight: 400;
+    max-width: 100%;
+  }
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide .left-side .slide-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide .left-side .slide-text .highlight {
+    height: 18px;
+  }
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide .right-side {
+    width: 50%;
+  }
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide .right-side .slide-img {
+    max-width: 163.17px;
+    width: 100%;
+  }
+}
