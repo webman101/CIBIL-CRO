@@ -193,6 +193,9 @@
 }
 
 .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider {
+  border: 1px solid #EDEDED;
+  border-radius: 2px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -228,9 +231,6 @@
 
 .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide {
   background: #F9F9F9;
-  border: 1px solid #EDEDED;
-  border-radius: 2px;
-  overflow: hidden;
   padding: 30px 20px 19px 30px;
   position: relative;
 }
