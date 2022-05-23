@@ -373,8 +373,10 @@
   .logout-page .slider-n-blogs__wraper .section-subtitle {
     margin-bottom: 20px;
   }
-  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide {
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider {
     border: none;
+  }
+  .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide {
     padding: 16px 16.83px 20px 16px;
   }
   .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide .left-side {
