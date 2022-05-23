@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -44,9 +45,9 @@
         <!-- Heading section end -->
 
         <!-- `Myths & facts section` &  `Stay in the know section` start -->
-        <!-- Myths & facts section start -->
         <div class="slider-n-blogs">
             <div class="container slider-n-blogs__wraper">
+                <!-- Myths & facts section start -->
                 <div class="myths-n-facts">
                     <p class="section-title">Myths and Facts</p>
                     <p class="section-subtitle">Credit myths & facts around CIBIL Score.</p>
@@ -67,12 +68,89 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="single-slide">
+                            <div class="single-slide__wraper">
+                                <div class="left-side">
+                                    <p class="slide-title">Subscribe Now for a CIBIL Subscription plan & <b>Get 10% OFF</b></p>
+                                    <p class="slide-text hide-mob">Use Code <span class="highlight">CIBIL10</span> on checkout</p>
+                                    <a href="" class="cibil-btn hide-mob">SUBSCRIBE NOW</a>
+                                </div>
+                                <div class="right-side">
+                                    <img class="slide-img" src="images/slider-image1.png" alt="slider-image1">
+                                </div>
+                                <div class="bottom-side hide-desk">
+                                    <p class="slide-text">Use Code <span class="highlight">CIBIL10</span> on checkout</p>
+                                    <a href="" class="cibil-btn">SUBSCRIBE NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-slide">
+                            <div class="single-slide__wraper">
+                                <div class="left-side">
+                                    <p class="slide-title">Subscribe Now for a CIBIL Subscription plan & <b>Get 10% OFF</b></p>
+                                    <p class="slide-text hide-mob">Use Code <span class="highlight">CIBIL10</span> on checkout</p>
+                                    <a href="" class="cibil-btn hide-mob">SUBSCRIBE NOW</a>
+                                </div>
+                                <div class="right-side">
+                                    <img class="slide-img" src="images/slider-image1.png" alt="slider-image1">
+                                </div>
+                                <div class="bottom-side hide-desk">
+                                    <p class="slide-text">Use Code <span class="highlight">CIBIL10</span> on checkout</p>
+                                    <a href="" class="cibil-btn">SUBSCRIBE NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Myths & facts section end -->
+                <div class="blogs-section">
+                    <p class="section-title">Stay in the Know</p>
+                    <p class="section-subtitle">Learn more about managing your finances</p>
+                    <div class="blog-list">
+                        <div class="blog-list__wraper">
+                            <div class="blog blue">
+                                <img src="images/blog-image1.jpg" alt="blog image" class="blog_img">
+                                <div class="blog_content">
+                                    <p class="blog_category">Watch And Learn</p>
+                                    <p class="blog_title" style="-webkit-box-orient: vertical;">Understanding the key features of your CIBIL Report </p>
+                                    <a href="" class="blog_link">Read Now</a>
+                                </div>
+                            </div>
+                            <div class="blog">
+                                <img src="images/blog-image2.jpg" alt="blog image" class="blog_img">
+                                <div class="blog_content">
+                                    <p class="blog_category">LIFE EVENTS</p>
+                                    <p class="blog_title" style="-webkit-box-orient: vertical;">Build A Positive Credit Profile With Good Credit Habits</p>
+                                    <a href="" class="blog_link">Read Now</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Myths & facts section end -->
         <!-- `Myths & facts section` &  `Stay in the know section` start -->
+
+        <!-- Banner secction start -->
+        <div class="container banner-section">
+            <div class="banner-section__wraper">
+                <div class="banner-content">
+                    <p class="banner-title">Monitor your CIBIL Score on the go with the <span class="highlight">CIBIL</span> App.</p>
+                    <p class="banner-subtitle">Easy, Secure and Quick Access  to your CIBIL Score & Report</p>
+                    <div class="banner-img hide-desk">
+                        <img src="images/banner-image-mob.png" alt="banner image">
+                    </div>
+                    <div class="button-grp">
+                        <a href="" class="app-link"><img src="images/playStore.png" alt="Play store" class="icon"></a>
+                        <a href="" class="app-link"><img src="images/appStore.png" alt="App store" class="icon"></a>
+                    </div>
+                </div>
+                <div class="banner-img">
+                    <img src="images/banner-image-desk.png" alt="" class="banner-img hide-mob">
+                </div>
+            </div>
+        </div>
+        <!-- Banner secction end -->
 
     </div>
 
@@ -80,6 +158,24 @@
 <script src="//assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="bootstrap/bootstrap.bundle.min.js"></script>
-
+<!-- slick slider js -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    /* Slider start */
+    $(".myths-n-facts-slider").slick({
+        dots: true,
+        arrows:false,
+        speed: 500,
+        responsive: [
+            {
+            breakpoint: 768,
+                settings: {
+                    dots:false
+                }
+            }
+        ]
+    });
+    /* slider end */
+</script>
 </body>
 </html>

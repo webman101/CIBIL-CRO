@@ -3,6 +3,8 @@
   /* heading section end */
   /* `Myths & facts section` AND `Stay in the know section` start */
   /* `Myths & facts section` AND `Stay in the know section` end */
+  /* Banner section start */
+  /* Banner section end */
 }
 
 .logout-page .container {
@@ -14,6 +16,26 @@
   .logout-page .container {
     max-width: 1220px;
   }
+}
+
+@media (max-width: 768px) {
+  .logout-page .hide-mob {
+    display: none !important;
+  }
+}
+
+.logout-page .hide-desk {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logout-page .hide-desk {
+    display: block;
+  }
+}
+
+.logout-page a {
+  outline: none !important;
 }
 
 .logout-page .heading-section {
@@ -140,23 +162,12 @@
   margin-bottom: 46px;
 }
 
-@media (max-width: 768px) {
-  .logout-page .slider-n-blogs__wraper .myths-n-facts .hide-mob {
-    display: none !important;
-  }
+.logout-page .slider-n-blogs__wraper {
+  display: flex;
+  column-gap: 20px;
 }
 
-.logout-page .slider-n-blogs__wraper .myths-n-facts .hide-desk {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .logout-page .slider-n-blogs__wraper .myths-n-facts .hide-desk {
-    display: block;
-  }
-}
-
-.logout-page .slider-n-blogs__wraper .myths-n-facts .section-title {
+.logout-page .slider-n-blogs__wraper .section-title {
   font-family: 'Intro', Bold;
   font-weight: 700;
   font-size: 16px;
@@ -167,7 +178,7 @@
   margin-bottom: 0px;
 }
 
-.logout-page .slider-n-blogs__wraper .myths-n-facts .section-subtitle {
+.logout-page .slider-n-blogs__wraper .section-subtitle {
   font-family: 'Intro', Book;
   font-weight: 400;
   font-size: 14px;
@@ -175,6 +186,44 @@
   letter-spacing: 0.02em;
   color: #2C2C2C;
   margin-bottom: 10px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts {
+  max-width: 580px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider {
+  position: relative;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .slick-dots {
+  position: absolute;
+  right: 19px;
+  bottom: 19px;
+  margin: 0px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .slick-dots li {
+  display: inline-flex;
+  margin-bottom: 0px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .slick-dots li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .slick-dots li button {
+  border: none;
+  font-size: 0;
+  padding: 0px;
+  width: 12px;
+  height: 12px;
+  border-radius: 15px;
+  background-color: #DDDDDD;
+}
+
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .slick-dots li.slick-active button {
+  background-color: #ACACAC;
 }
 
 .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide {
@@ -246,8 +295,82 @@
   width: 100%;
 }
 
+.logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide__wraper .right-side .slide-img {
+  margin-top: 17px;
+}
+
+.logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog {
+  width: calc(100%/2);
+  border-radius: 2px;
+  overflow: hidden;
+  max-width: 280px;
+}
+
+.logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog_img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog_content {
+  background-color: #F9F9F9;
+  padding: 10px 20px 19px;
+}
+
+.logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog_category {
+  font-family: 'Intro', Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+.logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog_title {
+  font-family: 'Intro', Bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog_link {
+  font-family: 'Intro', Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  color: #006685 !important;
+  text-underline-offset: 2px;
+}
+
+.logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog.blue .blog_category {
+  color: #00A6CA;
+}
+
 @media (max-width: 768px) {
-  .logout-page .slider-n-blogs__wraper .myths-n-facts .section-subtitle {
+  .logout-page .slider-n-blogs {
+    margin-bottom: 30px;
+  }
+  .logout-page .slider-n-blogs__wraper {
+    flex-direction: column;
+  }
+  .logout-page .slider-n-blogs__wraper .section-subtitle {
     margin-bottom: 20px;
   }
   .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide {
@@ -277,5 +400,138 @@
   .logout-page .slider-n-blogs__wraper .myths-n-facts .myths-n-facts-slider .single-slide .right-side .slide-img {
     max-width: 163.17px;
     width: 100%;
+    margin-top: 0px;
+  }
+  .logout-page .slider-n-blogs__wraper .blogs-section {
+    margin-top: 40px;
+  }
+  .logout-page .slider-n-blogs__wraper .blogs-section .section-subtitle {
+    margin-bottom: 14px;
+  }
+  .logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper {
+    flex-direction: column;
+  }
+  .logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog {
+    width: 100%;
+    max-width: 100%;
+  }
+  .logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog_category {
+    margin-bottom: 10px;
+  }
+  .logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog_title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logout-page .slider-n-blogs__wraper .blogs-section .blog-list__wraper .blog_img {
+    max-height: 110px;
+  }
+}
+
+.logout-page .banner-section {
+  margin-bottom: 54px;
+}
+
+.logout-page .banner-section__wraper {
+  background-color: #F6F7FC;
+  border-radius: 4px;
+  padding-top: 6px;
+  padding-left: 30px;
+  display: flex;
+}
+
+.logout-page .banner-section__wraper .banner-content {
+  width: 60%;
+}
+
+.logout-page .banner-section__wraper .banner-content .banner-title {
+  font-family: 'Intro', Bold;
+  max-width: 470px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  margin-bottom: 10px;
+}
+
+.logout-page .banner-section__wraper .banner-content .banner-title .highlight {
+  color: #00A6CA;
+}
+
+.logout-page .banner-section__wraper .banner-content .banner-subtitle {
+  font-family: 'Intro', Book;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #2C2C2C;
+  margin-bottom: 20px;
+}
+
+.logout-page .banner-section__wraper .banner-content .button-grp {
+  display: flex;
+  align-items: center;
+}
+
+.logout-page .banner-section__wraper .banner-content .button-grp .app-link:not(:last-child) {
+  margin-right: 23.41px;
+}
+
+@media (max-width: 768px) {
+  .logout-page .banner-section {
+    margin-bottom: 40px;
+  }
+  .logout-page .banner-section__wraper {
+    padding: 30px 0 20px;
+    text-align: center;
+  }
+  .logout-page .banner-section__wraper .banner-content {
+    width: 100%;
+  }
+  .logout-page .banner-section__wraper .banner-content .banner-title {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 293px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 12px;
+  }
+  .logout-page .banner-section__wraper .banner-content .banner-subtitle {
+    margin: 0 auto;
+    font-size: 14px;
+    max-width: 281px;
+    padding: 0 12px;
+  }
+  .logout-page .banner-section__wraper .banner-content .button-grp {
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    margin-top: -30px;
+  }
+  .logout-page .banner-section__wraper .banner-content .button-grp .app-link:not(:last-child) {
+    margin-right: 20px;
+  }
+  .logout-page .banner-section__wraper .banner-content .banner-img {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+  .logout-page .banner-section__wraper .banner-content .banner-img:after {
+    content: '';
+    background: linear-gradient(180deg, rgba(246, 247, 252, 0) 17.94%, #F6F7FC 54.27%);
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 141px;
+    z-index: 1;
   }
 }
