@@ -294,9 +294,6 @@
 
 .dispute-details__wraper .bottom-panel__wraper .email-reminders__body {
   background: #F9F9F9;
-  max-height: 260px;
-  overflow-x: hidden;
-  overflow-y: scroll;
   padding: 20px;
 }
 
@@ -307,10 +304,6 @@
 .dispute-details__wraper .bottom-panel__wraper .email-reminders__body .reminder-list tbody td {
   padding-top: 0px;
   padding-bottom: 0px;
-}
-
-.dispute-details__wraper .bottom-panel__wraper .email-reminders__body .reminder-list tbody tr:nth-child(10) td {
-  padding-bottom: 20px;
 }
 
 /* Dispute Section css ends here */

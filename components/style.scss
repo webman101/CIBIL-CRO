@@ -274,9 +274,6 @@
                     }
                     &__body{
                         background: #F9F9F9;
-                        max-height: 260px;
-                        overflow-x: hidden;
-                        overflow-y: scroll;
                         padding: 20px;
                         .reminder-list{
                             margin: 0px;
@@ -284,11 +281,6 @@
                                 td{
                                     padding-top: 0px;
                                     padding-bottom: 0px;
-                                }
-                                tr:nth-child(10){
-                                    td{
-                                        padding-bottom: 20px;
-                                    }
                                 }
                             }
                         }
