@@ -1,4 +1,6 @@
 .logout-page {
+  /* Header start */
+  /* Header end */
   /* heading section start */
   /* heading section end */
   /* `Myths & facts section` AND `Stay in the know section` start */
@@ -36,6 +38,70 @@
 
 .logout-page a {
   outline: none !important;
+}
+
+.logout-page .logout-page-header {
+  background: #FFFFFF;
+  position: relative;
+}
+
+.logout-page .logout-page-header__wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 16px;
+}
+
+.logout-page .logout-page-header__wraper .site-logo {
+  width: 91px;
+}
+
+.logout-page .logout-page-header__wraper .header-btn {
+  background: #FAFDFF;
+  border: 2px solid #3EA3CE;
+  border-radius: 4px;
+  height: 36px;
+  padding: 7px 16px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Intro', Bold;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #3EA3CE;
+}
+
+.logout-page .logout-page-header__wraper .header-btn .icon {
+  margin-right: 12px;
+}
+
+@media (min-width: 768px) {
+  .logout-page .logout-page-header:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #FCD833;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logout-page .logout-page-header {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  }
+  .logout-page .logout-page-header__wraper {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .logout-page .logout-page-header__wraper .site-logo {
+    width: 70.15px;
+  }
 }
 
 .logout-page .heading-section {
@@ -91,7 +157,7 @@
   width: 3px;
   height: 3px;
   position: absolute;
-  border-color: #fff !important;
+  border: none !important;
 }
 
 .logout-page .heading-section__wraper .right-side__wraper #clipboard {
@@ -101,6 +167,8 @@
 
 .logout-page .heading-section__wraper .right-side__wraper #clipboard::before {
   opacity: 0;
+  font-family: 'Intro', Regular;
+  font-weight: 600;
   content: 'Copied!';
   background-color: #ACACAC;
   color: #fff;
