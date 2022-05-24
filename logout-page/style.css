@@ -87,6 +87,39 @@
   display: flex;
 }
 
+.logout-page .heading-section__wraper .right-side__wraper .copy {
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  border-color: #fff !important;
+}
+
+.logout-page .heading-section__wraper .right-side__wraper #clipboard {
+  position: relative;
+  text-decoration: none;
+}
+
+.logout-page .heading-section__wraper .right-side__wraper #clipboard::before {
+  opacity: 0;
+  content: 'Copied!';
+  background-color: #ACACAC;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 6px 5px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -35px;
+  left: -14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.logout-page .heading-section__wraper .right-side__wraper #clipboard.copied:before {
+  opacity: 1;
+}
+
 .logout-page .heading-section__wraper .right-side__wraper .follow-text {
   font-family: 'Intro', Book;
   font-style: normal;
