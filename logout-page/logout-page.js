@@ -39,7 +39,6 @@
   $(".youtube-link").click(function(e){
       e.preventDefault();
       let youtubeLink = $(this).attr("href");
-      console.log(youtubeLink);
       $("#youtube-video").attr("src",youtubeLink);
       $(".modal-popup").toggleClass("opened");
   });
