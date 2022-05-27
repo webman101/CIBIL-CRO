@@ -305,19 +305,6 @@
                             img{
                                 object-fit: contain;
                             }
-                            .youtube-player{
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                z-index: 2;
-                                display: none;
-                                width: 100%;
-                                height: 100%;
-                                iframe{
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
                             a{
                                 &.youtube-link{
                                     position: relative;
@@ -357,6 +344,8 @@
                             &_img{
                                 width: 100%;
                                 object-fit: cover;
+                                max-height: 110px;
+                                min-height: 110px;
                             }
                             &_content{
                                 background-color: #F9F9F9;
@@ -416,6 +405,7 @@
                     margin-bottom: 20px;
                 }
                 .myths-n-facts{
+                    max-width: 100%;
                     .myths-n-facts-slider{
                         border: none;
                         .single-slide{
@@ -575,5 +565,92 @@
         }
     }
     /* Banner section end */
+
+    /* popup start */
+    .modal-popup {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        .bg-overlay {
+            background: rgba(0, 0, 0, 0);
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            -webkit-transition: background 0.3s linear;
+            -o-transition: background 0.3s linear;
+            transition: background 0.3s linear;
+        }
+        .modal-popup-inner{
+            width: 60%;
+            height: 70%;
+            position: absolute;
+            left: 20%;
+            top: 15%;
+            transform: translateY(-20px);
+            transition: transform 0.3s ease-in-out;
+        }
+        &__head{
+            position: relative;
+            a.close-btn {
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
+                display: flex;
+                height: 40px;
+                width: 40px;
+                padding: 8px;
+                background: #00A6CA;
+                border-radius: 100px;
+                position: absolute;
+                left: calc(50% - 25px);
+                top: calc(50% - 25px);
+            }
+        }
+        &__body{
+            border-radius: 6px;
+            background: #F9F9F9;
+            height: 100%;
+            overflow: hidden;
+            .youtube-player{
+                height: 100%;
+                iframe{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        &.opened{
+            visibility: visible;
+            opacity: 1;
+            .bg-overlay{
+                background: rgba(0, 0, 0, 0.5);
+            }
+            .modal-popup-inner{
+                transform: translateY(0px);
+            }
+        }
+        @media(max-width:768px){
+            .modal-popup-inner{
+                width: calc(100% - 40px);
+                left: 20px;
+            }
+        }
+        @media(max-width:481px){
+            .modal-popup-inner{
+                height: 40vh;
+            }
+        }
+    }
+    /* popup end */
 
 }

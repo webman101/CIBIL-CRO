@@ -94,13 +94,7 @@
                         <div class="single-slide">
                             <div class="single-slide__wraper">
                                 <!-- add your youtube thumbnail image here -->
-                                <a class="youtube-link"><img src="images/youtube-thumbnail.jpg" alt="slider image"></a> <!-- desktop image -->
-                                <!-- youtube player start -->
-                                <div class="youtube-player">
-                                    <!-- add your youtube embed code here -->
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tbs836jV_Xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <!-- youtube player end -->
+                                <a class="youtube-link" href="https://www.youtube.com/embed/tbs836jV_Xs"><img src="images/youtube-thumbnail.jpg" alt="slider image"></a> <!-- desktop image -->
                             </div>
                         </div>
                         <!-- Slide end -->
@@ -112,6 +106,8 @@
                     <p class="section-subtitle">Learn more about managing your finances</p>
                     <div class="blog-list">
                         <div class="blog-list__wraper">
+                            <!-- blog start | Copy this ("blog") div to add a new blog -->
+                            <!-- add class "blue" for the blue blog title -->
                             <div class="blog blue">
                                 <img src="images/blog-image1.jpg" alt="blog image" class="blog_img">
                                 <div class="blog_content">
@@ -120,6 +116,8 @@
                                     <a href="https://www.cibil.com/blog/main" target="_blank" class="blog_link">Read Now</a>
                                 </div>
                             </div>
+                            <!-- blog end -->
+                            <!-- blog start | Copy this ("blog") div to add a new blog -->
                             <div class="blog">
                                 <img src="images/blog-image2.jpg" alt="blog image" class="blog_img">
                                 <div class="blog_content">
@@ -128,6 +126,17 @@
                                     <a href="https://www.cibil.com/blog/main" target="_blank" class="blog_link">Read Now</a>
                                 </div>
                             </div>
+                            <!-- blog end -->
+                            <!-- blog start | Copy this ("blog") div to add a new blog -->
+                            <div class="blog">
+                                <img src="images/youtube-thumbnail.jpg" alt="blog image" class="blog_img">
+                                <div class="blog_content">
+                                    <p class="blog_category">VIDEO</p>
+                                    <p class="blog_title" style="-webkit-box-orient: vertical;">Know The Four Factors That Influence Your CIBIL Score</p>
+                                    <a class="blog_link youtube-link" href="https://www.youtube.com/embed/tbs836jV_Xs" class="blog_link">Play</a>
+                                </div>
+                            </div>
+                            <!-- blog end -->
                         </div>
                     </div>
                 </div>
@@ -156,6 +165,22 @@
         </div>
         <!-- Banner secction end -->
 
+        <div class="modal-popup">
+            <div class="modal-popup-inner">
+                <div class="modal-popup__head">
+                    <a class="close-btn"><img src="images/close.svg" alt="close"></a>
+                </div>
+                <div class="modal-popup__body">
+                    <!-- youtube player start -->
+                    <div class="youtube-player">
+                        <iframe id="youtube-video" width="560" height="315" src="" title="YouTube video player"  frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <!-- youtube player end -->
+                </div>
+            </div>
+            <div class="bg-overlay"></div>
+        </div>
+
     </div>
 
 <!-- jQery -->
@@ -164,49 +189,7 @@
 <script src="bootstrap/bootstrap.bundle.min.js"></script>
 <!-- slick slider js -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-    /* Slider start */
-    $(".myths-n-facts-slider").slick({
-        dots: true,
-        arrows:false,
-        speed: 500,
-        responsive: [
-            {
-            breakpoint: 768,
-                settings: {
-                    dots:false
-                }
-            }
-        ]
-    });
-    /* slider end */
+<script src="logout-page.js"></script>
 
-/* copy link */
-  var copyButton = document.querySelector('#clipboard');
-  var copyInput = document.querySelector('.copy');
-  copyButton.addEventListener('click', function(e) {
-    e.preventDefault();
-	let copiedLink = copyInput.value;
-    var text = copyInput.select();
-    document.execCommand('copy');
-	copyButton.classList.add("copied");
- 	setTimeout(function(){
-            copyButton.classList.remove("copied");
-    }, 1000);
-  });
-
-  copyInput.addEventListener('click', function() {
-    this.select();
-  });
-
-  /* youtube player */
-
-  $(".youtube-link").click(function(e){
-      e.preventDefault();
-      /* $(this).hide(); */
-      $(this).parent().find(".youtube-player").show();
-  });
-
-</script>
 </body>
 </html>
