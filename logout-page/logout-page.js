@@ -3,6 +3,8 @@
         dots: true,
         arrows:false,
         speed: 500,
+        autoplay: true,
+        autoplaySpeed: 5000,
         responsive: [
             {
             breakpoint: 768,
