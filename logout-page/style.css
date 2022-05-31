@@ -503,11 +503,27 @@
 }
 
 .logout-page .banner-section__wraper {
-  background-color: #F6F7FC;
+  background: #EEF9FD;
   border-radius: 4px;
   padding-top: 6px;
   padding-left: 30px;
   display: flex;
+}
+
+.logout-page .banner-section__wraper .highlight-underline {
+  position: relative;
+  z-index: 2;
+}
+
+.logout-page .banner-section__wraper .highlight-underline:before {
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  left: 0px;
+  bottom: 22%;
+  z-index: -1;
+  background: #FCD800;
 }
 
 .logout-page .banner-section__wraper .banner-content {
@@ -563,19 +579,29 @@
     width: 100%;
   }
   .logout-page .banner-section__wraper .banner-content .banner-title {
-    font-size: 16px;
-    line-height: 24px;
-    max-width: 293px;
+    font-size: 24px;
+    line-height: 30px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 12px;
     margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .logout-page .banner-section__wraper .banner-content .banner-title .highlight-underline:before {
+    height: 4px;
   }
   .logout-page .banner-section__wraper .banner-content .banner-subtitle {
     margin: 0 auto;
-    font-size: 14px;
-    max-width: 281px;
+    font-size: 16px;
+    line-height: 24px;
     padding: 0 12px;
+    font-family: 'Intro', Regular;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .logout-page .banner-section__wraper .banner-content .banner-subtitle .highlight-underline:before {
+    height: 3px;
   }
   .logout-page .banner-section__wraper .banner-content .button-grp {
     justify-content: center;
@@ -602,6 +628,55 @@
     height: 141px;
     z-index: 1;
   }
+}
+
+.logout-page .banner-section.desktop .banner-section__wraper {
+  background: #EEF9FD;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.logout-page .banner-section.desktop .banner-section__wraper .banner-content {
+  padding: 24px 42px 23px 47px;
+  min-width: 60%;
+}
+
+.logout-page .banner-section.desktop .banner-section__wraper .banner-content .banner-title {
+  max-width: 100%;
+  margin: 0px;
+  font-family: 'Intro', Bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 51px;
+  color: #000000;
+}
+
+.logout-page .banner-section.desktop .banner-section__wraper .banner-content .banner-title .highlight {
+  font-size: 60px;
+  line-height: 106%;
+}
+
+.logout-page .banner-section.desktop .banner-section__wraper .banner-content .banner-subtitle {
+  margin-right: 10px;
+  margin-bottom: 0px;
+  font-family: 'Intro', Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.logout-page .banner-section.desktop .banner-section__wraper .banner-content .banner-subtitle .highlight-underline:before {
+  height: 5px;
+}
+
+.logout-page .banner-section.desktop .banner-section__wraper .banner-content .button-grp {
+  margin-top: 12px;
+}
+
+.logout-page .banner-section.desktop .banner-section__wraper .banner-img img {
+  height: 100%;
 }
 
 .logout-page .modal-popup {
