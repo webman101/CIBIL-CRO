@@ -365,7 +365,7 @@
                                 font-family: 'Intro', Bold;
                                 font-style: normal;
                                 font-weight: 700;
-                                font-size: 16px;
+                                font-size: 14px;
                                 line-height: 24px;
                                 letter-spacing: 0.02em;
                                 color: #000000;
@@ -519,7 +519,7 @@
                     align-items: center;
                     .app-link{
                         &:not(:last-child){
-                            margin-right: 23.41px;
+                            margin-right: 17px;
                         }
                     }
                 }
@@ -540,6 +540,9 @@
                         padding: 0 12px;
                         margin-top: 0px;
                         margin-bottom: 10px;
+                        &.first{
+                            margin-bottom: 6px;
+                        }
                         .highlight-underline{
                             &:before{
                                 height: 4px;
@@ -596,8 +599,9 @@
                 background: #EEF9FD;
                 padding: 0px;
                 overflow: hidden;
+                justify-content: space-between;
                 .banner-content {
-                    padding: 24px 42px 23px 47px;
+                    padding: 24px 42px 25px 47px;
                     min-width: 60%;
                     .banner-title{
                         max-width: 100%;
@@ -605,35 +609,40 @@
                         font-family: 'Intro', Bold;
                         font-style: normal;
                         font-weight: 700;
-                        font-size: 48px;
-                        line-height: 51px;
+                        font-size: 32px;
+                        line-height: 106%;
                         color: #000000;
-                        .highlight{
-                            font-size: 60px;
-                            line-height: 106%;
+                        &.first{
+                            margin-bottom: 12px;
+                        }
+                        .highlight-underline{
+                            &:before{
+                                height: 3px;
+                            }
                         }
                     }
                     .banner-subtitle{
-                        margin-right: 10px;
+                        margin-right: 18px;
                         margin-bottom: 0px;
                         font-family: 'Intro', Regular;
                         font-style: normal;
                         font-weight: 600;
-                        font-size: 30px;
+                        font-size: 24px;
                         line-height: 30px;
                         .highlight-underline{
                             &:before{
-                                height: 5px;
+                                height: 3px;
                             }
                         }
                     }
                     .button-grp{
-                        margin-top: 12px;
+                        margin-top: 6px;
                     }
                 }
                 .banner-img{
                     img{
                         height: 100%;
+                        max-height: 175px;
                     }
                 }
             }
