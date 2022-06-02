@@ -94,6 +94,24 @@
         .link{
             color: #00A6CA !important;
         }
+        .btn {
+            background: #FCD800;
+            border-radius: 25px;
+            padding: 19px 40px 15px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #2C2C2C;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn.outline {
+            background: #FFFFFF;
+            border: 1px solid #FCD800;
+        }
     </style>
 </head>
 
@@ -102,14 +120,14 @@
         class="document" style="max-width: 600px;min-width: 600px;width: 100%;margin: 0 auto;background: #ffffff;font-family: 'Roboto', sans-serif; border:1px solid #F6F7FC;">
         <tr>
             <td valign="top">
-                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                <table id="blue-section" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
                     style="background-color: #ECF5FB;">
                     <tr>
                         <td>
-                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="padding:30px 30px 0px; ">
+                            <table id="header" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="padding:30px 30px 0px; ">
                                 <tr>
                                     <td style="text-align: left;">
-                                        <a href="https://www.cibil.com/"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/logo2x.png" width="90"></a>
+                                        <a href="https://www.cibil.com/"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/welcome-emails/images/logo.png" alt="CIBIL logo" width="90"></a>
                                     </td>
                                     <td style="text-align: right;">
                                         <a href="" class="link">Log in</a>
@@ -118,7 +136,7 @@
                             </table>
                             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="padding-left: 19px;padding-right: 20px;">
                                 <tr>
-                                    <td><img style="width: 100%;" src="images/banner.png" alt="banner"></td>
+                                    <td><img style="width: 100%;" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/welcome-emails/images/banner.png" alt="banner"></td>
                                 </tr>
                             </table>
                             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 0px 42px 40px;">
@@ -132,7 +150,7 @@
                         </td>
                     </tr>
                 </table>
-                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 40px 50px;">
+                <table id="body-content" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 40px 50px;">
                     <tr>
                         <td>
                             <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-bottom: 30px;">
@@ -147,6 +165,88 @@
                                         <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="border-top: 1px solid #DDDDDD;"><tr><td></td></tr></table>
                                     </td>
                                 </tr>
+                            </table>
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center">
+                                <tr>
+                                    <td style="padding-right: 10px;">
+                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="left" style="border: 1px solid #EDEDED; border-radius: 4px; padding: 20px 14px 20px 15px; text-align: left;">
+                                            <tr>
+                                                <td style="font-weight: 400;font-size: 14px;line-height: 20px;letter-spacing: 0.02em;color: #707070;">
+                                                    <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/welcome-emails/images/score.png">
+                                                    <h3 style="margin-top: 15.82px;margin-bottom:10px;font-weight: 600;font-size: 16px;line-height: 24px;color: #2C2C2C;">Your CIBIL Score & Report</h3>
+                                                    <p>Start evaluating your financial position by analysing your CIBIL Score & Report. Check and review if the data is accurate.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="padding-left: 10px;">
+                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="left" style="border: 1px solid #EDEDED; border-radius: 4px; padding: 20px 19px 20px 15px; text-align: left;">
+                                            <tr>
+                                                <td style="font-weight: 400;font-size: 14px;line-height: 20px;letter-spacing: 0.02em;color: #707070;">
+                                                    <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/welcome-emails/images/offers.png">
+                                                    <h3 style="margin-top: 29.27px;margin-bottom:10px;font-weight: 600;font-size: 16px;line-height: 24px;color: #2C2C2C;">Your personalized offers</h3>
+                                                    <p>Check and apply for loans and credit card offers. These are personalized based on your CIBIL credit profile.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr id="seperator">
+                                    <td colspan="2" style="padding-top: 30px;">
+                                        <a href="" class="btn">EXPLORE MY CIBIL ACCOUNT</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="border-top: 1px solid #EDEDED;margin:30px auto 41.5px;">
+                                <tr><td></td></tr>
+                            </table>
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-bottom: 38.86px;">
+                                <tr>
+                                    <td style="width: 138px;">
+                                        <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/welcome-emails/images/thumbnail.png">
+                                    </td>
+                                    <td style="padding-left: 20px; text-align: left;">
+                                        <h3 style="font-weight: 600;font-size: 16px;line-height: 24px;letter-spacing: 0.02em;color: #2C2C2C;margin-top: 8px;margin-bottom: 10px;">Understanding your CIBIL account</h3>
+                                        <p style="font-weight:400;font-size:14px;line-height:20px;letter-spacing:.02em;color:#707070;margin-top:0;margin-bottom:0">Learn how to use your CIBIL account in 2 minutes with this quick intro video.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #F6F7FC;border-radius: 4px;padding: 30px 22px 20px 29px;">
+                                <tr>
+                                    <td style="width: 40px; vertical-align: top;">
+                                        <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/welcome-emails/images/crown.png">
+                                    </td>
+                                    <td style="letter-spacing:.02em;color:#2c2c2c; text-align: left;padding-left: 21px;">
+                                        <h2 style="font-weight:600;font-size:20px;line-height:26px;margin-top: 0;margin-bottom: 10px;">Upgrade your CIBIL account to get the complete experience</h2>
+                                        <p style="font-weight:400;font-size:14px;line-height:20px;margin-top: 0;margin-bottom: 30px;">A CIBIL paid subscription gives you access to tools that help you maintain and monitor your credit information.</p>
+                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="left" style="text-align:left;">
+                                            <tr>
+                                                <td style="width: 205px;"><a href="" class="btn outline">Upgrade Now</a></td>
+                                                <td style="padding-left: 44px;"><a href="" class="link" style="font-weight:500;font-size:16px;line-height:19px;letter-spacing:.01em;">Learn more</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table id="footer" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #F5F5F5; border-radius: 4px; padding: 30px 70px;">
+                    <tr>
+                        <td>
+                            <h3 style="font-weight:600;font-size:16px;line-height:24px;letter-spacing:.02em;color:#2c2c2c;margin-top:0;margin-bottom:10px">Get the CIBIL App</h3>
+                            <p style="font-weight:300;font-size:14px;line-height:20px;text-align:center;letter-spacing:.02em;margin-top:0;margin-bottom:20px;color:#2c2c2c">You are going places, your credit score should too. Install CIBIL on your phone today.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/welcome-emails/images/playstore.png" style="margin-right: 20.75px;"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/welcome-emails/images/appstore.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="border-top: 1px solid #EDEDED;margin-bottom:20px;margin-top: 19.46px;">
+                                <tr><td></td></tr>
                             </table>
                         </td>
                     </tr>
