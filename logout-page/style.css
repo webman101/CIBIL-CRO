@@ -16,6 +16,10 @@
   padding-right: 20px;
 }
 
+.logout-page .container:before, .logout-page .container:after {
+  content: none;
+}
+
 @media (min-width: 1400px) {
   .logout-page .container {
     max-width: 1220px;
