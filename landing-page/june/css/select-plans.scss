@@ -1,0 +1,62 @@
+body{
+  font-family: "Intro";
+}
+.spap-content{
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
+    @media(min-width:1200px){
+      width: 1220px;
+    }
+  }
+}
+/* banner */
+.spap-banner{
+  background: radial-gradient(28.95% 153.83% at 73.44% 90.17%, #41CEF7 0%, #00A6CA 77.97%);
+  max-height: 300px;
+  position:relative;
+  &:before, &:after{
+    position: absolute;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &:before{
+    content:"";
+    left: 0;
+    top: 0;
+    width: 480.57px;
+    background-image:  url(../images/left-top-dots.png);
+  }
+  &:after{
+    content: "";
+    background-image: url(../images/right-top-dots.png);
+    right: 27px;
+    top: 22px;
+    width: 96.57px;
+  }
+  &__wraper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::before,&::after{
+      content: none;
+    }
+    .spap-banner-heading {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: -0.01em;
+      color: #FFFFFF;
+      margin: 0;
+    }
+    .highlight{
+      color: #FCD800;
+    }
+    .spap-banner-img{
+      max-width: 507.83px;
+      margin-top: 43px;
+    }
+  }
+}
