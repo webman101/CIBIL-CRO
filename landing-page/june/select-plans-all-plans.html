@@ -9,10 +9,11 @@
         <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cibil-pvw.transunion.com/resources/css/tu-font-awesome.css">
         <link rel="stylesheet" href="https://cibil-pvw.transunion.com/public/css/lib/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/slick.css"/>
         <link rel="stylesheet" href="css/select-plans.css">
     </head>
 <body>
-    <div class="yellow-theme spap-content">
+    <div class="spap-content">
     <!-- banner section | start -->
     <div class="spap-banner">
         <div class="container spap-banner__wraper">
@@ -40,26 +41,28 @@
                             <p class="font-bold description-bold max-width-329">Everything you need to be credit-ready. <br> Learn. Plan. Protect. <br> All in one place. </p>
         
                         </div>
-                        <div class="margin-bottom-2">
+                        <div class="margin-bottom-2 tabs-with-content">
                             <!-- Nav tabs -->
                             <ul id="myTabs" class="nav nav-tabs" role="tablist">
-                                <li class="base-plan-selected base-plan" href=".home" data-toggle="tab">
+                                <li class="base-plan-selected base-free" href="#free" data-toggle="tab">
+                                    
+                                    <h6 class="plan-name">Free</h6>
+                                    <h3>One-time</h3>
+                                    <h4>₹0</h4>
+                                </li>
+                                <li class="base-plan" href="#home" data-toggle="tab">
                                     
                                     <h6 class="plan-name">Basic</h6>
                                     <h3>1 Month</h3>
                                     <h4>₹550</h4>
-                                    <h6>@ ₹550/month</h6>
-        
-        
                                 </li>
-                                <li class="base-standard" href=".profile" data-toggle="tab">
+                                <li class="base-standard" href="#profile" data-toggle="tab">
                                     <h6 class="plan-name">Standard</h6>
                                     <h3>6 Months</h3>
                                     <h4>₹800</h4>
-                                    <h6>@ ₹133/month</h6>
                                     <span>Save 75%</span>
                                 </li>
-                                <li class="base-premium active" href=".message" data-toggle="tab">
+                                <li class="base-premium active" href="#message" data-toggle="tab">
                                     <div class="most-popular tag-intabs">
                                         <div>
                                             Most Popular
@@ -68,100 +71,156 @@
                                     <h6 class="plan-name">Premium</h6>
                                     <h3>12 Months</h3>
                                     <h4>₹1200</h4>
-                                    <h6>@ ₹100/month</h6>
                                     <span>Save 81%</span>
                                 </li>
                             </ul>
                             <!-- Tab panes -->
                             <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane  home" id="free">
+                                    <button class="button full-width-button button-orange">get started</button>
+                                    <div class="plan-title">Free Plan Benefits:</div>
+        
+                                    <div class="features-grid grid-mob grid-1">
+                                        <div class="feature">
+                                            <img src="images/wrong.svg" alt="" class="small-right">
+                                            <p><b>CIBIL Alerts</b> to stay updated and aware of key changes in your credit profile</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/wrong.svg" alt="" class="small-right">
+        
+                                            <p><b>Daily Access</b> to the most recent updates in your CIBIL Score & Report</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/wrong.svg" alt="" class="small-right">
+        
+                                            <p><b>Score Simulator</b> to check the impact of your credit actions on your CIBIL Score</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/wrong.svg" alt="" class="small-right">
+        
+                                            <p><b>Tailored Loan</b> Offers from leading lenders based on your CIBIL Score</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/wrong.svg" alt="" class="small-right">
+        
+                                            <p><b>Trended View</b> of the changes in your CIBIL Score with every refresh</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/wrong.svg" alt="" class="small-right">
+        
+                                            <p><b>Comparison of your score</b> with the rest of self monitoring consumers</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div role="tabpanel" class="tab-pane  home" id="home">
                                     <button class="button full-width-button button-orange">get started</button>
-                                    <button class="button full-width-button button-yellow">get started</button>
                                     <div class="plan-title">Basic Plan Benefits:</div>
         
                                     <div class="features-grid grid-mob grid-1">
                                         <div class="feature">
                                             <img src="images/wrong.svg" alt="" class="small-right">
-                                            <p>24x7 credit monitoring with CIBIL Alerts</p>
+                                            <p><b>CIBIL Alerts</b> to stay updated and aware of key changes in your credit profile</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Unlimited access to your CIBIL Score & Report</p>
+                                            <p><b>Daily Access</b> to the most recent updates in your CIBIL Score & Report</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Simulate your Credit Score with the Score Simulator</p>
+                                            <p><b>Score Simulator</b> to check the impact of your credit actions on your CIBIL Score</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Get tailored loan offers based on your latest CIBIL Score</p>
+                                            <p><b>Tailored Loan</b> Offers from leading lenders based on your CIBIL Score</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/check.svg" alt="" class="small-right">
+        
+                                            <p><b>Trended View</b> of the changes in your CIBIL Score with every refresh</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/check.svg" alt="" class="small-right">
+        
+                                            <p><b>Comparison of your score</b> with the rest of self monitoring consumers</p>
                                         </div>
                                     </div>
-        
-        
                                 </div>
                                 <div role="tabpanel" class="tab-pane  profile" id="profile">
                                     <button class="button full-width-button button-orange">get started</button>
-                                    <button class="button full-width-button button-yellow">get started</button>
         
                                     <div class="plan-title">Standard Plan Benefits:</div>
         
                                     <div class="features-grid grid-mob grid-1">
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
-                                            <p>24x7 credit monitoring with CIBIL Alerts</p>
+                                            <p><b>CIBIL Alerts</b> to stay updated and aware of key changes in your credit profile</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Unlimited access to your CIBIL Score & Report</p>
+                                            <p><b>Daily Access</b> to the most recent updates in your CIBIL Score & Report</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Simulate your Credit Score with the Score Simulator</p>
+                                            <p><b>Score Simulator</b> to check the impact of your credit actions on your CIBIL Score</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Get tailored loan offers based on your latest CIBIL Score</p>
+                                            <p><b>Tailored Loan</b> Offers from leading lenders based on your CIBIL Score</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/check.svg" alt="" class="small-right">
+        
+                                            <p><b>Trended View</b> of the changes in your CIBIL Score with every refresh</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/check.svg" alt="" class="small-right">
+        
+                                            <p><b>Comparison of your score</b> with the rest of self monitoring consumers</p>
                                         </div>
                                     </div>
-        
-        
                                 </div>
                                 <div role="tabpanel" class="tab-pane active message" id="message">
                                     <button class="button full-width-button button-orange">get started</button>
-                                    <button class="button full-width-button button-yellow">get started</button>
         
                                     <div class="plan-title">Premium Plan Benefits:</div>
         
                                     <div class="features-grid grid-mob grid-1">
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
-                                            <p>24x7 credit monitoring with CIBIL Alerts</p>
+                                            <p><b>CIBIL Alerts</b> to stay updated and aware of key changes in your credit profile</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Unlimited access to your CIBIL Score & Report</p>
+                                            <p><b>Daily Access</b> to the most recent updates in your CIBIL Score & Report</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Simulate your Credit Score with the Score Simulator</p>
+                                            <p><b>Score Simulator</b> to check the impact of your credit actions on your CIBIL Score</p>
                                         </div>
                                         <div class="feature">
                                             <img src="images/check.svg" alt="" class="small-right">
         
-                                            <p>Get tailored loan offers based on your latest CIBIL Score</p>
+                                            <p><b>Tailored Loan</b> Offers from leading lenders based on your CIBIL Score</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/check.svg" alt="" class="small-right">
+        
+                                            <p><b>Trended View</b> of the changes in your CIBIL Score with every refresh</p>
+                                        </div>
+                                        <div class="feature">
+                                            <img src="images/check.svg" alt="" class="small-right">
+        
+                                            <p><b>Comparison of your score</b> with the rest of self monitoring consumers</p>
                                         </div>
                                     </div>
-        
-        
                                 </div>
                             </div>
                         </div>
@@ -656,6 +715,7 @@ STARTED <img src="images/btn-arrow.svg" alt="GET STARTED" class="icon"></button>
 
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
-    <script src="https://assets.transunion.com/resources/js/lib/min/slick.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/select-plans.js"></script>
 </body>
 </html>
