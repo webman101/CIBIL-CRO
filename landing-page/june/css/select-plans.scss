@@ -554,23 +554,10 @@ body {
       }
       .nav li.base-plan {
         border-right: 1px solid #acacac;
-
-        /* &.active {
-          border: 2px solid #00a6ca;
-        } */
       }
       .nav li.base-standard {
         border-left: 0;
         border-top-right-radius: 0;
-        /* &.active {
-          border: 2px solid #00a6ca;
-        } */
-      }
-      .nav li.base-premium {
-        /* border-left: 0; */
-        /* &.active {
-          border: 2px solid #00a6ca;
-        } */
       }
       .border-right-0 {
         border-right: 0 !important;
@@ -826,7 +813,7 @@ body {
             margin-left: -20px;
             margin-right: -20px;
           }
-          .left-panel{
+          .left-panel {
             width: 100%;
           }
         }
@@ -867,6 +854,7 @@ body {
     padding-top: 60px;
     padding-bottom: 60px;
     margin-bottom: 71px;
+    overflow: hidden;
     .slick-dots {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -985,6 +973,7 @@ body {
     @media (max-width: 991px) {
       padding-top: 40px;
       padding-bottom: 40px;
+      margin-bottom: 40px;
       .section-title {
         font-size: 24px;
         line-height: 30px;
@@ -996,14 +985,14 @@ body {
       .cibil-report-content {
         width: 100%;
         .report-slider {
-          .slick-list{
+          .slick-list {
             overflow: visible;
             margin: 0 -20px;
             .slick-track {
               display: flex;
               .slick-slide {
                 margin: 0 20px;
-            }
+              }
             }
           }
           .report-card {
@@ -1013,10 +1002,10 @@ body {
             margin-bottom: 0px;
             padding: 30px 21px;
             height: inherit;
-            &-img{
+            &-img {
               min-width: auto;
-    padding: 0;
-    margin-bottom: 20px;
+              padding: 0;
+              margin-bottom: 20px;
             }
             &-bm {
               display: none;
@@ -1024,11 +1013,11 @@ body {
             &-text {
               text-align: center;
               margin-left: 0;
-              h3{
+              h3 {
                 line-height: 20px;
                 margin-bottom: 20px;
               }
-              p{
+              p {
                 line-height: 26px;
               }
             }
@@ -1089,6 +1078,9 @@ body {
             position: relative;
             padding-top: 3px;
           }
+          .mobile-icon {
+            display: none;
+          }
           &:not(:last-child) {
             .steps-icon {
               &:after {
@@ -1122,11 +1114,11 @@ body {
           margin-bottom: 12px;
           &.btnarrow {
             background: #f16e33;
+            border-radius: 23px;
             border: none;
             font-size: 16px;
             font-weight: 700;
             letter-spacing: 1px;
-            border-radius: 2px;
             padding: 0;
             display: flex;
             align-items: center;
@@ -1157,12 +1149,71 @@ body {
         margin-top: 81px;
       }
     }
-    @media (min-width: 769px) {
+    @media screen and (max-width: 992px) {
+      margin-bottom: 50px;
+      .section-title {
+        max-width: 100%;
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 700 !important;
+        margin-bottom: 20px;
+      }
+      .right-panel {
+        display: none;
+      }
       .left-panel {
+        .img-responsive {
+          margin: auto;
+        }
         .steps {
+          padding-left: 20px;
+          padding-right: 18px;
           .steps-row {
+            margin-bottom: 40px;
+            position: relative;
             .mobile-icon {
+              display: block;
+            }
+            &:not(:last-child) {
+              .mobile-icon {
+                &:after {
+                  content: "";
+                  position: absolute;
+                  width: 1px;
+                  color: #ffffff;
+                  height: calc(100% + 14px);
+                  left: 18.5px;
+                  background: transparent;
+                  top: 29px;
+                  background-image: linear-gradient(
+                    to bottom,
+                    #000000 50%,
+                    rgba(255, 255, 255, 0) 0%
+                  );
+                  background-position: left;
+                  background-size: 3px 7px;
+                  background-repeat: repeat-y;
+                }
+              }
+            }
+            .steps-icon {
               display: none;
+            }
+            .steps-text {
+              margin-top: 0;
+              margin-left: 20px;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+        .steps-action {
+          text-align: center;
+          button {
+            &.btnarrow {
+              margin: 0px auto 12px;
             }
           }
         }
@@ -1254,6 +1305,48 @@ body {
         background: #ffffff;
         border-radius: 4px;
         padding: 0;
+      }
+    }
+    @media (max-width: 991px) {
+      padding-top: 40px;
+      padding-bottom: 20px;
+      .section-title {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+      .section-sub-title {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+      .panel-group {
+        .panel-default > .panel-heading + .panel-collapse .panel-body {
+          padding: 0px 20px 20px 56px;
+          font-size: 16px;
+          line-height: 24px;
+      }
+        .panel {
+          .panel-title {
+            font-size: 16px;
+            line-height: 24px;
+            .faq-icon {
+              width: 16px;
+              height: 16px;
+              margin: 5px 20px 0 0;
+            }
+            &.faq-title[aria-expanded="false"] {
+              padding: 20px;
+            }
+            &.faq-title[aria-expanded="false"], &.faq-title[aria-expanded="true"]{
+              align-items: flex-start;
+              height: auto;
+            }
+            &.faq-title[aria-expanded="true"] {
+              padding: 20px 20px 13px 20px;
+            }
+          }
+        }
       }
     }
   }
