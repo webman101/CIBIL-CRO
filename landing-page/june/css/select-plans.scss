@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Intro";
 }
@@ -659,7 +662,7 @@ body {
           max-width: 348px;
           margin-bottom: 40px;
         }
-        button.button.full-width-button {
+        .button.button.full-width-button {
           width: 100%;
           margin-bottom: 30px;
           border: 0;
@@ -1106,12 +1109,14 @@ body {
         }
       }
       .steps-action {
-        button {
+        a {
           min-width: 260px;
+          max-width: 260px;
           font-size: 14px;
           padding-top: 14px;
           padding-bottom: 14px;
           margin-bottom: 12px;
+          text-decoration: none !important;
           &.btnarrow {
             background: #f16e33;
             border-radius: 23px;
@@ -1211,7 +1216,7 @@ body {
         }
         .steps-action {
           text-align: center;
-          button {
+          a {
             &.btnarrow {
               margin: 0px auto 12px;
             }
