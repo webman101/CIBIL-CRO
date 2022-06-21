@@ -1350,4 +1350,23 @@ body {
       }
     }
   }
+  &.paid-plans{
+    @media(min-width:992px){
+      .spap-plans{
+        &__wraper{
+          .column-outer{
+            min-width: 180px;
+            &:not(:last-child){
+              margin-right: 20px;
+            }
+          }
+          .score-simulator-row{
+            .left-panel{
+              max-width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
 }
