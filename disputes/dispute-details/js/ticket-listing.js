@@ -62,3 +62,10 @@ $('.dropdown-radio').find('input').change(function() {
   tooltip_trigger.mouseout(function(){
     hideTooltip();
   });
+
+  /* timeline dropdown */
+  var dropdownToggler = $(".dropdown-head");
+  dropdownToggler.click(function(){
+    $(this).next().toggle('medium');
+    $(this).parent().toggleClass("show");
+  });
