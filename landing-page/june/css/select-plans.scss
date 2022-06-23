@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -86,6 +86,10 @@ body {
   .text-color-black {
     color: #000000 !important;
   }
+  a[href].spap-link {
+    color: #428bca;
+    text-decoration: underline;
+  }
   .fw-300 {
     font-weight: 300 !important;
     font-family: "Intro";
@@ -108,6 +112,75 @@ body {
       display: none !important;
     }
   }
+  /* Header start */
+  .spap-page-header {
+    background: #ffffff;
+    position: relative;
+    &__wraper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      padding-bottom: 16px;
+      &::after,
+      &::before {
+        display: none;
+      }
+      .site-logo {
+        width: 91px;
+      }
+      .header-btn {
+        background: #fafdff;
+        border: 2px solid #3ea3ce;
+        border-radius: 4px;
+        height: 36px;
+        padding: 7px 16px 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-family: "Intro", Bold;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #3ea3ce;
+        .icon {
+          margin-right: 12px;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        background: #fcd833;
+        left: 0px;
+        bottom: 0px;
+      }
+      &__wraper{
+        .header-btn{
+          min-width: 126px;
+          .icon{
+            display: none;
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+      &__wraper {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        .site-logo {
+          width: 70.15px;
+        }
+      }
+    }
+  }
+  /* Header end */
   /* banner */
   .spap-banner {
     margin-bottom: 60px;
@@ -1330,7 +1403,7 @@ body {
           padding: 0px 20px 20px 56px;
           font-size: 16px;
           line-height: 24px;
-      }
+        }
         .panel {
           .panel-title {
             font-size: 16px;
@@ -1343,7 +1416,8 @@ body {
             &.faq-title[aria-expanded="false"] {
               padding: 20px;
             }
-            &.faq-title[aria-expanded="false"], &.faq-title[aria-expanded="true"]{
+            &.faq-title[aria-expanded="false"],
+            &.faq-title[aria-expanded="true"] {
               align-items: flex-start;
               height: auto;
             }
@@ -1355,18 +1429,18 @@ body {
       }
     }
   }
-  &.paid-plans{
-    @media(min-width:992px){
-      .spap-plans{
-        &__wraper{
-          .column-outer{
+  &.paid-plans {
+    @media (min-width: 992px) {
+      .spap-plans {
+        &__wraper {
+          .column-outer {
             min-width: 180px;
-            &:not(:last-child){
+            &:not(:last-child) {
               margin-right: 20px;
             }
           }
-          .score-simulator-row{
-            .left-panel{
+          .score-simulator-row {
+            .left-panel {
               max-width: 50%;
             }
           }
