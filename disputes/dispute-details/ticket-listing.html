@@ -36,22 +36,20 @@
                 <div class="tables">
                     <table>
                         <tr class="details-row">
-                            <th class="title">Dispute ID :</th>
-                            <td class="content">#2265656656656</td>
+                            <td class="row-td first">
+                                <span class="title">Dispute ID :</span>
+                                <span class="content">#2265656656656</span>
+                            </td>
+                            <td class="row-td second">
+                                <span class="title">Dispute Submitted Date :</span>
+                                <span class="content">26-Mar-2022</span>
+                            </td>
                         </tr>
                         <tr class="details-row">
-                            <th class="title">Created Date :</th>
-                            <td class="content">26th March 2022</td>
-                        </tr>
-                    </table>
-                    <table>
-                        <tr class="details-row">
-                            <th class="title"><a data-bs-toggle="modal" data-bs-target="#ticketResolved">Tickets Resolved</a> :</th>
-                            <td class="content">2/3</td>
-                        </tr>
-                        <tr class="details-row">
-                            <th class="title"><a data-bs-toggle="modal" data-bs-target="#ticketStatus">Dispute Status</a> :</th>
-                            <td class="content">OPEN</td>
+                            <td class="row-td first">
+                                <span class="title"><a class="tooltip-toggle" tooltip-target="#disputeIdStatus">Dispute ID Status</a> :</span>
+                                <span class="content">OPEN</span>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -611,43 +609,6 @@
         </div>
     </div>
     <!-- page content ends here -->
-
-    <!-- Ticket Resolved Modal start -->
-    <div class="modal fade" id="ticketResolved" tabindex="-1" aria-labelledby="ticketResolvedLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <p class="modal-title" id="ticketResolvedLabel">Tickets Resolved</p>
-                </div>
-                <div class="modal-body">
-                <p>These are the number of tickets that are marked as resolved. Each ticket is reviewed by the respective credit institution/bank. Once reviwed, the changes are either accepted or rejected and the ticket is marked as resolved.</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" data-bs-dismiss="modal">Okay</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Ticket Resolved Modal end -->
-    <!-- Ticket Resolved Modal start -->
-    <div class="modal fade" id="ticketStatus" tabindex="-1" aria-labelledby="ticketStatusLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <p class="modal-title" id="ticketStatusLabel">Dispute Status</p>
-                </div>
-                <div class="modal-body">
-                <p>There are 2 statuses of your dispute<br>
-                    <b>Open:</b> Dispute is filed and each of its tickets are under review by the respective lender.<br>
-                    <b>Closed:</b> A resolution has been passed against each ticket. A dispute is marked as closed only when all your tickets are resolved.</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" data-bs-dismiss="modal">Okay</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Ticket Resolved Modal end -->
 
 
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
