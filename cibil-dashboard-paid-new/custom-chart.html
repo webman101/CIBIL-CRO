@@ -83,6 +83,7 @@
             position: absolute;
             bottom: 100%;
             cursor: pointer;
+            transition: bottom 1s cubic-bezier(0.42, -0.03, 0.68, 1.22) 0s;
         }
 
         .mark {
@@ -99,8 +100,18 @@
             justify-content: center;
             align-items: center;
             font-weight: 600;
+            opacity: 0;
+            transform: scale(0);
+            transition-property: transform,opacity; 
+            transition-duration:  0.25s;
+            transition-timing-function:  cubic-bezier(0.42, -0.03, 0.68, 1.22);
+            transition-delay:  1s;
         }
-
+        
+        .dot.visible .mark {
+            opacity: 1;
+            transform: scale(1);
+        }
 
         .mark span {
             background-color: #1e6685;
@@ -407,6 +418,7 @@
         }
     ]
     const values = data.map(ele => { return { x: months.indexOf(ele.month), y: Math.max(...ele.scores) }})
+    // console.log('values:', values)
 
     //append
     const chart = document.getElementById('chart')
@@ -416,7 +428,7 @@
         let xPercentage = value.x / 12 * 100
         // console.log("x:", xPercentage, "\ny:", yPercentage)
         let innerhtml = `
-        <span class="dot" style="left: ${xPercentage}%; bottom: ${yPercentage}%" data-index="${value.x}" onclick="showdata(this)">
+        <span class="dot" style="left: ${xPercentage}%; bottom:0%" data-bottom="${yPercentage}" data-index="${value.x}" onclick="showdata(this)">
             <span class="mark">
                 ${value.y}
                 <span>+</span>
@@ -431,6 +443,7 @@
         [...document.querySelectorAll('.dot')].forEach(elem => { elem.classList.remove('active') })
         element.classList.add('active')
         let lists = data.filter(val => { return val.month == months[element.dataset.index] }).map( val => val.scores)
+        console.log("list s", lists)
         document.getElementById('scoreData').innerHTML = '';
         lists[0].forEach(listE => {
             let listElemt = document.createElement('li');
@@ -439,6 +452,17 @@
             document.getElementById('scoreData').append(listElemt)
         })
     }
+
+    //animation
+    document.addEventListener('DOMContentLoaded', (event) => {
+        console.log('r')
+        setTimeout(()=>{
+            [...document.querySelectorAll('.dot')].forEach( dot => {
+                dot.style.bottom = dot.dataset.bottom+'%'
+                dot.classList.add('visible')
+            })
+        }, 100)
+    })
 </script>
 
 </html>
