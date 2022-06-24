@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Chart</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background: #f1f6ff;
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+        }
+
+        .table-wrap {
+            position: relative;
+            width: 80%;
+        }
+
+        td {
+            padding: 15px 40px;
+            font-size: 0;
+            border: 3px dotted #cfe2ee;
+            /*rgba(128, 128, 128, 0.356);*/
+            position: relative;
+        }
+
+        table tbody>tr:last-child>td::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 60%;
+            width: 3px;
+            background: linear-gradient(0deg, rgba(0, 96, 149, 1) 0%, rgba(0, 228, 255, 0) 100%);
+            display: block;
+            transform: translate(calc(-50% - 1px), 3px);
+        }
+
+        table tbody>tr:last-child>td:nth-child(11)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 60%;
+            width: 3px;
+            background: linear-gradient(0deg, rgba(0, 96, 149, 1) 0%, rgba(0, 228, 255, 0) 100%);
+            display: block;
+            transform: translate(calc(50% + 1px), 3px);
+        }
+
+        table tbody>tr>td:last-child {
+            visibility: hidden;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #fff;
+            border: 5px solid #1e6685;
+            /*rgb(10, 44, 66);*/
+            display: block;
+            transform: translate(-50%, 50%);
+            position: absolute;
+            bottom: 100%;
+            cursor: pointer;
+        }
+
+        .mark {
+            background: #3ba7ca;
+            /*rgb(41, 147, 189); #fcd92f */
+            color: #fff;
+            padding: 0px 0 0 10px;
+            border-radius: 1000em 1000em 1000em 0;
+            font-size: 12px;
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: -5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+        }
+
+
+        .mark span {
+            background-color: #1e6685;
+            line-height: 20px;
+            padding: 0 8px 0 5px;
+            margin-left: 4px;
+            border-radius: 0 1000em 1000em 0;
+            color: #fff;
+        }
+
+        .mark::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-bottom: 6px solid #3ba7ca;
+            transform: rotate(90deg);
+        }
+
+        .dot.active .mark {
+            background-color: #fcd92f;
+            color: #1e6685;
+        }
+
+        .dot.active .mark::after {
+            border-bottom: 6px solid #fcd92f;
+        }
+
+        .x-axis-table {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .x-axis-table span {
+            flex: 1;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: #a7a7a7;
+        }
+
+        .y-axis-table {
+            display: flex;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            transform: translateX(calc(-100% - 15px));
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .y-axis-table span:first-child {
+            position: relative;
+            top: 4px;
+        }
+
+        .y-axis-table span:last-child {
+            position: relative;
+            top: -13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-wrap" id="chart">
+        <table>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+
+        </table>
+
+        <div class="y-axis-table">
+            <span>300</span>
+            <span>900</span>
+        </div>
+    </div>
+    <div class="table-wrap">
+    <div class="x-axis-table">
+        <span>JAN</span>
+        <span>FEB</span>
+        <span>MAR</span>
+        <span>APR</span>
+        <span>MAY</span>
+        <span>JUN</span>
+        <span>JUL</span>
+        <span>AUG</span>
+        <span>SEP</span>
+        <span>OCT</span>
+        <span>NOV</span>
+        <span>DEC</span>
+    </div>
+    <div>
+        <ul id="scoreData"></ul>
+    </div>
+</body>
+
+<script>
+    const max = 900
+    const min = 300
+    const diff = max - min
+    const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', "JUL", 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
+    const data = [
+        {
+            month: 'JAN',
+            scores: [400, 500, 800, 430, 200]
+        },
+        {
+            month: 'FEB',
+            scores: [400, 500, 600, 768, 200]
+        },
+        {
+            month: 'MAR',
+            scores: [400, 708, 600, 430, 200]
+        },
+        {
+            month: 'MAY',
+            scores: [400, 500, 600, 430, 733]
+        },
+        {
+            month: 'JUL',
+            scores: [708, 500, 600, 430, 200]
+        },
+        {
+            month: 'SEP',
+            scores: [400, 500, 600, 430, 689, 200]
+        },
+        {
+            month: 'DEC',
+            scores: [400, 500, 600, 430, 200, 700]
+        }
+    ]
+    const values = data.map(ele => { return { x: months.indexOf(ele.month), y: Math.max(...ele.scores) }})
+
+    //append
+    const chart = document.getElementById('chart')
+    values.forEach(value => {
+        //calc
+        let yPercentage = ((value.y - min) / diff) * 100
+        let xPercentage = value.x / 12 * 100
+        // console.log("x:", xPercentage, "\ny:", yPercentage)
+        let innerhtml = `
+        <span class="dot" style="left: ${xPercentage}%; bottom: ${yPercentage}%" data-index="${value.x}" onclick="showdata(this)">
+            <span class="mark">
+                ${value.y}
+                <span>+</span>
+            </span>
+        </span>
+        `;
+        chart.innerHTML = chart.innerHTML + innerhtml
+    })
+
+    //display data
+    function showdata(element) {
+        [...document.querySelectorAll('.dot')].forEach(elem => { elem.classList.remove('active') })
+        element.classList.add('active')
+        let lists = data.filter(val => { return val.month == months[element.dataset.index] }).map( val => val.scores)
+        document.getElementById('scoreData').innerHTML = '';
+        lists[0].forEach(listE => {
+            let listElemt = document.createElement('li');
+            listElemt.innerText = listE
+            console.log("list", listE)
+            document.getElementById('scoreData').append(listElemt)
+        })
+    }
+</script>
+
+</html>
