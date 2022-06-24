@@ -307,7 +307,7 @@ a {
 /* Filters & tickets */
 .ticket__header {
   background: $light_blue2;
-  padding: 15px 20px;
+  padding: 20px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -866,7 +866,7 @@ a {
           padding: 30px 20px 10px;
           .ticket {
             &:not(:last-child) {
-              margin-bottom: 20px;
+              margin-bottom:30px;
             }
             &__header {
               position: relative;
