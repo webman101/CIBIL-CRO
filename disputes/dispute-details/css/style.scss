@@ -253,7 +253,7 @@ a {
   @media (max-width: 768px) {
     &__wraper {
       padding-top: 20px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
       .tables {
         flex-direction: column;
         border: none;
@@ -268,15 +268,33 @@ a {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
+            &:not(:last-child){
+              margin-bottom: 10px;
+            }
             .title,
             .content {
               display: block;
               padding-right: 0px !important;
             }
             &:not(:last-child) {
+              .row-td{
+                padding-bottom: 0px;
+              }
               .title,
               .content {
                 padding-bottom: 10px;
+              }
+            }
+            .row-td{
+              display: flex;
+              justify-content: space-between;
+              &.first, &.second{
+                .title{
+                  width: auto;
+                }
+              }
+              &:not(:last-child){
+                padding-right: 0px;
               }
             }
           }
@@ -899,7 +917,6 @@ a {
                   border-top: 0.6px solid $border-color3;
                   .title {
                     font-size: 12px;
-                    color: $gray1;
                     font-family: $intro-bold;
                     font-weight: 700;
                   }
@@ -932,8 +949,9 @@ a {
                       .right-panel {
                         padding-left: 0px;
                         .status {
+                          font-family: $intro-book;
                           font-size: 14px;
-                          font-weight: 600;
+                          font-weight: 400;
                         }
                         .description {
                           font-size: 12px;
@@ -954,6 +972,24 @@ a {
                     }
                     .details-block__body{
                         padding: 10px 20px 20px;
+                    }
+                    &.dropdown-parent{
+                      background-color: $light-blue;
+                      padding-left: 12px;
+                      padding-right: 20px;
+                      .dropdown-head{
+                        border-top: none;
+                        padding: 8px 0px;
+                        background-color: $light-blue;
+                        .title{
+                          &:after{
+                            top: 10px;
+                          }
+                        }
+                      }
+                      .dropdown-body{
+                        padding: 20px 0px;
+                      }
                     }
                 }
               }
@@ -1049,7 +1085,7 @@ a {
   }
   @media (max-width: 768px) {
     padding-top: 0px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     &__wraper {
       .right-panel {
         padding-left: 10px;
@@ -1061,6 +1097,8 @@ a {
 /* tooltip box */
 .tooltip-box {
     position: absolute;
+    top: 0;
+    visibility: hidden;
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -1068,12 +1106,14 @@ a {
         transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     }
     &.show{
+        visibility: visible;
         opacity: 1;
         transform: translateY(0px);
     }
     &.hide{
         opacity: 0;
         transform: translateY(10px);
+        visibility: hidden;
     }
   &__wraper {
     background: #006685;
