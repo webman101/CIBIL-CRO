@@ -706,6 +706,7 @@ a {
                     .dropdown-head{
                         position: relative;
                         .title{
+                          cursor: pointer;
                             &:after{
                                 content: url(../images/arrow-down.svg);
                                 position: absolute;
