@@ -1,4 +1,4 @@
-/* login title */
+/* check if user is new or existing */
 
 const user = localStorage.getItem("loggedInUser");
 if (user) {
@@ -6,7 +6,7 @@ if (user) {
   $(".title .icon").show();
 } else {
   $(".title #LoginTitle").html("Login");
-  localStorage.setItem("loggedInUser", "True");
+  localStorage.setItem("loggedInUser", "True"); // Remove this line from here & paste it inside your login fucntion.
 }
 
 /* validation */
