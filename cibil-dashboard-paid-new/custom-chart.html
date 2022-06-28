@@ -32,11 +32,12 @@
 
         .table-wrap {
             position: relative;
-            width: 80%;
+            width: 100%;
         }
 
         td {
-            padding: 15px 40px;
+            /* padding: 15px 40px; */
+            padding: 2% 40px;
             font-size: 0;
             border: 3px dotted #cfe2ee;
             /*rgba(128, 128, 128, 0.356);*/
@@ -153,7 +154,8 @@
             flex: 1;
             transform: translateX(-50%);
             text-align: center;
-            font-size: 12px;
+            /* font-size: 12px; */
+            font-size: 1.2vw;
             font-weight: 600;
             color: #a7a7a7;
         }
@@ -180,205 +182,289 @@
             position: relative;
             top: -13px;
         }
+
+        #scoreData {
+            background: #fff;
+            border-radius: 4px;
+            list-style: none;
+            padding: 0 15px 0 5px;
+            max-height: 150px;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        #scoreData::-webkit-scrollbar{
+            width: 15px;
+            margin-right: 5px;
+        }
+
+        #scoreData::-webkit-scrollbar-thumb {
+            border-radius: 36px;
+            width: 35px;
+            background-color: #acacac;
+            border: 5px solid #fff;
+        }
+
+        #scoreData li{
+            padding: 10px 0 10px 33px;
+            position: relative;
+            font-weight: 600;
+        }
+        #scoreData li::after{
+            content: '\2192';
+            font-size: 24px;
+            position: absolute;
+            top: 0;
+            left: 3px;
+        }
+
+        .high::after{
+            color: #A9D161;
+            transform: rotate(-45deg);
+        }
+        .low::after{
+            color: #D74025;
+            transform: rotate(45deg);
+        }
+        .same::after{
+            color: #00A6CA;
+        }
+
+        #scoreData > li:not(:first-child){
+            border-bottom: 1px solid #EDEDED;
+        }
+
+        .wrapper-container {
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+        .score-graph{
+            width: 60%;
+        }
+        .score-table{
+            width: 40%;
+            margin-left: 20px;
+        }
+
+        @media (max-width:768px){
+            .wrapper-container {
+                flex-flow: wrap;
+            }
+            .score-graph{
+                width: 100%;
+            }
+            .score-table{
+                width: 100%;
+                margin-left: 0;
+                max-width: 200px;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="table-wrap" id="chart">
-        <table>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-                <td>1</td>
-            </tr>
-
-        </table>
-
-        <div class="y-axis-table">
-            <span>300</span>
-            <span>900</span>
+    <div class="wrapper-container">
+        <div class="score-graph">
+            <div class="table-wrap" id="chart">
+                <table>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+        
+                </table>
+        
+                <div class="y-axis-table">
+                    <span>300</span>
+                    <span>900</span>
+                </div>
+            </div>
+            <div class="table-wrap">
+            <div class="x-axis-table">
+                <span>JAN</span>
+                <span>FEB</span>
+                <span>MAR</span>
+                <span>APR</span>
+                <span>MAY</span>
+                <span>JUN</span>
+                <span>JUL</span>
+                <span>AUG</span>
+                <span>SEP</span>
+                <span>OCT</span>
+                <span>NOV</span>
+                <span>DEC</span>
+            </div>
+            </div>
         </div>
-    </div>
-    <div class="table-wrap">
-    <div class="x-axis-table">
-        <span>JAN</span>
-        <span>FEB</span>
-        <span>MAR</span>
-        <span>APR</span>
-        <span>MAY</span>
-        <span>JUN</span>
-        <span>JUL</span>
-        <span>AUG</span>
-        <span>SEP</span>
-        <span>OCT</span>
-        <span>NOV</span>
-        <span>DEC</span>
-    </div>
-    <div>
-        <ul id="scoreData"></ul>
+        <div class="score-table">
+            <ul id="scoreData"></ul>
+        </div>
     </div>
 </body>
 
@@ -443,14 +529,22 @@
         [...document.querySelectorAll('.dot')].forEach(elem => { elem.classList.remove('active') })
         element.classList.add('active')
         let lists = data.filter(val => { return val.month == months[element.dataset.index] }).map( val => val.scores)
-        console.log("list s", lists)
+        // console.log("list s", lists[0][0])
         document.getElementById('scoreData').innerHTML = '';
-        lists[0].forEach(listE => {
+        for(i=0;i<lists[0].length;i++){
             let listElemt = document.createElement('li');
-            listElemt.innerText = listE
-            console.log("list", listE)
+            listElemt.innerText = lists[0][i]
+            console.log("list", lists[0][i], listElemt)
+            i==0 ? listElemt.classList.add('same') : lists[0][i] > lists[0][i-1] ? listElemt.classList.add('high') : lists[0][i] == lists[0][i-1] ? listElemt.classList.add('same') : listElemt.classList.add('low')
             document.getElementById('scoreData').append(listElemt)
-        })
+        }
+        
+        // lists[0].forEach(listE => {
+        //     let listElemt = document.createElement('li');
+        //     listElemt.innerText = listE
+        //     console.log("list", listE)
+        //     document.getElementById('scoreData').append(listElemt)
+        // })
     }
 
     //animation
