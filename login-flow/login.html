@@ -88,13 +88,19 @@
             <div class="right-panel-content">
               <h1 class="title"><span id="LoginTitle">Login</span><img class="icon" src="./images/smile.svg" alt="smile-icon"></h1>
               <p class="subtitle">to access your CIBIL Score & Report</p>
-              <form class="loginForm" action="">
+              <form class="loginForm" action="" name="loginForm" id="loginForm" novalidate>
+                <!-- Error messages start | hide or show this `div` for invalid username or password -->
+                <div class="form-errors">
+                  <small class="error-message"><img class="icon" src="./images/error.svg" alt="error-icon" width="18">Sorry, we don't recognize your username or password. Please try again.</small>
+                </div>
+                <!-- Error messages end -->
                 <div class="input-row">
                   <div class="input-top">
                     <label for="username">Username</label>
                     <a href="#" class="link-blue">Forgot username</a>
                   </div>
                   <input type="text" name="username" id="username" required />
+                  <small class="error-message">Error Message</small>
                 </div>
                 <div class="input-row">
                   <div class="input-top">
@@ -107,12 +113,13 @@
                     id="password"
                     required
                   />
+                  <small class="error-message">Error Message</small>
                 </div>
                 <p>
                   By clicking on login, you will accept our
                   <a class="link-blue" href="#">terms & conditions</a>
                 </p>
-                <button class="login-form-btn">login</button>
+                <button class="login-form-btn" id="login-form-btn">login</button>
               </form>
               <div class="seperator"></div>
               <p class="text-center">

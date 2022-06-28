@@ -60,6 +60,7 @@
     text-decoration: none;
     text-transform: capitalize;
     margin-right: 40px;
+    outline: none !important;
   }
   .header-container {
     @media screen and (min-width: 992px) {
@@ -323,7 +324,7 @@
           margin-top: 0px;
           display: flex;
           align-items: center;
-          .icon{
+          .icon {
             margin-left: 13px;
             display: none;
           }
@@ -336,6 +337,10 @@
           .input-row {
             &:not(:last-child) {
               margin-bottom: 30px;
+            }
+            .error-message {
+              color: red;
+              display: none;
             }
             .input-top {
               margin-bottom: 2px;
@@ -365,6 +370,11 @@
               letter-spacing: 0.02em;
               color: #000000;
             }
+            &.error{
+              .error-message {
+                display: inline-flex;
+              }
+            }
           }
           .login-form-btn {
             background: #f16e00;
@@ -386,6 +396,20 @@
             margin-top: 20px;
             border: none;
             width: 100%;
+          }
+          .form-errors{
+            display: none;
+            .error-message{
+              color: red;
+              margin-bottom: 20px;
+              display: inline-flex;
+              align-items: flex-start;
+              max-width: 414px;
+              .icon{
+                margin-right: 10px;
+                margin-top: 6px;
+              }
+            }
           }
         }
         .seperator {
