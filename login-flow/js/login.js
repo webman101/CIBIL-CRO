@@ -1,10 +1,11 @@
-/* identify if user is existing or new */
+/* login title */
 localStorage.setItem("loggedInUser", "True");
 const user = localStorage.getItem("loggedInUser");
 if (user) {
-  console.log("Welcome back!");
+  $(".title #LoginTitle").html("Welcome back");
+  $(".title .icon").show();
 } else {
-  console.log("Login");
+  $(".title #LoginTitle").html("Login");
 }
 
 /* container */
@@ -19,6 +20,5 @@ $(window).on("load resize", function (e) {
 
   let footerText = $(".footer-text");
   let footerAlign = (fullRightPanel.width()/2) - (footerText.width()/2) ;
-  console.log(footerAlign);
   footerText.css("left", footerAlign);
 });
