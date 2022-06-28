@@ -26,7 +26,7 @@ function showError(input, message) {
     small.innerText = message;
 }
 
-//show success colour
+//show success
 function showSucces(input) {
     const formControl = input.parentElement;
     formControl.className = 'input-row success';
@@ -43,22 +43,31 @@ function checkRequired(inputArr) {
     });
 }
 
-//get FieldName
-function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+/* submitForm */
+function checkValidation(inputFields) {
+  if( (inputFields[0].value.trim() != '') && (inputFields[1].value.trim() != '') ){
+    form.submit();
+  }
+
+}
+
+function validateForm(){
+  checkRequired([ {"field":username, "message":usernameErrorMessage},{"field":password, "message":passwordErrorMessage} ]);
+  username.addEventListener("change", function(){
+    checkRequired([ {"field":username, "message":usernameErrorMessage} ]);
+  });
+  password.addEventListener("change", function(){
+    checkRequired([ {"field":password, "message":passwordErrorMessage} ]);
+  });
 }
 
 //Event Listeners
 form.addEventListener('submit',function(e) {
-    e.preventDefault();
-    checkRequired([ {"field":username, "message":usernameErrorMessage},{"field":password, "message":passwordErrorMessage} ]);
-    username.addEventListener("change", function(){
-      checkRequired([ {"field":username, "message":usernameErrorMessage} ]);
-    });
-    password.addEventListener("change", function(){
-      checkRequired([ {"field":password, "message":passwordErrorMessage} ]);
-    });
+  e.preventDefault();
+  validateForm();
+  checkValidation([ username, password]);
 });
+/* validation end */
 
 /* container */
 $(window).on("load resize", function (e) {
