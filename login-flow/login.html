@@ -1,96 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Login | CIBIL</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css">
-    <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/login.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://assets.transunion.com/resources/css/lib/bootstrap.min.css"
+    />
+    <link
+      type="text/css"
+      href="https://assets.transunion.com/resources/css/tu-main.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
 
-<body>
-    <div class="header">
+  <body>
+    <div class="loginPage">
+      <div class="header">
         <div class="container header-container">
-            <div class="header-row">
-                <a href="https://www.cibil.com/">
-                    <img src="./images/cibil-logo.svg" alt="Cibil" width="91">
-                </a>
-                <div class="d-flex">
-                    <a href="" class="button-orange-outline login-button m-hidden">login</a>
-                    <div class="language-switcher m-hidden">
-                        <div class="language-switcher-trigger">
-                            <img src="./images/language-icon-1.png" alt="Cibil" width="40">
-                            <span class="text-uppercase" style="margin: 0 16px;">English</span>
-                            <img src="./images/black-drop-arrow.png" alt="Cibil" width="9">
-                        </div>
-                        <div class="language-switcher-options">
-                            <div class="language-switcher-list">
-                                <a class="language-switcher-item active" href="#">English - EN</a>
-                                <a class="language-switcher-item" href="#">हिंदी - HI</a>
-                                <a class="language-switcher-item" href="#">தமிழ் - TA</a>
-                                <a class="language-switcher-item" href="#">తెలుగు - TE</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="m-visible">
-                        <img src="./images/mobile-menu-toggle.png" alt="" class="menu-toggle m-visible">
-                    </div>
+          <div class="header-row">
+            <a href="https://www.cibil.com/">
+              <img src="./images/cibil-logo.svg" alt="Cibil" width="91" />
+            </a>
+            <div class="d-flex">
+              <a href="" class="button-orange-outline login-button m-hidden"
+                >login</a
+              >
+              <div class="language-switcher m-hidden">
+                <div class="language-switcher-trigger">
+                  <img
+                    src="./images/language-icon-1.png"
+                    alt="Cibil"
+                    width="40"
+                  />
+                  <span class="text-uppercase" style="margin: 0 16px"
+                    >English</span
+                  >
+                  <img
+                    src="./images/black-drop-arrow.png"
+                    alt="Cibil"
+                    width="9"
+                  />
                 </div>
+                <div class="language-switcher-options">
+                  <div class="language-switcher-list">
+                    <a class="language-switcher-item active" href="#"
+                      >English - EN</a
+                    >
+                    <a class="language-switcher-item" href="#">हिंदी - HI</a>
+                    <a class="language-switcher-item" href="#">தமிழ் - TA</a>
+                    <a class="language-switcher-item" href="#">తెలుగు - TE</a>
+                  </div>
+                </div>
+              </div>
+              <div class="m-visible">
+                <img
+                  src="./images/mobile-menu-toggle.png"
+                  alt=""
+                  class="menu-toggle m-visible"
+                />
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <div class="login-page-content">
+      </div>
+      <div class="login-page-content">
         <div class="login-form-section">
-            <div class="left-panel">
-                <img src="./images/cibil-logo.svg" alt="logo" width="109">
-                <div class="banner-image"><img src="./images/login-banner.png" alt="banner" width="642"></div>
-                <p class="link-note"><img src="./images/play.svg" alt="play" width="24">Take a <a class="link-black" href="#"><b>video</b></a> tour of your CIBIL Dashboard</p>
+          <div class="left-panel">
+            <img src="./images/cibil-logo.svg" alt="logo" width="109" />
+            <div class="banner-image">
+              <img src="./images/login-banner.png" alt="banner" width="642" />
             </div>
-            <div class="right-panel">
-                <h1 class="title"><span id="LoginTitle">Login</span></h1>
-                <p class="subtitle">to access your CIBIL Score & Report</p>
-                <form action="">
-                    <div class="input-row">
-                        <div class="input-top">
-                            <label for="username">Username</label>
-                            <a href="#" class="link-blue">Forgot username</a>
-                        </div>
-                        <input type="text" name="username" id="username">
-                    </div>
-                    <div class="input-row">
-                        <div class="input-top">
-                            <label for="password">Password</label>
-                            <a href="#" class="link-blue">Forgot password</a>
-                        </div>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <p>By clicking on login, you will accept our <a class="link-blue" href="#">terms & conditions</a></p>
-                    <a href="#" class="login-form-btn">login</a>
-                </form>
-                <hr class="seperator">
-                <p>By clicking on login, you will accept our <a class="link-blue" href="#">terms & conditions</a></p>
+            <p class="link-note">
+              <img
+                class="icon"
+                src="./images/play.svg"
+                alt="play"
+                width="24"
+              />Take a <a class="link-black" href="#"><b>video</b></a> tour of
+              your CIBIL Dashboard
+            </p>
+          </div>
+          <div class="right-panel">
+            <div class="right-panel-content">
+              <h1 class="title"><span id="LoginTitle">Login</span></h1>
+              <p class="subtitle">to access your CIBIL Score & Report</p>
+              <form class="loginForm" action="">
+                <div class="input-row">
+                  <div class="input-top">
+                    <label for="username">Username</label>
+                    <a href="#" class="link-blue">Forgot username</a>
+                  </div>
+                  <input type="text" name="username" id="username" required />
+                </div>
+                <div class="input-row">
+                  <div class="input-top">
+                    <label for="password">Password</label>
+                    <a href="#" class="link-blue">Forgot password</a>
+                  </div>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    required
+                  />
+                </div>
+                <p>
+                  By clicking on login, you will accept our
+                  <a class="link-blue" href="#">terms & conditions</a>
+                </p>
+                <button class="login-form-btn">login</button>
+              </form>
+              <div class="seperator"></div>
+              <p class="text-center">
+                Never taken a CIBIL Score & Report?
+                <a class="link-blue" href="#">Register for CIBIL Account</a>
+              </p>
             </div>
+            <p class="footer-text">
+              © Copyright 2022 TransUnion CIBIL Limited (Formerly: Credit
+              Information Bureau (India) Limited). All Rights Reserved.
+            </p>
+          </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="container">
-            <div class="copyright">
-                © Copyright 2022 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.
+      </div>
+      <!--     <div class="footer">
+            <div class="container">
+                <div class="copyright">
+                    © Copyright 2022 TransUnion CIBIL Limited (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.
+                </div>
+                <ul class="footer-links">
+                    <li><a href="https://www.cibil.com/frequent-queries">FAQs</a></li>
+                    <li><a href="https://www.transunioncibil.com/legal/terms-and-conditions?_ga=2.36384480.1185177705.1630671658-1659703442.1628151246">Terms and Conditions</a></li>
+                    <li><a href="https://www.transunioncibil.com/legal/privacy-policy?_ga=2.36384480.1185177705.1630671658-1659703442.1628151246">Privacy Policy</a></li>
+                </ul>
             </div>
-            <ul class="footer-links">
-                <li><a href="https://www.cibil.com/frequent-queries">FAQs</a></li>
-                <li><a href="https://www.transunioncibil.com/legal/terms-and-conditions?_ga=2.36384480.1185177705.1630671658-1659703442.1628151246">Terms and Conditions</a></li>
-                <li><a href="https://www.transunioncibil.com/legal/privacy-policy?_ga=2.36384480.1185177705.1630671658-1659703442.1628151246">Privacy Policy</a></li>
-            </ul>
-        </div>
+        </div> -->
     </div>
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
     <script src="./js/login.js"></script>
-
-</body>
-
+  </body>
 </html>
