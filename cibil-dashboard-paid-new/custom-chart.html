@@ -128,7 +128,25 @@
             padding: 0 8px 0 5px;
             margin-left: 4px;
             border-radius: 0 1000em 1000em 0;
+            color: transparent;
+            position: relative;
+        }
+
+        .mark span::after {
+            content: '+';
+            font-size: 22px;
+            font-weight: 400;
             color: #fff;
+            position: absolute;
+            top: 2px;
+            left: 3px;
+        }
+
+        .active .mark span::after {
+            content: '\003E';
+            font-size: 18px;
+            top: 1px;
+            left: 4px;
         }
 
         .mark::after {
@@ -205,7 +223,8 @@
             overflow-y: scroll;
             display: flex;
             flex-direction: column-reverse;
-            margin: 0;
+            max-width: 250px;
+            margin: 0 auto;
         }
 
         #scoreData::-webkit-scrollbar{
@@ -224,12 +243,20 @@
             padding: 10px 0 10px 33px;
             position: relative;
             font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
+        #scoreData li *{
+            flex: 1;
+        }
+
         #scoreData li::after{
             content: '\2192';
             font-size: 24px;
             position: absolute;
-            top: 6px;
+            top: 10px;
             left: 3px;
             font-weight: 400;
         }
@@ -244,6 +271,9 @@
         }
         .same::after{
             color: #00A6CA;
+        }
+        .hide::after{
+            display: none;
         }
 
         #scoreData > li:not(:first-child){
@@ -261,6 +291,15 @@
         .score-table{
             width: 40%;
             margin-left: 20px;
+        }
+        #scoreData li span {
+            font-family: 'Intro Book', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #2C2C2C;
         }
 
         @media (max-width:768px){
@@ -554,7 +593,7 @@
         },
         {
             date: '2022/04/20',
-            score: 608
+            score: 599
         },
         {
             date: '2022/04/26',
@@ -594,10 +633,10 @@
         },
         {
             date: '2022/12/03',
-            score: 700
+            score: 708
         },
         {
-            date: '2022/12/03',
+            date: '2022/12/13',
             score: 788
         },
         {
@@ -611,11 +650,12 @@
     function upsert(value){
         let monthName = months[new Date(value.date).getMonth()]
         let index = data.findIndex( item => item.month == monthName)
-        index > -1 ? (data[index].scores.push(value.score), data[index].dates.push(value.score)) : data.push({month: monthName, scores: [value.score], dates: [value.date]})
+        index > -1 ? (data[index].scores.push(value.score), data[index].dates.push(value.date)) : data.push({month: monthName, scores: [value.score], dates: [value.date]})
     }
     raw_data.forEach((item) => {
         upsert(item)
     })
+    console.log(data)
 
     //append graph dots
     const values = data.map(ele => { return { x: months.indexOf(ele.month), y: Math.max(...ele.scores) }})
@@ -639,12 +679,23 @@
     function showdata(element) {
         [...document.querySelectorAll('.dot')].forEach(elem => { elem.classList.remove('active') })
         element.classList.add('active')
-        let lists = data.filter(val => { return val.month == months[element.dataset.index] }).map( val => val.scores)
+        let lists = data.filter(val => { return val.month == months[element.dataset.index] }).map( val => { return { scores : val.scores, dates : val.dates } } )
+        // console.log(lists)
+
+        //last elemet data
+        let prevList = data.filter(val => { return val.month == months[element.previousElementSibling.dataset.index]})
+        console.log(prevList)
+        let prevListData = prevList.length > 0 ? prevList[0].scores[prevList[0].scores.length - 1] : null ;
+
         document.getElementById('scoreData').innerHTML = '';
-        for(i=0;i<lists[0].length;i++){
+        for(i=0;i<lists[0].scores.length;i++){
             let listElemt = document.createElement('li');
-            listElemt.innerText = lists[0][i]
-            i==0 ? listElemt.classList.add('same') : lists[0][i] > lists[0][i-1] ? listElemt.classList.add('high') : lists[0][i] == lists[0][i-1] ? listElemt.classList.add('same') : listElemt.classList.add('low')
+            let listElemtDate = new Date(lists[0].dates[i])
+            listElemt.innerHTML = `
+                <b>${lists[0].scores[i]}</b>
+                <span>${listElemtDate.getDate()+"/"+(listElemtDate.getMonth()+1)+"/"+listElemtDate.getFullYear()}</span>
+            `
+            i==0 ? !prevListData ? listElemt.classList.add('hide') : lists[0].scores[i] > prevListData ? listElemt.classList.add('high') : lists[0].scores[i] == prevListData ? listElemt.classList.add('same') : listElemt.classList.add('low') : lists[0].scores[i] > lists[0].scores[i-1] ? listElemt.classList.add('high') : lists[0].scores[i] == lists[0].scores[i-1] ? listElemt.classList.add('same') : listElemt.classList.add('low')
             document.getElementById('scoreData').append(listElemt)
         }
     }
