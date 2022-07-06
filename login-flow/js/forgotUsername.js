@@ -1,24 +1,15 @@
-/* check if user is new or existing */
-
-const user = localStorage.getItem("loggedInUser");
-if (user) {
-  $(".loginFlow-form-section .title #LoginTitle").html("Welcome back");
-  $(".loginFlow-form-section #LoginSubtitle").html("login to access your CIBIL Score & Report");
-  $(".loginFlow-form-section .title .icon-welcome").show();
-} else {
-  $(".loginFlow-form-section .title .icon-login").show();
-  $(".loginFlow-form-section .title #LoginTitle").html("Login");
-  localStorage.setItem("loggedInUser", "True"); // Remove this line from here & paste it inside your login fucntion.
-}
-
 /* validation start */
-const loginForm = document.getElementById('loginForm');
-const username = document.getElementById('username');
-const password = document.getElementById('password');
+const forgotUsernameForm = document.getElementById('forgotUsernameForm');
+const mobileno = document.getElementById('mobileno');
+const email = document.getElementById('email');
+let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+let phonePattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
 // messages
-const usernameErrorMessage = "Please enter the username of your account.";
-const passwordErrorMessage = "Please enter a password.";
+const mobilenoErrorMessage = "Please enter your mobile number.";
+const mobilenoInvalidError = "Please enter a valid mobile mobile number.";
+const emailErrorMessage = "Please enter your email address.";
+const emailInvalidError = "The email address you have entered is invalid. Please try again.";
 
 //Show error
 let totalErrors = 0;
@@ -37,6 +28,28 @@ function showSucces(input) {
     totalErrors = 0;
 }
 
+// check valid email
+function emailValidation() {
+  if (email.value.match(emailPattern)) {
+    showSucces(email);
+    return true;
+  } else {
+    showError(email, emailInvalidError);
+    return false;
+  }
+}
+
+// check valid phone
+function phoneValidation() {
+  if (mobileno.value.match(phonePattern)) {
+    showSucces(mobileno);
+    return true;
+  } else {
+    showError(mobileno, mobilenoInvalidError);
+    return false;
+  }
+}
+
 //check for errors
 function validateForm(input){
   // check for required fields
@@ -44,6 +57,15 @@ function validateForm(input){
     showError(input.field, input.message);
   }else {
       showSucces(input.field);
+      //check validations
+      let inputId = input.field.id;
+      if (inputId === "mobileno"){
+        phoneValidation();
+      }
+      else if(inputId === "email"){
+        emailValidation();
+      }
+      else{}
   }
 }
 
@@ -57,14 +79,14 @@ function checkValidations(inputArr) {
     });
       // check for the errors
       if(!(totalErrors > 0)){
-        loginForm.submit();
+        forgotUsernameForm.submit();
       }
 }
 
 //Event Listeners
-loginForm.addEventListener('submit',function(e) {
+forgotUsernameForm.addEventListener('submit',function(e) {
   e.preventDefault();
-  checkValidations([ {"field":username, "message":usernameErrorMessage},{"field":password, "message":passwordErrorMessage} ]);
+  checkValidations([ {"field":mobileno, "message":mobilenoErrorMessage},{"field":email, "message":emailErrorMessage} ]);
 });
 
 /* validation end */

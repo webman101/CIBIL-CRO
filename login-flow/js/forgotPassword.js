@@ -1,24 +1,9 @@
-/* check if user is new or existing */
-
-const user = localStorage.getItem("loggedInUser");
-if (user) {
-  $(".loginFlow-form-section .title #LoginTitle").html("Welcome back");
-  $(".loginFlow-form-section #LoginSubtitle").html("login to access your CIBIL Score & Report");
-  $(".loginFlow-form-section .title .icon-welcome").show();
-} else {
-  $(".loginFlow-form-section .title .icon-login").show();
-  $(".loginFlow-form-section .title #LoginTitle").html("Login");
-  localStorage.setItem("loggedInUser", "True"); // Remove this line from here & paste it inside your login fucntion.
-}
-
 /* validation start */
-const loginForm = document.getElementById('loginForm');
+const forgotPasswordForm = document.getElementById('forgotPasswordForm');
 const username = document.getElementById('username');
-const password = document.getElementById('password');
 
 // messages
-const usernameErrorMessage = "Please enter the username of your account.";
-const passwordErrorMessage = "Please enter a password.";
+const passwordErrorMessage = "Please enter a username.";
 
 //Show error
 let totalErrors = 0;
@@ -57,14 +42,14 @@ function checkValidations(inputArr) {
     });
       // check for the errors
       if(!(totalErrors > 0)){
-        loginForm.submit();
+        forgotPasswordForm.submit();
       }
 }
 
 //Event Listeners
-loginForm.addEventListener('submit',function(e) {
+forgotPasswordForm.addEventListener('submit',function(e) {
   e.preventDefault();
-  checkValidations([ {"field":username, "message":usernameErrorMessage},{"field":password, "message":passwordErrorMessage} ]);
+  checkValidations([ {"field":username, "message":passwordErrorMessage} ]);
 });
 
 /* validation end */
