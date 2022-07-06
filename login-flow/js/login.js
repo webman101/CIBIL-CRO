@@ -3,8 +3,10 @@
 const user = localStorage.getItem("loggedInUser");
 if (user) {
   $(".title #LoginTitle").html("Welcome back");
-  $(".title .icon").show();
+  $(".subtitle").html("login to access your CIBIL Score & Report");
+  $(".title .icon-welcome").show();
 } else {
+  $(".title .icon-login").show();
   $(".title #LoginTitle").html("Login");
   localStorage.setItem("loggedInUser", "True"); // Remove this line from here & paste it inside your login fucntion.
 }
@@ -77,9 +79,9 @@ $(window).on("load resize", function (e) {
   let totalMargin = (formSection - HeaderContainer) / 2;
 
   let fullRightPanel = $(".login-form-section .right-panel");
-  fullRightPanel.css("padding-right", totalMargin);
+  /* fullRightPanel.css("padding-right", totalMargin); */
 
   let footerText = $(".footer-text");
   let footerAlign = (fullRightPanel.width()/2) - (footerText.width()/2) ;
-  footerText.css("left", footerAlign);
+  /* footerText.css("left", footerAlign); */
 });
