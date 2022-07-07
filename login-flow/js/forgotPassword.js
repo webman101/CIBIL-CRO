@@ -6,20 +6,17 @@ const username = document.getElementById('username');
 const passwordErrorMessage = "Please enter a username.";
 
 //Show error
-let totalErrors = 0;
 function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'input-row error';
     const small = formControl.querySelector('.error-message');
     small.innerText = message;
-    totalErrors++;
 }
 
 //show success
 function showSucces(input) {
     const formControl = input.parentElement;
     formControl.className = 'input-row success';
-    totalErrors = 0;
 }
 
 //check for errors
@@ -44,6 +41,8 @@ function checkValidations(inputArr) {
         });
     });
       // check for the errors
+      let totalErrors = $('.input-row.error').length;
+      /* console.log("total errors:", totalErrors); */
       if(!(totalErrors > 0)){
         forgotPasswordForm.submit();
       }
@@ -56,18 +55,3 @@ forgotPasswordForm.addEventListener('submit',function(e) {
 });
 
 /* validation end */
-
-/* container */
-$(window).on("load resize", function (e) {
-  let HeaderContainer = $(".header-container").width();
-  let formSection = $(".loginFlow-form-section").outerWidth();
-
-  let totalMargin = (formSection - HeaderContainer) / 2;
-
-  let fullRightPanel = $(".loginFlow-form-section .right-panel");
-  /* fullRightPanel.css("padding-right", totalMargin); */
-
-  let footerText = $(".footer-text");
-  let footerAlign = (fullRightPanel.innerWidth()/2) - (footerText.width()/2) ;
-  footerText.css("left", footerAlign);
-});
