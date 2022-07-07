@@ -16,7 +16,7 @@ let totalErrors = 0;
 function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'input-row error';
-    const small = formControl.querySelector('small');
+    const small = formControl.querySelector('.error-message');
     small.innerText = message;
     totalErrors++;
 }
@@ -29,22 +29,28 @@ function showSucces(input) {
 }
 
 // check valid email
-function emailValidation() {
+function emailValidation(input) {
+  $errorDivId = input.field.id;
   if (email.value.match(emailPattern)) {
+    $("#" + $errorDivId ).next().hide("medium");
     showSucces(email);
     return true;
   } else {
+    $("#" + $errorDivId ).next().show("medium");
     showError(email, emailInvalidError);
     return false;
   }
 }
 
 // check valid phone
-function phoneValidation() {
+function phoneValidation(input) {
+  $errorDivId = input.field.id;
   if (mobileno.value.match(phonePattern)) {
+    $("#" + $errorDivId ).next().hide("medium");
     showSucces(mobileno);
     return true;
   } else {
+    $("#" + $errorDivId ).next().show("medium");
     showError(mobileno, mobilenoInvalidError);
     return false;
   }
@@ -52,18 +58,21 @@ function phoneValidation() {
 
 //check for errors
 function validateForm(input){
+  $errorDivId = input.field.id;
   // check for required fields
   if(input.field.value.trim() === ''){
     showError(input.field, input.message);
+    $("#" + $errorDivId ).next().show("medium");
   }else {
       showSucces(input.field);
+      $("#" + $errorDivId ).next().hide("medium");
       //check validations
       let inputId = input.field.id;
       if (inputId === "mobileno"){
-        phoneValidation();
+        phoneValidation(input);
       }
       else if(inputId === "email"){
-        emailValidation();
+        emailValidation(input);
       }
       else{}
   }

@@ -25,7 +25,7 @@ let totalErrors = 0;
 function showError(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'input-row error';
-    const small = formControl.querySelector('small');
+    const small = formControl.querySelector('.error-message');
     small.innerText = message;
     totalErrors++;
 }
@@ -39,11 +39,14 @@ function showSucces(input) {
 
 //check for errors
 function validateForm(input){
+  $errorDivId = input.field.id;
   // check for required fields
   if(input.field.value.trim() === ''){
     showError(input.field, input.message);
+    $("#" + $errorDivId ).next().show("medium");
   }else {
       showSucces(input.field);
+      $("#" + $errorDivId ).next().hide("medium");
   }
 }
 
@@ -65,6 +68,7 @@ function checkValidations(inputArr) {
 loginForm.addEventListener('submit',function(e) {
   e.preventDefault();
   checkValidations([ {"field":username, "message":usernameErrorMessage},{"field":password, "message":passwordErrorMessage} ]);
+
 });
 
 /* validation end */

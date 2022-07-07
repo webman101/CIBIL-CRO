@@ -84,7 +84,7 @@
               <form class="forgotUsernameForm" action="" name="forgotUsernameForm" id="forgotUsernameForm" novalidate>
                 <!-- Error messages start | hide or show this `div` for invalid username or password -->
                 <div class="form-errors">
-                  <small class="error-message"><img class="icon" src="./images/error.svg" alt="error-icon" width="18">Sorry, we don't recognize your username or password. Please try again.</small>
+                  <div class="error-message"><img class="icon" src="./images/error.svg" alt="error-icon" width="18">Sorry, we don't recognize your username or password. Please try again.</div>
                 </div>
                 <!-- Error messages end -->
                 <div class="input-row">
@@ -92,14 +92,14 @@
                     <label for="mobileno">Mobile number</label>
                   </div>
                   <input type="tel" name="mobileno" id="mobileno" placeholder="91 XXXXX XXXXX" required />
-                  <small class="error-message">Error Message</small>
+                  <div class="error-message"></div>
                 </div>
                 <div class="input-row">
                   <div class="input-top">
                     <label for="email">Email address</label>
                   </div>
                   <input type="text" name="email" id="email" placeholder="example@example.com" required />
-                  <small class="error-message">Error Message</small>
+                  <div class="error-message"></div>
                 </div>
                 <button class="loginFlow-form-btn" id="loginFlow-form-btn">CONTINUE</button>
               </form>

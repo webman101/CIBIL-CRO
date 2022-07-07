@@ -171,33 +171,36 @@
       display: none;
     }
   }
-  ::-webkit-input-placeholder { 
+  ::-webkit-input-placeholder {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #ACACAC;
+    color: #acacac;
   }
-  ::-moz-placeholder { /* Firefox 19+ */
+  ::-moz-placeholder {
+    /* Firefox 19+ */
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #ACACAC;
+    color: #acacac;
   }
-  :-ms-input-placeholder { /* IE 10+ */
+  :-ms-input-placeholder {
+    /* IE 10+ */
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #ACACAC;
+    color: #acacac;
   }
-  :-moz-placeholder { /* Firefox 18- */
+  :-moz-placeholder {
+    /* Firefox 18- */
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #ACACAC;
+    color: #acacac;
   }
   @media (min-width: 992px) {
     .dhide {
@@ -221,7 +224,7 @@
     }
     .link-blue {
       color: #00a6ca !important;
-      .icon{
+      .icon {
         margin-right: 14px;
         display: inline-flex;
         align-items: center;
@@ -318,7 +321,7 @@
           .small-text {
             font-size: 14px;
             line-height: 24px;
-            a{
+            a {
               font-weight: 400;
               text-decoration: none;
             }
@@ -344,8 +347,8 @@
           a {
             font-weight: 600;
           }
-          .goBack{
-            .link-blue{
+          .goBack {
+            .link-blue {
               display: flex;
               align-items: center;
             }
@@ -359,6 +362,7 @@
               }
               .error-message {
                 color: red;
+                font-size: 85%;
                 display: none;
               }
               .input-top {
@@ -376,6 +380,10 @@
               a {
                 font-size: 14px;
                 line-height: 14px;
+              }
+              input[type="password"] {
+                font-size: 35px !important;
+                letter-spacing: -2px !important;
               }
               input {
                 width: 100%;
@@ -395,11 +403,11 @@
                 -webkit-box-shadow: 0 0 0 30px white inset !important;
                 box-shadow: 0 0 0 30px white inset !important;
               }
-              &.error {
+              /*               &.error {
                 .error-message {
                   display: inline-flex;
                 }
-              }
+              } */
             }
             .loginFlow-form-btn {
               background: #f16e00;
@@ -425,6 +433,7 @@
             .form-errors {
               display: none;
               .error-message {
+                font-size: 85%;
                 color: red;
                 margin-bottom: 20px;
                 display: inline-flex;
@@ -436,13 +445,14 @@
                 }
               }
             }
-            &.forgotUsernameForm, &.forgotPasswordForm{
+            &.forgotUsernameForm,
+            &.forgotPasswordForm {
               margin-bottom: 33px;
             }
-            &.forgotPasswordForm{
-               .input-row{
+            &.forgotPasswordForm {
+              .input-row {
                 margin-bottom: 20px;
-               }
+              }
             }
           }
           .seperator {
@@ -462,7 +472,7 @@
           }
         }
       }
-      @media (min-width:1400px){
+      @media (min-width: 1400px) {
         height: 100vh;
       }
       @media (max-width: 992px) {
@@ -478,11 +488,11 @@
             padding: 50px 0px 0px !important;
             width: 100%;
             min-height: auto;
-            p.text-center{
+            p.text-center {
               width: 305px;
               margin: auto;
             }
-            .link-blue{
+            .link-blue {
               justify-content: center;
             }
             .small-text {
@@ -500,13 +510,14 @@
                 margin-top: 30px;
                 margin-bottom: 30px;
               }
-              &.forgotUsernameForm, &.forgotPasswordForm{
+              &.forgotUsernameForm,
+              &.forgotPasswordForm {
                 margin-bottom: 33px;
               }
-              &.forgotUsernameForm{
+              &.forgotUsernameForm {
                 margin-top: 30px;
               }
-              &.forgotPasswordForm{
+              &.forgotPasswordForm {
                 margin-top: 20px;
               }
             }
