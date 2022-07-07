@@ -15,5 +15,4 @@
   
   $footerText = $(".mhide.footer-text");
   $footerTextMarginTop = $footerText.attr("marginTop");
-  console.log($footerTextMarginTop);
   $footerText.css("margin-top", $footerTextMarginTop+"px" );
