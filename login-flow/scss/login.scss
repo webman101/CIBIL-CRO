@@ -177,6 +177,7 @@
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #acacac;
+    font-family: "Intro" !important;
   }
   ::-moz-placeholder {
     /* Firefox 19+ */
@@ -185,6 +186,7 @@
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #acacac;
+    font-family: "Intro" !important;
   }
   :-ms-input-placeholder {
     /* IE 10+ */
@@ -193,6 +195,7 @@
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #acacac;
+    font-family: "Intro" !important;
   }
   :-moz-placeholder {
     /* Firefox 18- */
@@ -201,6 +204,7 @@
     line-height: 24px;
     letter-spacing: 0.02em;
     color: #acacac;
+    font-family: "Intro" !important;
   }
   @media (min-width: 992px) {
     .dhide {
@@ -397,6 +401,10 @@
               input[type="number"]::-webkit-outer-spin-button {
                 -webkit-appearance: none;
               }
+              input[type="password"] {
+                font-family: Verdana;
+                letter-spacing: 0.125em;
+              }
 
               input[type="number"] {
                 -moz-appearance: textfield;
@@ -407,6 +415,7 @@
               input:-webkit-autofill:active {
                 -webkit-box-shadow: 0 0 0 30px white inset !important;
                 box-shadow: 0 0 0 30px white inset !important;
+                font-family: "Intro" !important;
               }
               /*               &.error {
                 .error-message {

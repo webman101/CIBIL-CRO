@@ -1,5 +1,4 @@
 /* check if user is new or existing */
-
 const user = localStorage.getItem("loggedInUser");
 if (user) {
   $(".loginFlow-form-section .title #LoginTitle").html("Welcome back");
@@ -69,8 +68,8 @@ loginForm.addEventListener('submit',function(e) {
   checkValidations([ {"field":username, "message":usernameErrorMessage},{"field":password, "message":passwordErrorMessage} ]);
 });
 
-/* show form errors | start */
-  /* $(".from-errors" ).show("fast"); */
+/* display form errors | Use this code to display form errors */
+  // $(".from-errors" ).show("fast");
 /* show form errors | end */
 
 /* validation end */
