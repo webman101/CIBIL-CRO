@@ -9,7 +9,7 @@ let phonePattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
 const mobilenoErrorMessage = "Please enter your mobile number.";
 const mobilenoInvalidError = "Please enter a valid mobile mobile number.";
 const emailErrorMessage = "Please enter your email address.";
-const emailInvalidError = "The email address you have entered is invalid. Please try again.";
+const emailInvalidError = "Please enter a valid email address.";
 
 //Show error
 let totalErrors = 0;
