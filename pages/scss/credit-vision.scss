@@ -1,0 +1,143 @@
+.credit-vision-content {
+  font-family: "Intro";
+  /* base */
+  @media (max-width: 992px) {
+    .mhide {
+      display: none !important;
+    }
+  }
+  @media (min-width: 993px) {
+    .dhide {
+      display: none !important;
+    }
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    @media (min-width: 1200px) {
+      width: 1240px;
+    }
+  }
+
+  .clear-psudo {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .cibil-button {
+    background: lightgrey;
+    border: 1px solid lightgray;
+    border-radius: 999px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 15px 20px 11px;
+    text-decoration: none !important;
+    outline: none !important;
+    &-yellow {
+      background: #fcd800;
+      border: 1px solid #fcd800;
+    }
+  }
+
+  /* banner */
+  .credit-view-banner {
+    background: linear-gradient(
+        269.74deg,
+        rgba(255, 255, 255, 0.2) 10.58%,
+        rgba(255, 255, 255, 0) 86%
+      ),
+      url(../images/credit-vision/banner-bg-desk.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &__wraper {
+      min-height: 450px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 61px;
+      .right-panel {
+        width: 44.584%;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        .banner-img {
+          width: 100%;
+        }
+      }
+      .left-panel {
+        width: 45%;
+        .small-title {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          color: #707070;
+        }
+        .banner-title {
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 44px;
+          letter-spacing: -0.01em;
+          color: #000000;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+        .banner-subtitle {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 30px;
+          color: #2c2c2c;
+          margin-bottom: 30px;
+        }
+        .cibil-button {
+          &-yellow {
+            min-width: 282px;
+          }
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      &__wraper {
+        padding-top: 27px;
+        padding-bottom: 30px;
+        .left-panel {
+          width: 100%;
+          text-align: center;
+          .small-title {
+            margin-bottom: 0px;
+          }
+          .banner-title {
+            margin-bottom: 21px;
+          }
+          .banner-subtitle {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            max-width: 373px;
+            margin: 29px auto 20px;
+          }
+        }
+      }
+    }
+    @media (max-width:448px){
+        &__wraper{
+            background: linear-gradient(269.74deg, rgba(255, 255, 255, 0.2) 10.58%, rgba(255, 255, 255, 0) 86%), url(../images/credit-vision/banner-bg-mob.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+  }
+}
