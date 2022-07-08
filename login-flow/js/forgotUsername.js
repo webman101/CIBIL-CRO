@@ -3,7 +3,7 @@ const forgotUsernameForm = document.getElementById('forgotUsernameForm');
 const mobileno = document.getElementById('mobileno');
 const email = document.getElementById('email');
 let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-let phonePattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+let phonePattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/im;
 
 // messages
 const mobilenoErrorMessage = "Please enter your mobile number.";
@@ -52,6 +52,13 @@ function phoneValidation(input) {
     return false;
   }
 }
+
+//only numbers
+$("#mobileno").keypress(function (e) {
+  if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+   return false;
+ }
+});
 
 //check for errors
 function validateForm(input){

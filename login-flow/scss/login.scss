@@ -362,6 +362,7 @@
             margin-top: 30px;
             margin-bottom: 30px;
             .input-row {
+              position: relative;
               &:not(:last-child) {
                 margin-bottom: 30px;
               }
@@ -417,11 +418,19 @@
                 box-shadow: 0 0 0 30px white inset !important;
                 font-family: "Intro" !important;
               }
-              /*               &.error {
-                .error-message {
-                  display: inline-flex;
+              span.code-prefix {
+                position: absolute;
+                top: 39px;
+                display: inline-flex;
+                height: 26px;
+                align-items: center;
+                padding-left: 16px;
+                padding-right: 18px;
+                border-right: 1px solid #ACACAC;
+                & ~ input{
+                  padding-left: 78px;
                 }
-              } */
+            }
             }
             .loginFlow-form-btn {
               background: #f16e00;
