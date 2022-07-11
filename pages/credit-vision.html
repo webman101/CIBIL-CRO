@@ -10,6 +10,7 @@
     <link type="text/css" href="https://assets.transunion.com/resources/css/tu-main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cibil-pvw.transunion.com/public/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="./css/credit-vision.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -122,10 +123,11 @@
                         </div>
                         <div class="input-container">
                             <label for="phoneNo">Phone No.</label>
-                            <input type="text" name="phoneNo" id="phoneNo">
+                            <input type="text" name="phoneNo" id="phoneNo" maxlength="10">
                             <p class="error-message"></p>
                         </div>
                     </div>
+                    <div class="g-recaptcha" data-sitekey="6Lef4N8gAAAAAIqjgn24SR0er5EZm8-smn-nATwI"></div>
                     <button class="cibil-button cibil-button-yellow" type="submit">REQUEST MORE INFORMATION</button>
                 </form>
             </div>

@@ -97,6 +97,14 @@
       }
     }
   }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    box-shadow: 0 0 0 30px white inset !important;
+    font-family: "Intro" !important;
+  }
   form {
     margin-top: 30px;
     .cibil-button {
@@ -130,6 +138,7 @@
           font-size: 85%;
           margin-top: 5px;
           display: none;
+          margin-bottom: 0px;
         }
         input {
           border: 1px solid #acacac !important;
@@ -138,12 +147,19 @@
         }
       }
     }
+    .g-recaptcha {
+      margin-top: 10px;
+      margin-bottom: 40px;
+    }
     @media (max-width: 992px) {
       .input-row {
         flex-direction: column;
-        .input-container{
+        .input-container {
           width: 100%;
         }
+      }
+      .g-recaptcha{
+        margin: 0px;
       }
     }
   }
