@@ -138,13 +138,7 @@ function checkValidations(inputArr) {
       let totalErrors = $('.input-container.error').length;
       /* console.log("total errors:", totalErrors); */
       if(!(totalErrors > 0)){
-        $recaptcha = $_POST['g-recaptcha-response'];
-        $res = reCaptcha($recaptcha);
-        if($res['success']){
-          contactForm.submit();
-        }else{
-          console.log("Please check the recaptcha!");
-        }
+        contactForm.submit();
       }
 }
 
