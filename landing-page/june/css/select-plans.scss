@@ -1448,14 +1448,8 @@ body {
       }
     }
   }
-  .margin-top-0 {
-    margin-top: 0;
-  }
-  .margin-bottom-1 {
-    margin-bottom: 10px;
-  }
   .fw-rg-600 {
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     font-family: "Intro" !important;
   }
   /* footer */
@@ -1485,6 +1479,7 @@ body {
       .follow-text {
         font-size: 22px;
         line-height: 26px;
+        color: #005365 !important;
       }
       @media (max-width: 991px) {
         text-align: center;
