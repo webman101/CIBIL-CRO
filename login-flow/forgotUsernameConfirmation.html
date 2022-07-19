@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Forgot Password | CIBIL</title>
+    <title>Forgot Username Confirmation | CIBIL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -68,8 +68,8 @@
         </div>
       </div>
       <div class="loginFlow-page-content">
-        <div class="loginFlow-form-section">
-        <div class="container clear-psudo loginFlow-form-section__wraper">
+        <div class="loginFlow-success-section">
+        <div class="container clear-psudo loginFlow-success-section__wraper">
           <div class="left-panel">
             <p class="section-title">Banks check your CIBIL Score Before approving your loan</p>
             <p class="subtitle">Don’t Worry. Checking your CIBIL Score won’t lower it.</p>
@@ -79,30 +79,11 @@
           </div>
           <div class="right-panel">
             <div class="right-panel-content">
-              <h1 class="title">Forgot password</h1>
-              <p class="subtitle">Please fill the information requested below to recieve an email with a temporary password to login. We then will ask you to change your login information before accessing your account. If you do not have a username, enter your email address.</p>
-              <form class="forgotPasswordForm" action="./forgotPasswordConfirmation.html" name="forgotPasswordForm" id="forgotPasswordForm" novalidate>
-                <!-- Error messages start | hide or show this `div` for invalid username or password -->
-                <div class="form-errors">
-                  <div class="error-message"><img class="icon" src="./images/error.svg" alt="error-icon" width="18">Sorry, we don't recognize your username or password. Please try again.</div>
-                </div>
-                <!-- Error messages end -->
-                <div class="input-row">
-                  <div class="input-top">
-                    <label for="username">Username</label>
-                  </div>
-                  <input type="text" name="username" id="username" placeholder="Enter username" required />
-                  <div class="error-message">Error Message</div>
-                </div>
-                <p class="small-text">
-                  By clicking on login, you will accept our
-                  <a class="link-blue" href="https://myscore.cibil.com/CreditView/support.page?tab=terms&amp;subtab=terms&amp;enterprise=CIBIL">terms & conditions</a>
-                </p>
-                <button class="loginFlow-btn" id="loginFlow-btn">CONTINUE</button>
-              </form>
-              <div class="goBack"><a class="link-blue" href="./login.html"><img src="./images/go-back-icon.svg" alt="go back" class="icon"> GO BACK</a></div>
+              <h1 class="title"><span class="icon"><img src="./images/checkmark.svg"></span>Successfully submitted </h1>
+              <p class="subtitle">If your account is identified, you will be sent an email with your username.</p>
+              <a href="./login.html" class="loginFlow-btn" id="loginFlow-btn">RETURN TO MEMBER LOGIN</a>
             </div>
-            <p class="mhide footer-text" marginTop="136">
+            <p class="mhide footer-text" marginTop="0">
               © Copyright 2022 TransUnion CIBIL Limited<br>
 (Formerly: Credit Information Bureau (India) Limited). All Rights Reserved.
             </p>
