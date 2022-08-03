@@ -11,6 +11,7 @@
   @media (min-width: 1400px) {
     .container {
       max-width: 1220px;
+      width: 1220px;
     }
   }
   .hide-mob {
@@ -107,11 +108,11 @@
         .site-logo {
           width: 70.15px;
         }
-        .right-panel{
-            .login-text {
-                font-size: 14px;
-                line-height: 18px;
-              }
+        .right-panel {
+          .login-text {
+            font-size: 14px;
+            line-height: 18px;
+          }
         }
       }
     }
@@ -188,9 +189,9 @@
           width: 100%;
         }
         .banner-heading {
-          max-width: 345px;
-          margin-left: auto;
-          margin-right: auto;
+          max-width: 100%;
+          padding-left: 15px;
+          padding-right: 14px;
           margin-bottom: 20px;
         }
         .banner-subheading {
@@ -356,4 +357,236 @@
     }
   }
   /* features section end */
+
+  /* subscription plans section */
+  .subscription-plans-section {
+    background-color: #f6f7fc;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    &__wraper {
+      .section-heading {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        color: #2c2c2c;
+        margin-bottom: 40px;
+      }
+      .subscription-plans {
+        margin-bottom: 30px;
+        .subscription-plan {
+          width: calc(33.33% - 10px);
+          background: #ffffff;
+          box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.06);
+          &__header {
+            background: #00a6ca;
+            box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.06);
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+            padding: 17px 30px 13px;
+            .plan-name {
+              margin-bottom: 0px;
+            }
+          }
+          &__body {
+            padding-top: 24px;
+            padding-bottom: 30px;
+            .plan-price {
+              font-weight: 600;
+              font-size: 32px;
+              line-height: 44px;
+              text-align: center;
+              letter-spacing: -0.01em;
+              color: #000000;
+              margin-top: 0px;
+              margin-bottom: 16px;
+            }
+            .cibil-btn {
+              width: calc(100% - 60px);
+              margin: 0 auto 18px;
+              display: flex;
+            }
+            .price-details {
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 24px;
+              text-align: center;
+              color: #707070;
+              margin-bottom: 22px;
+            }
+            .highlighted-feature {
+              background: #fcf8e0;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              text-align: center;
+              letter-spacing: 0.02em;
+              color: #000000;
+              min-height: 88px;
+              padding: 20px;
+              margin-bottom: 30px;
+            }
+            ul.features,
+            .highlighted-feature,
+            .price-details,
+            .plan-price {
+              padding-left: 30px;
+              padding-right: 30px;
+            }
+            ul {
+              &.features {
+                li {
+                  &.feature {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    color: #000000;
+                    padding-left: 30px;
+                    margin-bottom: 0px;
+                    position: relative;
+                    &:before {
+                      content: "";
+                      position: absolute;
+                      width: 20px;
+                      height: 16px;
+                      background: url(/images/check-green.svg) no-repeat;
+                      background-size: 100%;
+                      background-position: center;
+                      left: 0;
+                      top: 5px;
+                    }
+                    &:not(:last-child) {
+                      margin-bottom: 24px;
+                    }
+                    b {
+                      font-weight: 600;
+                      &.highlight {
+                        position: relative;
+                        display: inline-block;
+                        z-index: 1;
+                        &:before {
+                          content: "";
+                          background-color: #fcd800;
+                          height: 4px;
+                          width: 100%;
+                          position: absolute;
+                          bottom: 5px;
+                          left: 0;
+                          z-index: -1;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &-cards {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .bottom-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #2c2c2c;
+        margin-bottom: 0px;
+      }
+    }
+    @media (max-width: 767.98px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &__wraper {
+        .section-heading {
+          font-weight: 700;
+          padding-left: 30px;
+          padding-right: 30px;
+          margin-bottom: 30px;
+        }
+        .bottom-text {
+          text-align: center;
+        }
+        .subscription-plans {
+          &-tabs {
+            .nav-tabs {
+              border-bottom: none;
+              display: flex;
+              justify-content: space-between;
+              .nav-item {
+                background: #ffffff;
+                border-width: 0px 2px 2px 0px;
+                border-style: solid;
+                border-color: #ededed;
+                padding: 20px 11px 12px 12px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 30px;
+                text-align: center;
+                letter-spacing: 0.02em;
+                color: #2c2c2c;
+                width: 100%;
+                &:last-child {
+                  border-right-width: 0px;
+                }
+                &.active {
+                  background: #00a6ca;
+                  color: #ffffff;
+                  border-color: #00a6ca;
+                  position: relative;
+                  &:after {
+                    content: url(../images/active-tab-icon.svg);
+                    position: absolute;
+                    left: calc(50% - 6px);
+                    bottom: -12px;
+                  }
+                }
+              }
+            }
+            .subscription-plan__body {
+              background: #ffffff;
+              padding-top: 20px;
+              .plan-price {
+                margin-bottom: 10px;
+              }
+              .cibil-btn {
+                width: calc(100% - 40px);
+                margin-bottom: 10px;
+              }
+              .price-details,
+              .highlighted-feature {
+                margin-bottom: 20px;
+              }
+              ul {
+                &.features {
+                  li {
+                    &.feature {
+                      b {
+                        &.highlight {
+                          &:before {
+                            bottom: 3px;
+                            height: 2px;
+                          }
+                        }
+                      }
+                      &:not(:last-child) {
+                        margin-bottom: 16px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
