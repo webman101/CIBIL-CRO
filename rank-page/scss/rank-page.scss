@@ -276,17 +276,22 @@
       }
     }
     @media (max-width: 767.98px) {
-      padding-top: 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
       &__wraper {
         .section-heading {
           font-weight: 700;
           padding-left: 30px;
           padding-right: 30px;
+          margin-bottom: 30px;
         }
         .features-list {
           .feature {
             padding: 16px 16px 12px 16px;
             font-size: 16px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
             .icon {
               width: 44px;
             }
