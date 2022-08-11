@@ -682,7 +682,6 @@
                                                                 <tr valign="top" class="progress-completed progress-end">
                                                                     <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
                                                                         <div class="marker-rounded"></div>
-                                                                        <div class="progress-line"></div>
                                                                     </td>
                                                                     <td class="spacing-bottom">
                                                                         <p class="date">01-May-2022</p>
@@ -930,7 +929,6 @@
                                                                 <tr valign="top" class="progress-end">
                                                                     <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
                                                                         <div class="marker-rounded"></div>
-                                                                        <div class="progress-line"></div>
                                                                     </td>
                                                                     <td class="spacing-bottom">
                                                                         <p class="title">Dispute marked as resolved</p>
@@ -1031,7 +1029,11 @@
                                                             <table class="timeline-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
                                                                 <tr valign="top" class="progress-completed">
                                                                     <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
-                                                                        <div class="marker-rounded"></div>
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #3BB012;"></td>
+                                                                            </tr>
+                                                                        </table>
                                                                         <div class="progress-line"></div>
                                                                     </td>
                                                                     <td class="spacing-bottom">
@@ -1041,7 +1043,11 @@
                                                                 </tr>
                                                                 <tr valign="top" class="progress-completed">
                                                                     <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
-                                                                        <div class="marker-rounded"></div>
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #3BB012;"></td>
+                                                                            </tr>
+                                                                        </table>
                                                                         <div class="progress-line"></div>
                                                                     </td>
                                                                     <td class="spacing-bottom">
@@ -1049,52 +1055,32 @@
                                                                         <p class="title">Dispute Assigned to ICICI Bank</p>
                                                                         <p class="reminders-title">(Last 10 reminders)</p>
                                                                         <table class="reminder-list" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;padding-top: 1px;">
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 2<span class="colon">:</span>22-Mar-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 3<span class="colon">:</span>26-Mar-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 4<span class="colon">:</span>31-Mar-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 5<span class="colon">:</span>01-Apr-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 6<span class="colon">:</span>07-Apr-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 7<span class="colon">:</span>14-Apr-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 8<span class="colon">:</span>21-Apr-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 9<span class="colon">:</span>25-Apr-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 10<span class="colon">:</span>28-Apr-2022</td>
-                                                                            </tr>
-                                                                            <tr class="reminder">
-                                                                                <td class="dot"><span></span></td>
-                                                                                <td>Reminder 11<span class="colon">:</span>30-Apr-2022</td>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <ul class="reminder" style="margin-top: 0px;margin-bottom: 0px;">
+                                                                                        <li>Reminder 2    :   22-Mar-2022</li>
+                                                                                        <li>Reminder 3    :   26-Mar-2022</li>
+                                                                                        <li>Reminder 4    :   31-Mar-2022</li>
+                                                                                        <li>Reminder 5    :   01-Apr-2022</li>
+                                                                                        <li>Reminder 6    :   07-Apr-2022</li>
+                                                                                        <li>Reminder 7    :   14-Apr-2022</li>
+                                                                                        <li>Reminder 8    :   21-Apr-2022</li>
+                                                                                        <li>Reminder 9    :   25-Apr-2022</li>
+                                                                                        <li>Reminder 10  :   28-Apr-2022</li>
+                                                                                        <li>Reminder 11  :   30-Apr-2022</li>
+                                                                                    </ul>
+                                                                                </td>
                                                                             </tr>
                                                                         </table>
                                                                     </td>
                                                                 </tr>
                                                                 <tr valign="top">
                                                                     <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
-                                                                        <div class="marker-rounded"></div>
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #ACACAC;"></td>
+                                                                            </tr>
+                                                                        </table>
                                                                         <div class="progress-line"></div>
                                                                     </td>
                                                                     <td class="spacing-bottom">
@@ -1103,7 +1089,11 @@
                                                                 </tr>
                                                                 <tr valign="top" class="progress-end">
                                                                     <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
-                                                                        <div class="marker-rounded"></div>
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #ACACAC;"></td>
+                                                                            </tr>
+                                                                        </table>
                                                                         <div class="progress-line"></div>
                                                                     </td>
                                                                     <td class="spacing-bottom">
