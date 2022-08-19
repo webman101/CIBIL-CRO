@@ -36,9 +36,5 @@ $(document).ready(function () {
     passwordResetForm.submit();
   });
 
-  /* display form errors | Use this code to display form errors */
-  // $(".from-errors" ).show("fast");
-  /* show form errors | end */
-
   /* validation end */
 });
