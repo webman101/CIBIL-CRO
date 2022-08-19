@@ -599,7 +599,7 @@
               }
               .loginFlow-btn {
                 max-width: 310px;
-                margin: 29px auto;
+                margin: 30px auto;
               }
               .subtitle {
                 margin: auto;
@@ -611,6 +611,41 @@
         .footer-text {
           position: absolute;
           bottom: 0;
+          width: 100%;
+        }
+      }
+    }
+    .linkExpired {
+      .loginFlow-success-section__wraper {
+        .right-panel-content {
+          .subtitle {
+            max-width: 100%;
+          }
+        }
+      }
+      @media (max-width: 992px){
+        .loginFlow-success-section__wraper{
+          .right-panel-content{
+            .loginFlow-btn{
+              max-width: 374px;
+            }
+          }
+        }
+      }
+      @media (max-width: 576px) {
+        .loginFlow-success-section__wraper {
+          .right-panel-content {
+            .subtitle {
+              padding-left: 20px;
+              padding-right: 20px;
+              br {
+                display: none;
+              }
+            }
+            .loginFlow-btn{
+              max-width: 100%;
+            }
+          }
         }
       }
     }
