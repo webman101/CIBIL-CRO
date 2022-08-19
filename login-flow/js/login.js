@@ -68,8 +68,10 @@ loginForm.addEventListener('submit',function(e) {
   checkValidations([ {"field":username, "message":usernameErrorMessage},{"field":password, "message":passwordErrorMessage} ]);
 });
 
-/* display form errors | Use this code to display form errors */
-  // $(".from-errors" ).show("fast");
+/* display form messages | Use this code to display form messages */
+
+  //$(".form-message.success-message" ).css("display","flex");
+  //$(".form-message.error-message" ).css("display","flex");
 /* show form errors | end */
 
 /* validation end */
