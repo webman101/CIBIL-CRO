@@ -49,9 +49,10 @@ async function saveData() {
   console.log("csrfToken", data.ud.ResponseDetails.csrfToken)
 
   // use token to save email
+  let input_name = name.value.trim() != '' ? "&tl.first-name="+ name.value : "";
   let config2 = {
       method: "POST",
-      body: "visitToken="+data.ud.ResponseDetails.visitToken+"&requestToken=+"+data.ud.ResponseDetails.csrfToken+"+&tl.email-address="+ email.value + name.value.trim() != '' ? "&tl.first-name="+ name.value : "" +"&DestinationPage=mobile/redirect1_0",
+      body: "visitToken="+data.ud.ResponseDetails.visitToken+"&requestToken=+"+data.ud.ResponseDetails.csrfToken+"+&tl.email-address="+ email.value + input_name +"&DestinationPage=mobile/redirect1_0",
       headers: {
           "Content-Type": "application/json"
       }
