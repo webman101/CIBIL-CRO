@@ -45,8 +45,28 @@
     color: #2c2c2c;
     text-decoration: none !important;
     outline: none !important;
+    &-orange {
+      background-color: #f16e00;
+    }
   }
-  //carousel & score bar
+  .hide-mob {
+    @media (max-width: 992px) {
+      display: none !important;
+    }
+  }
+  .hide-desk {
+    display: none;
+    @media (max-width: 992px) {
+      display: block;
+    }
+  }
+  .remove-psudo {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  // carousel & score bar
   .carousel-section {
     &__wraper {
       display: flex;
@@ -262,14 +282,18 @@
       &__wraper {
         .left-side {
           width: 55%;
-          &:before{
-            content: '';
+          &:before {
+            content: "";
             width: 100%;
             height: 118px;
             position: absolute;
             left: 0;
             bottom: 0;
-            background: linear-gradient(360deg, #fcd800 30%, rgba(252, 216, 0, 0) 100%);
+            background: linear-gradient(
+              360deg,
+              #fcd800 30%,
+              rgba(252, 216, 0, 0) 100%
+            );
             z-index: 1;
           }
         }
@@ -380,7 +404,7 @@
         }
         .left-side {
           padding-top: 110px;
-          &:before{
+          &:before {
             height: 85px;
           }
         }
@@ -396,7 +420,7 @@
       }
     }
   }
-  //CTA
+  // CTA
   .cta-section {
     background: #00a6ca;
     padding-top: 50px;
@@ -417,24 +441,355 @@
         line-height: 24px;
         margin-bottom: 20px;
       }
-      .cibil-btn{
+      .cibil-btn {
         min-width: 300px;
       }
     }
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       padding-top: 40px;
       padding-bottom: 40px;
-      &__wraper{
-        .heading{
+      &__wraper {
+        .heading {
           margin-bottom: 20px;
           padding-left: 5px;
           padding-right: 5px;
         }
-        .subheading{
+        .subheading {
           margin-bottom: 30px;
           padding-left: 46px;
           padding-right: 46px;
           font-weight: 400;
+        }
+      }
+    }
+  }
+  .bottom-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2c2c2c;
+    max-width: 760px;
+    margin: 60px auto 0px;
+  }
+  // subscription plans section
+  .subscription-plans-section {
+    background-color: #f6f7fc;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    &__wraper {
+      display: flex;
+      justify-content: space-between;
+      .subscription-features {
+        position: relative;
+        &__wraper {
+          background: #ffffff;
+          border: 1px solid #dde0ef;
+          border-radius: 8px;
+          padding: 30px 30px 0px;
+          margin-top: 30px;
+          min-height: calc(100% - 99px);
+          .heading {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #00a6ca;
+            margin-bottom: 20px;
+          }
+          .subheading {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #2c2c2c;
+            margin-bottom: 30px;
+          }
+          .features {
+            .feature {
+              margin-bottom: 0px;
+              border-top: 1px solid #dddddd;
+              padding: 15px 0;
+              display: flex;
+              align-items: center;
+              .icon {
+                margin-right: 25px;
+              }
+              .desc {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                color: #2c2c2c;
+                margin-bottom: 0px;
+                max-width: 393px;
+                b {
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+      .subscription-features,
+      .subscription-plans {
+        width: calc(50% - 10px);
+      }
+      .subscription-plans {
+        .subscription-plan {
+          width: calc(33.33% - 10px);
+          color: #2c2c2c;
+          &__wraper {
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            overflow: hidden;
+          }
+          &__header {
+            text-align: center;
+            letter-spacing: 0.02em;
+            p {
+              margin-bottom: 0;
+            }
+            .save {
+              background: #fcd800;
+              padding: 4px 30px 2px;
+            }
+            .save,
+            .tag {
+              font-size: 14px;
+              line-height: 24px;
+            }
+            .tag {
+              background: #00a6ca;
+              padding: 5px 30px 1px;
+              font-weight: 600;
+              color: #ffffff;
+            }
+            .plan-name,
+            .price {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #707070;
+              padding: 0px 30px;
+            }
+            .plan-name {
+              margin: 20px 0px 10px;
+            }
+            .plan-duration {
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 30px;
+              margin: 10px 0;
+            }
+            .price {
+              margin: 10px 0 28px;
+              font-weight: 600;
+            }
+          }
+          &__body {
+            padding-left: 30px;
+            padding-right: 30px;
+            .features {
+              padding-left: 0px;
+              margin-bottom: 0px;
+              .feature {
+                margin-bottom: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 31px 0 33px;
+                border-top: 1px solid #ededed;
+                max-height: 79px;
+              }
+            }
+          }
+          &__footer {
+            background: #f9f9f9;
+            padding: 8px 30px 7px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #707070;
+          }
+          .cibil-btn {
+            margin-top: 19px;
+            width: 100%;
+            min-width: 100%;
+          }
+          &.recommended {
+            .subscription-plan__wraper {
+              border-color: #00a6ca;
+            }
+          }
+          &.no-tags {
+            .subscription-plan__header {
+              .plan-name {
+                margin-top: 50px;
+              }
+            }
+          }
+        }
+        &-cards {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &__wraper {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        .subscription-plans,
+        .subscription-features {
+          width: 100%;
+        }
+        .subscription-features {
+          padding-left: 20px;
+          padding-right: 20px;
+          &__wraper {
+            margin-top: 0px;
+            background: transparent;
+            border: none;
+            text-align: center;
+            padding: 0;
+            min-height: 1px;
+            .subheading {
+              margin-bottom: 50px;
+            }
+            .features {
+              display: none;
+            }
+          }
+        }
+        .subscription-plans {
+          &-tabs {
+            .nav-tabs {
+              border-bottom: none;
+              display: flex;
+              justify-content: space-between;
+              .nav-item {
+                background: #f9f9f9;
+                border-width: 1px;
+                border-style: solid;
+                border-color: #acacac;
+                padding: 15px 14px 34px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: left;
+                letter-spacing: 0.02em;
+                color: #2c2c2c;
+                width: 100%;
+                position: relative;
+                &:last-child {
+                  border-right-width: 0px;
+                }
+                &:first-child {
+                  border-left-width: 0px;
+                }
+                &.active {
+                  background: #fff;
+                  position: relative;
+                  border-bottom-width: 0px;
+                }
+                .plan-name {
+                  font-weight: 600;
+                  color: #707070;
+                  text-transform: capitalize;
+                  margin-bottom: 5px;
+                }
+                .plan-duration {
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  color: #333333;
+                  margin-bottom: 10px;
+                }
+                .price {
+                  margin-bottom: 0px;
+                }
+                .save {
+                  background: #fcd800;
+                  display: inline-flex;
+                  margin-bottom: 0px;
+                  height: 24px;
+                  padding: 0 10px;
+                  align-items: center;
+                  justify-content: center;
+                  position: absolute;
+                  left: 0px;
+                  bottom: 0px;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 24px;
+                }
+                .tag {
+                  background: #00a6ca;
+                  position: absolute;
+                  height: 30px;
+                  width: calc(100% + 2px);
+                  left: -1px;
+                  top: -31px;
+                  font-size: 14px;
+                  line-height: 24px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #ffffff;
+                  border-top-right-radius: 8px;
+                  border-top-left-radius: 8px;
+                }
+              }
+            }
+            .subscription-plan__body {
+              text-align: center;
+              background: #ffffff;
+              padding: 20px 20px 16px;
+              .cibil-btn {
+                width: calc(100% - 13px);
+                margin-bottom: 40px;
+              }
+              .subheading {
+                font-size: 16px;
+                line-height: 24px;
+                text-align: left;
+                font-weight: 600;
+                margin-bottom: 23px;
+              }
+              .features {
+                .feature {
+                  border: none;
+                  text-align: left;
+                  align-items: center;
+                  min-height: 1px;
+                  max-height: 100%;
+                  margin-bottom: 0px;
+                  justify-content: flex-start;
+                  column-gap: 15px;
+                  padding: 0;
+                  &:not(:last-child) {
+                    margin-bottom: 20px;
+                  }
+                  .icon {
+                    width: 20px;
+                  }
+                  .desc {
+                    margin-bottom: 0px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    max-width: calc(100% - 35px);
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
