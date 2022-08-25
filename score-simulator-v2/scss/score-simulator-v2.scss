@@ -292,20 +292,6 @@
       &__wraper {
         .left-side {
           width: 55%;
-          &:before {
-            content: "";
-            width: 100%;
-            height: 118px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background: linear-gradient(
-              360deg,
-              #fcd800 30%,
-              rgba(252, 216, 0, 0) 100%
-            );
-            z-index: 1;
-          }
         }
         .right-side {
           width: 45%;
@@ -360,6 +346,20 @@
             #fcd800 0%,
             rgba(252, 216, 0, 0) 105.36%
           );
+          &:before {
+            content: "";
+            width: 100%;
+            height: 118px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(
+              360deg,
+              #fcd800 30%,
+              rgba(252, 216, 0, 0) 100%
+            );
+            z-index: 1;
+          }
           .queries-carousel {
             max-height: 170px;
             .query {
