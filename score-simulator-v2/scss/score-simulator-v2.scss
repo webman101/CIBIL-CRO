@@ -1,4 +1,5 @@
 .score-simulator-page-v2 {
+  //base
   .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -26,6 +27,26 @@
       outline: none !important;
     }
   }
+  .cibil-btn {
+    height: 50px;
+    background: #fcd800;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 19px 20px 15px;
+    min-width: 180px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    text-decoration: none !important;
+    outline: none !important;
+  }
+  //carousel & score bar
   .carousel-section {
     &__wraper {
       display: flex;
@@ -38,7 +59,7 @@
           overflow: hidden;
           position: relative;
           width: 100%;
-          /* &:before,
+          &:before,
           &:after {
             content: "";
             height: 25%;
@@ -62,7 +83,7 @@
               rgba(255, 255, 255, 0) 0%,
               #ffffff 100%
             );
-          } */
+          }
           .slick-list {
             background-image: url(../images/active-query.svg);
             background-repeat: no-repeat;
@@ -110,7 +131,7 @@
                 transform-origin: left bottom;
                 position: relative;
               }
-              .query__text {
+              /* .query__text {
                 background: linear-gradient(
                   360deg,
                   #acacac 16.67%,
@@ -120,14 +141,14 @@
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 text-fill-color: transparent;
-              }
+              } */
             }
             &-next {
               .query__wraper {
                 align-items: flex-start;
                 transform-origin: left top;
               }
-              .query__text {
+              /* .query__text {
                 background: linear-gradient(
                   180deg,
                   #000000 -81.25%,
@@ -137,7 +158,7 @@
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 text-fill-color: transparent;
-              }
+              } */
             }
             &-current {
               .query__wraper {
@@ -241,6 +262,16 @@
       &__wraper {
         .left-side {
           width: 55%;
+          &:before{
+            content: '';
+            width: 100%;
+            height: 118px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(360deg, #fcd800 30%, rgba(252, 216, 0, 0) 100%);
+            z-index: 1;
+          }
         }
         .right-side {
           width: 45%;
@@ -306,6 +337,7 @@
               }
               &__text {
                 text-align: center;
+                color: #2c2c2c;
               }
               &-current {
                 .query__wraper {
@@ -341,22 +373,68 @@
         }
       }
     }
-    @media(max-width:576px){
-      &__wraper{
-        &:before{
+    @media (max-width: 576px) {
+      &__wraper {
+        &:before {
           height: 325px;
         }
-        .left-side{
+        .left-side {
           padding-top: 110px;
+          &:before{
+            height: 85px;
+          }
         }
       }
     }
-    @media(max-width:395px){
-      &__wraper{
-        .left-side{
-          .queries-carousel{
+    @media (max-width: 395px) {
+      &__wraper {
+        .left-side {
+          .queries-carousel {
             max-height: 190px;
           }
+        }
+      }
+    }
+  }
+  //CTA
+  .cta-section {
+    background: #00a6ca;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__wraper {
+      text-align: center;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+      .heading {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+      .subheading {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+      .cibil-btn{
+        min-width: 300px;
+      }
+    }
+    @media (max-width: 768px){
+      padding-top: 40px;
+      padding-bottom: 40px;
+      &__wraper{
+        .heading{
+          margin-bottom: 20px;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        .subheading{
+          margin-bottom: 30px;
+          padding-left: 46px;
+          padding-right: 46px;
+          font-weight: 400;
         }
       }
     }

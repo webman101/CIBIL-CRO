@@ -6,6 +6,7 @@ var slickOptions = {
   slidesToScroll: 1,
   centerMode: true,
   initialSlide: 1,
+  speed: 400,
   autoplay: true,
   autoplaySpeed: 2000,
   arrows: false,
