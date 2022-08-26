@@ -34,7 +34,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 19px 20px 15px;
+    padding: 17px 20px;
     min-width: 180px;
     font-weight: 600;
     font-size: 16px;
@@ -57,7 +57,7 @@
   .hide-desk {
     display: none;
     @media (max-width: 992px) {
-      display: block;
+      display: block !important;
     }
   }
   .remove-psudo {
@@ -75,6 +75,9 @@
     color: #2c2c2c;
     max-width: 760px;
     margin: 60px auto 0px;
+    @media(max-width:992px){
+      margin-top: 40px;
+    }
   }
   // carousel & score bar
   .carousel-section {
@@ -503,31 +506,13 @@
       .right-side {
         width: 52%;
         .gif-container {
-          background-color: #fff;
           overflow: hidden;
           width: 100%;
-          height: 421px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           position: relative;
-          border-radius: 20px;
-          &:before {
-            content: "";
-            background-image: url(../images/tablet-screen.svg);
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 101%;
-            position: absolute;
-            left: 0;
-            top: 0;
-          }
         }
       }
     }
-    @media (min-width: 992px) {
+    @media (min-width: 992.5px) {
       background-image: url(../images/circles-bg.svg);
       background-repeat: no-repeat;
       background-position: right center;
@@ -545,23 +530,88 @@
       &__wraper {
         z-index: 2;
         position: relative;
+        .right-side {
+          .gif-container {
+            &:before {
+              content: "";
+              background-color: #fff;
+              background-image: url(../images/screen1.png);
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              position: absolute;
+              left: 18px;
+              top: 19px;
+              height: calc(100% - 38px);
+              width: calc(100% - 37px);
+              border-radius: 6px;
+            }
+            .device{
+              width: 100%;
+            }
+          }
+        }
       }
     }
     @media (max-width: 992px) {
       padding-top: 40px;
       padding-bottom: 0px;
       &__wraper {
+        padding-left: 0px;
+        padding-right: 0px;
         flex-direction: column;
         .left-side {
+          padding-left: 20px;
+          padding-right: 20px;
           text-align: center;
           .heading {
             font-size: 20px;
             margin-bottom: 20px;
+            padding-left: 32px;
+            padding-right: 32px;
           }
         }
         .left-side,
         .right-side {
           width: 100%;
+        }
+        .right-side {
+          background-image: url(../images/blured-bg.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center top;
+          .gif-container {
+            max-width: 272px;
+            margin: auto;
+            align-items: flex-end;
+            justify-content: center;
+            height: auto;
+            padding-top: 35px;
+            &.hide-desk {
+              display: flex !important;
+            }
+            &:before {
+              content: "";
+              background-color: #fff;
+              background-image: url(../images/placeholder-mob.png);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              height: calc(100% - 45px);
+              width: calc(100% - 36px);
+              position: absolute;
+              left: 18px;
+              bottom: 0;
+              z-index: 1;
+              border-top-left-radius: 40px;
+              border-top-right-radius: 40px;
+            }
+            .device {
+              width: 100%;
+              position: relative;
+              z-index: 2;
+            }
+          }
         }
       }
     }
