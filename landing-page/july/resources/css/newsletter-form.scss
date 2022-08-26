@@ -29,6 +29,7 @@
       transition: background-color 5000s ease-in-out 0s;
     }
     .button-yellow1 {
+      position: relative;
       background-color: #fcd800;
       font-weight: 700;
       font-size: 16px;
@@ -138,6 +139,48 @@
       }
     }
   }
+
+  .newsletter-loader{
+    width: 55px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+
+  .success-message{
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+    color: #3BB012;
+  }
+
+  .newsletter-subscribe-button{
+    & ~ .error-message{
+      display: none;
+      color: red;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &.success{
+      & + .success-message{
+        display: block;
+      }
+    }
+    &.error{
+      & ~ .error-message{
+        display: block;
+      }
+    }
+    &.loading{
+      color: transparent;
+      .newsletter-loader{
+        display: block;
+      }
+    }
+  }
+
   @media (min-width: 992px) {
     .dhide {
       display: none;
