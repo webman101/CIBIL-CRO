@@ -56,7 +56,7 @@ async function saveData() {
       method: "POST",
       body: `tl.email-address=${email.value}${input_name}&requestToken=${data.ud.ResponseDetails.csrfToken}&visitToken=${data.ud.ResponseDetails.visitToken}`,
       headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/x-www-form-urlencoded"
       }
   }
   console.log(config2)
