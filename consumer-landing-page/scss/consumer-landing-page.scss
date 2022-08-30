@@ -1,0 +1,112 @@
+.consumer-landing-page {
+  //base
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    @media (min-width: 1400px) {
+      max-width: 1120px;
+    }
+  }
+  .highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    &:before {
+      content: "";
+      z-index: -1;
+      height: 3px;
+      width: 100%;
+      background: #fcd800;
+      position: absolute;
+      left: 0;
+      bottom: 5px;
+    }
+  }
+  div {
+    &:focus-visible {
+      outline: none !important;
+    }
+  }
+  .cibil-btn {
+    height: 50px;
+    display: inline-flex;
+    background: #fcd800;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 40px;
+    min-width: 180px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    text-decoration: none !important;
+    outline: none !important;
+    &-orange {
+      background-color: #f16e00;
+    }
+  }
+  .hide-mob {
+    @media (max-width: 992px) {
+      display: none !important;
+    }
+  }
+  .hide-desk {
+    display: none;
+    @media (max-width: 992px) {
+      display: block !important;
+    }
+  }
+  .remove-psudo {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  .banner1-section {
+    background-image: url(../images/desktop-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    &__wraper {
+      .heading {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        letter-spacing: -0.01em;
+        color: #2c2c2c;
+        max-width: 473px;
+        margin-bottom: 30px;
+      }
+      .cibil-btn{
+        min-width: 401px;
+      }
+    }
+    @media(max-width:992px){
+      background-image: url(../images/mobile-banner.jpg);
+      background-position: center bottom;
+      align-items: flex-start;
+      min-height: 586px;
+      &__wraper{
+        text-align: center;
+        padding-bottom: 290px;
+        .heading{
+          margin-top: 40px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    @media(max-width:576px){
+      .cibil-btn{
+        min-width: auto;
+        width: 100%;
+      }
+    }
+  }
+}
