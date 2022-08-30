@@ -535,7 +535,7 @@
             &:before {
               content: "";
               background-color: #fff;
-              background-image: url(../images/screen1.png);
+              background-image: url(../images/desktop-gif.gif);
               background-size: contain;
               background-repeat: no-repeat;
               background-position: center;
@@ -581,7 +581,7 @@
           background-size: cover;
           background-position: center top;
           .gif-container {
-            max-width: 272px;
+            max-width: 254px;
             margin: auto;
             align-items: flex-end;
             justify-content: center;
@@ -593,14 +593,14 @@
             &:before {
               content: "";
               background-color: #fff;
-              background-image: url(../images/placeholder-mob.png);
+              background-image: url(../images/mobile-gif.gif);
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
               height: calc(100% - 45px);
-              width: calc(100% - 36px);
+              width: calc(100% - 18px);
               position: absolute;
-              left: 18px;
+              left: 9px;
               bottom: 0;
               z-index: 1;
               border-top-left-radius: 40px;
