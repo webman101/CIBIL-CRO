@@ -4,7 +4,8 @@
     padding-left: 20px;
     padding-right: 20px;
     @media (min-width: 1400px) {
-      max-width: 1120px;
+      max-width: 1240px;
+      width: 1220px;
     }
   }
   .highlight {
@@ -65,7 +66,22 @@
       display: none;
     }
   }
-  .banner1-section {
+  .heading {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.01em;
+    color: #2c2c2c;
+  }
+  .desc {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #2c2c2c;
+  }
+  .banner-section {
     background-image: url(../images/desktop-banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,37 +91,164 @@
     align-items: center;
     &__wraper {
       .heading {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 44px;
-        letter-spacing: -0.01em;
-        color: #2c2c2c;
         max-width: 473px;
         margin-bottom: 30px;
       }
-      .cibil-btn{
+      .cibil-btn {
         min-width: 401px;
       }
     }
-    @media(max-width:992px){
+    @media (max-width: 992px) {
       background-image: url(../images/mobile-banner.jpg);
       background-position: center bottom;
       align-items: flex-start;
       min-height: 586px;
-      &__wraper{
+      &__wraper {
         text-align: center;
         padding-bottom: 290px;
-        .heading{
+        .heading {
           margin-top: 40px;
           margin-left: auto;
           margin-right: auto;
         }
       }
     }
-    @media(max-width:576px){
-      .cibil-btn{
+    @media (max-width: 576px) {
+      .cibil-btn {
         min-width: auto;
         width: 100%;
+      }
+    }
+  }
+  .note {
+    background-color: #fbf1c5;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #006685;
+    b {
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 0;
+      text-align: left;
+    }
+    .icon {
+      margin-right: 10px;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 768px) {
+      .container {
+        align-items: flex-start;
+      }
+    }
+  }
+  .video-section {
+    &__wraper {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      .heading {
+        max-width: 278px;
+        margin-bottom: 20px;
+      }
+      .left-side{
+        .desc{
+          margin-bottom: 0px;
+        }
+      }
+      .right-side {
+        button.vjs-big-play-button {
+          top: calc(50% - 32px);
+          left: calc(50% - 32px);
+          width: 64px;
+          height: 64px;
+          background: none;
+          padding: 0;
+          border: none;
+          border-radius: 0;
+        }
+        .cibil-video-dimensions {
+          width: 100%;
+        }
+        .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+          content: url(../images/play-icon.svg);
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      &__wraper {
+        display: flex;
+        justify-content: space-between;
+        .left-side {
+          width: calc(40% - 25px);
+        }
+        .right-side {
+          width: calc(60% - 25px);
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      &__wraper {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .heading {
+          max-width: calc(100% - 100px);
+          margin: 0px auto 20px;
+          text-align: center;
+        }
+        .desc{
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  .features-slider-section{
+    background-color: #F9F9F9;
+    &__wraper{
+      .cibil-btn{
+        min-width: 100%;
+      }
+    }
+    @media(min-width:992px){
+      &__wraper{
+        padding-top: 60px;
+        padding-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+        .heading{
+          max-width: 300px;
+        }
+        .left-side{
+          width: calc(34% - 10px);
+        }
+        .right-side{
+          width: calc(66% - 10px);
+        }
+      }
+    }
+    @media(max-width:992px){
+      &__wraper{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .left-side{
+          text-align: center;
+          .heading{
+            max-width: calc(100% - 76px);
+            margin: 0px auto 20px;
+          }
+          .desc{
+            text-align: center;
+            margin-bottom: 30px;
+          }
+        }
       }
     }
   }

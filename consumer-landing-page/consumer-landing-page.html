@@ -15,31 +15,89 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/slick.css" />
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/consumer-landing-page.css" />
   </head>
 
   <body>
     <div class="consumer-landing-page">
         <!-- banner section | start -->
-        <div class="banner1-section">
-          <div class="container banner1-section__wraper">
+        <div class="banner-section">
+          <div class="container banner-section__wraper">
             <p class="heading">Prepare yourself for a promising journey ahead with your CIBIL Score & Report.</p>
             <a href="#" class="cibil-btn cibil-btn-orange">SUBSCRIBE NOW</a>
           </div>
         </div>
         <!-- banner section | end -->
         <!-- note | start -->
-        <div class="container note">
-          <img src="./images/note-icon.svg">
-          Did you know? Banks check your CIBIL Score before approving your loan.
+        <div class="note">
+          <div class="container">
+            <img class="icon" src="./images/note-icon.svg">
+            <p><b>Did you know?</b> Banks check your CIBIL Score before approving your loan.</p>
+          </div>
         </div>
         <!-- note | end -->
+        <!-- video section | start -->
+        <div class="video-section">
+          <div class="container remove-psudo video-section__wraper">
+            <div class="left-side">
+              <p class="heading">What is CIBIL Score & Report?</p>
+              <p class="desc hide-mob">Your CIBIL score is 3-digit number that indicates your creditworthiness and demonstrates your ability to repay a loan. It is derived using the credit history found in your CIBIL report.
+                <br><br>
+                Your CIBIL report is a record of your financial history compiled from information received from banks and financial institutions. It includes credit enquiries, open and closed credit accounts, personal & employment information and your payment history.
+                <br><br>
+                Check your latest CIBIL Score & Report on the 
+                CIBIL Dashboard.</p>
+            </div>
+            <div class="right-side">
+              <video
+              id="cibil-video"
+              class="video-js"
+              controls
+              preload="auto"
+              width="680"
+              height="380"
+              poster="./images/thumbnail.png"
+              data-setup="{}"
+            >
+              <source src="./videos/CIBIL Dashboard-2.mp4" type="video/mp4" />
+              <source src="MY_VIDEO.webm" type="video/webm" />
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                  >supports HTML5 video</a
+                >
+              </p>
+            </video>
+            <p class="desc hide-desk">Your CIBIL score is 3-digit number that indicates your creditworthiness and demonstrates your ability to repay a loan. It is derived using the credit history found in your CIBIL report.
+              <br><br>
+              Your CIBIL report is a record of your financial history compiled from information received from banks and financial institutions. It includes credit enquiries, open and closed credit accounts, personal & employment information and your payment history.
+              <br><br>
+              Check your latest CIBIL Score & Report on the 
+              CIBIL Dashboard.</p>
+            </div>
+          </div>
+        </div>
+        <!-- video section | end -->
+        <!-- features slider | start -->
+        <div class="features-slider-section">
+          <div class="container remove-psudo features-slider-section__wraper">
+            <div class="left-side">
+              <p class="heading">What is in your CIBIL Dashboard?</p>
+              <p class="desc">CIBIL Dashboard brings a wide range of features in one place to help you track your credit health and stay credit ready.</p>
+              <a href="#" class="cibil-btn cibil-btn-orange">SUBSCRIBE NOW</a>
+            </div>
+          </div>
+        </div>
+        <!-- features slider | end -->
     </div>
 
     <script src="https://assets.transunion.com/resources/js/lib/min/jquery.min.js"></script>
     <script src="https://assets.transunion.com/resources/js/lib/min/bootstrap.min.js"></script>
     
     <script src="./js/slick.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
     <script src="./js/consumer-landing-page.js"></script>
   </body>
 </html>
