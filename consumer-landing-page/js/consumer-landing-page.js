@@ -31,6 +31,7 @@ $(".blogs-slider").slick(slickOptions);
 let dropdown = $('.js-dropdown');
 let list = $('.js-dropdown-list');
 let link = $('.js-link');
+let icon = '<img src="./images/down-arrow-white.svg" alt="" class="icon">';
 link.click(function(e) {
   e.preventDefault();
   list.slideToggle(200);
@@ -39,7 +40,8 @@ link.click(function(e) {
 list.find('li').click(function() {
   let text = $(this).html();
   let planLink = $(this).attr('data-link');
-  link.html(text);
+  link.html(text+icon);
+  $(this).parents().eq(1).toggleClass("open");
   dropdown.next().attr("href", planLink);
   list.slideToggle(200);
   console.log(planLink);
