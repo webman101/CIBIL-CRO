@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">
+    <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title>
+    <!--[if mso]>
+        <style>
+            * { font-family: 'Roboto', sans-serif; !important; }
+        </style>
+    <![endif]-->
+    <!--[if !mso]><!-->
+    <!-- Insert font reference, e.g. <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> -->
+    <!--<![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        html,
+        body,
+        .document {
+            width: 100% !important;
+            height: 100% !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin: 0 auto;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%;
+            border: 0;
+        }
+
+        *[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        .x-gmail-data-detectors,
+        .x-gmail-data-detectors *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+        }
+
+        .btn {
+            -webkit-transition: all 200ms ease;
+            transition: all 200ms ease;
+        }
+
+        .btn:hover {
+            background-color: dodgerblue;
+        }
+
+        @media screen and (max-width: 750px) {
+            .container {
+                width: 100%;
+                margin: auto;
+            }
+
+            .stack {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .links{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            text-decoration-line: underline;
+            color: #2C2C2C !important;
+        }
+        .blue-link{
+            color:#006685 !important;
+            font-weight: 500;
+            text-decoration: underline !important;
+        }
+        .section-heading{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #2C2C2C;
+        }
+        .date{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #707070;
+        }
+        .status-box{
+            margin: 0px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #ffffff;
+            text-align: center;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            display: inline-block;
+            text-align: right;
+        }
+        .status-box img{
+            margin-right: 6px;
+            display: none;
+            width: 12px;
+            height: 12px;
+        }
+        .status-box.processing{
+            background-color: #FCE2CC;
+            color: #F16E00;
+        }
+        .status-box.resolved{
+            background-color: #DDEDC0;
+            color: #3BB012;
+        }
+        .status-box.resolved img{
+            display: inline-block;
+        }
+        .dispute-box .dispute-block p, .dispute-timeline p{
+            margin: 0px;
+        }
+        .dispute-box .dispute-block .block-table{
+            padding: 10px 0px;
+            border-collapse: separate;
+        }
+        .block-heading{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #707070;
+            margin: 0px;
+        }
+        .dispute-box .dispute-block thead{
+            background-color: #F9F9F9;
+        }
+        .dispute-box .dispute-block .title{
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #2C2C2C;
+        }
+        .dispute-box .dispute-block .title, .dispute-box .dispute-block .description{
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+        }
+        .dispute-box .dispute-block .description{
+            font-weight: 400;
+            color: #707070;
+        }
+        .dispute-box .dispute-block .status-text{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #2C2C2C;
+        }
+        .dispute-box .dispute-block .arrow-img{
+            margin-top: 5px;
+        }
+        .dispute-timeline .timeline-block, .dispute-timeline .timeline-block .progress-status{
+            height: 100%;
+        }
+        .marker-rounded{
+            width: 14px;
+            height: 14px;
+            border-radius: 20px;
+            margin: auto;
+            background: #FFFFFF;
+            border: 2px solid #ACACAC;
+        }
+        .progress-completed .marker-rounded{
+            background: #3BB012;
+            border: none;
+        }
+        .progress-line {
+            border-right: 2px dashed #ACACAC;
+            width: 2px;
+            height: 100%;
+            margin: auto;
+        }
+        .progress-completed .progress-line{
+            border-right: 2px solid #3BB012;
+        }
+        .progress-end .progress-line{
+            display: none;
+        }
+        .dispute-box .dispute-timeline .date{
+            margin-bottom: 10px;
+        }
+        .dispute-box .dispute-timeline .title{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 14px;
+            color: #2C2C2C;
+            letter-spacing: 0.02em;
+        }
+        .spacing-bottom{
+            padding-bottom: 26px;
+        }
+        .dispute-box .dispute-timeline .reminders-title{
+            margin-top: 6px;
+        }
+        .dispute-box .dispute-timeline .reminders-title, .dispute-box .dispute-timeline .reminder, .dispute-box .resolve-note{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #707070;
+        }
+        .dispute-box .dispute-timeline .reminder span.colon{
+            padding: 0 10px;
+        }
+        .list-marker {
+            height: 3px;
+            width: 3px;
+            background-color: #707070;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        .progress-end .spacing-bottom{
+            padding-bottom: 0px;
+        }
+        .timeline-block .spacing-bottom{
+            padding-bottom: 20px;
+        }
+        .dispute-box .dispute-timeline .reminder td{
+            padding-top: 0px;
+        }
+        .dispute-box .dispute-timeline .reminder-list{
+            padding-top: 6px;
+            border-collapse: separate;
+        }
+        .button {
+            background: #F16E00;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+            color: #2C2C2C !important;
+            text-decoration: none;
+            display: inline-block;
+            padding: 9.6px 32px 8.4px;
+        }
+        .points-to-note .block-heading {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: #2C2C2C;
+        }
+        .points-to-note .notes-list {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #707070;
+        }
+        .points-to-note .notes-list .list-marker{
+            margin-top: 10px;
+        }
+        ul li{
+            margin: 0px !important;
+        }
+        .main-headings .line{
+            width: 50px;
+        }
+        .dispute-box .dispute-block .status-note {
+            font-size: 12px;
+            line-height: 18px;
+            color: #707070;
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        .dot {
+            width: 20px;
+            text-align: center;
+        }
+        .dot span {
+            background-color: #707070;
+            width: 2px;
+            height: 2px;
+            display: block;
+            border-radius: 5px;
+            margin: auto;
+        }
+        @media(max-width:768px){
+            .button{
+                font-size: 13px !important;
+            }
+            .links, .banner-subheading, .dispute-summary-details p, ul li, .date, .status-box, .block-heading, .dispute-timeline thead p, .cta-text,.points-to-note .notes-list, .footer td{
+                font-size: 15px !important;
+            }
+            .banner-heading{
+                font-size: 25px !important;
+            }
+            .section-heading, .dispute-box .dispute-block .title, .dispute-box .dispute-block .description, .dispute-box .dispute-block .status-text, .dispute-box .dispute-timeline .title{
+                font-size: 17px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" width="600"
+        class="document" style="max-width: 600px;min-width: 600px;width: 100%;margin: 0 auto;background: #ffffff;font-family: 'Roboto', sans-serif; background-color: #F6F7FC; border:1px solid #F6F7FC;">
+        <tr>
+            <td valign="top">
+                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                    style="width: 100%; padding:30px 20px 20px 30px; border-collapse: separate; background-color: #ffffff;">
+                    <tr>
+                        <td width="90">
+                            <a href="https://www.cibil.com/"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/logo2x.png" width="90"></a>
+                        </td>
+                        <td style="text-align: right;">
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="right" style="margin-right: 0;">
+                                <tbody>
+                                    <tr>
+                                        <td style="border-right: 0.4px solid #707070; padding-right:16px;">
+                                            <a href="https://myscore.cibil.com/CreditView/creditreport.page?enterprise=CIBIL" class="links" style="color:#2C2C2C;text-decoration:underline;">Dispute Center</a>
+                                        </td>
+                                        <td style="border-right: 0.4px solid #707070; padding-right: 16px;padding-left: 16px;">
+                                            <a href="https://myscore.cibil.com/CreditView/myaccount.page?enterprise=CIBIL" class="links" style="color:#2C2C2C;text-decoration:underline;">My Account</a>
+                                        </td>
+                                        <td style="padding-left: 16px;">
+                                            <a href="https://www.cibil.com/" class="links" style="color:#2C2C2C;text-decoration:underline;">CIBIL.com</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                    style="width: 100%;">
+                    <tr>
+                        <td bgcolor="#00A6CA" style="text-align: center; background-image: url(https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/banner.png);background-repeat: no-repeat;background-size: cover; background-position: center; color:#ffffff;padding-top: 30px;padding-bottom: 36px;" background="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/banner.png">
+                            <h1 class="banner-heading" style="margin-top: 0px;margin-bottom: 10px;font-weight: 500;font-size: 24px;line-height: 28px;">Hello, Suresh.</h1>
+                            <p class="banner-subheading" style="margin: 0px;font-weight: 400;font-size: 14px;line-height: 16px;max-width:392px;margin-left:auto; margin-right:auto;">This is an acknowledgement of dispute you raised for your CIBIL credit report on 21-Jan-2022.</p>
+                        </td>
+                    </tr>
+                </table>
+                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                    style="width: 100%;border-collapse: separate; text-align: center;">
+                    <tr>
+                        <td style="padding-top:30px; padding-bottom:20px;">
+                            <h2 class="section-heading" style="margin: 0px;">Dispute ACKNOWLEDGEMENT</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ffffff;">
+                            <table class="dispute-summary-details" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;padding-left: 40px;padding-right: 41px;border-collapse: separate;">
+                                <tr style="vertical-align: top;">
+                                    <td style="text-align: left;padding-top: 20px;padding-bottom: 20px;">
+                                        <p style="font-weight: 400;font-size: 14px;line-height: 16px;color: #707070;margin-top: 0px;margin-bottom: 10px;">Dispute ID</p>
+                                        <p style="font-weight: 600;font-size: 14px;line-height: 16px;color: #2C2C2C; margin: 0px;"><b>457295</b></p>
+                                    </td>
+                                    <td style="text-align: left;padding-top: 20px;padding-bottom: 20px;">
+                                        <p style="font-weight: 400;font-size: 14px;line-height: 16px;color: #707070;margin-top: 0px;margin-bottom: 10px;">Submitted on</p>
+                                        <p style="font-weight: 600;font-size: 14px;line-height: 16px;color: #2C2C2C; margin: 0px;"><b>21-Jan-2022</b></p>
+                                    </td>
+                                    <td style="text-align: left;padding-top: 20px;padding-bottom: 20px;">
+                                        <p style="font-weight: 400;font-size: 14px;line-height: 16px;color: #707070;margin-top: 0px;margin-bottom: 10px;">Next Update On</p>
+                                        <p style="font-weight: 600;font-size: 14px;line-height: 16px;color: #2C2C2C; margin: 0px;"><b>04-Apr-2022</b></p>
+                                    </td>
+                                    <td style="text-align: left;padding-top: 20px;padding-bottom: 20px;">
+                                        <p style="font-weight: 400;font-size: 14px;line-height: 16px;color: #707070;margin-top: 0px;margin-bottom: 10px;">Expected Resolution Date*</p>
+                                        <p style="font-weight: 600;font-size: 14px;line-height: 16px;color: #2C2C2C; margin: 0px;"><b>24-Apr-2022</b></p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ffffff;padding-left: 20px;padding-right: 20px;">
+                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center">
+                                <tr>
+                                    <td height="1" width="560" bgcolor="#EDEDED"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;font-weight: 400;font-size: 14px;line-height: 24px;letter-spacing: 0.02em;color: #707070; background-color: #ffffff; padding: 20px 40px;">
+                            *Dispute resolution could take upto 30 days, subject to response from respective bank/ financial institution.
+                        </td>
+                    </tr>
+                </table>
+                <table class="main-headings" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                style="width: 100%; border-collapse: separate;">
+                <tr>
+                    <td width="139" style="padding-top:40px; padding-bottom: 30px;padding-left:20px;padding-right: 10px;vertical-align: middle;">
+                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td height="1" bgcolor="#DDDDDD" style="vertical-align: middle;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="text-align: center; padding-top:40px; padding-bottom: 30px;">
+                        <h2 class="section-heading" style="text-transform:none;margin: 0px; font-weight:500;margin: 0px;line-height: 26px;color: #000000;font-family: 'Roboto', sans-serif;">Below is the list of disputes that you raised</h2>
+                    </td>
+                    <td width="139" style="padding-top:40px; padding-bottom: 30px;padding-right:20px;padding-left: 10px;vertical-align: middle;">
+                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td height="1" bgcolor="#DDDDDD" style="vertical-align: middle;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </table>
+                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                style="width: 100%; background-color: #ffffff; padding: 30px 20px 0px; border-collapse: separate;">
+                    <tr>
+                        <td>
+                            <table class="dispute-box" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #FFFFFF;border: 1px solid #EBEBEB;border-radius: 6px; border-collapse: separate;overflow: hidden;">
+                                <thead style="background-color: #F6F7FC;">
+                                    <tr>
+                                        <td style="padding: 20px 0px 20px 26px;">
+                                            <h2 class="section-heading" style="text-align: left; margin-bottom: 0px; margin-top: 0px;">Dispute 1</h2>
+                                        </td>
+                                        <td id="status-box-pending" style="text-align: right;padding: 20px 20px 20px 0px;">
+                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="right" width="180" style="background: #FCE2CC;border-radius: 4px;font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 14px;line-height: 24px;display: flex;align-items: center;text-align: right;color: #F16E00;vertical-align: middle;">
+                                                <tr>
+                                                    <td>
+                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;" height="28" valign="middle">
+                                                            <tr valign="middle">
+                                                                <td valign="middle" style="text-align: center;padding: 2px 0px;color: #F16E00;">Will get back to you shortly</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            <table class="dispute-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #FFFFFF;">
+                                                <thead>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;vertical-align: middle;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="60" style="padding: 10px 10px 10px 20px; vertical-align: middle;">
+                                                                            <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/personal-info2x.png" width="30" style="display: block;">
+                                                                        </td>
+                                                                        <td style="padding: 10px 20px 10px 0px; vertical-align: middle;">
+                                                                            <p class="block-heading">Personal Information</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <table class="block-table" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 520px;">
+                                                                <!-- info row -->
+                                                                <tr>
+                                                                    <td colspan="3" style="padding-top: 10px;">
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p class="title"><b>Name</b></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;border-bottom: 0.6px solid #EDEDED;">
+                                                                            <tr valign="top">
+                                                                                <td style="width: 270px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                    <p class="description">To be changed to Georgio</p>
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px; width: 19px;">
+                                                                                    <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px;padding-left: 46px;">
+                                                                                    <p class="status-text">Pending</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- info row end -->
+                                                                <!-- info row -->
+                                                                <tr>
+                                                                    <td colspan="3" style="padding-top: 10px;">
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p class="title"><b>Gender</b></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;border-bottom: 0.6px solid #EDEDED;">
+                                                                            <tr valign="top">
+                                                                                <td style="width: 270px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                    <p class="description">To be changed to Male</p>
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px; width: 19px;">
+                                                                                    <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px;padding-left: 46px;">
+                                                                                    <p class="status-text">Pending</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- info row end -->
+                                                                <!-- info row -->
+                                                                <tr>
+                                                                    <td colspan="3" style="padding-top: 10px;">
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p class="title"><b>Passport</b></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr valign="top">
+                                                                                <td style="width: 270px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                    <p class="description">To be changed to Z5568FTAD </p>
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px; width: 19px;">
+                                                                                    <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px;padding-left: 46px;">
+                                                                                    <p class="status-text">Pending</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- info row end -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="dispute-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #FFFFFF;">
+                                                <thead>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;vertical-align: middle;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="60" style="padding: 10px 10px 10px 20px; vertical-align: middle;">
+                                                                            <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/contact-info2x.png" width="30" style="display: block;">
+                                                                        </td>
+                                                                        <td style="padding: 10px 20px 10px 0px; vertical-align: middle;">
+                                                                            <p class="block-heading">CONTACT INFORMATION</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <table class="block-table" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 520px;">
+                                                                <!-- info row -->
+                                                                <tr>
+                                                                    <td colspan="3" style="padding-top: 10px;">
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p class="title"><b>Address</b></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr valign="top">
+                                                                                <td style="width: 270px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                    <p class="description">To be changed to 18, Part 4, Guru Nanak Market, Lajpat Nagar</p>
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px; width: 19px;">
+                                                                                    <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px;padding-left: 46px;">
+                                                                                    <p class="status-text">Pending</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                                <!-- info row end -->
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="dispute-timeline" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #F9F9F9; border-collapse: separate; padding: 20px;">
+                                                <thead>
+                                                    <tr>
+                                                        <td style="padding-bottom: 20px;">
+                                                            <p style="font-weight: 700;font-size: 14px;line-height: 24px;color: #2C2C2C;text-transform: uppercase; margin: 0px;">Timeline of your Dispute</p>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <table class="timeline-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                <tr valign="top" class="progress-completed">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #3BB012;"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <div class="progress-line"></div>
+                                                                    </td>
+                                                                    <td class="spacing-bottom">
+                                                                        <p class="date">20-Mar-2022</p>
+                                                                        <p class="title">Dispute Created</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr valign="top" class="progress-end">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #ACACAC;"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <div class="progress-line"></div>
+                                                                    </td>
+                                                                    <td class="spacing-bottom">
+                                                                        <p class="title">Dispute marked as resolved</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="spacer" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                <tr>
+                                    <td height="30"></td>
+                                </tr>
+                            </table>
+                            <table class="dispute-box" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #FFFFFF;border: 1px solid #EBEBEB;border-radius: 6px; border-collapse: separate;overflow: hidden;">
+                                <thead style="background-color: #F6F7FC;">
+                                    <tr>
+                                        <td style="padding: 20px 0px 20px 26px;">
+                                            <h2 class="section-heading" style="text-align: left; margin-bottom: 0px; margin-top: 0px;">Dispute 2</h2>
+                                        </td>
+                                        <td id="status-box-pending" style="text-align: right;padding: 20px 20px 20px 0px;">
+                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="right" width="180" style="background: #FCE2CC;border-radius: 4px;font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 14px;line-height: 24px;display: flex;align-items: center;text-align: right;color: #F16E00;vertical-align: middle;">
+                                                <tr>
+                                                    <td>
+                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;" height="28" valign="middle">
+                                                            <tr valign="middle">
+                                                                <td valign="middle" style="text-align: center;padding: 2px 0px;color: #F16E00;">Will get back to you shortly</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            <table class="dispute-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #FFFFFF;">
+                                                <thead>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;vertical-align: middle;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="60" style="padding: 10px 10px 10px 20px; vertical-align: middle;">
+                                                                            <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/enquiry-info2x.png" width="30" style="display: block;">
+                                                                        </td>
+                                                                        <td style="padding: 10px 20px 10px 0px; vertical-align: middle;">
+                                                                            <p class="block-heading">ENQUIRY INFORMATION</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <table class="block-table" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 520px;">
+                                                                <!-- info row -->
+                                                                <tr>
+                                                                    <td colspan="3" style="padding-top: 10px;">
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p class="title" style="margin-bottom: 16px;"><b>Axis bank - Date of Enquiry: 26-Feb-2022 </b></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr valign="top">
+                                                                                <td style="width: 270px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                    <p class="description">Never applied with this bank</p>
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px; width: 19px;">
+                                                                                    <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                </td>
+                                                                                <td style="padding-bottom: 10px;padding-left: 46px;">
+                                                                                    <p class="status-text">Pending</p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="dispute-timeline" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #F9F9F9; border-collapse: separate; padding: 20px;">
+                                                <thead>
+                                                    <tr>
+                                                        <td style="padding-bottom: 20px;">
+                                                            <p style="font-weight: 700;font-size: 14px;line-height: 24px;color: #2C2C2C;text-transform: uppercase; margin: 0px;">Timeline of your Dispute</p>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <table class="timeline-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                <tr valign="top" class="progress-completed">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #3BB012;"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <div class="progress-line"></div>
+                                                                    </td>
+                                                                    <td class="spacing-bottom">
+                                                                        <p class="date">20-Mar-2022</p>
+                                                                        <p class="title">Dispute Created</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr valign="top">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #ACACAC;"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <div class="progress-line"></div>
+                                                                    </td>
+                                                                    <td class="spacing-bottom">
+                                                                        <p class="title">Dispute Assigned to Axis Bank</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr valign="top">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #ACACAC;"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <div class="progress-line"></div>
+                                                                    </td>
+                                                                    <td class="spacing-bottom">
+                                                                        <p class="title">Pending dispute Resolution</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr valign="top" class="progress-end">
+                                                                    <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #ACACAC;"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <div class="progress-line"></div>
+                                                                    </td>
+                                                                    <td class="spacing-bottom">
+                                                                        <p class="title">Dispute marked as resolved</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="spacer" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                <tr>
+                                    <td height="30"></td>
+                                </tr>
+                            </table>
+                            <table class="dispute-box" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #FFFFFF;border: 1px solid #EBEBEB;border-radius: 6px; border-collapse: separate;overflow: hidden;">
+                                <thead style="background-color: #F6F7FC;">
+                                    <tr>
+                                        <td style="padding: 20px 0px 20px 26px;">
+                                            <h2 class="section-heading" style="text-align: left; margin-bottom: 0px; margin-top: 0px;">Dispute 3</h2>
+                                        </td>
+                                        <td id="status-box-pending" style="text-align: right;padding: 20px 20px 20px 0px;">
+                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="right" width="180" style="background: #FCE2CC;border-radius: 4px;font-family: 'Roboto';font-style: normal;font-weight: 400;font-size: 14px;line-height: 24px;display: flex;align-items: center;text-align: right;color: #F16E00;vertical-align: middle;">
+                                                <tr>
+                                                    <td>
+                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;" height="28" valign="middle">
+                                                            <tr valign="middle">
+                                                                <td valign="middle" style="text-align: center;padding: 2px 0px;color: #F16E00;">Will get back to you shortly</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            <table class="dispute-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #FFFFFF;">
+                                                <thead>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;vertical-align: middle;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="60" style="padding: 10px 10px 10px 20px; vertical-align: middle;">
+                                                                            <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/account-info2x.png" width="30" style="display: block;">
+                                                                        </td>
+                                                                        <td style="padding: 10px 20px 10px 0px; vertical-align: middle;">
+                                                                            <p class="block-heading">ACCOUNT INFORMATION</p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <table class="block-table" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 520px;">
+                                                                <!-- info row -->
+                                                                <tr>
+                                                                    <td colspan="3" style="padding-top: 10px;">
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <p class="title" style="margin-bottom: 16px;"><b>ICICIBANK-XXXXXXXXXXXX9163</b></p>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;border-bottom: 0.6px solid #EDEDED;">
+                                                                                        <tr valign="top">
+                                                                                            <td style="width: 270px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                                <p class="description">Does not belong to me</p>
+                                                                                            </td>
+                                                                                            <td style="padding-bottom: 10px; width: 19px;">
+                                                                                                <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                            </td>
+                                                                                            <td style="padding-bottom: 10px;padding-left: 46px;">
+                                                                                                <p class="status-text">Pending</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;border-bottom: 0.6px solid #EDEDED;">
+                                                                                        <tr valign="top">
+                                                                                            <td style="width: 270px;padding-top: 10px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                                <p class="description">Date reported and certified not disputed </p>
+                                                                                            </td>
+                                                                                            <td style="padding-top: 10px;padding-bottom: 10px; width: 19px;">
+                                                                                                <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                            </td>
+                                                                                            <td style="padding-top: 10px;padding-bottom: 10px;padding-left: 46px;">
+                                                                                                <p class="status-text">Pending</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;border-bottom: 0.6px solid #EDEDED;">
+                                                                                        <tr valign="top">
+                                                                                            <td style="width: 270px;padding-top: 10px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                                <p class="description">Current balance to be changed to 0</p>
+                                                                                            </td>
+                                                                                            <td style="padding-top: 10px;padding-bottom: 10px; width: 19px;">
+                                                                                                <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                            </td>
+                                                                                            <td style="padding-top: 10px;padding-bottom: 10px;padding-left: 46px;">
+                                                                                                <p class="status-text">Pending</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                    <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                                        <tr valign="top">
+                                                                                            <td style="width: 270px;padding-top: 10px;padding-bottom: 10px;padding-right: 30px;">
+                                                                                                <p class="description">Days past due 12/2021 to be changed to 0</p>
+                                                                                            </td>
+                                                                                            <td style="padding-top: 10px;padding-bottom: 10px; width: 19px;">
+                                                                                                <img class="arrow-img" src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/right-arrow-gray2x.png" width="19">
+                                                                                            </td>
+                                                                                            <td style="padding-top: 10px;padding-bottom: 10px;padding-left: 46px;">
+                                                                                                <p class="status-text">Pending</p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="dispute-timeline" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;background: #F9F9F9; border-collapse: separate; padding: 20px;">
+                                                <thead>
+                                                    <tr>
+                                                        <td style="padding-bottom: 20px;">
+                                                            <p style="font-weight: 700;font-size: 14px;line-height: 24px;color: #2C2C2C;text-transform: uppercase; margin: 0px;">Timeline of your Dispute</p>
+                                                        </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <table class="timeline-block" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                <tr valign="top" class="progress-completed">
+                                                                    <td class="progress-status" width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #3BB012;"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <div class="progress-line"></div>
+                                                                    </td>
+                                                                    <td class="spacing-bottom">
+                                                                        <p class="date">20-Mar-2022</p>
+                                                                        <p class="title">Dispute Created</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr valign="top" class="progress-end">
+                                                                    <td width="30" height="1" style="padding-right: 16px;min-height: 1px;">
+                                                                        <table id="marker-rounded" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                                                            <tr>
+                                                                                <td style="width: 14px;height: 14px;border-radius: 20px;background: #ACACAC;"></td>
+                                                                            </tr>
+                                                                        </table>
+                                                                        <div class="progress-line"></div>
+                                                                    </td>
+                                                                    <td class="spacing-bottom">
+                                                                        <p class="title">Dispute marked as resolved</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="spacer" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                <tr>
+                                    <td height="30"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="main-headings" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                style="width: 100%; border-collapse: separate;">
+                <tr>
+                    <td width="232" style="padding-top:40px; padding-bottom: 30px;padding-left:20px;padding-right: 10px;vertical-align: middle;">
+                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td height="1" bgcolor="#DDDDDD" style="vertical-align: middle;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="text-align: center; padding-top: 40px;padding-bottom: 30px;">
+                        <h2 class="section-heading" style="text-transform:none;margin: 0px; font-weight:500;margin: 0px;line-height: 26px;color: #000000;font-family: 'Roboto', sans-serif;">Dispute Process</h2>
+                    </td>
+                    <td width="232" style="padding-top:40px; padding-bottom: 30px;padding-right:20px;padding-left: 10px;vertical-align: middle;">
+                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td height="1" bgcolor="#DDDDDD" style="vertical-align: middle;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </table>
+                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="background-color: #fff;">
+                    <tr>
+                        <td style="padding: 20px 12px;">
+                            <img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/august/images/dispute-process.png">
+                        </td>
+                    </tr>
+                </table>
+                <table id="spacer" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                    <tr>
+                        <td height="30"></td>
+                    </tr>
+                </table>
+                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                style="width: 100%; background-color: #ffffff; border-collapse: separate; padding: 28px 40px;">
+                    <tr>
+                        <td class="cta-text" style="text-align: left;font-weight: 400;font-size: 14px;line-height: 16px;letter-spacing: 0.01em;color: #2C2C2C;">View the status of all your disputes</td>
+                        <td style="text-align: right;"><a href="https://myscore.cibil.com/CreditView/creditreport.page?enterprise=CIBIL"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/august/images/view-dispute-btn.png" width="146" height="32"></a></td>
+                    </tr>
+                </table>
+                <table id="spacer" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                    <tr>
+                        <td height="30"></td>
+                    </tr>
+                </table>
+                <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                style="width: 100%; border-collapse: separate; padding: 0px 20px;">
+                    <tr>
+                        <td>
+                            <table class="points-to-note" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; background-color: #ffffff;padding: 20px;border-collapse: separate;border-radius: 6px;">
+                                <tr>
+                                    <td>
+                                        <table role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%;">
+                                            <td width="40" style="padding-right: 10px;"><img src="https://ajency.github.io/CIBIL-CRO/email-template/email-templates-2022/images/note2x.png" width="30"></td>
+                                            <td><h2 class="block-heading">Points to note</h2></td>
+                                        </table>
+                                        <table class="notes-list" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center" style="width: 100%; margin-top: 10px;">
+                                            <tr>
+                                                <td>
+                                                    <ul style="padding-left: 25px;">
+                                                        <li class="reminder-text">Your Dispute ID will be marked as closed only when all your disputes are resolved.</li>
+                                                        <li class="reminder-text">CIBIL does not charge any fees to consumers for Dispute resolution. Changes to your report are made only post approval from the respective bank / financial institutions.</li>
+                                                        <li class="reminder-text">CIBIL is not associated with any Credit counselling agencies.</li>
+                                                        <li class="reminder-text">We have a detailed process outlining how the dispute process works. To know more <a class="blue-link" href="https://www.cibil.com/consumer-dispute-resolution" style="color:#006685;">click here.</a></li>
+                                                        <li class="reminder-text">If you need clarifications on dispute resolution, you can contact your respective bank nodal officer <a class="blue-link" href="https://www.cibil.com/consumer-dispute-resolution" style="color:#006685;">here.</a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table class="footer" role="presentation" aria-hidden="true" cellspacing="0" cellpadding="0" border="0" align="center"
+                style="width: 100%; border-collapse: separate; padding: 40px 20px 80px;">
+                    <tr>
+                        <td style="font-weight: 400;font-size: 14px;line-height: 24px;letter-spacing: 0.02em;color: #707070;padding-bottom: 10px;">Always at your service.</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 400;font-size: 14px;line-height: 24px;letter-spacing: 0.02em;color: #2C2C2C;">Regards,<br>Consumer Services Team</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
