@@ -1055,11 +1055,14 @@
                   top: 1px;
                 }
               }
+              &.show{
+                padding-bottom: 10px;
+              }
             }
             .faq-content {
               font-size: 14px;
               line-height: 24px;
-              padding: 14px 28px 20px;
+              padding: 0px 28px 20px;
               ul {
                 li {
                   font-size: 14px;
