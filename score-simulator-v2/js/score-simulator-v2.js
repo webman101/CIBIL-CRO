@@ -78,3 +78,11 @@ function updateScore($data_score, $data_oldscore) {
     );
   });
 }
+
+//faq
+$('.panel-collapse').on('show.bs.collapse', function () {
+  console.log($(this).prev().addClass("show"));
+});
+$('.panel-collapse').on('hide.bs.collapse', function () {
+  console.log($(this).prev().removeClass("show"));
+});

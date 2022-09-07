@@ -75,7 +75,7 @@
     color: #2c2c2c;
     max-width: 760px;
     margin: 60px auto 0px;
-    @media(max-width:992px){
+    @media (max-width: 992px) {
       margin-top: 40px;
     }
   }
@@ -546,7 +546,7 @@
               width: calc(100% - 37px);
               border-radius: 6px;
             }
-            .device{
+            .device {
               width: 100%;
             }
           }
@@ -933,6 +933,144 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+  //FAQ section
+  .faq-section {
+    margin-top: 60px;
+    padding-bottom: 60px;
+    &__wraper {
+      .heading {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #2c2c2c;
+        margin-bottom: 30px;
+      }
+      .panel-group {
+        max-width: calc(100% - 160px);
+        margin: 0 auto;
+        .panel {
+          border: none;
+          box-shadow: none;
+          border-radius: 0;
+          background: #fff;
+          margin-top: 0px;
+          &:not(:last-child) {
+            margin-bottom: 1 0px;
+            border-bottom: 1px solid #dddddd;
+          }
+          .panel-heading {
+            box-shadow: none;
+            padding: 10px 21px 10px 0px;
+            background: #fff;
+            border: none;
+            cursor: pointer;
+            .panel-title {
+              position: relative;
+              padding-left: 35px;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0.02em;
+              color: #2c2c2c;
+              &:before {
+                content: "";
+                height: 22px;
+                width: 22px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background-repeat: no-repeat;
+                background-size: contain;
+              }
+            }
+            &:not(.show) {
+              .panel-title {
+                &:before {
+                  background-image: url(../images/faq-open.svg);
+                }
+              }
+            }
+            &.show {
+              .panel-title {
+                &:before {
+                  background-image: url(../images/faq-close.svg);
+                }
+              }
+            }
+          }
+          .faq-content {
+            padding: 0px 35px 20px;
+            background: #fff;
+            border: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #707070;
+            ul {
+              margin-bottom: 0px;
+              li {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                position: relative;
+                padding-left: 26px;
+                margin-bottom: 0px;
+                &:before {
+                  content: "";
+                  position: absolute;
+                  left: 5px;
+                  top: 8px;
+                  height: 4px;
+                  width: 4px;
+                  background: #707070;
+                  border-radius: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      margin-top: 40px;
+      padding-bottom: 40px;
+      &__wraper {
+        .panel-group {
+          max-width: 100%;
+          .panel {
+            .panel-heading {
+              padding: 20px 0px;
+              .panel-title {
+                padding-left: 28px;
+                &:before {
+                  height: 18px;
+                  width: 18px;
+                  top: 1px;
+                }
+              }
+            }
+            .faq-content {
+              font-size: 14px;
+              line-height: 24px;
+              padding: 14px 28px 20px;
+              ul {
+                li {
+                  font-size: 14px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+        }
+        .heading {
+          margin-bottom: 10px;
         }
       }
     }
