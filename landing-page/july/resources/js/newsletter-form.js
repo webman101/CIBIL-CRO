@@ -58,7 +58,7 @@ async function saveData() {
   let input_name = name.value.trim() != '' ? "&tl.first-name="+ name.value : "";
   let config2 = {
       method: "POST",
-      body: `tl.email-address=${email.value}${input_name}&requestToken=${data.ud.ResponseDetails.csrfToken}&visitToken=${data.ud.ResponseDetails.visitToken}`,
+      body: `tl.email-address=${email.value}${input_name}&requestToken=${data.ud.ResponseDetails.csrfToken}&visitToken=${data.ud.ResponseDetails.visitToken}&DestinationPage=mobile/redirect1_0`,
       headers: {
           "Content-Type": "application/x-www-form-urlencoded"
       }
