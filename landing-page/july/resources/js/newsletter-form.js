@@ -38,6 +38,7 @@ function emailValidation() {
 //check valid name
 function nameValidation() {
   if (name.value.trim() == "" || name.value.match(namePattern)) {
+    showSucces(name)
     return true;
   } else {
     showError(name, nameInvalidMessage);
@@ -102,6 +103,7 @@ function checkRequired(inputArr) {
       emailValidation();
     }
   });
+  nameValidation();
 }
 
 /* submitForm */
