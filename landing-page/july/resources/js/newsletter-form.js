@@ -3,11 +3,13 @@ const form = document.getElementById("newsletterForm");
 const email = document.getElementById("nl-email");
 const name = document.getElementById("nl-name");
 let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+let namePattern = /^[a-zA-Z\s]*$/;
 // let pattern = /^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$/;
 
 /* messages */
 let emailRequiredMessage = "This field is required";
-let emailInvalidMessage = "Please Enter Valid Email Address";
+let emailInvalidMessage = "Please enter valid email address";
+let nameInvalidMessage = "Please enter a valid name";
 
 //Show input error messages
 function showError(input, message) {
@@ -29,6 +31,16 @@ function emailValidation() {
     return true;
   } else {
     showError(email, emailInvalidMessage);
+    return false;
+  }
+}
+
+//check valid name
+function nameValidation() {
+  if (name.value.trim() == "" || name.value.match(namePattern)) {
+    return true;
+  } else {
+    showError(name, nameInvalidMessage);
     return false;
   }
 }
@@ -94,7 +106,7 @@ function checkRequired(inputArr) {
 
 /* submitForm */
 function checkValidation(inputFields) {
-  if (inputFields[0].value.trim() != "" && emailValidation() === true ) {
+  if (inputFields[0].value.trim() != "" && emailValidation() === true && nameValidation() === true ) {
     // form.submit();
     saveData();
   }
