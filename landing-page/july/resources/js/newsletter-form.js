@@ -81,7 +81,7 @@ async function saveData() {
   console.log(config2)
   // response = await fetch("https://atlasls-za-test.sd.demo.truelink.com/CreditView/mobile/redirect1_0.page?action=MARKETING_CUSTOMER&tl.partner=CIBILMKT", config2)
   response = await fetch("https://atlasls-za-test.sd.demo.truelink.com/CreditView/mobile/cibil_marketing_redirect.page?action=MARKETING_CUSTOMER&tl.partner=CIBILMKT", config2)
-  data = await response.json();
+  data = await response.text();
   console.log("post successful", data)
   submit.classList.add('success')
   }
