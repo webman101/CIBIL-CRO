@@ -57,7 +57,8 @@ async function saveData() {
       method: "GET",
       headers: {
           "Content-Type": "application/x-www-form-urlencoded"
-      }
+      },
+      credentials: "include"
   }
   let response = await fetch("https://atlasls-za-test.sd.demo.truelink.com/CreditView/mobile/entry1_0.page?tl.partner=CIBILMKT", config)
   let data = await response.json();
@@ -74,9 +75,9 @@ async function saveData() {
       body: `tl.email-address=${email.value}${input_name}&requestToken=${data.ud.ResponseDetails.csrfToken}&visitToken=${data.ud.ResponseDetails.visitToken}&DestinationPage=mobile/cibil_marketing_redirect`,
       headers: {
           "Content-Type": "application/x-www-form-urlencoded"
-      }
+      },
+      credentials: 'include'
   }
-  // credentials: 'include'
   console.log(config2)
   // response = await fetch("https://atlasls-za-test.sd.demo.truelink.com/CreditView/mobile/redirect1_0.page?action=MARKETING_CUSTOMER&tl.partner=CIBILMKT", config2)
   response = await fetch("https://atlasls-za-test.sd.demo.truelink.com/CreditView/mobile/cibil_marketing_redirect.page?action=MARKETING_CUSTOMER&tl.partner=CIBILMKT", config2)
