@@ -1,0 +1,42 @@
+.banner-text h3{
+    margin-bottom: 35px;
+}
+.banner-text .subheading {
+    color: #fff;
+    letter-spacing: 0.02em;
+    margin-bottom: 0px;
+    font-size: 18px;
+    max-width: 85%;
+    font-weight: 600;
+}
+.banner-text .subheading .bg-yellow{
+    font-weight: 700;
+}
+.custom-column-row{
+    top:-100px;
+}
+@media (max-width: 991.98px){
+    .banner, .features-section {
+        display: none;
+    }
+    .banner-text h1{
+        text-align: center;
+    }
+    .banner-mobile-text{
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0px;
+    }
+    .banner-mobile-text .transparent-bg{
+        padding: 20px;
+        margin-bottom: 0px;
+    }
+    .info-bar {
+        background: #fcf1c0;
+        padding: 20px;
+        font-weight: 600;
+    }
+    .info-bar .bg-yellow{
+        font-weight: 700;
+    }
+}
