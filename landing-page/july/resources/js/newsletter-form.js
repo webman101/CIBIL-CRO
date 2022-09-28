@@ -58,7 +58,7 @@ async function saveData() {
       headers: {
           "Content-Type": "application/x-www-form-urlencoded"
       },
-      credentials: "include"
+      credentials: "same-origin"
   }
   let response = await fetch("https://atlasls-za-test.sd.demo.truelink.com/CreditView/mobile/entry1_0.page?tl.partner=CIBILMKT", config)
   let data = await response.json();
