@@ -51,6 +51,7 @@ async function saveData() {
   let submit = form.querySelector('.newsletter-subscribe-button')
   try{
   submit.classList.add('loading')
+  submit.classList.remove('error','success')
 
   // getting tokens
   let config = {
