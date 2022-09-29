@@ -49,6 +49,10 @@
       background-color: #f16e00;
     }
   }
+  .cibil-link {
+    color: inherit !important;
+    outline: none !important;
+  }
   .hide-mob {
     @media (max-width: 992px) {
       display: none !important;
@@ -411,13 +415,13 @@
       }
     }
     @media (min-width: 992px) {
-      &__wraper{
-        .right-side{
-          .score-bar-container{
+      &__wraper {
+        .right-side {
+          .score-bar-container {
             align-items: flex-start;
             background-size: cover;
             background-position: center 40%;
-            .score-bar{
+            .score-bar {
               margin-top: 28px;
             }
           }
@@ -1069,7 +1073,7 @@
                   top: 1px;
                 }
               }
-              &.show{
+              &.show {
                 padding-bottom: 10px;
               }
             }
