@@ -57,7 +57,7 @@ function updateScore($data_score, $data_oldscore) {
     var $val = $(this).find(".cibil-score");
     var perc = parseInt($val.text(), 10);
 
-    //console.log("old=" + $data_score, "new=" + $data_oldscore);
+    //console.log("old=" + $data_oldscore, "new=" + $data_score);
 
     $({ p: $data_oldscore }).animate(
       { p: perc },
@@ -67,12 +67,12 @@ function updateScore($data_score, $data_oldscore) {
         step: function (p) {
           $bar.css({
             transform:
-              "rotate(" + Math.ceil(45 + ((p * 100) / 900) * 1.8) + "deg)",
+              "rotate(" + Math.ceil( (45 + (( (p - 300) * 100) / 900) * 2.69) ) + "deg)",
           });
           $pointer.css({
-            transform: "rotate(" + Math.ceil(((p * 100) / 900) * 1.8) + "deg)",
+            transform: "rotate(" + Math.ceil( ((( (p - 300) * 100) / 900) * 2.69) ) + "deg)",
           });
-          $val.text(p | 0);
+          $val.text( p | 0);
         },
       }
     );
