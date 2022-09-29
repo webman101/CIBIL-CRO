@@ -51,6 +51,7 @@ async function saveData() {
   let submit = form.querySelector('.newsletter-subscribe-button')
   try{
   submit.classList.add('loading')
+  submit.classList.remove('error','success')
 
   // getting tokens
   let config = {
@@ -68,14 +69,25 @@ async function saveData() {
 
   // use token to save email
   //body: "visitToken="+data.ud.ResponseDetails.visitToken+"&requestToken=+"+data.ud.ResponseDetails.csrfToken+"+&tl.email-address="+ email.value + input_name +"&DestinationPage=mobile/redirect1_0",
+  // let input_name = name.value.trim() != '' ? "&tl.first-name="+ name.value : "";
+  // body: `tl.email-address=${email.value}${input_name}&requestToken=${data.ud.ResponseDetails.csrfToken}&visitToken=${data.ud.ResponseDetails.visitToken}&DestinationPage=mobile/cibil_marketing_redirect`,
 
-  let input_name = name.value.trim() != '' ? "&tl.first-name="+ name.value : "";
+  var urlencoded = new URLSearchParams();
+  urlencoded.append("visitToken", data.ud.ResponseDetails.visitToken);
+  urlencoded.append("requestToken", data.ud.ResponseDetails.csrfToken);
+  urlencoded.append("DestinationPage", "mobile/cibil_marketing_redirect");
+  urlencoded.append("tl.email-address", email.value);
+  if(name.value.trim() != ''){
+    urlencoded.append("tl.first-name", name.value.trim());
+  }
+
+  
   let config2 = {
       method: "POST",
-      body: `tl.email-address=${email.value}${input_name}&requestToken=${data.ud.ResponseDetails.csrfToken}&visitToken=${data.ud.ResponseDetails.visitToken}&DestinationPage=mobile/cibil_marketing_redirect`,
       headers: {
           "Content-Type": "application/x-www-form-urlencoded"
       },
+      body: urlencoded,
       credentials: 'include'
   }
   console.log(config2)
