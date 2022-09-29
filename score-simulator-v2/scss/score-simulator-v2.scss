@@ -410,6 +410,19 @@
         }
       }
     }
+    @media (min-width: 992px) {
+      &__wraper{
+        .right-side{
+          .score-bar-container{
+            align-items: flex-start;
+            background-size: cover;
+            .score-bar{
+              margin-top: 28px;
+            }
+          }
+        }
+      }
+    }
     @media (max-width: 576px) {
       &__wraper {
         &:before {
