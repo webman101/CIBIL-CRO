@@ -17,11 +17,9 @@ html {
     z-index: -1;
   }
 }
-
-@media (min-width: 1200px) {
-  .container-medium {
-    max-width: 1020px;
-  }
+.cibil-link {
+  color: inherit !important;
+  outline: none !important;
 }
 
 .rank-page {
@@ -38,6 +36,9 @@ html {
     .container {
       max-width: 1220px;
       width: 1220px;
+      &.container-medium {
+        max-width: 1020px;
+      }
     }
   }
   .hide-mob {
@@ -661,8 +662,152 @@ html {
         }
       }
     }
+    @media (max-width: 991.98px){
+      margin-top: 9px;
+    }
   }
 }
+
+  //FAQ section
+  .faq-section {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background: #F6F7FC;
+    &__wraper {
+      .heading {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #2c2c2c;
+        margin-bottom: 30px;
+      }
+      .panel-group {
+        margin: 0 auto;
+        .panel {
+          border: none;
+          box-shadow: none;
+          border-radius: 0;
+          background: #F6F7FC;
+          margin-top: 0px;
+          &:not(:last-child) {
+            margin-bottom: 1 0px;
+            border-bottom: 1px solid #dddddd;
+          }
+          .panel-heading {
+            box-shadow: none;
+            padding: 10px 21px 10px 0px;
+            background: #F6F7FC;
+            border: none;
+            cursor: pointer;
+            .panel-title {
+              position: relative;
+              padding-left: 35px;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0.02em;
+              color: #2c2c2c;
+              &:before {
+                content: "";
+                height: 22px;
+                width: 22px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background-repeat: no-repeat;
+                background-size: contain;
+              }
+            }
+            &:not(.show) {
+              .panel-title {
+                &:before {
+                  background-image: url(../images/faq-open.svg);
+                }
+              }
+            }
+            &.show {
+              .panel-title {
+                &:before {
+                  background-image: url(../images/faq-close.svg);
+                }
+              }
+            }
+          }
+          .faq-content {
+            padding: 0px 35px 20px;
+            background: #F6F7FC;
+            border: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #707070;
+            ul {
+              margin-bottom: 0px;
+              li {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                position: relative;
+                padding-left: 26px;
+                margin-bottom: 0px;
+                &:before {
+                  content: "";
+                  position: absolute;
+                  left: 5px;
+                  top: 8px;
+                  height: 4px;
+                  width: 4px;
+                  background: #707070;
+                  border-radius: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      padding-bottom: 20px;
+      &__wraper {
+        .panel-group {
+          max-width: 100%;
+          .panel {
+            .panel-heading {
+              padding: 20px 0px;
+              .panel-title {
+                padding-left: 29px;
+                &:before {
+                  height: 19px;
+                  width: 19px;
+                  top: 1px;
+                }
+              }
+              &.show {
+                padding-bottom: 10px;
+              }
+            }
+            .faq-content {
+              font-size: 14px;
+              line-height: 24px;
+              padding: 0px 28px 20px;
+              ul {
+                li {
+                  font-size: 14px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+        }
+        .heading {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 
 .cibil-slick-dots {
   margin-top: -41px;
