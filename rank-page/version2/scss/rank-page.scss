@@ -2,19 +2,25 @@ html {
   scroll-behavior: smooth;
 }
 
-.highlight{
+.highlight {
   position: relative;
   display: inline-flex;
   z-index: 0;
-  &:after{
-    content: '';
+  &:after {
+    content: "";
     height: 6px;
     width: calc(100% - 3px);
-    background: #FCD800;
+    background: #fcd800;
     position: absolute;
     left: 0px;
     bottom: 6px;
     z-index: -1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-medium {
+    max-width: 1020px;
   }
 }
 
@@ -251,8 +257,8 @@ html {
         }
         .slide-heading {
           margin-bottom: 10px;
-          .highlight{
-            &:after{
+          .highlight {
+            &:after {
               display: none;
             }
           }
@@ -291,25 +297,48 @@ html {
 
   /* features section start*/
   .features-section {
-    padding-top: 54px;
-    padding-bottom: 20px;
+    padding-top: 37px;
+    padding-bottom: 40px;
+    .bottom-text{
+      text-align: center;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
     &__wraper {
       .features-list {
-        .icon {
-          margin-right: 20px;
-          width: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .feature-head {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          grid-gap: 16px;
+          margin-bottom: 16px;
         }
-        .feature {
-          background: #f6f7fc;
-          border-radius: 4px;
-          padding: 20px;
-          font-weight: 600;
+        .feature-body {
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+          max-width: 362px;
+        }
+        .feature-title {
+          margin-bottom: 0px;
+          font-weight: 700;
           font-size: 18px;
           line-height: 24px;
           letter-spacing: 0.02em;
+        }
+        .icon {
+          width: 64px;
+        }
+        .feature {
+          background: #ffffff;
+          box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          padding: 30px 30px 20px;
           color: #000000;
-          display: flex;
-          align-items: center;
           margin-bottom: 20px;
           &-text {
             margin-bottom: 0px;
@@ -317,12 +346,9 @@ html {
         }
       }
     }
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       &__wraper {
         .features-list {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
           .feature {
             width: calc(50% - 10px);
           }
@@ -330,24 +356,20 @@ html {
       }
     }
     @media (max-width: 767.98px) {
-      padding-top: 40px;
+      padding-top: 50px;
       padding-bottom: 40px;
       &__wraper {
         .section-heading {
-          font-weight: 700;
           padding-left: 30px;
           padding-right: 30px;
-          margin-bottom: 30px;
+          margin-bottom: 50px;
         }
         .features-list {
           .feature {
-            padding: 16px 16px 12px 16px;
-            font-size: 16px;
+            padding: 20px 20px 18px;
+            width: 100%;
             &:last-child {
               margin-bottom: 0px;
-            }
-            .icon {
-              width: 44px;
             }
           }
         }
@@ -370,25 +392,65 @@ html {
     background-color: #f6f7fc;
     padding-top: 40px;
     margin-top: 29px;
-    padding-bottom: 60px;
+    padding-bottom: 43px;
+    .section-heading {
+      margin-bottom: 60px;
+    }
+    .bottom-text {
+      margin-top: 28px;
+    }
     &__wraper {
       .subscription-plans {
-        margin-bottom: 30px;
         .subscription-plan {
-          width: calc(33.33% - 10px);
+          width: calc(100% / 3);
           background: #ffffff;
           box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.06);
           &__header {
-            background: #00a6ca;
-            box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.06);
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 30px;
-            text-align: center;
-            letter-spacing: 0.02em;
-            color: #ffffff;
-            padding: 17px 30px 13px;
+            position: relative;
+            .plan-tag {
+              text-transform: uppercase;
+              position: absolute;
+              width: 100%;
+              top: -30px;
+              background: #fcd800;
+              padding: 3px 30px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 24px;
+              color: #2c2c2c;
+              margin-bottom: 0px;
+            }
+            .discount-tag {
+              background: #feef99;
+              width: 76px;
+              height: 76px;
+              position: absolute;
+              right: 10px;
+              top: 22px;
+              border-radius: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 16px;
+              color: #2c2c2c;
+              text-transform: uppercase;
+              text-align: center;
+            }
             .plan-name {
+              background: #00a6ca;
+              box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.06);
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 30px;
+              text-align: center;
+              letter-spacing: 0.02em;
+              color: #ffffff;
+              padding: 17px 30px 13px;
               margin-bottom: 0px;
             }
           }
@@ -446,7 +508,7 @@ html {
                     line-height: 24px;
                     letter-spacing: 0.02em;
                     color: #000000;
-                    padding-left: 30px;
+                    padding-left: 34px;
                     margin-bottom: 0px;
                     position: relative;
                     &:before {
@@ -490,6 +552,8 @@ html {
         &-cards {
           display: flex;
           justify-content: space-between;
+          gap: 20px;
+          grid-gap: 20px;
         }
       }
       .bottom-text {
@@ -503,7 +567,7 @@ html {
     }
     @media (max-width: 767.98px) {
       padding-top: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 30px;
       &__wraper {
         .section-heading {
           font-weight: 700;
@@ -564,15 +628,24 @@ html {
               .highlighted-feature {
                 margin-bottom: 20px;
               }
+              .highlighted-feature {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
               ul {
                 &.features {
                   li {
                     &.feature {
+                      padding-left: 40px;
                       b {
                         &.highlight {
                           &:before {
                             bottom: 3px;
                             height: 2px;
+                          }
+                          &::after {
+                            display: none;
                           }
                         }
                       }
