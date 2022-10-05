@@ -1,6 +1,23 @@
 html {
   scroll-behavior: smooth;
 }
+
+.highlight{
+  position: relative;
+  display: inline-flex;
+  z-index: 0;
+  &:after{
+    content: '';
+    height: 6px;
+    width: calc(100% - 3px);
+    background: #FCD800;
+    position: absolute;
+    left: 0px;
+    bottom: 6px;
+    z-index: -1;
+  }
+}
+
 .rank-page {
   /* base css */
   .container {
@@ -46,7 +63,20 @@ html {
     text-decoration: none !important;
     outline: none !important;
   }
-
+  .section-heading {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #2c2c2c;
+    margin-bottom: 30px;
+    @media (max-width: 767.98px) {
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.02em;
+    }
+  }
   /* Header start */
   .login-btn-header {
     background: #ffffff;
@@ -221,6 +251,11 @@ html {
         }
         .slide-heading {
           margin-bottom: 10px;
+          .highlight{
+            &:after{
+              display: none;
+            }
+          }
         }
         .slide-subheading {
           font-size: 24px;
@@ -259,14 +294,6 @@ html {
     padding-top: 54px;
     padding-bottom: 20px;
     &__wraper {
-      .section-heading {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 30px;
-        text-align: center;
-        color: #2c2c2c;
-        margin-bottom: 40px;
-      }
       .features-list {
         .icon {
           margin-right: 20px;
@@ -345,14 +372,6 @@ html {
     margin-top: 29px;
     padding-bottom: 60px;
     &__wraper {
-      .section-heading {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 30px;
-        text-align: center;
-        color: #2c2c2c;
-        margin-bottom: 40px;
-      }
       .subscription-plans {
         margin-bottom: 30px;
         .subscription-plan {
@@ -576,9 +595,9 @@ html {
   margin-top: -41px;
   position: relative;
   z-index: 1;
-  @media (max-width:991.98px){
+  @media (max-width: 991.98px) {
     margin-top: -22px;
-    .slick-dots{
+    .slick-dots {
       justify-content: center;
     }
   }
@@ -589,7 +608,7 @@ html {
   li {
     margin-bottom: 0px;
     display: flex;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 8px;
     }
     button {
@@ -603,9 +622,9 @@ html {
       border: 1px solid #00a6ca;
       border-radius: 10px;
     }
-    &.slick-active{
-      button{
-        background: #00A6CA;
+    &.slick-active {
+      button {
+        background: #00a6ca;
       }
     }
   }
