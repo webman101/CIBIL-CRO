@@ -282,6 +282,7 @@ html {
     }
     @media (max-width: 767.98px) {
       min-height: 720px;
+      align-items: flex-start;
       &__wraper {
         width: 100%;
         .cibil-btn{
