@@ -7,8 +7,8 @@ $('.banner-slider').slick({
 
 //faq
 $('.panel-collapse').on('show.bs.collapse', function () {
-    console.log($(this).prev().addClass("show"));
+    $(this).prev().addClass("show");
   });
   $('.panel-collapse').on('hide.bs.collapse', function () {
-    console.log($(this).prev().removeClass("show"));
+    $(this).prev().removeClass("show");
   });
