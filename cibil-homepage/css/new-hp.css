@@ -10,7 +10,7 @@
     }
 }
 .banner {
-    background-image: url(/resources/cibil/img/new-hp/mobilebg.png);
+    background-image: url(../resources/cibil/img/new-hp/mobilebg.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex !important;
@@ -51,7 +51,7 @@
     .banner {
         background-size: 100% 100%;
         padding: 40px 0 18px;
-        background-image: url(/resources/cibil/img/new-hp/bgbanner.png);
+        background-image: url(../resources/cibil/img/new-hp/bgbanner.png);
     }
 }
 .banner img {

@@ -425,7 +425,7 @@ a:focus {
     outline: 0;
 }
 .hero-section {
-    background-image: url("/resources/cibil/img/new-hp/approve-loan.jpg");
+    background-image: url("../resources/cibil/img/new-hp/approve-loan.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 0 80px 0;
@@ -580,7 +580,7 @@ a:focus {
 }
 .features .section-title:after {
     content: "";
-    background-image: url("/resources/cibil/img/new-hp/line-break.svg");
+    background-image: url("../resources/cibil/img/new-hp/line-break.svg");
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 450px;
@@ -632,7 +632,7 @@ a:focus {
 }
 .features .feature-list-item h4:after {
     content: "";
-    background-image: url("/resources/cibil/img/new-hp/tick.svg");
+    background-image: url("../resources/cibil/img/new-hp/tick.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 28px;
@@ -1250,7 +1250,7 @@ a:focus {
     position: relative;
 }
 .dashboard-cta-bg {
-    background-image: url("/resources/cibil/img/new-hp/report_bg.jpg");
+    background-image: url("../resources/cibil/img/new-hp/report_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -1322,7 +1322,7 @@ a:focus {
 }
 @media (max-width: 991px) {
     .dashboard-cta-bg {
-        background-image: url("/resources/cibil/img/new-hp/report_bg_mob.jpg");
+        background-image: url("../resources/cibil/img/new-hp/report_bg_mob.jpg");
         height: 320px;
     }
 }
