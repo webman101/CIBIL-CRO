@@ -867,6 +867,9 @@ a:focus {
         margin-bottom: 16px;
         height: 64px;
     }
+    .monitor-credit-health--wrapper .image-block {
+        padding-right: 40px;
+    }
 }
 @media (max-width: 991px) {
     .help-center-wrapper .column-section-w .column-section-blocks-container .image-block .icon {
