@@ -793,9 +793,9 @@ a:focus {
 }
 @media (max-width: 991px) {
     .help-center-wrapper .content-block .section-subtitle {
-        font-size: 18px;
-        line-height: 22px;
-        margin-bottom: 26px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 35px;
     }
 }
 @media (max-width: 991px) {
@@ -1085,7 +1085,7 @@ a:focus {
 }
 @media (max-width: 991px) {
     .help-center {
-        margin-top: 70px;
+        margin-top: 40px;
         margin-bottom: 0;
     }
 }
@@ -1283,9 +1283,9 @@ a:focus {
 @media (max-width: 991px) {
     .dashboard-cta-bg .call-to-action .title {
         width: 100%;
-        font-size: 30px;
-        line-height: 37px;
-        margin-bottom: 28px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 14px;
     }
 }
 .dashboard-cta-bg .call-to-action .button-yellow {
@@ -1301,7 +1301,7 @@ a:focus {
         font-size: 16px;
         line-height: 16px;
         max-width: 224px;
-        padding: 18px 28px;
+        padding: 16px 28px;
     }
 }
 @media (min-width: 992px) {
