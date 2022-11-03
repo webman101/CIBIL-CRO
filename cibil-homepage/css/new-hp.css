@@ -179,8 +179,15 @@
     .banner .button {
         margin: auto;
         width: 100%;
+        padding: 0 14px;
     }
 }
 .banner .button:hover {
     background-color: #db6402;
 } /*# sourceMappingURL=style.css.map */
+
+.playstore.desktop > .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
