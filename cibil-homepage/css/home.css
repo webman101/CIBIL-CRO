@@ -787,8 +787,7 @@ a:focus {
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;
-    color: #000000;
-    opacity: 0.5;
+    color: #707070;
     margin-bottom: 0;
 }
 @media (max-width: 991px) {
