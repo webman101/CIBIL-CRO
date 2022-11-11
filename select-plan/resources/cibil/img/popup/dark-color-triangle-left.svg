@@ -1,0 +1,8 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 123" width="43" height="123">
+	<title>dark-color-triangle-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #005365 } 
+	</style>
+	<path id="Layer" class="shp0" d="M0.5 0.5L0.5 123L43 63L0.5 0.5Z" />
+</svg>
