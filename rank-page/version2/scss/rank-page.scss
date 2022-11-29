@@ -414,7 +414,9 @@ html {
     &__wraper {
       .subscription-plans {
         .subscription-plan {
-          width: calc(100% / 3);
+          // width: calc(100% / 3);
+          width: 100%;
+          max-width: 380px;
           background: #ffffff;
           box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.06);
           &__header {
@@ -467,21 +469,31 @@ html {
             }
           }
           &__body {
-            padding-top: 24px;
+            padding-top: 30px;
             padding-bottom: 30px;
             .plan-price {
               font-weight: 600;
               font-size: 32px;
-              line-height: 44px;
+              line-height: 1;
               text-align: center;
               letter-spacing: -0.01em;
               color: #000000;
               margin-top: 0px;
-              margin-bottom: 16px;
+              margin-bottom: 6px;
+            }
+            .plan-mrp{
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 1;
+              text-align: center;
+              letter-spacing: 0.02em;
+              color: #000000;
+              text-decoration: line-through;
+              margin-bottom: 20px;
             }
             .cibil-btn {
               width: calc(100% - 60px);
-              margin: 0 auto 18px;
+              margin: 0 auto 20px;
               display: flex;
             }
             .price-details {
@@ -490,7 +502,7 @@ html {
               line-height: 24px;
               text-align: center;
               color: #707070;
-              margin-bottom: 22px;
+              margin-bottom: 20px;
             }
             .highlighted-feature {
               background: #fcf8e0;
@@ -500,7 +512,7 @@ html {
               text-align: center;
               letter-spacing: 0.02em;
               color: #000000;
-              min-height: 88px;
+              // min-height: 88px;
               padding: 20px 24px !important;
               margin-bottom: 30px;
             }
@@ -535,7 +547,7 @@ html {
                       top: 5px;
                     }
                     &:not(:last-child) {
-                      margin-bottom: 24px;
+                      margin-bottom: 20px;
                     }
                     b {
                       font-weight: 600;
@@ -563,7 +575,8 @@ html {
         }
         &-cards {
           display: flex;
-          justify-content: space-between;
+          // justify-content: space-between;
+          justify-content: center;
           gap: 20px;
           grid-gap: 20px;
         }
@@ -577,7 +590,7 @@ html {
           font-weight: 700;
           padding-left: 30px;
           padding-right: 30px;
-          margin-bottom: 30px;
+          // margin-bottom: 30px;
         }
         .subscription-plans {
           &-tabs {
