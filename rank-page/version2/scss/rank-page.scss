@@ -52,6 +52,17 @@ html {
       display: block;
     }
   }
+  .only-desktop{
+    @media (max-width: 991.98px) {
+      display: none !important;
+    }
+  }
+  .only-mobile{
+    display: none;
+    @media (max-width: 991.98px) {
+      display: block;
+    }
+  }
   .cibil-btn {
     font-weight: 700;
     font-size: 16px;
@@ -470,7 +481,7 @@ html {
           }
           &__body {
             padding-top: 30px;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
             .plan-price {
               font-weight: 600;
               font-size: 32px;
@@ -495,6 +506,7 @@ html {
               width: calc(100% - 60px);
               margin: 0 auto 20px;
               display: flex;
+              margin-bottom: 10px;
             }
             .price-details {
               font-weight: 600;
@@ -502,7 +514,7 @@ html {
               line-height: 24px;
               text-align: center;
               color: #707070;
-              margin-bottom: 20px;
+              margin-bottom: 10px;
             }
             .highlighted-feature {
               background: #fcf8e0;
@@ -513,8 +525,8 @@ html {
               letter-spacing: 0.02em;
               color: #000000;
               // min-height: 88px;
-              padding: 20px 24px !important;
-              margin-bottom: 30px;
+              padding: 10px 20px !important;
+              margin-bottom: 20px;
             }
             ul.features,
             .highlighted-feature,
@@ -577,14 +589,14 @@ html {
           display: flex;
           // justify-content: space-between;
           justify-content: center;
-          gap: 20px;
-          grid-gap: 20px;
+          gap: 40px;
+          grid-gap: 40px;
         }
       }
     }
     @media (max-width: 767.98px) {
       padding-top: 40px;
-      padding-bottom: 30px;
+      padding-bottom: 40px;
       &__wraper {
         .section-heading {
           font-weight: 700;
@@ -679,6 +691,124 @@ html {
     }
     @media (max-width: 991.98px) {
       margin-top: 9px;
+      .subscription-plans-section__wraper{
+        .subscription-plans {
+          .subscription-plan {
+            &__header {
+              .plan-name{
+                box-shadow: none;
+                padding: 6px 30px 4px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      .subscription-plans-section__wraper{
+        .subscription-plans {
+          .subscription-plan {
+            margin-top: 30px;
+            min-width: 480px;
+            max-width: 480px;
+            .highlighted-feature {
+              margin-bottom: 0;
+            }
+            &__body{
+              padding-top: 20px;
+              padding-bottom: 0;
+            }
+            &__header {
+              .plan-tag{
+                width: auto;
+                right: 0;
+              }
+            }
+            .price-wrap {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 20px;
+              * {
+                margin-bottom: 0;
+              }
+            }
+            .plan-price{
+              padding-left: 10px;
+            }
+            .cibil-btn{
+              margin-bottom: 10px;
+            }
+            .highlighted-feature{
+              padding: 10px 20px !important;
+            }
+            .price-details {
+              font-weight: 400;
+              font-size: 16px;
+            }
+          }
+          .subscrition-details{
+            .section-heading{
+              text-align: left;
+              margin-bottom: 30px;
+            }
+            .highlighted-feature {
+              margin-bottom: 16px;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 24px;
+              letter-spacing: 0.02em;
+            }
+            .features {
+              li {
+                &.feature {
+                  font-weight: 400;
+                  font-size: 16px;
+                  line-height: 24px;
+                  letter-spacing: 0.02em;
+                  color: #000000;
+                  padding-left: 34px;
+                  margin-bottom: 0px;
+                  position: relative;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 16px;
+                    background: url(../images/check-green.svg) no-repeat;
+                    background-size: 100%;
+                    background-position: center;
+                    left: 0;
+                    top: 5px;
+                  }
+                  &:not(:last-child) {
+                    margin-bottom: 10px;
+                  }
+                  b {
+                    font-weight: 600;
+                    &.highlight {
+                      position: relative;
+                      display: inline-block;
+                      z-index: 1;
+                      &:before {
+                        content: "";
+                        background-color: #fcd800;
+                        height: 4px;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 5px;
+                        left: 0;
+                        z-index: -1;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      } 
     }
   }
 }
