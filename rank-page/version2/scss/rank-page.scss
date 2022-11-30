@@ -417,7 +417,7 @@ html {
     margin-top: 29px;
     padding-bottom: 40px;
     .section-heading {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
     .bottom-text {
       margin-top: 28px;
@@ -485,7 +485,7 @@ html {
             .plan-price {
               font-weight: 600;
               font-size: 32px;
-              line-height: 1;
+              line-height: 44px;
               text-align: center;
               letter-spacing: -0.01em;
               color: #000000;
@@ -589,6 +589,7 @@ html {
           display: flex;
           // justify-content: space-between;
           justify-content: center;
+          align-items: flex-start;
           gap: 40px;
           grid-gap: 40px;
         }
@@ -709,9 +710,12 @@ html {
       .subscription-plans-section__wraper{
         .subscription-plans {
           .subscription-plan {
-            margin-top: 30px;
+            margin-top: 0;
             min-width: 480px;
             max-width: 480px;
+            height: fit-content;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
             .highlighted-feature {
               margin-bottom: 0;
             }
@@ -746,6 +750,7 @@ html {
             .price-details {
               font-weight: 400;
               font-size: 16px;
+              margin-bottom: 20px;
             }
           }
           .subscrition-details{
