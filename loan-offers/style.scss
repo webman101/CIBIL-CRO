@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$primary-blue: #00a6ca;
+$primary-black: #000000;
+$primary-orange: #F16E00;
+$primary-white: #FFFFFF;
+$secondary-red: #D74025;
+$overlay: rgba(21, 17, 17, 0.61);
+
+$sm: 767.9px;
+$md: 768px;
+$max-width: 870px;
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    background-color: $primary-blue;
+}
+.container{
+    max-width: $max-width;
+    width: calc(100%  40px);
+    margin: auto;
+}
+section{
+    background-color: $primary-white;
+}
+.section-shadow{
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+.bold{
+    font-weight: 700;
+}
+.semi-bold{
+    font-weight: 500;
+}
+.secondary-red{
+    color: $secondary-red;
+}
+.link{
+    color: $primary-blue;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration-line: underline;
+    cursor: pointer;
+    &-16{
+        font-size: 16px;
+        line-height: 19px;
+    }
+    svg{
+        margin-left: 10px;
+    }
+}
+.text-13{
+    font-size: 13px;
+    line-height: 15px;
+}
+.text-14{
+    font-size: 14px;
+    line-height: 16px;
+}
+.m-0{
+    margin: 0 !important;
+}
+.mb-large{
+    margin-bottom: 20px !important;
+}
+.desktop-view {
+    @media (max-width: $sm) {
+        display: none !important;
+    }
+}
+.mobile-view {
+    @media (min-width: $md) {
+        display: none !important;
+    }
+}
+.section-title{
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+    color: $primary-black;
+    margin: 0;
+    @media(max-width:$sm){
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+    svg{
+        margin-right: 10px;
+    }
+}
+.box-orange{
+    border: 2px solid $primary-orange;
+}
+.box-announcement{
+    padding: 16px 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    p{
+        margin: 0 0 10px;
+    }
+    svg{
+        min-width: 48px;
+    }
+    @media (max-width:$sm){
+        padding: 10px 10px 12px;
+        gap: 7px;
+    }
+}
+.section-announcement{
+    padding: 12px;
+    @media (max-width:$sm){
+        padding: 10px;
+    }
+}
+.popup{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay;
+    display: flex;
+    align-items: center;
+
+    &-content{
+        background-color: $primary-white;
+        padding: 12px;
+        margin: auto;
+        width: calc(100% - 44px);
+        max-width: $max-width;
+        position: relative;
+    }
+
+    &-body{
+        border: 2px solid $primary-blue;
+        padding: 36px 16px 20px;
+        @media (max-width:$sm){
+            padding: 36px 10px 20px;
+        }
+    }
+    &.show{
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+    .close {
+        position: absolute;
+        top: 28px;
+        right: 28px;
+        cursor: pointer;
+    }
+    .box-announcement{
+        padding: 0;
+    }
+    ul{
+        padding-left: 20px;
+        margin: 0 0 20px;
+        li{
+            list-style: none;
+            position: relative;
+            &::before{
+                content: '';
+                width: 3px;
+                height: 3px;
+                background-color: $primary-black;
+                border-radius: 50%;
+                position: absolute;
+                left: -12px;
+                top: 7px;
+            }
+        }
+    }
+}
+.section-offers{
+    padding: 20px 24px 40px;
+    @media(max-width:$sm){
+    padding: 23px 10px 30px;
+    }
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.tabs{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    .tab{
+        border: 4px solid $primary-blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        max-width: 96px;
+        .offer-name{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px 3px 6px;
+            text-align: center;
+            svg{
+                margin-bottom: 6px;
+                height: 25px;
+            }
+        }
+        .count{
+            font-size: 20px;
+            line-height: 23px;
+            color: $primary-white;
+            background-color: $primary-blue;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+}
