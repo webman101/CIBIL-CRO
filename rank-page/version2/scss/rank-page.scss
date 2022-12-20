@@ -449,21 +449,17 @@ html {
               margin-bottom: 0px;
             }
             .discount-tag {
-              background: #feef99;
-              width: 76px;
-              height: 76px;
-              position: absolute;
-              right: 10px;
-              top: 22px;
-              border-radius: 100%;
+              background: #FCD800;
+              width: 100%;
+              height: 27px;
               display: flex;
               align-items: center;
               justify-content: center;
               font-weight: 700;
-              font-size: 14px;
-              line-height: 16px;
-              color: #2c2c2c;
-              text-transform: uppercase;
+              font-size: 16px;
+              line-height: 24px;
+              letter-spacing: 0.02em;
+              color: #000000;
               text-align: center;
             }
             .plan-name {
@@ -495,7 +491,7 @@ html {
             .plan-mrp{
               font-weight: 400;
               font-size: 18px;
-              line-height: 1;
+              line-height: 24px;
               text-align: center;
               letter-spacing: 0.02em;
               color: #000000;
@@ -534,6 +530,9 @@ html {
             .plan-price {
               padding-left: 30px;
               padding-right: 30px;
+            }
+            .plan-price{
+              padding-right: 19px;
             }
             ul {
               &.features {
@@ -739,7 +738,7 @@ html {
               }
             }
             .plan-price{
-              padding-left: 10px;
+              padding-left: 0px;
             }
             .cibil-btn{
               margin-bottom: 10px;
@@ -766,6 +765,7 @@ html {
               letter-spacing: 0.02em;
             }
             .features {
+              max-width: 283px;
               li {
                 &.feature {
                   font-weight: 400;
