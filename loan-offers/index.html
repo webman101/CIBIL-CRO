@@ -184,7 +184,7 @@
 
             <div class="tab-content">
                 <div class="tab-panel active" id="card"  aria-labelledby="card-tab">
-                    <div class="sortTab">
+                    <div class="sortTab desktop-view">
                         <span class="sortOption">Offers<svg xmlns="http://www.w3.org/2000/svg" width="10" height="13" viewBox="0 0 10 13" fill="none">
                             <path d="M0 5.64282L5 0.642822L10 5.64282L5 5.62465L0 5.64282Z" fill="white"/>
                             <path d="M0 8L5 13L10 8L5 8.01818L0 8Z" fill="white"/>
@@ -212,6 +212,116 @@
                         </span>
                         <span class="sortOption"></span>
                     </div>
+                    <div class="sortTab__M mobile-view">
+                        <span class="head text-14 bold white">Sort By</span>
+                        <span class="sortBody section-shadow">
+                            <ul class="filter-values">
+                                <li class="filter-value selected">
+                                    <label>Loan Partners</label>
+                                    <div class="custom-radio-wrap">
+                                        <span class="custom-radio">
+                                            <input id="home-partner-1" type="radio" name="home-radio" value="partner" checked>
+                                            <label for="home-partner-1">A-Z</label>
+                                        </span>
+                                        <span class="custom-radio">
+                                            <input id="home-partner-2" type="radio" name="home-radio" value="partner" reverse="true">
+                                            <label for="home-partner-2">Z-A</label>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="filter-value">
+                                    <label>Loan Upto</label>
+                                    <div class="custom-radio-wrap">
+                                        <span class="custom-radio">
+                                            <input id="home-loan-upto-1" type="radio" name="home-radio" value="amount">
+                                            <label for="home-loan-upto-1">Low to High</label>
+                                        </span>
+                                        <span class="custom-radio">
+                                            <input id="home-loan-upto-2" type="radio" name="home-radio" value="amount" reverse="true">
+                                            <label for="home-loan-upto-2">High to Low</label>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="filter-value">
+                                    <label>Interest Rate (%)</label>
+                                    <div class="custom-radio-wrap">
+                                        <span class="custom-radio">
+                                            <input id="home-interest-1" type="radio" name="home-radio" value="rate">
+                                            <label for="home-interest-1">Low to High</label>
+                                        </span>
+                                        <span class="custom-radio">
+                                            <input id="home-interest-2" type="radio" name="home-radio" value="rate" reverse="true">
+                                            <label for="home-interest-2">High to Low</label>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="filter-value">
+                                    <label>Interest Type</label>
+                                    <div class="custom-radio-wrap">
+                                        <span class="custom-radio">
+                                            <input id="home-type-1" type="radio" name="home-radio" value="type">
+                                            <label for="home-type-1">A-Z</label>
+                                        </span>
+                                        <span class="custom-radio">
+                                            <input id="home-type-2" type="radio" name="home-radio" value="type" reverse="true">
+                                            <label for="home-type-2">Z-A</label>
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="filter-value">
+                                    <label>Processing Fees Upto</label>
+                                    <div class="custom-radio-wrap">
+                                        <span class="custom-radio">
+                                            <input id="home-fees-1" type="radio" name="home-radio" value="fees">
+                                            <label for="home-fees-1">Low to High</label>
+                                        </span>
+                                        <span class="custom-radio">
+                                            <input id="home-fees-2" type="radio" name="home-radio" value="fees" reverse="true">
+                                            <label for="home-fees-2">High to Low</label>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </span>
+                    </div>
+                    <div class="filterTab">
+                        <span class="text-13 filterTitle">Filter by Loan Types :</span>
+                        <div>
+                            <span class="filterItem">
+                                <input type="checkbox" id="pre-qualified" value="pre-qualified" class="custom-checkbox">
+                                <label for="pre-qualified" class="text-13">Pre-Qualified Loan</label>
+                                <span class="info" onclick="openPopup('preQualifiedDefination')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="8" r="8" fill="#006685"/>
+                                    <path d="M8.45117 9.43945H7.05078C7.05469 9.08398 7.08398 8.7793 7.13867 8.52539C7.19727 8.27148 7.29297 8.04297 7.42578 7.83984C7.55859 7.63281 7.73828 7.42188 7.96484 7.20703C8.14453 7.03906 8.30469 6.88086 8.44531 6.73242C8.58984 6.58008 8.70312 6.42188 8.78516 6.25781C8.86719 6.08984 8.9082 5.90039 8.9082 5.68945C8.9082 5.45117 8.86914 5.25195 8.79102 5.0918C8.7168 4.93164 8.60547 4.81055 8.45703 4.72852C8.3125 4.64258 8.13086 4.59961 7.91211 4.59961C7.73242 4.59961 7.5625 4.63672 7.40234 4.71094C7.24219 4.78516 7.11328 4.90039 7.01562 5.05664C6.91797 5.20898 6.86523 5.4082 6.85742 5.6543H5.30469C5.31641 5.14258 5.4375 4.7168 5.66797 4.37695C5.89844 4.0332 6.20898 3.77734 6.59961 3.60938C6.99023 3.4375 7.42773 3.35156 7.91211 3.35156C8.44727 3.35156 8.9043 3.44141 9.2832 3.62109C9.66602 3.79688 9.95703 4.05469 10.1562 4.39453C10.3594 4.73438 10.4609 5.14453 10.4609 5.625C10.4609 5.96875 10.3945 6.27734 10.2617 6.55078C10.1289 6.82031 9.95312 7.07227 9.73438 7.30664C9.51562 7.54102 9.2793 7.77734 9.02539 8.01562C8.80273 8.21484 8.65234 8.42773 8.57422 8.6543C8.49609 8.88086 8.45508 9.14258 8.45117 9.43945ZM6.9043 11.2617C6.9043 11.0273 6.98242 10.832 7.13867 10.6758C7.29883 10.5195 7.51367 10.4414 7.7832 10.4414C8.05273 10.4414 8.26562 10.5195 8.42188 10.6758C8.58203 10.832 8.66211 11.0273 8.66211 11.2617C8.66211 11.4883 8.58203 11.6797 8.42188 11.8359C8.26562 11.9922 8.05273 12.0703 7.7832 12.0703C7.51367 12.0703 7.29883 11.9922 7.13867 11.8359C6.98242 11.6797 6.9043 11.4883 6.9043 11.2617Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </span>
+                            <span class="filterItem">
+                                <input type="checkbox" id="in-principle" value="in-principle" class="custom-checkbox">
+                                <label for="in-principle" class="text-13">In-Principle Loan</label>
+                                <span class="info" onclick="openPopup('inPrincipleDefination')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="8" r="8" fill="#006685"/>
+                                    <path d="M8.45117 9.43945H7.05078C7.05469 9.08398 7.08398 8.7793 7.13867 8.52539C7.19727 8.27148 7.29297 8.04297 7.42578 7.83984C7.55859 7.63281 7.73828 7.42188 7.96484 7.20703C8.14453 7.03906 8.30469 6.88086 8.44531 6.73242C8.58984 6.58008 8.70312 6.42188 8.78516 6.25781C8.86719 6.08984 8.9082 5.90039 8.9082 5.68945C8.9082 5.45117 8.86914 5.25195 8.79102 5.0918C8.7168 4.93164 8.60547 4.81055 8.45703 4.72852C8.3125 4.64258 8.13086 4.59961 7.91211 4.59961C7.73242 4.59961 7.5625 4.63672 7.40234 4.71094C7.24219 4.78516 7.11328 4.90039 7.01562 5.05664C6.91797 5.20898 6.86523 5.4082 6.85742 5.6543H5.30469C5.31641 5.14258 5.4375 4.7168 5.66797 4.37695C5.89844 4.0332 6.20898 3.77734 6.59961 3.60938C6.99023 3.4375 7.42773 3.35156 7.91211 3.35156C8.44727 3.35156 8.9043 3.44141 9.2832 3.62109C9.66602 3.79688 9.95703 4.05469 10.1562 4.39453C10.3594 4.73438 10.4609 5.14453 10.4609 5.625C10.4609 5.96875 10.3945 6.27734 10.2617 6.55078C10.1289 6.82031 9.95312 7.07227 9.73438 7.30664C9.51562 7.54102 9.2793 7.77734 9.02539 8.01562C8.80273 8.21484 8.65234 8.42773 8.57422 8.6543C8.49609 8.88086 8.45508 9.14258 8.45117 9.43945ZM6.9043 11.2617C6.9043 11.0273 6.98242 10.832 7.13867 10.6758C7.29883 10.5195 7.51367 10.4414 7.7832 10.4414C8.05273 10.4414 8.26562 10.5195 8.42188 10.6758C8.58203 10.832 8.66211 11.0273 8.66211 11.2617C8.66211 11.4883 8.58203 11.6797 8.42188 11.8359C8.26562 11.9922 8.05273 12.0703 7.7832 12.0703C7.51367 12.0703 7.29883 11.9922 7.13867 11.8359C6.98242 11.6797 6.9043 11.4883 6.9043 11.2617Z" fill="white"/>
+                                    </svg>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="offerCards text-13">
+                        <div class="offerCard">
+                            <span class="tag premium">Premium Partner</span>
+                            <div class="offerInfo">
+                                <span class="infoItem">Baja Finance Limited</span>
+                                <span class="infoItem">Up to 35 Lakhs</span>
+                                <span class="infoItem">13.00 %</span>
+                                <span class="infoItem">Fixed</span>
+                                <span class="infoItem">3.99%</span>
+                                <span class="infoItem"><button>Apply</button><a href="" class="link">More Details</a></span>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="tab-panel" id="personal"  aria-labelledby="personal-tab">{{partial "loan-offers-personal"}}</div>
@@ -222,6 +332,42 @@
                 <div class="tab-panel" id="products"  aria-labelledby="products-tab">{{partial "loan-offers-products"}}</div>
             </div>
         </section>
+
+        <!-- modals -->
+        <div class="popup" id="inPrincipleDefination">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('inPrincipleDefination')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M14 2L2 14" stroke="#00A6CA" stroke-width="3" />
+                        <path d="M14 14L2 2" stroke="#00A6CA" stroke-width="3" />
+                    </svg>
+                </span>
+                <div class="popup-body">
+                    <div class="loan-defination">
+                        <p class="text-14 bold">In Principal Loan Definition:</p>
+                        <p class="text-13 ">Seamless digital process to improve your chances of loan approval for your preferred loan offer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="preQualifiedDefination">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('preQualifiedDefination')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M14 2L2 14" stroke="#00A6CA" stroke-width="3" />
+                        <path d="M14 14L2 2" stroke="#00A6CA" stroke-width="3" />
+                    </svg>
+                </span>
+                <div class="popup-body">
+                    <div class="loan-defination">
+                        <p class="text-14 bold">Pre qualified Loan Definition:</p>
+                        <p class="text-13 ">The process of applying for a loan where you express your interest for the preferred loan type and await approval.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 

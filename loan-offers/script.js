@@ -11,6 +11,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
             closePopup($(this).attr('id'))
         }
     })
+    $('.custom-radio input[type=radio]').change(function(){
+        let parent = $(this).parents('.filter-value');
+        $(parent).siblings().removeClass('selected')
+        $(parent).addClass('selected')
+        $(parent).parents('.sortBody').toggle('fast');
+    })
+    $('.sortTab__M .head').click(function(e){
+        if(e.target == this){
+            $(this).parent('.sortTab__M').toggleClass('opened')
+            $(this).parent('.sortTab__M').find('.sortBody').toggle('fast');
+        }
+    })
 });
 
 function customSelectInput(element){
@@ -31,11 +43,5 @@ function customSelectTab(element){
 }
 
 function selectTab(element){
-    // $(element).siblings().removeClass("active")
-    // $(element).addClass('active')
-    // $('.tab-panel').removeClass('active');
-    // $($(element).data('target')).addClass('active');
-    // $('.tab').removeClass('active');
-    // $('.tab[data-target="'+$(element).data('target')+'"]').addClass('active');
     $('.custom-select-options>span[data-target="'+$(element).data('target')+'"]').click()
 }
