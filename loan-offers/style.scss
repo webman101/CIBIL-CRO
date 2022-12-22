@@ -334,7 +334,7 @@ section{
         content: "";
         width: 11px;
         height: 6px;
-        background-image: url(/images/grey-arrow.svg);
+        background-image: url(./images/grey-arrow.svg);
         display: block;
         background-size: cover;
         background-position: center;
@@ -451,7 +451,7 @@ section{
     box-shadow: none;
     cursor: pointer;
     &:checked{
-        background-image: url(/images/check.svg);
+        background-image: url(./images/check.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -469,6 +469,13 @@ section{
         &:not(:last-child){
             margin-bottom: 10px;
         }
+    }
+}
+
+.section-margin{
+    margin-bottom: 40px;
+    @media (max-width:$sm){
+        margin-bottom: 30px;
     }
 }
 
