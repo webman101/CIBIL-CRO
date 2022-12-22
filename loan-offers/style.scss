@@ -169,6 +169,9 @@ section{
         position: relative;
         max-height: 95vh;
         overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
 
     &-body{
