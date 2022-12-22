@@ -46,6 +46,22 @@ section{
 .secondary-red{
     color: $secondary-red;
 }
+.text-grey{
+    color: #ACACAC;
+}
+.cibil-btn{
+    font-size: 12px;
+    line-height: 14px;
+    color: $primary-white;
+    background-color: $primary-orange;
+    padding: 11px 10px 12px;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 $disabled-color;
+    outline: none;
+    border: 0;
+    width: 105px;
+    cursor: pointer;
+}
 .link{
     color: $primary-blue;
     text-decoration: underline;
@@ -151,6 +167,8 @@ section{
         width: calc(100% - 44px);
         max-width: $max-width;
         position: relative;
+        max-height: 95vh;
+        overflow-y: scroll;
     }
 
     &-body{
@@ -170,6 +188,7 @@ section{
         top: 28px;
         right: 28px;
         cursor: pointer;
+        z-index: 2;
     }
     .box-announcement{
         padding: 0;
@@ -572,19 +591,231 @@ section{
     background: $primary-yellow;
     padding: 4px 9px;
     min-width: 125px;
+    width: 125px;
     display: inline-block;
+
+    &.inPrinciple, &.preQualified {
+        display: flex;
+        align-items: center;
+        color: #F6FBFC;
+        background: linear-gradient(180deg, #63B72D 0%, #095460 100%);
+        svg {
+            margin: 0 8px 0 0;
+            position: relative;
+            bottom: 1px;
+        }
+    }
+    &.preQualified {
+        background: linear-gradient(180deg, #005F8D 0%, #0A5560 100%);
+    }
 }
 
 .offerCards{
     .offerCard{
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
         .offerInfo{
             display: flex;
             justify-content: space-between;
             border: 1px solid $primary-yellow;
-            padding: 14px 0;
+            padding: 14px 0 0;
+            position: relative;
+            &.blue-border{
+                border-color: #9FD8E8;
+            }
+            &.yellow-border{
+                border-color: $primary-yellow;
+            }
+            &.premium{
+                background-color: #F6FBFC;
+            }
             .infoItem {
                 flex: 1;
                 text-align: center;
+                position: relative;
+                &.partnerItem{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    align-items: flex-start;
+                    position: unset;
+                    // white-space: nowrap;
+
+                    img{
+                        height: 21px;
+                        width: auto;
+                    }
+                    > *:not(.tag){
+                        padding-left: 10px;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                    }
+                }
+                &.ctaItem{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 13px;
+                    align-items: center;
+                    .link{
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+                &:not(.ctaItem):not(.partnerItem){
+                    margin-top: 3px;
+                    &::after{
+                        content: '';
+                        height: 21px;
+                        width: 1px;
+                        background-color: #EDEDED;
+                        position: absolute;
+                        display: block;
+                        left: 0;
+                        top: 0;
+                    }
+                    label{
+                        display: none;
+                    }
+                }
+            }
+            @media (max-width: $sm){
+                flex-flow: wrap;
+                padding: 12px 10px 10px;
+                &:not(.premium){
+                    margin-top: 40px;
+                }
+                .infoItem {
+                    flex: unset;
+                    &.partnerItem{
+                        width: 40%;
+                        order: 0;
+                        .tag {
+                            position: absolute;
+                            right: -1px;
+                            bottom: calc(100% + 1px);
+                        }
+                        > *:not(.tag){
+                            padding-left: 0;
+                            font-size: 12px;
+                            font-weight: 700;
+                        }
+                    }
+                    &.ctaItem{
+                        width: 60%;
+                        order: 1;
+                        flex-direction: row-reverse;
+                        justify-content: flex-start;
+                        align-items: baseline;
+                        .link{
+                            margin-right: 10px;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+                        .cibil-btn{
+                            width: 89px;
+                        }
+                    }
+                    &:not(.ctaItem):not(.partnerItem){
+                        order: 2;
+                        flex: 1;
+                        margin-top: 4px;
+                        font-weight: 500;
+                        font-size: 10px;
+                        line-height: 12px;
+                        color: $disabled-text-color;
+                        padding: 0 5px;
+                        &::after{
+                            background-color: $disabled-color;
+                            height: 100%;
+                        }
+                        label{
+                            display: block;
+                            color: $primary-black;
+                            margin-bottom: 8px;
+                            min-height: 24px;
+                        }
+                    }
+                    &:nth-child(2){
+                        &::after{
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offerDetailsPopup{
+    .popup-body{
+        padding: 0;
+        .popupTitle{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            background-color: $secondary-white;
+            padding: 31px 27px 26px;
+            position: relative;
+            .tag{
+                position: absolute;
+                left: 0;
+                top: 0;
+                &.inPrinciple, &.preQualified{
+                    top: 100%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        .offerContent{
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 30px;
+            row-gap: 30px;
+            .offerContententItem{
+                .itemTitle{
+                    font-weight: 500;
+                    font-size: 17px;
+                    line-height: 20px;
+                    margin: 0 0 16px;
+                }
+                .info-list{
+                    display: grid;
+                    row-gap: 10px;
+                    span{
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        svg{
+                            min-width: 18px;
+                        }
+                    }
+                }
+                .text-14:not(.info-list){
+                    display: flex;
+                    align-items: center;
+                }
+                svg{
+                    margin-right: 18px;
+                    margin-left: 0;
+                }
+                .cibil-btn{
+                    width: 220px;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+        @media (max-width:$sm){
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+            .offerContent{
+                padding: 20px;
+                grid-template-columns: 1fr;
+            }
+            .popupTitle{
+                padding: 31px 20px 20px;
+                background-color: $primary-white;
             }
         }
     }
