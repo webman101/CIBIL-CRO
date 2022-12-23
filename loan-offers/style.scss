@@ -196,9 +196,11 @@ section{
 
     &-body{
         border: 2px solid $primary-blue;
-        padding: 36px 16px 20px;
+        // padding: 36px 16px 20px;
+        padding: 30px 20px;
         @media (max-width:$sm){
-            padding: 36px 10px 20px;
+            // padding: 36px 10px 20px;
+            padding: 30px 20px;
         }
     }
     &.show{
