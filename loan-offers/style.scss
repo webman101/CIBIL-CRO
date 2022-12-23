@@ -626,7 +626,7 @@ section{
 }
 
 .offerCards{
-    display: flex;
+    display: grid;
     flex-direction: column;
     gap: 20px;
     .offerCard{
