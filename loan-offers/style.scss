@@ -105,6 +105,9 @@ section{
         display: none !important;
     }
 }
+.nullEvent{
+    pointer-events: none;
+}
 .section-title{
     font-weight: 300;
     font-size: 26px;
@@ -300,11 +303,13 @@ section{
     cursor: pointer;
 }
 .custom-select-value, .custom-select-options > span{
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
     background: $primary-white;
     border: 2px solid $primary-blue;
-    padding: 13px 16px 12px 28px;
+    // padding: 13px 16px 12px 28px;
+    padding: 13px 16px 12px 26px;
     color: $primary-blue;
     display: flex;
     align-items: center;
@@ -326,7 +331,7 @@ section{
     svg{
         width: 30px;
         height: 25px;
-        margin-right: 30px;
+        margin-right: 20px;
         path{
             fill: $secondary-blue;
         }
@@ -621,10 +626,13 @@ section{
 }
 
 .offerCards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     .offerCard{
-        &:not(:last-child){
-            margin-bottom: 20px;
-        }
+        // &:not(:last-child){
+        //     margin-bottom: 20px;
+        // }
         .offerInfo{
             display: flex;
             justify-content: space-between;
@@ -693,7 +701,7 @@ section{
                 flex-flow: wrap;
                 padding: 12px 10px 10px;
                 &:not(.premium){
-                    margin-top: 40px;
+                    margin-top: 20px;
                 }
                 .infoItem {
                     flex: unset;
