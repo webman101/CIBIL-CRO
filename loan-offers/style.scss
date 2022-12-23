@@ -127,12 +127,18 @@ section{
     border: 2px solid $primary-orange;
 }
 .box-announcement{
-    padding: 16px 16px 20px;
+    // padding: 16px 16px 20px;
+    padding: 16px 16px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
-    p{
-        margin: 0 0 10px;
+        div{
+            & > p{
+                margin: 0 0 10px;
+            &:last-child{
+                margin: 0;
+            }
+        }
     }
     svg{
         min-width: 48px;
