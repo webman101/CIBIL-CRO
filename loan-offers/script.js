@@ -42,6 +42,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         sortData($(this), $(this).val(), reverse)
     })
+
+    document.addEventListener('click', function (event) {
+        const element = $('.sortTab__M, .custom-select-input');
+        $(element).each(function(){
+            if (!this.contains(event.target) && $(this).hasClass('opened')) {
+                $(this).find('.sortBody, .custom-select-options').slideUp('fast');
+                $(this).toggleClass('opened');
+            }
+        })
+      
+    });
 });
 
 function customSelectInput(element){
