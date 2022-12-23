@@ -784,7 +784,8 @@ section{
             .tag{
                 position: absolute;
                 left: 0;
-                top: 0;
+                // top: 0;
+                top: -0.2px;
                 &.inPrinciple, &.preQualified{
                     top: 100%;
                     transform: translateY(-50%);
