@@ -84,6 +84,12 @@ section{
 .text-14{
     font-size: 14px;
     line-height: 16px;
+    @media (max-width: $sm){
+        &-sm{
+            font-size: 14px !important;
+            line-height: 16px !important;
+        }
+    }
 }
 .text-16{
     font-size: 16px;
@@ -146,6 +152,11 @@ section{
     @media (max-width:$sm){
         padding: 10px 10px 12px;
         gap: 7px;
+        align-items: flex-start;
+        svg{
+            position: relative;
+            top: -5px;
+        }
     }
 }
 .section-announcement{
